@@ -19,8 +19,12 @@ free Money Leak Audit Workbook. Built with [HyperFrames](https://github.com/heyg
 | 39.8–43.4s | Step 5: monthly check-in, "Small fixes beat big plans" | pointing / thumbs-up |
 | 43.4–49s | FREE Money Leak Audit Workbook, link in bio, disclaimer | talking / waving |
 
-Captions show each voiceover sentence as it is spoken. Ren changes pose on each sentence,
-bobs while talking, breathes and sways the whole time.
+The video is set in Ren's office: the graphics play on a big wall screen, Ren stands behind a
+desk (which hides the cropped bottom of his art) and walks between three spots while he explains,
+with a step bounce and body sway. He also changes pose on each sentence, bobs while talking, hops
+on each step badge, jumps at the $7,612 and breathes and sways the whole time. Captions show each
+voiceover sentence on the front of the desk. Walk times and spots are in the `WALKS` list in
+`index.html`.
 
 The $7,612 figure is $1,000 compounded yearly at 7% for 30 years (1000 × 1.07^30 = 7,612.26).
 The bank statement, brands and charges are made up for illustration.

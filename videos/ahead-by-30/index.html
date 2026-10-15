@@ -24,7 +24,25 @@
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #fff; }
 
       /* ---------- Stage: graphics live in the top 1000px ---------- */
-      .scene { position: absolute; left: 0; right: 0; top: 80px; height: 1010px; }
+      .scene { position: absolute; left: 0; right: 0; top: 0; height: 1010px; }
+
+      /* ---------- Office ---------- */
+      #wall { position: absolute; inset: 0; background: linear-gradient(#f3efe8, #ebe4d8); }
+      #wall .panel { position: absolute; top: 0; bottom: 0; width: 6px; background: rgba(19, 35, 63, 0.04); }
+      #screen {
+        position: absolute; left: 40px; top: 60px; width: 1000px; height: 920px; box-sizing: border-box;
+        border-radius: 30px; background: #13233f; padding: 22px; box-shadow: 0 24px 50px rgba(19, 35, 63, 0.25);
+      }
+      #screen-inner { position: relative; width: 100%; height: 100%; border-radius: 14px; background: #fff; overflow: hidden; }
+      #stage { position: absolute; left: 10px; top: 0; width: 1080px; height: 1010px; transform: scale(0.867); transform-origin: 0 0; }
+      #shelf { position: absolute; right: 24px; top: 1150px; width: 190px; height: 540px; }
+      #plant { position: absolute; left: 14px; top: 1300px; width: 190px; height: 390px; }
+      #plant-leaves { transform-origin: 50% 100%; }
+      #desk-top { position: absolute; left: -20px; right: -20px; top: 1664px; height: 48px; border-radius: 14px; background: #c99a68; box-shadow: inset 0 -8px 0 #b3854f; }
+      #desk-front { position: absolute; left: 0; right: 0; top: 1706px; bottom: 0; background: #1b2d4f; }
+      #laptop { position: absolute; left: 70px; top: 1528px; width: 250px; height: 145px; }
+      #mug { position: absolute; left: 860px; top: 1574px; width: 110px; height: 100px; }
+      #steam path { fill: none; stroke: #b9c2d0; stroke-width: 6; stroke-linecap: round; }
       .inner {
         width: 100%; height: 100%; box-sizing: border-box; padding: 0 70px;
         display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px;
@@ -142,15 +160,15 @@
       #disclaimer { font-size: 32px; color: var(--muted); font-weight: 500; }
 
       /* ---------- Captions ---------- */
-      .cap { position: absolute; left: 60px; right: 60px; top: 1092px; height: 200px; display: flex; align-items: center; justify-content: center; }
-      .cap p { margin: 0; font-size: 52px; font-weight: 600; line-height: 1.15; text-align: center; }
-      .cap b { color: var(--save); font-weight: 700; }
-      .cap b.r { color: var(--cost); }
+      .cap { position: absolute; left: 50px; right: 50px; top: 1712px; height: 208px; display: flex; align-items: center; justify-content: center; }
+      .cap p { margin: 0; font-size: 50px; font-weight: 600; line-height: 1.15; text-align: center; color: #fff; }
+      .cap b { color: #6ee7a0; font-weight: 700; }
+      .cap b.r { color: #ff8f8f; }
 
       /* ---------- Ren ---------- */
-      #ren { position: absolute; left: 0; right: 0; bottom: 0; height: 600px; display: flex; justify-content: center; }
-      #ren-enter, #ren-sway, #ren-breathe, #ren-squash, #ren-talk { width: 510px; height: 600px; }
-      #ren-sway, #ren-breathe, #ren-squash { transform-origin: 50% 100%; }
+      #ren { position: absolute; left: 0; right: 0; top: 1050px; height: 760px; display: flex; justify-content: center; }
+      #ren-x, #ren-enter, #ren-step, #ren-tilt, #ren-sway, #ren-breathe, #ren-squash, #ren-talk { width: 640px; height: 760px; }
+      #ren-tilt, #ren-sway, #ren-breathe, #ren-squash { transform-origin: 50% 100%; }
       #ren-talk { position: relative; }
       .pose {
         position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom; opacity: 0;
@@ -160,7 +178,26 @@
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="49">
-      <!-- ===== Scenes ===== -->
+      <!-- ===== Office ===== -->
+      <div id="wall"><div class="panel" style="left:270px"></div><div class="panel" style="left:540px"></div><div class="panel" style="left:810px"></div></div>
+      <svg id="shelf" viewBox="0 0 190 540">
+        <rect x="0" y="0" width="190" height="540" rx="10" fill="#a87a4c" />
+        <rect x="12" y="12" width="166" height="516" rx="6" fill="#8a6038" />
+        <rect x="12" y="170" width="166" height="12" fill="#a87a4c" /><rect x="12" y="340" width="166" height="12" fill="#a87a4c" />
+        <rect x="24" y="70" width="26" height="100" rx="4" fill="#1e9e5a" /><rect x="54" y="84" width="22" height="86" rx="4" fill="#f5b82e" /><rect x="80" y="64" width="28" height="106" rx="4" fill="#e23d3d" /><rect x="112" y="90" width="24" height="80" rx="4" fill="#2f80ed" />
+        <rect x="24" y="250" width="30" height="90" rx="4" fill="#13233f" /><rect x="58" y="240" width="24" height="100" rx="4" fill="#7b5cd6" /><circle cx="130" cy="312" r="28" fill="#f5b82e" stroke="#c98a0b" stroke-width="6" />
+        <rect x="24" y="420" width="120" height="100" rx="8" fill="#f3efe8" /><rect x="40" y="440" width="88" height="10" rx="5" fill="#c8ccd4" /><rect x="40" y="462" width="66" height="10" rx="5" fill="#c8ccd4" />
+      </svg>
+      <svg id="plant" viewBox="0 0 190 390">
+        <g id="plant-leaves">
+          <path d="M95 250 C60 180 20 170 10 110 C60 120 90 170 95 250 Z" fill="#2fa36b" />
+          <path d="M95 250 C120 170 170 150 182 90 C130 110 100 160 95 250 Z" fill="#1e9e5a" />
+          <path d="M95 250 C80 160 90 80 100 20 C125 90 112 170 95 250 Z" fill="#3cb878" />
+        </g>
+        <path d="M40 250 H150 L135 390 H55 Z" fill="#e07a4f" /><rect x="32" y="240" width="126" height="26" rx="8" fill="#c9653d" />
+      </svg>
+      <div id="screen"><div id="screen-inner"><div id="stage">
+      <!-- ===== Scenes (on the office screen) ===== -->
       <section id="sc-title" class="clip scene" data-start="0" data-duration="2.25" data-track-index="1">
         <div class="inner" id="title-in">
           <div id="title-q">Ahead by</div>
@@ -313,6 +350,28 @@
         </div>
       </section>
 
+      </div></div></div>
+
+      <!-- ===== Ren (walks about behind the desk) ===== -->
+      <div id="ren">
+        <div id="ren-x"><div id="ren-enter"><div id="ren-step"><div id="ren-tilt"><div id="ren-sway"><div id="ren-breathe"><div id="ren-squash"><div id="ren-talk">
+          <img class="pose" id="p-pointing" src="assets/ren/ren-pointing.png" alt="" />
+          <img class="pose" id="p-talking" src="assets/ren/ren-talking.png" alt="" />
+          <img class="pose" id="p-thinking" src="assets/ren/ren-thinking.png" alt="" />
+          <img class="pose" id="p-thumbs-up" src="assets/ren/ren-thumbs-up.png" alt="" />
+          <img class="pose" id="p-worried" src="assets/ren/ren-worried.png" alt="" />
+          <img class="pose" id="p-shocked" src="assets/ren/ren-shocked.png" alt="" />
+          <img class="pose" id="p-neutral" src="assets/ren/ren-neutral.png" alt="" />
+          <img class="pose" id="p-waving" src="assets/ren/ren-waving.png" alt="" />
+        </div></div></div></div></div></div></div></div>
+      </div>
+
+      <!-- ===== Desk (hides Ren's cropped edge; captions on its front) ===== -->
+      <div id="desk-top"></div>
+      <div id="desk-front"></div>
+      <svg id="laptop" viewBox="0 0 250 145"><path d="M20 0 H230 L222 128 H28 Z" fill="#c8ccd4" /><rect x="0" y="126" width="250" height="19" rx="6" fill="#aab1bd" /><circle cx="125" cy="62" r="18" fill="#f5b82e" /></svg>
+      <svg id="mug" viewBox="0 0 110 100"><g id="steam"><path d="M30 30 C20 18 40 12 30 0" /><path d="M55 30 C45 18 65 12 55 0" /></g><rect x="14" y="36" width="64" height="64" rx="12" fill="#e23d3d" /><path d="M78 50 C102 50 102 84 78 84" fill="none" stroke="#e23d3d" stroke-width="10" /></svg>
+
       <!-- ===== Captions (one per voiceover sentence) ===== -->
       <div id="cap-01" class="clip cap" data-start="0.15" data-duration="2.23" data-track-index="2"><p>Want to be financially ahead by <b>thirty?</b></p></div>
       <div id="cap-02" class="clip cap" data-start="2.38" data-duration="2.09" data-track-index="2"><p>Start by finding where your money <b class="r">leaks.</b></p></div>
@@ -333,20 +392,6 @@
       <div id="cap-17" class="clip cap" data-start="41.64" data-duration="1.91" data-track-index="2"><p>Small fixes beat big plans.</p></div>
       <div id="cap-18" class="clip cap" data-start="43.55" data-duration="2.14" data-track-index="2"><p>Grab the <b>free money leak audit workbook.</b></p></div>
       <div id="cap-19" class="clip cap" data-start="45.69" data-duration="3.31" data-track-index="2"><p>Link in bio.</p></div>
-
-      <!-- ===== Ren (on screen the whole time) ===== -->
-      <div id="ren">
-        <div id="ren-enter"><div id="ren-sway"><div id="ren-breathe"><div id="ren-squash"><div id="ren-talk">
-          <img class="pose" id="p-pointing" src="assets/ren/ren-pointing.png" alt="" />
-          <img class="pose" id="p-talking" src="assets/ren/ren-talking.png" alt="" />
-          <img class="pose" id="p-thinking" src="assets/ren/ren-thinking.png" alt="" />
-          <img class="pose" id="p-thumbs-up" src="assets/ren/ren-thumbs-up.png" alt="" />
-          <img class="pose" id="p-worried" src="assets/ren/ren-worried.png" alt="" />
-          <img class="pose" id="p-shocked" src="assets/ren/ren-shocked.png" alt="" />
-          <img class="pose" id="p-neutral" src="assets/ren/ren-neutral.png" alt="" />
-          <img class="pose" id="p-waving" src="assets/ren/ren-waving.png" alt="" />
-        </div></div></div></div></div>
-      </div>
 
       <!-- ===== Audio: voiceover + HyperFrames bundled SFX ===== -->
       <audio id="vo" src="assets/voiceover.mp3" data-start="0" data-duration="49" data-track-index="10" data-volume="1"></audio>
@@ -386,7 +431,6 @@
       const tl = gsap.timeline({ paused: true });
 
       // ---------- Ren ----------
-      tl.fromTo("#ren-enter", { y: 700 }, { y: 0, duration: 0.7, ease: "back.out(1.4)" }, 0);
       tl.fromTo("#ren-breathe", { scaleY: 1 }, { scaleY: 1.012, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: Math.max(0, Math.floor(DURATION / 1.5) - 1) }, 0);
       tl.fromTo("#ren-sway", { rotation: -1 }, { rotation: 1, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: Math.max(0, Math.floor(DURATION / 2.6) - 1) }, 0);
       let current = null;
@@ -403,7 +447,32 @@
         tl.fromTo("#ren-talk", { y: 0 }, { y: -8, duration: 0.15, ease: "sine.inOut", yoyo: true, repeat: bobs * 2 - 1 }, start);
       });
       // Big impressed jump on "$1,000 ... $7,000"
-      tl.to("#ren-enter", { y: -25, duration: 0.18, ease: "power2.out" }, 33.6).to("#ren-enter", { y: 0, duration: 0.35, ease: "bounce.out" }, 33.78);
+      // Walking about: glide behind the desk with a step bounce and body sway
+      const SPOT = { L: -230, C: 0, R: 230, OFF: 760 };
+      const WALKS = [
+        [0.0, "OFF", "C", 1.1], [2.3, "C", "L", 0.9], [6.4, "L", "R", 1.2], [9.2, "R", "C", 0.8],
+        [12.9, "C", "L", 0.9], [18.1, "L", "R", 1.2], [21.0, "R", "C", 0.8], [26.7, "C", "L", 0.9],
+        [28.6, "L", "R", 1.2], [32.4, "R", "C", 0.8], [39.85, "C", "L", 0.9], [43.45, "L", "C", 0.9],
+      ];
+      WALKS.forEach(([t, from, to, dur]) => {
+        const dir = Math.sign(SPOT[to] - SPOT[from]);
+        const steps = Math.max(2, Math.round(dur / 0.25));
+        const half = dur / steps / 2;
+        tl.fromTo("#ren-x", { x: SPOT[from] }, { x: SPOT[to], duration: dur, ease: "power1.inOut" }, t);
+        tl.fromTo("#ren-step", { y: 0 }, { y: -16, duration: half, ease: "sine.out", yoyo: true, repeat: steps * 2 - 1 }, t);
+        const frames = Array.from({ length: steps }, (_, k) => ({ rotation: dir * 2 + (k % 2 ? -3 : 3), duration: dur / steps }));
+        tl.fromTo("#ren-tilt", { rotation: 0 }, { keyframes: [...frames, { rotation: 0, duration: 0.2 }] }, t);
+      });
+      // Hops of excitement on each step badge, and a big jump at the $7,612
+      [4.47, 15.64, 26.78, 39.93].forEach((t) => {
+        tl.fromTo("#ren-enter", { y: 0 }, { y: -26, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, t + 0.95);
+      });
+      tl.fromTo("#ren-enter", { y: 0 }, { y: -55, duration: 0.18, ease: "power2.out" }, 33.6).to("#ren-enter", { y: 0, duration: 0.4, ease: "bounce.out" }, 33.78);
+
+      // Office ambience
+      tl.fromTo("#screen-inner", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0);
+      tl.fromTo("#plant-leaves", { rotation: -1.5 }, { rotation: 1.5, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: Math.max(0, Math.floor(DURATION / 2.2) - 1) }, 0);
+      tl.fromTo("#steam path", { y: 0, opacity: 0.9 }, { y: -18, opacity: 0, duration: 1.6, ease: "sine.out", stagger: 0.8, repeat: Math.max(0, Math.floor(DURATION / 1.6) - 2) }, 0);
 
       // ---------- Scene helpers ----------
       const enter = (sel, t) => tl.fromTo(sel, { y: 70, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, t);
