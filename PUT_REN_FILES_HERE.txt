@@ -1,0 +1,2 @@
+Drop Ren images (transparent PNGs work best) and voiceover MP3s in this folder,
+then reference them by file name in the short's file in src/shorts/.
