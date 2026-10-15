@@ -24,8 +24,9 @@ LEAD = 0.2  # seconds of breathing room after each scene cut
 p = argparse.ArgumentParser()
 p.add_argument("--model", required=True, help="Kokoro ONNX model file")
 p.add_argument("--voices", required=True, help="Folder of kokoro-js voice .bin files")
-p.add_argument("--voice", default="am_michael")
-p.add_argument("--speed", type=float, default=1.12)
+p.add_argument("--voice", default="am_michael:0.5,am_eric:0.5",
+               help='One voice ("am_puck") or a weighted blend ("am_michael:0.5,am_eric:0.5")')
+p.add_argument("--speed", type=float, default=1.18)
 p.add_argument("--duration", type=float, required=True, help="Video length in seconds")
 p.add_argument("--out", required=True, help="Output .mp3")
 p.add_argument("lines", nargs="+", help='"START_SECONDS|text"')
@@ -33,17 +34,21 @@ args = p.parse_args()
 
 with tempfile.TemporaryDirectory() as tmp:
     # kokoro-js voices are raw float32 style vectors; kokoro-onnx reads them from an .npz
-    voice_file = Path(args.voices) / f"{args.voice}.bin"
-    style = np.fromfile(voice_file, dtype=np.float32).reshape(-1, 1, 256)
+    # A blend is the weighted average of the voices' style vectors.
+    style = 0
+    for part in args.voice.split(","):
+        name, _, weight = part.partition(":")
+        vec = np.fromfile(Path(args.voices) / f"{name}.bin", dtype=np.float32).reshape(-1, 1, 256)
+        style = style + vec * float(weight or 1)
     npz = Path(tmp) / "voices.npz"
-    np.savez(npz, **{args.voice: style})
+    np.savez(npz, voice=style)
     tts = Kokoro(args.model, str(npz))
 
     sr = 24000
     track = np.zeros(int(args.duration * sr), dtype=np.float32)
     for line in args.lines:
         start, text = line.split("|", 1)
-        audio, sr = tts.create(text, voice=args.voice, speed=args.speed, lang="en-us")
+        audio, sr = tts.create(text, voice="voice", speed=args.speed, lang="en-us")
         at = int((float(start) + LEAD) * sr)
         end = at + len(audio)
         if end > len(track):

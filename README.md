@@ -41,7 +41,8 @@ Moods with no image fall back to the placeholder mascot.
 ## Voiceover
 `public/monthly-vs-yearly.mp3` was generated locally with the open-source
 [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) TTS model (Apache-2.0),
-voice `am_michael` (warm, upbeat American male) at 1.12× speed.
+as a 50/50 blend of voices `am_michael` and `am_eric` at 1.18× speed, matched to the reference
+Ren voice (median pitch ~135 Hz, wide expressive pitch range, quick pace).
 To voice a new short:
 
 1. One-time setup:
@@ -61,8 +62,9 @@ To voice a new short:
    It prints where each line lands; keep each line inside its scene (lengthen the scene if not).
 3. Set `voiceover: "<id>.mp3"` in the short's file.
 
-Other American male voices: `am_puck` (brighter), `am_fenrir` (fuller), `am_adam`, `am_eric`, `am_liam`
-(`--voice am_puck`). Write numbers the way they should be said ("nine ninety-nine", "twelve").
+That blend is the default. Other American male voices: `am_michael`, `am_puck` (brighter), `am_fenrir`
+(fuller), `am_adam`, `am_eric`, `am_liam`; pass one (`--voice am_puck`) or a blend
+(`--voice am_michael:0.5,am_fenrir:0.5`). Write numbers the way they should be said ("nine ninety-nine", "twelve").
 
 ## Prompt to make a new short
 > Create a new short in src/shorts/ called `<id>` following the format of monthly-vs-yearly.ts.
