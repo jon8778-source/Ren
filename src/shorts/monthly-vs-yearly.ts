@@ -2,7 +2,7 @@ import type {Short} from "../types";
 
 export const monthlyVsYearly: Short = {
   id: "monthly-vs-yearly",
-  durationInSeconds: 14,
+  durationInSeconds: 15,
   ren: {
     shocked: "ren-shocked.png",
     pointing: "ren-pointing.png",
@@ -14,20 +14,20 @@ export const monthlyVsYearly: Short = {
     talking: "ren-talking.png",
     neutral: "ren-neutral.png",
   },
-  voiceover: null, // add e.g. "monthly-vs-yearly.mp3"
+  voiceover: "monthly-vs-yearly.mp3", // made with scripts/voiceover.py
   disclaimer: "Example only, not financial advice",
   scenes: [
     {
       type: "hook",
       start: 0,
-      end: 3,
+      end: 3.6,
       big: "$119.88",
       caption: "That's what a $9.99 subscription really costs.",
     },
     {
       type: "stack",
-      start: 3,
-      end: 7.5,
+      start: 3.6,
+      end: 8,
       amount: 9.99,
       count: 12,
       label: "$9.99 × 12 months",
@@ -35,15 +35,15 @@ export const monthlyVsYearly: Short = {
     },
     {
       type: "checklist",
-      start: 7.5,
-      end: 11,
+      start: 8,
+      end: 11.4,
       items: ["Streaming", "Music", "Cloud storage", "That app you forgot"],
       caption: "Now times every subscription by 12.",
     },
     {
       type: "cta",
-      start: 11,
-      end: 14,
+      start: 11.4,
+      end: 15,
       title: "Free budgeting workbook",
       sub: "Link in bio",
       caption: "",

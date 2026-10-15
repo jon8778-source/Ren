@@ -1,14 +1,14 @@
 # Ren Shorts (Remotion)
 
-Example 14-second, 1080x1920 Ren short: "monthly vs yearly" ($9.99/mo = $119.88/yr).
+Example 15-second, 1080x1920 Ren short: "monthly vs yearly" ($9.99/mo = $119.88/yr).
 
 ## Scenes
 | Time | Scene | On screen |
 |------|-------|-----------|
-| 0–3s | Hook | "$119.88" pops in, shocked Ren |
-| 3–7.5s | Stack | 12 coins drop and stack, counter climbs to $119.88 |
-| 7.5–11s | Checklist | Subscriptions slide in, each "×12" |
-| 11–14s | CTA | Excited Ren, "Free budgeting workbook / Link in bio" |
+| 0–3.6s | Hook | "$119.88" pops in, shocked Ren |
+| 3.6–8s | Stack | 12 coins drop and stack, counter climbs to $119.88 |
+| 8–11.4s | Checklist | Subscriptions slide in, each "×12" |
+| 11.4–15s | CTA | Excited Ren, "Free budgeting workbook / Link in bio" |
 
 All text, prices and numbers are drawn by code, so they never warp.
 
@@ -38,7 +38,31 @@ Set a scene's opening pose with e.g. `mood: "neutral"`. Timing lives in each sce
 under `src/scenes/` (`swaps` and `jolts` on `<Ren>`, in frames from the scene start).
 Moods with no image fall back to the placeholder mascot.
 
-For a voiceover, put an MP3 in `/public` and set `voiceover: "monthly-vs-yearly.mp3"`.
+## Voiceover
+`public/monthly-vs-yearly.mp3` was generated locally with the open-source
+[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) TTS model (Apache-2.0),
+voice `am_michael` (warm, upbeat American male) at 1.12× speed.
+To voice a new short:
+
+1. One-time setup:
+   ```
+   pip install kokoro-onnx soundfile          # ffmpeg must be on PATH
+   npm pack kokoro-q8-shards@1.0.0 kokoro-js@1.2.1
+   tar xzf kokoro-q8-shards-1.0.0.tgz && cat package/kokoro-q8.part{0..5}.bin > kokoro-q8.onnx
+   tar xzf kokoro-js-1.2.1.tgz               # voices are in package/voices/
+   ```
+   (Or download `onnx/model_quantized.onnx` from onnx-community/Kokoro-82M-v1.0-ONNX on Hugging Face;
+   sha256 `fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478`.)
+2. Run one `"START|text"` per scene, using each scene's start time:
+   ```
+   python scripts/voiceover.py --model kokoro-q8.onnx --voices package/voices \
+     --duration 15 --out public/<id>.mp3 "0|First line" "3.6|Second line" ...
+   ```
+   It prints where each line lands; keep each line inside its scene (lengthen the scene if not).
+3. Set `voiceover: "<id>.mp3"` in the short's file.
+
+Other American male voices: `am_puck` (brighter), `am_fenrir` (fuller), `am_adam`, `am_eric`, `am_liam`
+(`--voice am_puck`). Write numbers the way they should be said ("nine ninety-nine", "twelve").
 
 ## Prompt to make a new short
 > Create a new short in src/shorts/ called `<id>` following the format of monthly-vs-yearly.ts.
