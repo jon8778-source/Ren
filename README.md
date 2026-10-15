@@ -24,8 +24,18 @@ Render the finished video:
 Ren poses live in `/public` as transparent PNGs: `ren-shocked`, `ren-pointing`, `ren-thumbs-up`,
 `ren-thinking`, `ren-worried`, `ren-waving`, `ren-talking`, `ren-neutral`.
 Map them to moods in a short's `ren` field (see `src/shorts/monthly-vs-yearly.ts`).
-Each scene uses a default pose (hook: shocked, checklist: pointing, CTA: excited);
-override it per scene with e.g. `mood: "waving"`.
+Ren is animated in every scene: squash-and-stretch entrance, breathing and sway,
+jumps on key moments, and pose changes mid-scene:
+
+| Scene | Ren |
+|-------|-----|
+| Hook | shocked, jumps when the number lands, then worried |
+| Stack | worried, jumps to shocked when the last coin lands |
+| Checklist | thinking, nods as each item slides in, then points |
+| CTA | thumbs-up (`excited`), then waves goodbye |
+
+Set a scene's opening pose with e.g. `mood: "neutral"`. Timing lives in each scene file
+under `src/scenes/` (`swaps` and `jolts` on `<Ren>`, in frames from the scene start).
 Moods with no image fall back to the placeholder mascot.
 
 For a voiceover, put an MP3 in `/public` and set `voiceover: "monthly-vs-yearly.mp3"`.

@@ -1,16 +1,25 @@
 import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from "remotion";
+import {Ren} from "../Ren";
 import {theme} from "../theme";
+import type {Mood, Short} from "../types";
 
 const STEP = 6; // frames between coins
 const LAND = 10; // frames for a coin to land
 
-export const Stack: React.FC<{amount: number; count: number; label: string}> = ({amount, count, label}) => {
+export const Stack: React.FC<{amount: number; count: number; label: string; ren: Short["ren"]; mood?: Mood}> = ({
+  amount,
+  count,
+  label,
+  ren,
+  mood = "worried",
+}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const landed = Math.max(0, Math.min(count, Math.floor((frame - LAND) / STEP) + 1));
   const total = (landed * amount).toFixed(2);
   const done = landed === count;
-  const finalPop = done ? spring({frame: frame - (count - 1) * STEP - LAND, fps, config: {damping: 9}}) : 0;
+  const lastLand = (count - 1) * STEP + LAND;
+  const finalPop = done ? spring({frame: frame - lastLand, fps, config: {damping: 9}}) : 0;
 
   return (
     <AbsoluteFill style={{alignItems: "center", paddingTop: 240}}>
@@ -25,7 +34,7 @@ export const Stack: React.FC<{amount: number; count: number; label: string}> = (
       >
         ${total}
       </div>
-      <div style={{position: "relative", width: 360, height: 640, marginTop: 20}}>
+      <div style={{position: "relative", width: 360, height: 640, marginTop: 20, transform: "translateX(-120px)"}}>
         {Array.from({length: count}).map((_, i) => {
           const s = spring({frame: frame - i * STEP, fps, config: {damping: 14}});
           const drop = interpolate(s, [0, 1], [-1100, 0]);
@@ -55,6 +64,9 @@ export const Stack: React.FC<{amount: number; count: number; label: string}> = (
             </div>
           );
         })}
+      </div>
+      <div style={{position: "absolute", right: 0, bottom: 440}}>
+        <Ren ren={ren} mood={mood} size={460} jolts={[{at: lastLand}]} swaps={[{at: lastLand, mood: "shocked"}]} />
       </div>
     </AbsoluteFill>
   );

@@ -10,7 +10,7 @@ export const Cta: React.FC<{title: string; sub: string; ren: Short["ren"]; mood?
   const nudge = Math.abs(Math.sin(frame / 5)) * 18;
   return (
     <AbsoluteFill style={{alignItems: "center", paddingTop: 260}}>
-      <Ren ren={ren} mood={mood} size={760} />
+      <Ren ren={ren} mood={mood} size={760} swaps={[{at: 40, mood: "waving"}]} />
       <div
         style={{
           marginTop: 50,

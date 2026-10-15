@@ -42,7 +42,6 @@ export const monthlyVsYearly: Short = {
     },
     {
       type: "cta",
-      mood: "waving",
       start: 11,
       end: 14,
       title: "Free budgeting workbook",

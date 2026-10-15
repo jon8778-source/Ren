@@ -12,7 +12,7 @@ const SceneView: React.FC<{scene: Scene; ren: Short["ren"]}> = ({scene, ren}) =>
     case "hook":
       return <Hook big={scene.big} ren={ren} mood={scene.mood} />;
     case "stack":
-      return <Stack amount={scene.amount} count={scene.count} label={scene.label} />;
+      return <Stack amount={scene.amount} count={scene.count} label={scene.label} ren={ren} mood={scene.mood} />;
     case "checklist":
       return <Checklist items={scene.items} ren={ren} mood={scene.mood} />;
     case "cta":
