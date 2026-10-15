@@ -1,9 +1,9 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from "remotion";
 import {Ren} from "../Ren";
 import {theme} from "../theme";
-import type {Short} from "../types";
+import type {Mood, Short} from "../types";
 
-export const Hook: React.FC<{big: string; ren: Short["ren"]}> = ({big, ren}) => {
+export const Hook: React.FC<{big: string; ren: Short["ren"]; mood?: Mood}> = ({big, ren, mood = "shocked"}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const pop = spring({frame: frame - 4, fps, config: {damping: 8, mass: 0.6}});
@@ -20,7 +20,7 @@ export const Hook: React.FC<{big: string; ren: Short["ren"]}> = ({big, ren}) => 
         {big}
       </div>
       <div style={{marginTop: 60}}>
-        <Ren ren={ren} mood="shocked" size={520} />
+        <Ren ren={ren} mood={mood} size={700} />
       </div>
     </AbsoluteFill>
   );

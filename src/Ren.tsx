@@ -17,7 +17,14 @@ export const Ren: React.FC<Props> = ({ren, mood, size}) => {
 
   const file = ren[mood];
   if (file) {
-    return <Img src={staticFile(file)} style={{...style, objectFit: "contain"}} />;
+    // Art is cropped at the waist, so fade the bottom edge into the background
+    const fade = "linear-gradient(to bottom, black 78%, transparent 98%)";
+    return (
+      <Img
+        src={staticFile(file)}
+        style={{...style, objectFit: "contain", objectPosition: "bottom", maskImage: fade, WebkitMaskImage: fade}}
+      />
+    );
   }
 
   // Placeholder mascot until real Ren art is added to /public

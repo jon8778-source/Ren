@@ -20,12 +20,15 @@ Open this folder in Claude Code and say:
 Render the finished video:
 `npx remotion render monthly-vs-yearly out/monthly-vs-yearly.mp4`
 
-## Add your Ren art and voiceover
-1. Put files in `/public` (e.g. `ren-shocked.png`, `ren-pointing.png`, `ren-excited.png`, `monthly-vs-yearly.mp3`).
-2. In `src/shorts/monthly-vs-yearly.ts` set:
-   `ren: {shocked: "ren-shocked.png", pointing: "ren-pointing.png", excited: "ren-excited.png"}`
-   `voiceover: "monthly-vs-yearly.mp3"`
-Until then a placeholder mascot is used.
+## Ren art and voiceover
+Ren poses live in `/public` as transparent PNGs: `ren-shocked`, `ren-pointing`, `ren-thumbs-up`,
+`ren-thinking`, `ren-worried`, `ren-waving`, `ren-talking`, `ren-neutral`.
+Map them to moods in a short's `ren` field (see `src/shorts/monthly-vs-yearly.ts`).
+Each scene uses a default pose (hook: shocked, checklist: pointing, CTA: excited);
+override it per scene with e.g. `mood: "waving"`.
+Moods with no image fall back to the placeholder mascot.
+
+For a voiceover, put an MP3 in `/public` and set `voiceover: "monthly-vs-yearly.mp3"`.
 
 ## Prompt to make a new short
 > Create a new short in src/shorts/ called `<id>` following the format of monthly-vs-yearly.ts.

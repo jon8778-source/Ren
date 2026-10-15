@@ -10,13 +10,13 @@ import type {Scene, Short} from "./types";
 const SceneView: React.FC<{scene: Scene; ren: Short["ren"]}> = ({scene, ren}) => {
   switch (scene.type) {
     case "hook":
-      return <Hook big={scene.big} ren={ren} />;
+      return <Hook big={scene.big} ren={ren} mood={scene.mood} />;
     case "stack":
       return <Stack amount={scene.amount} count={scene.count} label={scene.label} />;
     case "checklist":
-      return <Checklist items={scene.items} ren={ren} />;
+      return <Checklist items={scene.items} ren={ren} mood={scene.mood} />;
     case "cta":
-      return <Cta title={scene.title} sub={scene.sub} ren={ren} />;
+      return <Cta title={scene.title} sub={scene.sub} ren={ren} mood={scene.mood} />;
   }
 };
 

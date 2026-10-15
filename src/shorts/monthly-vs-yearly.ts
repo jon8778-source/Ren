@@ -3,7 +3,17 @@ import type {Short} from "../types";
 export const monthlyVsYearly: Short = {
   id: "monthly-vs-yearly",
   durationInSeconds: 14,
-  ren: {}, // add e.g. {shocked: "ren-shocked.png", excited: "ren-excited.png"}
+  ren: {
+    shocked: "ren-shocked.png",
+    pointing: "ren-pointing.png",
+    excited: "ren-thumbs-up.png",
+    thumbsUp: "ren-thumbs-up.png",
+    thinking: "ren-thinking.png",
+    worried: "ren-worried.png",
+    waving: "ren-waving.png",
+    talking: "ren-talking.png",
+    neutral: "ren-neutral.png",
+  },
   voiceover: null, // add e.g. "monthly-vs-yearly.mp3"
   disclaimer: "Example only, not financial advice",
   scenes: [
@@ -32,6 +42,7 @@ export const monthlyVsYearly: Short = {
     },
     {
       type: "cta",
+      mood: "waving",
       start: 11,
       end: 14,
       title: "Free budgeting workbook",

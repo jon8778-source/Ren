@@ -1,16 +1,16 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from "remotion";
 import {Ren} from "../Ren";
 import {theme} from "../theme";
-import type {Short} from "../types";
+import type {Mood, Short} from "../types";
 
-export const Cta: React.FC<{title: string; sub: string; ren: Short["ren"]}> = ({title, sub, ren}) => {
+export const Cta: React.FC<{title: string; sub: string; ren: Short["ren"]; mood?: Mood}> = ({title, sub, ren, mood = "excited"}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = spring({frame: frame - 8, fps, config: {damping: 10}});
   const nudge = Math.abs(Math.sin(frame / 5)) * 18;
   return (
     <AbsoluteFill style={{alignItems: "center", paddingTop: 260}}>
-      <Ren ren={ren} mood="excited" size={600} />
+      <Ren ren={ren} mood={mood} size={760} />
       <div
         style={{
           marginTop: 50,
