@@ -1,9 +1,9 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from "remotion";
 import {Ren} from "../Ren";
 import {theme} from "../theme";
-import type {Short} from "../types";
+import type {Mood, Short} from "../types";
 
-export const Checklist: React.FC<{items: string[]; ren: Short["ren"]}> = ({items, ren}) => {
+export const Checklist: React.FC<{items: string[]; ren: Short["ren"]; mood?: Mood}> = ({items, ren, mood = "thinking"}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   return (
@@ -30,8 +30,14 @@ export const Checklist: React.FC<{items: string[]; ren: Short["ren"]}> = ({items
           </div>
         );
       })}
-      <div style={{position: "absolute", right: 70, bottom: 470}}>
-        <Ren ren={ren} mood="pointing" size={300} />
+      <div style={{position: "absolute", right: 40, bottom: 440}}>
+        <Ren
+          ren={ren}
+          mood={mood}
+          size={460}
+          jolts={items.map((_, i) => ({at: i * 12 + 4, strength: 0.3}))}
+          swaps={[{at: items.length * 12 + 14, mood: "pointing"}]}
+        />
       </div>
     </AbsoluteFill>
   );

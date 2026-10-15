@@ -1,6 +1,16 @@
-export type Mood = "shocked" | "pointing" | "excited";
+export type Mood =
+  | "shocked"
+  | "pointing"
+  | "excited"
+  | "thumbsUp"
+  | "thinking"
+  | "worried"
+  | "waving"
+  | "talking"
+  | "neutral";
 
-type Timed = {start: number; end: number; caption: string};
+// mood: optional opening Ren pose for this scene; each scene type has a sensible default.
+type Timed = {start: number; end: number; caption: string; mood?: Mood};
 
 export type Scene =
   | (Timed & {type: "hook"; big: string})
