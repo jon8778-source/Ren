@@ -20,7 +20,7 @@ export const Hook: React.FC<{big: string; ren: Short["ren"]; mood?: Mood}> = ({b
         {big}
       </div>
       <div style={{marginTop: 60}}>
-        <Ren ren={ren} mood={mood} size={700} jolts={[{at: 8}]} swaps={[{at: 55, mood: "worried"}]} />
+        <Ren ren={ren} mood={mood} size={700} jolts={[{at: 8}]} swaps={[{at: 80, mood: "worried"}]} />
       </div>
     </AbsoluteFill>
   );

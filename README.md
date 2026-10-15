@@ -1,14 +1,14 @@
 # Ren Shorts (Remotion)
 
-Example 15-second, 1080x1920 Ren short: "monthly vs yearly" ($9.99/mo = $119.88/yr).
+Example 17.5-second, 1080x1920 Ren short: "monthly vs yearly" ($9.99/mo = $119.88/yr).
 
 ## Scenes
 | Time | Scene | On screen |
 |------|-------|-----------|
-| 0–3.6s | Hook | "$119.88" pops in, shocked Ren |
-| 3.6–8s | Stack | 12 coins drop and stack, counter climbs to $119.88 |
-| 8–11.4s | Checklist | Subscriptions slide in, each "×12" |
-| 11.4–15s | CTA | Excited Ren, "Free budgeting workbook / Link in bio" |
+| 0–6s | Hook | "$119.88" pops in, shocked Ren |
+| 6–10.4s | Stack | 12 coins drop and stack, counter climbs to $119.88 |
+| 10.4–13.8s | Checklist | Subscriptions slide in, each "×12" |
+| 13.8–17.5s | CTA | Excited Ren, "Free budgeting workbook / Link in bio" |
 
 All text, prices and numbers are drawn by code, so they never warp.
 
@@ -57,7 +57,7 @@ To voice a new short:
 2. Run one `"START|text"` per scene, using each scene's start time:
    ```
    python scripts/voiceover.py --model kokoro-q8.onnx --voices package/voices \
-     --duration 15 --out public/<id>.mp3 "0|First line" "3.6|Second line" ...
+     --duration 17.5 --out public/<id>.mp3 "0|First line" "6|Second line" ...
    ```
    It prints where each line lands; keep each line inside its scene (lengthen the scene if not).
 3. Set `voiceover: "<id>.mp3"` in the short's file.

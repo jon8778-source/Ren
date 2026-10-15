@@ -2,7 +2,7 @@ import type {Short} from "../types";
 
 export const monthlyVsYearly: Short = {
   id: "monthly-vs-yearly",
-  durationInSeconds: 15,
+  durationInSeconds: 17.5,
   ren: {
     shocked: "ren-shocked.png",
     pointing: "ren-pointing.png",
@@ -20,14 +20,14 @@ export const monthlyVsYearly: Short = {
     {
       type: "hook",
       start: 0,
-      end: 3.6,
+      end: 6,
       big: "$119.88",
       caption: "That's what a $9.99 subscription really costs.",
     },
     {
       type: "stack",
-      start: 3.6,
-      end: 8,
+      start: 6,
+      end: 10.4,
       amount: 9.99,
       count: 12,
       label: "$9.99 × 12 months",
@@ -35,15 +35,15 @@ export const monthlyVsYearly: Short = {
     },
     {
       type: "checklist",
-      start: 8,
-      end: 11.4,
+      start: 10.4,
+      end: 13.8,
       items: ["Streaming", "Music", "Cloud storage", "That app you forgot"],
       caption: "Now times every subscription by 12.",
     },
     {
       type: "cta",
-      start: 11.4,
-      end: 15,
+      start: 13.8,
+      end: 17.5,
       title: "Free budgeting workbook",
       sub: "Link in bio",
       caption: "",
