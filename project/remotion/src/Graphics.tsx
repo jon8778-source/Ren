@@ -531,7 +531,6 @@ const Cta: React.FC<P> = ({g, beats, config}) => {
   return (
     <Center gap={22}>
       <div style={{width: 380, height: 450, borderRadius: "16px 32px 32px 16px", background: T.save, color: "#fff", padding: "46px 40px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 20, boxShadow: "-16px 0 0 #157a45 inset", transform: `rotate(${-4 + (1 - s) * -10}deg) translateY(${(1 - s) * 120}px)`, opacity: s}}>
-        <div style={{alignSelf: "flex-start", background: T.gold, color: T.ink, fontSize: F.body, fontWeight: 700, borderRadius: 999, padding: "4px 22px"}}>FREE</div>
         <div style={{fontSize: 60, fontWeight: 700, lineHeight: 1.02}}>{g.title}</div>
         <div style={{marginTop: "auto", display: "flex", flexDirection: "column", gap: 14}}>
           {g.lines.map((l: string, i: number) => <div key={i} style={{display: "flex", alignItems: "center", gap: 14, fontSize: F.label, fontWeight: 600}}><div style={{width: 30, height: 30, borderRadius: 7, background: "rgba(255,255,255,0.9)"}} />{l}</div>)}
