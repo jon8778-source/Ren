@@ -1,0 +1,967 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 282.059,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "This is Frank.",
+   "refs": [],
+   "start": 0.4,
+   "end": 1.478,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "Frank just died at eighty-five, with more than two million dollars in the bank.",
+   "refs": [
+    "frank.end_age",
+    "=2000000"
+   ],
+   "start": 1.898,
+   "end": 6.342,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "On his desk is a travel brochure for Italy.",
+   "refs": [],
+   "start": 6.762,
+   "end": 9.603,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "He picked it up when he was thirty-two.",
+   "refs": [
+    "=32"
+   ],
+   "start": 10.023,
+   "end": 12.064,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "He never went.",
+   "refs": [],
+   "start": 12.484,
+   "end": 13.612,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "Frank did everything right with money.",
+   "refs": [],
+   "start": 14.032,
+   "end": 16.209,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "So why does this story feel so wrong?",
+   "refs": [],
+   "start": 16.629,
+   "end": 18.905,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "hook",
+   "text": "Today: three friends, one income, and three very different lives.",
+   "refs": [
+    "=3",
+    "=1",
+    "=3"
+   ],
+   "start": 19.325,
+   "end": 22.926,
+   "chunk": 0
+  },
+  {
+   "id": "h09",
+   "section": "hook",
+   "text": "Only one of them gets it right.",
+   "refs": [
+    "=1"
+   ],
+   "start": 23.346,
+   "end": 25.249,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "meet",
+   "text": "Meet Frank, Yara and Bea.",
+   "refs": [],
+   "start": 26.049,
+   "end": 27.772,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "meet",
+   "text": "They're twenty-five, they all earn sixty thousand dollars a year, and they all start work in the same month.",
+   "refs": [
+    "frank.start_age",
+    "frank.gross_salary"
+   ],
+   "start": 28.192,
+   "end": 34.231,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "meet",
+   "text": "Same job, same money.",
+   "refs": [],
+   "start": 34.651,
+   "end": 36.274,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "meet",
+   "text": "The only difference is what they do with it.",
+   "refs": [],
+   "start": 36.694,
+   "end": 38.986,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "meet",
+   "text": "Quick note: these people are made up, and the numbers are examples, not advice.",
+   "refs": [],
+   "start": 39.406,
+   "end": 43.832,
+   "chunk": 0
+  },
+  {
+   "id": "f01",
+   "section": "frank",
+   "text": "Let's start with Frank.",
+   "refs": [],
+   "start": 44.632,
+   "end": 46.011,
+   "chunk": 0
+  },
+  {
+   "id": "f02",
+   "section": "frank",
+   "text": "Frank is a saving machine.",
+   "refs": [],
+   "start": 46.431,
+   "end": 48.146,
+   "chunk": 0
+  },
+  {
+   "id": "f03",
+   "section": "frank",
+   "text": "He builds an emergency fund in his first year.",
+   "refs": [],
+   "start": 48.566,
+   "end": 51.265,
+   "chunk": 0
+  },
+  {
+   "id": "f04",
+   "section": "frank",
+   "text": "He never carries credit card debt.",
+   "refs": [],
+   "start": 51.685,
+   "end": 53.735,
+   "chunk": 0
+  },
+  {
+   "id": "f05",
+   "section": "frank",
+   "text": "He invests every month, automatically.",
+   "refs": [],
+   "start": 54.155,
+   "end": 56.398,
+   "chunk": 1
+  },
+  {
+   "id": "f06",
+   "section": "frank",
+   "text": "Honestly? That's great.",
+   "refs": [],
+   "start": 56.818,
+   "end": 58.219,
+   "chunk": 1
+  },
+  {
+   "id": "f07",
+   "section": "frank",
+   "text": "Do those three things and you're already off to a strong start.",
+   "refs": [
+    "=3"
+   ],
+   "start": 58.639,
+   "end": 61.713,
+   "chunk": 1
+  },
+  {
+   "id": "f08",
+   "section": "frank",
+   "text": "But Frank doesn't stop there.",
+   "refs": [],
+   "start": 62.133,
+   "end": 63.798,
+   "chunk": 1
+  },
+  {
+   "id": "f09",
+   "section": "frank",
+   "text": "Frank saves half of everything he takes home.",
+   "refs": [],
+   "start": 64.218,
+   "end": 66.856,
+   "chunk": 1
+  },
+  {
+   "id": "f10",
+   "section": "frank",
+   "text": "He eats the cheapest meals, skips every wedding abroad, and when his friends plan a trip, he says the same thing every time: 'Maybe next year.'",
+   "refs": [],
+   "start": 67.276,
+   "end": 75.333,
+   "chunk": 1
+  },
+  {
+   "id": "y01",
+   "section": "nextyear",
+   "text": "At thirty-two, Frank picks up that brochure for Italy.",
+   "refs": [
+    "=32"
+   ],
+   "start": 76.133,
+   "end": 79.144,
+   "chunk": 1
+  },
+  {
+   "id": "y02",
+   "section": "nextyear",
+   "text": "Next year.",
+   "refs": [],
+   "start": 79.564,
+   "end": 80.482,
+   "chunk": 1
+  },
+  {
+   "id": "y03",
+   "section": "nextyear",
+   "text": "At forty, his daughter asks him to come to a concert.",
+   "refs": [
+    "=40"
+   ],
+   "start": 80.902,
+   "end": 84.03,
+   "chunk": 1
+  },
+  {
+   "id": "y04",
+   "section": "nextyear",
+   "text": "Too expensive. Next year.",
+   "refs": [],
+   "start": 84.45,
+   "end": 86.137,
+   "chunk": 1
+  },
+  {
+   "id": "y05",
+   "section": "nextyear",
+   "text": "At fifty, his knees start to complain, and the hiking trip he always wanted feels harder.",
+   "refs": [
+    "=50"
+   ],
+   "start": 86.557,
+   "end": 92.052,
+   "chunk": 1
+  },
+  {
+   "id": "y06",
+   "section": "nextyear",
+   "text": "Next year.",
+   "refs": [],
+   "start": 92.472,
+   "end": 93.39,
+   "chunk": 1
+  },
+  {
+   "id": "y07",
+   "section": "nextyear",
+   "text": "Here's what Frank never saw.",
+   "refs": [],
+   "start": 93.81,
+   "end": 95.502,
+   "chunk": 1
+  },
+  {
+   "id": "y08",
+   "section": "nextyear",
+   "text": "Look at this chart.",
+   "refs": [],
+   "start": 95.922,
+   "end": 97.156,
+   "chunk": 1
+  },
+  {
+   "id": "y09",
+   "section": "nextyear",
+   "text": "This line is Frank's money. It goes up and up.",
+   "refs": [],
+   "start": 97.576,
+   "end": 100.261,
+   "chunk": 1
+  },
+  {
+   "id": "y10",
+   "section": "nextyear",
+   "text": "But this line is his health and energy, and it slowly comes down.",
+   "refs": [],
+   "start": 100.681,
+   "end": 104.589,
+   "chunk": 1
+  },
+  {
+   "id": "y11",
+   "section": "nextyear",
+   "text": "Some experiences have an expiry date.",
+   "refs": [],
+   "start": 105.009,
+   "end": 107.426,
+   "chunk": 1
+  },
+  {
+   "id": "y12",
+   "section": "nextyear",
+   "text": "You can't take your kids to the park when they're thirty.",
+   "refs": [
+    "=30"
+   ],
+   "start": 107.846,
+   "end": 110.582,
+   "chunk": 2
+  },
+  {
+   "id": "y13",
+   "section": "nextyear",
+   "text": "You can't backpack across Italy at seventy-five the way you could at thirty-five.",
+   "refs": [
+    "=75",
+    "=35"
+   ],
+   "start": 111.002,
+   "end": 115.648,
+   "chunk": 2
+  },
+  {
+   "id": "y14",
+   "section": "nextyear",
+   "text": "Waiting doesn't just cost money. It costs moments.",
+   "refs": [],
+   "start": 116.068,
+   "end": 119.129,
+   "chunk": 2
+  },
+  {
+   "id": "r01",
+   "section": "retire",
+   "text": "Frank retires at sixty-five as a multi-millionaire.",
+   "refs": [
+    "frank.retire_age"
+   ],
+   "start": 119.929,
+   "end": 123.199,
+   "chunk": 2
+  },
+  {
+   "id": "r02",
+   "section": "retire",
+   "text": "And then he keeps living like he's broke, because forty years of habit is hard to switch off.",
+   "refs": [
+    "=40"
+   ],
+   "start": 123.619,
+   "end": 128.672,
+   "chunk": 2
+  },
+  {
+   "id": "r03",
+   "section": "retire",
+   "text": "Research on retirees suggests this is surprisingly common: many people with large savings spend very little of them, even nearly two decades into retirement.",
+   "refs": [
+    "=2"
+   ],
+   "start": 129.092,
+   "end": 139.452,
+   "chunk": 2
+  },
+  {
+   "id": "r04",
+   "section": "retire",
+   "text": "Frank was never poor. He just never let himself be rich.",
+   "refs": [],
+   "start": 139.872,
+   "end": 143.258,
+   "chunk": 2
+  },
+  {
+   "id": "r05",
+   "section": "retire",
+   "text": "And hold that thought, because the person who gets this right doesn't save the most, or spend the most.",
+   "refs": [],
+   "start": 143.678,
+   "end": 149.18,
+   "chunk": 2
+  },
+  {
+   "id": "a01",
+   "section": "yara",
+   "text": "So the answer is to spend it all, right?",
+   "refs": [],
+   "start": 149.98,
+   "end": 152.168,
+   "chunk": 2
+  },
+  {
+   "id": "a02",
+   "section": "yara",
+   "text": "Meet Yara.",
+   "refs": [],
+   "start": 152.588,
+   "end": 153.623,
+   "chunk": 2
+  },
+  {
+   "id": "a03",
+   "section": "yara",
+   "text": "Yara's motto is 'you only live once.'",
+   "refs": [],
+   "start": 154.043,
+   "end": 156.279,
+   "chunk": 2
+  },
+  {
+   "id": "a04",
+   "section": "yara",
+   "text": "A new car at twenty-six.",
+   "refs": [
+    "=26"
+   ],
+   "start": 156.699,
+   "end": 158.364,
+   "chunk": 2
+  },
+  {
+   "id": "a05",
+   "section": "yara",
+   "text": "Holidays on credit cards.",
+   "refs": [],
+   "start": 158.784,
+   "end": 160.624,
+   "chunk": 2
+  },
+  {
+   "id": "a06",
+   "section": "yara",
+   "text": "A bigger apartment every time she gets a raise.",
+   "refs": [],
+   "start": 161.044,
+   "end": 164.061,
+   "chunk": 3
+  },
+  {
+   "id": "a07",
+   "section": "yara",
+   "text": "Her thirties look amazing online.",
+   "refs": [],
+   "start": 164.481,
+   "end": 166.608,
+   "chunk": 3
+  },
+  {
+   "id": "a08",
+   "section": "yara",
+   "text": "But Yara never builds a safety net.",
+   "refs": [],
+   "start": 167.028,
+   "end": 169.376,
+   "chunk": 3
+  },
+  {
+   "id": "a09",
+   "section": "yara",
+   "text": "When she loses her job at forty-four, the card balances pile up fast.",
+   "refs": [
+    "yara.job_loss_age"
+   ],
+   "start": 169.796,
+   "end": 174.099,
+   "chunk": 3
+  },
+  {
+   "id": "a10",
+   "section": "yara",
+   "text": "At sixty-seven, Yara is still working.",
+   "refs": [
+    "yara.still_working_age"
+   ],
+   "start": 174.519,
+   "end": 176.908,
+   "chunk": 3
+  },
+  {
+   "id": "a11",
+   "section": "yara",
+   "text": "Not because she wants to, but because she has to.",
+   "refs": [],
+   "start": 177.328,
+   "end": 179.917,
+   "chunk": 3
+  },
+  {
+   "id": "a12",
+   "section": "yara",
+   "text": "Frank forgot to live. Yara forgot that she'd keep living.",
+   "refs": [],
+   "start": 180.337,
+   "end": 183.771,
+   "chunk": 3
+  },
+  {
+   "id": "b01",
+   "section": "bea",
+   "text": "And then there's Bea.",
+   "refs": [],
+   "start": 184.571,
+   "end": 185.788,
+   "chunk": 3
+  },
+  {
+   "id": "b02",
+   "section": "bea",
+   "text": "Bea earns exactly the same as the other two.",
+   "refs": [
+    "=2"
+   ],
+   "start": 186.208,
+   "end": 188.786,
+   "chunk": 3
+  },
+  {
+   "id": "b03",
+   "section": "bea",
+   "text": "But Bea has a system.",
+   "refs": [],
+   "start": 189.206,
+   "end": 190.708,
+   "chunk": 3
+  },
+  {
+   "id": "b04",
+   "section": "bea",
+   "text": "Step one: foundations first.",
+   "refs": [
+    "=1"
+   ],
+   "start": 191.128,
+   "end": 193.025,
+   "chunk": 3
+  },
+  {
+   "id": "b05",
+   "section": "bea",
+   "text": "Before anything fun, Bea builds an emergency fund, clears high-interest debt, and sets up automatic retirement saving.",
+   "refs": [],
+   "start": 193.445,
+   "end": 200.969,
+   "chunk": 3
+  },
+  {
+   "id": "b06",
+   "section": "bea",
+   "text": "Those don't move.",
+   "refs": [],
+   "start": 201.389,
+   "end": 202.717,
+   "chunk": 3
+  },
+  {
+   "id": "b07",
+   "section": "bea",
+   "text": "Step two: she works out her 'enough' number, a rough target for what she'll need in retirement.",
+   "refs": [
+    "=2"
+   ],
+   "start": 203.137,
+   "end": 208.083,
+   "chunk": 3
+  },
+  {
+   "id": "b08",
+   "section": "bea",
+   "text": "Once she's on track, extra saving isn't a must. It's a choice.",
+   "refs": [],
+   "start": 208.503,
+   "end": 212.356,
+   "chunk": 3
+  },
+  {
+   "id": "b09",
+   "section": "bea",
+   "text": "Step three: a guilt-free life fund.",
+   "refs": [
+    "=3"
+   ],
+   "start": 212.776,
+   "end": 214.87,
+   "chunk": 3
+  },
+  {
+   "id": "b10",
+   "section": "bea",
+   "text": "Every month, a set amount goes into a pot just for experiences.",
+   "refs": [],
+   "start": 215.29,
+   "end": 219.301,
+   "chunk": 4
+  },
+  {
+   "id": "b11",
+   "section": "bea",
+   "text": "Concerts, trips, hobbies.",
+   "refs": [],
+   "start": 219.721,
+   "end": 221.337,
+   "chunk": 4
+  },
+  {
+   "id": "b12",
+   "section": "bea",
+   "text": "When she spends it, she doesn't feel guilty, because she planned it.",
+   "refs": [],
+   "start": 221.757,
+   "end": 224.934,
+   "chunk": 4
+  },
+  {
+   "id": "b13",
+   "section": "bea",
+   "text": "Step four: she plans by decade.",
+   "refs": [
+    "=4"
+   ],
+   "start": 225.354,
+   "end": 227.423,
+   "chunk": 4
+  },
+  {
+   "id": "b14",
+   "section": "bea",
+   "text": "Bea writes down what she wants to do in her thirties, forties and fifties, and funds the things that expire first.",
+   "refs": [],
+   "start": 227.843,
+   "end": 234.39,
+   "chunk": 4
+  },
+  {
+   "id": "b15",
+   "section": "bea",
+   "text": "Backpacking at thirty-four.",
+   "refs": [
+    "=34"
+   ],
+   "start": 234.81,
+   "end": 236.528,
+   "chunk": 4
+  },
+  {
+   "id": "b16",
+   "section": "bea",
+   "text": "Theme parks while her kids still want to go with her.",
+   "refs": [],
+   "start": 236.948,
+   "end": 239.687,
+   "chunk": 4
+  },
+  {
+   "id": "b17",
+   "section": "bea",
+   "text": "Step five: a yearly check-in.",
+   "refs": [
+    "=5"
+   ],
+   "start": 240.107,
+   "end": 241.973,
+   "chunk": 4
+  },
+  {
+   "id": "b18",
+   "section": "bea",
+   "text": "If she's ahead of plan, she spends some of the extra on purpose.",
+   "refs": [],
+   "start": 242.393,
+   "end": 245.816,
+   "chunk": 4
+  },
+  {
+   "id": "b19",
+   "section": "bea",
+   "text": "If she's behind, the life fund shrinks for a while.",
+   "refs": [],
+   "start": 246.236,
+   "end": 249.035,
+   "chunk": 4
+  },
+  {
+   "id": "e01",
+   "section": "end",
+   "text": "So how do they end up?",
+   "refs": [],
+   "start": 249.835,
+   "end": 251.274,
+   "chunk": 4
+  },
+  {
+   "id": "e02",
+   "section": "end",
+   "text": "Frank has the most money and the fewest memories.",
+   "refs": [],
+   "start": 251.694,
+   "end": 254.44,
+   "chunk": 4
+  },
+  {
+   "id": "e03",
+   "section": "end",
+   "text": "Yara has the best thirties and the most stress later.",
+   "refs": [],
+   "start": 254.86,
+   "end": 257.618,
+   "chunk": 4
+  },
+  {
+   "id": "e04",
+   "section": "end",
+   "text": "Bea has less money than Frank, but enough.",
+   "refs": [],
+   "start": 258.038,
+   "end": 260.341,
+   "chunk": 4
+  },
+  {
+   "id": "e05",
+   "section": "end",
+   "text": "And she finally went to Italy.",
+   "refs": [],
+   "start": 260.761,
+   "end": 262.543,
+   "chunk": 4
+  },
+  {
+   "id": "e06",
+   "section": "end",
+   "text": "At thirty-four. And again at sixty.",
+   "refs": [
+    "=34",
+    "=60"
+   ],
+   "start": 262.964,
+   "end": 265.086,
+   "chunk": 4
+  },
+  {
+   "id": "c01",
+   "section": "close",
+   "text": "Money is a tool for buying a life.",
+   "refs": [],
+   "start": 265.886,
+   "end": 268.002,
+   "chunk": 4
+  },
+  {
+   "id": "c02",
+   "section": "close",
+   "text": "Don't spend it all at once. But don't forget to spend it at all.",
+   "refs": [],
+   "start": 268.422,
+   "end": 272.057,
+   "chunk": 5
+  },
+  {
+   "id": "c03",
+   "section": "close",
+   "text": "So here's a question: what's on your 'next year' list that won't wait forever?",
+   "refs": [],
+   "start": 272.477,
+   "end": 276.606,
+   "chunk": 5
+  },
+  {
+   "id": "c04",
+   "section": "close",
+   "text": "Tell me in the comments.",
+   "refs": [],
+   "start": 277.026,
+   "end": 278.391,
+   "chunk": 5
+  },
+  {
+   "id": "c06",
+   "section": "close",
+   "text": "I'm Ren. See you next time.",
+   "refs": [],
+   "start": 278.811,
+   "end": 280.459,
+   "chunk": 5
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 53.335,
+   "leading_silence_s": 0.01,
+   "lufs": -22.2,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 54.155,
+   "duration": 53.272,
+   "leading_silence_s": 0.01,
+   "lufs": -22.1,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_02.wav",
+   "start": 107.846,
+   "duration": 52.778,
+   "leading_silence_s": 0.01,
+   "lufs": -22.4,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_03.wav",
+   "start": 161.044,
+   "duration": 53.826,
+   "leading_silence_s": 0.01,
+   "lufs": -22.3,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_04.wav",
+   "start": 215.29,
+   "duration": 52.712,
+   "leading_silence_s": 0.01,
+   "lufs": -22.1,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_05.wav",
+   "start": 268.422,
+   "duration": 12.037,
+   "leading_silence_s": 0.01,
+   "lufs": -22.0,
+   "median_pitch_hz": 134.69544579712476,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

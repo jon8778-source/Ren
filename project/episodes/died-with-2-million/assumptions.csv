@@ -16,6 +16,7 @@ yara,2,fixed,Living costs (new car and bigger apartment),3900,final
 yara,2,savings,Savings,0,final
 yara,2,value,gross_salary,60000,final
 yara,2,value,save_monthly,0,final
+yara,2,value,start_age,25,final
 yara,2,value,job_loss_age,44,final
 yara,2,value,card_balance_at_50,18000,final
 yara,2,value,still_working_age,67,final

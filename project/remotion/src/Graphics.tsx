@@ -142,6 +142,7 @@ const Statement: React.FC<P> = ({g, beats, config}) => {
         {g.subtitle}
         <div style={{position: "absolute", left: 0, bottom: -10, height: 12, width: "100%", borderRadius: 6, background: T.gold, transformOrigin: "0 50%", transform: `scaleX(${u})`}} />
       </div>
+      {g.note ? <div style={{marginTop: 26, fontSize: F.label, fontWeight: 600, color: T.muted, textAlign: "center", maxWidth: 1000, ...rise(b(3), 20)}}>{g.note}</div> : null}
     </Center>
   );
 };
@@ -588,6 +589,163 @@ const Brochure: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+
+// "Next year" moments: a drawn icon card (ticket or mountain) with an optional stamp
+const StampCard: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 12);
+  const tag = b(1);
+  const stamp = b(2, 9);
+  const icon = g.icon === "mountain" ? (
+    <svg width="360" height="240" viewBox="0 0 360 240"><path d="M10 230 L130 60 L190 140 L240 90 L350 230 Z" fill={T.save} stroke={T.ink} strokeWidth="8" strokeLinejoin="round" /><path d="M110 88 L130 60 L152 92 L138 84 L124 96 Z" fill="#fff" stroke={T.ink} strokeWidth="5" strokeLinejoin="round" /><circle cx="300" cy="60" r="34" fill={T.gold} stroke={T.gold_edge} strokeWidth="6" /></svg>
+  ) : (
+    <svg width="360" height="240" viewBox="0 0 360 240"><path d="M20 40 H340 V95 A25 25 0 0 0 340 145 V200 H20 V145 A25 25 0 0 0 20 95 Z" fill={T.gold} stroke={T.ink} strokeWidth="8" strokeLinejoin="round" /><line x1="250" y1="48" x2="250" y2="192" stroke={T.ink} strokeWidth="5" strokeDasharray="12 10" /><path d="M110 150 V80 L170 70 V140" fill="none" stroke={T.ink} strokeWidth="9" strokeLinecap="round" /><circle cx="98" cy="150" r="16" fill={T.ink} /><circle cx="158" cy="140" r="16" fill={T.ink} /></svg>
+  );
+  return (
+    <Center gap={26}>
+      <div style={{position: "relative", padding: "30px 60px", borderRadius: 34, border: `6px solid ${T.ink}`, background: "#fff", textAlign: "center", transform: `scale(${0.7 + 0.3 * s}) rotate(${(1 - s) * -8}deg)`, opacity: s}}>
+        {icon}
+        <div style={{fontSize: F.title, fontWeight: 700, marginTop: 6}}>{g.title}</div>
+        {g.stamp ? <div style={{position: "absolute", right: -70, top: 40, fontSize: F.title, fontWeight: 700, color: T.cost, border: `7px solid ${T.cost}`, borderRadius: 18, padding: "0 22px", background: "#fff", whiteSpace: "nowrap", opacity: stamp, transform: `rotate(-12deg) scale(${2 - stamp})`}}>{g.stamp}</div> : null}
+      </div>
+      <div style={{height: 70}}>{g.tag ? <div style={{fontSize: F.subhead, fontWeight: 700, color: "#fff", background: T.ink, borderRadius: 999, padding: "6px 36px", ...rise(tag, 30)}}>{g.tag}</div> : null}</div>
+    </Center>
+  );
+};
+
+// Shared chart frame: ages along the bottom, a polyline drawn in over its beat
+const useLine = (pts: [number, number][], progress: number) => {
+  let len = 0;
+  for (let i = 1; i < pts.length; i++) len += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+  return {d: "M" + pts.map((p) => p.join(" ")).join(" L"), len, offset: len * (1 - progress)};
+};
+
+// Frank's money rising while his health and energy fall (illustrative, no numbers)
+const EnergyChart: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 900, H = 520, L = 40, B = 60;
+  const ages: number[] = g.series.map((p: [number, number]) => p[0]);
+  const a0 = ages[0], a1 = ages[ages.length - 1];
+  const top = Math.max(...g.series.map((p: [number, number]) => p[1]));
+  const x = (age: number) => L + ((age - a0) / (a1 - a0)) * (W - L - 20);
+  const y = (v: number) => H - B - v * (H - B - 40);
+  const money = useLine(g.series.map((p: [number, number]) => [x(p[0]), y(p[1] / top)] as [number, number]), b(1, 30));
+  const energy = useLine(ages.map((a) => [x(a), y(0.95 - 0.8 * Math.pow((a - a0) / (a1 - a0), 1.6))] as [number, number]), b(2, 30));
+  return (
+    <Center gap={10}>
+      <div style={{alignSelf: "flex-end", fontSize: F.label, fontWeight: 600, color: T.muted, border: `3px solid ${T.line}`, borderRadius: 999, padding: "2px 22px"}}>Illustrative</div>
+      <svg width={W} height={H} style={{opacity: b(0)}}>
+        <line x1={L} y1={H - B} x2={W - 10} y2={H - B} stroke={T.line} strokeWidth="5" />
+        {[a0, Math.round((a0 + a1) / 2), a1].map((a) => (
+          <text key={a} x={x(a)} y={H - 14} textAnchor="middle" fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>
+        ))}
+        <path d={money.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={money.len} strokeDashoffset={money.offset} />
+        <path d={energy.d} fill="none" stroke={T.cost} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={energy.len} strokeDashoffset={energy.offset} />
+        <text x={W - 20} y={70} textAnchor="end" fontSize={F.subhead} fontWeight={700} fill={T.save} fontFamily="Fredoka" opacity={b(1)}>{g.money_label}</text>
+        <text x={W - 20} y={H - B - 30} textAnchor="end" fontSize={F.subhead} fontWeight={700} fill={T.cost} fontFamily="Fredoka" opacity={b(2)}>{g.energy_label}</text>
+      </svg>
+    </Center>
+  );
+};
+
+// Invested balance by age (from the projection), with one marked age
+const GrowthChart: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 900, H = 470, L = 40, B = 60;
+  const pts: [number, number][] = g.series.filter((p: [number, number]) => p[0] <= g.until_value);
+  const a0 = g.series[0][0], a1 = g.until_value;
+  const top = Math.max(...pts.map((p) => p[1]));
+  const x = (age: number) => L + ((age - a0) / (a1 - a0)) * (W - L - 40);
+  const y = (v: number) => H - B - (v / top) * (H - B - 40);
+  const line = useLine(pts.map((p) => [x(p[0]), y(p[1])] as [number, number]), b(0, 30));
+  const m = b(1, 10);
+  return (
+    <Center gap={16}>
+      <ExampleTag config={config} />
+      <svg width={W} height={H}>
+        <line x1={L} y1={H - B} x2={W - 10} y2={H - B} stroke={T.line} strokeWidth="5" />
+        {[a0, a1].map((a) => <text key={a} x={x(a)} y={H - 14} textAnchor="middle" fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>)}
+        <path d={line.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={line.len} strokeDashoffset={line.offset} />
+        <circle cx={x(a1)} cy={y(top)} r={22 * m} fill={T.gold} stroke={T.gold_edge} strokeWidth="6" />
+      </svg>
+      <div style={{fontSize: F.number, fontWeight: 700, color: T.save, lineHeight: 1, ...rise(m, 30)}}>{g.value}</div>
+      <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(m, 20)}}>{g.label}</div>
+    </Center>
+  );
+};
+
+// One of Bea's five steps
+const StepCard: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 10);
+  const items: string[] = g.items || [];
+  return (
+    <Center gap={24}>
+      {g.items_have_money ? <ExampleTag config={config} /> : null}
+      <div style={{display: "flex", alignItems: "center", gap: 30, transform: `scale(${0.7 + 0.3 * s})`, opacity: s}}>
+        <div style={{width: 150, height: 150, borderRadius: 75, background: T.gold, color: T.ink, fontSize: 100, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>{g.step}</div>
+        <div>
+          <div style={{fontSize: F.subhead, fontWeight: 700, color: T.muted}}>Step {g.step}</div>
+          <div style={{fontSize: F.title, fontWeight: 700, lineHeight: 1.05, maxWidth: 760}}>{g.title}</div>
+        </div>
+      </div>
+      <div style={{display: "flex", flexDirection: "column", gap: 16, alignSelf: "stretch", paddingLeft: 60}}>
+        {items.map((it, i) => {
+          const v = b(i + 1);
+          return (
+            <div key={i} style={{display: "flex", alignItems: "center", gap: 22, fontSize: F.subhead, fontWeight: 600, opacity: v, transform: `translateX(${(1 - v) * -60}px)`}}>
+              <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill={T.save} /><path d="M14 27 L22 35 L38 17" fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <span>{it}</span>
+            </div>
+          );
+        })}
+      </div>
+    </Center>
+  );
+};
+
+// Final comparison: money vs memories for each person (memories are an illustrative scale)
+const MoneyMemories: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const top = Math.max(...g.rows.map((r: any) => r.money_value));
+  return (
+    <Center gap={18}>
+      <div style={{alignSelf: "stretch", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        <div style={{fontSize: F.subhead, fontWeight: 700}}>{g.title}</div>
+        <div style={{fontSize: F.label, fontWeight: 600, color: T.muted, border: `3px solid ${T.line}`, borderRadius: 999, padding: "2px 22px"}}>Example figures · memories illustrative</div>
+      </div>
+      {g.rows.map((r: any, i: number) => {
+        const v = b(i, 14);
+        return (
+          <div key={i} style={{alignSelf: "stretch", display: "flex", alignItems: "center", gap: 24, padding: "12px 20px", borderRadius: 26, border: `4px solid ${T.line}`, opacity: v, transform: `translateX(${(1 - v) * -60}px)`}}>
+            <Img src={staticFile(r.src)} style={{width: 120, height: 130, objectFit: "contain", objectPosition: "50% 100%"}} />
+            <div style={{width: 150, fontSize: F.subhead, fontWeight: 700}}>{r.name}</div>
+            <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 10}}>
+              {[["Money", r.money_value / top, r.money, T.save], ["Memories", r.memories, r.memories_label, T.gold_edge]].map(([lab, frac, txt, col]: any, k) => (
+                <div key={k} style={{display: "flex", alignItems: "center", gap: 16}}>
+                  <div style={{width: 200, fontSize: F.label, fontWeight: 600, color: T.muted}}>{lab}</div>
+                  <div style={{width: Math.max(14, 360 * frac * v), height: 34, borderRadius: 12, background: col}} />
+                  <div style={{fontSize: F.label, fontWeight: 700, color: col}}>{txt}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
   mailboxes: Mailboxes,
   bill: Bill,
@@ -611,6 +769,11 @@ const VIEWS: Record<string, React.FC<P>> = {
   habit: Habit,
   cta: Cta,
   brochure: Brochure,
+  stamp_card: StampCard,
+  energy_chart: EnergyChart,
+  growth_chart: GrowthChart,
+  step: StepCard,
+  money_memories: MoneyMemories,
 };
 
 export const GraphicView: React.FC<P> = (p) => {

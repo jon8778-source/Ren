@@ -43,6 +43,12 @@ def resolve_graphic(g, assumptions, manifest):
         if k == "items" and isinstance(v, str):
             who, key = v.split(".", 1)
             out[k] = [{"item": i["item"], "amount": money(i["amount"])} for i in assumptions["characters"][who][key]]
+        elif k == "series" and isinstance(v, str):
+            c = assumptions["characters"][v]
+            out[k] = [[int(c["start_age"]), 0]] + sorted([int(key.split("_")[-1]), round(val)] for key, val in c.items() if key.startswith("balance_at_"))
+        elif k == "rows":
+            out[k] = [{**resolve_graphic({x: y for x, y in r.items() if x != "character"}, assumptions, manifest),
+                       "src": f"characters/{r['character']}/{r.get('pose', 'neutral')}.png"} for r in v]
         elif k == "people":
             out[k] = [{"id": p, "name": manifest[p]["name"],
                        "src": f"characters/{p}/{g.get('highlight_pose', 'neutral') if p == g.get('highlight') else 'neutral'}.png"}

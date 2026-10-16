@@ -1,0 +1,1597 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "This is",
+    "title": "Frank",
+    "subtitle": "Age {frank.end_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Died at {frank.end_age|plain}, with",
+    "title": "more than {=2000000}",
+    "subtitle": "in the bank"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.3,
+    2.6
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy"
+   },
+   "camera": "push",
+   "beats": [
+    0.2
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Picked up at {=32|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h05",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "Never went"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.2
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "h06",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Frank did it right",
+    "numbered": false,
+    "items": [
+     "Emergency fund",
+     "No credit card debt",
+     "Invested every month"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0,
+    1.5
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "h07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "So why does this",
+    "subtitle": "feel so wrong?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "h08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "tag": "One income, three lives"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.7,
+    1.6
+   ]
+  },
+  {
+   "id": "s09",
+   "line": "h09",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "?",
+     "?",
+     "?"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.5,
+    0.8
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "m01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.7
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "m02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "Age {frank.start_age|plain}",
+     "Age {frank.start_age|plain}",
+     "Age {frank.start_age|plain}"
+    ],
+    "tag": "{frank.gross_salary} a year each"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.4,
+    0.6,
+    2.2
+   ]
+  },
+  {
+   "id": "s12",
+   "line": "m03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "Same job",
+      "tone": "ink"
+     },
+     {
+      "label": "Same money",
+      "tone": "save"
+     },
+     {
+      "label": "Same start",
+      "tone": "gold"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.8,
+    1.4
+   ]
+  },
+  {
+   "id": "s13",
+   "line": "m04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "The only difference",
+    "title": "What they do",
+    "subtitle": "with their money"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.9,
+    1.8
+   ]
+  },
+  {
+   "id": "s14",
+   "line": "m05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Quick note",
+    "title": "Made-up people",
+    "subtitle": "Example numbers, not advice"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0,
+    2.6
+   ]
+  },
+  {
+   "id": "s15",
+   "line": "f01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Let's start with",
+    "title": "Frank",
+    "subtitle": "Age {frank.start_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "id": "s16",
+   "line": "f02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Frank is a",
+    "subtitle": "saving machine"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s17",
+   "line": "f03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Frank's smart start",
+    "numbered": false,
+    "items": [
+     "Emergency fund in year one",
+     "Never carries card debt",
+     "Invests every month, automatically"
+    ]
+   },
+   "camera": "drift_right",
+   "beats": [
+    0.1,
+    0.4,
+    "@f04",
+    "@f05"
+   ]
+  },
+  {
+   "id": "s18",
+   "line": "f06",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Honestly?",
+    "title": "That's great",
+    "subtitle": "A strong start"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s19",
+   "line": "f07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Three smart moves",
+    "items": [
+     "Emergency fund",
+     "No credit card debt",
+     "Invest automatically"
+    ],
+    "footer": "Off to a strong start",
+    "footer_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0,
+    1.5,
+    2.4
+   ]
+  },
+  {
+   "id": "s20",
+   "line": "f08",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "But Frank",
+    "subtitle": "doesn't stop there"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s21",
+   "line": "f09",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "Every month",
+      "bars": [
+       {
+        "label": "Takes home",
+        "value": "{frank.income}",
+        "tone": "ink"
+       },
+       {
+        "label": "Saves",
+        "value": "{frank.save_monthly}",
+        "tone": "save"
+       }
+      ]
+     }
+    ],
+    "footer": "Half of everything",
+    "footer_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0,
+    2.2
+   ]
+  },
+  {
+   "id": "s22",
+   "line": "f10",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Frank's rules",
+    "numbered": false,
+    "items": [
+     "The cheapest meals",
+     "Skips every wedding abroad",
+     "'Maybe next year'"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.8,
+    3.6
+   ]
+  },
+  {
+   "id": "s23",
+   "line": "y01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Age {=32|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.8
+   ]
+  },
+  {
+   "id": "s24",
+   "line": "y02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "Next year"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.1
+   ]
+  },
+  {
+   "id": "s25",
+   "line": "y03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "ticket",
+    "title": "Daughter's concert",
+    "tag": "Age {=40|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.2
+   ]
+  },
+  {
+   "id": "s26",
+   "line": "y04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "ticket",
+    "title": "Too expensive",
+    "stamp": "Next year"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.9
+   ]
+  },
+  {
+   "id": "s27",
+   "line": "y05",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "mountain",
+    "title": "Hiking trip",
+    "tag": "Age {=50|plain}, knees complaining"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s28",
+   "line": "y06",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "mountain",
+    "title": "Feels harder now",
+    "stamp": "Next year"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.1
+   ]
+  },
+  {
+   "id": "s29",
+   "line": "y07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Here's what Frank",
+    "subtitle": "never saw"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s30",
+   "line": "y08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "energy_chart",
+    "series": "frank",
+    "money_label": "Money",
+    "energy_label": "Health and energy"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@y09",
+    "@y10"
+   ]
+  },
+  {
+   "id": "s31",
+   "line": "y11",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Some experiences",
+    "title": "have an",
+    "subtitle": "expiry date"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s32",
+   "line": "y12",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-45",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Taking your kids to the park",
+    "title": "Can't wait until",
+    "subtitle": "they're {=30|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s33",
+   "line": "y13",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Backpacking at {=35|plain} vs {=75|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.0
+   ]
+  },
+  {
+   "id": "s34",
+   "line": "y14",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Waiting doesn't just cost money",
+    "title": "It costs",
+    "subtitle": "moments"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.6,
+    2.4
+   ]
+  },
+  {
+   "id": "s35",
+   "line": "r01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "growth_chart",
+    "series": "frank",
+    "until": "{frank.retire_age|plain}",
+    "value": "{frank.balance_at_65}",
+    "label": "Retires at {frank.retire_age|plain}: a multi-millionaire"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.8
+   ]
+  },
+  {
+   "id": "s36",
+   "line": "r02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "In the bank at {frank.retire_age|plain}",
+      "value": "{frank.balance_at_65}",
+      "tone": "save"
+     },
+     {
+      "label": "Spends a month",
+      "value": "{frank.withdraw_monthly}",
+      "tone": "cost"
+     }
+    ],
+    "equation": "Still living like he's broke"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.2,
+    3.0
+   ]
+  },
+  {
+   "id": "s37",
+   "line": "r03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Research on retirees",
+    "title": "Big savers often spend little",
+    "subtitle": "Highest-savings group: down under {=11|plain}% after {=18|plain} years",
+    "note": "Source: EBRI, Asset Decumulation or Asset Preservation? What Guides Retirement Spending?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.6,
+    4.0,
+    6.4
+   ]
+  },
+  {
+   "id": "s38",
+   "line": "r04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Frank was never poor",
+    "title": "He never let himself",
+    "subtitle": "be rich"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s39",
+   "line": "r05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "Saved the most",
+     "Spent the most",
+     "?"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.0,
+    2.6
+   ]
+  },
+  {
+   "id": "s40",
+   "line": "a01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "So the answer is",
+    "subtitle": "spend it all?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s41",
+   "line": "a02",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Meet",
+    "title": "Yara",
+    "subtitle": "Age {yara.start_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3,
+    0.6
+   ]
+  },
+  {
+   "id": "s42",
+   "line": "a03",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Yara's motto:",
+    "subtitle": "You only live once"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s43",
+   "line": "a04",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Yara's twenties",
+    "numbered": false,
+    "items": [
+     "New car at {=26|plain}",
+     "Holidays on credit cards",
+     "Bigger apartment every raise"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3,
+    "@a05",
+    "@a06"
+   ]
+  },
+  {
+   "id": "s44",
+   "line": "a07",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Her thirties",
+    "title": "look amazing",
+    "subtitle": "online"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s45",
+   "line": "a08",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-25",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Safety net",
+      "value": "{yara.savings}",
+      "tone": "cost"
+     }
+    ],
+    "equation": "Saves {yara.save_monthly} a month"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.4
+   ]
+  },
+  {
+   "id": "s46",
+   "line": "a09",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-45",
+    "pose": "stressed"
+   },
+   "graphic": {
+    "type": "card_debt",
+    "amount": "{yara.card_balance_at_50}",
+    "caption": "Job lost at {yara.job_loss_age|plain}: balances pile up"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.8
+   ]
+  },
+  {
+   "id": "s47",
+   "line": "a10",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-70",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "At {yara.still_working_age|plain}",
+    "title": "Yara is",
+    "subtitle": "still working"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s48",
+   "line": "a11",
+   "layout": "character_right",
+   "character": {
+    "id": "yara-70",
+    "pose": "stressed"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "Not because she wants to",
+      "tone": "ink"
+     },
+     {
+      "label": "Because she has to",
+      "tone": "cost"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.6
+   ]
+  },
+  {
+   "id": "s49",
+   "line": "a12",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-70",
+     "yara-70"
+    ],
+    "labels": [
+     "Forgot to live",
+     "Forgot she'd keep living"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.4,
+    2.0
+   ]
+  },
+  {
+   "id": "s50",
+   "line": "b01",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "And then there's",
+    "title": "Bea",
+    "subtitle": "Age {bea.start_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3,
+    0.6
+   ]
+  },
+  {
+   "id": "s51",
+   "line": "b02",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "{frank.gross_salary}",
+     "{yara.gross_salary}",
+     "{bea.gross_salary}"
+    ],
+    "highlight": "bea-25",
+    "highlight_pose": "happy"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.5,
+    0.8,
+    1.1
+   ]
+  },
+  {
+   "id": "s52",
+   "line": "b03",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "But Bea has",
+    "subtitle": "a system"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s53",
+   "line": "b04",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "step",
+    "step": "{=1|plain}",
+    "title": "Foundations first",
+    "items": [
+     "Emergency fund",
+     "Clear high-interest debt",
+     "Automatic retirement saving"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@b05+0.8",
+    "@b05+2.6",
+    "@b05+4.6"
+   ]
+  },
+  {
+   "id": "s54",
+   "line": "b06",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Foundations",
+    "title": "Those",
+    "subtitle": "don't move"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3,
+    0.6
+   ]
+  },
+  {
+   "id": "s55",
+   "line": "b07",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "step",
+    "step": "{=2|plain}",
+    "title": "Your 'enough' number",
+    "items": [
+     "A rough retirement target",
+     "On track? Extra saving is a choice"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.6,
+    "@b08"
+   ]
+  },
+  {
+   "id": "s56",
+   "line": "b09",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "step",
+    "step": "{=3|plain}",
+    "title": "Guilt-free life fund",
+    "items": [
+     "{bea.life_fund_monthly} a month, just for experiences",
+     "Concerts, trips, hobbies",
+     "Planned, so no guilt"
+    ],
+    "items_have_money": true
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@b10+0.6",
+    "@b11",
+    "@b12+0.6"
+   ]
+  },
+  {
+   "id": "s57",
+   "line": "b13",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "step",
+    "step": "{=4|plain}",
+    "title": "Plan by decade",
+    "items": [
+     "Thirties, forties, fifties",
+     "Fund what expires first"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@b14+1.0",
+    "@b14+3.6"
+   ]
+  },
+  {
+   "id": "s58",
+   "line": "b15",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Bea backpacks at {=34|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s59",
+   "line": "b16",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-45",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Theme parks",
+    "title": "while the kids",
+    "subtitle": "still want to go"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s60",
+   "line": "b17",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-45",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "step",
+    "step": "{=5|plain}",
+    "title": "Yearly check-in",
+    "items": [
+     "Ahead? Spend some on purpose",
+     "Behind? Life fund shrinks for a while"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@b18",
+    "@b19"
+   ]
+  },
+  {
+   "id": "s61",
+   "line": "e01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "So how do",
+    "subtitle": "they end up?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s62",
+   "line": "e02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "money_memories",
+    "title": "Money vs memories",
+    "rows": [
+     {
+      "character": "frank-70",
+      "pose": "regretful",
+      "name": "Frank",
+      "money": "{frank.balance_at_85}",
+      "memories": 0.12,
+      "memories_label": "Fewest"
+     },
+     {
+      "character": "yara-70",
+      "pose": "worried",
+      "name": "Yara",
+      "money": "{yara.savings}",
+      "memories": 0.7,
+      "memories_label": "Best thirties"
+     },
+     {
+      "character": "bea-70",
+      "pose": "joyful",
+      "name": "Bea",
+      "money": "{bea.balance_at_85}",
+      "memories": 0.9,
+      "memories_label": "Enough, and Italy"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@e03",
+    "@e04"
+   ]
+  },
+  {
+   "id": "s63",
+   "line": "e05",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-70",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "She went"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.8
+   ]
+  },
+  {
+   "id": "s64",
+   "line": "e06",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-70",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "At {=34|plain}, and again at {=60|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.2
+   ]
+  },
+  {
+   "id": "s65",
+   "line": "c01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Money is a tool",
+    "title": "for buying",
+    "subtitle": "a life"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s66",
+   "line": "c02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "Don't spend it all at once",
+      "tone": "cost"
+     },
+     {
+      "label": "Don't forget to spend it",
+      "tone": "save"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    2.2
+   ]
+  },
+  {
+   "id": "s67",
+   "line": "c03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Your list",
+    "stamp": "Next year?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0,
+    2.0
+   ]
+  },
+  {
+   "id": "s68",
+   "line": "c04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Tell me",
+    "title": "in the",
+    "subtitle": "comments"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s69",
+   "line": "c06",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "waving"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "I'm Ren",
+    "title": "See you",
+    "subtitle": "next time"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  }
+ ]
+}

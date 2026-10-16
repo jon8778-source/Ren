@@ -115,6 +115,7 @@
    "fixed_share_pct": 100,
    "gross_salary": 60000.0,
    "save_monthly": 0.0,
+   "start_age": 25.0,
    "job_loss_age": 44.0,
    "card_balance_at_50": 18000.0,
    "still_working_age": 67.0,
