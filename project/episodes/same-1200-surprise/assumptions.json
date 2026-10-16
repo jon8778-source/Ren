@@ -43,7 +43,12 @@
    "left_over": 150.0,
    "savings": 200.0,
    "bill_covered_by_savings": 200.0,
-   "bill_shortfall": 1000.0
+   "bill_shortfall": 1000.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 90,
+   "plan_monthly": 100.0,
+   "plan_months": 10.0,
+   "income_multiple_vs_level1": 1
   },
   "nina": {
    "level": 2,
@@ -88,9 +93,12 @@
    ],
    "leaks_total": 184.0,
    "left_over": 626.0,
-   "savings": 900.0,
-   "bill_covered_by_savings": 900.0,
-   "bill_shortfall": 300.0
+   "savings": 2000.0,
+   "bill_covered_by_savings": 1200.0,
+   "bill_shortfall": 0.0,
+   "savings_after_bill": 800.0,
+   "fixed_share_pct": 79,
+   "income_multiple_vs_level1": 1
   },
   "claire": {
    "level": 3,
@@ -126,22 +134,25 @@
    "leak_items": [
     {
      "item": "Dining out",
-     "amount": 400.0
+     "amount": 700.0
     },
     {
      "item": "Online shopping",
-     "amount": 300.0
+     "amount": 650.0
     },
     {
      "item": "Subscriptions",
-     "amount": 85.0
+     "amount": 150.0
     }
    ],
-   "leaks_total": 785.0,
-   "left_over": 885.0,
+   "leaks_total": 1500.0,
+   "left_over": 170.0,
    "savings": 600.0,
    "bill_covered_by_savings": 600.0,
-   "bill_shortfall": 600.0
+   "bill_shortfall": 600.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 70,
+   "income_multiple_vs_level1": 2
   },
   "marcus": {
    "level": 4,
@@ -196,7 +207,10 @@
    "left_over": 1100.0,
    "savings": 1500.0,
    "bill_covered_by_savings": 1200.0,
-   "bill_shortfall": 0.0
+   "bill_shortfall": 0.0,
+   "savings_after_bill": 300.0,
+   "fixed_share_pct": 83,
+   "income_multiple_vs_level1": 3
   },
   "richard": {
    "level": 5,
@@ -255,7 +269,10 @@
    "left_over": 900.0,
    "savings": 1000.0,
    "bill_covered_by_savings": 1000.0,
-   "bill_shortfall": 200.0
+   "bill_shortfall": 200.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 82,
+   "income_multiple_vs_level1": 9
   }
  },
  "problems": []

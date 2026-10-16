@@ -2,18 +2,14 @@ import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from "remotion
 import type {Box, CharacterRef} from "./types";
 
 // A character (Ren or one of the five people) standing in its zone. Slides in when it first
-// appears, pops when its pose changes, breathes, and bobs while Ren is speaking.
+// appears and gives one small pop when its pose changes. Otherwise it holds still: no talking
+// bob, sway or breathing, so nobody looks like they're shaking.
 export const Character: React.FC<{c: CharacterRef; box: Box; side: string; sceneStart: number}> = ({c, box, side}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const t = frame / fps;
   const enter = c.enter ? spring({frame, fps, config: {damping: 14, stiffness: 120}}) : 1;
   const fromX = side === "character_left" ? -260 : 260;
   const pop = c.posePop ? 1 - spring({frame, fps, config: {damping: 9, stiffness: 240}}) : 0;
-  const breathe = Math.sin(t * 2.1) * 0.01;
-  const speaking = c.speaking && t >= c.speaking[0] && t <= c.speaking[1];
-  const bob = speaking ? -Math.abs(Math.sin(t * 9)) * 7 : 0;
-  const sway = Math.sin(t * 1.3) * 0.8;
   return (
     <div
       style={{
@@ -26,9 +22,7 @@ export const Character: React.FC<{c: CharacterRef; box: Box; side: string; scene
         transformOrigin: "50% 100%",
         transform: [
           `translateX(${(1 - enter) * fromX}px)`,
-          `translateY(${bob}px)`,
-          `rotate(${sway}deg)`,
-          `scale(${1 + pop * 0.06}, ${1 - pop * 0.06 + breathe})`,
+          `scale(${1 + pop * 0.04}, ${1 - pop * 0.04})`,
         ].join(" "),
       }}
     >

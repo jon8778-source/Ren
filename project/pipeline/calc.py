@@ -4,12 +4,14 @@
 
 Reads assumptions.csv, computes each character's totals (fixed costs, leaks, left over each
 month, and how the surprise bill compares with savings), checks them against any "stated"
-rows, and writes assumptions.json (used by the script check and the video) and
+rows, checks every story claim in claims.txt against the numbers, and writes assumptions.json (used by the script check and the video) and
 assumptions.md (the visible table). Exits with status 1 if anything doesn't add up.
 """
 import csv
 import json
+import math
 import sys
+from types import SimpleNamespace
 from collections import defaultdict
 from pathlib import Path
 
@@ -31,6 +33,8 @@ def calculate(ep: Path):
         meta.setdefault(c, {"level": int(r["level"]), "status": set()})["status"].add(r["status"])
         if r["category"] == "stated":
             stated[c][r["item"]] = amt
+        elif r["category"] == "value":
+            people[c]["_values"].append({"item": r["item"], "amount": amt})
         else:
             people[c][r["category"]].append({"item": r["item"], "amount": amt})
 
@@ -57,7 +61,11 @@ def calculate(ep: Path):
             "savings": savings,
             "bill_covered_by_savings": min(bill, savings),
             "bill_shortfall": max(0.0, bill - savings),
+            "savings_after_bill": max(0.0, savings - bill),
+            "fixed_share_pct": round(100 * fixed / income),
         }
+        for v in cats["_values"]:
+            p[v["item"]] = v["amount"]
         if left < 0:
             problems.append(f"{c}: spends more than they earn ({money(left)} a month)")
         for key, val in stated[c].items():
@@ -66,7 +74,36 @@ def calculate(ep: Path):
             elif abs(p[key] - val) > 0.005:
                 problems.append(f"{c}: stated {key} {money(val)} but the table adds up to {money(p[key])}")
         out[c] = p
-    return {"bill": bill, "bill_due_days": shared.get("bill_due_days"), "characters": out}, problems
+    level1 = next((p for p in out.values() if p["level"] == 1), None)
+    for p in out.values():
+        if level1:
+            p["income_multiple_vs_level1"] = math.floor(p["income"] / level1["income"])
+    data = {"bill": bill, "bill_due_days": shared.get("bill_due_days"), "characters": out}
+    problems += check_claims(ep, data)
+    return data, problems
+
+
+def check_claims(ep: Path, data):
+    """claims.txt: one `python expression | what the script says` per line, e.g.
+    `richard.leaks_total > sam.income | Richard's leaks are bigger than Sam's whole paycheck`."""
+    path = ep / "claims.txt"
+    if not path.exists():
+        return []
+    ns = {c: SimpleNamespace(**p) for c, p in data["characters"].items()}
+    ns.update(bill=data["bill"], min=min, max=max, round=round)
+    bad = []
+    for row in path.read_text().splitlines():
+        if not row.strip() or row.lstrip().startswith("#"):
+            continue
+        expr, _, text = row.partition("|")
+        try:
+            ok = eval(expr, {"__builtins__": {}}, ns)
+        except Exception as e:  # a typo in claims.txt must not pass silently
+            bad.append(f"claim '{text.strip()}' could not be checked: {e}")
+            continue
+        if not ok:
+            bad.append(f"claim is false: {text.strip()} ({expr.strip()})")
+    return bad
 
 
 def table_md(data):

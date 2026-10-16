@@ -10,6 +10,8 @@ sam,1,fixed,Health insurance,150,final
 sam,1,leak,Delivery fees,55,final
 sam,1,leak,Late fee,25,final
 sam,1,savings,Savings balance,200,final
+sam,1,value,plan_monthly,100,final
+sam,1,value,plan_months,10,final
 sam,1,stated,fixed_total,2170,final
 sam,1,stated,leaks_total,80,final
 sam,1,stated,left_over,150,final
@@ -22,7 +24,7 @@ nina,2,fixed,Insurance,220,draft
 nina,2,fixed,Student loan,250,draft
 nina,2,leak,Forgotten subscriptions,64,draft
 nina,2,leak,Takeout,120,draft
-nina,2,savings,Savings balance,900,draft
+nina,2,savings,Savings balance,2000,draft
 claire,3,income,Take-home pay,5600,draft
 claire,3,fixed,Rent,1900,draft
 claire,3,fixed,Car payment,520,draft
@@ -30,9 +32,9 @@ claire,3,fixed,Groceries,600,draft
 claire,3,fixed,Utilities and phone,260,draft
 claire,3,fixed,Insurance,300,draft
 claire,3,fixed,Credit card minimums,350,draft
-claire,3,leak,Dining out,400,draft
-claire,3,leak,Online shopping,300,draft
-claire,3,leak,Subscriptions,85,draft
+claire,3,leak,Dining out,700,draft
+claire,3,leak,Online shopping,650,draft
+claire,3,leak,Subscriptions,150,draft
 claire,3,savings,Savings balance,600,draft
 marcus,4,income,Take-home pay,9500,draft
 marcus,4,fixed,Rent,3200,draft

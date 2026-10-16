@@ -77,8 +77,16 @@ def resolve_ref(ref, assumptions):
         return float(ref[1:])
     if "." in ref:
         who, key = ref.split(".", 1)
+        if ":" in key:  # nina.leak:forgotten_subscriptions -> that line item
+            cat, slug = key.split(":", 1)
+            items = assumptions["characters"][who][f"{cat}_items"]
+            return float(next(i["amount"] for i in items if slugify(i["item"]) == slug))
         return float(assumptions["characters"][who][key])
     return float(assumptions[ref])
+
+
+def slugify(text):
+    return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
 
 
 def money(n):

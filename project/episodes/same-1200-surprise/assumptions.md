@@ -5,8 +5,8 @@ Surprise bill: $1,200, due in 30 days.
 | Level | Character | Status | Take-home / month | Fixed costs | Leaks | Left over | Savings | Bill shortfall |
 |---|---|---|---|---|---|---|---|---|
 | 1 | sam | final | $2,400 | $2,170 | $80 | $150 | $200 | $1,000 |
-| 2 | nina | draft | $3,800 | $2,990 | $184 | $626 | $900 | $300 |
-| 3 | claire | draft | $5,600 | $3,930 | $785 | $885 | $600 | $600 |
+| 2 | nina | draft | $3,800 | $2,990 | $184 | $626 | $2,000 | $0 |
+| 3 | claire | draft | $5,600 | $3,930 | $1,500 | $170 | $600 | $600 |
 | 4 | marcus | draft | $9,500 | $7,880 | $520 | $1,100 | $1,500 | $0 |
 | 5 | richard | draft | $22,000 | $18,150 | $2,950 | $900 | $1,000 | $200 |
 
@@ -52,11 +52,11 @@ Surprise bill: $1,200, due in 30 days.
 | Insurance | $300 |
 | Credit card minimums | $350 |
 | **Fixed costs total** | **$3,930** |
-| Leak: Dining out | $400 |
-| Leak: Online shopping | $300 |
-| Leak: Subscriptions | $85 |
-| **Leaks total** | **$785** |
-| **Left over** ($5,600 − $3,930 − $785) | **$885** |
+| Leak: Dining out | $700 |
+| Leak: Online shopping | $650 |
+| Leak: Subscriptions | $150 |
+| **Leaks total** | **$1,500** |
+| **Left over** ($5,600 − $3,930 − $1,500) | **$170** |
 
 ## Level 4: marcus (draft)
 
