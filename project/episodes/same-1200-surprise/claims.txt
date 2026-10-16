@@ -1,0 +1,18 @@
+# Story claims in script.md, checked against the assumptions table by pipeline/calc.py.
+# Format: python expression | what the script says
+sam.savings < bill | Sam can't cover the bill from savings
+sam.savings + sam.plan_monthly * sam.plan_months == bill | Two hundred now plus one hundred a month for ten months pays the bill
+sam.plan_monthly <= sam.left_over | The payment plan fits inside Sam's monthly gap
+nina.savings >= bill and nina.savings_after_bill == 800 | Nina's savings cover the whole bill with eight hundred to spare
+claire.leaks_total == 1500 and claire.bill_shortfall > claire.left_over | Claire's leaks eat her gap, so the rest goes on the card
+marcus.savings >= bill and marcus.savings_after_bill == 300 | Marcus's savings cover it, leaving three hundred
+marcus.fixed_share_pct == 83 | Eighty-three cents of every dollar goes to fixed costs
+richard.income_multiple_vs_level1 == 9 and richard.income > 9 * sam.income | Richard earns more than nine times what Sam does
+richard.leaks_total > sam.income | Richard's leaks alone are bigger than Sam's entire paycheck
+richard.savings < bill and richard.bill_shortfall <= richard.left_over and richard.savings_after_bill == 0 | Richard can pay, but it takes all his savings plus two hundred, leaving no buffer
+richard.income == max(c.income for c in [sam, nina, claire, marcus, richard]) | Richard has the biggest paycheck
+nina.savings_after_bill == max(c.savings_after_bill for c in [sam, nina, claire, marcus, richard]) | Nina ends the month with the biggest buffer (she stays calmest)
+nina.income < marcus.income and nina.income < richard.income | Nina earns less than Marcus and Richard
+claire.income > 2 * sam.income and claire.left_over - sam.left_over == 20 | Claire earns more than double Sam, but her gap is only twenty dollars bigger
+richard.income_multiple_vs_level1 == 9 | Earning nine times more than Sam
+sam.bill_shortfall > 0 and nina.savings_after_bill > 0 and claire.bill_shortfall > claire.left_over and marcus.savings_after_bill > 0 and richard.savings_after_bill == 0 | Recap: Sam needed a plan, Nina had a buffer, Claire used a card, Marcus kept a thin cushion, Richard had nothing left

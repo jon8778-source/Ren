@@ -1,0 +1,5 @@
+node_modules
+.media
+renders
+__pycache__
+.hyperframes

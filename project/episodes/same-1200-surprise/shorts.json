@@ -1,0 +1,23 @@
+{
+  "description_footer": "Full video on the channel: Life at Every Income Level (One Surprise Bill).\nMoney Leak Audit Workbook: [WORKBOOK LINK]\n\nEducational only, not financial advice. The people and figures are illustrative examples.\n#shorts",
+  "shorts": {
+    "short-richard": {
+      "title": "$22K a month and still stressed",
+      "description": "He earns $22,000 a month. One $1,200 bill still wipes out his buffer. Here's why.",
+      "lines": ["h04", "h05", "h06", "x05", "x06", "l07", "x09", "x10"],
+      "scenes": {
+        "l07": { "layout": "character_right", "character": { "id": "richard", "pose": "shocked" },
+                 "graphic": { "type": "bill", "title": "Dental bill", "amount": "{bill}", "stamp": "Surprise!" }, "camera": "push", "beats": [0.2, 1.6] }
+      }
+    },
+    "short-nina": {
+      "title": "The calmest person wasn't the richest",
+      "description": "Same $1,200 surprise bill. Nina earns less than most of them, and handles it best.",
+      "lines": ["r02", "n02", "n05", "n06", "n08", "n10"],
+      "scenes": {
+        "r02": { "layout": "character_left", "character": { "id": "ren", "pose": "talking" },
+                 "graphic": { "type": "lineup", "people": ["sam", "nina", "claire", "marcus", "richard"], "tag": "Same {bill} bill" }, "camera": "push", "beats": [0.2, 0.4, 0.6, 0.8, 1.0, 1.8] }
+      }
+    }
+  }
+}

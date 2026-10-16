@@ -1,0 +1,63 @@
+character,level,category,item,amount,status
+all,0,bill,Surprise dental bill,1200,final
+all,0,bill_due_days,Days to pay,30,final
+sam,1,income,Take-home pay,2400,final
+sam,1,fixed,Rent (shared apartment),1150,final
+sam,1,fixed,Utilities and phone,190,final
+sam,1,fixed,Groceries,420,final
+sam,1,fixed,Bus pass and rides,260,final
+sam,1,fixed,Health insurance,150,final
+sam,1,leak,Delivery fees,55,final
+sam,1,leak,Late fee,25,final
+sam,1,savings,Savings balance,200,final
+sam,1,value,plan_monthly,100,final
+sam,1,value,plan_months,10,final
+sam,1,stated,fixed_total,2170,final
+sam,1,stated,leaks_total,80,final
+sam,1,stated,left_over,150,final
+nina,2,income,Take-home pay,3800,final
+nina,2,fixed,Rent,1450,final
+nina,2,fixed,Utilities and phone,210,final
+nina,2,fixed,Groceries,480,final
+nina,2,fixed,Car payment and gas,380,final
+nina,2,fixed,Insurance,220,final
+nina,2,fixed,Student loan,250,final
+nina,2,leak,Forgotten subscriptions,64,final
+nina,2,leak,Takeout,120,final
+nina,2,savings,Savings balance,2000,final
+claire,3,income,Take-home pay,5600,final
+claire,3,fixed,Rent,1900,final
+claire,3,fixed,Car payment,520,final
+claire,3,fixed,Groceries,600,final
+claire,3,fixed,Utilities and phone,260,final
+claire,3,fixed,Insurance,300,final
+claire,3,fixed,Credit card minimums,350,final
+claire,3,leak,Dining out,700,final
+claire,3,leak,Online shopping,650,final
+claire,3,leak,Subscriptions,150,final
+claire,3,savings,Savings balance,600,final
+marcus,4,income,Take-home pay,9500,final
+marcus,4,fixed,Rent,3200,final
+marcus,4,fixed,Car lease,780,final
+marcus,4,fixed,Childcare,1600,final
+marcus,4,fixed,Student loans,600,final
+marcus,4,fixed,Utilities and phone,350,final
+marcus,4,fixed,Groceries,900,final
+marcus,4,fixed,Insurance,450,final
+marcus,4,leak,Dining out,300,final
+marcus,4,leak,Subscriptions,120,final
+marcus,4,leak,Rideshares,100,final
+marcus,4,savings,Savings balance,1500,final
+richard,5,income,Take-home pay,22000,final
+richard,5,fixed,Mortgage,7800,final
+richard,5,fixed,Two car payments,1900,final
+richard,5,fixed,Private school,3500,final
+richard,5,fixed,Club membership,600,final
+richard,5,fixed,Groceries,1400,final
+richard,5,fixed,Utilities,650,final
+richard,5,fixed,Insurance,1200,final
+richard,5,fixed,Housekeeper,1100,final
+richard,5,leak,Dining out,1200,final
+richard,5,leak,Subscriptions,250,final
+richard,5,leak,Shopping,1500,final
+richard,5,savings,Savings balance,1000,final

@@ -1,0 +1,1840 @@
+{
+ "_format": "One entry per visual. A scene starts at its script line (plus optional offset seconds) and runs until the next scene. Text may contain {ref} (money from assumptions.json) or {ref|plain}; never type numbers directly. beats are seconds after the scene start where something new appears, or \"@line\" / \"@line+0.5\" for when a line is spoken.",
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "mailboxes",
+    "count": 5
+   },
+   "camera": "push",
+   "beats": [
+    0.5,
+    0.9,
+    1.3,
+    1.7,
+    2.1
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "bill",
+    "title": "Dental bill",
+    "amount": "{bill}",
+    "stamp": "Surprise!"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    2.2
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ]
+   },
+   "camera": "drift_left",
+   "beats": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "sam",
+    "tag": "{sam.income} / month"
+   },
+   "camera": "drift_left",
+   "beats": [
+    0.3
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "richard",
+    "highlight_pose": "happy",
+    "tag": "{richard.income} / month"
+   },
+   "camera": "drift_left",
+   "beats": [
+    0.3
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "h06",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Biggest paycheck,",
+    "subtitle": "smallest problem?"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.9
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "h07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Not so fast.",
+    "title": "Income isn't what decides",
+    "subtitle": "who stays calm"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2,
+    2.4
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "h08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "spotlight",
+    "title": "Something else does",
+    "subtitle": "You'll spot it in your own budget"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.8
+   ]
+  },
+  {
+   "id": "s09",
+   "line": "r01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "The experiment",
+    "numbered": false,
+    "items": [
+     "Same month",
+     "Same {bill} bill",
+     "Simplified budgets"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    "@r02+0.9",
+    "@r02+2.6"
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "r03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Made-up people",
+    "title": "Simplified budgets",
+    "subtitle": "Every number is an example"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2,
+    2.6
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "r04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "Comes in",
+      "tone": "save"
+     },
+     {
+      "label": "Goes out",
+      "tone": "cost"
+     },
+     {
+      "label": "What's left",
+      "tone": "gold"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    1.2,
+    2.3,
+    3.4
+   ]
+  },
+  {
+   "id": "s12",
+   "line": "r05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "labels": [
+     "calm?",
+     "calm?",
+     "calm?",
+     "calm?",
+     "calm?"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.6,
+    0.9,
+    1.2,
+    1.5,
+    1.8
+   ]
+  },
+  {
+   "id": "s13",
+   "line": "l01",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "level_title",
+    "level": "1",
+    "name": "Sam",
+    "subtitle": "Tight budget, no buffer"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s14",
+   "line": "l02",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "profile",
+    "facts": [
+     "Age {=24|plain}",
+     "Works in retail"
+    ],
+    "label": "Take-home pay",
+    "amount": "{sam.income}",
+    "per": "a month"
+   },
+   "camera": "drift_right",
+   "beats": [
+    0.3,
+    1.4,
+    2.8
+   ]
+  },
+  {
+   "id": "s15",
+   "line": "l03",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Fixed costs",
+    "items": "sam.fixed_items",
+    "total_label": "Total",
+    "total": "{sam.fixed_total}",
+    "tone": "ink"
+   },
+   "camera": "drift_right",
+   "beats": [
+    0.3,
+    1.2,
+    1.9,
+    2.8,
+    3.6,
+    5.2
+   ]
+  },
+  {
+   "id": "s16",
+   "line": "l04",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Little leaks",
+    "items": "sam.leak_items",
+    "total_label": "Leaks",
+    "total": "{sam.leaks_total}",
+    "tone": "cost"
+   },
+   "camera": "drift_right",
+   "beats": [
+    0.3,
+    1.4,
+    2.6,
+    3.2
+   ]
+  },
+  {
+   "id": "s17",
+   "line": "l05",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{sam.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{sam.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{sam.income} − {sam.fixed_total} − {sam.leaks_total} = {sam.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.0,
+    3.0
+   ]
+  },
+  {
+   "id": "s18",
+   "line": "l06",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "envelope",
+    "label": "Tuesday"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2
+   ]
+  },
+  {
+   "id": "s19",
+   "line": "l07",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Sam's savings",
+    "savings": "{sam.savings}",
+    "verdict": "Short by {sam.bill_shortfall}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.1,
+    2.2,
+    3.3
+   ]
+  },
+  {
+   "id": "s20",
+   "line": "l08",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Short by {sam.bill_shortfall}",
+    "title": "So Sam does something simple",
+    "subtitle": "Sam asks"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.3,
+    "@l08+2.4"
+   ]
+  },
+  {
+   "id": "s21",
+   "line": "l09",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "bill",
+    "title": "Dental bill",
+    "amount": "{bill}",
+    "stamp": "Plan agreed"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2
+   ]
+  },
+  {
+   "id": "s22",
+   "line": "l10",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "payment_plan",
+    "now": "{sam.savings}",
+    "now_label": "From savings now",
+    "monthly": "{sam.plan_monthly}",
+    "months": "{sam.plan_months|plain}",
+    "months_label": "Then {sam.plan_monthly} a month for {sam.plan_months|plain} months",
+    "total_label": "Total: {bill}, paid off"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.2,
+    3.6
+   ]
+  },
+  {
+   "id": "s23",
+   "line": "l11",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "Each month",
+      "bars": [
+       {
+        "label": "Sam's gap",
+        "value": "{sam.left_over}",
+        "tone": "save"
+       },
+       {
+        "label": "Plan payment",
+        "value": "{sam.plan_monthly}",
+        "tone": "ink"
+       }
+      ]
+     }
+    ],
+    "footer": "It fits. Just.",
+    "footer_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.4,
+    2.6
+   ]
+  },
+  {
+   "id": "s24",
+   "line": "l12",
+   "layout": "character_right",
+   "character": {
+    "id": "sam",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Tight, but calm",
+    "title": "Sam isn't panicking",
+    "subtitle": "Sam has a plan"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0,
+    2.4
+   ]
+  },
+  {
+   "id": "s25",
+   "line": "l13",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Sam",
+    "habit": "Autopay on",
+    "detail": "No more late fees"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s26",
+   "line": "n01",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "level_title",
+    "level": "2",
+    "name": "Nina",
+    "subtitle": "Modest income, steady habits"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s27",
+   "line": "n02",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "profile",
+    "facts": [
+     "Works in an office"
+    ],
+    "label": "Take-home pay",
+    "amount": "{nina.income}",
+    "per": "a month"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.8
+   ]
+  },
+  {
+   "id": "s28",
+   "line": "n03",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Fixed costs",
+    "items": "nina.fixed_items",
+    "total_label": "Total",
+    "total": "{nina.fixed_total}",
+    "tone": "ink"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.1,
+    2.7,
+    3.3,
+    4.0
+   ]
+  },
+  {
+   "id": "s29",
+   "line": "n04",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Little leaks",
+    "items": "nina.leak_items",
+    "total_label": "Leaks",
+    "total": "{nina.leaks_total}",
+    "tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.1,
+    2.2
+   ]
+  },
+  {
+   "id": "s30",
+   "line": "n05",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{nina.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{nina.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{nina.income} − {nina.fixed_total} − {nina.leaks_total} = {nina.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    "@n05+2.6",
+    "@n05+4.2"
+   ]
+  },
+  {
+   "id": "s31",
+   "line": "n06",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Nina's savings",
+    "savings": "{nina.savings}",
+    "verdict": "{nina.savings_after_bill} to spare",
+    "verdict_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.9,
+    1.6,
+    3.2
+   ]
+  },
+  {
+   "id": "s32",
+   "line": "n07",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "But wait",
+    "title": "Even Nina",
+    "subtitle": "has a leak"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.3
+   ]
+  },
+  {
+   "id": "s33",
+   "line": "n08",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "spotlight",
+    "title": "{nina.leak:forgotten_subscriptions} a month",
+    "subtitle": "Subscriptions she forgot she had"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    2.4
+   ]
+  },
+  {
+   "id": "s34",
+   "line": "n09",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Cancelled that night",
+    "title": "{nina.leak:forgotten_subscriptions} a month",
+    "subtitle": "back into her buffer"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.8,
+    "@n09+2.4"
+   ]
+  },
+  {
+   "id": "s35",
+   "line": "n10",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Nina",
+    "habit": "A ten-minute leak check",
+    "detail": "At the start of every month"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s36",
+   "line": "n11",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "richard",
+    "highlight_pose": "thinking"
+   },
+   "camera": "push",
+   "beats": [
+    "@n11+1.0"
+   ]
+  },
+  {
+   "id": "s37",
+   "line": "c01",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "level_title",
+    "level": "3",
+    "name": "Claire",
+    "subtitle": "Growing lifestyle"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s38",
+   "line": "c02",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "profile",
+    "facts": [
+     "Promoted last year"
+    ],
+    "label": "Take-home pay",
+    "amount": "{claire.income}",
+    "per": "a month"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    2.2
+   ]
+  },
+  {
+   "id": "s39",
+   "line": "c03",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Fixed costs",
+    "items": "claire.fixed_items",
+    "total_label": "Total",
+    "total": "{claire.fixed_total}",
+    "tone": "ink"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.1,
+    2.7,
+    3.3,
+    4.0
+   ]
+  },
+  {
+   "id": "s40",
+   "line": "c04",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Big leaks",
+    "items": "claire.leak_items",
+    "total_label": "Leaks",
+    "total": "{claire.leaks_total}",
+    "tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.4,
+    2.6,
+    3.4,
+    4.2,
+    5.2
+   ]
+  },
+  {
+   "id": "s41",
+   "line": "c05",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "rising",
+    "left": "Pay",
+    "right": "Spending",
+    "caption": "Up together"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    2.2
+   ]
+  },
+  {
+   "id": "s42",
+   "line": "c06",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{claire.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{claire.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{claire.income} − {claire.fixed_total} − {claire.leaks_total} = {claire.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    "@c06+2.4",
+    "@c06+4.0"
+   ]
+  },
+  {
+   "id": "s43",
+   "line": "c07",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Claire's savings",
+    "savings": "{claire.savings}",
+    "verdict": "{claire.bill_shortfall} goes on the card"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.8,
+    1.4,
+    3.0
+   ]
+  },
+  {
+   "id": "s44",
+   "line": "c08",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "card_debt",
+    "amount": "{claire.bill_shortfall}",
+    "caption": "Now it grows with interest"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2
+   ]
+  },
+  {
+   "id": "s45",
+   "line": "c09",
+   "layout": "character_right",
+   "character": {
+    "id": "claire",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "Take-home pay",
+      "bars": [
+       {
+        "label": "Sam",
+        "value": "{sam.income}",
+        "tone": "ink"
+       },
+       {
+        "label": "Claire",
+        "value": "{claire.income}",
+        "tone": "ink"
+       }
+      ]
+     },
+     {
+      "title": "Left each month",
+      "bars": [
+       {
+        "label": "Sam",
+        "value": "{sam.left_over}",
+        "tone": "save"
+       },
+       {
+        "label": "Claire",
+        "value": "{claire.left_over}",
+        "tone": "save"
+       }
+      ]
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.2,
+    "@c09+3.6",
+    "@c09+4.0",
+    "@c09+4.6"
+   ]
+  },
+  {
+   "id": "s46",
+   "line": "c10",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Claire",
+    "habit": "Half of every raise",
+    "detail": "Straight to savings"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s47",
+   "line": "m01",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "level_title",
+    "level": "4",
+    "name": "Marcus",
+    "subtitle": "High income, high fixed costs"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s48",
+   "line": "m02",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "profile",
+    "facts": [
+     "Works in tech"
+    ],
+    "label": "Take-home pay",
+    "amount": "{marcus.income}",
+    "per": "a month"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.6
+   ]
+  },
+  {
+   "id": "s49",
+   "line": "m03",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Fixed costs",
+    "items": "marcus.fixed_items",
+    "total_label": "Total",
+    "total": "{marcus.fixed_total}",
+    "tone": "ink",
+    "compact": true
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.1,
+    2.7,
+    3.3,
+    3.9,
+    4.6
+   ]
+  },
+  {
+   "id": "s50",
+   "line": "m04",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "share_bar",
+    "headline": "{marcus.fixed_share_pct|plain}¢ of every dollar",
+    "share": "{marcus.fixed_share_pct|plain}",
+    "left_label": "Fixed costs",
+    "right_label": "The rest",
+    "caption": "Gone before the month starts"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    2.4
+   ]
+  },
+  {
+   "id": "s51",
+   "line": "m05",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{marcus.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{marcus.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{marcus.income} − {marcus.fixed_total} − {marcus.leaks_total} = {marcus.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    "@m05+3.2",
+    "@m05+5.6"
+   ]
+  },
+  {
+   "id": "s52",
+   "line": "m06",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Marcus's savings",
+    "savings": "{marcus.savings}",
+    "verdict": "Covered",
+    "verdict_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.1,
+    2.0
+   ]
+  },
+  {
+   "id": "s53",
+   "line": "m07",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left in the bank",
+      "value": "{marcus.savings_after_bill}",
+      "tone": "cost"
+     }
+    ],
+    "equation": "{marcus.savings} − {bill} = {marcus.savings_after_bill}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    2.0
+   ]
+  },
+  {
+   "id": "s54",
+   "line": "m08",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "One more surprise",
+    "title": "and Marcus",
+    "subtitle": "is in trouble"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.9,
+    1.6
+   ]
+  },
+  {
+   "id": "s55",
+   "line": "m09",
+   "layout": "character_left",
+   "character": {
+    "id": "marcus",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Next month?",
+    "numbered": false,
+    "items": [
+     "A car repair",
+     "A childcare bill"
+    ],
+    "footer": "Almost empty account",
+    "footer_tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0,
+    2.2,
+    3.4
+   ]
+  },
+  {
+   "id": "s56",
+   "line": "m10",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Marcus",
+    "habit": "Rebuild the buffer first",
+    "detail": "Before anything new"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s57",
+   "line": "x01",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "level_title",
+    "level": "5",
+    "name": "Richard",
+    "subtitle": "Very high income, leaky budget"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "id": "s58",
+   "line": "x02",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "Take-home pay a month",
+      "bars": [
+       {
+        "label": "Sam",
+        "value": "{sam.income}",
+        "tone": "ink"
+       },
+       {
+        "label": "Richard",
+        "value": "{richard.income}",
+        "tone": "save"
+       }
+      ]
+     }
+    ],
+    "footer": "More than {richard.income_multiple_vs_level1|plain}× Sam",
+    "footer_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.4,
+    "@x02+3.4"
+   ]
+  },
+  {
+   "id": "s59",
+   "line": "x03",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Fixed costs",
+    "items": "richard.fixed_items",
+    "total_label": "Total",
+    "total": "{richard.fixed_total}",
+    "tone": "ink",
+    "compact": true
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.1,
+    2.7,
+    3.3,
+    3.9,
+    4.5,
+    5.2
+   ]
+  },
+  {
+   "id": "s60",
+   "line": "x04",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "The biggest surprise",
+    "subtitle": "in this video"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s61",
+   "line": "x05",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Leaks",
+    "items": "richard.leak_items",
+    "total_label": "Leaks",
+    "total": "{richard.leaks_total}",
+    "tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.4
+   ]
+  },
+  {
+   "id": "s62",
+   "line": "x06",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "A month",
+      "bars": [
+       {
+        "label": "Richard's leaks",
+        "value": "{richard.leaks_total}",
+        "tone": "cost"
+       },
+       {
+        "label": "Sam's paycheck",
+        "value": "{sam.income}",
+        "tone": "ink"
+       }
+      ]
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.6
+   ]
+  },
+  {
+   "id": "s63",
+   "line": "x07",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{richard.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{richard.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{richard.income} − {richard.fixed_total} − {richard.leaks_total} = {richard.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    "@x07+2.0",
+    "@x07+3.4"
+   ]
+  },
+  {
+   "id": "s64",
+   "line": "x08",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "bill",
+    "title": "Dental bill",
+    "amount": "{bill}",
+    "stamp": "Panic!"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.4
+   ]
+  },
+  {
+   "id": "s65",
+   "line": "x09",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Richard's savings",
+    "savings": "{richard.savings}",
+    "verdict": "All his savings, plus {richard.bill_shortfall}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.2,
+    3.0
+   ]
+  },
+  {
+   "id": "s66",
+   "line": "x10",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "{richard.income_multiple_vs_level1|plain}× the income",
+    "title": "Not a calmer month",
+    "subtitle": "No buffer left"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.4,
+    2.6
+   ]
+  },
+  {
+   "id": "s67",
+   "line": "x11",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Richard",
+    "habit": "A monthly leak check",
+    "detail": "Just like Nina's"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  },
+  {
+   "id": "s68",
+   "line": "t01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Who stayed",
+    "subtitle": "calmest?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s69",
+   "line": "t02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "nina",
+    "highlight_pose": "happy",
+    "labels": [
+     "",
+     "Calmest",
+     "",
+     "",
+     ""
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@t02+1.6"
+   ]
+  },
+  {
+   "id": "s70",
+   "line": "t03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Not the income",
+    "title": "The gap decides",
+    "subtitle": "plus a small buffer"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@t03+2.0",
+    "@t03+3.6"
+   ]
+  },
+  {
+   "id": "s71",
+   "line": "t04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "labels": [
+     "a plan",
+     "a buffer",
+     "a credit card",
+     "a thin cushion",
+     "nothing left"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4,
+    2.6,
+    4.0,
+    5.6
+   ]
+  },
+  {
+   "id": "s72",
+   "line": "t05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Three takeaways",
+    "items": [
+     "Know your monthly gap",
+     "Build a starter buffer",
+     "Hunt your leaks every month"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@t06",
+    "@t07",
+    "@t08"
+   ]
+  },
+  {
+   "id": "s73",
+   "line": "e01",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "cta",
+    "title": "Money Leak Audit Workbook",
+    "lines": [
+     "Subscriptions",
+     "Fees",
+     "Impulse buys"
+    ],
+    "where": "In the description",
+    "note": "See your own gap in black and white"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.4,
+    "@e02"
+   ]
+  },
+  {
+   "id": "s74",
+   "line": "e03",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "waving"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Thanks for watching",
+    "title": "Educational only",
+    "subtitle": "not financial advice"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.6
+   ]
+  }
+ ]
+}

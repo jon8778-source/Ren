@@ -1,0 +1,279 @@
+{
+ "bill": 1200.0,
+ "bill_due_days": 30.0,
+ "characters": {
+  "sam": {
+   "level": 1,
+   "status": "final",
+   "income": 2400.0,
+   "fixed_items": [
+    {
+     "item": "Rent (shared apartment)",
+     "amount": 1150.0
+    },
+    {
+     "item": "Utilities and phone",
+     "amount": 190.0
+    },
+    {
+     "item": "Groceries",
+     "amount": 420.0
+    },
+    {
+     "item": "Bus pass and rides",
+     "amount": 260.0
+    },
+    {
+     "item": "Health insurance",
+     "amount": 150.0
+    }
+   ],
+   "fixed_total": 2170.0,
+   "leak_items": [
+    {
+     "item": "Delivery fees",
+     "amount": 55.0
+    },
+    {
+     "item": "Late fee",
+     "amount": 25.0
+    }
+   ],
+   "leaks_total": 80.0,
+   "left_over": 150.0,
+   "savings": 200.0,
+   "bill_covered_by_savings": 200.0,
+   "bill_shortfall": 1000.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 90,
+   "plan_monthly": 100.0,
+   "plan_months": 10.0,
+   "income_multiple_vs_level1": 1
+  },
+  "nina": {
+   "level": 2,
+   "status": "final",
+   "income": 3800.0,
+   "fixed_items": [
+    {
+     "item": "Rent",
+     "amount": 1450.0
+    },
+    {
+     "item": "Utilities and phone",
+     "amount": 210.0
+    },
+    {
+     "item": "Groceries",
+     "amount": 480.0
+    },
+    {
+     "item": "Car payment and gas",
+     "amount": 380.0
+    },
+    {
+     "item": "Insurance",
+     "amount": 220.0
+    },
+    {
+     "item": "Student loan",
+     "amount": 250.0
+    }
+   ],
+   "fixed_total": 2990.0,
+   "leak_items": [
+    {
+     "item": "Forgotten subscriptions",
+     "amount": 64.0
+    },
+    {
+     "item": "Takeout",
+     "amount": 120.0
+    }
+   ],
+   "leaks_total": 184.0,
+   "left_over": 626.0,
+   "savings": 2000.0,
+   "bill_covered_by_savings": 1200.0,
+   "bill_shortfall": 0.0,
+   "savings_after_bill": 800.0,
+   "fixed_share_pct": 79,
+   "income_multiple_vs_level1": 1
+  },
+  "claire": {
+   "level": 3,
+   "status": "final",
+   "income": 5600.0,
+   "fixed_items": [
+    {
+     "item": "Rent",
+     "amount": 1900.0
+    },
+    {
+     "item": "Car payment",
+     "amount": 520.0
+    },
+    {
+     "item": "Groceries",
+     "amount": 600.0
+    },
+    {
+     "item": "Utilities and phone",
+     "amount": 260.0
+    },
+    {
+     "item": "Insurance",
+     "amount": 300.0
+    },
+    {
+     "item": "Credit card minimums",
+     "amount": 350.0
+    }
+   ],
+   "fixed_total": 3930.0,
+   "leak_items": [
+    {
+     "item": "Dining out",
+     "amount": 700.0
+    },
+    {
+     "item": "Online shopping",
+     "amount": 650.0
+    },
+    {
+     "item": "Subscriptions",
+     "amount": 150.0
+    }
+   ],
+   "leaks_total": 1500.0,
+   "left_over": 170.0,
+   "savings": 600.0,
+   "bill_covered_by_savings": 600.0,
+   "bill_shortfall": 600.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 70,
+   "income_multiple_vs_level1": 2
+  },
+  "marcus": {
+   "level": 4,
+   "status": "final",
+   "income": 9500.0,
+   "fixed_items": [
+    {
+     "item": "Rent",
+     "amount": 3200.0
+    },
+    {
+     "item": "Car lease",
+     "amount": 780.0
+    },
+    {
+     "item": "Childcare",
+     "amount": 1600.0
+    },
+    {
+     "item": "Student loans",
+     "amount": 600.0
+    },
+    {
+     "item": "Utilities and phone",
+     "amount": 350.0
+    },
+    {
+     "item": "Groceries",
+     "amount": 900.0
+    },
+    {
+     "item": "Insurance",
+     "amount": 450.0
+    }
+   ],
+   "fixed_total": 7880.0,
+   "leak_items": [
+    {
+     "item": "Dining out",
+     "amount": 300.0
+    },
+    {
+     "item": "Subscriptions",
+     "amount": 120.0
+    },
+    {
+     "item": "Rideshares",
+     "amount": 100.0
+    }
+   ],
+   "leaks_total": 520.0,
+   "left_over": 1100.0,
+   "savings": 1500.0,
+   "bill_covered_by_savings": 1200.0,
+   "bill_shortfall": 0.0,
+   "savings_after_bill": 300.0,
+   "fixed_share_pct": 83,
+   "income_multiple_vs_level1": 3
+  },
+  "richard": {
+   "level": 5,
+   "status": "final",
+   "income": 22000.0,
+   "fixed_items": [
+    {
+     "item": "Mortgage",
+     "amount": 7800.0
+    },
+    {
+     "item": "Two car payments",
+     "amount": 1900.0
+    },
+    {
+     "item": "Private school",
+     "amount": 3500.0
+    },
+    {
+     "item": "Club membership",
+     "amount": 600.0
+    },
+    {
+     "item": "Groceries",
+     "amount": 1400.0
+    },
+    {
+     "item": "Utilities",
+     "amount": 650.0
+    },
+    {
+     "item": "Insurance",
+     "amount": 1200.0
+    },
+    {
+     "item": "Housekeeper",
+     "amount": 1100.0
+    }
+   ],
+   "fixed_total": 18150.0,
+   "leak_items": [
+    {
+     "item": "Dining out",
+     "amount": 1200.0
+    },
+    {
+     "item": "Subscriptions",
+     "amount": 250.0
+    },
+    {
+     "item": "Shopping",
+     "amount": 1500.0
+    }
+   ],
+   "leaks_total": 2950.0,
+   "left_over": 900.0,
+   "savings": 1000.0,
+   "bill_covered_by_savings": 1000.0,
+   "bill_shortfall": 200.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 82,
+   "income_multiple_vs_level1": 9
+  }
+ },
+ "problems": []
+}
