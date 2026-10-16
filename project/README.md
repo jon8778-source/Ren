@@ -22,6 +22,7 @@ Built: the 60-second pilot and the full video (about 5:45).
 | 4 | Assets | `python pipeline/cutout.py SRC.png characters/<id>/<pose>.png`, then update `manifest.json` | |
 | 5 | Voiceover | `python pipeline/voice.py episodes/<id> --model kokoro-q8.onnx --voices package/voices` | audio/voice.mp3, chunks < 60s, timings.json |
 | 6 | Assembly | `python3 pipeline/assemble.py episodes/<id> --out renders/pilot.mp4 [--browser-executable PATH]` | Remotion render + FFmpeg finish |
+| 8 | Thumbnails | `python3 pipeline/thumbnails.py episodes/<id> [--browser-executable PATH]` | renders/thumbnail-a/b/c.png (1280x720) |
 | 7 | Quality check | `python pipeline/qc.py episodes/<id> --video renders/full.mp4 --name final` | reports/qc-final.md/.json |
 
 Preview and scrub in Remotion Studio (after an assemble has written `build/props.json`):

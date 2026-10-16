@@ -1,9 +1,12 @@
 import {Composition} from "remotion";
 import {Episode} from "./Episode";
+import {Thumbnail, type ThumbProps} from "./Thumbnail";
 import type {EpisodeProps} from "./types";
 
 // Props come from build/props.json: npx remotion render src/index.ts episode out.mp4 --props=<file>
 export const Root: React.FC = () => (
+  <>
+  <Composition id="thumbnail" component={Thumbnail} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{} as ThumbProps} />
   <Composition
     id="episode"
     component={Episode}
@@ -19,4 +22,5 @@ export const Root: React.FC = () => (
       height: props.config.video.height,
     })}
   />
+  </>
 );
