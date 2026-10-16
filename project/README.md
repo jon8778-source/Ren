@@ -19,7 +19,7 @@ Built: the 60-second pilot and the full video (about 5:45).
 | 1 | Plan / numbers | `python3 pipeline/calc.py episodes/<id>` | assumptions.json + .md; exits 1 on any maths mismatch |
 | 2 | Script | edit `script.md` (numbers written as spoken, each line tagged with the table values it says) | |
 | 3 | Scene list | edit `scenes.json` (layout, character + pose, graphic, beats; numbers only as `{refs}`) | |
-| 4 | Assets | `python pipeline/cutout.py SRC.png characters/<id>/<pose>.png`, then update `manifest.json` | |
+| 4 | Assets | one pose per image: `python pipeline/cutout.py SRC.png characters/<id>/<pose>.png`; a multi-pose sheet: `python pipeline/split_sheet.py SHEET.png 1x4 characters/<id> neutral happy worried ...`; then update `manifest.json` | |
 | 5 | Voiceover | `python pipeline/voice.py episodes/<id> --model kokoro-q8.onnx --voices package/voices` | audio/voice.mp3, chunks < 60s, timings.json |
 | 6 | Assembly | `python3 pipeline/assemble.py episodes/<id> --out renders/pilot.mp4 [--browser-executable PATH]` | Remotion render + FFmpeg finish |
 | 8 | Thumbnails | `python3 pipeline/thumbnails.py episodes/<id> [--browser-executable PATH]` | renders/thumbnail-a/b/c.png (1280x720) |

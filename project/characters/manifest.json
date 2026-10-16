@@ -69,6 +69,96 @@
     "thinking": "44e6e6e39a44372bc18769edc39302cc5de098307b4def86930db8f80694c764",
     "worried": "aa8d6af4cd058259ad6e18932a557da0b7543cc53bbbb13e05370ba13fe632ba"
    }
+  },
+  "frank-25": {
+   "role": "over-saver, age 25",
+   "name": "Frank",
+   "poses": {
+    "happy": "7474a8577e53872335e1cae2e9acd9a2af67e320cd3ea2ab615aa892b9ab860d",
+    "neutral": "c6a4ab311d959d5ba4ff9434020f13ef373868af645d033d284f7db376a27942",
+    "regretful": "39beae72151176e96849ab67b923b5f28385fd47c6b5b52b1f0c90b3e8c442e2",
+    "worried": "60193941a0118033ab3afe2b7c4117a8b98a95554666ec8e278e3c9f12774837"
+   }
+  },
+  "frank-45": {
+   "role": "over-saver, age 45",
+   "name": "Frank",
+   "poses": {
+    "happy": "f68423468a873261889c89228c04ef9a063e438b097c02cdf82c490ce40c2a12",
+    "neutral": "9e82c4bcf9924a62cc1a13fe52a37bfec26e9f9e8c92cd16afc4c11948835b9d",
+    "regretful": "4fe416264e19cf09078dfb28935fd705c9362fc92133ded84e663394b42fb6bd",
+    "worried": "0b42e7ecd7e32c6ac7de78b4e686d0e778e377282d35d5c5db7e4455add963db"
+   }
+  },
+  "frank-70": {
+   "role": "over-saver, age 70+",
+   "name": "Frank",
+   "poses": {
+    "happy": "a3c91bfbe064f091bedbcf4b281957010f52998703a7b35f6d77e018db2ab9e0",
+    "neutral": "49b381698f82a0f1731f8de9e1cf07b24f8efa4dd0bd104786edc18905cbae81",
+    "regretful": "f05cdcb4c7d80cefd05d0bf115c5750610c2e3a346ddeaa18a184f8e2ca3041f",
+    "worried": "723cc88b3c1abc2d49cfbaaa2bac26a4a7ade82961eb979d6b3c756fe4bd843c"
+   }
+  },
+  "yara-25": {
+   "role": "over-spender, age 25",
+   "name": "Yara",
+   "poses": {
+    "happy": "53606d24d8bd7a93d10eb15d013936aa8de057dbffee2d1a301ad8d36f788636",
+    "neutral": "7dc23a861476c3dc61e48308c6e51d13497863006f37fe93349f40e3e832d8ff",
+    "stressed": "cb3a14df00351b8091130601799123c54cdb2ece00572411f9db5f85d511f1ba",
+    "worried": "cd80014a4bb777da81a1c9c03184e6c433b9cbee2c3987b9c40de6dc7e5dddcf"
+   }
+  },
+  "yara-45": {
+   "role": "over-spender, age 45",
+   "name": "Yara",
+   "poses": {
+    "happy": "ed3cab7620ac09ad692a40efd07e4650f56d0348fcd3511ce13ce0e7826244ce",
+    "neutral": "6127ff9f38f1e1206b5927ba822ee0c568f34161bca231b825fe78bd4fcc8431",
+    "stressed": "0ff11b83c7bd9111c284b631f92a92ed17d3079bc581421939906fe83e3fd877",
+    "worried": "e14ee1b72482e2a450f4affa9e0a7706928552b1042f2457244203a546b6c04a"
+   }
+  },
+  "yara-70": {
+   "role": "over-spender, age 70+",
+   "name": "Yara",
+   "poses": {
+    "happy": "4012a41c6cabf5927abfc87680d650f098fd5cbd61a0aaafeab1ce8eaf8d546b",
+    "neutral": "c7355dd9bacf5139c6a31ea9bfc31124a40a6a1f7c7a2a1bb35bc47f4feba46d",
+    "stressed": "2b80409fedd5504eae54c6a7f8482393643e4d8c300574d1f13a3ade0aa1bd71",
+    "worried": "82e9cd5daa5406f51ecce503682b4392535cd710f3ff6e98beca784331dd2a2e"
+   }
+  },
+  "bea-25": {
+   "role": "balanced, age 25",
+   "name": "Bea",
+   "poses": {
+    "happy": "e6a6152b8f21f5663a37729a2c3d6f51c52c27b53dcd822b1b7023cc6ce85764",
+    "joyful": "a0869b397c538f8d503f3eb50e5ac2c3045de904315eb316132278e31fc80acf",
+    "neutral": "3f19c05a6753a6c3acc6a122830f1c33defff7ec0c2702f54facb97ef41ed188",
+    "worried": "6f86be13d0d4397a7e16cc6afe95396af973f3c165b02bde4b2f907ca300fd53"
+   }
+  },
+  "bea-45": {
+   "role": "balanced, age 45",
+   "name": "Bea",
+   "poses": {
+    "happy": "ec34c37a2177368978e6062443696e6fdd7664dfaa9b9e84f6e0829c380cf850",
+    "joyful": "8a887f8d16f1393ec7002e98c939db5c710dbc0dcfd45d006de787ac1efe876b",
+    "neutral": "f9285693d32b71d4fa9c1c785e5bef7e19baebc1d62de475d49a4e4c3a1326aa",
+    "worried": "03890009f11ff22e8a291f2cf9aa6184f7617b496bfec959f33711f5aa5eb6d8"
+   }
+  },
+  "bea-70": {
+   "role": "balanced, age 70+",
+   "name": "Bea",
+   "poses": {
+    "happy": "172e7b97ae191f13e4491d668a824483735f260cf99721bdf4c8366c59144646",
+    "joyful": "fb911beec42aef1e178270c2931a453b78a702befd32d2303b662de65f249d0c",
+    "neutral": "3fcbf754edea67f1d1660117e8d06f557bc7441087b43c1029cbd5e6db6a5e59",
+    "worried": "3e4679175c71db8ffb1bc349eb69edabdf811a52b409b9ea253bb5a09ba88d94"
+   }
   }
  }
 }
