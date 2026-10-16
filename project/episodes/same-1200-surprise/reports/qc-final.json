@@ -1,0 +1,79 @@
+{
+ "overall": "FAIL",
+ "checks": [
+  {
+   "check": "Maths (assumptions table recalculated)",
+   "status": "PASS",
+   "detail": "All totals recalculate correctly."
+  },
+  {
+   "check": "Number accuracy: script vs table",
+   "status": "PASS",
+   "detail": "Every spoken number matches its table value."
+  },
+  {
+   "check": "Number accuracy: on-screen figures",
+   "status": "FAIL",
+   "detail": "Hand-typed numbers found",
+   "items": [
+    "scenes[49].graphic.headline: '{marcus.fixed_share_pct|plain}\u00a2 of every $1'"
+   ]
+  },
+  {
+   "check": "Real statistics",
+   "status": "FLAG",
+   "detail": "Possible statistic without [VERIFY] and a source",
+   "items": [
+    "[l08] Sam can't cover it, so Sam does the thing most people skip, and asks."
+   ]
+  },
+  {
+   "check": "Voice consistency",
+   "status": "PASS",
+   "detail": "7 chunks, identical settings (am_michael 0.5 + am_eric 0.5, speed 0.93); leading silence 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01s; loudness -22.4, -22.7, -22.5, -22.6, -22.7, -22.5, -22.7 LUFS; pitch 131, 131, 130, 132, 132, 132, 134 Hz (spread 0.6 semitones)."
+  },
+  {
+   "check": "Character consistency",
+   "status": "PASS",
+   "detail": "29 poses used, all byte-identical to the locked character sheets."
+  },
+  {
+   "check": "Caption sync",
+   "status": "PASS",
+   "detail": "79 captions; each starts within 0.25s of its speech (measured offsets +0.04s to +0.07s); text matches the script word for word; all fit in 2 lines."
+  },
+  {
+   "check": "Silence over 1 second",
+   "status": "PASS",
+   "detail": "No gap in the voice longer than 1 second.",
+   "items": [
+    "343.87s\u2013345.53s (1.66s) (end of video)"
+   ]
+  },
+  {
+   "check": "Safe-zone placement",
+   "status": "PASS",
+   "detail": "Checked 691 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design)."
+  },
+  {
+   "check": "Text readability",
+   "status": "PASS",
+   "detail": "Smallest text 40px, captions 50px, key numbers 120px on a 1080px frame. Dark navy on white."
+  },
+  {
+   "check": "Visual changes",
+   "status": "PASS",
+   "detail": "74 scenes (1.9s to 14.6s long) with 310 visual changes; longest hold 5.7s at 150.7s. Slow pan/zoom runs throughout."
+  },
+  {
+   "check": "Disclaimer",
+   "status": "PASS",
+   "detail": "On screen at the start (yes) and end (yes); in description.txt (yes)."
+  },
+  {
+   "check": "File",
+   "status": "PASS",
+   "detail": "1920x1080, 30/1 fps, 345.5s, audio present, loudness -16.8 LUFS."
+  }
+ ]
+}

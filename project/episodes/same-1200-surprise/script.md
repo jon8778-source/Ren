@@ -34,7 +34,7 @@ Format: one spoken sentence per line, as `[id] text {refs}`.
 [l05] That leaves Sam one hundred fifty dollars a month, with just two hundred in savings. {sam.left_over, sam.savings}
 [l06] Then, on Tuesday, the envelope arrives.
 [l07] One thousand two hundred dollars, due in thirty days. {bill, bill_due_days}
-[l08] Sam can't cover it, so Sam does the thing most people skip, and asks.
+[l08] Sam can't cover it, so Sam does something simple, and asks.
 [l09] The dentist's office agrees to a payment plan.
 [l10] Two hundred from savings now, then one hundred dollars a month for ten months. {sam.savings, sam.plan_monthly, sam.plan_months}
 [l11] It fits inside Sam's one hundred fifty dollar gap, just. {sam.left_over}

@@ -29,6 +29,14 @@ def fill(text, assumptions):
     return REF.sub(sub, text)
 
 
+def resolve_beat(beat, scene, lines):
+    """A beat is seconds after the scene starts, or "@line" / "@line+0.5" for when that line is spoken."""
+    if isinstance(beat, str) and beat.startswith("@"):
+        m = re.fullmatch(r"@([a-z0-9]+)([+-][0-9.]+)?", beat)
+        return round(lines[m[1]]["start"] + float(m[2] or 0) - scene["start"], 3)
+    return beat
+
+
 def resolve_graphic(g, assumptions, manifest):
     out = {}
     for k, v in g.items():
@@ -82,7 +90,7 @@ def build_props(ep: Path):
         s["graphic"]["enter"] = s["graphic"]["type"] != prev_type
         prev_char, prev_type = c, s["graphic"]["type"]
         s.setdefault("camera", "push")
-        s.setdefault("beats", [])
+        s["beats"] = [resolve_beat(x, s, lines) for x in s.get("beats", [])]
 
     captions = []
     tl = timings["lines"]

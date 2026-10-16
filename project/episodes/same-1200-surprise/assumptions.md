@@ -5,10 +5,10 @@ Surprise bill: $1,200, due in 30 days.
 | Level | Character | Status | Take-home / month | Fixed costs | Leaks | Left over | Savings | Bill shortfall |
 |---|---|---|---|---|---|---|---|---|
 | 1 | sam | final | $2,400 | $2,170 | $80 | $150 | $200 | $1,000 |
-| 2 | nina | draft | $3,800 | $2,990 | $184 | $626 | $2,000 | $0 |
-| 3 | claire | draft | $5,600 | $3,930 | $1,500 | $170 | $600 | $600 |
-| 4 | marcus | draft | $9,500 | $7,880 | $520 | $1,100 | $1,500 | $0 |
-| 5 | richard | draft | $22,000 | $18,150 | $2,950 | $900 | $1,000 | $200 |
+| 2 | nina | final | $3,800 | $2,990 | $184 | $626 | $2,000 | $0 |
+| 3 | claire | final | $5,600 | $3,930 | $1,500 | $170 | $600 | $600 |
+| 4 | marcus | final | $9,500 | $7,880 | $520 | $1,100 | $1,500 | $0 |
+| 5 | richard | final | $22,000 | $18,150 | $2,950 | $900 | $1,000 | $200 |
 
 ## Level 1: sam (final)
 
@@ -25,7 +25,7 @@ Surprise bill: $1,200, due in 30 days.
 | **Leaks total** | **$80** |
 | **Left over** ($2,400 − $2,170 − $80) | **$150** |
 
-## Level 2: nina (draft)
+## Level 2: nina (final)
 
 | Item | Monthly |
 |---|---|
@@ -41,7 +41,7 @@ Surprise bill: $1,200, due in 30 days.
 | **Leaks total** | **$184** |
 | **Left over** ($3,800 − $2,990 − $184) | **$626** |
 
-## Level 3: claire (draft)
+## Level 3: claire (final)
 
 | Item | Monthly |
 |---|---|
@@ -58,7 +58,7 @@ Surprise bill: $1,200, due in 30 days.
 | **Leaks total** | **$1,500** |
 | **Left over** ($5,600 − $3,930 − $1,500) | **$170** |
 
-## Level 4: marcus (draft)
+## Level 4: marcus (final)
 
 | Item | Monthly |
 |---|---|
@@ -76,7 +76,7 @@ Surprise bill: $1,200, due in 30 days.
 | **Leaks total** | **$520** |
 | **Left over** ($9,500 − $7,880 − $520) | **$1,100** |
 
-## Level 5: richard (draft)
+## Level 5: richard (final)
 
 | Item | Monthly |
 |---|---|

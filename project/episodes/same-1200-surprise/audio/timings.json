@@ -5,14 +5,14 @@
    "am_michael": 0.5,
    "am_eric": 0.5
   },
-  "speed": 1.05,
-  "gap_s": 0.32,
-  "section_gap_s": 0.6,
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
   "lead_s": 0.4,
   "max_chunk_s": 55,
   "target_lufs": -16
  },
- "duration": 57.638,
+ "duration": 344.688,
  "lines": [
   {
    "id": "h01",
@@ -22,7 +22,7 @@
     "=5"
    ],
    "start": 0.4,
-   "end": 3.797,
+   "end": 4.079,
    "chunk": 0
   },
   {
@@ -32,8 +32,8 @@
    "refs": [
     "bill"
    ],
-   "start": 4.117,
-   "end": 7.889,
+   "start": 4.499,
+   "end": 8.642,
    "chunk": 0
   },
   {
@@ -43,8 +43,8 @@
    "refs": [
     "=5"
    ],
-   "start": 8.209,
-   "end": 11.332,
+   "start": 9.062,
+   "end": 12.426,
    "chunk": 0
   },
   {
@@ -54,8 +54,8 @@
    "refs": [
     "sam.income"
    ],
-   "start": 11.652,
-   "end": 14.353,
+   "start": 12.846,
+   "end": 15.789,
    "chunk": 0
   },
   {
@@ -65,8 +65,8 @@
    "refs": [
     "richard.income"
    ],
-   "start": 14.673,
-   "end": 16.837,
+   "start": 16.209,
+   "end": 18.566,
    "chunk": 0
   },
   {
@@ -74,8 +74,8 @@
    "section": "hook",
    "text": "So Richard handles it best, right?",
    "refs": [],
-   "start": 17.157,
-   "end": 18.938,
+   "start": 18.986,
+   "end": 20.982,
    "chunk": 0
   },
   {
@@ -83,8 +83,8 @@
    "section": "hook",
    "text": "Not so fast. Income isn't what decides who stays calm this month.",
    "refs": [],
-   "start": 19.258,
-   "end": 23.077,
+   "start": 21.402,
+   "end": 25.732,
    "chunk": 0
   },
   {
@@ -92,8 +92,56 @@
    "section": "hook",
    "text": "Something else does, and by the end, you'll spot it in your own budget.",
    "refs": [],
-   "start": 23.397,
-   "end": 26.8,
+   "start": 26.152,
+   "end": 29.819,
+   "chunk": 0
+  },
+  {
+   "id": "r01",
+   "section": "rules",
+   "text": "Here's the experiment.",
+   "refs": [],
+   "start": 30.619,
+   "end": 31.99,
+   "chunk": 0
+  },
+  {
+   "id": "r02",
+   "section": "rules",
+   "text": "Five people, the same month, and the same one thousand two hundred dollar bill.",
+   "refs": [
+    "=5",
+    "bill"
+   ],
+   "start": 32.41,
+   "end": 36.746,
+   "chunk": 0
+  },
+  {
+   "id": "r03",
+   "section": "rules",
+   "text": "They're made-up people with simplified budgets, and every number is an example.",
+   "refs": [],
+   "start": 37.166,
+   "end": 41.717,
+   "chunk": 0
+  },
+  {
+   "id": "r04",
+   "section": "rules",
+   "text": "For each of them, we'll look at what comes in, what goes out, and what's left.",
+   "refs": [],
+   "start": 42.137,
+   "end": 45.923,
+   "chunk": 0
+  },
+  {
+   "id": "r05",
+   "section": "rules",
+   "text": "Keep score as we go: who stays calm, and who doesn't?",
+   "refs": [],
+   "start": 46.343,
+   "end": 49.445,
    "chunk": 0
   },
   {
@@ -103,8 +151,8 @@
    "refs": [
     "=1"
    ],
-   "start": 27.4,
-   "end": 28.806,
+   "start": 50.245,
+   "end": 51.809,
    "chunk": 0
   },
   {
@@ -115,9 +163,9 @@
     "=24",
     "sam.income"
    ],
-   "start": 29.126,
-   "end": 34.226,
-   "chunk": 0
+   "start": 52.229,
+   "end": 57.754,
+   "chunk": 1
   },
   {
    "id": "l03",
@@ -126,9 +174,9 @@
    "refs": [
     "sam.fixed_total"
    ],
-   "start": 34.546,
-   "end": 41.139,
-   "chunk": 0
+   "start": 58.174,
+   "end": 65.086,
+   "chunk": 1
   },
   {
    "id": "l04",
@@ -137,9 +185,9 @@
    "refs": [
     "sam.leaks_total"
    ],
-   "start": 41.459,
-   "end": 45.396,
-   "chunk": 0
+   "start": 65.506,
+   "end": 69.797,
+   "chunk": 1
   },
   {
    "id": "l05",
@@ -149,18 +197,18 @@
     "sam.left_over",
     "sam.savings"
    ],
-   "start": 45.716,
-   "end": 50.232,
-   "chunk": 0
+   "start": 70.217,
+   "end": 75.098,
+   "chunk": 1
   },
   {
    "id": "l06",
    "section": "level1",
    "text": "Then, on Tuesday, the envelope arrives.",
    "refs": [],
-   "start": 50.552,
-   "end": 52.779,
-   "chunk": 0
+   "start": 75.518,
+   "end": 77.915,
+   "chunk": 1
   },
   {
    "id": "l07",
@@ -170,28 +218,636 @@
     "bill",
     "bill_due_days"
    ],
-   "start": 53.099,
-   "end": 56.038,
+   "start": 78.335,
+   "end": 81.591,
    "chunk": 1
+  },
+  {
+   "id": "l08",
+   "section": "level1",
+   "text": "Sam can't cover it, so Sam does something simple, and asks.",
+   "refs": [],
+   "start": 82.011,
+   "end": 85.349,
+   "chunk": 1
+  },
+  {
+   "id": "l09",
+   "section": "level1",
+   "text": "The dentist's office agrees to a payment plan.",
+   "refs": [],
+   "start": 85.769,
+   "end": 88.401,
+   "chunk": 1
+  },
+  {
+   "id": "l10",
+   "section": "level1",
+   "text": "Two hundred from savings now, then one hundred dollars a month for ten months.",
+   "refs": [
+    "sam.savings",
+    "sam.plan_monthly",
+    "sam.plan_months"
+   ],
+   "start": 88.821,
+   "end": 93.253,
+   "chunk": 1
+  },
+  {
+   "id": "l11",
+   "section": "level1",
+   "text": "It fits inside Sam's one hundred fifty dollar gap, just.",
+   "refs": [
+    "sam.left_over"
+   ],
+   "start": 93.673,
+   "end": 97.12,
+   "chunk": 1
+  },
+  {
+   "id": "l12",
+   "section": "level1",
+   "text": "It's tight, but Sam isn't panicking, because Sam has a plan.",
+   "refs": [],
+   "start": 97.54,
+   "end": 100.777,
+   "chunk": 1
+  },
+  {
+   "id": "l13",
+   "section": "level1",
+   "text": "Sam's habit: turning on autopay, so those late fees stop for good.",
+   "refs": [],
+   "start": 101.197,
+   "end": 105.19,
+   "chunk": 1
+  },
+  {
+   "id": "n01",
+   "section": "level2",
+   "text": "Level two: meet Nina.",
+   "refs": [
+    "=2"
+   ],
+   "start": 105.99,
+   "end": 107.57,
+   "chunk": 2
+  },
+  {
+   "id": "n02",
+   "section": "level2",
+   "text": "Nina works in an office and takes home three thousand eight hundred a month.",
+   "refs": [
+    "nina.income"
+   ],
+   "start": 107.99,
+   "end": 111.678,
+   "chunk": 2
+  },
+  {
+   "id": "n03",
+   "section": "level2",
+   "text": "Rent, her car, groceries, bills and a student loan take two thousand nine hundred ninety.",
+   "refs": [
+    "nina.fixed_total"
+   ],
+   "start": 112.098,
+   "end": 117.116,
+   "chunk": 2
+  },
+  {
+   "id": "n04",
+   "section": "level2",
+   "text": "Takeout and subscriptions take another one hundred eighty-four.",
+   "refs": [
+    "nina.leaks_total"
+   ],
+   "start": 117.536,
+   "end": 121.121,
+   "chunk": 2
+  },
+  {
+   "id": "n05",
+   "section": "level2",
+   "text": "That leaves her six hundred twenty-six a month, and over time she's saved two thousand.",
+   "refs": [
+    "nina.left_over",
+    "nina.savings"
+   ],
+   "start": 121.541,
+   "end": 126.621,
+   "chunk": 2
+  },
+  {
+   "id": "n06",
+   "section": "level2",
+   "text": "The bill arrives, and her savings cover all of it, with eight hundred to spare.",
+   "refs": [
+    "nina.savings_after_bill"
+   ],
+   "start": 127.041,
+   "end": 131.366,
+   "chunk": 2
+  },
+  {
+   "id": "n07",
+   "section": "level2",
+   "text": "But even Nina has a surprise.",
+   "refs": [],
+   "start": 131.786,
+   "end": 133.794,
+   "chunk": 2
+  },
+  {
+   "id": "n08",
+   "section": "level2",
+   "text": "Checking her statement, she finds sixty-four dollars a month of subscriptions she forgot she had.",
+   "refs": [
+    "nina.leak:forgotten_subscriptions"
+   ],
+   "start": 134.214,
+   "end": 139.696,
+   "chunk": 2
+  },
+  {
+   "id": "n09",
+   "section": "level2",
+   "text": "She cancels them that night, and that money goes straight back into her buffer.",
+   "refs": [],
+   "start": 140.116,
+   "end": 144.283,
+   "chunk": 2
+  },
+  {
+   "id": "n10",
+   "section": "level2",
+   "text": "Nina's habit: a ten-minute leak check at the start of every month.",
+   "refs": [
+    "=10"
+   ],
+   "start": 144.703,
+   "end": 148.439,
+   "chunk": 2
+  },
+  {
+   "id": "n11",
+   "section": "level2",
+   "text": "Remember Nina. And stick around, because the biggest paycheck in this video hides the biggest surprise.",
+   "refs": [],
+   "start": 148.859,
+   "end": 154.828,
+   "chunk": 2
+  },
+  {
+   "id": "c01",
+   "section": "level3",
+   "text": "Level three: meet Claire.",
+   "refs": [
+    "=3"
+   ],
+   "start": 155.628,
+   "end": 157.254,
+   "chunk": 2
+  },
+  {
+   "id": "c02",
+   "section": "level3",
+   "text": "Claire got a promotion last year, and now takes home five thousand six hundred a month.",
+   "refs": [
+    "claire.income"
+   ],
+   "start": 157.674,
+   "end": 162.532,
+   "chunk": 3
+  },
+  {
+   "id": "c03",
+   "section": "level3",
+   "text": "Her fixed costs are three thousand nine hundred thirty, including the minimum on a credit card.",
+   "refs": [
+    "claire.fixed_total"
+   ],
+   "start": 162.952,
+   "end": 168.195,
+   "chunk": 3
+  },
+  {
+   "id": "c04",
+   "section": "level3",
+   "text": "But look at the leaks: one thousand five hundred a month on dining out, shopping and subscriptions.",
+   "refs": [
+    "claire.leaks_total"
+   ],
+   "start": 168.615,
+   "end": 173.993,
+   "chunk": 3
+  },
+  {
+   "id": "c05",
+   "section": "level3",
+   "text": "When her pay went up, her spending quietly went up with it.",
+   "refs": [],
+   "start": 174.413,
+   "end": 177.461,
+   "chunk": 3
+  },
+  {
+   "id": "c06",
+   "section": "level3",
+   "text": "So she has just one hundred seventy left each month, and six hundred saved.",
+   "refs": [
+    "claire.left_over",
+    "claire.savings"
+   ],
+   "start": 177.881,
+   "end": 182.242,
+   "chunk": 3
+  },
+  {
+   "id": "c07",
+   "section": "level3",
+   "text": "The bill arrives, and the six hundred her savings can't cover goes on the credit card.",
+   "refs": [
+    "claire.bill_shortfall"
+   ],
+   "start": 182.662,
+   "end": 187.422,
+   "chunk": 3
+  },
+  {
+   "id": "c08",
+   "section": "level3",
+   "text": "Now that bill grows with interest, on top of the balance she already had.",
+   "refs": [],
+   "start": 187.842,
+   "end": 192.07,
+   "chunk": 3
+  },
+  {
+   "id": "c09",
+   "section": "level3",
+   "text": "Claire earns more than double what Sam does, but her monthly gap is only twenty dollars bigger.",
+   "refs": [
+    "=20"
+   ],
+   "start": 192.49,
+   "end": 198.223,
+   "chunk": 3
+  },
+  {
+   "id": "c10",
+   "section": "level3",
+   "text": "Claire's habit: the next time her pay goes up, half the raise goes straight to savings.",
+   "refs": [],
+   "start": 198.643,
+   "end": 203.486,
+   "chunk": 3
+  },
+  {
+   "id": "m01",
+   "section": "level4",
+   "text": "Level four: meet Marcus.",
+   "refs": [
+    "=4"
+   ],
+   "start": 204.286,
+   "end": 206.132,
+   "chunk": 3
+  },
+  {
+   "id": "m02",
+   "section": "level4",
+   "text": "Marcus works in tech and takes home nine thousand five hundred a month.",
+   "refs": [
+    "marcus.income"
+   ],
+   "start": 206.552,
+   "end": 210.651,
+   "chunk": 3
+  },
+  {
+   "id": "m03",
+   "section": "level4",
+   "text": "But big-city rent, a car lease, childcare and student loans add up to seven thousand eight hundred eighty.",
+   "refs": [
+    "marcus.fixed_total"
+   ],
+   "start": 211.071,
+   "end": 217.467,
+   "chunk": 4
+  },
+  {
+   "id": "m04",
+   "section": "level4",
+   "text": "That's eighty-three cents of every dollar, gone before the month even starts.",
+   "refs": [
+    "marcus.fixed_share_pct"
+   ],
+   "start": 217.887,
+   "end": 222.189,
+   "chunk": 4
+  },
+  {
+   "id": "m05",
+   "section": "level4",
+   "text": "With five hundred twenty in leaks, he has one thousand one hundred left, and one thousand five hundred saved.",
+   "refs": [
+    "marcus.leaks_total",
+    "marcus.left_over",
+    "marcus.savings"
+   ],
+   "start": 222.609,
+   "end": 228.703,
+   "chunk": 4
+  },
+  {
+   "id": "m06",
+   "section": "level4",
+   "text": "The bill arrives, and his savings cover it.",
+   "refs": [],
+   "start": 229.123,
+   "end": 231.332,
+   "chunk": 4
+  },
+  {
+   "id": "m07",
+   "section": "level4",
+   "text": "But that leaves just three hundred in the bank, with costs this high.",
+   "refs": [
+    "marcus.savings_after_bill"
+   ],
+   "start": 231.752,
+   "end": 235.345,
+   "chunk": 4
+  },
+  {
+   "id": "m08",
+   "section": "level4",
+   "text": "One more surprise, and Marcus is in trouble.",
+   "refs": [],
+   "start": 235.765,
+   "end": 238.452,
+   "chunk": 4
+  },
+  {
+   "id": "m09",
+   "section": "level4",
+   "text": "A car repair or a childcare bill next month would hit an almost empty account.",
+   "refs": [],
+   "start": 238.872,
+   "end": 243.498,
+   "chunk": 4
+  },
+  {
+   "id": "m10",
+   "section": "level4",
+   "text": "Marcus's habit: rebuilding that buffer first, before taking on anything new.",
+   "refs": [],
+   "start": 243.918,
+   "end": 248.409,
+   "chunk": 4
+  },
+  {
+   "id": "x01",
+   "section": "level5",
+   "text": "Level five: meet Richard.",
+   "refs": [
+    "=5"
+   ],
+   "start": 249.209,
+   "end": 250.953,
+   "chunk": 4
+  },
+  {
+   "id": "x02",
+   "section": "level5",
+   "text": "Richard takes home twenty-two thousand a month, more than nine times what Sam earns.",
+   "refs": [
+    "richard.income",
+    "richard.income_multiple_vs_level1"
+   ],
+   "start": 251.373,
+   "end": 256.393,
+   "chunk": 4
+  },
+  {
+   "id": "x03",
+   "section": "level5",
+   "text": "His mortgage, two car payments, private school and a housekeeper add up to eighteen thousand one hundred fifty.",
+   "refs": [
+    "=2",
+    "richard.fixed_total"
+   ],
+   "start": 256.813,
+   "end": 263.056,
+   "chunk": 4
+  },
+  {
+   "id": "x04",
+   "section": "level5",
+   "text": "And here's the biggest surprise in this video.",
+   "refs": [],
+   "start": 263.476,
+   "end": 265.904,
+   "chunk": 4
+  },
+  {
+   "id": "x05",
+   "section": "level5",
+   "text": "Richard's leaks are two thousand nine hundred fifty a month.",
+   "refs": [
+    "richard.leaks_total"
+   ],
+   "start": 266.324,
+   "end": 269.545,
+   "chunk": 5
+  },
+  {
+   "id": "x06",
+   "section": "level5",
+   "text": "His leaks alone are bigger than Sam's entire paycheck.",
+   "refs": [],
+   "start": 269.965,
+   "end": 273.212,
+   "chunk": 5
+  },
+  {
+   "id": "x07",
+   "section": "level5",
+   "text": "That leaves nine hundred a month, and one thousand saved.",
+   "refs": [
+    "richard.left_over",
+    "richard.savings"
+   ],
+   "start": 273.632,
+   "end": 276.817,
+   "chunk": 5
+  },
+  {
+   "id": "x08",
+   "section": "level5",
+   "text": "The bill arrives, and Richard is the one who panics.",
+   "refs": [],
+   "start": 277.237,
+   "end": 280.077,
+   "chunk": 5
+  },
+  {
+   "id": "x09",
+   "section": "level5",
+   "text": "Paying it takes all his savings, plus two hundred more, and leaves him with no buffer at all.",
+   "refs": [
+    "richard.bill_shortfall"
+   ],
+   "start": 280.497,
+   "end": 285.566,
+   "chunk": 5
+  },
+  {
+   "id": "x10",
+   "section": "level5",
+   "text": "Earning nine times more than Sam didn't buy him a calmer month.",
+   "refs": [
+    "=9"
+   ],
+   "start": 285.986,
+   "end": 289.559,
+   "chunk": 5
+  },
+  {
+   "id": "x11",
+   "section": "level5",
+   "text": "Richard's habit, starting now: a monthly leak check, just like Nina's.",
+   "refs": [],
+   "start": 289.979,
+   "end": 294.268,
+   "chunk": 5
+  },
+  {
+   "id": "t01",
+   "section": "twist",
+   "text": "So who stayed calmest?",
+   "refs": [],
+   "start": 295.068,
+   "end": 296.564,
+   "chunk": 5
+  },
+  {
+   "id": "t02",
+   "section": "twist",
+   "text": "Not Richard, with the biggest paycheck. It was Nina.",
+   "refs": [],
+   "start": 296.984,
+   "end": 300.194,
+   "chunk": 5
+  },
+  {
+   "id": "t03",
+   "section": "twist",
+   "text": "Income didn't decide who coped. The gap between earning and spending did, and a small buffer.",
+   "refs": [],
+   "start": 300.614,
+   "end": 306.124,
+   "chunk": 5
+  },
+  {
+   "id": "t04",
+   "section": "twist",
+   "text": "Sam had a plan. Nina had a buffer. Claire had a credit card. Marcus had a thin cushion. And Richard had nothing left.",
+   "refs": [],
+   "start": 306.544,
+   "end": 313.615,
+   "chunk": 5
+  },
+  {
+   "id": "t05",
+   "section": "twist",
+   "text": "Here are three takeaways.",
+   "refs": [
+    "=3"
+   ],
+   "start": 314.035,
+   "end": 315.695,
+   "chunk": 5
+  },
+  {
+   "id": "t06",
+   "section": "twist",
+   "text": "One: know your monthly gap, what's left after everything goes out.",
+   "refs": [
+    "=1"
+   ],
+   "start": 316.115,
+   "end": 319.907,
+   "chunk": 5
+  },
+  {
+   "id": "t07",
+   "section": "twist",
+   "text": "Two: build a starter buffer, even a small one.",
+   "refs": [
+    "=2"
+   ],
+   "start": 320.327,
+   "end": 322.934,
+   "chunk": 6
+  },
+  {
+   "id": "t08",
+   "section": "twist",
+   "text": "Three: hunt your leaks every month, because they quietly widen or close that gap.",
+   "refs": [
+    "=3"
+   ],
+   "start": 323.354,
+   "end": 327.861,
+   "chunk": 6
+  },
+  {
+   "id": "e01",
+   "section": "cta",
+   "text": "Check out the Money Leak Audit Workbook in the description. It walks you through finding your own leaks.",
+   "refs": [],
+   "start": 328.661,
+   "end": 334.319,
+   "chunk": 6
+  },
+  {
+   "id": "e02",
+   "section": "cta",
+   "text": "Fill it in once, and you'll see your own gap in black and white.",
+   "refs": [],
+   "start": 334.739,
+   "end": 338.129,
+   "chunk": 6
+  },
+  {
+   "id": "e03",
+   "section": "cta",
+   "text": "And remember, this video is educational only, not financial advice.",
+   "refs": [],
+   "start": 338.549,
+   "end": 343.088,
+   "chunk": 6
   }
  ],
  "chunks": [
   {
    "file": "chunk_00.wav",
    "start": 0.4,
-   "duration": 52.379,
+   "duration": 51.409,
    "leading_silence_s": 0.01,
-   "lufs": -22.7,
-   "median_pitch_hz": 130.1072244361702,
+   "lufs": -22.4,
+   "median_pitch_hz": 130.8609279198309,
    "settings": {
     "engine": "kokoro-82m (q8 onnx)",
     "blend": {
      "am_michael": 0.5,
      "am_eric": 0.5
     },
-    "speed": 1.05,
-    "gap_s": 0.32,
-    "section_gap_s": 0.6,
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
     "lead_s": 0.4,
     "max_chunk_s": 55,
     "target_lufs": -16
@@ -199,20 +855,125 @@
   },
   {
    "file": "chunk_01.wav",
-   "start": 53.099,
-   "duration": 2.939,
+   "start": 52.229,
+   "duration": 52.962,
    "leading_silence_s": 0.01,
-   "lufs": -22.4,
-   "median_pitch_hz": 138.64232362467274,
+   "lufs": -22.7,
+   "median_pitch_hz": 130.8609279198309,
    "settings": {
     "engine": "kokoro-82m (q8 onnx)",
     "blend": {
      "am_michael": 0.5,
      "am_eric": 0.5
     },
-    "speed": 1.05,
-    "gap_s": 0.32,
-    "section_gap_s": 0.6,
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_02.wav",
+   "start": 105.99,
+   "duration": 51.264,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 130.1072244361702,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_03.wav",
+   "start": 157.674,
+   "duration": 52.977,
+   "leading_silence_s": 0.01,
+   "lufs": -22.6,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_04.wav",
+   "start": 211.071,
+   "duration": 54.833,
+   "leading_silence_s": 0.01,
+   "lufs": -22.7,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_05.wav",
+   "start": 266.324,
+   "duration": 53.583,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_06.wav",
+   "start": 320.327,
+   "duration": 22.761,
+   "leading_silence_s": 0.01,
+   "lufs": -22.7,
+   "median_pitch_hz": 134.3075514563758,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
     "lead_s": 0.4,
     "max_chunk_s": 55,
     "target_lufs": -16

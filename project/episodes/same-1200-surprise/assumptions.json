@@ -52,7 +52,7 @@
   },
   "nina": {
    "level": 2,
-   "status": "draft",
+   "status": "final",
    "income": 3800.0,
    "fixed_items": [
     {
@@ -102,7 +102,7 @@
   },
   "claire": {
    "level": 3,
-   "status": "draft",
+   "status": "final",
    "income": 5600.0,
    "fixed_items": [
     {
@@ -156,7 +156,7 @@
   },
   "marcus": {
    "level": 4,
-   "status": "draft",
+   "status": "final",
    "income": 9500.0,
    "fixed_items": [
     {
@@ -214,7 +214,7 @@
   },
   "richard": {
    "level": 5,
-   "status": "draft",
+   "status": "final",
    "income": 22000.0,
    "fixed_items": [
     {

@@ -81,10 +81,10 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
   const h = b(0);
   return (
     <Center gap={10}>
-      {g.tag ? <ExampleTag config={config} /> : null}
+      {g.tag && g.tag.includes("$") ? <ExampleTag config={config} /> : null}
       <div style={{display: "flex", gap: 12, alignItems: "flex-end"}}>
         {g.people.map((p: {id: string; name: string; src: string}, i: number) => {
-          const s = g.enter ? b(i) : 1;
+          const s = g.enter && !g.labels ? b(i) : 1;
           const isHi = g.highlight === p.id;
           const dim = g.highlight ? (isHi ? 1 : 1 - 0.7 * h) : 1;
           const grow = isHi ? 1 + 0.12 * h : 1;
@@ -92,6 +92,9 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
             <div key={p.id} style={{width: 206, display: "flex", flexDirection: "column", alignItems: "center", opacity: s * dim, transform: `translateY(${(1 - s) * 60}px) scale(${grow})`, transformOrigin: "50% 100%"}}>
               <Img src={staticFile(p.src)} style={{width: 206, height: 330, objectFit: "contain", objectPosition: "50% 100%"}} />
               <div style={{fontSize: F.body, fontWeight: 600, marginTop: 8}}>{p.name}</div>
+              {g.labels && g.labels[i] ? (
+                <div style={{fontSize: F.label, fontWeight: 700, color: T.ink, background: T.line, borderRadius: 16, padding: "4px 12px", marginTop: 6, textAlign: "center", ...rise(b(i), 20)}}>{g.labels[i]}</div>
+              ) : null}
             </div>
           );
         })}
@@ -211,6 +214,7 @@ const Budget: React.FC<P> = ({g, beats, config}) => {
   const F = config.layout.fonts;
   const tone = g.tone === "cost" ? T.cost : T.ink;
   const items: {item: string; amount: string}[] = g.items;
+  const compact = g.compact || items.length > 4;
   const totalS = b(items.length, 9);
   return (
     <Center>
@@ -220,7 +224,7 @@ const Budget: React.FC<P> = ({g, beats, config}) => {
         {items.map((it, i) => {
           const s = b(i);
           return (
-            <div key={i} style={{display: "flex", justifyContent: "space-between", fontSize: F.body, fontWeight: 600, padding: "8px 0", borderBottom: `3px solid ${T.line}`, opacity: s, transform: `translateX(${(1 - s) * -60}px)`}}>
+            <div key={i} style={{display: "flex", justifyContent: "space-between", fontSize: compact ? F.label : F.body, fontWeight: 600, padding: compact ? "3px 0" : "8px 0", borderBottom: `3px solid ${T.line}`, opacity: s, transform: `translateX(${(1 - s) * -60}px)`}}>
               <span>{it.item}</span>
               <span style={{color: g.tone === "cost" ? T.cost : T.ink}}>{it.amount}</span>
             </div>
@@ -285,13 +289,14 @@ const BillVsSavings: React.FC<P> = ({g, beats, config}) => {
   const T = config.theme;
   const F = config.layout.fonts;
   const W = 900;
-  const billW = W * b(0);
-  const saveW = W * (g.savings_value / g.bill_value) * b(2);
+  const top = Math.max(g.bill_value, g.savings_value);
+  const billW = W * (g.bill_value / top) * b(0);
+  const saveW = W * (g.savings_value / top) * b(2);
   const bar = (w: number, color: string, label: string): React.ReactNode => (
     <div style={{position: "relative", height: 96, width: W, borderRadius: 24, background: T.line}}>
       <div style={{position: "absolute", left: 0, top: 0, bottom: 0, width: Math.max(w, 0), borderRadius: 24, background: color}} />
-      <div style={{position: "absolute", left: Math.max(w, 0) + 18, top: 0, bottom: 0, display: "flex", alignItems: "center", fontSize: F.subhead, fontWeight: 700, color, whiteSpace: "nowrap"}}>{w > 10 && w < W - 200 ? label : ""}</div>
-      <div style={{position: "absolute", right: 24, top: 0, bottom: 0, display: "flex", alignItems: "center", fontSize: F.subhead, fontWeight: 700, color: "#fff"}}>{w >= W - 200 ? label : ""}</div>
+      <div style={{position: "absolute", left: Math.max(w, 0) + 18, top: 0, bottom: 0, display: "flex", alignItems: "center", fontSize: F.subhead, fontWeight: 700, color, whiteSpace: "nowrap"}}>{w > 10 && w < W - 220 ? label : ""}</div>
+      <div style={{position: "absolute", left: 0, width: Math.max(w, 0), top: 0, bottom: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", paddingRight: 24, boxSizing: "border-box", fontSize: F.subhead, fontWeight: 700, color: "#fff"}}>{w >= W - 220 ? label : ""}</div>
     </div>
   );
   return (
@@ -301,7 +306,242 @@ const BillVsSavings: React.FC<P> = ({g, beats, config}) => {
       <div style={{opacity: b(0)}}>{bar(billW, T.cost, g.bill)}</div>
       <div style={{width: W, fontSize: F.body, fontWeight: 600, marginTop: 24, opacity: b(1)}}>{g.savings_label}</div>
       <div style={{opacity: b(1)}}>{bar(saveW, T.save, g.savings)}</div>
-      <div style={{marginTop: 30, fontSize: F.title, fontWeight: 700, color: T.cost, ...rise(b(3, 9), 30)}}>Short by {g.shortfall}</div>
+      <div style={{marginTop: 30, fontSize: F.title, fontWeight: 700, color: g.verdict_tone === "save" ? T.save : T.cost, ...rise(b(3, 9), 30)}}>{g.verdict}</div>
+    </Center>
+  );
+};
+
+
+const tone = (T: Config["theme"], t?: string) => (t === "save" ? T.save : t === "gold" ? T.gold_edge : t === "cost" ? T.cost : T.ink);
+
+// Numbered list (rules, takeaways). Numbers come from the order, never typed in the text.
+const List: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  return (
+    <Center gap={26}>
+      <div style={{fontSize: F.title, fontWeight: 700, alignSelf: "flex-start", ...rise(b(0))}}>{g.title}</div>
+      {g.items.map((it: string, i: number) => {
+        const s = b(i + 1);
+        return (
+          <div key={i} style={{alignSelf: "stretch", display: "flex", alignItems: "center", gap: 28, fontSize: F.subhead, fontWeight: 600, opacity: s, transform: `translateX(${(1 - s) * -70}px)`}}>
+            {g.numbered === false ? (
+              <div style={{width: 26, height: 26, borderRadius: 13, background: T.gold, flex: "none", marginLeft: 22}} />
+            ) : (
+              <div style={{width: 84, height: 84, borderRadius: 42, background: T.gold, color: T.ink, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flex: "none"}}>{i + 1}</div>
+            )}
+            <span>{it}</span>
+          </div>
+        );
+      })}
+      {g.footer ? <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, g.footer_tone), ...rise(b(g.items.length + 1))}}>{g.footer}</div> : null}
+    </Center>
+  );
+};
+
+// Three tiles with arrows: comes in -> goes out -> what's left
+const Tiles: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  return (
+    <Center>
+      <div style={{display: "flex", alignItems: "center", gap: 18}}>
+        {g.tiles.map((t: {label: string; tone: string}, i: number) => {
+          const s = b(i, 10);
+          return (
+            <div key={i} style={{display: "flex", alignItems: "center", gap: 18}}>
+              {i ? <svg width="56" height="40" viewBox="0 0 56 40" style={{opacity: s}}><path d="M4 20 H46 M32 6 L48 20 L32 34" fill="none" stroke={T.ink} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" /></svg> : null}
+              <div style={{width: 300, height: 300, borderRadius: 40, border: `7px solid ${tone(T, t.tone)}`, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: F.subhead, fontWeight: 700, color: tone(T, t.tone), padding: 20, boxSizing: "border-box", transform: `scale(${0.6 + 0.4 * s})`, opacity: s}}>{t.label}</div>
+            </div>
+          );
+        })}
+      </div>
+    </Center>
+  );
+};
+
+// Payment plan: a "now" block from savings, then one block per month
+const PaymentPlan: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const n = Math.round(g.months_value);
+  const start = (beats[1] ?? 0) * fps;
+  const per = ((beats[2] ?? 3) * fps - start) / n;
+  return (
+    <Center gap={30}>
+      <ExampleTag config={config} />
+      <div style={{display: "flex", alignItems: "flex-end", gap: 22}}>
+        <div style={{textAlign: "center", ...rise(b(0))}}>
+          <div style={{width: 190, height: 190, borderRadius: 26, background: T.gold, color: T.ink, display: "flex", alignItems: "center", justifyContent: "center", fontSize: F.subhead, fontWeight: 700}}>{g.now}</div>
+          <div style={{fontSize: F.label, fontWeight: 600, color: T.muted, marginTop: 10}}>{g.now_label}</div>
+        </div>
+        <div>
+          <div style={{display: "grid", gridTemplateColumns: "repeat(5, 120px)", gap: 14}}>
+            {Array.from({length: n}).map((_, i) => {
+              const s = frame < start + i * per ? 0 : spring({frame: frame - start - i * per, fps, config: {damping: 12}});
+              return (
+                <div key={i} style={{height: 88, borderRadius: 18, background: T.save, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: F.label, fontWeight: 700, opacity: s, transform: `scale(${0.5 + 0.5 * s})`}}>{g.monthly}</div>
+              );
+            })}
+          </div>
+          <div style={{fontSize: F.label, fontWeight: 600, color: T.muted, marginTop: 10, textAlign: "center", opacity: b(1)}}>{g.months_label}</div>
+        </div>
+      </div>
+      <div style={{fontSize: F.subhead, fontWeight: 700, ...rise(b(2))}}>{g.total_label}</div>
+    </Center>
+  );
+};
+
+// Bar groups: each group compares a few labelled amounts on its own scale
+const CompareGroups: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 560;
+  let k = 0;
+  return (
+    <Center gap={34}>
+      <ExampleTag config={config} />
+      {g.groups.map((grp: {title: string; bars: {label: string; value: string; value_value: number; tone: string}[]}, gi: number) => {
+        const top = Math.max(...grp.bars.map((x) => x.value_value));
+        return (
+          <div key={gi} style={{display: "flex", flexDirection: "column", gap: 14}}>
+            <div style={{fontSize: F.body, fontWeight: 700, color: T.muted, opacity: b(k)}}>{grp.title}</div>
+            {grp.bars.map((bar, bi) => {
+              const s = b(k++);
+              return (
+                <div key={bi} style={{display: "flex", alignItems: "center", gap: 20}}>
+                  <div style={{width: 230, fontSize: F.body, fontWeight: 600, textAlign: "right"}}>{bar.label}</div>
+                  <div style={{width: Math.max(18, W * (bar.value_value / top) * s), height: 70, borderRadius: 18, background: tone(T, bar.tone)}} />
+                  <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, bar.tone), opacity: s}}>{bar.value}</div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
+      {g.footer ? <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, g.footer_tone), ...rise(b(k), 30)}}>{g.footer}</div> : null}
+    </Center>
+  );
+};
+
+// Pay and spending rising together (lifestyle creep), no numbers
+const Rising: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 20);
+  const steps = [0.35, 0.55, 0.75, 1];
+  return (
+    <Center gap={24}>
+      <div style={{display: "flex", alignItems: "flex-end", gap: 70, height: 440}}>
+        {[{label: g.left, color: T.save}, {label: g.right, color: T.cost}].map((col, ci) => (
+          <div key={ci} style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 14}}>
+            <div style={{display: "flex", alignItems: "flex-end", gap: 12, height: 380}}>
+              {steps.map((h, i) => (
+                <div key={i} style={{width: 64, height: 380 * h * Math.min(1, Math.max(0, s * 4 - i)), borderRadius: 14, background: col.color, opacity: 0.45 + 0.15 * i}} />
+              ))}
+            </div>
+            <div style={{fontSize: F.subhead, fontWeight: 700, color: col.color}}>{col.label}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{fontSize: F.subhead, fontWeight: 700, ...rise(b(1))}}>{g.caption}</div>
+    </Center>
+  );
+};
+
+// Credit card with a balance that grows with interest
+const CardDebt: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const frame = useCurrentFrame();
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 12);
+  const up = b(1);
+  return (
+    <Center gap={34}>
+      <ExampleTag config={config} />
+      <div style={{position: "relative", width: 560, height: 350, borderRadius: 36, background: T.ink, transform: `rotate(${(1 - s) * -14}deg) scale(${0.7 + 0.3 * s})`, opacity: s}}>
+        <div style={{position: "absolute", left: 50, top: 90, width: 100, height: 74, borderRadius: 14, background: T.gold}} />
+        <div style={{position: "absolute", left: 50, bottom: 50, color: "#fff", fontSize: F.body, fontWeight: 600, letterSpacing: 4}}>•••• •••• ••••</div>
+        <div style={{position: "absolute", right: -60, top: -50, fontSize: F.title, fontWeight: 700, color: "#fff", background: T.cost, borderRadius: 24, padding: "4px 26px"}}>+{g.amount}</div>
+      </div>
+      <div style={{display: "flex", alignItems: "center", gap: 18, fontSize: F.subhead, fontWeight: 700, color: T.cost, opacity: up}}>
+        <svg width="64" height="64" viewBox="0 0 64 64" style={{transform: `translateY(${-Math.abs(Math.sin(frame / 10)) * 8}px)`}}>
+          <path d="M32 56 V10 M12 28 L32 8 L52 28" fill="none" stroke={T.cost} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        {g.caption}
+      </div>
+    </Center>
+  );
+};
+
+// One dollar split into fixed costs and the rest
+const ShareBar: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 940;
+  const s = b(0, 18);
+  const pct = g.share_value / 100;
+  return (
+    <Center gap={30}>
+      <ExampleTag config={config} />
+      <div style={{fontSize: F.number, fontWeight: 700, color: T.cost, lineHeight: 1, ...rise(b(1))}}>{g.headline}</div>
+      <div style={{position: "relative", width: W, height: 130, borderRadius: 30, background: T.line, overflow: "hidden"}}>
+        <div style={{position: "absolute", left: 0, top: 0, bottom: 0, width: W * pct * s, background: T.cost, display: "flex", alignItems: "center", paddingLeft: 30, boxSizing: "border-box", color: "#fff", fontSize: F.subhead, fontWeight: 700, whiteSpace: "nowrap"}}>{g.left_label}</div>
+      </div>
+      <div style={{width: W, marginTop: -16, textAlign: "right", fontSize: F.label, fontWeight: 700, color: T.save, opacity: b(2)}}>↑ {g.right_label}</div>
+      <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(b(2))}}>{g.caption}</div>
+    </Center>
+  );
+};
+
+// The habit that made the difference
+const Habit: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 10);
+  return (
+    <Center gap={26}>
+      <div style={{fontSize: F.subhead, fontWeight: 700, color: T.muted, ...rise(s)}}>{g.name}'s habit</div>
+      <div style={{display: "flex", alignItems: "center", gap: 34, padding: "40px 54px", borderRadius: 40, border: `7px solid ${T.save}`, transform: `scale(${0.7 + 0.3 * s})`, opacity: s}}>
+        <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill={T.save} /><path d="M32 62 L52 82 L90 40" fill="none" stroke="#fff" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        <div style={{fontSize: F.title, fontWeight: 700, lineHeight: 1.05, maxWidth: 620}}>{g.habit}</div>
+      </div>
+      <div style={{fontSize: F.subhead, fontWeight: 600, color: T.save, ...rise(b(1))}}>{g.detail}</div>
+    </Center>
+  );
+};
+
+// Call to action: the workbook, "in the description"
+const Cta: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const frame = useCurrentFrame();
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 12);
+  return (
+    <Center gap={22}>
+      <div style={{width: 380, height: 450, borderRadius: "16px 32px 32px 16px", background: T.save, color: "#fff", padding: "46px 40px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 20, boxShadow: "-16px 0 0 #157a45 inset", transform: `rotate(${-4 + (1 - s) * -10}deg) translateY(${(1 - s) * 120}px)`, opacity: s}}>
+        <div style={{alignSelf: "flex-start", background: T.gold, color: T.ink, fontSize: F.body, fontWeight: 700, borderRadius: 999, padding: "4px 22px"}}>FREE</div>
+        <div style={{fontSize: 60, fontWeight: 700, lineHeight: 1.02}}>{g.title}</div>
+        <div style={{marginTop: "auto", display: "flex", flexDirection: "column", gap: 14}}>
+          {g.lines.map((l: string, i: number) => <div key={i} style={{display: "flex", alignItems: "center", gap: 14, fontSize: F.label, fontWeight: 600}}><div style={{width: 30, height: 30, borderRadius: 7, background: "rgba(255,255,255,0.9)"}} />{l}</div>)}
+        </div>
+      </div>
+      <div style={{display: "flex", alignItems: "center", gap: 18, fontSize: F.title, fontWeight: 700, ...rise(b(1))}}>
+        {g.where}
+        <svg width="60" height="70" viewBox="0 0 60 70" style={{transform: `translateY(${Math.abs(Math.sin(frame / 9)) * 12}px)`}}><path d="M30 6 V58 M8 38 L30 62 L52 38" fill="none" stroke={T.ink} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      </div>
+      {g.note ? <div style={{fontSize: F.subhead, fontWeight: 600, color: T.save, ...rise(b(2))}}>{g.note}</div> : null}
     </Center>
   );
 };
@@ -319,6 +559,15 @@ const VIEWS: Record<string, React.FC<P>> = {
   result: Result,
   envelope: Envelope,
   bill_vs_savings: BillVsSavings,
+  list: List,
+  tiles: Tiles,
+  payment_plan: PaymentPlan,
+  compare: CompareGroups,
+  rising: Rising,
+  card_debt: CardDebt,
+  share_bar: ShareBar,
+  habit: Habit,
+  cta: Cta,
 };
 
 export const GraphicView: React.FC<P> = (p) => {
