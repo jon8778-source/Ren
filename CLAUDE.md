@@ -5,6 +5,7 @@ at fixed gates. Two systems live here:
 
 - `project/`: **the main pipeline**. A 16:9 long video (about 6 minutes) plus vertical shorts and
   thumbnails per episode. Use this for new episodes. Read `project/README.md` for every command.
+- `project/DECISIONS.md`: condensed decision log (read first).
 - `src/` (Remotion) and `videos/` (HyperFrames): older one-off 9:16 shorts. Leave them alone unless asked.
 
 ## "New episode: <topic>" means this workflow
