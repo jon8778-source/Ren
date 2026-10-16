@@ -1,0 +1,162 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "tag": "Same {bill} bill"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.8
+   ],
+   "line": "r02",
+   "id": "s01"
+  },
+  {
+   "id": "s02",
+   "line": "n02",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "profile",
+    "facts": [
+     "Works in an office"
+    ],
+    "label": "Take-home pay",
+    "amount": "{nina.income}",
+    "per": "a month"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    1.8
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "n05",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Left each month",
+      "value": "{nina.left_over}",
+      "tone": "save"
+     },
+     {
+      "label": "Savings",
+      "value": "{nina.savings}",
+      "tone": "gold"
+     }
+    ],
+    "equation": "{nina.income} − {nina.fixed_total} − {nina.leaks_total} = {nina.left_over}"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    "@n05+2.6",
+    "@n05+4.2"
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "n06",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Nina's savings",
+    "savings": "{nina.savings}",
+    "verdict": "{nina.savings_after_bill} to spare",
+    "verdict_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.9,
+    1.6,
+    3.2
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "n08",
+   "layout": "character_left",
+   "character": {
+    "id": "nina",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "spotlight",
+    "title": "{nina.leak:forgotten_subscriptions} a month",
+    "subtitle": "Subscriptions she forgot she had"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    2.4
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "n10",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "habit",
+    "name": "Nina",
+    "habit": "A ten-minute leak check",
+    "detail": "At the start of every month"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.4
+   ]
+  }
+ ]
+}

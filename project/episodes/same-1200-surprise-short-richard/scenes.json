@@ -1,0 +1,209 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "sam",
+    "tag": "{sam.income} / month"
+   },
+   "camera": "drift_left",
+   "beats": [
+    0.3
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "sam",
+     "nina",
+     "claire",
+     "marcus",
+     "richard"
+    ],
+    "highlight": "richard",
+    "highlight_pose": "happy",
+    "tag": "{richard.income} / month"
+   },
+   "camera": "drift_left",
+   "beats": [
+    0.3
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h06",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Biggest paycheck,",
+    "subtitle": "smallest problem?"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.9
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "x05",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "budget",
+    "title": "Leaks",
+    "items": "richard.leak_items",
+    "total_label": "Leaks",
+    "total": "{richard.leaks_total}",
+    "tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.3,
+    0.9,
+    1.5,
+    2.4
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "x06",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "A month",
+      "bars": [
+       {
+        "label": "Richard's leaks",
+        "value": "{richard.leaks_total}",
+        "tone": "cost"
+       },
+       {
+        "label": "Sam's paycheck",
+        "value": "{sam.income}",
+        "tone": "ink"
+       }
+      ]
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.6
+   ]
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "shocked"
+   },
+   "graphic": {
+    "type": "bill",
+    "title": "Dental bill",
+    "amount": "{bill}",
+    "stamp": "Surprise!"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.6
+   ],
+   "line": "l07",
+   "id": "s06"
+  },
+  {
+   "id": "s07",
+   "line": "x09",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "bill_vs_savings",
+    "bill": "{bill}",
+    "due": "Due in {bill_due_days|plain} days",
+    "savings_label": "Richard's savings",
+    "savings": "{richard.savings}",
+    "verdict": "All his savings, plus {richard.bill_shortfall}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.2,
+    3.0
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "x10",
+   "layout": "character_right",
+   "character": {
+    "id": "richard",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "{richard.income_multiple_vs_level1|plain}× the income",
+    "title": "Not a calmer month",
+    "subtitle": "No buffer left"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.4,
+    2.6
+   ]
+  }
+ ]
+}

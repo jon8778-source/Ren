@@ -81,7 +81,6 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
   const h = b(0);
   return (
     <Center gap={10}>
-      {g.tag && g.tag.includes("$") ? <ExampleTag config={config} /> : null}
       <div style={{display: "flex", gap: 12, alignItems: "flex-end"}}>
         {g.people.map((p: {id: string; name: string; src: string}, i: number) => {
           const s = g.enter && !g.labels ? b(i) : 1;
@@ -104,6 +103,7 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
           <div style={{fontSize: F.subhead, fontWeight: 700, color: "#fff", background: T.save, borderRadius: 999, padding: "8px 38px", ...rise(h, 30)}}>{g.tag}</div>
         ) : null}
       </div>
+      {g.tag && g.tag.includes("$") ? <ExampleTag config={config} /> : null}
     </Center>
   );
 };

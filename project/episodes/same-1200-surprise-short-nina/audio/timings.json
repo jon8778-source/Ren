@@ -1,0 +1,110 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 30.927,
+ "lines": [
+  {
+   "id": "r02",
+   "section": "short-nina",
+   "text": "Five people, the same month, and the same one thousand two hundred dollar bill.",
+   "refs": [
+    "=5",
+    "bill"
+   ],
+   "start": 0.41,
+   "end": 4.746,
+   "chunk": 0
+  },
+  {
+   "id": "n02",
+   "section": "short-nina",
+   "text": "Nina works in an office and takes home three thousand eight hundred a month.",
+   "refs": [
+    "nina.income"
+   ],
+   "start": 5.196,
+   "end": 8.884,
+   "chunk": 0
+  },
+  {
+   "id": "n05",
+   "section": "short-nina",
+   "text": "That leaves her six hundred twenty-six a month, and over time she's saved two thousand.",
+   "refs": [
+    "nina.left_over",
+    "nina.savings"
+   ],
+   "start": 9.334,
+   "end": 14.414,
+   "chunk": 0
+  },
+  {
+   "id": "n06",
+   "section": "short-nina",
+   "text": "The bill arrives, and her savings cover all of it, with eight hundred to spare.",
+   "refs": [
+    "nina.savings_after_bill"
+   ],
+   "start": 14.864,
+   "end": 19.189,
+   "chunk": 0
+  },
+  {
+   "id": "n08",
+   "section": "short-nina",
+   "text": "Checking her statement, she finds sixty-four dollars a month of subscriptions she forgot she had.",
+   "refs": [
+    "nina.leak:forgotten_subscriptions"
+   ],
+   "start": 19.639,
+   "end": 25.121,
+   "chunk": 0
+  },
+  {
+   "id": "n10",
+   "section": "short-nina",
+   "text": "Nina's habit: a ten-minute leak check at the start of every month.",
+   "refs": [
+    "=10"
+   ],
+   "start": 25.571,
+   "end": 29.307,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 28.927,
+   "leading_silence_s": 0.02,
+   "lufs": -22.5,
+   "median_pitch_hz": 130.8609279198309,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from same-1200-surprise/audio/voice.wav"
+  }
+ ]
+}

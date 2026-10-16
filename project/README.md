@@ -25,6 +25,17 @@ Built: the 60-second pilot and the full video (about 5:45).
 | 8 | Thumbnails | `python3 pipeline/thumbnails.py episodes/<id> [--browser-executable PATH]` | renders/thumbnail-a/b/c.png (1280x720) |
 | 7 | Quality check | `python pipeline/qc.py episodes/<id> --video renders/full.mp4 --name final` | reports/qc-final.md/.json |
 
+## Vertical shorts (9:16)
+Shorts are cut from a finished long video: `episodes/<id>/shorts.json` lists the lines for each short (in play
+order) and any scene overrides. The voice is sliced from the long video's own track.
+```
+python pipeline/shorts.py episodes/<id>                      # builds episodes/<id>-<short>/
+python3 pipeline/assemble.py episodes/<id>-<short> --config config.vertical.json --out renders/<short>.mp4
+python pipeline/qc.py episodes/<id>-<short> --video renders/<short>.mp4 --name final
+```
+`config.vertical.json` stacks graphics above the character, keeps captions clear of the bottom 420px and the
+right-hand Shorts buttons, and scales the landscape graphics to fit.
+
 Preview and scrub in Remotion Studio (after an assemble has written `build/props.json`):
 `cd remotion && npx remotion studio --props=../episodes/<id>/build/props.json`
 

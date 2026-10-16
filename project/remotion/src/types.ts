@@ -10,6 +10,9 @@ export type Config = {
     content_when_character_left: Box;
     content_when_character_right: Box;
     fonts: {label: number; body: number; subhead: number; title: number; number: number; hero: number};
+    margin: number;
+    content_virtual?: {w: number; h: number};
+    disclaimer_y?: number;
   };
   theme: Record<"background" | "ink" | "cost" | "save" | "gold" | "gold_edge" | "muted" | "line", string>;
   disclaimer: string;

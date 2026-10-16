@@ -68,12 +68,14 @@ def main():
     args = ap.parse_args()
     ep = Path(args.episode).resolve()
     video = ep / args.video
-    cfg = load_config()
-    L, Q = cfg["layout"], cfg["qc"]
     r = Report()
     lines = parse_script(ep)
     timings = load_json(ep / "audio" / "timings.json")
     props = load_json(ep / "build" / "props.json")
+    cfg = props["config"]  # the layout the video was actually built with
+    L, Q = cfg["layout"], cfg["qc"]
+    # Graphics drawn in a virtual box and scaled down (vertical shorts) render text smaller
+    text_scale = L["content_when_character_left"]["w"] / L["content_virtual"]["w"] if "content_virtual" in L else 1.0
     manifest = load_json(PROJECT / "characters" / "manifest.json")["characters"]
     assumptions, problems = calculate(ep)
 
@@ -233,6 +235,10 @@ def main():
         boxes = {k: L[k] for k in ("caption", "character_left", "character_right", "content_when_character_left", "content_when_character_right")}
         out_of_zone = [f"{k} ends at y={b['y'] + b['h']} (controls start at {y0})" for k, b in boxes.items() if b["y"] + b["h"] > y0]
         out_of_zone += [f"{k} is outside the {L['margin']}px side margins" for k, b in boxes.items() if b["x"] < L["margin"] or b["x"] + b["w"] > cfg["video"]["width"] - L["margin"]]
+        if "right_reserved_px" in L:  # Shorts buttons run down the right edge, level with the caption
+            cap = L["caption"]
+            if cap["x"] + cap["w"] > cfg["video"]["width"] - L["right_reserved_px"]:
+                out_of_zone.append("captions run under the Shorts buttons on the right")
         r.add("Safe-zone placement", "FAIL" if (hits or out_of_zone) else "PASS",
               f"Checked {len(list(frames_dir.glob('*.png')))} frames (2 per second): nothing drawn in the bottom {H - y0}px. "
               f"Captions end at y={L['caption']['y'] + L['caption']['h']}; all zones sit inside {L['margin']}px margins "
@@ -240,11 +246,13 @@ def main():
               [f"content in the controls area at {h}" for h in hits] + out_of_zone)
 
     # 10. Text readability
-    small = [f"{k} text is {v}px (minimum {L['min_font_px']}px)" for k, v in L["fonts"].items() if v < L["min_font_px"]]
+    eff = {k: round(v * text_scale) for k, v in L["fonts"].items()}
+    small = [f"{k} text is {v}px (minimum {L['min_font_px']}px)" for k, v in eff.items() if v < L["min_font_px"]]
     if L["caption"]["font_px"] < L["min_font_px"]:
         small.append("captions below minimum size")
     r.add("Text readability", "FAIL" if small else "PASS",
-          f"Smallest text {min(L['fonts'].values())}px, captions {L['caption']['font_px']}px, key numbers {L['fonts']['number']}px on a 1080px frame. "
+          f"Smallest text {min(eff.values())}px, captions {L['caption']['font_px']}px, key numbers {eff['number']}px on a "
+          f"{cfg['video']['width']}x{cfg['video']['height']} frame. "
           "Dark navy on white.", small)
 
     # 11. Visual change at least every 7 seconds

@@ -6,8 +6,8 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parent.parent
 
 
-def load_config():
-    return json.loads((PROJECT / "config.json").read_text())
+def load_config(path=None):
+    return json.loads(Path(path or PROJECT / "config.json").read_text())
 
 
 def load_json(path):

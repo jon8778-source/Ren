@@ -1,0 +1,127 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 30.842,
+ "lines": [
+  {
+   "id": "h04",
+   "section": "short-richard",
+   "text": "Sam takes home two thousand four hundred dollars a month.",
+   "refs": [
+    "sam.income"
+   ],
+   "start": 0.41,
+   "end": 3.353,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "short-richard",
+   "text": "Richard takes home twenty-two thousand.",
+   "refs": [
+    "richard.income"
+   ],
+   "start": 3.803,
+   "end": 6.16,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "short-richard",
+   "text": "So Richard handles it best, right?",
+   "refs": [],
+   "start": 6.61,
+   "end": 8.606,
+   "chunk": 0
+  },
+  {
+   "id": "x05",
+   "section": "short-richard",
+   "text": "Richard's leaks are two thousand nine hundred fifty a month.",
+   "refs": [
+    "richard.leaks_total"
+   ],
+   "start": 9.056,
+   "end": 12.277,
+   "chunk": 0
+  },
+  {
+   "id": "x06",
+   "section": "short-richard",
+   "text": "His leaks alone are bigger than Sam's entire paycheck.",
+   "refs": [],
+   "start": 12.727,
+   "end": 15.974,
+   "chunk": 0
+  },
+  {
+   "id": "l07",
+   "section": "short-richard",
+   "text": "One thousand two hundred dollars, due in thirty days.",
+   "refs": [
+    "bill",
+    "bill_due_days"
+   ],
+   "start": 16.424,
+   "end": 19.68,
+   "chunk": 0
+  },
+  {
+   "id": "x09",
+   "section": "short-richard",
+   "text": "Paying it takes all his savings, plus two hundred more, and leaves him with no buffer at all.",
+   "refs": [
+    "richard.bill_shortfall"
+   ],
+   "start": 20.13,
+   "end": 25.199,
+   "chunk": 0
+  },
+  {
+   "id": "x10",
+   "section": "short-richard",
+   "text": "Earning nine times more than Sam didn't buy him a calmer month.",
+   "refs": [
+    "=9"
+   ],
+   "start": 25.649,
+   "end": 29.222,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 28.842,
+   "leading_silence_s": 0.02,
+   "lufs": -22.6,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from same-1200-surprise/audio/voice.wav"
+  }
+ ]
+}

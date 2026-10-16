@@ -59,8 +59,8 @@ def resolve_graphic(g, assumptions, manifest):
     return out
 
 
-def build_props(ep: Path):
-    cfg = load_config()
+def build_props(ep: Path, config=None):
+    cfg = load_config(config)
     assumptions = load_json(ep / "assumptions.json")
     timings = load_json(ep / "audio" / "timings.json")
     scenes_in = load_json(ep / "scenes.json")
@@ -121,9 +121,10 @@ def main():
     ap.add_argument("episode")
     ap.add_argument("--out", required=True, help="Output path, relative to the episode folder")
     ap.add_argument("--browser-executable", default=None)
+    ap.add_argument("--config", default=None, help="Layout config, e.g. config.vertical.json for 9:16 shorts")
     args = ap.parse_args()
     ep = Path(args.episode).resolve()
-    props = build_props(ep)
+    props = build_props(ep, args.config)
     (ep / "build").mkdir(exist_ok=True)
     props_path = ep / "build" / "props.json"
     props_path.write_text(json.dumps(props, indent=1) + "\n")

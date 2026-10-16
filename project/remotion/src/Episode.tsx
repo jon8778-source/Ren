@@ -18,11 +18,15 @@ const SceneView: React.FC<{scene: Scene; config: Config}> = ({scene, config}) =>
   const L = config.layout;
   const charBox = scene.layout === "character_left" ? L.character_left : L.character_right;
   const contentBox = scene.layout === "character_left" ? L.content_when_character_left : L.content_when_character_right;
+  const V = L.content_virtual ?? {w: contentBox.w, h: contentBox.h};
   return (
     <Camera scene={scene}>
       {scene.character ? <Character c={scene.character} box={charBox} side={scene.layout} sceneStart={scene.start} /> : null}
       <div style={{position: "absolute", left: contentBox.x, top: contentBox.y, width: contentBox.w, height: contentBox.h}}>
-        <GraphicView g={scene.graphic} beats={scene.beats} box={contentBox} config={config} />
+        {/* Graphics are designed for the landscape content box; a vertical layout draws them there and scales down */}
+        <div style={{width: V.w, height: V.h, transform: `scale(${contentBox.w / V.w})`, transformOrigin: "0 0"}}>
+          <GraphicView g={scene.graphic} beats={scene.beats} box={{...contentBox, w: V.w, h: V.h}} config={config} />
+        </div>
       </div>
     </Camera>
   );
@@ -43,8 +47,8 @@ const Disclaimer: React.FC<{config: Config}> = ({config}) => {
   const frame = useCurrentFrame();
   const opacity = interpolate(frame, [0, 8], [0, 1], {extrapolateRight: "clamp"});
   return (
-    <div style={{position: "absolute", top: 24, left: 0, right: 0, display: "flex", justifyContent: "center", opacity}}>
-      <div style={{fontSize: config.layout.fonts.label, fontWeight: 600, color: config.theme.muted, border: `3px solid ${config.theme.line}`, borderRadius: 999, padding: "6px 28px", background: "#fff"}}>
+    <div style={{position: "absolute", top: config.layout.disclaimer_y ?? 24, left: 0, right: 0, display: "flex", justifyContent: "center", opacity}}>
+      <div style={{fontSize: config.layout.fonts.label, fontWeight: 600, color: config.theme.muted, border: `3px solid ${config.theme.line}`, borderRadius: 32, padding: "6px 28px", background: "#fff", maxWidth: config.video.width - 2 * config.layout.margin, textAlign: "center", boxSizing: "border-box"}}>
         {config.disclaimer}. People and figures are illustrative examples.
       </div>
     </div>
