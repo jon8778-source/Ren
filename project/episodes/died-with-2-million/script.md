@@ -107,5 +107,4 @@ as ages). Changes from the owner's text are listed in plan.md under "Script chan
 [c02] Don't spend it all at once. But don't forget to spend it at all.
 [c03] So here's a question: what's on your 'next year' list that won't wait forever?
 [c04] Tell me in the comments.
-[c05] If you want to build your own life fund, my fifty thirty twenty budgeting workbook is in the description. {=50, =30, =20}
 [c06] I'm Ren. See you next time.

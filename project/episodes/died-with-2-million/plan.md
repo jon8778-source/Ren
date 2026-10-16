@@ -1,14 +1,14 @@
 # Plan: The Man Who Died With $2 Million
 
 About 5:20, 1920x1080, Ren narrates, no music. Owner approved: Ren's usual voice, no music, about 5:20 is fine,
-thumbnails and two shorts afterwards, the 50/30/20 workbook named without "free".
+thumbnails and two shorts afterwards, no workbook mention in the video.
 
 ## Script changes from the owner's text (each needs the owner's OK)
 1. [f07] "you're already ahead of a lot of people" -> "you're already off to a strong start".
    Reason: a comparison with "a lot of people" is a claim about other people with no source.
 2. [r03] "even decades later" -> "even nearly two decades into retirement".
    Reason: the EBRI research covers about 18 years of retirement, so "decades" overstates it. Status [VERIFY].
-3. [c05] "my free fifty thirty twenty budgeting workbook" -> "my fifty thirty twenty budgeting workbook". Owner's decision.
+3. [c05] The workbook line is removed: the owner does not want the workbook mentioned in this video.
 
 ## Numbers (assumptions.csv; `python3 pipeline/calc.py episodes/died-with-2-million` prints MATHS OK)
 Take-home $3,900/mo each (gross $60,000/yr). Frank invests $1,950/mo; Bea invests $780/mo plus a $300/mo life fund;
