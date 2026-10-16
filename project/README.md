@@ -40,11 +40,10 @@ Preview and scrub in Remotion Studio (after an assemble has written `build/props
 `cd remotion && npx remotion studio --props=../episodes/<id>/build/props.json`
 
 ## Setup
-- Node 22+, FFmpeg, then `cd remotion && npm install`.
-- Python 3 with `kokoro-onnx soundfile librosa pillow scipy numpy`.
-- Voice model (Kokoro-82M, Apache-2.0): `npm pack kokoro-q8-shards@1.0.0 kokoro-js@1.2.1`, extract both,
-  `cat package/kokoro-q8.part{0..5}.bin > kokoro-q8.onnx` (sha256 `fbae9257…a1478`); voices are in `package/voices/`.
-- Voice: Ren's voice from the shorts (`am_michael` + `am_eric` 50/50), at 0.93× for long form (about 165 words a minute).
+Node 22+, FFmpeg and Python 3, then run `./setup.sh` once per machine or session. It installs Remotion, a
+Python venv in `.tools/venv` and the Kokoro-82M voice model (Apache-2.0, hash-checked) in `.tools/`.
+Then use `--model .tools/kokoro-q8.onnx --voices .tools/voices` for voice.py, and `.tools/venv/bin/python`
+for the Python stages that need the libraries (voice, qc, shorts).
 
 ## Rules the checks enforce
 - Every spoken number matches the assumptions table; every on-screen number comes from it; maths recalculates.

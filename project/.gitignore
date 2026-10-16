@@ -2,3 +2,4 @@ episodes/*/renders/
 episodes/*/build/
 episodes/*/audio/*.wav
 __pycache__/
+.tools/
