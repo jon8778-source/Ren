@@ -1,0 +1,271 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "b01",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "And then there's",
+    "title": "Bea",
+    "subtitle": "Age {bea.start_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3,
+    0.6
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "b02",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "{frank.gross_salary}",
+     "{yara.gross_salary}",
+     "{bea.gross_salary}"
+    ],
+    "highlight": "bea-25",
+    "highlight_pose": "happy"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.5,
+    0.8,
+    1.1
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "b03",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "But Bea has",
+    "subtitle": "a system"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Every month: {bea.life_fund_monthly}",
+    "title": "A guilt-free",
+    "subtitle": "life fund"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.2,
+    2.4
+   ],
+   "line": "b10",
+   "id": "s04"
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Just for experiences",
+    "numbered": false,
+    "items": [
+     "Concerts",
+     "Trips",
+     "Hobbies"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "line": "b11",
+   "id": "s05"
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Planned ahead",
+    "title": "So there's",
+    "subtitle": "no guilt"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0,
+    2.0
+   ],
+   "line": "b12",
+   "id": "s06"
+  },
+  {
+   "id": "s07",
+   "line": "b15",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-25",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Bea backpacks at {=34|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "bea-70",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "compare",
+    "groups": [
+     {
+      "title": "Money at {frank.end_age|plain}",
+      "bars": [
+       {
+        "label": "Frank",
+        "value": "{frank.balance_at_85}",
+        "tone": "ink"
+       },
+       {
+        "label": "Bea",
+        "value": "{bea.balance_at_85}",
+        "tone": "save"
+       }
+      ]
+     }
+    ],
+    "footer": "Less, but enough",
+    "footer_tone": "save"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0,
+    1.8
+   ],
+   "line": "e04",
+   "id": "s08"
+  },
+  {
+   "id": "s09",
+   "line": "e05",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-70",
+    "pose": "joyful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "She went"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.8
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "e06",
+   "layout": "character_right",
+   "character": {
+    "id": "bea-70",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "At {=34|plain}, and again at {=60|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.2
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "c01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Money is a tool",
+    "title": "for buying",
+    "subtitle": "a life"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  }
+ ]
+}

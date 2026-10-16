@@ -1,0 +1,148 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 30.672,
+ "lines": [
+  {
+   "id": "b01",
+   "section": "short-bea",
+   "text": "And then there's Bea.",
+   "refs": [],
+   "start": 0.41,
+   "end": 1.627,
+   "chunk": 0
+  },
+  {
+   "id": "b02",
+   "section": "short-bea",
+   "text": "Bea earns exactly the same as the other two.",
+   "refs": [
+    "=2"
+   ],
+   "start": 2.077,
+   "end": 4.655,
+   "chunk": 0
+  },
+  {
+   "id": "b03",
+   "section": "short-bea",
+   "text": "But Bea has a system.",
+   "refs": [],
+   "start": 5.105,
+   "end": 6.607,
+   "chunk": 0
+  },
+  {
+   "id": "b10",
+   "section": "short-bea",
+   "text": "Every month, a set amount goes into a pot just for experiences.",
+   "refs": [],
+   "start": 7.057,
+   "end": 11.068,
+   "chunk": 0
+  },
+  {
+   "id": "b11",
+   "section": "short-bea",
+   "text": "Concerts, trips, hobbies.",
+   "refs": [],
+   "start": 11.518,
+   "end": 13.134,
+   "chunk": 0
+  },
+  {
+   "id": "b12",
+   "section": "short-bea",
+   "text": "When she spends it, she doesn't feel guilty, because she planned it.",
+   "refs": [],
+   "start": 13.584,
+   "end": 16.761,
+   "chunk": 0
+  },
+  {
+   "id": "b15",
+   "section": "short-bea",
+   "text": "Backpacking at thirty-four.",
+   "refs": [
+    "=34"
+   ],
+   "start": 17.211,
+   "end": 18.929,
+   "chunk": 0
+  },
+  {
+   "id": "e04",
+   "section": "short-bea",
+   "text": "Bea has less money than Frank, but enough.",
+   "refs": [],
+   "start": 19.379,
+   "end": 21.682,
+   "chunk": 0
+  },
+  {
+   "id": "e05",
+   "section": "short-bea",
+   "text": "And she finally went to Italy.",
+   "refs": [],
+   "start": 22.132,
+   "end": 23.914,
+   "chunk": 0
+  },
+  {
+   "id": "e06",
+   "section": "short-bea",
+   "text": "At thirty-four. And again at sixty.",
+   "refs": [
+    "=34",
+    "=60"
+   ],
+   "start": 24.364,
+   "end": 26.486,
+   "chunk": 0
+  },
+  {
+   "id": "c01",
+   "section": "short-bea",
+   "text": "Money is a tool for buying a life.",
+   "refs": [],
+   "start": 26.936,
+   "end": 29.052,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 28.672,
+   "leading_silence_s": 0.02,
+   "lufs": -21.9,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from died-with-2-million/audio/voice.wav"
+  }
+ ]
+}

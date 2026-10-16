@@ -1,0 +1,195 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "This is",
+    "title": "Frank",
+    "subtitle": "Age {frank.end_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Died at {frank.end_age|plain}, with",
+    "title": "more than {=2000000}",
+    "subtitle": "in the bank"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.3,
+    2.6
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy"
+   },
+   "camera": "push",
+   "beats": [
+    0.2
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Picked up at {=32|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h05",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "Never went"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.2
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "y03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "ticket",
+    "title": "Daughter's concert",
+    "tag": "Age {=40|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    1.2
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "y04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-45",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "stamp_card",
+    "icon": "ticket",
+    "title": "Too expensive",
+    "stamp": "Next year"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.9
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "y14",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Waiting doesn't just cost money",
+    "title": "It costs",
+    "subtitle": "moments"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.6,
+    2.4
+   ]
+  },
+  {
+   "id": "s09",
+   "line": "c03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Your list",
+    "stamp": "Next year?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0,
+    2.0
+   ]
+  }
+ ]
+}

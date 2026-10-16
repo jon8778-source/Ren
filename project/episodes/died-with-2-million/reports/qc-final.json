@@ -1,5 +1,5 @@
 {
- "overall": "FLAG",
+ "overall": "PASS",
  "checks": [
   {
    "check": "Maths (assumptions table recalculated)",
@@ -18,10 +18,10 @@
   },
   {
    "check": "Real statistics",
-   "status": "FLAG",
-   "detail": "Claims needing a verified source ([VERIFY] in sources.json)",
+   "status": "PASS",
+   "detail": "1 sourced claim(s), verified by the owner.",
    "items": [
-    "[r03] UNVERIFIED: Retirees with large savings spend down very little of them, even nearly two decades into retirement (https://www.ebri.org/crawler/view/asset-decumulation-or-asset-preservation-what-guides-retirement-spending)"
+    "[r03] VERIFIED: Retirees with large savings spend down very little of them, even nearly two decades into retirement (https://www.ebri.org/crawler/view/asset-decumulation-or-asset-preservation-what-guides-retirement-spending)"
    ]
   },
   {
