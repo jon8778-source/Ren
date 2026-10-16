@@ -114,20 +114,20 @@
    "role": "over-spender, age 45",
    "name": "Yara",
    "poses": {
-    "happy": "ed3cab7620ac09ad692a40efd07e4650f56d0348fcd3511ce13ce0e7826244ce",
-    "neutral": "6127ff9f38f1e1206b5927ba822ee0c568f34161bca231b825fe78bd4fcc8431",
-    "stressed": "0ff11b83c7bd9111c284b631f92a92ed17d3079bc581421939906fe83e3fd877",
-    "worried": "e14ee1b72482e2a450f4affa9e0a7706928552b1042f2457244203a546b6c04a"
+    "happy": "22202131a6cea73080ba79e7d80afb52a834a8db45293bad524ff8d2f06b7092",
+    "neutral": "c6c3a5561d3de42a0c11216d91a065889f5efb78161a034d81e151d5d8e4a1b9",
+    "stressed": "bac72a8890e01067605ee9c1cb6751b84ec3ba7adf7b8e4f22180439b8987fe4",
+    "worried": "00a214cafd4af97496d5b521ec277284d1775f0f814be82b40ed26995e5d54be"
    }
   },
   "yara-70": {
    "role": "over-spender, age 70+",
    "name": "Yara",
    "poses": {
-    "happy": "4012a41c6cabf5927abfc87680d650f098fd5cbd61a0aaafeab1ce8eaf8d546b",
-    "neutral": "c7355dd9bacf5139c6a31ea9bfc31124a40a6a1f7c7a2a1bb35bc47f4feba46d",
-    "stressed": "2b80409fedd5504eae54c6a7f8482393643e4d8c300574d1f13a3ade0aa1bd71",
-    "worried": "82e9cd5daa5406f51ecce503682b4392535cd710f3ff6e98beca784331dd2a2e"
+    "happy": "9dfcc295f17b506b5da34c206a3a1b99ee09f6300b57e71459d94a97d9131856",
+    "neutral": "22d7a98ce5ebf7754ad5d9c0dfb1774d2823c64ebf9b1c6b5531ed734206f872",
+    "stressed": "cdb48b8c5ed57bbf56f8002ea98c59cf7b7f5087dad2bd17bf48f99f606756b6",
+    "worried": "0e572120251e275e1863acc3098d941b6bb7a2cb0223aa21e4121d0f85ba111e"
    }
   },
   "bea-25": {
