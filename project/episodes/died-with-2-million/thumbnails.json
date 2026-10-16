@@ -1,0 +1,5 @@
+{
+  "_note": "Options a/b/c render layouts d/e/f. The $2M figure is the title's claim (frank.balance_at_85 > 2,000,000 is checked in claims.txt).",
+  "variants": "def",
+  "text": { "money": "{=2000000}+" }
+}

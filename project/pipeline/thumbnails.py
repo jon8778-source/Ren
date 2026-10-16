@@ -24,15 +24,25 @@ manifest = load_json(PROJECT / "characters" / "manifest.json")["characters"]
 k = lambda n: f"${n / 1000:,.1f}".rstrip("0").rstrip(".") + "K"  # 2400 -> $2.4K, 22000 -> $22K
 base = {"theme": load_config()["theme"] | {"ink": "#13233F"}, "bill": money(a["bill"]),
         "low": k(chars[0][1]["income"]), "high": k(chars[-1][1]["income"]),
-        "people": [{"id": c, "name": manifest[c]["name"]} for c, _ in chars]}
+        "people": [{"id": c, "name": manifest.get(c, {}).get("name", c.capitalize())} for c, _ in chars]}
 base["theme"] = {key: v for key, v in base["theme"].items() if v.startswith("#")}
 (ep / "build").mkdir(exist_ok=True)
 (ep / "renders").mkdir(exist_ok=True)
-for v in "abc":
-    props = ep / "build" / f"thumb-{v}.json"
+# An episode can define its own options in thumbnails.json: {"variants": "def", "text": {key: "{ref}" ...}}
+spec = ep / "thumbnails.json"
+variants = "abc"
+if spec.exists():
+    sys.path.insert(0, str(Path(__file__).parent))
+    from assemble import fill  # noqa: E402
+    t = load_json(spec)
+    variants = t["variants"]
+    base["text"] = {k: fill(v, a) for k, v in t.get("text", {}).items()}
+for i, v in enumerate(variants):
+    name = "abc"[i]
+    props = ep / "build" / f"thumb-{name}.json"
     props.write_text(json.dumps(base | {"variant": v}))
-    cmd = ["npx", "remotion", "still", "src/index.ts", "thumbnail", str(ep / "renders" / f"thumbnail-{v}.png"), f"--props={props}", "--log=error"]
+    cmd = ["npx", "remotion", "still", "src/index.ts", "thumbnail", str(ep / "renders" / f"thumbnail-{name}.png"), f"--props={props}", "--log=error"]
     if args.browser_executable:
         cmd.append(f"--browser-executable={args.browser_executable}")
     subprocess.run(cmd, cwd=PROJECT / "remotion", check=True)
-    print(f"Wrote renders/thumbnail-{v}.png")
+    print(f"Wrote renders/thumbnail-{name}.png")
