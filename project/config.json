@@ -1,0 +1,86 @@
+{
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "layout": {
+    "margin": 96,
+    "youtube_controls_from_y": 950,
+    "caption": {
+      "x": 96,
+      "y": 836,
+      "w": 1728,
+      "h": 110,
+      "font_px": 50,
+      "max_lines": 2
+    },
+    "character_left": {
+      "x": 96,
+      "y": 96,
+      "w": 560,
+      "h": 724
+    },
+    "character_right": {
+      "x": 1264,
+      "y": 96,
+      "w": 560,
+      "h": 724
+    },
+    "content_when_character_left": {
+      "x": 720,
+      "y": 96,
+      "w": 1104,
+      "h": 724
+    },
+    "content_when_character_right": {
+      "x": 96,
+      "y": 96,
+      "w": 1104,
+      "h": 724
+    },
+    "min_font_px": 40,
+    "key_number_font_px": 120,
+    "fonts": {
+      "label": 40,
+      "body": 46,
+      "subhead": 56,
+      "title": 80,
+      "number": 120,
+      "hero": 150
+    }
+  },
+  "theme": {
+    "font": "Fredoka",
+    "background": "#FFFFFF",
+    "ink": "#13233F",
+    "cost": "#E23D3D",
+    "save": "#1E9E5A",
+    "gold": "#F5B82E",
+    "gold_edge": "#C98A0B",
+    "muted": "#7A8496",
+    "line": "#E3E7EE"
+  },
+  "voice": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+      "am_michael": 0.5,
+      "am_eric": 0.5
+    },
+    "speed": 1.05,
+    "gap_s": 0.32,
+    "section_gap_s": 0.6,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+  },
+  "qc": {
+    "max_seconds_without_visual_change": 7,
+    "max_silence_s": 1.0,
+    "caption_sync_tolerance_s": 0.25,
+    "max_pitch_spread_semitones": 1.5,
+    "chunk_lufs_tolerance": 2.0,
+    "max_leading_silence_s": 0.15
+  },
+  "disclaimer": "Educational only, not financial advice"
+}

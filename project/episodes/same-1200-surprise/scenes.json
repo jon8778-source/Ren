@@ -1,0 +1,43 @@
+{
+  "_format": "One entry per visual. A scene starts at its script line (plus optional offset seconds) and runs until the next scene. Text may contain {ref} (money from assumptions.json) or {ref|plain}; never type numbers directly. beats are seconds after the scene start where something new appears.",
+  "overlays": [
+    { "type": "disclaimer", "from": 0, "to": 6 },
+    { "type": "disclaimer", "from_end": 5 }
+  ],
+  "scenes": [
+    { "id": "s01", "line": "h01", "layout": "character_left", "character": { "id": "ren", "pose": "talking" },
+      "graphic": { "type": "mailboxes", "count": 5 }, "camera": "push", "beats": [0.5, 0.9, 1.3, 1.7, 2.1] },
+    { "id": "s02", "line": "h02", "layout": "character_left", "character": { "id": "ren", "pose": "shocked" },
+      "graphic": { "type": "bill", "title": "Dental bill", "amount": "{bill}", "stamp": "Surprise!" }, "camera": "push", "beats": [0.2, 2.2] },
+    { "id": "s03", "line": "h03", "layout": "character_left", "character": { "id": "ren", "pose": "pointing" },
+      "graphic": { "type": "lineup", "people": ["sam", "nina", "claire", "marcus", "richard"] }, "camera": "drift_left", "beats": [0.1, 0.3, 0.5, 0.7, 0.9] },
+    { "id": "s04", "line": "h04", "layout": "character_left", "character": { "id": "ren", "pose": "talking" },
+      "graphic": { "type": "lineup", "people": ["sam", "nina", "claire", "marcus", "richard"], "highlight": "sam", "tag": "{sam.income} / month" }, "camera": "drift_left", "beats": [0.3] },
+    { "id": "s05", "line": "h05", "layout": "character_left", "character": { "id": "ren", "pose": "talking" },
+      "graphic": { "type": "lineup", "people": ["sam", "nina", "claire", "marcus", "richard"], "highlight": "richard", "highlight_pose": "happy", "tag": "{richard.income} / month" }, "camera": "drift_left", "beats": [0.3] },
+    { "id": "s06", "line": "h06", "layout": "character_right", "character": { "id": "richard", "pose": "happy" },
+      "graphic": { "type": "question", "title": "Biggest paycheck,", "subtitle": "smallest problem?" }, "camera": "push", "beats": [0.2, 0.9] },
+    { "id": "s07", "line": "h07", "layout": "character_left", "character": { "id": "ren", "pose": "thinking" },
+      "graphic": { "type": "statement", "lead": "Not so fast.", "title": "Income isn't what decides", "subtitle": "who stays calm" }, "camera": "push", "beats": [0.1, 1.2, 2.4] },
+    { "id": "s08", "line": "h08", "layout": "character_left", "character": { "id": "ren", "pose": "pointing" },
+      "graphic": { "type": "spotlight", "title": "Something else does", "subtitle": "You'll spot it in your own budget" }, "camera": "push", "beats": [0.2, 1.8] },
+
+    { "id": "s09", "line": "l01", "layout": "character_right", "character": { "id": "sam", "pose": "neutral" },
+      "graphic": { "type": "level_title", "level": "1", "name": "Sam", "subtitle": "Tight budget, no buffer" }, "camera": "push", "beats": [0.1, 0.6] },
+    { "id": "s10", "line": "l02", "layout": "character_right", "character": { "id": "sam", "pose": "happy" },
+      "graphic": { "type": "profile", "facts": ["Age {=24|plain}", "Works in retail"], "label": "Take-home pay", "amount": "{sam.income}", "per": "a month" }, "camera": "drift_right", "beats": [0.3, 1.4, 2.8] },
+    { "id": "s11", "line": "l03", "layout": "character_right", "character": { "id": "sam", "pose": "thinking" },
+      "graphic": { "type": "budget", "title": "Fixed costs", "items": "sam.fixed_items", "total_label": "Total", "total": "{sam.fixed_total}", "tone": "ink" }, "camera": "drift_right", "beats": [0.3, 1.2, 1.9, 2.8, 3.6, 5.2] },
+    { "id": "s12", "line": "l04", "layout": "character_right", "character": { "id": "sam", "pose": "worried" },
+      "graphic": { "type": "budget", "title": "Little leaks", "items": "sam.leak_items", "total_label": "Leaks", "total": "{sam.leaks_total}", "tone": "cost" }, "camera": "drift_right", "beats": [0.3, 1.4, 2.6, 3.2] },
+    { "id": "s13", "line": "l05", "layout": "character_right", "character": { "id": "sam", "pose": "neutral" },
+      "graphic": { "type": "result", "stats": [
+        { "label": "Left each month", "value": "{sam.left_over}", "tone": "save" },
+        { "label": "Savings", "value": "{sam.savings}", "tone": "gold" } ],
+        "equation": "{sam.income} − {sam.fixed_total} − {sam.leaks_total} = {sam.left_over}" }, "camera": "push", "beats": [0.3, 1.0, 3.0] },
+    { "id": "s14", "line": "l06", "layout": "character_right", "character": { "id": "sam", "pose": "worried" },
+      "graphic": { "type": "envelope", "label": "Tuesday" }, "camera": "push", "beats": [0.1, 1.2] },
+    { "id": "s15", "line": "l07", "layout": "character_right", "character": { "id": "sam", "pose": "shocked" },
+      "graphic": { "type": "bill_vs_savings", "bill": "{bill}", "due": "Due in {bill_due_days|plain} days", "savings_label": "Sam's savings", "savings": "{sam.savings}", "shortfall": "{sam.bill_shortfall}" }, "camera": "push", "beats": [0.1, 1.1, 2.2, 3.3] }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 1.05,
+  "gap_s": 0.32,
+  "section_gap_s": 0.6,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 57.638,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "One Tuesday, the same envelope lands in five mailboxes.",
+   "refs": [
+    "=5"
+   ],
+   "start": 0.4,
+   "end": 3.797,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "Inside is a surprise dental bill for one thousand two hundred dollars.",
+   "refs": [
+    "bill"
+   ],
+   "start": 4.117,
+   "end": 7.889,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "Same bill, same month, but five very different paychecks.",
+   "refs": [
+    "=5"
+   ],
+   "start": 8.209,
+   "end": 11.332,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "Sam takes home two thousand four hundred dollars a month.",
+   "refs": [
+    "sam.income"
+   ],
+   "start": 11.652,
+   "end": 14.353,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "Richard takes home twenty-two thousand.",
+   "refs": [
+    "richard.income"
+   ],
+   "start": 14.673,
+   "end": 16.837,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "So Richard handles it best, right?",
+   "refs": [],
+   "start": 17.157,
+   "end": 18.938,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "Not so fast. Income isn't what decides who stays calm this month.",
+   "refs": [],
+   "start": 19.258,
+   "end": 23.077,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "hook",
+   "text": "Something else does, and by the end, you'll spot it in your own budget.",
+   "refs": [],
+   "start": 23.397,
+   "end": 26.8,
+   "chunk": 0
+  },
+  {
+   "id": "l01",
+   "section": "level1",
+   "text": "Level one: meet Sam.",
+   "refs": [
+    "=1"
+   ],
+   "start": 27.4,
+   "end": 28.806,
+   "chunk": 0
+  },
+  {
+   "id": "l02",
+   "section": "level1",
+   "text": "Sam is twenty-four, works in retail, and brings home two thousand four hundred dollars a month.",
+   "refs": [
+    "=24",
+    "sam.income"
+   ],
+   "start": 29.126,
+   "end": 34.226,
+   "chunk": 0
+  },
+  {
+   "id": "l03",
+   "section": "level1",
+   "text": "Rent on a shared apartment, utilities, groceries, the bus and health insurance take two thousand one hundred seventy.",
+   "refs": [
+    "sam.fixed_total"
+   ],
+   "start": 34.546,
+   "end": 41.139,
+   "chunk": 0
+  },
+  {
+   "id": "l04",
+   "section": "level1",
+   "text": "Then come the little leaks: eighty dollars of delivery fees and a late fee.",
+   "refs": [
+    "sam.leaks_total"
+   ],
+   "start": 41.459,
+   "end": 45.396,
+   "chunk": 0
+  },
+  {
+   "id": "l05",
+   "section": "level1",
+   "text": "That leaves Sam one hundred fifty dollars a month, with just two hundred in savings.",
+   "refs": [
+    "sam.left_over",
+    "sam.savings"
+   ],
+   "start": 45.716,
+   "end": 50.232,
+   "chunk": 0
+  },
+  {
+   "id": "l06",
+   "section": "level1",
+   "text": "Then, on Tuesday, the envelope arrives.",
+   "refs": [],
+   "start": 50.552,
+   "end": 52.779,
+   "chunk": 0
+  },
+  {
+   "id": "l07",
+   "section": "level1",
+   "text": "One thousand two hundred dollars, due in thirty days.",
+   "refs": [
+    "bill",
+    "bill_due_days"
+   ],
+   "start": 53.099,
+   "end": 56.038,
+   "chunk": 1
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 52.379,
+   "leading_silence_s": 0.01,
+   "lufs": -22.7,
+   "median_pitch_hz": 130.1072244361702,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 1.05,
+    "gap_s": 0.32,
+    "section_gap_s": 0.6,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 53.099,
+   "duration": 2.939,
+   "leading_silence_s": 0.01,
+   "lufs": -22.4,
+   "median_pitch_hz": 138.64232362467274,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 1.05,
+    "gap_s": 0.32,
+    "section_gap_s": 0.6,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}
