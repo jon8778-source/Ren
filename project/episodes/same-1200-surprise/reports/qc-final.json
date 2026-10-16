@@ -52,7 +52,7 @@
   {
    "check": "Text readability",
    "status": "PASS",
-   "detail": "Smallest text 40px, captions 50px, key numbers 120px on a 1080px frame. Dark navy on white."
+   "detail": "Smallest text 40px, captions 50px, key numbers 120px on a 1920x1080 frame. Dark navy on white."
   },
   {
    "check": "Visual changes",

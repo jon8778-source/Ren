@@ -1,0 +1,404 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "This is",
+    "title": "Frank",
+    "subtitle": "Age {frank.end_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Died at {frank.end_age|plain}, with",
+    "title": "more than {=2000000}",
+    "subtitle": "in the bank"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.3,
+    2.6
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy"
+   },
+   "camera": "push",
+   "beats": [
+    0.2
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h04",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "tag": "Picked up at {=32|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h05",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "brochure",
+    "title": "Italy",
+    "stamp": "Never went"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.2
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "h06",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-70",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Frank did it right",
+    "numbered": false,
+    "items": [
+     "Emergency fund",
+     "No credit card debt",
+     "Invested every month"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0,
+    1.5
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "h07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "So why does this",
+    "subtitle": "feel so wrong?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "h08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "tag": "One income, three lives"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.7,
+    1.6
+   ]
+  },
+  {
+   "id": "s09",
+   "line": "h09",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "?",
+     "?",
+     "?"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.5,
+    0.8
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "m01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.7
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "m02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "lineup",
+    "people": [
+     "frank-25",
+     "yara-25",
+     "bea-25"
+    ],
+    "labels": [
+     "Age {frank.start_age|plain}",
+     "Age {frank.start_age|plain}",
+     "Age {frank.start_age|plain}"
+    ],
+    "tag": "{frank.gross_salary} a year each"
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.4,
+    0.6,
+    2.2
+   ]
+  },
+  {
+   "id": "s12",
+   "line": "m03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "Same job",
+      "tone": "ink"
+     },
+     {
+      "label": "Same money",
+      "tone": "save"
+     },
+     {
+      "label": "Same start",
+      "tone": "gold"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.2,
+    0.8,
+    1.4
+   ]
+  },
+  {
+   "id": "s13",
+   "line": "m04",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "The only difference",
+    "title": "What they do",
+    "subtitle": "with their money"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.9,
+    1.8
+   ]
+  },
+  {
+   "id": "s14",
+   "line": "m05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Quick note",
+    "title": "Made-up people",
+    "subtitle": "Example numbers, not advice"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0,
+    2.6
+   ]
+  },
+  {
+   "line": "f01",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Let's start with",
+    "title": "Frank",
+    "subtitle": "Age {frank.start_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "id": "s15"
+  },
+  {
+   "line": "f02",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "Frank is a",
+    "subtitle": "saving machine"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ],
+   "id": "s16"
+  },
+  {
+   "line": "f03",
+   "layout": "character_right",
+   "character": {
+    "id": "frank-25",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Frank's smart start",
+    "numbered": false,
+    "items": [
+     "Emergency fund in year one",
+     "Never carries card debt",
+     "Invests every month, automatically"
+    ]
+   },
+   "camera": "drift_right",
+   "beats": [
+    0.1,
+    0.4,
+    "@f04",
+    "@f05"
+   ],
+   "id": "s17"
+  }
+ ]
+}

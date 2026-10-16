@@ -112,7 +112,7 @@ def main():
     def walk(o, path):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k in {"id", "line", "beats", "count", "level", "offset", "from", "to", "from_end"} or k.startswith("_"):
+                if k in {"id", "line", "beats", "count", "level", "offset", "from", "to", "from_end", "people", "character", "highlight"} or k.startswith("_"):
                     continue
                 walk(v, f"{path}.{k}")
         elif isinstance(o, list):

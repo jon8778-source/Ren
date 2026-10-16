@@ -79,6 +79,9 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
   const T = config.theme;
   const F = config.layout.fonts;
   const h = b(0);
+  const few = g.people.length <= 3;
+  const pw = few ? 300 : 206;
+  const ph = few ? 450 : 330;
   return (
     <Center gap={10}>
       <div style={{display: "flex", gap: 12, alignItems: "flex-end"}}>
@@ -88,8 +91,8 @@ const Lineup: React.FC<P> = ({g, beats, config}) => {
           const dim = g.highlight ? (isHi ? 1 : 1 - 0.7 * h) : 1;
           const grow = isHi ? 1 + 0.12 * h : 1;
           return (
-            <div key={p.id} style={{width: 206, display: "flex", flexDirection: "column", alignItems: "center", opacity: s * dim, transform: `translateY(${(1 - s) * 60}px) scale(${grow})`, transformOrigin: "50% 100%"}}>
-              <Img src={staticFile(p.src)} style={{width: 206, height: 330, objectFit: "contain", objectPosition: "50% 100%"}} />
+            <div key={p.id} style={{width: pw, display: "flex", flexDirection: "column", alignItems: "center", opacity: s * dim, transform: `translateY(${(1 - s) * 60}px) scale(${grow})`, transformOrigin: "50% 100%"}}>
+              <Img src={staticFile(p.src)} style={{width: pw, height: ph, objectFit: "contain", objectPosition: "50% 100%"}} />
               <div style={{fontSize: F.body, fontWeight: 600, marginTop: 8}}>{p.name}</div>
               {g.labels && g.labels[i] ? (
                 <div style={{fontSize: F.label, fontWeight: 700, color: T.ink, background: T.line, borderRadius: 16, padding: "4px 12px", marginTop: 6, textAlign: "center", ...rise(b(i), 20)}}>{g.labels[i]}</div>
@@ -129,8 +132,10 @@ const Statement: React.FC<P> = ({g, beats, config}) => {
   const T = config.theme;
   const F = config.layout.fonts;
   const u = b(2);
+  const money = [g.lead, g.title, g.subtitle].some((t) => typeof t === "string" && t.includes("$"));
   return (
     <Center gap={22}>
+      {money ? <ExampleTag config={config} /> : null}
       <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(b(0))}}>{g.lead}</div>
       <div style={{fontSize: F.title, fontWeight: 700, textAlign: "center", lineHeight: 1.05, ...rise(b(1))}}>{g.title}</div>
       <div style={{position: "relative", fontSize: F.title, fontWeight: 700, color: T.save, ...rise(u)}}>
@@ -545,6 +550,44 @@ const Cta: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+
+// Recurring prop: the Italy travel brochure (sun, hills, sea, coastline houses), all drawn in code
+const Brochure: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 12);
+  const tag = b(1);
+  const stamp = b(2, 9);
+  return (
+    <Center gap={30}>
+      <div style={{position: "relative", width: 640, height: 430, transform: `rotate(${-3 + (1 - s) * 10}deg) translateY(${(1 - s) * 120}px)`, opacity: s}}>
+        <svg width="640" height="430" viewBox="0 0 640 430" style={{position: "absolute", inset: 0}}>
+          <rect x="6" y="6" width="628" height="418" rx="26" fill="#fff" stroke={T.ink} strokeWidth="8" />
+          <line x1="216" y1="10" x2="216" y2="420" stroke={T.line} strokeWidth="5" />
+          <line x1="424" y1="10" x2="424" y2="420" stroke={T.line} strokeWidth="5" />
+          <circle cx="520" cy="110" r="52" fill={T.gold} stroke={T.gold_edge} strokeWidth="6" />
+          <path d="M10 300 Q160 200 320 270 T630 240 L630 420 L10 420 Z" fill={T.save} />
+          <path d="M10 350 Q120 330 230 350 T450 350 T630 345 L630 420 L10 420 Z" fill={T.ink} opacity="0.8" />
+          <g stroke={T.ink} strokeWidth="5">
+            <rect x="70" y="232" width="56" height="62" fill="#fff" />
+            <path d="M62 236 L98 206 L134 236 Z" fill={T.cost} />
+            <rect x="140" y="248" width="46" height="50" fill="#fff" />
+            <path d="M134 252 L163 226 L192 252 Z" fill={T.cost} />
+          </g>
+        </svg>
+        <div style={{position: "absolute", left: 250, top: 40, fontSize: F.title, fontWeight: 700, color: T.ink}}>{g.title}</div>
+        {g.stamp ? (
+          <div style={{position: "absolute", right: -30, bottom: 40, fontSize: F.title, fontWeight: 700, color: T.cost, border: `7px solid ${T.cost}`, borderRadius: 18, padding: "0 22px", background: "#fff", whiteSpace: "nowrap", opacity: stamp, transform: `rotate(-10deg) scale(${2 - stamp})`}}>{g.stamp}</div>
+        ) : null}
+      </div>
+      <div style={{height: 70}}>
+        {g.tag ? <div style={{fontSize: F.subhead, fontWeight: 700, color: "#fff", background: T.ink, borderRadius: 999, padding: "6px 36px", ...rise(tag, 30)}}>{g.tag}</div> : null}
+      </div>
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
   mailboxes: Mailboxes,
   bill: Bill,
@@ -567,6 +610,7 @@ const VIEWS: Record<string, React.FC<P>> = {
   share_bar: ShareBar,
   habit: Habit,
   cta: Cta,
+  brochure: Brochure,
 };
 
 export const GraphicView: React.FC<P> = (p) => {

@@ -1,0 +1,247 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 57.998,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "This is Frank.",
+   "refs": [],
+   "start": 0.4,
+   "end": 1.478,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "Frank just died at eighty-five, with more than two million dollars in the bank.",
+   "refs": [
+    "frank.end_age",
+    "=2000000"
+   ],
+   "start": 1.898,
+   "end": 6.342,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "On his desk is a travel brochure for Italy.",
+   "refs": [],
+   "start": 6.762,
+   "end": 9.603,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "He picked it up when he was thirty-two.",
+   "refs": [
+    "=32"
+   ],
+   "start": 10.023,
+   "end": 12.064,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "He never went.",
+   "refs": [],
+   "start": 12.484,
+   "end": 13.612,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "Frank did everything right with money.",
+   "refs": [],
+   "start": 14.032,
+   "end": 16.209,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "So why does this story feel so wrong?",
+   "refs": [],
+   "start": 16.629,
+   "end": 18.905,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "hook",
+   "text": "Today: three friends, one income, and three very different lives.",
+   "refs": [
+    "=3",
+    "=1",
+    "=3"
+   ],
+   "start": 19.325,
+   "end": 22.926,
+   "chunk": 0
+  },
+  {
+   "id": "h09",
+   "section": "hook",
+   "text": "Only one of them gets it right.",
+   "refs": [
+    "=1"
+   ],
+   "start": 23.346,
+   "end": 25.249,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "meet",
+   "text": "Meet Frank, Yara and Bea.",
+   "refs": [],
+   "start": 26.049,
+   "end": 27.772,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "meet",
+   "text": "They're twenty-five, they all earn sixty thousand dollars a year, and they all start work in the same month.",
+   "refs": [
+    "frank.start_age",
+    "frank.gross_salary"
+   ],
+   "start": 28.192,
+   "end": 34.231,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "meet",
+   "text": "Same job, same money.",
+   "refs": [],
+   "start": 34.651,
+   "end": 36.274,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "meet",
+   "text": "The only difference is what they do with it.",
+   "refs": [],
+   "start": 36.694,
+   "end": 38.986,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "meet",
+   "text": "Quick note: these people are made up, and the numbers are examples, not advice.",
+   "refs": [],
+   "start": 39.406,
+   "end": 43.832,
+   "chunk": 0
+  },
+  {
+   "id": "f01",
+   "section": "frank",
+   "text": "Let's start with Frank.",
+   "refs": [],
+   "start": 44.632,
+   "end": 46.011,
+   "chunk": 0
+  },
+  {
+   "id": "f02",
+   "section": "frank",
+   "text": "Frank is a saving machine.",
+   "refs": [],
+   "start": 46.431,
+   "end": 48.146,
+   "chunk": 0
+  },
+  {
+   "id": "f03",
+   "section": "frank",
+   "text": "He builds an emergency fund in his first year.",
+   "refs": [],
+   "start": 48.566,
+   "end": 51.265,
+   "chunk": 0
+  },
+  {
+   "id": "f04",
+   "section": "frank",
+   "text": "He never carries credit card debt.",
+   "refs": [],
+   "start": 51.685,
+   "end": 53.735,
+   "chunk": 0
+  },
+  {
+   "id": "f05",
+   "section": "frank",
+   "text": "He invests every month, automatically.",
+   "refs": [],
+   "start": 54.155,
+   "end": 56.398,
+   "chunk": 1
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 53.335,
+   "leading_silence_s": 0.01,
+   "lufs": -22.2,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 54.155,
+   "duration": 2.243,
+   "leading_silence_s": 0.01,
+   "lufs": -21.7,
+   "median_pitch_hz": 139.44547043494075,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "overall": "PASS",
+ "checks": [
+  {
+   "check": "Maths (assumptions table recalculated)",
+   "status": "PASS",
+   "detail": "All totals recalculate correctly."
+  },
+  {
+   "check": "Number accuracy: script vs table",
+   "status": "PASS",
+   "detail": "Every spoken number matches its table value."
+  },
+  {
+   "check": "Number accuracy: on-screen figures",
+   "status": "PASS",
+   "detail": "All on-screen money and numbers are pulled from the assumptions table."
+  },
+  {
+   "check": "Real statistics",
+   "status": "PASS",
+   "detail": "No real-world statistics are used; all figures are labelled examples."
+  },
+  {
+   "check": "Voice consistency",
+   "status": "PASS",
+   "detail": "2 chunks, identical settings (am_michael 0.5 + am_eric 0.5, speed 0.93); leading silence 0.01, 0.01s; loudness -22.2, -21.7 LUFS; pitch 133, 139 Hz (spread 0.8 semitones)."
+  },
+  {
+   "check": "Character consistency",
+   "status": "PASS",
+   "detail": "10 poses used, all byte-identical to the locked character sheets."
+  },
+  {
+   "check": "Caption sync",
+   "status": "PASS",
+   "detail": "19 captions; each starts within 0.25s of its speech (measured offsets +0.04s to +0.06s); text matches the script word for word; all fit in 2 lines."
+  },
+  {
+   "check": "Silence over 1 second",
+   "status": "PASS",
+   "detail": "No gap in the voice longer than 1 second.",
+   "items": [
+    "56.37s\u201358.04s (1.67s) (end of video)"
+   ]
+  },
+  {
+   "check": "Safe-zone placement",
+   "status": "PASS",
+   "detail": "Checked 116 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design)."
+  },
+  {
+   "check": "Text readability",
+   "status": "PASS",
+   "detail": "Smallest text 40px, captions 50px, key numbers 120px on a 1920x1080 frame. Dark navy on white."
+  },
+  {
+   "check": "Visual changes",
+   "status": "PASS",
+   "detail": "17 scenes (1.5s to 9.6s long) with 64 visual changes; longest hold 4.3s at 30.3s. Slow pan/zoom runs throughout."
+  },
+  {
+   "check": "Disclaimer",
+   "status": "PASS",
+   "detail": "On screen at the start (yes) and end (yes); in description.txt (yes)."
+  },
+  {
+   "check": "File",
+   "status": "PASS",
+   "detail": "1920x1080, 30/1 fps, 58.0s, audio present, loudness -16.9 LUFS."
+  }
+ ]
+}
