@@ -66,6 +66,8 @@ def calculate(ep: Path):
         }
         for v in cats["_values"]:
             p[v["item"]] = v["amount"]
+        if {"save_monthly", "rate", "start_age", "retire_age"} <= p.keys():
+            p.update(project(p))
         if left < 0:
             problems.append(f"{c}: spends more than they earn ({money(left)} a month)")
         for key, val in stated[c].items():
@@ -81,6 +83,18 @@ def calculate(ep: Path):
     data = {"bill": bill, "bill_due_days": shared.get("bill_due_days"), "characters": out}
     problems += check_claims(ep, data)
     return data, problems
+
+
+def project(p):
+    """Invested balance by age, compounded yearly in today's dollars: save_monthly x 12 is added at the end
+    of each working year; after retire_age, withdraw_monthly x 12 comes out at the end of each year."""
+    bal, out = 0.0, {}
+    for age in range(int(p["start_age"]), int(p.get("end_age", p["retire_age"]))):
+        working = age < p["retire_age"]
+        bal = bal * (1 + p["rate"]) + (p["save_monthly"] * 12 if working else -p.get("withdraw_monthly", 0) * 12)
+        bal = max(bal, 0.0)
+        out[f"balance_at_{age + 1}"] = round(bal, 2)
+    return out
 
 
 def check_claims(ep: Path, data):
@@ -108,7 +122,7 @@ def check_claims(ep: Path, data):
 
 def table_md(data):
     lines = ["# Assumptions (illustrative examples, not real people)", "",
-             f"Surprise bill: {money(data['bill'])}, due in {data['bill_due_days']:.0f} days.", "",
+             f"Shared figure (`bill`): {money(data['bill'])}" + (f", due in {data['bill_due_days']:.0f} days." if data.get("bill_due_days") else "."), "",
              "| Level | Character | Status | Take-home / month | Fixed costs | Leaks | Left over | Savings | Bill shortfall |",
              "|---|---|---|---|---|---|---|---|---|"]
     for c, p in sorted(data["characters"].items(), key=lambda kv: kv[1]["level"]):
@@ -121,6 +135,13 @@ def table_md(data):
         lines += [f"| Leak: {i['item']} | {money(i['amount'])} |" for i in p["leak_items"]]
         lines += [f"| **Leaks total** | **{money(p['leaks_total'])}** |",
                   f"| **Left over** ({money(p['income'])} − {money(p['fixed_total'])} − {money(p['leaks_total'])}) | **{money(p['left_over'])}** |"]
+    proj = {c: p for c, p in data["characters"].items() if "balance_at_" + str(int(p.get("retire_age", 0))) in p}
+    if proj:
+        lines += ["", "## Investment projection (example: compounded yearly at the given rate, today's dollars)", "",
+                  "| Character | Saves / month | Rate | Withdraws / month after retiring | At 35 | At 45 | At 65 | At 85 |", "|---|---|---|---|---|---|---|---|"]
+        for c, p in proj.items():
+            lines.append(f"| {c} | {money(p['save_monthly'])} | {p['rate']:.0%} | {money(p.get('withdraw_monthly', 0))} | " +
+                         " | ".join(money(p.get(f"balance_at_{a}", 0)) for a in (35, 45, 65, 85)) + " |")
     return "\n".join(lines) + "\n"
 
 

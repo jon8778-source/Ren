@@ -1,6 +1,6 @@
 # Assumptions (illustrative examples, not real people)
 
-Surprise bill: $1,200, due in 30 days.
+Shared figure (`bill`): $1,200, due in 30 days.
 
 | Level | Character | Status | Take-home / month | Fixed costs | Leaks | Left over | Savings | Bill shortfall |
 |---|---|---|---|---|---|---|---|---|

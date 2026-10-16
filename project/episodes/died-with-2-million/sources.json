@@ -1,0 +1,10 @@
+{
+  "r03": {
+    "claim": "Retirees with large savings spend down very little of them, even nearly two decades into retirement",
+    "source": "EBRI Issue Brief, 'Asset Decumulation or Asset Preservation? What Guides Retirement Spending?' (2018)",
+    "url": "https://www.ebri.org/crawler/view/asset-decumulation-or-asset-preservation-what-guides-retirement-spending",
+    "on_screen": "Highest-savings retirees: median savings down less than 11% after 18 years (EBRI, 2018)",
+    "status": "unverified",
+    "note": "Figures taken from press coverage; ebri.org is blocked from the build environment. The owner must open the brief and set status to verified, or the sentence is cut."
+  }
+}

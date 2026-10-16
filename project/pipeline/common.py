@@ -50,6 +50,10 @@ def spoken_numbers(text):
     found, total, current, active = [], 0, 0, False
     for i, w in enumerate(words):
         if w in UNITS or w in TENS:
+            # a second tens word, or a units word after a units/teens word, starts a new number
+            if active and ((w in TENS and current % 100 >= 10) or (w in UNITS and current % 10 != 0) or (w in UNITS and 10 <= current % 100 < 20)):
+                found.append(total + current)
+                total, current = 0, 0
             current += UNITS.get(w, 0) + TENS.get(w, 0)
             active = True
         elif w in SCALES and active:

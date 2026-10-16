@@ -1,0 +1,15 @@
+# Story claims in script.md, checked against the assumptions table by pipeline/calc.py.
+# Format: python expression | what the script says
+frank.income == yara.income == bea.income | One income: all three take home the same
+frank.gross_salary == yara.gross_salary == bea.gross_salary == 60000 | They all earn sixty thousand dollars a year
+frank.save_monthly == 0.5 * frank.income | Frank saves half of everything he takes home
+frank.balance_at_65 > 2_000_000 | Frank retires at sixty-five as a multi-millionaire
+frank.balance_at_85 > 2_000_000 | Frank died at eighty-five with more than two million dollars
+frank.withdraw_monthly * 12 < 0.02 * frank.balance_at_65 | He keeps living like he's broke (withdraws under 2% a year)
+frank.balance_at_85 > frank.balance_at_65 | Frank's money "goes up and up", even after retiring
+yara.save_monthly == 0 | Yara never builds a safety net
+bea.save_monthly == 0.2 * bea.income | Bea saves 20% of take-home for retirement
+bea.balance_at_65 < frank.balance_at_65 | Bea has less money than Frank
+bea.balance_at_85 > 0 | ...but enough: her money lasts to eighty-five
+bea.life_fund_monthly * 12 * 3 > bill | Three years of her life fund covers an Italy trip
+frank.balance_at_85 == max(frank.balance_at_85, bea.balance_at_85) | Frank has the most money

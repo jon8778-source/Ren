@@ -21,7 +21,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from calc import calculate  # noqa: E402
 from common import PROJECT, load_config, load_json, parse_script, resolve_ref, spoken_numbers  # noqa: E402
 
-STAT_WORDS = re.compile(r"\b(percent|average|median|study|survey|according to|americans|most people|statistic)\b|%", re.I)
+STAT_WORDS = re.compile(r"\b(percent|average|median|study|survey|research|according to|americans|most people|many people|a lot of people|statistic)\b|%", re.I)
 
 
 class Report:
@@ -125,9 +125,19 @@ def main():
           "All on-screen money and numbers are pulled from the assumptions table." if not typed else "Hand-typed numbers found", typed)
 
     # 4. Statistics need a source
-    stats = [f"[{l['id']}] {l['text']}" for l in lines if STAT_WORDS.search(l["text"]) and "[VERIFY]" not in l["text"]]
+    sources = load_json(ep / "sources.json") if (ep / "sources.json").exists() else {}
+    stats, sourced = [], []
+    for l in lines:
+        src = sources.get(l["id"])
+        if src:
+            ok = src.get("status") == "verified"
+            (sourced if ok else stats).append(f"[{l['id']}] {src['status'].upper()}: {src['claim']} ({src['url']})")
+        elif STAT_WORDS.search(l["text"]):
+            stats.append(f"[{l['id']}] possible statistic with no source: {l['text']}")
     r.add("Real statistics", "FLAG" if stats else "PASS",
-          "No real-world statistics are used; all figures are labelled examples." if not stats else "Possible statistic without [VERIFY] and a source", stats)
+          ("No real-world statistics are used; all figures are labelled examples." if not sourced else
+           f"{len(sourced)} sourced claim(s), verified by the owner.") if not stats else
+          "Claims needing a verified source ([VERIFY] in sources.json)", stats + sourced)
 
     # 5. Voice consistency
     ch = timings["chunks"]
