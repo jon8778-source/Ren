@@ -645,8 +645,8 @@ const EnergyChart: React.FC<P> = ({g, beats, config}) => {
         ))}
         <path d={money.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={money.len} strokeDashoffset={money.offset} />
         <path d={energy.d} fill="none" stroke={T.cost} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={energy.len} strokeDashoffset={energy.offset} />
-        <g opacity={b(1)}><rect x={L} y={4} width="40" height="14" rx="7" fill={T.save} /><text x={L + 54} y={22} fontSize={F.label} fontWeight={700} fill={T.save} fontFamily="Fredoka">{g.money_label}</text></g>
-        <g opacity={b(2)}><rect x={L + 260} y={4} width="40" height="14" rx="7" fill={T.cost} /><text x={L + 314} y={22} fontSize={F.label} fontWeight={700} fill={T.cost} fontFamily="Fredoka">{g.energy_label}</text></g>
+        <g opacity={b(1)}><rect x={L} y={22} width="40" height="14" rx="7" fill={T.save} /><text x={L + 54} y={42} fontSize={F.label} fontWeight={700} fill={T.save} fontFamily="Fredoka">{g.money_label}</text></g>
+        <g opacity={b(2)}><rect x={L + 260} y={22} width="40" height="14" rx="7" fill={T.cost} /><text x={L + 314} y={42} fontSize={F.label} fontWeight={700} fill={T.cost} fontFamily="Fredoka">{g.energy_label}</text></g>
       </svg>
     </Center>
   );

@@ -195,20 +195,26 @@ def main():
         late = []
         caps = props["captions"]
         script_text = {l["id"]: l["text"] for l in lines}
+        line_starts = {round(l["start"], 3) for l in timings["lines"]}
         for i, c in enumerate(caps):
+            if round(c["start"], 3) not in line_starts:
+                continue  # second half of a split sentence: no pause to measure against
             onset = onset_near(c["start"])
             if onset is None or abs(onset - c["start"]) > Q["caption_sync_tolerance_s"]:
                 late.append(f"caption {i + 1} at {c['start']:.2f}s, speech starts at {onset if onset is None else round(onset, 2)}s")
-        mismatched = [c["text"] for c in caps if c["text"] not in script_text.values()]
+        joined = " ".join(c["text"] for c in caps)
+        mismatched = [] if joined == " ".join(l["text"] for l in lines) else ["captions do not reproduce the script word for word"]
         cpl = L["caption"]["w"] / (0.5 * L["caption"]["font_px"])
         too_long = [f"'{c['text'][:40]}…' needs {math.ceil(len(c['text']) / cpl)} lines" for c in caps if math.ceil(len(c["text"]) / cpl) > L["caption"]["max_lines"]]
         offs = []
         for c in caps:
+            if round(c["start"], 3) not in line_starts:
+                continue
             o = onset_near(c["start"])
             if o is not None:
                 offs.append(o - c["start"])
         r.add("Caption sync", "FLAG" if (late or mismatched or too_long) else "PASS",
-              f"{len(caps)} captions; each starts within {Q['caption_sync_tolerance_s']}s of its speech "
+              f"{len(caps)} captions (long sentences split at a pause); each starts within {Q['caption_sync_tolerance_s']}s of its speech "
               f"(measured offsets {min(offs):+.2f}s to {max(offs):+.2f}s); text matches the script word for word; all fit in {L['caption']['max_lines']} lines.",
               late + [f"caption not in script: {m}" for m in mismatched] + too_long)
 

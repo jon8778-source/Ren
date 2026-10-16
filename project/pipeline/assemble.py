@@ -29,6 +29,20 @@ def fill(text, assumptions):
     return REF.sub(sub, text)
 
 
+def split_caption(text, start, speech_end, hold_end, max_chars):
+    """Long sentences become consecutive captions, split at the pause nearest the middle (comma, colon,
+    semicolon) and timed by character share of the spoken line. Words are unchanged."""
+    if len(text) <= max_chars:
+        return [(text, (start, hold_end))]
+    cuts = [m.end() for m in re.finditer(r"[,:;] ", text)]
+    if not cuts:
+        cuts = [m.end() for m in re.finditer(r" ", text)]
+    cut = min(cuts, key=lambda c: abs(c - len(text) / 2))
+    first, rest = text[:cut].strip(), text[cut:].strip()
+    t = round(start + (speech_end - start) * cut / len(text), 3)
+    return split_caption(first, start, t, t, max_chars) + split_caption(rest, t, speech_end, hold_end, max_chars)
+
+
 def resolve_beat(beat, scene, lines):
     """A beat is seconds after the scene starts, or "@line" / "@line+0.5" for when that line is spoken."""
     if isinstance(beat, str) and beat.startswith("@"):
@@ -100,9 +114,12 @@ def build_props(ep: Path, config=None):
 
     captions = []
     tl = timings["lines"]
+    cap = cfg["layout"]["caption"]
+    max_chars = int(cap["w"] / (0.5 * cap["font_px"])) * cap["max_lines"]
     for i, l in enumerate(tl):
         end = tl[i + 1]["start"] if i + 1 < len(tl) else min(duration, l["end"] + 1.2)
-        captions.append({"text": l["text"], "start": l["start"], "end": end})
+        for part, (a, b) in split_caption(l["text"], l["start"], l["end"], end, max_chars):
+            captions.append({"text": part, "start": a, "end": b})
 
     overlays = []
     for o in scenes_in.get("overlays", []):
