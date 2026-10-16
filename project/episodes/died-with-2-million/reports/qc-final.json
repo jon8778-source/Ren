@@ -1,5 +1,5 @@
 {
- "overall": "FAIL",
+ "overall": "FLAG",
  "checks": [
   {
    "check": "Maths (assumptions table recalculated)",
@@ -36,12 +36,8 @@
   },
   {
    "check": "Caption sync",
-   "status": "FLAG",
-   "detail": "85 captions; each starts within 0.25s of its speech (measured offsets +0.04s to +0.07s); text matches the script word for word; all fit in 2 lines.",
-   "items": [
-    "'He eats the cheapest meals, skips every \u2026' needs 3 lines",
-    "'Research on retirees suggests this is su\u2026' needs 3 lines"
-   ]
+   "status": "PASS",
+   "detail": "87 captions (long sentences split at a pause); each starts within 0.25s of its speech (measured offsets +0.04s to +0.07s); text matches the script word for word; all fit in 2 lines."
   },
   {
    "check": "Silence over 1 second",
@@ -53,32 +49,8 @@
   },
   {
    "check": "Safe-zone placement",
-   "status": "FAIL",
-   "detail": "Checked 564 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design).",
-   "items": [
-    "content in the controls area at 129.0s",
-    "content in the controls area at 129.5s",
-    "content in the controls area at 130.0s",
-    "content in the controls area at 130.5s",
-    "content in the controls area at 131.0s",
-    "content in the controls area at 131.5s",
-    "content in the controls area at 132.0s",
-    "content in the controls area at 132.5s",
-    "content in the controls area at 133.0s",
-    "content in the controls area at 133.5s",
-    "content in the controls area at 134.0s",
-    "content in the controls area at 134.5s",
-    "content in the controls area at 135.0s",
-    "content in the controls area at 135.5s",
-    "content in the controls area at 136.0s",
-    "content in the controls area at 136.5s",
-    "content in the controls area at 137.0s",
-    "content in the controls area at 137.5s",
-    "content in the controls area at 138.0s",
-    "content in the controls area at 138.5s",
-    "content in the controls area at 139.0s",
-    "content in the controls area at 139.5s"
-   ]
+   "status": "PASS",
+   "detail": "Checked 564 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design)."
   },
   {
    "check": "Text readability",
