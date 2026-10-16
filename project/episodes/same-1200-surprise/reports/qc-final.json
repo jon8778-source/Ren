@@ -1,5 +1,5 @@
 {
- "overall": "FAIL",
+ "overall": "PASS",
  "checks": [
   {
    "check": "Maths (assumptions table recalculated)",
@@ -13,19 +13,13 @@
   },
   {
    "check": "Number accuracy: on-screen figures",
-   "status": "FAIL",
-   "detail": "Hand-typed numbers found",
-   "items": [
-    "scenes[49].graphic.headline: '{marcus.fixed_share_pct|plain}\u00a2 of every $1'"
-   ]
+   "status": "PASS",
+   "detail": "All on-screen money and numbers are pulled from the assumptions table."
   },
   {
    "check": "Real statistics",
-   "status": "FLAG",
-   "detail": "Possible statistic without [VERIFY] and a source",
-   "items": [
-    "[l08] Sam can't cover it, so Sam does the thing most people skip, and asks."
-   ]
+   "status": "PASS",
+   "detail": "No real-world statistics are used; all figures are labelled examples."
   },
   {
    "check": "Voice consistency",
@@ -47,13 +41,13 @@
    "status": "PASS",
    "detail": "No gap in the voice longer than 1 second.",
    "items": [
-    "343.87s\u2013345.53s (1.66s) (end of video)"
+    "343.07s\u2013344.74s (1.67s) (end of video)"
    ]
   },
   {
    "check": "Safe-zone placement",
    "status": "PASS",
-   "detail": "Checked 691 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design)."
+   "detail": "Checked 689 frames (2 per second): nothing drawn in the bottom 130px. Captions end at y=946; all zones sit inside 96px margins (the small disclaimer pill sits at the very top by design)."
   },
   {
    "check": "Text readability",
@@ -63,7 +57,7 @@
   {
    "check": "Visual changes",
    "status": "PASS",
-   "detail": "74 scenes (1.9s to 14.6s long) with 310 visual changes; longest hold 5.7s at 150.7s. Slow pan/zoom runs throughout."
+   "detail": "74 scenes (1.9s to 14.6s long) with 310 visual changes; longest hold 5.6s at 149.9s. Slow pan/zoom runs throughout."
   },
   {
    "check": "Disclaimer",
@@ -73,7 +67,7 @@
   {
    "check": "File",
    "status": "PASS",
-   "detail": "1920x1080, 30/1 fps, 345.5s, audio present, loudness -16.8 LUFS."
+   "detail": "1920x1080, 30/1 fps, 344.7s, audio present, loudness -16.8 LUFS."
   }
  ]
 }

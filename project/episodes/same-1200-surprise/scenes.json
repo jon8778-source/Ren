@@ -504,7 +504,7 @@
     "type": "bill",
     "title": "Dental bill",
     "amount": "{bill}",
-    "stamp": "Payment plan OK"
+    "stamp": "Plan agreed"
    },
    "camera": "push",
    "beats": [
