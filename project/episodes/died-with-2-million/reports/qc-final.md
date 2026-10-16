@@ -1,14 +1,14 @@
 # Quality check: final
 
 Video: `renders/full.mp4`  
-Overall: **FLAG**
+Overall: **PASS**
 
 | Check | Result | Detail |
 |---|---|---|
 | Maths (assumptions table recalculated) | PASS | All totals recalculate correctly. |
 | Number accuracy: script vs table | PASS | Every spoken number matches its table value. |
 | Number accuracy: on-screen figures | PASS | All on-screen money and numbers are pulled from the assumptions table. |
-| Real statistics | FLAG | Claims needing a verified source ([VERIFY] in sources.json) |
+| Real statistics | PASS | 1 sourced claim(s), verified by the owner. |
 | Voice consistency | PASS | 6 chunks, identical settings (am_michael 0.5 + am_eric 0.5, speed 0.93); leading silence 0.01, 0.01, 0.01, 0.01, 0.01, 0.01s; loudness -22.2, -22.1, -22.4, -22.3, -22.1, -22.0 LUFS; pitch 133, 133, 133, 132, 132, 135 Hz (spread 0.4 semitones). |
 | Character consistency | PASS | 29 poses used, all byte-identical to the locked character sheets. |
 | Caption sync | PASS | 87 captions (long sentences split at a pause); each starts within 0.25s of its speech (measured offsets +0.04s to +0.07s); text matches the script word for word; all fit in 2 lines. |
@@ -21,7 +21,7 @@ Overall: **FLAG**
 
 **Real statistics**
 
-- [r03] UNVERIFIED: Retirees with large savings spend down very little of them, even nearly two decades into retirement (https://www.ebri.org/crawler/view/asset-decumulation-or-asset-preservation-what-guides-retirement-spending)
+- [r03] VERIFIED: Retirees with large savings spend down very little of them, even nearly two decades into retirement (https://www.ebri.org/crawler/view/asset-decumulation-or-asset-preservation-what-guides-retirement-spending)
 
 **Silence over 1 second**
 
