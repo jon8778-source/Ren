@@ -138,7 +138,7 @@ const Statement: React.FC<P> = ({g, beats, config}) => {
       {money ? <ExampleTag config={config} /> : null}
       <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(b(0))}}>{g.lead}</div>
       <div style={{fontSize: F.title, fontWeight: 700, textAlign: "center", lineHeight: 1.05, ...rise(b(1))}}>{g.title}</div>
-      <div style={{position: "relative", fontSize: F.title, fontWeight: 700, color: T.save, ...rise(u)}}>
+      <div style={{position: "relative", fontSize: (g.subtitle || "").length > 28 ? F.subhead : F.title, fontWeight: 700, color: T.save, textAlign: "center", ...rise(u)}}>
         {g.subtitle}
         <div style={{position: "absolute", left: 0, bottom: -10, height: 12, width: "100%", borderRadius: 6, background: T.gold, transformOrigin: "0 50%", transform: `scaleX(${u})`}} />
       </div>
@@ -257,9 +257,9 @@ const Result: React.FC<P> = ({g, beats, config}) => {
         {g.stats.map((s: {label: string; value: string; tone: string}, i: number) => {
           const v = b(i, 10);
           return (
-            <div key={i} style={{width: 470, padding: "36px 0", borderRadius: 34, border: `6px solid ${color(s.tone)}`, textAlign: "center", opacity: v, transform: `scale(${0.7 + 0.3 * v})`}}>
+            <div key={i} style={{width: g.stats.length > 1 ? 500 : 560, padding: "36px 0", borderRadius: 34, border: `6px solid ${color(s.tone)}`, textAlign: "center", opacity: v, transform: `scale(${0.7 + 0.3 * v})`}}>
               <div style={{fontSize: F.body, fontWeight: 600, color: T.muted}}>{s.label}</div>
-              <div style={{fontSize: F.number, fontWeight: 700, color: color(s.tone), lineHeight: 1.05}}>{s.value}</div>
+              <div style={{fontSize: g.stats.length > 1 && s.value.length > 7 ? F.title : F.number, fontWeight: 700, color: color(s.tone), lineHeight: 1.05}}>{s.value}</div>
             </div>
           );
         })}
@@ -359,7 +359,7 @@ const Tiles: React.FC<P> = ({g, beats, config}) => {
           return (
             <div key={i} style={{display: "flex", alignItems: "center", gap: 18}}>
               {i ? <svg width="56" height="40" viewBox="0 0 56 40" style={{opacity: s}}><path d="M4 20 H46 M32 6 L48 20 L32 34" fill="none" stroke={T.ink} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" /></svg> : null}
-              <div style={{width: 300, height: 300, borderRadius: 40, border: `7px solid ${tone(T, t.tone)}`, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: F.subhead, fontWeight: 700, color: tone(T, t.tone), padding: 20, boxSizing: "border-box", transform: `scale(${0.6 + 0.4 * s})`, opacity: s}}>{t.label}</div>
+              <div style={{width: 300, height: 300, borderRadius: 40, border: `7px solid ${tone(T, t.tone)}`, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontSize: t.label.length > 14 ? F.body : F.subhead, fontWeight: 700, color: tone(T, t.tone), padding: 20, boxSizing: "border-box", transform: `scale(${0.6 + 0.4 * s})`, opacity: s}}>{t.label}</div>
             </div>
           );
         })}
@@ -577,7 +577,7 @@ const Brochure: React.FC<P> = ({g, beats, config}) => {
             <path d="M134 252 L163 226 L192 252 Z" fill={T.cost} />
           </g>
         </svg>
-        <div style={{position: "absolute", left: 250, top: 40, fontSize: F.title, fontWeight: 700, color: T.ink}}>{g.title}</div>
+        <div style={{position: "absolute", left: 236, top: 46, fontSize: g.title.length > 6 ? F.subhead : F.title, fontWeight: 700, color: T.ink}}>{g.title}</div>
         {g.stamp ? (
           <div style={{position: "absolute", right: -30, bottom: 40, fontSize: F.title, fontWeight: 700, color: T.cost, border: `7px solid ${T.cost}`, borderRadius: 18, padding: "0 22px", background: "#fff", whiteSpace: "nowrap", opacity: stamp, transform: `rotate(-10deg) scale(${2 - stamp})`}}>{g.stamp}</div>
         ) : null}
@@ -632,7 +632,7 @@ const EnergyChart: React.FC<P> = ({g, beats, config}) => {
   const a0 = ages[0], a1 = ages[ages.length - 1];
   const top = Math.max(...g.series.map((p: [number, number]) => p[1]));
   const x = (age: number) => L + ((age - a0) / (a1 - a0)) * (W - L - 20);
-  const y = (v: number) => H - B - v * (H - B - 40);
+  const y = (v: number) => H - B - v * (H - B - 70);
   const money = useLine(g.series.map((p: [number, number]) => [x(p[0]), y(p[1] / top)] as [number, number]), b(1, 30));
   const energy = useLine(ages.map((a) => [x(a), y(0.95 - 0.8 * Math.pow((a - a0) / (a1 - a0), 1.6))] as [number, number]), b(2, 30));
   return (
@@ -640,13 +640,13 @@ const EnergyChart: React.FC<P> = ({g, beats, config}) => {
       <div style={{alignSelf: "flex-end", fontSize: F.label, fontWeight: 600, color: T.muted, border: `3px solid ${T.line}`, borderRadius: 999, padding: "2px 22px"}}>Illustrative</div>
       <svg width={W} height={H} style={{opacity: b(0)}}>
         <line x1={L} y1={H - B} x2={W - 10} y2={H - B} stroke={T.line} strokeWidth="5" />
-        {[a0, Math.round((a0 + a1) / 2), a1].map((a) => (
-          <text key={a} x={x(a)} y={H - 14} textAnchor="middle" fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>
+        {[a0, Math.round((a0 + a1) / 2), a1].map((a, i) => (
+          <text key={a} x={x(a)} y={H - 14} textAnchor={i === 0 ? "start" : i === 2 ? "end" : "middle"} fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>
         ))}
         <path d={money.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={money.len} strokeDashoffset={money.offset} />
         <path d={energy.d} fill="none" stroke={T.cost} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={energy.len} strokeDashoffset={energy.offset} />
-        <text x={W - 20} y={70} textAnchor="end" fontSize={F.subhead} fontWeight={700} fill={T.save} fontFamily="Fredoka" opacity={b(1)}>{g.money_label}</text>
-        <text x={W - 20} y={H - B - 30} textAnchor="end" fontSize={F.subhead} fontWeight={700} fill={T.cost} fontFamily="Fredoka" opacity={b(2)}>{g.energy_label}</text>
+        <g opacity={b(1)}><rect x={L} y={4} width="40" height="14" rx="7" fill={T.save} /><text x={L + 54} y={22} fontSize={F.label} fontWeight={700} fill={T.save} fontFamily="Fredoka">{g.money_label}</text></g>
+        <g opacity={b(2)}><rect x={L + 260} y={4} width="40" height="14" rx="7" fill={T.cost} /><text x={L + 314} y={22} fontSize={F.label} fontWeight={700} fill={T.cost} fontFamily="Fredoka">{g.energy_label}</text></g>
       </svg>
     </Center>
   );
@@ -670,7 +670,7 @@ const GrowthChart: React.FC<P> = ({g, beats, config}) => {
       <ExampleTag config={config} />
       <svg width={W} height={H}>
         <line x1={L} y1={H - B} x2={W - 10} y2={H - B} stroke={T.line} strokeWidth="5" />
-        {[a0, a1].map((a) => <text key={a} x={x(a)} y={H - 14} textAnchor="middle" fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>)}
+        {[a0, a1].map((a, i) => <text key={a} x={x(a)} y={H - 14} textAnchor={i ? "end" : "start"} fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">Age {a}</text>)}
         <path d={line.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={line.len} strokeDashoffset={line.offset} />
         <circle cx={x(a1)} cy={y(top)} r={22 * m} fill={T.gold} stroke={T.gold_edge} strokeWidth="6" />
       </svg>
