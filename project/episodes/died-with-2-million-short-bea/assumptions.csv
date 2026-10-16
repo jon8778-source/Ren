@@ -1,0 +1,35 @@
+character,level,category,item,amount,status
+all,0,bill,Italy trip (example cost),4000,final
+frank,1,income,Take-home pay,3900,final
+frank,1,fixed,Investing (half of take-home),1950,final
+frank,1,fixed,Living costs,1950,final
+frank,1,savings,Emergency fund (year one),6000,final
+frank,1,value,gross_salary,60000,final
+frank,1,value,save_monthly,1950,final
+frank,1,value,rate,0.04,final
+frank,1,value,start_age,25,final
+frank,1,value,retire_age,65,final
+frank,1,value,end_age,85,final
+frank,1,value,withdraw_monthly,2500,final
+yara,2,income,Take-home pay,3900,final
+yara,2,fixed,Living costs (new car and bigger apartment),3900,final
+yara,2,savings,Savings,0,final
+yara,2,value,gross_salary,60000,final
+yara,2,value,save_monthly,0,final
+yara,2,value,start_age,25,final
+yara,2,value,job_loss_age,44,final
+yara,2,value,card_balance_at_50,18000,final
+yara,2,value,still_working_age,67,final
+bea,3,income,Take-home pay,3900,final
+bea,3,fixed,Retirement investing (20% of take-home),780,final
+bea,3,fixed,Life fund,300,final
+bea,3,fixed,Living costs,2820,final
+bea,3,savings,Emergency fund (year one),6000,final
+bea,3,value,gross_salary,60000,final
+bea,3,value,save_monthly,780,final
+bea,3,value,rate,0.04,final
+bea,3,value,start_age,25,final
+bea,3,value,retire_age,65,final
+bea,3,value,end_age,85,final
+bea,3,value,withdraw_monthly,3000,final
+bea,3,value,life_fund_monthly,300,final

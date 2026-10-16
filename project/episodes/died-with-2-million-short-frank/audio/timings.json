@@ -1,0 +1,130 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 29.167,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "short-frank",
+   "text": "This is Frank.",
+   "refs": [],
+   "start": 0.41,
+   "end": 1.488,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "short-frank",
+   "text": "Frank just died at eighty-five, with more than two million dollars in the bank.",
+   "refs": [
+    "frank.end_age",
+    "=2000000"
+   ],
+   "start": 1.938,
+   "end": 6.382,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "short-frank",
+   "text": "On his desk is a travel brochure for Italy.",
+   "refs": [],
+   "start": 6.832,
+   "end": 9.673,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "short-frank",
+   "text": "He picked it up when he was thirty-two.",
+   "refs": [
+    "=32"
+   ],
+   "start": 10.123,
+   "end": 12.164,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "short-frank",
+   "text": "He never went.",
+   "refs": [],
+   "start": 12.614,
+   "end": 13.742,
+   "chunk": 0
+  },
+  {
+   "id": "y03",
+   "section": "short-frank",
+   "text": "At forty, his daughter asks him to come to a concert.",
+   "refs": [
+    "=40"
+   ],
+   "start": 14.192,
+   "end": 17.32,
+   "chunk": 0
+  },
+  {
+   "id": "y04",
+   "section": "short-frank",
+   "text": "Too expensive. Next year.",
+   "refs": [],
+   "start": 17.77,
+   "end": 19.457,
+   "chunk": 0
+  },
+  {
+   "id": "y14",
+   "section": "short-frank",
+   "text": "Waiting doesn't just cost money. It costs moments.",
+   "refs": [],
+   "start": 19.907,
+   "end": 22.968,
+   "chunk": 0
+  },
+  {
+   "id": "c03",
+   "section": "short-frank",
+   "text": "So here's a question: what's on your 'next year' list that won't wait forever?",
+   "refs": [],
+   "start": 23.418,
+   "end": 27.547,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 27.167,
+   "leading_silence_s": 0.02,
+   "lufs": -22.0,
+   "median_pitch_hz": 132.76489765389547,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from died-with-2-million/audio/voice.wav"
+  }
+ ]
+}

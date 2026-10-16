@@ -1,0 +1,28 @@
+{
+  "description_footer": "Full video on the channel: The Man Who Died With $2 Million.\n\nEducational only, not financial advice. The people and figures are illustrative examples.\n#shorts",
+  "shorts": {
+    "short-frank": {
+      "title": "He died with $2 million and never went to Italy",
+      "description": "Frank saved more than $2 million. The Italy brochure he picked up at 32 was still on his desk. What's on your 'next year' list?",
+      "lines": ["h01", "h02", "h03", "h04", "h05", "y03", "y04", "y14", "c03"]
+    },
+    "short-bea": {
+      "title": "Same salary, less money, a better life",
+      "description": "Bea earned exactly the same as her friends. Her monthly life fund took her to Italy at 34, and again at 60.",
+      "lines": ["b01", "b02", "b03", "b10", "b11", "b12", "b15", "e04", "e05", "e06", "c01"],
+      "scenes": {
+        "b10": { "layout": "character_right", "character": { "id": "bea-25", "pose": "happy" },
+                 "graphic": { "type": "statement", "lead": "Every month: {bea.life_fund_monthly}", "title": "A guilt-free", "subtitle": "life fund" }, "camera": "push", "beats": [0.1, 1.2, 2.4] },
+        "b11": { "layout": "character_right", "character": { "id": "bea-25", "pose": "joyful" },
+                 "graphic": { "type": "list", "title": "Just for experiences", "numbered": false, "items": ["Concerts", "Trips", "Hobbies"] }, "camera": "push", "beats": [0.1, 0.4, 0.8, 1.2] },
+        "b12": { "layout": "character_right", "character": { "id": "bea-25", "pose": "happy" },
+                 "graphic": { "type": "statement", "lead": "Planned ahead", "title": "So there's", "subtitle": "no guilt" }, "camera": "push", "beats": [0.1, 1.0, 2.0] },
+        "e04": { "layout": "character_right", "character": { "id": "bea-70", "pose": "happy" },
+                 "graphic": { "type": "compare", "groups": [{ "title": "Money at {frank.end_age|plain}", "bars": [
+                   { "label": "Frank", "value": "{frank.balance_at_85}", "tone": "ink" },
+                   { "label": "Bea", "value": "{bea.balance_at_85}", "tone": "save" }] }], "footer": "Less, but enough", "footer_tone": "save" },
+                 "camera": "push", "beats": [0.1, 0.4, 1.0, 1.8] }
+      }
+    }
+  }
+}
