@@ -275,17 +275,22 @@ const Envelope: React.FC<P> = ({g, beats, config}) => {
   const F = config.layout.fonts;
   const s = b(0, 12);
   const open = b(1, 12);
+  // Layers, back to front: body, (open flap), card, front pocket, (closed flap). The card rises out of the pocket.
+  const flap = (
+    <path d="M8 10 L280 200 L552 10" fill={T.gold} stroke={T.ink} strokeWidth="8" strokeLinejoin="round" transform={`translate(0 ${10 - open * 10}) scale(1 ${1 - 2 * open}) translate(0 ${-10 + open * 10})`} style={{transformOrigin: "280px 10px"}} />
+  );
+  const layer = (children: React.ReactNode) => (
+    <svg width="560" height="360" viewBox="0 0 560 360" style={{position: "absolute", inset: 0, overflow: "visible"}}>{children}</svg>
+  );
   return (
     <Center gap={30}>
-      <div style={{fontSize: F.subhead, fontWeight: 700, background: T.ink, color: "#fff", borderRadius: 999, padding: "6px 36px", opacity: s}}>{g.label}</div>
+      <div style={{fontSize: F.subhead, fontWeight: 700, background: T.ink, color: "#fff", borderRadius: 999, padding: "6px 36px", opacity: s * (1 - open)}}>{g.label}</div>
       <div style={{position: "relative", width: 560, height: 360, transform: `translateX(${(1 - s) * 700}px) rotate(${(1 - s) * 18}deg)`}}>
-        <div style={{position: "absolute", left: 50, right: 50, top: 40 - open * 130, height: 260, borderRadius: 14, background: "#fff", border: `5px solid ${T.ink}`, display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 20, boxSizing: "border-box", fontSize: F.title, fontWeight: 700, color: T.cost}}>$</div>
-        <svg width="560" height="360" viewBox="0 0 560 360" style={{position: "absolute", inset: 0, overflow: "visible"}}>
-          <rect x="5" y="5" width="550" height="350" rx="24" fill="#fdf7ea" stroke={T.ink} strokeWidth="8" />
-          <path d="M10 350 L280 170 L550 350" fill="none" stroke={T.ink} strokeWidth="6" />
-          <path d="M8 10 L280 200 L552 10" fill={T.gold} stroke={T.ink} strokeWidth="8" strokeLinejoin="round" transform={`translate(0 ${10 - open * 10}) scale(1 ${1 - 2 * open}) translate(0 ${-10 + open * 10})`} style={{transformOrigin: "280px 10px"}} />
-        </svg>
+        {layer(<><rect x="5" y="5" width="550" height="350" rx="24" fill="#fdf7ea" stroke={T.ink} strokeWidth="8" />{open > 0.5 ? flap : null}</>)}
+        <div style={{position: "absolute", left: 50, right: 50, top: 30 - open * 190, height: 260, borderRadius: 14, background: "#fff", border: `5px solid ${T.ink}`, display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 22, boxSizing: "border-box", fontSize: g.amount ? F.title : F.title, fontWeight: 700, color: g.amount ? T.save : T.cost}}>{g.amount || "$"}</div>
+        {layer(<><path d="M5 150 L280 250 L555 150 V331 Q555 355 531 355 H29 Q5 355 5 331 Z" fill="#fdf7ea" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />{open > 0.5 ? null : flap}</>)}
       </div>
+      {g.amount ? <ExampleTag config={config} /> : null}
     </Center>
   );
 };
@@ -746,7 +751,101 @@ const MoneyMemories: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+// Two houses side by side with a fence between, each neighbor standing in front
+const Houses: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const roofs = [T.gold, T.ink];
+  const house = (i: number) => (
+    <svg width="400" height="300" viewBox="0 0 400 330">
+      <rect x="50" y="130" width="300" height="195" fill="#fff" stroke={T.ink} strokeWidth="8" />
+      <path d="M25 140 L200 20 L375 140 Z" fill={roofs[i % 2]} stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
+      <rect x="170" y="215" width="64" height="110" rx="6" fill={T.line} stroke={T.ink} strokeWidth="6" />
+      <rect x="82" y="170" width="62" height="56" rx="6" fill={T.line} stroke={T.ink} strokeWidth="6" />
+      <rect x="258" y="170" width="62" height="56" rx="6" fill={T.line} stroke={T.ink} strokeWidth="6" />
+    </svg>
+  );
+  return (
+    <Center gap={10}>
+      <div style={{position: "relative", width: 1040, height: 500}}>
+        {g.people.map((p: {id: string; name: string; src: string}, i: number) => {
+          const s = b(0);
+          const c = b(1 + i);
+          return (
+            <div key={p.id} style={{position: "absolute", left: i * 600, top: 0, width: 440, height: 500, ...rise(s, 40)}}>
+              <div style={{position: "absolute", left: 20, top: 0}}>{house(i)}</div>
+              <Img src={staticFile(p.src)} style={{position: "absolute", left: 60, bottom: 0, width: 320, height: 330, objectFit: "contain", objectPosition: "50% 100%", opacity: c, transform: `translateY(${(1 - c) * 40}px)`}} />
+            </div>
+          );
+        })}
+        <svg width="160" height="140" viewBox="0 0 160 140" style={{position: "absolute", left: 440, top: 350, opacity: b(0)}}>
+          {[10, 50, 90, 130].map((x) => <path key={x} d={`M${x} 140 V20 L${x + 10} 6 L${x + 20} 20 V140 Z`} fill="#fff" stroke={T.muted} strokeWidth="5" strokeLinejoin="round" />)}
+          <rect x="0" y="50" width="160" height="14" fill={T.muted} /><rect x="0" y="100" width="160" height="14" fill={T.muted} />
+        </svg>
+      </div>
+      <div style={{display: "flex", width: 1040, justifyContent: "space-between", fontSize: F.subhead, fontWeight: 700, opacity: b(0)}}>
+        {g.people.map((p: {id: string; name: string}) => <div key={p.id} style={{width: 440, textAlign: "center"}}>{p.name}</div>)}
+      </div>
+      <div style={{height: 80, display: "flex", alignItems: "center"}}>
+        {g.tag ? <div style={{fontSize: F.subhead, fontWeight: 700, color: "#fff", background: T.save, borderRadius: 999, padding: "6px 38px", ...rise(b(1 + g.people.length), 30)}}>{g.tag}</div> : null}
+      </div>
+    </Center>
+  );
+};
+
+// Drawn purchase icons (no lettering): tv, sneakers, cleaner, trip, cooking
+const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}) => {
+  const k = {stroke: T.ink, strokeWidth: 7, strokeLinejoin: "round" as const, strokeLinecap: "round" as const};
+  const art: Record<string, React.ReactNode> = {
+    tv: <><rect x="14" y="30" width="172" height="110" rx="10" fill={T.ink} {...k} /><rect x="26" y="42" width="148" height="86" rx="4" fill={T.line} /><path d="M70 172 L100 140 L130 172" fill="none" {...k} /><path d="M40 70 L70 50" stroke="#fff" strokeWidth="7" strokeLinecap="round" /></>,
+    sneakers: <><path d="M14 150 V96 Q40 92 60 70 L92 80 Q120 112 186 118 V150 Z" fill={T.cost} {...k} /><rect x="10" y="146" width="180" height="22" rx="10" fill="#fff" {...k} /><path d="M70 88 L84 96 M62 100 L78 108" stroke="#fff" strokeWidth="6" strokeLinecap="round" /></>,
+    cleaner: <><path d="M60 64 H112 L132 168 H40 Z" fill={T.save} {...k} /><path d="M70 64 V40 H120 L144 54 L120 62" fill="#fff" {...k} /><circle cx="160" cy="44" r="5" fill={T.ink} /><circle cx="176" cy="30" r="5" fill={T.ink} /><circle cx="176" cy="58" r="5" fill={T.ink} /></>,
+    trip: <><rect x="40" y="62" width="120" height="106" rx="16" fill={T.gold} {...k} /><path d="M76 62 V40 H124 V62" fill="none" {...k} /><path d="M40 100 H160" {...k} /><circle cx="64" cy="176" r="8" fill={T.ink} /><circle cx="136" cy="176" r="8" fill={T.ink} /></>,
+    cooking: <><path d="M56 96 Q30 90 34 64 Q38 40 64 46 Q72 22 100 24 Q128 22 136 46 Q162 40 166 64 Q170 90 144 96 V140 H56 Z" fill="#fff" {...k} /><rect x="56" y="140" width="88" height="26" rx="6" fill={T.line} {...k} /></>,
+  };
+  return <svg width="200" height="190" viewBox="0 0 200 190">{art[icon] ?? null}</svg>;
+};
+
+// The bonus envelope spending down: each item lands with its price, the envelope shows what's left
+const Spend: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const items: {icon: string; label: string; amount: string; amount_value: number}[] = g.items;
+  const shown = g.show ?? 0;
+  const upto = shown + (g.reveal ?? items.length);  // items after this stay hidden in this scene
+  const vis = items.map((_, i) => (i < shown ? 1 : i < upto ? b(i - shown) : 0));
+  const left = g.start_value - items.reduce((sum, it, i) => sum + it.amount_value * Math.min(1, vis[i]), 0);
+  return (
+    <Center gap={24}>
+      <ExampleTag config={config} />
+      <div style={{display: "flex", alignItems: "center", gap: 40}}>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 12}}>
+          <svg width="250" height="170" viewBox="0 0 250 170">
+            <rect x="5" y="5" width="240" height="160" rx="16" fill="#fdf7ea" stroke={T.ink} strokeWidth="7" />
+            <path d="M8 10 L125 92 L242 10" fill={T.gold} stroke={T.ink} strokeWidth="7" strokeLinejoin="round" />
+          </svg>
+          <div style={{fontSize: F.label, fontWeight: 600, color: T.muted}}>{g.left_label}</div>
+          <div style={{fontSize: F.title, fontWeight: 700, color: left > 0.5 ? T.save : T.muted, lineHeight: 1}}>${Math.max(0, Math.round(left)).toLocaleString("en-US")}</div>
+        </div>
+        <div style={{display: "flex", gap: 22}}>
+          {items.map((it, i) => (
+            <div key={i} style={{width: items.length > 2 ? 230 : 280, padding: "18px 10px", borderRadius: 30, border: `6px solid ${T.ink}`, background: "#fff", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", opacity: Math.min(1, vis[i]), transform: `translateY(${(1 - vis[i]) * 60}px) scale(${0.8 + 0.2 * vis[i]})`}}>
+              <ItemIcon icon={it.icon} T={T} />
+              <div style={{fontSize: F.label, fontWeight: 600, minHeight: 100, display: "flex", alignItems: "center"}}>{it.label}</div>
+              <div style={{fontSize: F.subhead, fontWeight: 700, color: T.ink}}>{it.amount}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
+  houses: Houses,
+  spend: Spend,
   mailboxes: Mailboxes,
   bill: Bill,
   lineup: Lineup,

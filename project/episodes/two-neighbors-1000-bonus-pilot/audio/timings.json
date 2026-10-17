@@ -1,0 +1,218 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 65.257,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "Meet Max and Lena.",
+   "refs": [],
+   "start": 0.4,
+   "end": 1.874,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "Same street. Same salary.",
+   "refs": [],
+   "start": 2.294,
+   "end": 4.078,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "And on the same Friday, they both open an envelope with a one thousand dollar bonus inside.",
+   "refs": [
+    "bill"
+   ],
+   "start": 4.498,
+   "end": 10.198,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "A year from now, one of them will barely remember what they spent it on.",
+   "refs": [],
+   "start": 10.618,
+   "end": 14.488,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "The other will still be feeling the benefit every single week.",
+   "refs": [],
+   "start": 14.908,
+   "end": 18.15,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "Same money. Completely different results.",
+   "refs": [],
+   "start": 18.57,
+   "end": 20.965,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "So what did Lena know that Max didn't?",
+   "refs": [],
+   "start": 21.385,
+   "end": 23.634,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "meet",
+   "text": "Max and Lena are both thirty.",
+   "refs": [
+    "max30.age"
+   ],
+   "start": 24.434,
+   "end": 26.458,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "meet",
+   "text": "They both earn sixty thousand dollars a year, and they've lived next door to each other for three years.",
+   "refs": [
+    "max30.gross_salary",
+    "max30.years_next_door"
+   ],
+   "start": 26.878,
+   "end": 32.663,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "meet",
+   "text": "They borrow each other's ladders, they wave over the fence, and they both work hard.",
+   "refs": [],
+   "start": 33.083,
+   "end": 37.53,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "meet",
+   "text": "Neither of them is bad with money.",
+   "refs": [],
+   "start": 37.95,
+   "end": 40.028,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "meet",
+   "text": "Quick note: Max and Lena are made up, and the numbers are just examples, not financial advice.",
+   "refs": [],
+   "start": 40.448,
+   "end": 46.259,
+   "chunk": 0
+  },
+  {
+   "id": "x01",
+   "section": "max",
+   "text": "Max knows exactly what he wants.",
+   "refs": [],
+   "start": 47.059,
+   "end": 49.201,
+   "chunk": 0
+  },
+  {
+   "id": "x02",
+   "section": "max",
+   "text": "That same weekend, he walks out of the store with a brand new sixty-five inch TV for seven hundred dollars.",
+   "refs": [
+    "max30.tv_inches",
+    "max30.tv"
+   ],
+   "start": 49.621,
+   "end": 56.121,
+   "chunk": 1
+  },
+  {
+   "id": "x03",
+   "section": "max",
+   "text": "With the last three hundred, he buys a pair of sneakers he's been eyeing for months.",
+   "refs": [
+    "max30.sneakers"
+   ],
+   "start": 56.541,
+   "end": 61.012,
+   "chunk": 1
+  },
+  {
+   "id": "x04",
+   "section": "max",
+   "text": "And honestly? The first week is great.",
+   "refs": [],
+   "start": 61.432,
+   "end": 63.657,
+   "chunk": 1
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 48.801,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 49.621,
+   "duration": 14.036,
+   "leading_silence_s": 0.01,
+   "lufs": -22.7,
+   "median_pitch_hz": 130.8609279198309,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

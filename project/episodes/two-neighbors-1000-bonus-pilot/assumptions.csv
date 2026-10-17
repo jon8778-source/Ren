@@ -1,0 +1,33 @@
+character,level,category,item,amount,status
+all,0,bill,The bonus (same for both),1000,final
+max30,1,income,Bonus,1000,final
+max30,1,fixed,65-inch TV,700,final
+max30,1,fixed,Sneakers,300,final
+max30,1,savings,Kept back,0,final
+max30,1,value,gross_salary,60000,final
+max30,1,value,age,30,final
+max30,1,value,years_next_door,3,final
+max30,1,value,tv,700,final
+max30,1,value,tv_inches,65,final
+max30,1,value,sneakers,300,final
+max30,1,value,fade_week,3,final
+max30,1,value,spikes,1,final
+lena30,2,income,Bonus,1000,final
+lena30,2,fixed,Cleaner (4 visits),400,final
+lena30,2,fixed,Weekend away with two friends,450,final
+lena30,2,fixed,Cooking class with her partner,150,final
+lena30,2,savings,Kept back,0,final
+lena30,2,value,gross_salary,60000,final
+lena30,2,value,age,30,final
+lena30,2,value,years_next_door,3,final
+lena30,2,value,cleaner,400,final
+lena30,2,value,cleaner_visits,4,final
+lena30,2,value,hours_per_visit,2.5,final
+lena30,2,value,hours_back,10,final
+lena30,2,value,trip,450,final
+lena30,2,value,trip_friends,2,final
+lena30,2,value,trip_months_ahead,3,final
+lena30,2,value,cooking_class,150,final
+lena30,2,value,spikes,3,final
+lena30,2,value,rules,5,final
+lena30,2,value,years_later,1,final
