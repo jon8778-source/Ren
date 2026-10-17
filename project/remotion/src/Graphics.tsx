@@ -698,7 +698,7 @@ const StepCard: React.FC<P> = ({g, beats, config}) => {
       <div style={{display: "flex", alignItems: "center", gap: 30, transform: `scale(${0.7 + 0.3 * s})`, opacity: s}}>
         <div style={{width: 150, height: 150, borderRadius: 75, background: T.gold, color: T.ink, fontSize: 100, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>{g.step}</div>
         <div>
-          <div style={{fontSize: F.subhead, fontWeight: 700, color: T.muted}}>Step {g.step}</div>
+          <div style={{fontSize: F.subhead, fontWeight: 700, color: T.muted}}>{g.kicker ?? "Step"} {g.step}</div>
           <div style={{fontSize: F.title, fontWeight: 700, lineHeight: 1.05, maxWidth: 760}}>{g.title}</div>
         </div>
       </div>
@@ -802,6 +802,8 @@ const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}) => {
     sneakers: <><path d="M14 150 V96 Q40 92 60 70 L92 80 Q120 112 186 118 V150 Z" fill={T.cost} {...k} /><rect x="10" y="146" width="180" height="22" rx="10" fill="#fff" {...k} /><path d="M70 88 L84 96 M62 100 L78 108" stroke="#fff" strokeWidth="6" strokeLinecap="round" /></>,
     cleaner: <><path d="M60 64 H112 L132 168 H40 Z" fill={T.save} {...k} /><path d="M70 64 V40 H120 L144 54 L120 62" fill="#fff" {...k} /><circle cx="160" cy="44" r="5" fill={T.ink} /><circle cx="176" cy="30" r="5" fill={T.ink} /><circle cx="176" cy="58" r="5" fill={T.ink} /></>,
     trip: <><rect x="40" y="62" width="120" height="106" rx="16" fill={T.gold} {...k} /><path d="M76 62 V40 H124 V62" fill="none" {...k} /><path d="M40 100 H160" {...k} /><circle cx="64" cy="176" r="8" fill={T.ink} /><circle cx="136" cy="176" r="8" fill={T.ink} /></>,
+    phone: <><rect x="60" y="14" width="80" height="160" rx="16" fill={T.ink} {...k} /><rect x="70" y="32" width="60" height="112" rx="4" fill={T.line} /><circle cx="100" cy="158" r="6" fill="#fff" /></>,
+    coffee: <><path d="M50 70 H140 L130 170 H60 Z" fill="#fff" {...k} /><rect x="44" y="56" width="102" height="18" rx="8" fill={T.gold} {...k} /><path d="M140 96 Q170 96 166 122 Q162 144 134 142" fill="none" {...k} /><path d="M80 40 Q74 28 82 16 M108 40 Q102 28 110 16" fill="none" stroke={T.muted} strokeWidth="6" strokeLinecap="round" /></>,
     cooking: <><path d="M56 96 Q30 90 34 64 Q38 40 64 46 Q72 22 100 24 Q128 22 136 46 Q162 40 166 64 Q170 90 144 96 V140 H56 Z" fill="#fff" {...k} /><rect x="56" y="140" width="88" height="26" rx="6" fill={T.line} {...k} /></>,
   };
   return <svg width="200" height="190" viewBox="0 0 200 190">{art[icon] ?? null}</svg>;
@@ -843,7 +845,159 @@ const Spend: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+// Illustrative happiness over time: a thing spikes then fades; an experience rises before, peaks, and glows after
+const JoyChart: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 960, H = 470, L = 30, B = 70, top = 60;
+  const x = (t: number) => L + t * (W - L - 30);
+  const y = (v: number) => H - B - v * (H - B - top);
+  const curve = (kind: string) => {
+    const pts: [number, number][] = [];
+    for (let i = 0; i <= 80; i++) {
+      const t = i / 80;
+      let v = 0.15;
+      if (kind === "thing") v += t < 0.25 ? 0 : 0.75 * Math.exp(-(t - 0.25) * 9);
+      else v += (t > 0.08 && t < 0.42 ? 0.35 * (t - 0.08) / 0.34 : 0) + 0.75 * Math.exp(-Math.pow((t - 0.45) / 0.04, 2)) * (t >= 0.42 ? 1 : 0) +
+        (t >= 0.42 ? 0.35 * Math.exp(-(t - 0.42) * 3) : 0) + 0.18 * Math.exp(-Math.pow((t - 0.72) / 0.05, 2)) + 0.18 * Math.exp(-Math.pow((t - 0.9) / 0.05, 2));
+      pts.push([x(t), y(Math.min(v, 0.98))]);
+    }
+    return pts;
+  };
+  const lines: {name: string; kind: string; tone: string; shown?: boolean}[] = g.lines;
+  const marks: {t: number; label: string}[] = g.marks || [];
+  return (
+    <Center gap={10}>
+      <div style={{alignSelf: "flex-end", fontSize: F.label, fontWeight: 600, color: T.muted, border: `3px solid ${T.line}`, borderRadius: 999, padding: "2px 22px"}}>Illustrative</div>
+      <svg width={W} height={H} style={{opacity: b(0)}}>
+        <line x1={L} y1={H - B} x2={W - 10} y2={H - B} stroke={T.line} strokeWidth="5" />
+        <text x={L} y={H - 18} fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">{g.from}</text>
+        <text x={W - 10} y={H - 18} textAnchor="end" fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">{g.to}</text>
+        {lines.map((ln, i) => {
+          const c = useLine(curve(ln.kind), ln.shown ? 1 : b(1 + i, 30));
+          const col = tone(T, ln.tone);
+          return (
+            <g key={i}>
+              <path d={c.d} fill="none" stroke={col} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={c.len} strokeDashoffset={c.offset} />
+              <g opacity={ln.shown ? 1 : b(1 + i)}><rect x={L + i * 300} y={14} width="40" height="14" rx="7" fill={col} /><text x={L + 54 + i * 300} y={34} fontSize={F.label} fontWeight={700} fill={col} fontFamily="Fredoka">{ln.name}</text></g>
+            </g>
+          );
+        })}
+        {marks.map((m, i) => {
+          const v = b(1 + lines.length + i, 10);
+          const yy = curve("experience")[Math.round(m.t * 80)][1];
+          return (
+            <g key={i} opacity={v}>
+              <circle cx={x(m.t)} cy={yy} r={20 * v} fill={T.gold} stroke={T.gold_edge} strokeWidth="6" />
+              <text x={x(m.t)} y={yy - 34} textAnchor="middle" fontSize={F.label} fontWeight={700} fill={T.ink} fontFamily="Fredoka">{m.label}</text>
+            </g>
+          );
+        })}
+      </svg>
+      {g.caption ? <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, g.caption_tone), ...rise(b(1 + lines.length + marks.length), 20)}}>{g.caption}</div> : null}
+    </Center>
+  );
+};
+
+// One to three drawn icon cards, each with a short title
+const IconCards: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const cards: {icon: string; title: string; tone?: string}[] = g.cards;
+  const w = cards.length > 2 ? 320 : cards.length > 1 ? 420 : 520;
+  return (
+    <Center gap={30}>
+      <div style={{display: "flex", gap: 36}}>
+        {cards.map((c, i) => {
+          const v = b(i, 11);
+          return (
+            <div key={i} style={{width: w, padding: "26px 20px", borderRadius: 34, border: `6px solid ${tone(T, c.tone)}`, background: "#fff", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 10, opacity: v, transform: `scale(${0.7 + 0.3 * v}) rotate(${(1 - v) * -6}deg)`}}>
+              <div style={{transform: "scale(1.3)", margin: "20px 0"}}><ItemIcon icon={c.icon} T={T} /></div>
+              <div style={{fontSize: c.title.length > 18 ? F.body : F.subhead, fontWeight: 700, color: tone(T, c.tone), lineHeight: 1.1}}>{c.title}</div>
+            </div>
+          );
+        })}
+      </div>
+      <div style={{height: 70}}>{g.tag ? <div style={{fontSize: F.subhead, fontWeight: 700, color: "#fff", background: tone(T, g.tag_tone ?? "save"), borderRadius: 999, padding: "6px 36px", ...rise(b(cards.length), 30)}}>{g.tag}</div> : null}</div>
+    </Center>
+  );
+};
+
+// A week of days with a treat on every day, or only on one
+const WeekTreats: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return (
+    <Center gap={34}>
+      <div style={{display: "flex", gap: 14}}>
+        {days.map((d, i) => {
+          const has = g.treat === "all" || g.treat === d;
+          const v = b(0);
+          const pop = has ? b(1 + (g.treat === "all" ? i : 0), 10) : 0;
+          const special = g.treat !== "all" && has;
+          return (
+            <div key={d} style={{width: 140, height: 250, borderRadius: 26, border: `5px solid ${special ? T.gold_edge : T.line}`, background: special ? "#fdf3dc" : "#fff", display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 16, boxSizing: "border-box", opacity: v}}>
+              <div style={{fontSize: F.label, fontWeight: 700, color: special ? T.ink : T.muted}}>{d}</div>
+              <div style={{transform: `scale(${0.6 * pop})`, transformOrigin: "50% 0", marginTop: 6, opacity: g.treat === "all" ? 1 - 0.5 * b(8) : 1}}><ItemIcon icon="coffee" T={T} /></div>
+            </div>
+          );
+        })}
+      </div>
+      <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, g.caption_tone), ...rise(g.treat === "all" ? b(8) : b(2), 30)}}>{g.caption}</div>
+    </Center>
+  );
+};
+
+// Two columns: each person's photo, a heading and what the money turned into
+const SideBySide: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  let k = 0;
+  return (
+    <Center gap={14}>
+      <ExampleTag config={config} />
+      <div style={{display: "flex", gap: 30, alignItems: "stretch"}}>
+        {g.people.map((p: {id: string; name: string; src: string}, ci: number) => {
+          const col = g.cols[ci];
+          const head = b(k++);
+          return (
+            <div key={p.id} style={{width: 520, padding: "20px 26px", borderRadius: 34, border: `6px solid ${tone(T, col.tone)}`, boxSizing: "border-box", opacity: head, transform: `translateY(${(1 - head) * 40}px)`}}>
+              <div style={{display: "flex", alignItems: "center", gap: 18}}>
+                <Img src={staticFile(p.src)} style={{width: 120, height: 130, objectFit: "contain", objectPosition: "50% 100%"}} />
+                <div>
+                  <div style={{fontSize: F.subhead, fontWeight: 700}}>{p.name}</div>
+                  <div style={{fontSize: F.label, fontWeight: 600, color: T.muted}}>{col.head}</div>
+                </div>
+              </div>
+              <div style={{display: "flex", flexDirection: "column", gap: 10, marginTop: 12}}>
+                {col.items.map((it: string, i: number) => {
+                  const v = b(k++);
+                  return (
+                    <div key={i} style={{display: "flex", alignItems: "center", gap: 14, fontSize: F.label, fontWeight: 600, opacity: v, transform: `translateX(${(1 - v) * -40}px)`}}>
+                      <div style={{width: 22, height: 22, borderRadius: 11, background: tone(T, col.tone), flex: "none"}} />
+                      {it}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
+  joy_chart: JoyChart,
+  icon_cards: IconCards,
+  week_treats: WeekTreats,
+  side_by_side: SideBySide,
   houses: Houses,
   spend: Spend,
   mailboxes: Mailboxes,

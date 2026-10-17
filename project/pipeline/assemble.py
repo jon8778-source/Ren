@@ -25,7 +25,9 @@ REF = re.compile(r"\{([^}|]+)(?:\|(plain))?\}")
 def fill(text, assumptions):
     def sub(m):
         v = resolve_ref(m[1], assumptions)
-        return f"{v:,.0f}" if m[2] == "plain" else money(v)
+        if m[2] == "plain":
+            return f"{v:,.0f}" if v == int(v) else f"{v:,.1f}"  # "2.5 hours", not "2"
+        return money(v)
     return REF.sub(sub, text)
 
 
