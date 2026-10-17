@@ -850,7 +850,7 @@ const JoyChart: React.FC<P> = ({g, beats, config}) => {
   const b = useBeats(beats);
   const T = config.theme;
   const F = config.layout.fonts;
-  const W = 960, H = 470, L = 30, B = 70, top = 60;
+  const W = 960, H = 500, L = 30, B = 70, top = 120;  // headroom for the legend and mark labels
   const x = (t: number) => L + t * (W - L - 30);
   const y = (v: number) => H - B - v * (H - B - top);
   const curve = (kind: string) => {

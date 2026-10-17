@@ -612,7 +612,7 @@
     "items": [
      {
       "icon": "cleaner",
-      "label": "Cleaner, {lena30.cleaner_visits|plain} visits",
+      "label": "Cleaner",
       "amount": "{lena30.cleaner}"
      },
      {
@@ -703,7 +703,7 @@
     "items": [
      {
       "icon": "cleaner",
-      "label": "Cleaner, {lena30.cleaner_visits|plain} visits",
+      "label": "Cleaner",
       "amount": "{lena30.cleaner}"
      },
      {
@@ -763,7 +763,7 @@
     "items": [
      {
       "icon": "cleaner",
-      "label": "Cleaner, {lena30.cleaner_visits|plain} visits",
+      "label": "Cleaner",
       "amount": "{lena30.cleaner}"
      },
      {
@@ -1651,8 +1651,7 @@
     "title": "Money Leak Audit Workbook",
     "lines": [
      "Plan your spending",
-     "Spot the leaks",
-     "Spend on what lasts"
+     "Spot the leaks"
     ],
     "where": "In the description"
    },
