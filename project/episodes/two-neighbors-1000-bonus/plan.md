@@ -35,3 +35,10 @@
 ## Owner decisions at the script gate
 - Script OK with changes 1-9.
 - Length accepted: about 700 words, about 4:20 of voice, about 4:45 with pauses for the visuals.
+
+## Owner decisions after the script gate
+- Pilot APPROVED (style and voice OK).
+- Full video: 4:12, QC OVERALL PASS.
+- Thumbnail: option A ("WHO'S HAPPIER?", Max vs Lena with the $1,000 envelope; layout g). Owner saves it.
+- Shorts: short-max (x01, x02, x03, x07, x08, x11, r01; 27.9 s) and short-lena (l01-l06, y01, y04; 29.6 s),
+  both QC OVERALL PASS. In short-lena, l01 opens on a "$1,000, split three ways" card and l05 keeps the spending card.

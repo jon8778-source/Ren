@@ -1,0 +1,183 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "x01",
+   "layout": "character_right",
+   "character": {
+    "id": "max-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Max",
+    "title": "knows exactly",
+    "subtitle": "what he wants"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "x02",
+   "layout": "character_left",
+   "character": {
+    "id": "max-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "spend",
+    "start": "{bill}",
+    "left_label": "Left in the envelope",
+    "reveal": 1,
+    "items": [
+     {
+      "icon": "tv",
+      "label": "{max30.tv_inches|plain}-inch TV",
+      "amount": "{max30.tv}"
+     },
+     {
+      "icon": "sneakers",
+      "label": "Sneakers",
+      "amount": "{max30.sneakers}"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@x02+4.0"
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "x03",
+   "layout": "character_left",
+   "character": {
+    "id": "max-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "spend",
+    "start": "{bill}",
+    "left_label": "Left in the envelope",
+    "show": 1,
+    "items": [
+     {
+      "icon": "tv",
+      "label": "{max30.tv_inches|plain}-inch TV",
+      "amount": "{max30.tv}"
+     },
+     {
+      "icon": "sneakers",
+      "label": "Sneakers",
+      "amount": "{max30.sneakers}"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@x03+2.3"
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "x07",
+   "layout": "character_right",
+   "character": {
+    "id": "max-30",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "By week {max30.fade_week|plain}",
+    "title": "something",
+    "subtitle": "changes"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.2
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "x08",
+   "layout": "character_left",
+   "character": {
+    "id": "max-30",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Week {max30.fade_week|plain}",
+    "numbered": false,
+    "items": [
+     "The TV is just the TV",
+     "The sneakers are just shoes"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@x08+0.1",
+    "@x08+1.9"
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "x11",
+   "layout": "character_right",
+   "character": {
+    "id": "max-30",
+    "pose": "regretful"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "It just",
+    "title": "stopped feeling",
+    "subtitle": "special"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "r01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "step",
+    "kicker": "Rule",
+    "step": "{=1|plain}",
+    "title": "Buy experiences over things"
+   },
+   "camera": "push",
+   "beats": [
+    0.1
+   ]
+  }
+ ]
+}

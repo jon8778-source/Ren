@@ -1,0 +1,15 @@
+# Story claims in script.md, checked against the assumptions table by pipeline/calc.py.
+# Format: python expression | what the script says
+max30.income == lena30.income == bill == 1000 | Same envelope: both get a one thousand dollar bonus
+max30.gross_salary == lena30.gross_salary == 60000 | They both earn sixty thousand dollars a year
+max30.age == lena30.age == 30 | They are both thirty
+max30.years_next_door == lena30.years_next_door == 3 | Next door to each other for three years
+max30.tv + max30.sneakers == bill | A seven hundred dollar TV plus "the last three hundred" on sneakers uses the whole bonus
+max30.fixed_total == bill and max30.left_over == 0 | Max spends all of it
+lena30.cleaner + lena30.trip + lena30.cooking_class == bill | Lena splits the bonus three ways: 400 + 450 + 150
+lena30.fixed_total == bill and lena30.left_over == 0 | Lena spends all of it too ("Same thousand dollars")
+lena30.cleaner_visits * lena30.hours_per_visit == lena30.hours_back == 10 | Four visits of two and a half hours is ten hours handed back
+lena30.cleaner / lena30.cleaner_visits == 100 | Each cleaner visit costs one hundred dollars (US-style price)
+lena30.cleaner / lena30.hours_back == 40 | About forty dollars an hour for a cleaner (US-style price)
+lena30.spikes == 3 and max30.spikes == 1 | "Max got one spike. Lena got three." (before, during, after)
+lena30.rules == 5 | Five rules

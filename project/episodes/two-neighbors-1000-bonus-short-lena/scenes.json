@@ -1,0 +1,244 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "lena-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Lena's bonus",
+    "title": "{bill}",
+    "subtitle": "split three ways"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.2
+   ],
+   "line": "l01",
+   "id": "s01"
+  },
+  {
+   "id": "s02",
+   "line": "l02",
+   "layout": "character_left",
+   "character": {
+    "id": "lena-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "spend",
+    "start": "{bill}",
+    "left_label": "Left in the envelope",
+    "show": 0,
+    "reveal": 1,
+    "items": [
+     {
+      "icon": "cleaner",
+      "label": "Cleaner",
+      "amount": "{lena30.cleaner}"
+     },
+     {
+      "icon": "trip",
+      "label": "Weekend away",
+      "amount": "{lena30.trip}"
+     },
+     {
+      "icon": "cooking",
+      "label": "Cooking class",
+      "amount": "{lena30.cooking_class}"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@l02+0.2"
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "l03",
+   "layout": "character_right",
+   "character": {
+    "id": "lena-30",
+    "pose": "neutral"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Visits",
+      "value": "{lena30.cleaner_visits|plain}",
+      "tone": "ink"
+     },
+     {
+      "label": "Hours each",
+      "value": "{lena30.hours_per_visit|plain}",
+      "tone": "ink"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@l03+1.3"
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "l04",
+   "layout": "character_left",
+   "character": {
+    "id": "lena-30",
+    "pose": "content"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "Hours handed back",
+      "value": "{lena30.hours_back|plain}",
+      "tone": "save"
+     }
+    ],
+    "equation": "of her weekends"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.0
+   ]
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "lena-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "spend",
+    "start": "{bill}",
+    "left_label": "Left in the envelope",
+    "show": 1,
+    "reveal": 1,
+    "items": [
+     {
+      "icon": "cleaner",
+      "label": "Cleaner",
+      "amount": "{lena30.cleaner}"
+     },
+     {
+      "icon": "trip",
+      "label": "Weekend away",
+      "amount": "{lena30.trip}"
+     },
+     {
+      "icon": "cooking",
+      "label": "Cooking class",
+      "amount": "{lena30.cooking_class}"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@l05+0.2"
+   ],
+   "line": "l05",
+   "id": "s05"
+  },
+  {
+   "id": "s06",
+   "line": "l06",
+   "layout": "character_right",
+   "character": {
+    "id": "lena-30",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "spend",
+    "start": "{bill}",
+    "left_label": "Left in the envelope",
+    "show": 2,
+    "reveal": 1,
+    "items": [
+     {
+      "icon": "cleaner",
+      "label": "Cleaner",
+      "amount": "{lena30.cleaner}"
+     },
+     {
+      "icon": "trip",
+      "label": "Weekend away",
+      "amount": "{lena30.trip}"
+     },
+     {
+      "icon": "cooking",
+      "label": "Cooking class",
+      "amount": "{lena30.cooking_class}"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@l06+0.6"
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "y01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Fast forward",
+    "title": "One year later",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "y04",
+   "layout": "character_right",
+   "character": {
+    "id": "lena-31",
+    "pose": "happy"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "trip",
+      "title": "Still laughing about it",
+      "tone": "save"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1
+   ]
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+  "description_footer": "Full video on the channel: Two Neighbors, Same $1,000 Bonus. Only One Was Happier a Year Later.\n\nCheck out the Money Leak Audit Workbook: [WORKBOOK LINK]\n\nEducational only, not financial advice. The people and figures are illustrative examples.\n#shorts",
+  "shorts": {
+    "short-max": {
+      "title": "He spent his $1,000 bonus on a TV and sneakers",
+      "description": "Max spent his whole $1,000 bonus on a new TV and sneakers. Nothing went wrong, but by week three it just stopped feeling special.",
+      "lines": [
+        "x01",
+        "x02",
+        "x03",
+        "x07",
+        "x08",
+        "x11",
+        "r01"
+      ]
+    },
+    "short-lena": {
+      "title": "She split her $1,000 bonus three ways",
+      "description": "Lena spent her $1,000 bonus on a cleaner, a weekend away with friends and a cooking class. A year later, she's still feeling it.",
+      "lines": [
+        "l01",
+        "l02",
+        "l03",
+        "l04",
+        "l05",
+        "l06",
+        "y01",
+        "y04"
+      ],
+      "scenes": {
+        "l05": {
+          "layout": "character_right",
+          "character": {
+            "id": "lena-30",
+            "pose": "happy"
+          },
+          "graphic": {
+            "type": "spend",
+            "start": "{bill}",
+            "left_label": "Left in the envelope",
+            "show": 1,
+            "reveal": 1,
+            "items": [
+              {
+                "icon": "cleaner",
+                "label": "Cleaner",
+                "amount": "{lena30.cleaner}"
+              },
+              {
+                "icon": "trip",
+                "label": "Weekend away",
+                "amount": "{lena30.trip}"
+              },
+              {
+                "icon": "cooking",
+                "label": "Cooking class",
+                "amount": "{lena30.cooking_class}"
+              }
+            ]
+          },
+          "camera": "push",
+          "beats": [
+            "@l05+0.2"
+          ]
+        },
+        "l01": {
+          "layout": "character_right",
+          "character": {
+            "id": "lena-30",
+            "pose": "happy"
+          },
+          "graphic": {
+            "type": "statement",
+            "lead": "Lena's bonus",
+            "title": "{bill}",
+            "subtitle": "split three ways"
+          },
+          "camera": "push",
+          "beats": [
+            0.1,
+            0.4,
+            1.2
+          ]
+        }
+      }
+    }
+  }
+}
