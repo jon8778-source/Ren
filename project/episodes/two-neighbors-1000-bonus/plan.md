@@ -28,10 +28,10 @@
    becomes "Remember, everyone's different, and this isn't financial advice."
 7. [w06] "afterwards" becomes "afterward" (US spelling in the captions).
 
-## Open questions for the owner
-- [w02-w04] "It's called hedonic adaptation..." names a psychology finding and states it as fact. It's
-  kept for now because the story shows it (Max's "week three"). Option: cut [w02] and keep the rest.
-- Length: 708 words, about 4:20 of voice at the locked pace, or about 4:45 with pauses for the visuals.
-  The original text is 747 words, not 870. That's close to the $2M episode (4:42). Accept it, or add lines?
-- US idioms in the captions: "goes on a cleaner" -> "goes to a cleaner"; "booked for three months' time"
-  -> "booked three months ahead". Both are kept word for word unless the owner says to change them.
+8. [w02] "It's called hedonic adaptation." is cut (owner, script gate). The lines after it stay.
+9. [l02, l05] "goes on a" becomes "goes to a"; [l05] "booked for three months' time" becomes "booked three
+   months ahead" (US phrasing, owner).
+
+## Owner decisions at the script gate
+- Script OK with changes 1-9.
+- Length accepted: about 700 words, about 4:20 of voice, about 4:45 with pauses for the visuals.

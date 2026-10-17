@@ -37,10 +37,10 @@ as rule numbers). Changes from the owner's text are listed in plan.md under "Scr
 
 ## lena
 [l01] Lena splits her bonus three ways. {=3}
-[l02] Four hundred dollars goes on a cleaner. {lena30.cleaner}
+[l02] Four hundred dollars goes to a cleaner. {lena30.cleaner}
 [l03] Four visits, about two and a half hours each. {lena30.cleaner_visits, lena30.hours_per_visit}
 [l04] That's ten hours of her weekends handed back. {lena30.hours_back}
-[l05] Four hundred and fifty dollars goes on a weekend away with her two oldest friends, booked for three months' time. {lena30.trip, lena30.trip_friends, lena30.trip_months_ahead}
+[l05] Four hundred and fifty dollars goes to a weekend away with her two oldest friends, booked three months ahead. {lena30.trip, lena30.trip_friends, lena30.trip_months_ahead}
 [l06] And the last one hundred and fifty pays for a cooking class with her partner. {lena30.cooking_class}
 [l07] None of it sits on a shelf.
 [l08] Some of it she won't even enjoy for months.
@@ -57,7 +57,6 @@ as rule numbers). Changes from the owner's text are listed in plan.md under "Scr
 
 ## why
 [w01] So what happened?
-[w02] It's called hedonic adaptation.
 [w03] When we buy something new, we get a happiness boost.
 [w04] But we get used to it fast, and the feeling fades back to normal.
 [w05] Experiences work differently.
