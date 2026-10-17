@@ -103,8 +103,12 @@ def check_claims(ep: Path, data):
     path = ep / "claims.txt"
     if not path.exists():
         return []
+    helpers = dict(bill=data["bill"], min=min, max=max, round=round)
+    clash = sorted(set(helpers) & set(data["characters"]))
+    if clash:
+        return [f"character id {c!r} clashes with a claims.txt helper name; rename it" for c in clash]
     ns = {c: SimpleNamespace(**p) for c, p in data["characters"].items()}
-    ns.update(bill=data["bill"], min=min, max=max, round=round)
+    ns.update(helpers)
     bad = []
     for row in path.read_text().splitlines():
         if not row.strip() or row.lstrip().startswith("#"):

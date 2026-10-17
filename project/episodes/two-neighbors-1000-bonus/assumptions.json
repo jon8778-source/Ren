@@ -1,0 +1,83 @@
+{
+ "bill": 1000.0,
+ "bill_due_days": null,
+ "characters": {
+  "max30": {
+   "level": 1,
+   "status": "final",
+   "income": 1000.0,
+   "fixed_items": [
+    {
+     "item": "65-inch TV",
+     "amount": 700.0
+    },
+    {
+     "item": "Sneakers",
+     "amount": 300.0
+    }
+   ],
+   "fixed_total": 1000.0,
+   "leak_items": [],
+   "leaks_total": 0,
+   "left_over": 0.0,
+   "savings": 0.0,
+   "bill_covered_by_savings": 0.0,
+   "bill_shortfall": 1000.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 100,
+   "gross_salary": 60000.0,
+   "age": 30.0,
+   "years_next_door": 3.0,
+   "tv": 700.0,
+   "tv_inches": 65.0,
+   "sneakers": 300.0,
+   "fade_week": 3.0,
+   "spikes": 1.0,
+   "income_multiple_vs_level1": 1
+  },
+  "lena30": {
+   "level": 2,
+   "status": "final",
+   "income": 1000.0,
+   "fixed_items": [
+    {
+     "item": "Cleaner (4 visits)",
+     "amount": 400.0
+    },
+    {
+     "item": "Weekend away with two friends",
+     "amount": 450.0
+    },
+    {
+     "item": "Cooking class with her partner",
+     "amount": 150.0
+    }
+   ],
+   "fixed_total": 1000.0,
+   "leak_items": [],
+   "leaks_total": 0,
+   "left_over": 0.0,
+   "savings": 0.0,
+   "bill_covered_by_savings": 0.0,
+   "bill_shortfall": 1000.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 100,
+   "gross_salary": 60000.0,
+   "age": 30.0,
+   "years_next_door": 3.0,
+   "cleaner": 400.0,
+   "cleaner_visits": 4.0,
+   "hours_per_visit": 2.5,
+   "hours_back": 10.0,
+   "trip": 450.0,
+   "trip_friends": 2.0,
+   "trip_months_ahead": 3.0,
+   "cooking_class": 150.0,
+   "spikes": 3.0,
+   "rules": 5.0,
+   "years_later": 1.0,
+   "income_multiple_vs_level1": 1
+  }
+ },
+ "problems": []
+}
