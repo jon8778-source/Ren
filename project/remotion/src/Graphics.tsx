@@ -795,7 +795,7 @@ const Houses: React.FC<P> = ({g, beats, config}) => {
 };
 
 // Drawn purchase icons (no lettering): tv, sneakers, cleaner, trip, cooking
-const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}) => {
+export const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}) => {
   const k = {stroke: T.ink, strokeWidth: 7, strokeLinejoin: "round" as const, strokeLinecap: "round" as const};
   const art: Record<string, React.ReactNode> = {
     tv: <><rect x="14" y="30" width="172" height="110" rx="10" fill={T.ink} {...k} /><rect x="26" y="42" width="148" height="86" rx="4" fill={T.line} /><path d="M70 172 L100 140 L130 172" fill="none" {...k} /><path d="M40 70 L70 50" stroke="#fff" strokeWidth="7" strokeLinecap="round" /></>,
