@@ -1,3 +1,21 @@
+# ANIMATION LAB BRANCH (lab/animated-ren)
+
+This branch is a test environment for a more animated Ren (cut-out puppet rig). It is never merged into
+`main`. On this branch:
+- Work only on this branch. Don't push to `main` or to episode branches, and don't open a pull request
+  unless the owner asks.
+- Rig work lives in `project/rig/` (parts, rig builder, checks, test clip) and `project/remotion/src/rig/`
+  (renderer and test clip). Start with `project/rig/LAB.md`.
+- Don't change `project/characters/`, the episode pipeline (`project/pipeline/`, `Graphics.tsx`,
+  `Episode.tsx`, `config*.json`) or the episodes. Copy things into `project/rig/` instead.
+- The episode rules below (no bob, sway or walking, white background) don't apply to experiments here.
+  Ren's look, voice, colours and fonts still do.
+- Commit and push after each step.
+
+The rest of this file describes the main video pipeline, for reference.
+
+---
+
 # Ren videos
 
 Animated personal-finance videos narrated by Ren, the mascot. Owner: the channel creator, who reviews
