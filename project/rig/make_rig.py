@@ -95,7 +95,7 @@ for side, (ex, bx) in {"r": (427, 425), "l": (530, 539)}.items():
 part("nose", "nose", (meta["nose"]["w"] / 2, meta["nose"]["h"] / 2), "head", on_head(481, 469), o2rig, z=70)
 for mth in ["closed", "smile", "wide", "o", "wince"]:
     n = f"mouth-{mth}"
-    part(n, n, (meta[n]["w"] / 2, meta[n]["h"] * (0.3 if mth in ("closed", "smile") else 0.5)), "head", on_head(484, 501), FACE["mouth"], z=71, slot="mouth")
+    part(n, n, (meta[n]["w"] / 2, meta[n]["h"] * (0.3 if mth in ("closed", "smile") else 0.5)), "head", on_head(484, 501), FACE["mouth"] * {"wide": 0.7, "o": 0.9}.get(mth, 1), z=71, slot="mouth")
 n = "mouth-open"
 part(n, n, (meta[n]["w"] / 2, meta[n]["h"] / 2), "head", on_head(484, 506), FACE["mouth"] * 0.65 * 142 / 146, z=71, slot="mouth")
 
@@ -130,7 +130,14 @@ for pose, dirs in WRIST.items():
         n = f"hand-{pose}-{side}"
         wr, cen = end_centre(n, d)
         wr = wr - np.asarray(d, float) / np.linalg.norm(d) * 14  # pivot a little inside the wrist end
-        part(n, n, wr, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k_hand, bone=ang(cen - wr), z=51, slot=f"hand-{side}")
+        part(n, n, wr, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k_hand, bone=ang(cen - wr), z=51, slot=f"hand-{side}", grip=[float(cen[0]), float(cen[1])])
+
+# Pointing outward: the other column's pointing hand on each arm (its finger points away from the body)
+for side, other, d in (("r", "l", (1, 0)), ("l", "r", (-1, 0))):
+    n = f"hand-point-{other}"
+    wr, cen = end_centre(n, d)
+    wr = wr - np.asarray(d, float) * 14
+    part(f"hand-pointout-{side}", n, wr, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k_hand, bone=ang(cen - wr), z=51, slot=f"hand-{side}", grip=[float(cen[0]), float(cen[1])])
 
 # Legs: keep the sheet's own geometry at hip, knee and ankle
 KNEE = 1683

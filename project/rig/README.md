@@ -18,3 +18,9 @@ In the cloud container, add `--browser-executable /opt/pw-browsers/chromium_head
   down from the parent, positive = clockwise. Slots swap eyes, brows, mouth and hands.
 - Layers (back to front): shins, thighs, shoes, torso, hands, forearms, upper arms, head, nose, mouth,
   eyes, brows, glasses. Sleeve and pants coloured discs sit behind elbows and knees.
+
+## Test clip
+- Voice and lip-sync track: `.tools/venv/bin/python rig/test_voice.py` (writes `rig/test-clip/` and copies
+  for Remotion).
+- Clip: `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`
+  (`remotion/src/rig/RigTest.tsx` holds the timeline). Report: `rig/test-clip/report.md`.

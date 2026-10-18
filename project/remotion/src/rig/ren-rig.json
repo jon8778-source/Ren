@@ -494,7 +494,7 @@
     775.9,
     1409.5
    ],
-   "scale": 0.6271,
+   "scale": 0.439,
    "bone": 90.0,
    "z": 71,
    "slot": "mouth"
@@ -512,7 +512,7 @@
     775.9,
     1409.5
    ],
-   "scale": 0.6271,
+   "scale": 0.5644,
    "bone": 90.0,
    "z": 71,
    "slot": "mouth"
@@ -710,7 +710,11 @@
    "scale": 0.4758,
    "bone": -8.02,
    "z": 51,
-   "slot": "hand-r"
+   "slot": "hand-r",
+   "grip": [
+    220.65213702117177,
+    164.76994347808235
+   ]
   },
   "hand-point-l": {
    "src": "rig/ren/hand-point-l.png",
@@ -728,7 +732,11 @@
    "scale": 0.4758,
    "bone": -171.94,
    "z": 51,
-   "slot": "hand-l"
+   "slot": "hand-l",
+   "grip": [
+    285.7759536654161,
+    164.78860530711722
+   ]
   },
   "hand-thumbsup-r": {
    "src": "rig/ren/hand-thumbsup-r.png",
@@ -746,7 +754,11 @@
    "scale": 0.4758,
    "bone": -12.06,
    "z": 51,
-   "slot": "hand-r"
+   "slot": "hand-r",
+   "grip": [
+    184.23837527960063,
+    231.01965722073265
+   ]
   },
   "hand-thumbsup-l": {
    "src": "rig/ren/hand-thumbsup-l.png",
@@ -764,7 +776,11 @@
    "scale": 0.4758,
    "bone": -168.0,
    "z": 51,
-   "slot": "hand-l"
+   "slot": "hand-l",
+   "grip": [
+    157.20414117925856,
+    231.0069463986848
+   ]
   },
   "hand-fist-r": {
    "src": "rig/ren/hand-fist-r.png",
@@ -782,7 +798,11 @@
    "scale": 0.4758,
    "bone": -6.14,
    "z": 51,
-   "slot": "hand-r"
+   "slot": "hand-r",
+   "grip": [
+    184.77970109875966,
+    136.51178391596017
+   ]
   },
   "hand-fist-l": {
    "src": "rig/ren/hand-fist-l.png",
@@ -800,7 +820,11 @@
    "scale": 0.4758,
    "bone": -173.82,
    "z": 51,
-   "slot": "hand-l"
+   "slot": "hand-l",
+   "grip": [
+    161.66481165760607,
+    136.50355454048315
+   ]
   },
   "hand-open-r": {
    "src": "rig/ren/hand-open-r.png",
@@ -818,7 +842,11 @@
    "scale": 0.4758,
    "bone": -89.08,
    "z": 51,
-   "slot": "hand-r"
+   "slot": "hand-r",
+   "grip": [
+    171.4788983708301,
+    242.67847168347555
+   ]
   },
   "hand-open-l": {
    "src": "rig/ren/hand-open-l.png",
@@ -836,7 +864,11 @@
    "scale": 0.4758,
    "bone": -91.2,
    "z": 51,
-   "slot": "hand-l"
+   "slot": "hand-l",
+   "grip": [
+    191.37290632754343,
+    242.56061311000826
+   ]
   },
   "hand-hold-r": {
    "src": "rig/ren/hand-hold-r.png",
@@ -854,7 +886,11 @@
    "scale": 0.4758,
    "bone": -46.05,
    "z": 51,
-   "slot": "hand-r"
+   "slot": "hand-r",
+   "grip": [
+    174.93103346818683,
+    173.918425891872
+   ]
   },
   "hand-hold-l": {
    "src": "rig/ren/hand-hold-l.png",
@@ -872,7 +908,55 @@
    "scale": 0.4758,
    "bone": -133.96,
    "z": 51,
-   "slot": "hand-l"
+   "slot": "hand-l",
+   "grip": [
+    188.27527378709374,
+    173.9425635892605
+   ]
+  },
+  "hand-pointout-r": {
+   "src": "rig/ren/hand-point-l.png",
+   "w": 508,
+   "h": 292,
+   "pivot": [
+    487.8,
+    193.4
+   ],
+   "parent": "forearm-r",
+   "attach": [
+    39.6,
+    272.0
+   ],
+   "scale": 0.4758,
+   "bone": -171.94,
+   "z": 51,
+   "slot": "hand-r",
+   "grip": [
+    285.7759536654161,
+    164.78860530711722
+   ]
+  },
+  "hand-pointout-l": {
+   "src": "rig/ren/hand-point-r.png",
+   "w": 508,
+   "h": 292,
+   "pivot": [
+    19.0,
+    193.2
+   ],
+   "parent": "forearm-l",
+   "attach": [
+    110.8,
+    271.9
+   ],
+   "scale": 0.4758,
+   "bone": -8.02,
+   "z": 51,
+   "slot": "hand-l",
+   "grip": [
+    220.65213702117177,
+    164.76994347808235
+   ]
   },
   "thigh-r": {
    "src": "rig/ren/thigh-r.png",
