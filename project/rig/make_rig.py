@@ -84,29 +84,88 @@ part("head", "head", (meta["head"]["w"] / 2, chin), "torso", (232, 32), k_head, 
 O_S, O_X, O_Y = 0.232, 304, 174
 on_head = lambda x, y: ((x - O_X) / O_S, (y - O_Y) / O_S)
 o2rig = k_head / O_S  # original px -> rig units
-FACE = {"eye": 1.18 * 50 * o2rig / 100, "brow": 1.08 * 70 * o2rig / 122, "mouth": 93 * o2rig / 142}  # eyes/brows tuned against the original by eye
-for side, (ex, bx) in {"r": (427, 425), "l": (530, 539)}.items():
-    for e in ["neutral", "closed", "happy", "wide", "surprised", "angry", "sleepy"]:
-        n = f"eye-{e}-{side}"
-        part(n, n, (meta[n]["w"] / 2, meta[n]["h"] / 2), "head", on_head(ex, 409), FACE["eye"], z=72, slot=f"eye-{side}")
-    for b in ["brow", "brow-wide", "brow-surprised", "brow-sleepy"]:
-        n = f"{b}-{side}"
-        part(n, n, (meta[n]["w"] / 2, meta[n]["h"] / 2), "head", on_head(bx, 366), FACE["brow"], z=74, slot=f"brow-{side}")
-part("nose", "nose", (meta["nose"]["w"] / 2, meta["nose"]["h"] / 2), "head", on_head(481, 469), o2rig, z=70)
-for mth in ["closed", "smile", "wide", "o", "wince"]:
-    n = f"mouth-{mth}"
-    part(n, n, (meta[n]["w"] / 2, meta[n]["h"] * (0.3 if mth in ("closed", "smile") else 0.5)), "head", on_head(484, 501), FACE["mouth"] * {"wide": 0.7, "o": 0.9}.get(mth, 1), z=71, slot="mouth")
-n = "mouth-open"
-part(n, n, (meta[n]["w"] / 2, meta[n]["h"] / 2), "head", on_head(484, 506), FACE["mouth"] * 0.65 * 142 / 146, z=71, slot="mouth")
+FACE = {"brow": 1.08 * 70 * o2rig / 122}  # brows tuned against the original by eye
 
 # Glasses: scale so the lens centres match the original's (427 and 530)
 g = np.array(Image.open(P / "glasses.png"))[..., 3] < 60
 lab, nl = ndimage.label(g)
 edge = set(np.unique(np.r_[lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
 holes = sorted([i for i in range(1, nl + 1) if i not in edge], key=lambda i: -(lab == i).sum())[:2]
-lens = sorted([np.c_[np.nonzero(lab == i)[1], np.nonzero(lab == i)[0]].mean(axis=0) for i in holes], key=lambda p: p[0])
+holes = sorted(holes, key=lambda i: np.nonzero(lab == i)[1].mean())  # Ren's right lens (screen left) first
+lens = [np.c_[np.nonzero(lab == i)[1], np.nonzero(lab == i)[0]].mean(axis=0) for i in holes]
 k_glasses = (530 - 427) * o2rig / (lens[1][0] - lens[0][0])
-part("glasses", "glasses", (lens[0] + lens[1]) / 2, "head", on_head(478.5, 407), k_glasses, z=80)
+G_PIVOT, G_ATTACH = (lens[0] + lens[1]) / 2, np.array(on_head(478.5, 407))
+part("glasses", "glasses", G_PIVOT, "head", G_ATTACH, k_glasses, z=80)
+
+
+# Face calibration. Every eye and mouth is placed by its own visual centre (the middle of its opaque
+# bounding box) on one fixed anchor, then given the largest scale that keeps all its pixels inside a target
+# region: the lens opening for eyes, the face inside the jawline (and below the nose) for mouths.
+def centre(n):
+    ys, xs = np.nonzero(alpha(n))
+    return np.array([(xs.min() + xs.max()) / 2, (ys.min() + ys.max()) / 2])
+
+
+def fit(n, anchor, region, k_max):
+    """Largest k <= k_max so the part, centred on anchor and scaled by k, lies inside region."""
+    ys, xs = np.nonzero(alpha(n))
+    pts = np.c_[xs, ys] - centre(n)
+    inside = lambda k: all(0 <= y < region.shape[0] and 0 <= x < region.shape[1] and region[y, x]
+                           for x, y in np.rint(anchor + pts * k).astype(int))
+    lo, hi = 0.0, k_max
+    if inside(hi):
+        return hi
+    for _ in range(30):
+        mid = (lo + hi) / 2
+        lo, hi = (mid, hi) if inside(mid) else (lo, mid)
+    return lo
+
+
+# The face inside the jawline, in head px: the skin region around the face centre, bounded by the outline
+hd = np.array(Image.open(P / "head.png")).astype(int)
+flab, _ = ndimage.label((hd[..., 3] > 128) & (hd[..., :3].mean(-1) > 110))
+face = flab == flab[1200, 781]
+rows = [np.nonzero(r)[0] for r in face]
+FACE_W = max(r.max() - r.min() + 1 for r in rows if len(r))  # widest point, at the cheekbones
+MOUTH_W_MAX = 0.40 * FACE_W
+MOUTH_Y = 1431  # where the original's closed mouth sits (head px)
+mrow = rows[MOUTH_Y]
+MOUTH_C = np.array([(mrow.min() + mrow.max()) / 2, MOUTH_Y])  # on the face's centre line
+nose_at, nose_k = np.array(on_head(481, 469)), o2rig / k_head
+NOSE_BOTTOM = nose_at[1] + (np.nonzero(alpha("nose").any(1))[0].max() - meta["nose"]["h"] / 2) * nose_k
+mouth_region = ndimage.binary_erosion(face, iterations=30)  # stay 30 head px clear of the jawline
+mouth_region[: int(NOSE_BOTTOM + 25)] = False                 # and clear of the nose
+# Target widths as a share of the face width; fit() shrinks any that would cross the jaw or the nose
+MOUTH_SHARE = {"closed": 0.34, "smile": 0.36, "wince": 0.34, "open": 0.30, "wide": 0.32, "o": 0.14}
+calib = {"face_width": int(FACE_W), "mouth_anchor": [float(v) for v in MOUTH_C], "mouth": {}, "eye": {}}
+for mth, share in MOUTH_SHARE.items():
+    n = f"mouth-{mth}"
+    w = np.ptp(np.nonzero(alpha(n).any(0))[0]) + 1
+    k = fit(n, MOUTH_C, mouth_region, share * FACE_W / w)
+    part(n, n, centre(n), "head", MOUTH_C, k * k_head, z=71, slot="mouth")
+    calib["mouth"][n] = {"width": round(w * k), "share": round(w * k / FACE_W, 3)}
+    assert w * k <= MOUTH_W_MAX, n
+
+part("nose", "nose", (meta["nose"]["w"] / 2, meta["nose"]["h"] / 2), "head", nose_at, o2rig, z=70)
+
+# Eyes: anchor = the centre of each lens opening; region = that opening, 3 px clear of the rim (glasses px).
+# Both sides of a set share one scale (the smaller fit), so a pair always matches.
+for e in ["neutral", "closed", "happy", "wide", "surprised", "angry", "sleepy"]:
+    ks = []
+    for side, hole in zip("rl", holes):
+        region = ndimage.binary_erosion(lab == hole, iterations=3)
+        ks.append(fit(f"eye-{e}-{side}", lens["rl".index(side)], region, 1.5))
+    k = min(ks)
+    for side in "rl":
+        n = f"eye-{e}-{side}"
+        anchor = G_ATTACH + (lens["rl".index(side)] - G_PIVOT) * k_glasses / k_head  # lens centre in head px
+        part(n, n, centre(n), "head", anchor, k * k_glasses, z=72, slot=f"eye-{side}")
+    calib["eye"][e] = round(k * k_glasses / k_head, 4)
+FACE["eye"] = rig["eye-neutral-r"]["scale"]
+for side, bx in {"r": 425, "l": 539}.items():
+    for b in ["brow", "brow-wide", "brow-surprised", "brow-sleepy"]:
+        n = f"{b}-{side}"
+        part(n, n, (meta[n]["w"] / 2, meta[n]["h"] / 2), "head", on_head(bx, 366), FACE["brow"], z=74, slot=f"brow-{side}")
 
 # Arms: shoulder sockets on the torso; joints from each limb's long axis
 for side, shoulder in {"r": (30, 150), "l": (432, 150)}.items():
@@ -161,10 +220,11 @@ for side in ["r", "l"]:
 
 layers = sorted(rig, key=lambda n: rig[n]["z"])
 out = {"units": "body-sheet px", "parts": rig, "scales": {"head": k_head, "glasses": k_glasses, "hand": k_hand, **FACE},
-       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}}
+       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}, "face": calib}
 (HERE / "ren" / "rig.json").write_text(json.dumps(out, indent=1) + "\n")
 shutil.rmtree(PUBLIC, ignore_errors=True)
 PUBLIC.mkdir(parents=True)
 for f in P.glob("*.png"):
     shutil.copy(f, PUBLIC / f.name)
+print(json.dumps(calib, indent=1))
 print(f"{len(rig)} parts; head x{k_head:.3f}, glasses x{k_glasses:.3f}, hands x{k_hand:.3f}, eyes x{FACE['eye']:.3f}")

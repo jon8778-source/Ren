@@ -32,23 +32,183 @@
    "bone": 90.0,
    "z": 60
   },
+  "glasses": {
+   "src": "rig/ren/glasses.png",
+   "w": 236,
+   "h": 82,
+   "pivot": [
+    117.2,
+    38.9
+   ],
+   "parent": "head",
+   "attach": [
+    752.2,
+    1004.3
+   ],
+   "scale": 0.8148,
+   "bone": 90.0,
+   "z": 80
+  },
+  "mouth-closed": {
+   "src": "rig/ren/mouth-closed.png",
+   "w": 144,
+   "h": 40,
+   "pivot": [
+    71.5,
+    19.5
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.4904,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "mouth-smile": {
+   "src": "rig/ren/mouth-smile.png",
+   "w": 153,
+   "h": 68,
+   "pivot": [
+    76.0,
+    34.0
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.4879,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "mouth-wince": {
+   "src": "rig/ren/mouth-wince.png",
+   "w": 153,
+   "h": 37,
+   "pivot": [
+    76.0,
+    18.0
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.4608,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "mouth-open": {
+   "src": "rig/ren/mouth-open.png",
+   "w": 543,
+   "h": 247,
+   "pivot": [
+    271.0,
+    123.0
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.1124,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "mouth-wide": {
+   "src": "rig/ren/mouth-wide.png",
+   "w": 148,
+   "h": 88,
+   "pivot": [
+    73.5,
+    43.5
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.4487,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "mouth-o": {
+   "src": "rig/ren/mouth-o.png",
+   "w": 59,
+   "h": 84,
+   "pivot": [
+    29.0,
+    42.5
+   ],
+   "parent": "head",
+   "attach": [
+    768.0,
+    1431.0
+   ],
+   "scale": 0.514,
+   "bone": 90.0,
+   "z": 71,
+   "slot": "mouth"
+  },
+  "nose": {
+   "src": "rig/ren/nose.png",
+   "w": 52,
+   "h": 32,
+   "pivot": [
+    26.0,
+    16.0
+   ],
+   "parent": "head",
+   "attach": [
+    762.9,
+    1271.6
+   ],
+   "scale": 0.9575,
+   "bone": 90.0,
+   "z": 70
+  },
   "eye-neutral-r": {
    "src": "rig/ren/eye-neutral-r.png",
    "w": 101,
    "h": 71,
    "pivot": [
-    50.5,
-    35.5
+    50.0,
+    35.0
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.5634,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-neutral-l": {
+   "src": "rig/ren/eye-neutral-l.png",
+   "w": 100,
+   "h": 71,
+   "pivot": [
+    49.5,
+    35.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.5634,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-closed-r": {
    "src": "rig/ren/eye-closed-r.png",
@@ -56,107 +216,215 @@
    "h": 57,
    "pivot": [
     53.5,
-    28.5
+    28.0
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.5124,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-closed-l": {
+   "src": "rig/ren/eye-closed-l.png",
+   "w": 107,
+   "h": 57,
+   "pivot": [
+    52.5,
+    28.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.5124,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-happy-r": {
    "src": "rig/ren/eye-happy-r.png",
    "w": 98,
    "h": 54,
    "pivot": [
-    49.0,
-    27.0
+    47.5,
+    28.5
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.5227,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-happy-l": {
+   "src": "rig/ren/eye-happy-l.png",
+   "w": 98,
+   "h": 54,
+   "pivot": [
+    50.0,
+    29.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.5227,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-wide-r": {
    "src": "rig/ren/eye-wide-r.png",
    "w": 101,
    "h": 108,
    "pivot": [
-    50.5,
-    54.0
+    50.0,
+    50.0
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.3961,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-wide-l": {
+   "src": "rig/ren/eye-wide-l.png",
+   "w": 101,
+   "h": 108,
+   "pivot": [
+    50.0,
+    50.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.3961,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-surprised-r": {
    "src": "rig/ren/eye-surprised-r.png",
    "w": 96,
    "h": 81,
    "pivot": [
-    48.0,
-    40.5
+    47.5,
+    40.0
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.5426,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-surprised-l": {
+   "src": "rig/ren/eye-surprised-l.png",
+   "w": 96,
+   "h": 81,
+   "pivot": [
+    47.5,
+    40.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.5426,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-angry-r": {
    "src": "rig/ren/eye-angry-r.png",
    "w": 144,
    "h": 89,
    "pivot": [
-    72.0,
-    44.5
+    73.0,
+    44.0
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.3786,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-angry-l": {
+   "src": "rig/ren/eye-angry-l.png",
+   "w": 144,
+   "h": 89,
+   "pivot": [
+    70.5,
+    44.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.3786,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "eye-sleepy-r": {
    "src": "rig/ren/eye-sleepy-r.png",
    "w": 115,
    "h": 92,
    "pivot": [
-    57.5,
-    46.0
+    57.0,
+    44.5
    ],
    "parent": "head",
    "attach": [
     530.2,
-    1012.9
+    1004.5
    ],
-   "scale": 0.565,
+   "scale": 0.4039,
    "bone": 90.0,
    "z": 72,
    "slot": "eye-r"
+  },
+  "eye-sleepy-l": {
+   "src": "rig/ren/eye-sleepy-l.png",
+   "w": 114,
+   "h": 93,
+   "pivot": [
+    56.0,
+    45.0
+   ],
+   "parent": "head",
+   "attach": [
+    974.1,
+    1004.1
+   ],
+   "scale": 0.4039,
+   "bone": 90.0,
+   "z": 72,
+   "slot": "eye-l"
   },
   "brow-r": {
    "src": "rig/ren/brow-r.png",
@@ -230,132 +498,6 @@
    "z": 74,
    "slot": "brow-r"
   },
-  "eye-neutral-l": {
-   "src": "rig/ren/eye-neutral-l.png",
-   "w": 100,
-   "h": 71,
-   "pivot": [
-    50.0,
-    35.5
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-closed-l": {
-   "src": "rig/ren/eye-closed-l.png",
-   "w": 107,
-   "h": 57,
-   "pivot": [
-    53.5,
-    28.5
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-happy-l": {
-   "src": "rig/ren/eye-happy-l.png",
-   "w": 98,
-   "h": 54,
-   "pivot": [
-    49.0,
-    27.0
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-wide-l": {
-   "src": "rig/ren/eye-wide-l.png",
-   "w": 101,
-   "h": 108,
-   "pivot": [
-    50.5,
-    54.0
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-surprised-l": {
-   "src": "rig/ren/eye-surprised-l.png",
-   "w": 96,
-   "h": 81,
-   "pivot": [
-    48.0,
-    40.5
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-angry-l": {
-   "src": "rig/ren/eye-angry-l.png",
-   "w": 144,
-   "h": 89,
-   "pivot": [
-    72.0,
-    44.5
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
-  "eye-sleepy-l": {
-   "src": "rig/ren/eye-sleepy-l.png",
-   "w": 114,
-   "h": 93,
-   "pivot": [
-    57.0,
-    46.5
-   ],
-   "parent": "head",
-   "attach": [
-    974.1,
-    1012.9
-   ],
-   "scale": 0.565,
-   "bone": 90.0,
-   "z": 72,
-   "slot": "eye-l"
-  },
   "brow-l": {
    "src": "rig/ren/brow-l.png",
    "w": 125,
@@ -427,148 +569,6 @@
    "bone": 90.0,
    "z": 74,
    "slot": "brow-l"
-  },
-  "nose": {
-   "src": "rig/ren/nose.png",
-   "w": 52,
-   "h": 32,
-   "pivot": [
-    26.0,
-    16.0
-   ],
-   "parent": "head",
-   "attach": [
-    762.9,
-    1271.6
-   ],
-   "scale": 0.9575,
-   "bone": 90.0,
-   "z": 70
-  },
-  "mouth-closed": {
-   "src": "rig/ren/mouth-closed.png",
-   "w": 144,
-   "h": 40,
-   "pivot": [
-    72.0,
-    12.0
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1409.5
-   ],
-   "scale": 0.6271,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "mouth-smile": {
-   "src": "rig/ren/mouth-smile.png",
-   "w": 153,
-   "h": 68,
-   "pivot": [
-    76.5,
-    20.4
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1409.5
-   ],
-   "scale": 0.6271,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "mouth-wide": {
-   "src": "rig/ren/mouth-wide.png",
-   "w": 148,
-   "h": 88,
-   "pivot": [
-    74.0,
-    44.0
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1409.5
-   ],
-   "scale": 0.439,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "mouth-o": {
-   "src": "rig/ren/mouth-o.png",
-   "w": 59,
-   "h": 84,
-   "pivot": [
-    29.5,
-    42.0
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1409.5
-   ],
-   "scale": 0.5644,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "mouth-wince": {
-   "src": "rig/ren/mouth-wince.png",
-   "w": 153,
-   "h": 37,
-   "pivot": [
-    76.5,
-    18.5
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1409.5
-   ],
-   "scale": 0.6271,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "mouth-open": {
-   "src": "rig/ren/mouth-open.png",
-   "w": 543,
-   "h": 247,
-   "pivot": [
-    271.5,
-    123.5
-   ],
-   "parent": "head",
-   "attach": [
-    775.9,
-    1431.0
-   ],
-   "scale": 0.3965,
-   "bone": 90.0,
-   "z": 71,
-   "slot": "mouth"
-  },
-  "glasses": {
-   "src": "rig/ren/glasses.png",
-   "w": 236,
-   "h": 82,
-   "pivot": [
-    117.2,
-    38.9
-   ],
-   "parent": "head",
-   "attach": [
-    752.2,
-    1004.3
-   ],
-   "scale": 0.8148,
-   "bone": 90.0,
-   "z": 80
   },
   "upperarm-r": {
    "src": "rig/ren/upperarm-r.png",
@@ -1065,12 +1065,53 @@
   "head": 0.22215108834827144,
   "glasses": 0.8147657515739726,
   "hand": 0.4758035292583635,
-  "eye": 0.5649531988167248,
   "brow": 0.5933656825582717,
-  "mouth": 0.627126372522743
+  "eye": 0.5634
  },
  "colors": {
   "sleeve": "#363a4d",
   "pants": "#32363b"
+ },
+ "face": {
+  "face_width": 909,
+  "mouth_anchor": [
+   768.0,
+   1431.0
+  ],
+  "mouth": {
+   "mouth-closed": {
+    "width": 309,
+    "share": 0.34
+   },
+   "mouth-smile": {
+    "width": 327,
+    "share": 0.36
+   },
+   "mouth-wince": {
+    "width": 309,
+    "share": 0.34
+   },
+   "mouth-open": {
+    "width": 273,
+    "share": 0.3
+   },
+   "mouth-wide": {
+    "width": 291,
+    "share": 0.32
+   },
+   "mouth-o": {
+    "width": 127,
+    "share": 0.14
+   }
+  },
+  "eye": {
+   "neutral": 2.5361,
+   "closed": 2.3065,
+   "happy": 2.353,
+   "wide": 1.7829,
+   "surprised": 2.4425,
+   "angry": 1.7042,
+   "sleepy": 1.818
+  }
  }
 }

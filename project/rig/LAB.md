@@ -3,6 +3,13 @@
 Status: first test (15-second 9:16 clip, 2026-10-18) built and rejected by the owner ("many errors").
 Nothing from here is used in episodes.
 
+## Second pass (gated, 2026-10-18)
+- **Gate 1, face calibration:** `make_rig.py` now places every eye and mouth by its bounding-box centre on
+  one anchor per slot (lens centres; mouth at head px 768, 1431 on the face's centre line) and fits each
+  scale so the part stays inside its region (lens opening less 3 px; face inside the jaw less 30 px and below
+  the nose). Mouths are 14-36% of the face width (cap 40%). Values in `rig.json` -> `face`. Check:
+  `rig/ren/checks/face-grid.png`. Waiting for approval.
+
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.
 - `rig/make_rig.py`: pivots, attach points, scales and layers, written to `rig/ren/rig.json`.
