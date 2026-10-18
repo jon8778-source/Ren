@@ -1,0 +1,513 @@
+{
+ "skin": {
+  "head": [
+   230.7,
+   186.1,
+   155.4
+  ],
+  "hands_sheet": [
+   231.5,
+   175.7,
+   138.7
+  ],
+  "relaxed_hands": [
+   235.0,
+   194.7,
+   162.0
+  ],
+  "original": [
+   224.4,
+   184.7,
+   152.5
+  ]
+ },
+ "parts": {
+  "glasses": {
+   "w": 236,
+   "h": 82,
+   "sheet": "body",
+   "origin": [
+    1192,
+    281
+   ]
+  },
+  "torso": {
+   "w": 462,
+   "h": 789,
+   "sheet": "body",
+   "origin": [
+    697,
+    490
+   ]
+  },
+  "upperarm-r": {
+   "w": 198,
+   "h": 335,
+   "sheet": "body",
+   "origin": [
+    437,
+    591
+   ]
+  },
+  "upperarm-l": {
+   "w": 199,
+   "h": 335,
+   "sheet": "body",
+   "origin": [
+    1221,
+    591
+   ]
+  },
+  "forearm-r": {
+   "w": 151,
+   "h": 289,
+   "sheet": "body",
+   "origin": [
+    361,
+    940
+   ]
+  },
+  "forearm-l": {
+   "w": 151,
+   "h": 289,
+   "sheet": "body",
+   "origin": [
+    1344,
+    940
+   ]
+  },
+  "hand-relaxed-r": {
+   "w": 137,
+   "h": 221,
+   "sheet": "body",
+   "origin": [
+    319,
+    1243
+   ]
+  },
+  "hand-relaxed-l": {
+   "w": 137,
+   "h": 221,
+   "sheet": "body",
+   "origin": [
+    1400,
+    1243
+   ]
+  },
+  "shoe-r": {
+   "w": 221,
+   "h": 172,
+   "sheet": "body",
+   "origin": [
+    563,
+    2076
+   ]
+  },
+  "shoe-l": {
+   "w": 222,
+   "h": 172,
+   "sheet": "body",
+   "origin": [
+    1073,
+    2076
+   ]
+  },
+  "thigh-r": {
+   "w": 187,
+   "h": 421,
+   "sheet": "body",
+   "origin": [
+    681,
+    1270
+   ]
+  },
+  "shin-r": {
+   "w": 150,
+   "h": 400,
+   "sheet": "body",
+   "origin": [
+    673,
+    1645
+   ]
+  },
+  "thigh-l": {
+   "w": 188,
+   "h": 421,
+   "sheet": "body",
+   "origin": [
+    988,
+    1270
+   ]
+  },
+  "shin-l": {
+   "w": 150,
+   "h": 400,
+   "sheet": "body",
+   "origin": [
+    1034,
+    1645
+   ]
+  },
+  "head": {
+   "w": 1562,
+   "h": 1813,
+   "sheet": "head",
+   "origin": [
+    256,
+    100
+   ],
+   "chin": 1683
+  },
+  "brow-r": {
+   "w": 125,
+   "h": 48,
+   "sheet": "face",
+   "origin": [
+    61,
+    298
+   ]
+  },
+  "brow-l": {
+   "w": 125,
+   "h": 48,
+   "sheet": "face",
+   "origin": [
+    251,
+    298
+   ]
+  },
+  "eye-neutral-r": {
+   "w": 101,
+   "h": 71,
+   "sheet": "face",
+   "origin": [
+    77,
+    336
+   ]
+  },
+  "eye-neutral-l": {
+   "w": 100,
+   "h": 71,
+   "sheet": "face",
+   "origin": [
+    259,
+    336
+   ]
+  },
+  "eye-closed-r": {
+   "w": 107,
+   "h": 57,
+   "sheet": "face",
+   "origin": [
+    451,
+    340
+   ]
+  },
+  "eye-closed-l": {
+   "w": 107,
+   "h": 57,
+   "sheet": "face",
+   "origin": [
+    642,
+    340
+   ]
+  },
+  "eye-happy-r": {
+   "w": 98,
+   "h": 54,
+   "sheet": "face",
+   "origin": [
+    462,
+    514
+   ]
+  },
+  "eye-happy-l": {
+   "w": 98,
+   "h": 54,
+   "sheet": "face",
+   "origin": [
+    640,
+    514
+   ]
+  },
+  "eye-wide-r": {
+   "w": 101,
+   "h": 108,
+   "sheet": "face",
+   "origin": [
+    77,
+    492
+   ]
+  },
+  "eye-wide-l": {
+   "w": 101,
+   "h": 108,
+   "sheet": "face",
+   "origin": [
+    259,
+    492
+   ]
+  },
+  "brow-wide-r": {
+   "w": 102,
+   "h": 52,
+   "sheet": "face",
+   "origin": [
+    77,
+    464
+   ]
+  },
+  "brow-wide-l": {
+   "w": 102,
+   "h": 52,
+   "sheet": "face",
+   "origin": [
+    258,
+    464
+   ]
+  },
+  "eye-surprised-r": {
+   "w": 96,
+   "h": 81,
+   "sheet": "face",
+   "origin": [
+    460,
+    139
+   ]
+  },
+  "eye-surprised-l": {
+   "w": 96,
+   "h": 81,
+   "sheet": "face",
+   "origin": [
+    644,
+    139
+   ]
+  },
+  "brow-surprised-r": {
+   "w": 119,
+   "h": 61,
+   "sheet": "face",
+   "origin": [
+    445,
+    84
+   ]
+  },
+  "brow-surprised-l": {
+   "w": 119,
+   "h": 61,
+   "sheet": "face",
+   "origin": [
+    636,
+    84
+   ]
+  },
+  "eye-angry-r": {
+   "w": 144,
+   "h": 89,
+   "sheet": "face",
+   "origin": [
+    827,
+    116
+   ]
+  },
+  "eye-angry-l": {
+   "w": 144,
+   "h": 89,
+   "sheet": "face",
+   "origin": [
+    997,
+    116
+   ]
+  },
+  "eye-sleepy-r": {
+   "w": 115,
+   "h": 92,
+   "sheet": "face",
+   "origin": [
+    833,
+    328
+   ]
+  },
+  "eye-sleepy-l": {
+   "w": 114,
+   "h": 93,
+   "sheet": "face",
+   "origin": [
+    1022,
+    328
+   ]
+  },
+  "brow-sleepy-r": {
+   "w": 116,
+   "h": 52,
+   "sheet": "face",
+   "origin": [
+    833,
+    294
+   ]
+  },
+  "brow-sleepy-l": {
+   "w": 116,
+   "h": 52,
+   "sheet": "face",
+   "origin": [
+    1020,
+    294
+   ]
+  },
+  "mouth-closed": {
+   "w": 144,
+   "h": 40,
+   "sheet": "face",
+   "origin": [
+    71,
+    744
+   ]
+  },
+  "mouth-wide": {
+   "w": 148,
+   "h": 88,
+   "sheet": "face",
+   "origin": [
+    451,
+    716
+   ]
+  },
+  "mouth-o": {
+   "w": 59,
+   "h": 84,
+   "sheet": "face",
+   "origin": [
+    665,
+    715
+   ]
+  },
+  "mouth-smile": {
+   "w": 153,
+   "h": 68,
+   "sheet": "face",
+   "origin": [
+    790,
+    731
+   ]
+  },
+  "mouth-wince": {
+   "w": 153,
+   "h": 37,
+   "sheet": "face",
+   "origin": [
+    990,
+    743
+   ]
+  },
+  "mouth-open": {
+   "w": 543,
+   "h": 247,
+   "sheet": "mouth",
+   "origin": [
+    755,
+    905
+   ]
+  },
+  "nose": {
+   "w": 52,
+   "h": 32,
+   "sheet": "original",
+   "origin": [
+    456,
+    456
+   ]
+  },
+  "hand-point-r": {
+   "w": 508,
+   "h": 292,
+   "sheet": "hands",
+   "origin": [
+    341,
+    119
+   ]
+  },
+  "hand-point-l": {
+   "w": 508,
+   "h": 292,
+   "sheet": "hands",
+   "origin": [
+    1008,
+    119
+   ]
+  },
+  "hand-thumbsup-r": {
+   "w": 343,
+   "h": 363,
+   "sheet": "hands",
+   "origin": [
+    477,
+    496
+   ]
+  },
+  "hand-thumbsup-l": {
+   "w": 343,
+   "h": 363,
+   "sheet": "hands",
+   "origin": [
+    1037,
+    496
+   ]
+  },
+  "hand-fist-r": {
+   "w": 348,
+   "h": 253,
+   "sheet": "hands",
+   "origin": [
+    451,
+    976
+   ]
+  },
+  "hand-fist-l": {
+   "w": 347,
+   "h": 253,
+   "sheet": "hands",
+   "origin": [
+    1058,
+    976
+   ]
+  },
+  "hand-open-r": {
+   "w": 363,
+   "h": 461,
+   "sheet": "hands",
+   "origin": [
+    443,
+    1309
+   ]
+  },
+  "hand-open-l": {
+   "w": 364,
+   "h": 461,
+   "sheet": "hands",
+   "origin": [
+    1050,
+    1309
+   ]
+  },
+  "hand-hold-r": {
+   "w": 364,
+   "h": 359,
+   "sheet": "hands",
+   "origin": [
+    411,
+    1859
+   ]
+  },
+  "hand-hold-l": {
+   "w": 364,
+   "h": 359,
+   "sheet": "hands",
+   "origin": [
+    1082,
+    1859
+   ]
+  }
+ }
+}

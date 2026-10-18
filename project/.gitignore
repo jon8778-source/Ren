@@ -3,3 +3,4 @@ episodes/*/build/
 episodes/*/audio/*.wav
 __pycache__/
 .tools/
+remotion/public/rig/

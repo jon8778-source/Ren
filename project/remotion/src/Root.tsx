@@ -2,10 +2,13 @@ import {Composition} from "remotion";
 import {Episode} from "./Episode";
 import {Thumbnail, type ThumbProps} from "./Thumbnail";
 import type {EpisodeProps} from "./types";
+import {HandTest, RigStill} from "./rig/RenRig";
 
 // Props come from build/props.json: npx remotion render src/index.ts episode out.mp4 --props=<file>
 export const Root: React.FC = () => (
   <>
+  <Composition id="ren-rig-still" component={RigStill} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{}} />
+  <Composition id="ren-rig-hands" component={HandTest} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{}} />
   <Composition id="thumbnail" component={Thumbnail} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{} as ThumbProps} />
   <Composition
     id="episode"
