@@ -3,7 +3,3 @@ episodes/*/build/
 episodes/*/audio/*.wav
 __pycache__/
 .tools/
-remotion/public/rig/
-rig/test-clip/voice.wav
-rig/test-clip/.voice.npz
-rig/test-clip/*.mp4
