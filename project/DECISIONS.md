@@ -31,7 +31,10 @@ Repo jon8778-source/Ren; work on branch ccr-a31871f7-ihoco0 (PR #2 → main). Wo
    Owner's script, except: all research claims and [VERIFY] lines removed (owner), "hedonic adaptation" line cut,
    US phrasing ("goes to", "booked three months ahead"), and the standing workbook CTA instead of "free 50/30/20 workbook".
    Bonus envelope as the recurring prop. Thumbnail A ("WHO'S HAPPIER?"). Shorts: Max (things fade) and Lena (three-way split).
-8. Rejected/avoided: invented stats, unsourced "most/many people" claims, typed numbers on screen, inconsistent character art (Yara 45/70 regenerated from Yara 25), 3-line captions, content in YouTube controls area, shaking, music, coloured backgrounds.
+8. Cut-out puppet rig test (15 s 9:16 walk-in, boots, point, thumbs up; code in project/rig/ and remotion/src/rig/):
+   owner found too many errors. Shelved; not used in episodes. Standing rules unchanged: locked busts, no walking,
+   bob, sway or breathing, solid white background.
+9. Rejected/avoided: invented stats, unsourced "most/many people" claims, typed numbers on screen, inconsistent character art (Yara 45/70 regenerated from Yara 25), 3-line captions, content in YouTube controls area, shaking, music, coloured backgrounds.
 
 ## 4. Active rules for next videos
 - "New episode: <topic>" → follow CLAUDE.md. Gates: plan/questions → script OK (before voice) → 60-s pilot → "APPROVED" → full video + QC report → thumbnail choice → 2 shorts.
