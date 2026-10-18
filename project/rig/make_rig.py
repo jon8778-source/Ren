@@ -173,30 +173,63 @@ for side, shoulder in {"r": (30, 150), "l": (432, 150)}.items():
     fa, fb, fw = ends(f"forearm-{side}", inset_bot=12)
     part(f"upperarm-{side}", f"upperarm-{side}", ua, "torso", shoulder, bone=ang(ub - ua), z=53, end=list(map(float, ub)), width=uw)
     part(f"forearm-{side}", f"forearm-{side}", fa, f"upperarm-{side}", ub, bone=ang(fb - fa), z=52, end=list(map(float, fb)), width=fw)
-    # Relaxed hand from the body sheet: wrist at its top
-    wr, cen = end_centre(f"hand-relaxed-{side}", (0, -1))
-    wr = wr + np.array([0, 10])
-    part(f"hand-relaxed-{side}", f"hand-relaxed-{side}", wr, f"forearm-{side}", fb, bone=ang(cen - wr), z=51, slot=f"hand-{side}")
 
-# Sheet hands: scaled to the relaxed hand (by hand length, wrist to fingertip), wrist pivot
-rel_len = axis("hand-relaxed-r")[3] - axis("hand-relaxed-r")[2]
-open_len = axis("hand-open-r")[3] - axis("hand-open-r")[2]
-k_hand = rel_len / open_len
-WRIST = {"point": {"r": (-1, 0), "l": (1, 0)}, "thumbsup": {"r": (-1, 0), "l": (1, 0)}, "fist": {"r": (-1, 0), "l": (1, 0)},
-         "open": {"r": (0, 1), "l": (0, 1)}, "hold": {"r": (-1, 1), "l": (1, 1)}}
-for pose, dirs in WRIST.items():
-    for side, d in dirs.items():
-        n = f"hand-{pose}-{side}"
-        wr, cen = end_centre(n, d)
-        wr = wr - np.asarray(d, float) / np.linalg.norm(d) * 14  # pivot a little inside the wrist end
-        part(n, n, wr, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k_hand, bone=ang(cen - wr), z=51, slot=f"hand-{side}", grip=[float(cen[0]), float(cen[1])])
+# Hands. Each hand's wrist is measured from the band of pixels at its cut end: the band's long direction
+# runs across the wrist, so the hand's rest axis (bone) is perpendicular to it, pointing into the hand.
+# The pivot (wrist anchor) sits on that axis, WRIST_TUCK rig units inside the cut edge. The hand is a child
+# of the forearm, attached at the forearm's end with bone along the forearm's axis, so at angle 0 it
+# continues the forearm's line at any arm angle; its own angle is a wrist bend on top of that.
+WRIST_TUCK = 10
 
+
+def wrist(n, d, depth=45):
+    """Wrist anchor (at the cut edge, on the centre line), rest axis (unit, into the hand), width across."""
+    ys, xs = np.nonzero(alpha(n))
+    pts = np.c_[xs, ys].astype(float)
+    d = np.asarray(d, float) / np.linalg.norm(d)
+    pr = pts @ d
+    band = pts[pr > pr.max() - depth]
+    c = band.mean(axis=0)
+    across = np.linalg.svd(band - c, full_matrices=False)[2][0]
+    ax = np.array([-across[1], across[0]])
+    if ax @ d > 0:
+        ax = -ax
+    edge = c + ax * ((band - c) @ ax).min()
+    return edge, ax, np.ptp((band - c) @ across)
+
+
+def cuff_width(n):
+    ys, xs = np.nonzero(alpha(n))
+    pts = np.c_[xs, ys].astype(float)
+    b = np.radians(rig[n]["bone"])
+    v = np.array([np.cos(b), np.sin(b)])
+    band = pts[pts @ v > (pts @ v).max() - 20]
+    return np.ptp(band @ np.array([-v[1], v[0]]))
+
+
+CUFF = cuff_width("forearm-r")
+# Sheet hands share one scale: their mean wrist width is 85% of the cuff, so each wrist tucks inside it
+SHEET_HANDS = {"point": {"r": (-1, 0), "l": (1, 0)}, "thumbsup": {"r": (-1, 0), "l": (1, 0)}, "fist": {"r": (-1, 0), "l": (1, 0)},
+               "open": {"r": (0, 1), "l": (0, 1)}, "hold": {"r": (-1, 1), "l": (1, 1)}}
+k_hand = 0.85 * CUFF / np.mean([wrist(f"hand-{h}-{s}", d)[2] for h, ds in SHEET_HANDS.items() for s, d in ds.items()])
+hands = {}
+
+
+def hand(name, src, d, side, k):
+    edge, ax, w = wrist(src, d)
+    part(name, src, edge + ax * WRIST_TUCK / k, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k, bone=ang(ax), z=51, slot=f"hand-{side}",
+         wrist_width=round(float(w * k), 1))
+    hands[name] = {"rest": round(ang(ax), 2), "wrist_width": round(float(w * k), 1)}
+
+
+for side in "rl":
+    # Relaxed hand from the body sheet (its own scale): wrist at its top, fingers straight down at rest
+    hand(f"hand-relaxed-{side}", f"hand-relaxed-{side}", (0, -1), side, 1.0)
+    for pose, dirs in SHEET_HANDS.items():
+        hand(f"hand-{pose}-{side}", f"hand-{pose}-{side}", dirs[side], side, k_hand)
 # Pointing outward: the other column's pointing hand on each arm (its finger points away from the body)
 for side, other, d in (("r", "l", (1, 0)), ("l", "r", (-1, 0))):
-    n = f"hand-point-{other}"
-    wr, cen = end_centre(n, d)
-    wr = wr - np.asarray(d, float) * 14
-    part(f"hand-pointout-{side}", n, wr, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k_hand, bone=ang(cen - wr), z=51, slot=f"hand-{side}", grip=[float(cen[0]), float(cen[1])])
+    hand(f"hand-pointout-{side}", f"hand-point-{other}", d, side, k_hand)
 
 # Legs: keep the sheet's own geometry at hip, knee and ankle
 KNEE = 1683
@@ -220,7 +253,7 @@ for side in ["r", "l"]:
 
 layers = sorted(rig, key=lambda n: rig[n]["z"])
 out = {"units": "body-sheet px", "parts": rig, "scales": {"head": k_head, "glasses": k_glasses, "hand": k_hand, **FACE},
-       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}, "face": calib}
+       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}, "face": calib, "hands": {"cuff_width": round(float(CUFF), 1), "parts": hands}}
 (HERE / "ren" / "rig.json").write_text(json.dumps(out, indent=1) + "\n")
 shutil.rmtree(PUBLIC, ignore_errors=True)
 PUBLIC.mkdir(parents=True)

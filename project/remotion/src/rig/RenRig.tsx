@@ -65,12 +65,14 @@ export const solve = (pose: RigPose) => {
 
 const css = (m: M) => `matrix(${m.map((v) => v.toFixed(5)).join(",")})`;
 
-export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean}> = ({pose, joints = true, debug = false}) => {
-  const {visible, frames, images} = solve(pose);
+export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean; only?: string[]}> = ({pose, joints = true, debug = false, only}) => {
+  const solved = solve(pose);
+  const {frames, images} = solved;
+  const visible = only ? solved.visible.filter((n) => only.includes(n)) : solved.visible;
   const layer = (n: string) => pose.z?.[n] ?? PARTS[n].z;
   // Joint caps: a sleeve/pants-coloured disc behind each elbow and knee, so a bend never opens a gap
   const caps = joints
-    ? (["forearm-r", "forearm-l", "shin-r", "shin-l"] as const).map((n) => {
+    ? (["forearm-r", "forearm-l", "shin-r", "shin-l"] as const).filter((n) => visible.includes(n)).map((n) => {
         const leg = n.startsWith("shin");
         const p = PARTS[n];
         const r = leg ? 52 : ((PARTS[n].width ?? 100) / 2) * 0.92;
@@ -100,9 +102,10 @@ export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean}
   );
 };
 
-// Neutral standing pose: arms hanging close to the body, legs straight
+// Neutral standing pose: arms hanging close to the body, wrists turned in a little so the fingers point
+// straight down towards the thighs, legs straight
 export const NEUTRAL: Omit<RigPose, "x" | "y" | "scale"> = {
-  angles: {"upperarm-r": 6, "upperarm-l": -6, "forearm-r": -3, "forearm-l": 3, "hand-relaxed-r": 0, "hand-relaxed-l": 0},
+  angles: {"upperarm-r": 6, "upperarm-l": -6, "forearm-r": -3, "forearm-l": 3, "hand-relaxed-r": -5, "hand-relaxed-l": 5},
 };
 
 export const RigStill: React.FC<{background?: string; scale?: number; debug?: boolean}> = ({background = "#F3F5F8", scale = 0.72, debug = false}) => (

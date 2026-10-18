@@ -9,6 +9,7 @@ still use the locked busts in `characters/`.
 | Build rig | `.tools/venv/bin/python rig/make_rig.py` | `rig/ren/rig.json`, copied to `remotion/public/rig/ren/` |
 | Still | `cp rig/ren/rig.json remotion/src/rig/ren-rig.json && cd remotion && npx remotion still src/index.ts ren-rig-still ../rig/ren/checks/rig-neutral.png` | neutral pose (add `--props` with `{"debug": true}` for pivot dots) |
 | Face grid | `npx remotion still src/index.ts ren-face-grid ../rig/ren/checks/face-grid.png` | every eye set and mouth on the head (`--props '{"guides":true}'` adds anchors and the 40% ticks) |
+| Hand grid | `npx remotion still src/index.ts ren-hand-grid ../rig/ren/checks/hand-grid.png` | every hand on its forearm at 0, 45 and 90 degrees (`--props '{"guides":true}'` adds the forearm axis and wrist anchor) |
 | Hand test | `npx remotion still src/index.ts ren-rig-hands ../rig/ren/checks/rig-hands.png` | four poses with sheet hands |
 | Compare | `.tools/venv/bin/python rig/compare.py` | `rig/ren/checks/rig-vs-original.png` |
 
