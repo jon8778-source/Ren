@@ -9,14 +9,14 @@ import TL from "./test-timeline.json";
 
 // 15-second 9:16 rig test, built from the pose library (poses.ts): walk in, wave, hold the $60 boot, hold
 // both (wince at the price), squat and set them down either side, point at them, thumbs-up. Every pose change
-// eases over 6-10 frames; hands swap halfway through a move. Mouths come from Rhubarb (rig/test_voice.py).
+// eases over 6-10 frames (sine ease, joints overlapping by a frame or two); hands swap halfway through a move. Mouths come from Rhubarb (rig/test_voice.py).
 const FPS = 30;
 const PARTS = rigData.parts as unknown as Record<string, {bone: number; grip?: number[]}>;
 const C = {bg: "#F3F5F8", ink: "#13233F", line: "#E3E7EE"};
 const S = 0.56; // canvas px per rig unit
 const X_END = 540, ROOT_Y = 1000;
 const FLOOR_Y = ROOT_Y + FLOOR * S;
-const ease = Easing.inOut(Easing.cubic);
+const ease = Easing.inOut(Easing.sin); // gentler than cubic: peak speed about half
 const clamp = {extrapolateLeft: "clamp", extrapolateRight: "clamp"} as const;
 const s = (sec: number) => Math.round(sec * FPS);
 const apply = (m: number[], p: number[]) => [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]];
@@ -33,7 +33,7 @@ const key = (f: number, ks: [number, number][]) => {
 // ---- Pose sequence: [start frame, pose, ease frames] ----
 const SEQ: [number, string, number][] = [
   [0, "neutral", 0],
-  [s(1.43), "wave", 9],
+  [s(1.43), "wave", 10],
   [s(2.95), "holdOne", 10],
   [s(6.0), "holdBoth", 10],
   [s(8.8), "setDown", 10],
@@ -60,21 +60,37 @@ const resolve = (name: string): Resolved => {
 };
 const RES = SEQ.map(([, n]) => resolve(n));
 
-const blendAt = (f: number): Resolved & {seg: number} => {
+// Overlapping action: in each move the upper arm leads, the forearm follows a frame later and the hand two
+// frames later (every joint still eases over the move's own 9-10 frames)
+const DELAY = (k: string) => (k.startsWith("forearm") || k === "head" ? 1 : 0);
+const HAND_DELAY = 2, MAX_DELAY = 2;
+type Blend = Resolved & {seg: number};
+const blendAt = (f: number): Blend => {
   let i = 0;
   while (i + 1 < SEQ.length && f >= SEQ[i + 1][0]) i++;
   const cur = RES[i];
-  if (i === 0 || f >= SEQ[i][0] + SEQ[i][2]) return {...cur, seg: i};
+  const [start, , dur] = SEQ[i];
+  if (i === 0 || f >= start + dur + MAX_DELAY) return {...cur, seg: i};
   const prev = RES[i - 1];
-  const t = ease((f - SEQ[i][0]) / SEQ[i][2]);
+  const tAt = (delay: number) => ease(Math.min(1, Math.max(0, (f - start - delay) / dur)));
+  const t = tAt(0);
   const keys = new Set([...Object.keys(prev.angles), ...Object.keys(cur.angles)]);
   const angles: Record<string, number> = {};
-  keys.forEach((k) => (angles[k] = (prev.angles[k] ?? 0) * (1 - t) + (cur.angles[k] ?? 0) * t));
+  keys.forEach((k) => {
+    const tk = tAt(DELAY(k));
+    angles[k] = (prev.angles[k] ?? 0) * (1 - tk) + (cur.angles[k] ?? 0) * tk;
+  });
   const pick = <V,>(a: V, b: V) => (t < 0.5 ? a : b); // eyes swap halfway through the move
-  // Hands swap halfway, except a hand closing to hold swaps late, as it arrives at the boot
+  // Hands swap halfway (a hand closing to hold swaps late, as it arrives at the boot). A clean swap: a
+  // cross-fade showed two differently drawn hands at once
   const hand = (side: "r" | "l") => {
-    const swapAt = cur.hands[side].part.includes("hold") && !prev.hands[side].part.includes("hold") ? 0.75 : 0.5;
-    return {part: t < swapAt ? prev.hands[side].part : cur.hands[side].part, tilt: prev.hands[side].tilt * (1 - t) + cur.hands[side].tilt * t};
+    const from = prev.hands[side].part, to = cur.hands[side].part;
+    const th = tAt(HAND_DELAY);
+    const tilt = prev.hands[side].tilt * (1 - th) + cur.hands[side].tilt * th;
+    if (from === to) return {part: to, tilt};
+    const swapAt = to.includes("hold") && !from.includes("hold") ? 0.75 : 0.5;
+    const fs = start + HAND_DELAY + Math.round(swapAt * dur);
+    return {part: f < fs ? from : to, tilt};
   };
   return {angles, hands: {r: hand("r"), l: hand("l")}, brows: prev.brows * (1 - t) + cur.brows * t, eyes: pick(prev.eyes, cur.eyes), rest: pick(prev.rest, cur.rest), seg: i};
 };
@@ -109,7 +125,7 @@ const footAt = (side: "r" | "l", f: number): number[] => {
     else if (f > st.f0) {
       const u = (f - st.f0) / (st.f1 - st.f0);
       x = st.x0 + (st.x1 - st.x0) * ease(u);
-      y -= LIFT * Math.sin(Math.PI * u);
+      y -= LIFT * Math.sin(Math.PI * u) ** 2; // lifts and lands from rest
     }
   }
   return [x, y];
@@ -130,7 +146,7 @@ const build = (f: number): Built => {
     feet = {r: footAt("r", f), l: footAt("l", f)};
     const u = (f % TS) / TS;
     const fade = interpolate(f, [WALK - TS, WALK], [1, 0], clamp);
-    rootY = ROOT_Y + BOB * (1 - Math.sin(Math.PI * u)) * fade;
+    rootY = ROOT_Y + BOB * (0.5 + 0.5 * Math.cos(2 * Math.PI * u)) * fade; // lowest as a foot lands, no kink
     const swing = Math.sin((Math.PI * f) / TS) * 14 * fade; // arms swing with the steps
     angles["upperarm-r"] += swing;
     angles["upperarm-l"] += swing;
@@ -140,6 +156,11 @@ const build = (f: number): Built => {
   } else {
     const drop = key(f, [[SQUAT.down[0], 0], [SQUAT.down[1], SQUAT.depth], [SQUAT.up[0], SQUAT.depth], [SQUAT.up[1], 0]]);
     const breathe = Math.sin(((f - WALK) / FPS / 3.2) * Math.PI * 2) * 1.6;
+    // Living hold: a slow drift of about a degree in the arms and head (4-5 s cycles), so no pose freezes dead
+    const live = Math.min(1, (f - WALK) / 15);
+    angles["upperarm-r"] += Math.sin((f / FPS / 4.1) * Math.PI * 2) * 1.1 * live;
+    angles["upperarm-l"] += Math.sin((f / FPS / 4.7) * Math.PI * 2 + 1.3) * 1.1 * live;
+    angles.head = (angles.head ?? 0) + Math.sin((f / FPS / 5.3) * Math.PI * 2 + 0.6) * 0.8 * live;
     rootY = ROOT_Y + drop * S + breathe;
   }
   // Never over-stretch a leg: the root sinks if the feet are far apart

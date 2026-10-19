@@ -9,7 +9,8 @@ Checks: `cd remotion && npx tsx src/rig/checkClip.ts`.
 I can't listen to audio: please check the voice, pronunciation and lip-sync timing by ear.
 
 ## Timing as built
-Every pose change eases over 9 or 10 frames (the limit was 6-10); poses come from the gate 3 library.
+Every pose change eases over 10 frames (the limit was 6-10), with a sine ease and overlapping joints (see
+"Smoothing pass"); poses come from the gate 3 library.
 
 | Time | Action | Line (voice start-end) |
 |---|---|---|
@@ -21,6 +22,19 @@ Every pose change eases over 9 or 10 frames (the limit was 6-10); poses come fro
 | 8.80-9.20 s | Squats (knees out), arms lower the boots either side of him and let go at the bottom; the boots drop straight down onto the floor (4 frames) | |
 | 9.24-11.30 s | Stands up while turning both hands into points at the boots on the floor (10 frames), brows raised | "So which pair is actually cheaper?" (9.35-11.32) |
 | 11.30-15.47 s | Thumbs-up at chest height (10 frames), happy eyes, smile; smile held 0.66 s after the voice ends | "The answer might surprise you. Follow to find out!" (11.85-14.81) |
+
+## Smoothing pass
+Measured how far the hands, head and feet move each frame, then:
+- **Sine ease instead of cubic:** same 10 frames, but the peak speed is about half. The waving hand's
+  fastest frame went from 168 px to 90 px of travel.
+- **Overlapping action:** the upper arm leads, the forearm follows 1 frame later and the hand 2 frames later
+  (each still a 10-frame ease), so arms swing instead of moving as one rigid block.
+- **Walk:** the body bob is a smooth wave (it had a sharp kink at every footfall), and each foot lifts and
+  lands from rest (it used to launch at full speed).
+- **Living holds:** a slow drift of about 1 degree in the arms and head (4-5 s cycles), so poses never freeze
+  dead before the next move.
+- Tried and dropped: cross-fading hand swaps. Two differently drawn hands showed at once, which looked worse
+  than a clean swap.
 
 ## What looked stiff or broken
 - **Walk:** now 1.4 s with planted feet: the standing foot stays put while the other lifts and swings, so no
