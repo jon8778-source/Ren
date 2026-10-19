@@ -218,9 +218,23 @@ k_hand = 0.85 * CUFF / np.mean([wrist(f"hand-{h}-{s}", d)[2] for h, ds in SHEET_
 hands = {}
 
 
-def hand(name, src, d, side, k):
+def stub_length(src, d):
+    """How far (image px) the drawn wrist runs from its cut before the hand widens out (width > 1.3x the wrist)."""
     edge, ax, w = wrist(src, d)
-    part(name, src, edge + ax * WRIST_TUCK / k, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k, bone=ang(ax), z=51, slot=f"hand-{side}",
+    ys, xs = np.nonzero(alpha(src))
+    pts = np.c_[xs, ys] - edge
+    along, across = pts @ ax, np.abs(pts @ np.array([-ax[1], ax[0]]))
+    for t in range(0, int(along.max()), 4):
+        sl = across[(along >= t) & (along < t + 4)]
+        if len(sl) and 2 * np.percentile(sl, 98) > 1.3 * w:
+            return t
+    return 0
+
+
+def hand(name, src, d, side, k, tuck=None):
+    """tuck: rig units of wrist hidden inside the cuff (default WRIST_TUCK)"""
+    edge, ax, w = wrist(src, d)
+    part(name, src, edge + ax * (WRIST_TUCK if tuck is None else tuck) / k, f"forearm-{side}", rig[f"forearm-{side}"]["end"], k, bone=ang(ax), z=51, slot=f"hand-{side}",
          wrist_width=round(float(w * k), 1))
     hands[name] = {"rest": round(ang(ax), 2), "wrist_width": round(float(w * k), 1)}
 
@@ -250,10 +264,17 @@ for n, e in META2.items():
     if "rod" in e:
         ref = n.replace("grip-front", "thumbs-tuck")
         k2[n] = k2[ref] * np.sqrt(alpha(ref).sum() / alpha(n).sum())
+# The generated hands have long drawn wrists: tuck each into the cuff up to where the hand widens, so the
+# hand meets the sleeve instead of floating on a thin stub. The thumbs-up set is drawn small for its wrist, so
+# it's scaled up 15% to fill the cuff.
+for n, e in META2.items():
+    if e["sheet"] == "sheet3-thumbs" or "grip" in n:
+        k2[n] *= 1.15
 for n, e in META2.items():
     side = n[-1]
     if e["wrist"]:
-        hand(n, n, e["wrist"], side, float(k2[n]))
+        tuck = max(WRIST_TUCK, stub_length(n, e["wrist"]) * k2[n] - 6)
+        hand(n, n, e["wrist"], side, float(k2[n]), tuck)
     else:
         ys, xs = np.nonzero(alpha(n))
         part(n, n, (xs.mean(), ys.mean()), f"forearm-{side}", rig[f"forearm-{side}"]["end"], float(k2[n]), bone=90, z=53, slot=f"hand-{side}")
@@ -262,6 +283,15 @@ for n, e in META2.items():
         ys, xs = np.nonzero(alpha(n))
         rig[n]["grip"] = [e["rod"]["x"], round(float(ys.mean()), 1)]
         rig[n]["grip_width"] = e["rod"]["width"]
+
+# Pointing with the extended finger on the upper side of the hand: the other side's (mirrored) pointing and
+# half-curled hands on each arm ("-x" parts), like the point-out hand above
+for side, other in (("r", "l"), ("l", "r")):
+    for h in ("point-down", "point-curl"):
+        src = f"hand2-{h}-{other}"
+        if src in META2:
+            tuck = max(WRIST_TUCK, stub_length(src, META2[src]["wrist"]) * k2[src] - 6)
+            hand(f"hand2-{h}-x-{side}", src, META2[src]["wrist"], side, float(k2[src]), tuck)
 
 # Holding: the hollow of the C-shaped hold hand is the grip (where a held object's centre line passes).
 # "front" is a clip polygon over the fingers above the hollow; the renderer draws that part again in

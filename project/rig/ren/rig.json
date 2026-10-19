@@ -973,8 +973,8 @@
    "w": 393,
    "h": 689,
    "pivot": [
-    154.4,
-    36.1
+    154.2,
+    148.7
    ],
    "parent": "forearm-r",
    "attach": [
@@ -992,8 +992,8 @@
    "w": 393,
    "h": 689,
    "pivot": [
-    237.6,
-    36.1
+    237.8,
+    148.7
    ],
    "parent": "forearm-l",
    "attach": [
@@ -1011,8 +1011,8 @@
    "w": 511,
    "h": 625,
    "pivot": [
-    420.9,
-    47.2
+    371.0,
+    165.8
    ],
    "parent": "forearm-r",
    "attach": [
@@ -1030,8 +1030,8 @@
    "w": 511,
    "h": 625,
    "pivot": [
-    89.1,
-    47.2
+    139.0,
+    165.8
    ],
    "parent": "forearm-l",
    "attach": [
@@ -1085,8 +1085,8 @@
    "w": 430,
    "h": 690,
    "pivot": [
-    300.7,
-    35.9
+    297.0,
+    156.5
    ],
    "parent": "forearm-r",
    "attach": [
@@ -1104,8 +1104,8 @@
    "w": 430,
    "h": 690,
    "pivot": [
-    128.3,
-    35.9
+    132.0,
+    156.5
    ],
    "parent": "forearm-l",
    "attach": [
@@ -1123,8 +1123,8 @@
    "w": 504,
    "h": 738,
    "pivot": [
-    175.2,
-    698.9
+    174.5,
+    585.5
    ],
    "parent": "forearm-r",
    "attach": [
@@ -1142,8 +1142,8 @@
    "w": 504,
    "h": 738,
    "pivot": [
-    327.8,
-    698.9
+    328.5,
+    585.5
    ],
    "parent": "forearm-l",
    "attach": [
@@ -1161,160 +1161,160 @@
    "w": 350,
    "h": 797,
    "pivot": [
-    160.2,
-    754.5
+    162.4,
+    548.0
    ],
    "parent": "forearm-r",
    "attach": [
     39.6,
     272.0
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -89.4,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 70.2
+   "wrist_width": 80.7
   },
   "hand2-thumbs-front-l": {
    "src": "rig/ren/hand2-thumbs-front-l.png",
    "w": 350,
    "h": 797,
    "pivot": [
-    188.8,
-    754.5
+    186.6,
+    548.0
    ],
    "parent": "forearm-l",
    "attach": [
     110.8,
     271.9
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -90.6,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 70.2
+   "wrist_width": 80.7
   },
   "hand2-thumbs-side-r": {
    "src": "rig/ren/hand2-thumbs-side-r.png",
    "w": 612,
    "h": 649,
    "pivot": [
-    41.4,
-    480.4
+    151.9,
+    479.0
    ],
    "parent": "forearm-r",
    "attach": [
     39.6,
     272.0
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -0.72,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 68.0
+   "wrist_width": 78.2
   },
   "hand2-thumbs-side-l": {
    "src": "rig/ren/hand2-thumbs-side-l.png",
    "w": 612,
    "h": 649,
    "pivot": [
-    569.6,
-    480.4
+    459.1,
+    479.0
    ],
    "parent": "forearm-l",
    "attach": [
     110.8,
     271.9
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -179.28,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 68.0
+   "wrist_width": 78.2
   },
   "hand2-thumbs-tuck-r": {
    "src": "rig/ren/hand2-thumbs-tuck-r.png",
    "w": 462,
    "h": 624,
    "pivot": [
-    197.4,
-    581.5
+    196.2,
+    447.0
    ],
    "parent": "forearm-r",
    "attach": [
     39.6,
     272.0
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -90.51,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 70.8
+   "wrist_width": 81.4
   },
   "hand2-thumbs-tuck-l": {
    "src": "rig/ren/hand2-thumbs-tuck-l.png",
    "w": 462,
    "h": 624,
    "pivot": [
-    263.6,
-    581.5
+    264.8,
+    447.0
    ],
    "parent": "forearm-l",
    "attach": [
     110.8,
     271.9
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -89.49,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 70.8
+   "wrist_width": 81.4
   },
   "hand2-thumbs-half-r": {
    "src": "rig/ren/hand2-thumbs-half-r.png",
    "w": 553,
    "h": 649,
    "pivot": [
-    190.2,
-    606.6
+    188.7,
+    472.1
    ],
    "parent": "forearm-r",
    "attach": [
     39.6,
     272.0
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -90.63,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 66.5
+   "wrist_width": 76.4
   },
   "hand2-thumbs-half-l": {
    "src": "rig/ren/hand2-thumbs-half-l.png",
    "w": 553,
    "h": 649,
    "pivot": [
-    361.8,
-    606.6
+    363.3,
+    472.1
    ],
    "parent": "forearm-l",
    "attach": [
     110.8,
     271.9
    ],
-   "scale": 0.3076,
+   "scale": 0.3537,
    "bone": -89.37,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 66.5
+   "wrist_width": 76.4
   },
   "hand2-half-closed-r": {
    "src": "rig/ren/hand2-half-closed-r.png",
    "w": 586,
    "h": 858,
    "pivot": [
-    224.4,
-    811.5
+    224.1,
+    653.9
    ],
    "parent": "forearm-r",
    "attach": [
@@ -1332,8 +1332,8 @@
    "w": 586,
    "h": 858,
    "pivot": [
-    360.6,
-    811.5
+    360.9,
+    653.9
    ],
    "parent": "forearm-l",
    "attach": [
@@ -1351,19 +1351,19 @@
    "w": 394,
    "h": 282,
    "pivot": [
-    28.6,
-    170.4
+    142.7,
+    170.2
    ],
    "parent": "forearm-r",
    "attach": [
     39.6,
     272.0
    ],
-   "scale": 0.5093,
+   "scale": 0.5857,
    "bone": -0.1,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 80.0,
+   "wrist_width": 92.0,
    "grip": [
     285.0,
     150.1
@@ -1375,24 +1375,100 @@
    "w": 394,
    "h": 282,
    "pivot": [
-    364.4,
-    170.4
+    250.3,
+    170.2
    ],
    "parent": "forearm-l",
    "attach": [
     110.8,
     271.9
    ],
-   "scale": 0.5093,
+   "scale": 0.5857,
    "bone": -179.9,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 80.0,
+   "wrist_width": 92.0,
    "grip": [
     108.0,
     150.1
    ],
    "grip_width": 47
+  },
+  "hand2-point-down-x-r": {
+   "src": "rig/ren/hand2-point-down-l.png",
+   "w": 393,
+   "h": 689,
+   "pivot": [
+    237.8,
+    148.7
+   ],
+   "parent": "forearm-r",
+   "attach": [
+    39.6,
+    272.0
+   ],
+   "scale": 0.3693,
+   "bone": 89.94,
+   "z": 51,
+   "slot": "hand-r",
+   "wrist_width": 69.1
+  },
+  "hand2-point-curl-x-r": {
+   "src": "rig/ren/hand2-point-curl-l.png",
+   "w": 430,
+   "h": 690,
+   "pivot": [
+    132.0,
+    156.5
+   ],
+   "parent": "forearm-r",
+   "attach": [
+    39.6,
+    272.0
+   ],
+   "scale": 0.3693,
+   "bone": 88.25,
+   "z": 51,
+   "slot": "hand-r",
+   "wrist_width": 70.5
+  },
+  "hand2-point-down-x-l": {
+   "src": "rig/ren/hand2-point-down-r.png",
+   "w": 393,
+   "h": 689,
+   "pivot": [
+    154.2,
+    148.7
+   ],
+   "parent": "forearm-l",
+   "attach": [
+    110.8,
+    271.9
+   ],
+   "scale": 0.3693,
+   "bone": 90.06,
+   "z": 51,
+   "slot": "hand-l",
+   "wrist_width": 69.1
+  },
+  "hand2-point-curl-x-l": {
+   "src": "rig/ren/hand2-point-curl-r.png",
+   "w": 430,
+   "h": 690,
+   "pivot": [
+    297.0,
+    156.5
+   ],
+   "parent": "forearm-l",
+   "attach": [
+    110.8,
+    271.9
+   ],
+   "scale": 0.3693,
+   "bone": 91.75,
+   "z": 51,
+   "slot": "hand-l",
+   "wrist_width": 70.5
   },
   "hand-holdout-r": {
    "src": "rig/ren/hand-hold-l.png",
@@ -1783,35 +1859,35 @@
    },
    "hand2-thumbs-front-r": {
     "rest": -89.4,
-    "wrist_width": 70.2
+    "wrist_width": 80.7
    },
    "hand2-thumbs-front-l": {
     "rest": -90.6,
-    "wrist_width": 70.2
+    "wrist_width": 80.7
    },
    "hand2-thumbs-side-r": {
     "rest": -0.72,
-    "wrist_width": 68.0
+    "wrist_width": 78.2
    },
    "hand2-thumbs-side-l": {
     "rest": -179.28,
-    "wrist_width": 68.0
+    "wrist_width": 78.2
    },
    "hand2-thumbs-tuck-r": {
     "rest": -90.51,
-    "wrist_width": 70.8
+    "wrist_width": 81.4
    },
    "hand2-thumbs-tuck-l": {
     "rest": -89.49,
-    "wrist_width": 70.8
+    "wrist_width": 81.4
    },
    "hand2-thumbs-half-r": {
     "rest": -90.63,
-    "wrist_width": 66.5
+    "wrist_width": 76.4
    },
    "hand2-thumbs-half-l": {
     "rest": -89.37,
-    "wrist_width": 66.5
+    "wrist_width": 76.4
    },
    "hand2-half-closed-r": {
     "rest": -90.1,
@@ -1823,11 +1899,27 @@
    },
    "hand2-grip-front-r": {
     "rest": -0.1,
-    "wrist_width": 80.0
+    "wrist_width": 92.0
    },
    "hand2-grip-front-l": {
     "rest": -179.9,
-    "wrist_width": 80.0
+    "wrist_width": 92.0
+   },
+   "hand2-point-down-x-r": {
+    "rest": 89.94,
+    "wrist_width": 69.1
+   },
+   "hand2-point-curl-x-r": {
+    "rest": 88.25,
+    "wrist_width": 70.5
+   },
+   "hand2-point-down-x-l": {
+    "rest": 90.06,
+    "wrist_width": 69.1
+   },
+   "hand2-point-curl-x-l": {
+    "rest": 91.75,
+    "wrist_width": 70.5
    },
    "hand-holdout-r": {
     "rest": -133.6,

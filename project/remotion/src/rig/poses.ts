@@ -49,14 +49,15 @@ export const POSES: Record<string, PoseDef> = {
   },
   pointFloor: {
     label: "5. Pointing at a boot on the floor",
-    angles: {...ARMS_DOWN, "upperarm-l": -18, "forearm-l": -42, head: 4},
-    hands: {r: relaxed.r, l: {part: "hand2-point-down-l", angle: 18, via: ["hand2-point-curl-l"]}},
+    angles: {...ARMS_DOWN, "upperarm-l": -22, "forearm-l": -8, head: 4},
+    hands: {r: relaxed.r, l: {part: "hand2-point-down-x-l", angle: 38, via: ["hand2-point-curl-x-l"]}},
     face: {brows: -40},
     floor: {r: "cheap", l: "prem"},
   },
   thumbsUp: {
     label: "6. Thumbs-up",
-    angles: {...ARMS_DOWN, "upperarm-l": -10, "forearm-l": 128},
+    // elbow out to the side, forearm raised straight up (it swings up across the front), hand upright on top
+    angles: {...ARMS_DOWN, "upperarm-l": -38, "forearm-l": 214},
     hands: {r: relaxed.r, l: {part: "hand2-thumbs-front-l", tilt: 0, via: ["hand2-thumbs-tuck-l", "hand2-thumbs-half-l"]}},
     face: {eyes: "happy", mouth: "smile"},
   },
@@ -81,8 +82,10 @@ export const POSES: Record<string, PoseDef> = {
   },
   pointBoth: {
     label: "Pointing at both boots on the floor",
-    angles: {"upperarm-r": 18, "forearm-r": 42, "upperarm-l": -18, "forearm-l": -42},
-    hands: {r: {part: "hand2-point-down-r", angle: -18, via: ["hand2-point-curl-r"]}, l: {part: "hand2-point-down-l", angle: 18, via: ["hand2-point-curl-l"]}},
+    // arms a little out, wrists turned in so each finger aims down at its boot; the mirrored pointing hand puts
+    // the extended finger on the upper side of the hand
+    angles: {"upperarm-r": 22, "forearm-r": 8, "upperarm-l": -22, "forearm-l": -8},
+    hands: {r: {part: "hand2-point-down-x-r", angle: -38, via: ["hand2-point-curl-x-r"]}, l: {part: "hand2-point-down-x-l", angle: 38, via: ["hand2-point-curl-x-l"]}},
     face: {brows: -40},
     floor: {r: "cheap", l: "prem"},
   },
