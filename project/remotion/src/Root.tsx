@@ -6,7 +6,7 @@ import {HandTest, RigStill} from "./rig/RenRig";
 import {FACE_GRID_SIZE, FaceGrid} from "./rig/FaceGrid";
 import {HAND_GRID_SIZE, HandGrid} from "./rig/HandGrid";
 import {POSE_SHEET_SIZE, PoseSheet, PoseStill} from "./rig/PoseStill";
-import {RIG_TEST_FRAMES, RigTest} from "./rig/RigTest";
+import {RIG_TEST_FPS, RIG_TEST_OUT_FRAMES, RigTest} from "./rig/RigTest";
 
 // Props come from build/props.json: npx remotion render src/index.ts episode out.mp4 --props=<file>
 export const Root: React.FC = () => (
@@ -17,7 +17,7 @@ export const Root: React.FC = () => (
   <Composition id="ren-pose" component={PoseStill} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{name: "neutral"}} />
   <Composition id="ren-pose-sheet" component={PoseSheet} {...POSE_SHEET_SIZE} fps={30} durationInFrames={1} defaultProps={{}} />
   <Composition id="ren-rig-hands" component={HandTest} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{}} />
-  <Composition id="ren-rig-test" component={RigTest} width={1080} height={1920} fps={30} durationInFrames={RIG_TEST_FRAMES} defaultProps={{}} />
+  <Composition id="ren-rig-test" component={RigTest} width={1080} height={1920} fps={RIG_TEST_FPS} durationInFrames={RIG_TEST_OUT_FRAMES} defaultProps={{}} />
   <Composition id="thumbnail" component={Thumbnail} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{} as ThumbProps} />
   <Composition
     id="episode"

@@ -26,8 +26,8 @@ Nothing from here is used in episodes.
   to set the boots down either side, points at both. Lip sync from Rhubarb (`rig/setup_rhubarb.sh`,
   `rig/test_voice.py`), mouths held 3+ frames. Checks: `remotion/src/rig/checkClip.ts`. Report:
   `rig/test-clip/report.md`.
-- **Smoothing and claymation passes:** sine/overshoot easing with overlapping joints, body on twos with a
-  faint boil, squash and stretch, foreshortened knees (`legs.ts`, stretch support in `RenRig.tsx`), a walk
+- **Smoothing passes:** a claymation trial (on twos, boil, squash) was dropped at the owner's request. Kept:
+  60 fps, smooth eases with overlapping joints, perfectly still holds, foreshortened knees (`legs.ts`, stretch support in `RenRig.tsx`), a walk
   towards the camera and a crouch-and-bow set-down. Waiting for review.
 
 ## What exists

@@ -1,6 +1,6 @@
 # Ren rig test clip: report (second version, gate 4)
 
-`ren-rig-test.mp4`: 1080x1920, 30 fps, 15.47 s, H.264 with AAC audio. Same script and line timings as the first
+`ren-rig-test.mp4`: 1080x1920, 60 fps, 15.47 s, H.264 with AAC audio. Same script and line timings as the first
 version. Ren's usual voice (Kokoro am_michael + am_eric 50/50, speed 0.93). Burned-in captions at the top.
 Rebuild: `rig/setup_rhubarb.sh` (once), `.tools/venv/bin/python rig/test_voice.py`, then
 `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`.
@@ -23,22 +23,15 @@ Every pose change eases over 10 frames (the limit was 6-10), with a sine ease an
 | 9.24-11.30 s | Stands up while turning both hands into points at the boots on the floor (10 frames), brows raised | "So which pair is actually cheaper?" (9.35-11.32) |
 | 11.30-15.47 s | Thumbs-up at chest height (10 frames), happy eyes, smile; smile held 0.66 s after the voice ends | "The answer might surprise you. Follow to find out!" (11.85-14.81) |
 
-## Claymation pass
-- **On twos:** the body holds each pose for 2 frames (15 poses a second), the stop-motion rhythm. Mouths keep
-  Rhubarb's own timing.
-- **Boil:** a tiny pose-to-pose wobble (under 1 degree in the head and arms, about 1 px in the body), new every
-  2 frames, like hand-posed clay. This breaks the episode rule against shaking; it is a lab experiment.
-- **Squash and stretch:** the body squashes as each foot lands and on arriving from the walk (then rebounds);
-  the boots squash flat when they land and spring back.
-- **Overshoot:** pose changes overshoot by about 5% and settle (still 10-frame moves, joints overlapping).
-- **Foreshortened knees:** the leg art faces the camera, so a knee bend is now drawn as the knee coming
-  towards the camera: the thigh looks shorter (and a touch wider) and everything below rises with it.
-  Nothing splays sideways any more except a small knee parting in the crouch.
-- **Walk towards the camera** instead of across: Ren grows out of the distance over 1.4 s in four steps, each
-  a foreshortened knee lift, with a body bob, his weight shifting over the standing foot, and arm swing.
-- **Crouch to set the boots down:** knees bend (foreshortened, parting slightly), the upper body bows towards
-  the camera, the arms reach down. Front-view art can't reach the floor, so the boots drop the last ~200 px
-  and land with a squash.
+## Motion style (after the claymation trial)
+The claymation trial (on twos, boil, squash) was dropped. Now:
+- **60 fps** video (the timeline still counts 30 fps frames, so every timing above is unchanged).
+- **Holds are perfectly still:** no breathing, drift or wobble. Checked numerically: between moves no part
+  moves at all (the only motion in a hold is the deliberate wince head-turn).
+- **Moves:** a smooth ease-in, long soft landing, no overshoot; 10 timeline frames; arm joints overlap by a
+  frame or two so arms swing rather than move as one block.
+- Kept from the claymation pass: foreshortened knees, the walk towards the camera, and the crouch-and-bow
+  set-down. The boots drop the last bit without squashing.
 
 ## What looked stiff or broken
 - **Walk:** towards the camera, which suits the front-facing art. The foot doesn't stay pinned to one spot
