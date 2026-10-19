@@ -77,6 +77,5 @@ The claymation trial (on twos, boil, squash) was dropped. Now:
 5. **Rhubarb in the pipeline:** it needs the line text; for episodes, run it per script line.
 6. **Pose library:** 10 poses now (8 + set-down + point at both); episodes will want more (shrug, present,
    count on fingers...).
-7. **The standing rules:** the clip keeps a walk bob and subtle idle breathing. Decide whether the animated
-   rig may breathe in episodes.
-8. **Render time:** a few minutes for 15 s (as before), so roughly an hour for 6 minutes, in the background.
+7. **The standing rules:** the clip keeps a walk bob; holds are completely still, as in the episodes.
+8. **Render time:** about a minute for 15 s at 60 fps here, so roughly 25 minutes for 6 minutes.
