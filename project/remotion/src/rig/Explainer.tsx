@@ -30,7 +30,11 @@ const SEQ: Seq = [
   [s(9.24), "pointBoth", 10],
   [s(11.3), "thumbsUp", 10],
 ];
-const blendAt = makeBlend(SEQ);
+// "calm": the same clip without the pointing and thumbs-up poses. At "which pair" Ren stands with his arms
+// down while the "?" pops in; for the last line he waves again.
+const SEQ_CALM: Seq = [...SEQ.slice(0, 5), [s(11.3), "wave", 10]];
+export type Variant = "full" | "calm";
+const BLEND = {full: makeBlend(SEQ), calm: makeBlend(SEQ_CALM)};
 const SLIDE = [0, 22]; // Ren slides in from the right
 const WINCE = [s(8.1), s(8.8)];
 const BLINKS = [2.45, 5.85, 12.75].map(s);
@@ -60,13 +64,14 @@ const cameraAt = (f: number) => {
   return {scale, tx: target[0] - focus[0] * scale, ty: target[1] - focus[1] * scale};
 };
 
-const build = (f: number, faceF: number) => {
-  const b = blendAt(f);
+const build = (f: number, faceF: number, variant: Variant = "full") => {
+  const b = BLEND[variant](f);
   const angles: Record<string, number> = {...b.angles};
   const x = interpolate(f, SLIDE, [1400, X_END], {...clamp, easing: Easing.out(Easing.cubic)});
 
   // Wave: the forearm rocks from the elbow and the hand follows it
-  const waveEnv = interpolate(f, [s(1.75), s(1.95), s(2.7), s(2.92)], [0, 1, 1, 0], clamp);
+  const waveEnv = interpolate(f, [s(1.75), s(1.95), s(2.7), s(2.92)], [0, 1, 1, 0], clamp) +
+    (variant === "calm" ? interpolate(f, [s(11.7), s(11.9), s(12.9), s(13.1)], [0, 1, 1, 0], clamp) : 0);
   const wave = Math.sin(((f - s(1.75)) / 12) * Math.PI * 2) * 13 * waveEnv;
   angles["forearm-r"] += wave;
   // Wince: head turns away and brows drop
@@ -103,9 +108,9 @@ let face: number[] | null = null;
 const faceFocus = () => (face ??= apply(solve(build(WINCE[0], 0).pose).frames.head, [0, -650])); // mid-face
 
 type BootState = {side: "r" | "l"; kind: BootKind; x: number; y: number; rot: number; scale: number; tag: number; z: number};
-const bootsAt = (f: number, b = build(f, Math.floor(f))): BootState[] => {
+const bootsAt = (f: number, b = build(f, Math.floor(f)), variant: Variant = "full"): BootState[] => {
   const out: BootState[] = [];
-  const atGlide = f >= GLIDE[0] ? build(GLIDE[0] - 1, 0).grip : null;
+  const atGlide = f >= GLIDE[0] ? build(GLIDE[0] - 1, 0, variant).grip : null;
   for (const side of ["r", "l"] as const) {
     if (f < APPEAR[side]) continue;
     const kind = KIND[side];
@@ -135,10 +140,10 @@ const Question: React.FC<{f: number; head: number[]}> = ({f, head}) => {
   );
 };
 
-export const Explainer: React.FC = () => {
+export const Explainer: React.FC<{variant?: Variant}> = ({variant = "full"}) => {
   const f = useCurrentFrame() / OUT_PER_FRAME;
-  const b = build(f, Math.floor(f));
-  const boots = bootsAt(f, b);
+  const b = build(f, Math.floor(f), variant);
+  const boots = bootsAt(f, b, variant);
   const cam = cameraAt(f);
   const head = apply(solve(b.pose).frames.head, [0, -1500]); // top of the head (head px above the chin)
   const cap = TL.captions.find((c) => f / FPS >= c.start - 0.05 && f / FPS <= c.end + 0.25);

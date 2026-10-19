@@ -8,6 +8,7 @@ import {HAND_GRID_SIZE, HANDS_V2, HandGrid, handGridSize} from "./rig/HandGrid";
 import {POSE_SHEET_SIZE, PoseSheet, PoseStill} from "./rig/PoseStill";
 import {RIG_TEST_FPS, RIG_TEST_OUT_FRAMES, RigTest} from "./rig/RigTest";
 import {Explainer, RIG_EXPLAINER_FPS, RIG_EXPLAINER_OUT_FRAMES} from "./rig/Explainer";
+import {STILL_EXPLAINER_FPS, STILL_EXPLAINER_OUT_FRAMES, StillExplainer} from "./rig/StillExplainer";
 
 // Props come from build/props.json: npx remotion render src/index.ts episode out.mp4 --props=<file>
 export const Root: React.FC = () => (
@@ -19,7 +20,9 @@ export const Root: React.FC = () => (
   <Composition id="ren-pose-sheet" component={PoseSheet} {...POSE_SHEET_SIZE} fps={30} durationInFrames={1} defaultProps={{}} />
   <Composition id="ren-hand-grid-v2" component={HandGrid} {...handGridSize(HANDS_V2.length)} fps={30} durationInFrames={1} defaultProps={{guides: false, hands: HANDS_V2}} />
   <Composition id="ren-rig-hands" component={HandTest} width={1080} height={1920} fps={30} durationInFrames={1} defaultProps={{}} />
-  <Composition id="ren-rig-explainer" component={Explainer} width={1080} height={1920} fps={RIG_EXPLAINER_FPS} durationInFrames={RIG_EXPLAINER_OUT_FRAMES} defaultProps={{}} />
+  <Composition id="ren-rig-explainer" component={Explainer} width={1080} height={1920} fps={RIG_EXPLAINER_FPS} durationInFrames={RIG_EXPLAINER_OUT_FRAMES} defaultProps={{variant: "full" as const}} />
+  <Composition id="ren-still-explainer" component={StillExplainer} width={1080} height={1920} fps={STILL_EXPLAINER_FPS} durationInFrames={STILL_EXPLAINER_OUT_FRAMES} defaultProps={{}} />
+  <Composition id="ren-rig-explainer-calm" component={Explainer} width={1080} height={1920} fps={RIG_EXPLAINER_FPS} durationInFrames={RIG_EXPLAINER_OUT_FRAMES} defaultProps={{variant: "calm" as const}} />
   <Composition id="ren-rig-test" component={RigTest} width={1080} height={1920} fps={RIG_TEST_FPS} durationInFrames={RIG_TEST_OUT_FRAMES} defaultProps={{}} />
   <Composition id="thumbnail" component={Thumbnail} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{} as ThumbProps} />
   <Composition

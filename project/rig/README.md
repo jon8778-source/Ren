@@ -29,6 +29,8 @@ In the cloud container, add `--browser-executable /opt/pw-browsers/chromium_head
   for Remotion).
 - Explainer-style version: `cd remotion && npx remotion render src/index.ts ren-rig-explainer ../rig/test-clip/ren-rig-explainer.mp4`
   (`remotion/src/rig/Explainer.tsx`; shared pose blending in `remotion/src/rig/motion.ts`).
+- Calm and still versions: `ren-rig-explainer-calm`, `ren-still-explainer` (render the same way, to
+  `../rig/test-clip/<id>.mp4`).
 - Checks (boots vs body, foot drift, eases, mouth holds, explainer stillness): `cd remotion && npx tsx src/rig/checkClip.ts`.
 - Clip: `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`
   (`remotion/src/rig/RigTest.tsx` holds the timeline). Report: `rig/test-clip/report.md`.

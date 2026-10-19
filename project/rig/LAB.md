@@ -41,6 +41,13 @@ Nothing from here is used in episodes.
 - **Smoother joints:** the hip piece's bulge and outline are gone (`torso-trim.png`: only its fill is kept,
   under the shirt and inside the thighs); soft ellipse patches of the clothes' colour cover the elbow, knee
   and shoulder seams (`joints` in rig.json, drawn by RenRig.tsx). Check: `rig/ren/checks/joints-before-after.png`.
+- **Two more versions of the boots clip** (both 60 fps, same script, voice and timings):
+  - `ren-rig-explainer-calm`: the explainer without the pointing and thumbs-up poses (arms down with a "?" at
+    "which pair", a wave to finish).
+  - `ren-still-explainer` (`remotion/src/rig/StillExplainer.tsx`): Ren as a still full-body drawing per line,
+    like the episodes (slide in, one small pop per change, no lip sync); the motion comes from price cards that
+    count up, a VS badge, a "?", a Follow button, and a camera that glides between Ren and the cards.
+  Waiting for the owner to compare.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.
