@@ -770,7 +770,29 @@
    "bone": -46.46,
    "z": 51,
    "slot": "hand-r",
-   "wrist_width": 65.5
+   "wrist_width": 65.5,
+   "grip": [
+    299.3,
+    130.3
+   ],
+   "front": [
+    [
+     199,
+     0
+    ],
+    [
+     364,
+     0
+    ],
+    [
+     364,
+     97
+    ],
+    [
+     199,
+     97
+    ]
+   ]
   },
   "hand-relaxed-l": {
    "src": "rig/ren/hand-relaxed-l.png",
@@ -884,7 +906,29 @@
    "bone": -133.6,
    "z": 51,
    "slot": "hand-l",
-   "wrist_width": 65.6
+   "wrist_width": 65.6,
+   "grip": [
+    63.8,
+    130.2
+   ],
+   "front": [
+    [
+     0,
+     0
+    ],
+    [
+     165,
+     0
+    ],
+    [
+     165,
+     97
+    ],
+    [
+     0,
+     97
+    ]
+   ]
   },
   "hand-pointout-r": {
    "src": "rig/ren/hand-point-l.png",
@@ -923,6 +967,88 @@
    "z": 51,
    "slot": "hand-l",
    "wrist_width": 70.8
+  },
+  "hand-holdout-r": {
+   "src": "rig/ren/hand-hold-l.png",
+   "w": 364,
+   "h": 359,
+   "pivot": [
+    320.1,
+    316.6
+   ],
+   "parent": "forearm-r",
+   "attach": [
+    39.6,
+    272.0
+   ],
+   "scale": 0.5371,
+   "bone": -133.6,
+   "z": 51,
+   "slot": "hand-r",
+   "wrist_width": 65.6,
+   "grip": [
+    63.8,
+    130.2
+   ],
+   "front": [
+    [
+     0,
+     0
+    ],
+    [
+     165,
+     0
+    ],
+    [
+     165,
+     97
+    ],
+    [
+     0,
+     97
+    ]
+   ]
+  },
+  "hand-holdout-l": {
+   "src": "rig/ren/hand-hold-r.png",
+   "w": 364,
+   "h": 359,
+   "pivot": [
+    43.0,
+    316.7
+   ],
+   "parent": "forearm-l",
+   "attach": [
+    110.8,
+    271.9
+   ],
+   "scale": 0.5371,
+   "bone": -46.46,
+   "z": 51,
+   "slot": "hand-l",
+   "wrist_width": 65.5,
+   "grip": [
+    299.3,
+    130.3
+   ],
+   "front": [
+    [
+     199,
+     0
+    ],
+    [
+     364,
+     0
+    ],
+    [
+     364,
+     97
+    ],
+    [
+     199,
+     97
+    ]
+   ]
   },
   "thigh-r": {
    "src": "rig/ren/thigh-r.png",
@@ -1138,6 +1264,14 @@
    "hand-pointout-l": {
     "rest": -0.82,
     "wrist_width": 70.8
+   },
+   "hand-holdout-r": {
+    "rest": -133.6,
+    "wrist_width": 65.6
+   },
+   "hand-holdout-l": {
+    "rest": -46.46,
+    "wrist_width": 65.5
    }
   }
  }

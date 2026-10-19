@@ -13,7 +13,13 @@ Nothing from here is used in episodes.
   (`bone`) = perpendicular to the wrist, wrist anchor (`pivot`) = on that line, 10 rig units inside the cut,
   attached at the forearm's end. Sheet hands share one scale (x0.537, was x0.476) so their wrists are 85% of
   the cuff width. Neutral wrists turn in 5 degrees so the relaxed fingers point straight down. Values in
-  `rig.json` -> `hands`. Check: `rig/ren/checks/hand-grid.png`. Waiting for approval.
+  `rig.json` -> `hands`. Check: `rig/ren/checks/hand-grid.png`. Approved.
+- **Gate 3, pose library:** `remotion/src/rig/poses.ts` holds eight named poses (neutral, wave, holdOne,
+  holdBoth, pointFloor, thumbsUp, wince, celebrate): joint angles, a hand per side (wrist angle or a world
+  tilt), a face, and boots held or on the floor. Holding uses new `hand-holdout-*` parts (the other side's
+  hold art, so the grip opens outward) with a grip point and a finger clip in `rig.json`; the renderer draws
+  the fingers again in front of the boot. Boots moved to `remotion/src/rig/Boot.tsx`, tags above the shaft.
+  Stills: `rig/ren/checks/poses/`. Waiting for approval.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

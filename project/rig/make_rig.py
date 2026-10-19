@@ -11,8 +11,9 @@ import shutil
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw
 from scipy import ndimage
+from scipy.spatial import ConvexHull
 
 HERE = Path(__file__).resolve().parent
 P = HERE / "ren" / "parts"
@@ -230,6 +231,39 @@ for side in "rl":
 # Pointing outward: the other column's pointing hand on each arm (its finger points away from the body)
 for side, other, d in (("r", "l", (1, 0)), ("l", "r", (-1, 0))):
     hand(f"hand-pointout-{side}", f"hand-point-{other}", d, side, k_hand)
+
+
+# Holding: the hollow of the C-shaped hold hand is the grip (where a held object's centre line passes).
+# "front" is a clip polygon over the fingers above the hollow; the renderer draws that part again in
+# front of the held prop, so the prop sits between the palm (behind) and the fingers (in front).
+def grip_geometry(src):
+    m = alpha(src)
+    ys, xs = np.nonzero(m)
+    pts = np.c_[xs, ys]
+    hull_img = Image.new("L", (m.shape[1], m.shape[0]))
+    ImageDraw.Draw(hull_img).polygon([tuple(map(int, p)) for p in pts[ConvexHull(pts).vertices]], fill=1)
+    inside = np.array(hull_img) > 0
+    lab_h, nh = ndimage.label(inside & ~m)
+    hollow = lab_h == max(range(1, nh + 1), key=lambda i: (lab_h == i).sum())
+    hy, hx = np.nonzero(hollow)
+    return np.array([hx.mean(), hy.mean()]), hollow
+
+
+for side, other in (("r", "l"), ("l", "r")):
+    for name, src in ((f"hand-hold-{side}", f"hand-hold-{side}"), (f"hand-holdout-{side}", f"hand-hold-{other}")):
+        if name not in rig:
+            hand(name, src, SHEET_HANDS["hold"][other], side, k_hand)
+        g, hollow = grip_geometry(src)
+        cols = np.nonzero(hollow.any(0))[0]
+        cut = int(np.median([np.nonzero(hollow[:, x])[0].min() for x in cols])) + 4  # underside of the fingers
+        w = meta[src]["w"]
+        # Clip: the fingers, i.e. everything above the cut from 35 px before the hollow to the hand's open side
+        if g[0] > w / 2:
+            poly = [[int(cols.min()) - 35, 0], [w, 0], [w, cut], [int(cols.min()) - 35, cut]]
+        else:
+            poly = [[0, 0], [int(cols.max()) + 35, 0], [int(cols.max()) + 35, cut], [0, cut]]
+        rig[name]["grip"] = [round(float(v), 1) for v in g]
+        rig[name]["front"] = poly
 
 # Legs: keep the sheet's own geometry at hip, knee and ankle
 KNEE = 1683

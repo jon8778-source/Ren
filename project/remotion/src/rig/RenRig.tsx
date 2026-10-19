@@ -5,7 +5,7 @@ import rigData from "./ren-rig.json";
 // rig/make_rig.py): frame = parentFrame * T(attach) * R(angle) * S(scale ratio); image = frame * R(-bone+90) * T(-pivot).
 // Angles are degrees, 0 = the bone hanging straight down from its parent, positive = clockwise.
 
-type Part = {src: string; w: number; h: number; pivot: number[]; parent: string | null; attach: number[] | null; scale: number; bone: number; z: number; slot?: string; width?: number};
+type Part = {src: string; w: number; h: number; pivot: number[]; parent: string | null; attach: number[] | null; scale: number; bone: number; z: number; slot?: string; width?: number; grip?: number[]; front?: number[][]};
 const PARTS = rigData.parts as unknown as Record<string, Part>;
 const COLORS = rigData.colors;
 
@@ -17,7 +17,9 @@ export type RigPose = {
   slots?: Partial<Record<string, string>>; // slot -> part name, e.g. {"mouth": "mouth-o"}
   offsets?: Partial<Record<string, [number, number]>>; // extra translation in the parent's image px (brow raise)
   z?: Partial<Record<string, number>>;     // layer overrides, e.g. bring an arm in front of the torso
-  props?: {part: string; at: [number, number]; node: React.ReactNode; z: number}[]; // drawn in a part's frame
+  // Drawn in a part's frame, or on the canvas when part is omitted. A hold hand's fingers ("front" in rig.json)
+  // are drawn a second time at the hand's layer + 0.4, so a prop at the hand's layer + 0.2 sits between them.
+  props?: {part?: string; at: [number, number]; node: React.ReactNode; z: number}[];
 };
 
 export const DEFAULT_SLOTS: Record<string, string> = {
@@ -89,6 +91,9 @@ export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean;
       {visible.map((n) => (
         <Img key={n} src={staticFile(PARTS[n].src)} style={{position: "absolute", left: 0, top: 0, width: PARTS[n].w, height: PARTS[n].h, transformOrigin: "0 0", transform: css(images[n]), zIndex: Math.round(layer(n) * 10)}} />
       ))}
+      {visible.filter((n) => PARTS[n].front).map((n) => (
+        <Img key={`${n}-front`} src={staticFile(PARTS[n].src)} style={{position: "absolute", left: 0, top: 0, width: PARTS[n].w, height: PARTS[n].h, transformOrigin: "0 0", transform: css(images[n]), zIndex: Math.round((layer(n) + 0.4) * 10), clipPath: `polygon(${PARTS[n].front!.map(([x, y]) => `${x}px ${y}px`).join(", ")})`}} />
+      ))}
       {debug
         ? visible.filter((n) => PARTS[n].parent && !/^(eye|brow|mouth|nose|glasses)/.test(n)).map((n) => {
             const [x, y] = apply(frames[n], [0, 0]);
@@ -96,7 +101,7 @@ export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean;
           })
         : null}
       {(pose.props ?? []).map((pr, i) => (
-        <div key={`prop${i}`} style={{position: "absolute", left: 0, top: 0, transformOrigin: "0 0", transform: `${css(frames[pr.part])} translate(${pr.at[0]}px, ${pr.at[1]}px)`, zIndex: Math.round(pr.z * 10)}}>{pr.node}</div>
+        <div key={`prop${i}`} style={{position: "absolute", left: 0, top: 0, transformOrigin: "0 0", transform: `${pr.part ? css(frames[pr.part]) + " " : ""}translate(${pr.at[0]}px, ${pr.at[1]}px)`, zIndex: Math.round(pr.z * 10)}}>{pr.node}</div>
       ))}
     </AbsoluteFill>
   );
