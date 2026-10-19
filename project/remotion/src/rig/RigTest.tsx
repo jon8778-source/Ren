@@ -1,22 +1,26 @@
 import {AbsoluteFill, Audio, Easing, interpolate, staticFile, useCurrentFrame} from "remotion";
 import {FONT} from "../fonts";
 import {Boot, BOOT_GEOM, BOOT_RIG, type BootKind} from "./Boot";
-import {ANKLE_REST, legIK, minRootY} from "./legs";
+import {frontLegs, MAX_CROUCH} from "./legs";
 import {FLOOR, flipFor, POSES, tiltToAngle} from "./poses";
 import rigData from "./ren-rig.json";
 import {RenRig, type RigPose, solve} from "./RenRig";
 import TL from "./test-timeline.json";
 
-// 15-second 9:16 rig test, built from the pose library (poses.ts): walk in, wave, hold the $60 boot, hold
-// both (wince at the price), squat and set them down either side, point at them, thumbs-up. Every pose change
-// eases over 6-10 frames (sine ease, joints overlapping by a frame or two); hands swap halfway through a move. Mouths come from Rhubarb (rig/test_voice.py).
+// 15-second 9:16 rig test, built from the pose library (poses.ts): walk in towards the camera, wave, hold the $60
+// boot, hold both (wince at the price), crouch and set them down either side, point at them, thumbs-up.
+// Claymation-style motion: the body is posed on twos (each pose held 2 frames, 15 a second), with a faint
+// boil (tiny pose-to-pose wobble), squash on landings and moves that overshoot a little and settle. Every pose
+// change eases over 10 frames, joints overlapping by a frame or two; hands swap halfway through a move.
+// Knee bends are drawn as foreshortening (legs.ts). Mouths come from Rhubarb (rig/test_voice.py).
 const FPS = 30;
 const PARTS = rigData.parts as unknown as Record<string, {bone: number; grip?: number[]}>;
 const C = {bg: "#F3F5F8", ink: "#13233F", line: "#E3E7EE"};
 const S = 0.56; // canvas px per rig unit
 const X_END = 540, ROOT_Y = 1000;
 const FLOOR_Y = ROOT_Y + FLOOR * S;
-const ease = Easing.inOut(Easing.sin); // gentler than cubic: peak speed about half
+const ease = Easing.inOut(Easing.sin);
+const settle = Easing.bezier(0.45, 0, 0.3, 1.18); // pose changes: ease in, overshoot ~5%, settle back
 const clamp = {extrapolateLeft: "clamp", extrapolateRight: "clamp"} as const;
 const s = (sec: number) => Math.round(sec * FPS);
 const apply = (m: number[], p: number[]) => [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]];
@@ -41,9 +45,9 @@ const SEQ: [number, string, number][] = [
   [s(11.3), "thumbsUp", 10],
 ];
 const WALK = s(1.4); // walk-in frames (under 1.5 s)
-const SQUAT = {down: [s(8.8), s(8.8) + 10], up: [s(9.24), s(9.24) + 10], depth: 250}; // root drop in rig units
-const RELEASE = s(8.8) + 11; // boots let go at the bottom of the squat
-const DROP_FRAMES = 4;
+const CROUCH = {down: [s(8.8), s(8.8) + 10], up: [s(9.24), s(9.24) + 10]};
+const RELEASE = s(8.8) + 11; // boots let go at the bottom of the crouch, standing on the floor
+const DROP_FRAMES = 5;       // the hands can't reach the floor: the boots drop the last bit and land with a squash
 const WINCE = [s(8.1), s(8.8)];
 const BLINKS = [2.45, 5.85, 12.75].map(s);
 
@@ -72,7 +76,7 @@ const blendAt = (f: number): Blend => {
   const [start, , dur] = SEQ[i];
   if (i === 0 || f >= start + dur + MAX_DELAY) return {...cur, seg: i};
   const prev = RES[i - 1];
-  const tAt = (delay: number) => ease(Math.min(1, Math.max(0, (f - start - delay) / dur)));
+  const tAt = (delay: number) => settle(Math.min(1, Math.max(0, (f - start - delay) / dur)));
   const t = tAt(0);
   const keys = new Set([...Object.keys(prev.angles), ...Object.keys(cur.angles)]);
   const angles: Record<string, number> = {};
@@ -95,77 +99,69 @@ const blendAt = (f: number): Blend => {
   return {angles, hands: {r: hand("r"), l: hand("l")}, brows: prev.brows * (1 - t) + cur.brows * t, eyes: pick(prev.eyes, cur.eyes), rest: pick(prev.rest, cur.rest), seg: i};
 };
 
-// ---- Walk-in: six steps with planted feet; each foot lifts and swings to its next plant ----
-const STEPS = 6, TS = WALK / STEPS, X0 = -110, LIFT = 80, BOB = 14;
-const V = 1 / 0.85; // travel profile: steady speed, then slows to a stop over the last 30%
-const travel = (u: number) => (u < 0.7 ? V * u : V * (0.7 + 0.15 - (1 - u) ** 2 / 0.6));
-const bodyX = (f: number) => X0 + (X_END - X0) * travel(Math.min(1, Math.max(0, f / WALK)));
-const footOff = {r: ANKLE_REST.r[0] * S, l: ANKLE_REST.l[0] * S};
-const FOOT_Y = {r: ROOT_Y + ANKLE_REST.r[1] * S, l: ROOT_Y + ANKLE_REST.l[1] * S};
-// Plants: [frame from, frame to, x from, x to] per step; the leading (left, screen right) foot steps first
-const PLANTS = (() => {
-  const last = {r: bodyX(0) + footOff.r, l: bodyX(0) + footOff.l};
-  const steps: {side: "r" | "l"; f0: number; f1: number; x0: number; x1: number}[] = [];
-  for (let k = 0; k < STEPS; k++) {
-    const side = k % 2 === 0 ? "l" : "r";
-    const f0 = k * TS, f1 = (k + 1) * TS;
-    let x1 = bodyX(Math.min(WALK, f1 + TS)) + footOff[side];
-    // Feet never cross: keep a planted foot at least 60% of the hip spacing from the other foot
-    const minGap = 0.6 * (footOff.l - footOff.r);
-    x1 = side === "r" ? Math.min(x1, last.l - minGap) : Math.max(x1, last.r + minGap);
-    steps.push({side, f0, f1, x0: last[side], x1});
-    last[side] = x1;
-  }
-  return steps;
-})();
-const footAt = (side: "r" | "l", f: number): number[] => {
-  let x = bodyX(0) + footOff[side], y = FOOT_Y[side];
-  for (const st of PLANTS.filter((p) => p.side === side)) {
-    if (f >= st.f1) x = st.x1;
-    else if (f > st.f0) {
-      const u = (f - st.f0) / (st.f1 - st.f0);
-      x = st.x0 + (st.x1 - st.x0) * ease(u);
-      y -= LIFT * Math.sin(Math.PI * u) ** 2; // lifts and lands from rest
-    }
-  }
-  return [x, y];
+// ---- Walk-in towards the camera: Ren's art faces front, so he walks out of the distance, growing ----
+const STEPS = 4, TS = WALK / STEPS;
+const K0 = 0.26;          // scale at the start (far away)
+const HORIZON = 640;      // canvas y the floor converges to
+const LIFT = 150, BOB = 14, SWAY = 14; // rig units: foot lift, rise at the passing pose, sideways weight shift
+const scaleAt = (f: number) => K0 + (S - K0) * Easing.out(Easing.quad)(Math.min(1, f / WALK));
+const floorAt = (k: number) => HORIZON + (FLOOR_Y - HORIZON) * (k / S);
+const boil = (n: number, f: number) => {
+  const v = Math.sin(n * 12.9898 + Math.floor(f / 2) * 78.233) * 43758.5453;
+  return v - Math.floor(v) - 0.5; // -0.5..0.5, new value every 2 frames
 };
 
+const KIND_OF = {r: "cheap", l: "prem"} as const;
 type Built = {pose: RigPose; held: Partial<Record<"r" | "l", {kind: BootKind; x: number; y: number; rot: number}>>; blend: ReturnType<typeof blendAt>};
 
-const build = (f: number): Built => {
+const build = (f: number, faceF: number = f): Built => {
   const b = blendAt(f);
   const walking = f < WALK;
   const angles: Record<string, number> = {...b.angles};
 
-  // Root and feet
-  let x = X_END, rootY = ROOT_Y;
-  let feet = {r: [X_END + footOff.r, FOOT_Y.r], l: [X_END + footOff.l, FOOT_Y.l]};
+  // Root, scale and legs
+  let x = X_END, k = S, rootY = ROOT_Y, crouch = 0, squash = 0;
+  const lift = {r: 0, l: 0};
   if (walking) {
-    x = bodyX(f);
-    feet = {r: footAt("r", f), l: footAt("l", f)};
-    const u = (f % TS) / TS;
-    const fade = interpolate(f, [WALK - TS, WALK], [1, 0], clamp);
-    rootY = ROOT_Y + BOB * (0.5 + 0.5 * Math.cos(2 * Math.PI * u)) * fade; // lowest as a foot lands, no kink
-    const swing = Math.sin((Math.PI * f) / TS) * 14 * fade; // arms swing with the steps
-    angles["upperarm-r"] += swing;
-    angles["upperarm-l"] += swing;
-    angles["forearm-r"] += swing * 0.4;
-    angles["forearm-l"] += swing * 0.4;
-    angles.head = (angles.head ?? 0) - swing * 0.12;
+    k = scaleAt(f);
+    const step = Math.floor(f / TS), u = (f % TS) / TS;
+    const swing = step % 2 === 0 ? "l" : "r"; // the leading (left, screen right) foot steps first
+    const up = Math.sin(Math.PI * u) ** 2;    // 0 at each footfall, 1 at the passing pose
+    lift[swing] = LIFT * up;
+    // Weight shifts over the standing foot; the body rises at the passing pose and squashes as a foot lands
+    const toStance = swing === "l" ? -1 : 1;  // standing on the right foot (screen left) shifts left
+    x = X_END + toStance * SWAY * k * Math.sin(Math.PI * u);
+    angles.torso = (angles.torso ?? 0) - toStance * 1.8 * Math.sin(Math.PI * u);
+    rootY = floorAt(k) - FLOOR * k - BOB * k * up;
+    squash = 0.03 * (1 - up);
+    const arm = Math.sin((Math.PI * f) / TS) * 7; // arms swing with the steps
+    angles["upperarm-r"] += arm;
+    angles["upperarm-l"] += arm;
+    angles["forearm-r"] += Math.abs(arm) * 0.8;
+    angles["forearm-l"] -= Math.abs(arm) * 0.8;
+    angles.head = (angles.head ?? 0) + toStance * 1.2 * Math.sin(Math.PI * u);
   } else {
-    const drop = key(f, [[SQUAT.down[0], 0], [SQUAT.down[1], SQUAT.depth], [SQUAT.up[0], SQUAT.depth], [SQUAT.up[1], 0]]);
+    crouch = key(f, [[CROUCH.down[0], 0], [CROUCH.down[1], crouchDepth], [CROUCH.up[0], crouchDepth], [CROUCH.up[1], 0]]);
     const breathe = Math.sin(((f - WALK) / FPS / 3.2) * Math.PI * 2) * 1.6;
     // Living hold: a slow drift of about a degree in the arms and head (4-5 s cycles), so no pose freezes dead
     const live = Math.min(1, (f - WALK) / 15);
     angles["upperarm-r"] += Math.sin((f / FPS / 4.1) * Math.PI * 2) * 1.1 * live;
     angles["upperarm-l"] += Math.sin((f / FPS / 4.7) * Math.PI * 2 + 1.3) * 1.1 * live;
     angles.head = (angles.head ?? 0) + Math.sin((f / FPS / 5.3) * Math.PI * 2 + 0.6) * 0.8 * live;
-    rootY = ROOT_Y + drop * S + breathe;
+    rootY = ROOT_Y + breathe;
+    // Landing from the walk: squash, then a small rebound
+    squash = key(f, [[WALK, 0.03], [WALK + 4, 0.045], [WALK + 9, -0.012], [WALK + 14, 0]]);
   }
-  // Never over-stretch a leg: the root sinks if the feet are far apart
-  rootY = Math.max(rootY, minRootY({r: [feet.r[0] / S, feet.r[1] / S], l: [feet.l[0] / S, feet.l[1] / S]}, x / S) * S);
-  Object.assign(angles, legIK({r: [(feet.r[0] - x) / S, (feet.r[1] - rootY) / S], l: [(feet.l[0] - x) / S, (feet.l[1] - rootY) / S]}));
+  // Crouching also bows the upper body towards the camera: the torso looks shorter, the shoulders come down
+  const bow = crouchDepth > 0 ? crouch / crouchDepth : 0;
+  // Boil: hand-posed clay never sits exactly still between frames
+  for (const [i, n] of ["head", "upperarm-r", "upperarm-l", "forearm-r", "forearm-l"].entries()) angles[n] = (angles[n] ?? 0) + boil(i + 1, f) * 0.8;
+  x += boil(11, f) * 1.2;
+  rootY += boil(12, f) * 1.0;
+  const legs = frontLegs(lift, crouch);
+  Object.assign(angles, legs.angles);
+  rootY += legs.drop * k; // feet stay on the floor as the knees bend
+  const stretch: RigPose["stretch"] = {...legs.stretch, torso: [1 + squash * 0.5 + 0.06 * bow, 1 - squash - 0.36 * bow]};
 
   // Wave: the forearm rocks from the elbow and the hand follows it
   const waveEnv = interpolate(f, [s(1.75), s(1.95), s(2.7), s(2.92)], [0, 1, 1, 0], clamp);
@@ -185,14 +181,14 @@ const build = (f: number): Built => {
   }
 
   // Face
-  const lip = TL.mouth[Math.min(f, TL.mouth.length - 1)];
+  const lip = TL.mouth[Math.min(faceF, TL.mouth.length - 1)]; // mouths keep their own (Rhubarb) timing
   const rest = wincing ? "wince" : walking || f < SEQ[2][0] ? "smile" : b.rest;
   const mouth = lip === "rest" ? rest : lip;
   const blink = BLINKS.some((k) => f >= k && f < k + 4);
   const eyes = wincing ? "closed" : blink && b.eyes === "neutral" ? "closed" : b.eyes;
 
   const pose: RigPose = {
-    x, y: rootY, scale: S, angles,
+    x, y: rootY, scale: k, angles, stretch,
     slots: {"hand-r": b.hands.r.part, "hand-l": b.hands.l.part, mouth: `mouth-${mouth}`, "eye-r": `eye-${eyes}-r`, "eye-l": `eye-${eyes}-l`},
     offsets: {"brow-r": [0, brows], "brow-l": [0, brows]},
   };
@@ -209,11 +205,26 @@ const build = (f: number): Built => {
   return {pose, held, blend: b};
 };
 
+// Crouch depth: the lowest the hips need to go so the held boots stand on the floor at the bottom of the
+// crouch (searched once; capped at what the legs can do)
+let crouchDepth = 0;
+{
+  const soleGap = (d: number) => {
+    crouchDepth = d;
+    const held = build(RELEASE - 1).held;
+    return Math.min(...(["r", "l"] as const).map((side) => FLOOR_Y - (held[side]!.y + (BOOT_GEOM[KIND_OF[side]].soleY - BOOT_GEOM[KIND_OF[side]].gripY) * BOOT_RIG * S)));
+  };
+  let lo = 0, hi = MAX_CROUCH;
+  if (soleGap(hi) > 0) lo = hi;
+  else for (let i = 0; i < 20; i++) { const mid = (lo + hi) / 2; if (soleGap(mid) > 0) lo = mid; else hi = mid; }
+  crouchDepth = lo;
+}
+
 // When each boot appears in its hand: as the hand arrives at waist height, at the end of the move
 const APPEAR = {r: SEQ[2][0] + SEQ[2][2] - 2, l: SEQ[3][0] + SEQ[3][2] - 2};
-const KIND = {r: "cheap", l: "prem"} as const;
+const KIND = KIND_OF;
 
-export type BootState = {side: "r" | "l"; kind: BootKind; x: number; y: number; rot: number; scale: number; z: number};
+export type BootState = {side: "r" | "l"; kind: BootKind; x: number; y: number; rot: number; scale: number; z: number; squash?: number};
 export const bootsAt = (f: number, b: Built = build(f)): BootState[] => {
   const out: BootState[] = [];
   const atRelease = f >= RELEASE ? build(RELEASE - 1).held : null;
@@ -229,7 +240,9 @@ export const bootsAt = (f: number, b: Built = build(f)): BootState[] => {
       const from = atRelease[side]!;
       const t = interpolate(f, [RELEASE, RELEASE + DROP_FRAMES], [0, 1], {...clamp, easing: Easing.in(Easing.quad)});
       const floorY = FLOOR_Y - (BOOT_GEOM[kind].soleY - BOOT_GEOM[kind].gripY) * BOOT_RIG * S;
-      out.push({side, kind, x: from.x, y: from.y + (floorY - from.y) * t, rot: from.rot * (1 - t), scale: 1, z: 49});
+      const land = f - (RELEASE + DROP_FRAMES); // squash flat on landing, rebound, settle
+      const squash = land < 0 ? 0 : key(land, [[0, 0.16], [3, -0.06], [6, 0.02], [8, 0]]);
+      out.push({side, kind, x: from.x, y: from.y + (floorY - from.y) * t, rot: from.rot * (1 - t), scale: 1, z: 49, squash});
     }
   }
   return out;
@@ -237,13 +250,15 @@ export const bootsAt = (f: number, b: Built = build(f)): BootState[] => {
 
 export const RigTest: React.FC = () => {
   const f = useCurrentFrame();
-  const b = build(f);
-  const boots = bootsAt(f, b);
+  const fb = f - (f % 2); // on twos: the body holds each pose for 2 frames
+  const b = build(fb, f);
+  const boots = bootsAt(fb, b);
+  const k = b.pose.scale, floorY = fb < WALK ? floorAt(k) : FLOOR_Y;
   const cap = TL.captions.find((c) => f / FPS >= c.start - 0.05 && f / FPS <= c.end + 0.25);
   return (
     <AbsoluteFill style={{background: C.bg, fontFamily: FONT}}>
       <Audio src={staticFile("rig/test/voice.mp3")} />
-      <div style={{position: "absolute", left: b.pose.x - 290 * S, top: FLOOR_Y - 26 * S, width: 580 * S, height: 52 * S, borderRadius: "50%", background: C.line}} />
+      <div style={{position: "absolute", left: b.pose.x - 290 * k, top: floorY - 26 * k, width: 580 * k, height: 52 * k, borderRadius: "50%", background: C.line}} />
       <RenRig
         pose={{
           ...b.pose,
@@ -251,7 +266,9 @@ export const RigTest: React.FC = () => {
             at: [bt.x, bt.y] as [number, number], z: bt.z,
             node: (
               <div style={{position: "absolute", left: 0, top: 0, transformOrigin: "0 0", transform: `rotate(${bt.rot}deg) scale(${BOOT_RIG * S * bt.scale}) translate(${-BOOT_GEOM[bt.kind].shaftX}px, ${-BOOT_GEOM[bt.kind].gripY}px)`}}>
-                <Boot kind={bt.kind} flip={flipFor(bt.side)} />
+                <div style={{transformOrigin: `${BOOT_GEOM[bt.kind].shaftX}px ${BOOT_GEOM[bt.kind].soleY}px`, transform: `scale(${1 + (bt.squash ?? 0) * 0.6}, ${1 - (bt.squash ?? 0)})`}}>
+                  <Boot kind={bt.kind} flip={flipFor(bt.side)} />
+                </div>
               </div>
             ),
           })),

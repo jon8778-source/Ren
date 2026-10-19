@@ -25,7 +25,10 @@ Nothing from here is used in episodes.
   hand swaps mid-move), walks in over 1.4 s with planted feet (leg IK in `remotion/src/rig/legs.ts`), squats
   to set the boots down either side, points at both. Lip sync from Rhubarb (`rig/setup_rhubarb.sh`,
   `rig/test_voice.py`), mouths held 3+ frames. Checks: `remotion/src/rig/checkClip.ts`. Report:
-  `rig/test-clip/report.md`. Waiting for review.
+  `rig/test-clip/report.md`.
+- **Smoothing and claymation passes:** sine/overshoot easing with overlapping joints, body on twos with a
+  faint boil, squash and stretch, foreshortened knees (`legs.ts`, stretch support in `RenRig.tsx`), a walk
+  towards the camera and a crouch-and-bow set-down. Waiting for review.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

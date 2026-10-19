@@ -17,6 +17,10 @@ export type RigPose = {
   slots?: Partial<Record<string, string>>; // slot -> part name, e.g. {"mouth": "mouth-o"}
   offsets?: Partial<Record<string, [number, number]>>; // extra translation in the parent's image px (brow raise)
   z?: Partial<Record<string, number>>;     // layer overrides, e.g. bring an arm in front of the torso
+  // Non-uniform scale of a part in its own frame: [across the bone, along the bone]. Children follow the
+  // stretched joint but keep their own proportions. Used for foreshortening (a knee coming towards the
+  // camera shortens the thigh) and squash and stretch.
+  stretch?: Partial<Record<string, [number, number]>>;
   // Drawn in a part's frame, or on the canvas when part is omitted. A hold hand's fingers ("front" in rig.json)
   // are drawn a second time at the hand's layer + 0.4, so a prop at the hand's layer + 0.2 sits between them.
   props?: {part?: string; at: [number, number]; node: React.ReactNode; z: number}[];
@@ -53,11 +57,13 @@ export const solve = (pose: RigPose) => {
       const pf = frameOf(p.parent);
       const off = pose.offsets?.[name] ?? [0, 0];
       // attach point in the parent's frame: undo the parent's bone rotation and pivot
-      const local = apply(mul(R(-(par.bone - 90)), T(-par.pivot[0], -par.pivot[1])), [p.attach![0] + off[0], p.attach![1] + off[1]]);
+      const ps = pose.stretch?.[p.parent] ?? [1, 1];
+      const local = apply(mul(mul([ps[0], 0, 0, ps[1], 0, 0], R(-(par.bone - 90))), T(-par.pivot[0], -par.pivot[1])), [p.attach![0] + off[0], p.attach![1] + off[1]]);
       f = mul(mul(mul(pf, T(local[0], local[1])), R(a)), S(p.scale / par.scale));
     }
     frames[name] = f;
-    images[name] = mul(mul(f, R(-(p.bone - 90))), T(-p.pivot[0], -p.pivot[1]));
+    const st = pose.stretch?.[name] ?? [1, 1];
+    images[name] = mul(mul(mul(f, [st[0], 0, 0, st[1], 0, 0]), R(-(p.bone - 90))), T(-p.pivot[0], -p.pivot[1]));
     return f;
   };
   const visible = Object.keys(PARTS).filter((n) => !PARTS[n].slot || slots[PARTS[n].slot!] === n);

@@ -72,8 +72,8 @@ export const POSES: Record<string, PoseDef> = {
   },
   // Clip-only poses (not in the gate 3 sheet)
   setDown: {
-    label: "Setting both boots down (with a squat)",
-    angles: {"upperarm-r": 22, "forearm-r": 14, "upperarm-l": -22, "forearm-l": -14},
+    label: "Setting both boots down (with a crouch)",
+    angles: {"upperarm-r": 16, "forearm-r": 5, "upperarm-l": -16, "forearm-l": -5},
     hands: {r: {part: "hand-holdout-r", tilt: 0}, l: {part: "hand-holdout-l", tilt: 0}},
     held: {r: "cheap", l: "prem"},
   },

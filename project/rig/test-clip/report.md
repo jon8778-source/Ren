@@ -14,38 +14,41 @@ Every pose change eases over 10 frames (the limit was 6-10), with a sine ease an
 
 | Time | Action | Line (voice start-end) |
 |---|---|---|
-| 0.00-1.40 s | Walks in from the left: six steps with planted feet, each foot lifts and swings with the knee bending, body bob, arm swing; settles at centre | |
+| 0.00-1.40 s | Walks in towards the camera from the distance: four steps, foreshortened knee lifts, body bob, weight shift, arm swing; lands with a squash | |
 | 1.43-2.95 s | Eases into the wave (9 frames), forearm rocks from the elbow, happy eyes | "Hi, I'm Ren!" (1.75-2.93) |
 | 2.95-6.00 s | Eases into holding the $60 boot at waist height (10 frames); the boot appears as the hand arrives | "These boots cost sixty dollars." (3.35-5.27) |
 | 6.00-8.10 s | Left arm comes up with the $300 boot (10 frames) | "These ones cost three hundred." (6.35-8.08) |
 | 8.10-8.80 s | Wince: eyes shut, wince mouth, head turns away, brows drop; boots still held | |
-| 8.80-9.20 s | Squats (knees out), arms lower the boots either side of him and let go at the bottom; the boots drop straight down onto the floor (4 frames) | |
+| 8.80-9.20 s | Crouches and bows, arms lower the boots either side of him and let go; they drop the last bit and squash on landing | |
 | 9.24-11.30 s | Stands up while turning both hands into points at the boots on the floor (10 frames), brows raised | "So which pair is actually cheaper?" (9.35-11.32) |
 | 11.30-15.47 s | Thumbs-up at chest height (10 frames), happy eyes, smile; smile held 0.66 s after the voice ends | "The answer might surprise you. Follow to find out!" (11.85-14.81) |
 
-## Smoothing pass
-Measured how far the hands, head and feet move each frame, then:
-- **Sine ease instead of cubic:** same 10 frames, but the peak speed is about half. The waving hand's
-  fastest frame went from 168 px to 90 px of travel.
-- **Overlapping action:** the upper arm leads, the forearm follows 1 frame later and the hand 2 frames later
-  (each still a 10-frame ease), so arms swing instead of moving as one rigid block.
-- **Walk:** the body bob is a smooth wave (it had a sharp kink at every footfall), and each foot lifts and
-  lands from rest (it used to launch at full speed).
-- **Living holds:** a slow drift of about 1 degree in the arms and head (4-5 s cycles), so poses never freeze
-  dead before the next move.
-- Tried and dropped: cross-fading hand swaps. Two differently drawn hands showed at once, which looked worse
-  than a clean swap.
+## Claymation pass
+- **On twos:** the body holds each pose for 2 frames (15 poses a second), the stop-motion rhythm. Mouths keep
+  Rhubarb's own timing.
+- **Boil:** a tiny pose-to-pose wobble (under 1 degree in the head and arms, about 1 px in the body), new every
+  2 frames, like hand-posed clay. This breaks the episode rule against shaking; it is a lab experiment.
+- **Squash and stretch:** the body squashes as each foot lands and on arriving from the walk (then rebounds);
+  the boots squash flat when they land and spring back.
+- **Overshoot:** pose changes overshoot by about 5% and settle (still 10-frame moves, joints overlapping).
+- **Foreshortened knees:** the leg art faces the camera, so a knee bend is now drawn as the knee coming
+  towards the camera: the thigh looks shorter (and a touch wider) and everything below rises with it.
+  Nothing splays sideways any more except a small knee parting in the crouch.
+- **Walk towards the camera** instead of across: Ren grows out of the distance over 1.4 s in four steps, each
+  a foreshortened knee lift, with a body bob, his weight shifting over the standing foot, and arm swing.
+- **Crouch to set the boots down:** knees bend (foreshortened, parting slightly), the upper body bows towards
+  the camera, the arms reach down. Front-view art can't reach the floor, so the boots drop the last ~200 px
+  and land with a squash.
 
 ## What looked stiff or broken
-- **Walk:** now 1.4 s with planted feet: the standing foot stays put while the other lifts and swings, so no
-  more skating. Feet never cross (a minimum gap is enforced). It is still a front-facing side-step, because
-  the legs are front-facing art; the lifted knee swings out sideways rather than forward.
+- **Walk:** towards the camera, which suits the front-facing art. The foot doesn't stay pinned to one spot
+  on the floor while Ren grows (it moves with him), but at this distance it reads as walking, not sliding.
 - **Hand swaps:** each hand swaps halfway through its move, and a hand closing on a boot swaps at 75%, as
   it arrives. For about 3 frames at 3.1 s the empty hold hand is visible at shoulder height before the boot
   appears in it.
-- **Set-down:** reads as setting the boots down. Ren can't bend forward (front view), so he squats with his
-  knees out and the boots drop the last ~50 px straight down. The squat is a wide "plie"; a real crouch
-  would need side-view legs.
+- **Set-down:** a crouch and a bow towards the camera. Even at full depth his hands stay ~200 px above the
+  floor, so the boots drop the rest and squash on landing. A real bend at the waist needs side-view art.
+- **Price tags** squash with the boots when they land (they are part of the boot drawing).
 - **Wince:** now happens while holding both boots (no free hands), so it is face and head only.
 - **Arms:** every arm keeps an elbow bend; no straight T-poses.
 
@@ -53,6 +56,7 @@ Measured how far the hands, head and feet move each frame, then:
 - None at the elbows, wrists or knees in the frames I checked (walk, wave, holds, squat, point, thumbs-up). The
   sleeve and pants discs cover every bend, including the deep squat.
 - Wrists: every hand sits on the cuff at any arm angle (gate 2).
+- Foreshortened thighs keep their knee disc, so no gap opens at the knee in the steps or the crouch.
 - Unchanged from the first test: a raised arm shows its rounded shoulder cap over the shirt (a seam, not a
   gap), and the dark hip piece bulges below the shirt hem. Most visible in the squat.
 
