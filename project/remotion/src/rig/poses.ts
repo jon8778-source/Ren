@@ -9,7 +9,9 @@ import {DEFAULT_SLOTS, type RigPose, solve} from "./RenRig";
 
 const PARTS = rigData.parts as unknown as Record<string, {bone: number; grip?: number[]; w: number; h: number}>;
 
-export type HandSpec = {part: string; angle?: number; tilt?: number}; // angle: wrist bend; tilt: hand image's world tilt instead
+// angle: wrist bend; tilt: hand image's world tilt instead; via: in-between hands shown on the way into this one
+// (drawn in the same orientation, e.g. a fist with the thumb tucked, then half raised, then the thumbs-up)
+export type HandSpec = {part: string; angle?: number; tilt?: number; via?: string[]};
 export type Face = {eyes?: string; mouth?: string; brows?: number}; // brows: vertical brow offset (head px, negative = raised)
 export type PoseDef = {
   label: string;
@@ -48,14 +50,14 @@ export const POSES: Record<string, PoseDef> = {
   pointFloor: {
     label: "5. Pointing at a boot on the floor",
     angles: {...ARMS_DOWN, "upperarm-l": -18, "forearm-l": -42, head: 4},
-    hands: {r: relaxed.r, l: {part: "hand-pointout-l", angle: 28}},
+    hands: {r: relaxed.r, l: {part: "hand2-point-down-l", angle: 18, via: ["hand2-point-curl-l"]}},
     face: {brows: -40},
     floor: {r: "cheap", l: "prem"},
   },
   thumbsUp: {
     label: "6. Thumbs-up",
     angles: {...ARMS_DOWN, "upperarm-l": -10, "forearm-l": 128},
-    hands: {r: relaxed.r, l: {part: "hand-thumbsup-l", tilt: 0}},
+    hands: {r: relaxed.r, l: {part: "hand2-thumbs-front-l", tilt: 0, via: ["hand2-thumbs-tuck-l", "hand2-thumbs-half-l"]}},
     face: {eyes: "happy", mouth: "smile"},
   },
   wince: {
@@ -80,7 +82,7 @@ export const POSES: Record<string, PoseDef> = {
   pointBoth: {
     label: "Pointing at both boots on the floor",
     angles: {"upperarm-r": 18, "forearm-r": 42, "upperarm-l": -18, "forearm-l": -42},
-    hands: {r: {part: "hand-pointout-r", angle: -28}, l: {part: "hand-pointout-l", angle: 28}},
+    hands: {r: {part: "hand2-point-down-r", angle: -18, via: ["hand2-point-curl-r"]}, l: {part: "hand2-point-down-l", angle: 18, via: ["hand2-point-curl-l"]}},
     face: {brows: -40},
     floor: {r: "cheap", l: "prem"},
   },

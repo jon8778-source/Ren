@@ -315,9 +315,59 @@ for side in ["r", "l"]:
     shoe_top = meta[so]["origin"][1] + 18                 # a little into the shoe opening
     part(so, so, sheet(so, (ankle_s[0], shoe_top)), sh_, sheet(sh_, ankle_s), z=34)
 
+# Less puppet-like joints (drawn by RenRig.tsx).
+# 1. The torso's dark hip piece bulged below the shirt and drew a round outline across the thighs. Its fill is
+#    the thighs' own colour, so keep only its fill where the thighs are, feathered, as filler under the shirt,
+#    and drop its outline ring, except where that outline is the jacket's own hem (next to jacket or T-shirt
+#    pixels). Written as torso-trim.png and used as the torso image; the jacket and T-shirt are untouched.
+tm = np.array(Image.open(P / "torso.png").convert("RGBA")).astype(float)
+r_, b_, a_ = tm[..., 0], tm[..., 2], tm[..., 3]
+lum = tm[..., :3].mean(-1)
+solid = a_ > 128
+clothes = solid & (((b_ - r_) > 14) | (lum > 150))      # navy jacket or white T-shirt
+grey = solid & ~clothes & (lum > 38) & (lum < 95)        # grey pants fill
+lab_h, _ = ndimage.label(grey)
+fill = lab_h == lab_h[730, int(tm.shape[1] / 2)]          # the hip piece's fill
+hem_line = ndimage.distance_transform_edt(~clothes) <= 4  # outline pixels that belong to the jacket/shirt hem
+thigh_x = [rig["thigh-r"]["attach"][0] - rig["thigh-r"]["pivot"][0] + 14, rig["thigh-l"]["attach"][0] - rig["thigh-l"]["pivot"][0] + meta["thigh-l"]["w"] - 14]
+inside = np.zeros_like(fill)
+inside[:, int(thigh_x[0]): int(thigh_x[1])] = True
+hip_zone = np.arange(tm.shape[0])[:, None] >= np.nonzero(fill.any(1))[0].min() - 4  # from the hip piece's top down
+gone = hip_zone & ~clothes & ~hem_line & ~(fill & inside)  # there: everything but the clothes, their hem, the filler
+keep_fill = fill & inside
+soft = np.clip(ndimage.distance_transform_edt(~gone) / 8, 0, 1)  # the filler fades out towards what was removed
+keep = np.where(gone, 0.0, np.where(keep_fill, soft, 1.0))
+trim = tm.copy()
+trim[..., 3] = a_ * keep
+Image.fromarray(trim.astype(np.uint8)).save(P / "torso-trim.png")
+rig["torso"]["src"] = "rig/ren/torso-trim.png"
+
+
+# 2. Joint patches: a soft disc of the clothes' own colour over each elbow and knee (and the shoulders), inside
+#    the limb, covering the seam where one part's rounded end crosses the next. Colour sampled beside the joint.
+def sample(n, near_end):
+    im = np.array(Image.open(P / f"{n}.png").convert("RGBA")).astype(int)
+    ys, xs = np.nonzero(im[..., 3] > 200)
+    band = (ys > np.percentile(ys, 80)) if near_end else (ys < np.percentile(ys, 20))
+    px = im[ys[band], xs[band], :3]
+    px = px[px.mean(1) > 40]  # not the outline
+    return "#%02x%02x%02x" % tuple(np.median(px, axis=0).astype(int))
+
+
+# Each patch is a soft ellipse centred on the joint, lined up with the bone of the part whose rounded end makes
+# the seam ("axis"), stretched along it ("along") to reach the arc and kept narrower across ("across") than the
+# limb so its outer outlines stay; "offset" moves it along that bone (negative = towards the parent).
+thigh_w = axis("thigh-r")[4]
+JOINTS = {}
+for side in "rl":
+    uw = rig[f"upperarm-{side}"]["width"]
+    JOINTS[f"shoulder-{side}"] = {"at": f"upperarm-{side}", "axis": f"upperarm-{side}", "color": sample(f"upperarm-{side}", False), "across": 0.3 * uw, "along": 0.3 * uw, "offset": -0.12 * uw}
+    JOINTS[f"elbow-{side}"] = {"at": f"forearm-{side}", "axis": f"upperarm-{side}", "color": sample(f"upperarm-{side}", True), "across": 0.36 * uw, "along": 0.5 * uw, "offset": 0}
+    JOINTS[f"knee-{side}"] = {"at": f"shin-{side}", "axis": f"thigh-{side}", "color": sample(f"thigh-{side}", True), "across": 0.36 * thigh_w, "along": 0.5 * thigh_w, "offset": 0}
+
 layers = sorted(rig, key=lambda n: rig[n]["z"])
 out = {"units": "body-sheet px", "parts": rig, "scales": {"head": k_head, "glasses": k_glasses, "hand": k_hand, **FACE},
-       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}, "face": calib, "hands": {"cuff_width": round(float(CUFF), 1), "parts": hands}}
+       "colors": {"sleeve": "#363a4d", "pants": "#32363b"}, "joints": JOINTS, "face": calib, "hands": {"cuff_width": round(float(CUFF), 1), "parts": hands}}
 (HERE / "ren" / "rig.json").write_text(json.dumps(out, indent=1) + "\n")
 shutil.rmtree(PUBLIC, ignore_errors=True)
 PUBLIC.mkdir(parents=True)

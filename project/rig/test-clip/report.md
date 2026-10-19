@@ -64,8 +64,8 @@ The claymation trial (on twos, boil, squash) was dropped. Now:
   sleeve and pants discs cover every bend, including the deep squat.
 - Wrists: every hand sits on the cuff at any arm angle (gate 2).
 - Foreshortened thighs keep their knee disc, so no gap opens at the knee in the steps or the crouch.
-- Unchanged from the first test: a raised arm shows its rounded shoulder cap over the shirt (a seam, not a
-  gap), and the dark hip piece bulges below the shirt hem. Most visible in the squat.
+- Joint seams: the hip piece no longer bulges below the shirt, and soft patches hide the seams where one
+  part's rounded end crosses the next at the elbows, knees and shoulders (`rig/ren/checks/joints-before-after.png`).
 
 ## Props
 - The boots never pass over Ren's body: on every frame, each boot's outline box stays clear of the torso,

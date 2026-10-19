@@ -18,7 +18,7 @@ export const key = (f: number, ks: [number, number][], easing = ease) => {
   return ks[ks.length - 1][1];
 };
 
-export type Resolved = {angles: Record<string, number>; hands: Record<"r" | "l", {part: string; tilt: number}>; brows: number; eyes: string; rest: string};
+export type Resolved = {angles: Record<string, number>; hands: Record<"r" | "l", {part: string; tilt: number; via?: string[]}>; brows: number; eyes: string; rest: string};
 // A library pose with every hand's wrist expressed as a world tilt, so poses can be blended
 export const resolve = (name: string): Resolved => {
   const d = POSES[name];
@@ -26,7 +26,7 @@ export const resolve = (name: string): Resolved => {
   const world = (side: "r" | "l") => (angles.torso ?? 0) + (angles[`upperarm-${side}`] ?? 0) + (angles[`forearm-${side}`] ?? 0);
   const hand = (side: "r" | "l") => {
     const h = d.hands[side];
-    return {part: h.part, tilt: h.tilt ?? world(side) + (h.angle ?? 0) - (PARTS[h.part].bone - 90)};
+    return {part: h.part, tilt: h.tilt ?? world(side) + (h.angle ?? 0) - (PARTS[h.part].bone - 90), via: h.via};
   };
   return {angles, hands: {r: hand("r"), l: hand("l")}, brows: d.face?.brows ?? 0, eyes: d.face?.eyes ?? "neutral", rest: d.face?.mouth ?? "closed"};
 };
@@ -63,9 +63,16 @@ export const makeBlend = (seq: Seq) => {
       const th = tAt(HAND_DELAY);
       const tilt = prev.hands[side].tilt * (1 - th) + cur.hands[side].tilt * th;
       if (from === to) return {part: to, tilt};
-      const swapAt = to.includes("hold") && !from.includes("hold") ? 0.75 : 0.35;
-      const fs = start + HAND_DELAY + Math.round(swapAt * dur);
-      return {part: f < fs ? from : to, tilt};
+      // With in-between hands, the shapes follow each other through the move (e.g. fist, thumb half raised,
+      // thumbs-up), each from its own point; without, one swap a third of the way in
+      const via = cur.hands[side].via ?? [];
+      const chain = [...via, to];
+      const at = via.length ? chain.map((_, i) => 0.2 + (0.6 * i) / (chain.length - 1)) : [to.includes("hold") && !from.includes("hold") ? 0.75 : 0.35];
+      let part = from;
+      chain.forEach((p, i) => {
+        if (f >= start + HAND_DELAY + Math.round(at[i] * dur)) part = p;
+      });
+      return {part, tilt};
     };
     return {angles, hands: {r: hand("r"), l: hand("l")}, brows: prev.brows * (1 - t) + cur.brows * t, eyes: pick(prev.eyes, cur.eyes), rest: pick(prev.rest, cur.rest), seg: i};
   };

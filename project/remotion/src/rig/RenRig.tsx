@@ -8,6 +8,12 @@ import rigData from "./ren-rig.json";
 type Part = {src: string; w: number; h: number; pivot: number[]; parent: string | null; attach: number[] | null; scale: number; bone: number; z: number; slot?: string; width?: number; grip?: number[]; front?: number[][]};
 const PARTS = rigData.parts as unknown as Record<string, Part>;
 const COLORS = rigData.colors;
+// Joint patches (rig.json "joints", built by make_rig.py): a soft ellipse of the clothes' colour over each elbow,
+// knee and shoulder, lined up with the bone whose rounded end makes the seam, drawn just above the parts that
+// meet there, so the seam doesn't show
+type Joint = {at: string; axis: string; color: string; across: number; along: number; offset: number};
+const JOINTS = (rigData as unknown as {joints: Record<string, Joint>}).joints;
+const PARENT_OF = (n: string) => PARTS[n].parent!;
 
 export type RigPose = {
   x: number;            // root (hip centre) position on the canvas
@@ -97,6 +103,20 @@ export const RenRig: React.FC<{pose: RigPose; joints?: boolean; debug?: boolean;
       {visible.map((n) => (
         <Img key={n} src={staticFile(PARTS[n].src)} style={{position: "absolute", left: 0, top: 0, width: PARTS[n].w, height: PARTS[n].h, transformOrigin: "0 0", transform: css(images[n]), zIndex: Math.round(layer(n) * 10)}} />
       ))}
+      {joints
+        ? Object.entries(JOINTS).filter(([, j]) => visible.includes(j.at)).map(([k, j]) => {
+            const m = frames[j.axis];
+            const unit = Math.hypot(m[2], m[3]) / PARTS[j.axis].scale; // canvas px per rig unit
+            const ux = [m[0], m[1]].map((v) => v / Math.hypot(m[0], m[1])), uy = [m[2], m[3]].map((v) => v / Math.hypot(m[2], m[3]));
+            const c = apply(frames[j.at], [0, 0]);
+            const cx = c[0] + uy[0] * j.offset * unit, cy = c[1] + uy[1] * j.offset * unit;
+            const rx = j.across * unit, ry = j.along * unit;
+            const z = Math.max(layer(j.at), layer(PARENT_OF(j.at))) + 0.05;
+            return (
+              <div key={`joint-${k}`} style={{position: "absolute", left: 0, top: 0, width: rx * 2, height: ry * 2, transformOrigin: "0 0", transform: `matrix(${ux[0]},${ux[1]},${uy[0]},${uy[1]},${cx},${cy}) translate(${-rx}px, ${-ry}px)`, borderRadius: "50%", background: `radial-gradient(closest-side, ${j.color} 50%, ${j.color}00 100%)`, zIndex: Math.round(z * 10) + 1}} />
+            );
+          })
+        : null}
       {visible.filter((n) => PARTS[n].front).map((n) => (
         <Img key={`${n}-front`} src={staticFile(PARTS[n].src)} style={{position: "absolute", left: 0, top: 0, width: PARTS[n].w, height: PARTS[n].h, transformOrigin: "0 0", transform: css(images[n]), zIndex: Math.round((layer(n) + 0.4) * 10), clipPath: `polygon(${PARTS[n].front!.map(([x, y]) => `${x}px ${y}px`).join(", ")})`}} />
       ))}

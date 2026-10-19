@@ -2,7 +2,7 @@
  "units": "body-sheet px",
  "parts": {
   "torso": {
-   "src": "rig/ren/torso.png",
+   "src": "rig/ren/torso-trim.png",
    "w": 462,
    "h": 789,
    "pivot": [
@@ -1589,6 +1589,56 @@
  "colors": {
   "sleeve": "#363a4d",
   "pants": "#32363b"
+ },
+ "joints": {
+  "shoulder-r": {
+   "at": "upperarm-r",
+   "axis": "upperarm-r",
+   "color": "#363a4d",
+   "across": 31.835447494705758,
+   "along": 31.835447494705758,
+   "offset": -12.734178997882303
+  },
+  "elbow-r": {
+   "at": "forearm-r",
+   "axis": "upperarm-r",
+   "color": "#373a4d",
+   "across": 38.20253699364691,
+   "along": 53.05907915784293,
+   "offset": 0
+  },
+  "knee-r": {
+   "at": "shin-r",
+   "axis": "thigh-r",
+   "color": "#33363b",
+   "across": 54.83447298362939,
+   "along": 76.15899025504082,
+   "offset": 0
+  },
+  "shoulder-l": {
+   "at": "upperarm-l",
+   "axis": "upperarm-l",
+   "color": "#363a4d",
+   "across": 31.836314666776694,
+   "along": 31.836314666776694,
+   "offset": -12.734525866710678
+  },
+  "elbow-l": {
+   "at": "forearm-l",
+   "axis": "upperarm-l",
+   "color": "#373a4d",
+   "across": 38.20357760013203,
+   "along": 53.06052444462782,
+   "offset": 0
+  },
+  "knee-l": {
+   "at": "shin-l",
+   "axis": "thigh-l",
+   "color": "#33363b",
+   "across": 54.83447298362939,
+   "along": 76.15899025504082,
+   "offset": 0
+  }
  },
  "face": {
   "face_width": 909,

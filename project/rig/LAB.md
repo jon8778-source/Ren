@@ -36,7 +36,11 @@ Nothing from here is used in episodes.
   `rig/build_hands_v2.py` cuts out 11 right hands, recolours them to Ren's skin and outline, and mirrors
   them for the left (`hand2-*` parts). `make_rig.py` measures their wrists like gate 2 and gives each sheet
   one scale (wrist = 85% of the cuff); the front grip is sized by area. Check: `rig/ren/checks/hand-grid-v2.png`.
-  Waiting for approval; no clip uses them yet.
+  Approved. In use: pointing (via the half-curled hand) and the front thumbs-up (via tucked and half-raised
+  thumb), with in-between hands shown through the move (`via` in poses.ts).
+- **Smoother joints:** the hip piece's bulge and outline are gone (`torso-trim.png`: only its fill is kept,
+  under the shirt and inside the thighs); soft ellipse patches of the clothes' colour cover the elbow, knee
+  and shoulder seams (`joints` in rig.json, drawn by RenRig.tsx). Check: `rig/ren/checks/joints-before-after.png`.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.
