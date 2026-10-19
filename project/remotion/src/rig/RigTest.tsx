@@ -2,7 +2,8 @@ import {AbsoluteFill, Audio, Easing, interpolate, staticFile, useCurrentFrame} f
 import {FONT} from "../fonts";
 import {Boot, BOOT_GEOM, BOOT_RIG, type BootKind} from "./Boot";
 import {frontLegs, MAX_CROUCH} from "./legs";
-import {FLOOR, flipFor, POSES, tiltToAngle} from "./poses";
+import {clamp, ease, key, makeBlend, type Seq} from "./motion";
+import {FLOOR, flipFor, tiltToAngle} from "./poses";
 import rigData from "./ren-rig.json";
 import {RenRig, type RigPose, solve} from "./RenRig";
 import TL from "./test-timeline.json";
@@ -19,23 +20,11 @@ const C = {bg: "#F3F5F8", ink: "#13233F", line: "#E3E7EE"};
 const S = 0.56; // canvas px per rig unit
 const X_END = 540, ROOT_Y = 1000;
 const FLOOR_Y = ROOT_Y + FLOOR * S;
-const ease = Easing.inOut(Easing.sin);
-const settle = Easing.bezier(0.42, 0, 0.2, 1); // pose changes: ease in, long soft landing, no overshoot
-const clamp = {extrapolateLeft: "clamp", extrapolateRight: "clamp"} as const;
 const s = (sec: number) => Math.round(sec * FPS);
 const apply = (m: number[], p: number[]) => [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]];
 
-// Keyframed number channel, eased between keys
-const key = (f: number, ks: [number, number][]) => {
-  if (f <= ks[0][0]) return ks[0][1];
-  for (let i = 1; i < ks.length; i++) {
-    if (f <= ks[i][0]) return interpolate(f, [ks[i - 1][0], ks[i][0]], [ks[i - 1][1], ks[i][1]], {easing: ease});
-  }
-  return ks[ks.length - 1][1];
-};
-
 // ---- Pose sequence: [start frame, pose, ease frames] ----
-const SEQ: [number, string, number][] = [
+const SEQ: Seq = [
   [0, "neutral", 0],
   [s(1.43), "wave", 10],
   [s(2.95), "holdOne", 10],
@@ -51,53 +40,7 @@ const DROP_FRAMES = 5;       // the hands can't reach the floor: the boots drop 
 const WINCE = [s(8.1), s(8.8)];
 const BLINKS = [2.45, 5.85, 12.75].map(s);
 
-type Resolved = {angles: Record<string, number>; hands: Record<"r" | "l", {part: string; tilt: number}>; brows: number; eyes: string; rest: string};
-const resolve = (name: string): Resolved => {
-  const d = POSES[name];
-  const angles = {...(d.angles as Record<string, number>)};
-  const world = (side: "r" | "l") => (angles.torso ?? 0) + (angles[`upperarm-${side}`] ?? 0) + (angles[`forearm-${side}`] ?? 0);
-  const hand = (side: "r" | "l") => {
-    const h = d.hands[side];
-    return {part: h.part, tilt: h.tilt ?? world(side) + (h.angle ?? 0) - (PARTS[h.part].bone - 90)};
-  };
-  return {angles, hands: {r: hand("r"), l: hand("l")}, brows: d.face?.brows ?? 0, eyes: d.face?.eyes ?? "neutral", rest: d.face?.mouth ?? "closed"};
-};
-const RES = SEQ.map(([, n]) => resolve(n));
-
-// Overlapping action: in each move the upper arm leads, the forearm follows a frame later and the hand two
-// frames later (every joint still eases over the move's own 9-10 frames)
-const DELAY = (k: string) => (k.startsWith("forearm") || k === "head" ? 1 : 0);
-const HAND_DELAY = 2, MAX_DELAY = 2;
-type Blend = Resolved & {seg: number};
-const blendAt = (f: number): Blend => {
-  let i = 0;
-  while (i + 1 < SEQ.length && f >= SEQ[i + 1][0]) i++;
-  const cur = RES[i];
-  const [start, , dur] = SEQ[i];
-  if (i === 0 || f >= start + dur + MAX_DELAY) return {...cur, seg: i};
-  const prev = RES[i - 1];
-  const tAt = (delay: number) => settle(Math.min(1, Math.max(0, (f - start - delay) / dur)));
-  const t = tAt(0);
-  const keys = new Set([...Object.keys(prev.angles), ...Object.keys(cur.angles)]);
-  const angles: Record<string, number> = {};
-  keys.forEach((k) => {
-    const tk = tAt(DELAY(k));
-    angles[k] = (prev.angles[k] ?? 0) * (1 - tk) + (cur.angles[k] ?? 0) * tk;
-  });
-  const pick = <V,>(a: V, b: V) => (t < 0.5 ? a : b); // eyes swap halfway through the move
-  // Hands swap halfway (a hand closing to hold swaps late, as it arrives at the boot). A clean swap: a
-  // cross-fade showed two differently drawn hands at once
-  const hand = (side: "r" | "l") => {
-    const from = prev.hands[side].part, to = cur.hands[side].part;
-    const th = tAt(HAND_DELAY);
-    const tilt = prev.hands[side].tilt * (1 - th) + cur.hands[side].tilt * th;
-    if (from === to) return {part: to, tilt};
-    const swapAt = to.includes("hold") && !from.includes("hold") ? 0.75 : 0.5;
-    const fs = start + HAND_DELAY + Math.round(swapAt * dur);
-    return {part: f < fs ? from : to, tilt};
-  };
-  return {angles, hands: {r: hand("r"), l: hand("l")}, brows: prev.brows * (1 - t) + cur.brows * t, eyes: pick(prev.eyes, cur.eyes), rest: pick(prev.rest, cur.rest), seg: i};
-};
+const blendAt = makeBlend(SEQ);
 
 // ---- Walk-in towards the camera: Ren's art faces front, so he walks out of the distance, growing ----
 const STEPS = 4, TS = WALK / STEPS;

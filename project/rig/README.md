@@ -26,6 +26,8 @@ In the cloud container, add `--browser-executable /opt/pw-browsers/chromium_head
 - Lip sync needs Rhubarb once: `rig/setup_rhubarb.sh` (into `.tools/rhubarb/`).
 - Voice and lip-sync track: `.tools/venv/bin/python rig/test_voice.py` (writes `rig/test-clip/` and copies
   for Remotion).
-- Checks (boots vs body, foot drift, eases, mouth holds): `cd remotion && npx tsx src/rig/checkClip.ts`.
+- Explainer-style version: `cd remotion && npx remotion render src/index.ts ren-rig-explainer ../rig/test-clip/ren-rig-explainer.mp4`
+  (`remotion/src/rig/Explainer.tsx`; shared pose blending in `remotion/src/rig/motion.ts`).
+- Checks (boots vs body, foot drift, eases, mouth holds, explainer stillness): `cd remotion && npx tsx src/rig/checkClip.ts`.
 - Clip: `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`
   (`remotion/src/rig/RigTest.tsx` holds the timeline). Report: `rig/test-clip/report.md`.

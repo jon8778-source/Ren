@@ -1,4 +1,18 @@
-# Ren rig test clip: report (second version, gate 4)
+# Ren rig test clips: report
+
+Two versions of the same 15-second clip (same script, voice, Rhubarb lip sync and line timings), both 60 fps:
+- `ren-rig-explainer.mp4` (`remotion/src/rig/Explainer.tsx`): explainer-channel style. Ren slides in and
+  settles, holds perfectly still between smooth pose changes, the boots and their price tags pop in, the boots
+  glide down beside his feet at "which pair" (no crouch), a "?" pops in on the question, and a virtual camera
+  pushes in slowly through each line, cuts to a new framing between lines and goes to a face close-up for the
+  wince. Render: `cd remotion && npx remotion render src/index.ts ren-rig-explainer ../rig/test-clip/ren-rig-explainer.mp4`.
+- `ren-rig-test.mp4` (`remotion/src/rig/RigTest.tsx`): the character-animation version (walk towards the
+  camera, crouch to set the boots down). The rest of this report describes it.
+
+Checks for both: boots never overlap Ren's body (explainer: closest 44 px), and in the explainer nothing moves
+during holds (0.000 px frame to frame).
+
+## Character-animation version (gate 4)
 
 `ren-rig-test.mp4`: 1080x1920, 60 fps, 15.47 s, H.264 with AAC audio. Same script and line timings as the first
 version. Ren's usual voice (Kokoro am_michael + am_eric 50/50, speed 0.93). Burned-in captions at the top.

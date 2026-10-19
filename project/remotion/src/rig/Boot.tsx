@@ -15,7 +15,7 @@ export const BOOT_GEOM: Record<BootKind, {shaftX: number; gripY: number; soleY: 
 };
 export const BOOT_RIG = 1.7; // rig units per boot unit
 
-export const Boot: React.FC<{kind: BootKind; tag?: boolean; flip?: boolean}> = ({kind, tag = true, flip = false}) => {
+export const Boot: React.FC<{kind: BootKind; tag?: boolean; flip?: boolean; tagScale?: number}> = ({kind, tag = true, flip = false, tagScale = 1}) => {
   const prem = kind === "prem";
   return (
     <div style={{position: "relative", width: 190, height: 200}}>
@@ -36,8 +36,8 @@ export const Boot: React.FC<{kind: BootKind; tag?: boolean; flip?: boolean}> = (
           </>
         )}
       </svg>
-      {tag ? (
-        <div style={{position: "absolute", bottom: 212, left: BOOT_GEOM[kind].shaftX, transform: `translateX(-50%) rotate(${prem ? 6 : -6}deg)`, background: "#fff", border: `5px solid ${prem ? C.red : C.ink}`, borderRadius: 14, padding: "0 14px", fontFamily: FONT, fontWeight: 700, fontSize: 46, color: prem ? C.red : C.ink, whiteSpace: "nowrap"}}>{prem ? "$300" : "$60"}</div>
+      {tag && tagScale > 0 ? (
+        <div style={{position: "absolute", bottom: 212, left: BOOT_GEOM[kind].shaftX, transform: `translateX(-50%) rotate(${prem ? 6 : -6}deg) scale(${tagScale})`, transformOrigin: "50% 100%", background: "#fff", border: `5px solid ${prem ? C.red : C.ink}`, borderRadius: 14, padding: "0 14px", fontFamily: FONT, fontWeight: 700, fontSize: 46, color: prem ? C.red : C.ink, whiteSpace: "nowrap"}}>{prem ? "$300" : "$60"}</div>
       ) : null}
     </div>
   );

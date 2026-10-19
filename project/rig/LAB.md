@@ -28,7 +28,10 @@ Nothing from here is used in episodes.
   `rig/test-clip/report.md`.
 - **Smoothing passes:** a claymation trial (on twos, boil, squash) was dropped at the owner's request. Kept:
   60 fps, smooth eases with overlapping joints, perfectly still holds, foreshortened knees (`legs.ts`, stretch support in `RenRig.tsx`), a walk
-  towards the camera and a crouch-and-bow set-down. Waiting for review.
+  towards the camera and a crouch-and-bow set-down.
+- **Explainer-style version** (`ren-rig-explainer`): slide-in, still holds, popping props and tags, boots
+  glide to the floor, a "?" callout, slow camera push-ins with cuts and a wince close-up. Waiting for the
+  owner to compare the two.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.
