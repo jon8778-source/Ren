@@ -2,7 +2,7 @@ import {AbsoluteFill} from "remotion";
 import {FONT} from "../fonts";
 import {Boot, BOOT_GEOM} from "./Boot";
 import {RenRig} from "./RenRig";
-import {FLOOR, place, POSES, type Placed} from "./poses";
+import {FLOOR, place, POSES, SHEET_POSES, type Placed} from "./poses";
 
 // Gate 3 check: each pose in the library as a 1080x1920 still (ren-pose, props {name}), and all eight on
 // one contact sheet (ren-pose-sheet).
@@ -42,7 +42,7 @@ const COLS = 4, CW = 1080 / 2, CH = 1920 / 2;
 export const POSE_SHEET_SIZE = {width: CW * COLS, height: CH * 2};
 export const PoseSheet: React.FC = () => (
   <AbsoluteFill style={{background: BG}}>
-    {Object.keys(POSES).map((n, i) => (
+    {SHEET_POSES.map((n, i) => (
       <div key={n} style={{position: "absolute", left: (i % COLS) * CW, top: Math.floor(i / COLS) * CH, width: CW, height: CH, overflow: "hidden", borderRight: "2px solid #dde2ea", borderBottom: "2px solid #dde2ea"}}>
         <div style={{position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transform: "scale(0.5)", transformOrigin: "0 0"}}>
           <PoseStill name={n} />

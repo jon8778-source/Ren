@@ -70,7 +70,22 @@ export const POSES: Record<string, PoseDef> = {
     hands: {r: {part: "hand-fist-r", angle: 0}, l: {part: "hand-fist-l", angle: 0}}, // knuckles up, along the forearm
     face: {eyes: "happy", mouth: "smile", brows: -35},
   },
+  // Clip-only poses (not in the gate 3 sheet)
+  setDown: {
+    label: "Setting both boots down (with a squat)",
+    angles: {"upperarm-r": 22, "forearm-r": 14, "upperarm-l": -22, "forearm-l": -14},
+    hands: {r: {part: "hand-holdout-r", tilt: 0}, l: {part: "hand-holdout-l", tilt: 0}},
+    held: {r: "cheap", l: "prem"},
+  },
+  pointBoth: {
+    label: "Pointing at both boots on the floor",
+    angles: {"upperarm-r": 18, "forearm-r": 42, "upperarm-l": -18, "forearm-l": -42},
+    hands: {r: {part: "hand-pointout-r", angle: -28}, l: {part: "hand-pointout-l", angle: 28}},
+    face: {brows: -40},
+    floor: {r: "cheap", l: "prem"},
+  },
 };
+export const SHEET_POSES = ["neutral", "wave", "holdOne", "holdBoth", "pointFloor", "thumbsUp", "wince", "celebrate"];
 
 const apply = (m: number[], p: number[]) => [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]];
 

@@ -23,7 +23,9 @@ In the cloud container, add `--browser-executable /opt/pw-browsers/chromium_head
   eyes, brows, glasses. Sleeve and pants coloured discs sit behind elbows and knees.
 
 ## Test clip
+- Lip sync needs Rhubarb once: `rig/setup_rhubarb.sh` (into `.tools/rhubarb/`).
 - Voice and lip-sync track: `.tools/venv/bin/python rig/test_voice.py` (writes `rig/test-clip/` and copies
   for Remotion).
+- Checks (boots vs body, foot drift, eases, mouth holds): `cd remotion && npx tsx src/rig/checkClip.ts`.
 - Clip: `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`
   (`remotion/src/rig/RigTest.tsx` holds the timeline). Report: `rig/test-clip/report.md`.

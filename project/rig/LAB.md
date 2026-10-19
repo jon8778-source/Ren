@@ -20,7 +20,12 @@ Nothing from here is used in episodes.
   hold art, so the grip opens outward) with a grip point and a finger clip in `rig.json`; the renderer draws
   the fingers again in front of the boot. Boots moved to `remotion/src/rig/Boot.tsx`, tags above the shaft.
   Boots on his right are mirrored so every toe points away from him. Wince and celebrate fists follow
-  the forearm (knuckles down, knuckles up). Stills: `rig/ren/checks/poses/`. Waiting for approval.
+  the forearm (knuckles down, knuckles up). Stills: `rig/ren/checks/poses/`. Approved.
+- **Gate 4, test clip re-render:** `remotion/src/rig/RigTest.tsx` now blends library poses (9-10 frame eases,
+  hand swaps mid-move), walks in over 1.4 s with planted feet (leg IK in `remotion/src/rig/legs.ts`), squats
+  to set the boots down either side, points at both. Lip sync from Rhubarb (`rig/setup_rhubarb.sh`,
+  `rig/test_voice.py`), mouths held 3+ frames. Checks: `remotion/src/rig/checkClip.ts`. Report:
+  `rig/test-clip/report.md`. Waiting for review.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

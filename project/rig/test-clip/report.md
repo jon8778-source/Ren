@@ -1,65 +1,71 @@
-# Ren rig test clip: report
+# Ren rig test clip: report (second version, gate 4)
 
-`ren-rig-test.mp4`: 1080x1920, 30 fps, 15.47 s, H.264 with AAC audio. Ren's usual voice (Kokoro am_michael +
-am_eric 50/50, speed 0.93). Soft background #F3F5F8, a floor shadow, burned-in captions at the top.
-Rebuild: `.tools/venv/bin/python rig/test_voice.py`, then
+`ren-rig-test.mp4`: 1080x1920, 30 fps, 15.47 s, H.264 with AAC audio. Same script and line timings as the first
+version. Ren's usual voice (Kokoro am_michael + am_eric 50/50, speed 0.93). Burned-in captions at the top.
+Rebuild: `rig/setup_rhubarb.sh` (once), `.tools/venv/bin/python rig/test_voice.py`, then
 `cd remotion && npx remotion render src/index.ts ren-rig-test ../rig/test-clip/ren-rig-test.mp4`.
+Checks: `cd remotion && npx tsx src/rig/checkClip.ts`.
 
 I can't listen to audio: please check the voice, pronunciation and lip-sync timing by ear.
 
 ## Timing as built
+Every pose change eases over 9 or 10 frames (the limit was 6-10); poses come from the gate 3 library.
+
 | Time | Action | Line (voice start-end) |
 |---|---|---|
-| 0:00-0:03 | Walks in from the left (front-facing march, arm swing, knee lift, body bob), stops centre, waves with the open hand | "Hi, I'm Ren!" (1.75-2.93) |
-| 0:03-0:06 | Right arm out with the holding hand and the gold $60 boot | "These boots cost sixty dollars." (3.35-5.27) |
-| 0:06-0:09 | Left arm out with the navy $300 boot, then a quick wince (eyes shut, wince mouth, head tilt) | "These ones cost three hundred." (6.35-8.08) |
-| 0:09-0:12 | Lowers both boots; they drop to the floor beside his feet; points with brows raised | "So which pair is actually cheaper?" (9.35-11.32) |
-| 0:12-0:15 | Thumbs up, smile, happy eyes, blink | "The answer might surprise you. Follow to find out!" (11.85-14.81) |
-
-The last line is 3 s long, so the clip runs 0.47 s over 15 s.
+| 0.00-1.40 s | Walks in from the left: six steps with planted feet, each foot lifts and swings with the knee bending, body bob, arm swing; settles at centre | |
+| 1.43-2.95 s | Eases into the wave (9 frames), forearm rocks from the elbow, happy eyes | "Hi, I'm Ren!" (1.75-2.93) |
+| 2.95-6.00 s | Eases into holding the $60 boot at waist height (10 frames); the boot appears as the hand arrives | "These boots cost sixty dollars." (3.35-5.27) |
+| 6.00-8.10 s | Left arm comes up with the $300 boot (10 frames) | "These ones cost three hundred." (6.35-8.08) |
+| 8.10-8.80 s | Wince: eyes shut, wince mouth, head turns away, brows drop; boots still held | |
+| 8.80-9.20 s | Squats (knees out), arms lower the boots either side of him and let go at the bottom; the boots drop straight down onto the floor (4 frames) | |
+| 9.24-11.30 s | Stands up while turning both hands into points at the boots on the floor (10 frames), brows raised | "So which pair is actually cheaper?" (9.35-11.32) |
+| 11.30-15.47 s | Thumbs-up at chest height (10 frames), happy eyes, smile; smile held 0.66 s after the voice ends | "The answer might surprise you. Follow to find out!" (11.85-14.81) |
 
 ## What looked stiff or broken
-- **Walk cycle:** the first version swung the legs side to side and they crossed over each other. That's
-  unavoidable with front-facing legs. I replaced it with a front-facing march: each foot lifts in turn
-  while the body glides sideways. It reads as walking but stays stiff, with a small "skating" feel because
-  the feet don't plant against the floor. A real walk needs side-view (or three-quarter) legs, feet and torso.
-- **Hand swaps:** clean, with no pop in position, because every hand pivots at its wrist. Two weak spots:
-  the holding hand appears while the arm is still coming down from the wave (about 0.3 s of a claw
-  shape at head height), and the thumbs-up fist sits a little to the side of the cuff instead of on it.
-- **Boot drop:** the boots slide outward as they fall instead of dropping straight down. It's quick and
-  reads as "set down", but it isn't physical.
-- **Brow raise:** visible but subtle. The fringe covers the brow area, so a bigger raise disappears into
-  the hair.
-- **Arms out:** holding a boot, the arm is close to a straight T-pose. A little more elbow bend would look
-  more natural.
+- **Walk:** now 1.4 s with planted feet: the standing foot stays put while the other lifts and swings, so no
+  more skating. Feet never cross (a minimum gap is enforced). It is still a front-facing side-step, because
+  the legs are front-facing art; the lifted knee swings out sideways rather than forward.
+- **Hand swaps:** each hand swaps halfway through its move, and a hand closing on a boot swaps at 75%, as
+  it arrives. For about 3 frames at 3.1 s the empty hold hand is visible at shoulder height before the boot
+  appears in it.
+- **Set-down:** reads as setting the boots down. Ren can't bend forward (front view), so he squats with his
+  knees out and the boots drop the last ~50 px straight down. The squat is a wide "plie"; a real crouch
+  would need side-view legs.
+- **Wince:** now happens while holding both boots (no free hands), so it is face and head only.
+- **Arms:** every arm keeps an elbow bend; no straight T-poses.
 
 ## Gaps at the joints
-- None at the elbows, wrists or knees in any frame I checked (walk, wave, both holds, point, thumbs up).
-  The sleeve- and pants-coloured discs behind the elbows and knees cover every bend.
-- At the shoulders, a raised arm shows its rounded cap over the shirt: no gap, but a visible seam.
-- The knees keep the slight "mannequin" bump from the sheet, and the dark hip piece still bulges below
-  the shirt hem.
+- None at the elbows, wrists or knees in the frames I checked (walk, wave, holds, squat, point, thumbs-up). The
+  sleeve and pants discs cover every bend, including the deep squat.
+- Wrists: every hand sits on the cuff at any arm angle (gate 2).
+- Unchanged from the first test: a raised arm shows its rounded shoulder cap over the shirt (a seam, not a
+  gap), and the dark hip piece bulges below the shirt hem. Most visible in the squat.
+
+## Props
+- The boots never pass over Ren's body: on every frame, each boot's outline box stays clear of the torso,
+  head, upper arm, thigh, shin and shoe boxes (closest 41 px, at 9.23 s, the $300 boot and his left shin).
+- Held boots sit between the palm and the fingers. Boots on his right are mirrored so both toes point away
+  from him. They stand either side of his feet, 70 rig units clear of the shoes.
 
 ## Lip sync
-- Driven by the voice's loudness, frame by frame: closed when silent, then slightly open, "O" and wide as it
-  gets louder. A shape is held for at least 2 frames so it doesn't flicker.
-- During speech the mouth is open 81% of the frames, and closed on every silent frame. It changes shape
-  about 5.6 times a second. There's no offset: the mouth track is computed from the same audio file that
-  plays.
-- Limits: it follows volume, not sounds, so "O" lands on loud vowels whether or not they're O sounds, and
-  closed-lip sounds (m, b, p) don't always close. It will look like talking, not like exact speech.
-- The wide mouth was too big at first (it read as shouting). It's now 30% smaller, and "O" 10% smaller.
+- Rhubarb Lip Sync 1.13 (phoneme-based, given each line's text), mapped to Ren's mouths: A (m, b, p) closed;
+  B, C, G, H open (slightly open); D wide; E, F o; silence = the resting mouth (smile, closed or wince by beat).
+- Every mouth is held at least 3 frames (40 holds, shortest 3). Short shapes borrow frames from a longer
+  neighbour first, so most m/b/p closures survive; a few merge.
+- Wide mouth only on Rhubarb's D (big open vowels): 14 frames in the whole clip.
+- While speaking: open 170 frames, o 75, closed 21, wide 14, pauses 29. About 3.8 mouth changes a second.
+- Ends on the smile mouth, held from the end of the voice (14.81 s) to the end of the clip (15.47 s).
 
 ## Before using this rig in a 6-minute video
-1. **Side-view parts** for any walking (legs, feet, torso, head turn), or keep Ren standing and drop the walks.
-2. **Hip and shoulder pieces** redrawn to match the thigh and arm widths, so the bulge and seams go away.
-3. **Phoneme lip sync** (text-to-phoneme timing from the script) instead of volume, plus closed-lip mouths
-   for m/b/p.
-4. **A forward-pointing hand** if he needs to point at the viewer; the sheet only has sideways pointing.
-5. **Brows** that sit clear of the fringe (or a fringe with a gap), so raised brows read.
-6. **Pose library:** about 10 named poses (hold, present, point, shrug, thumbs up...) with eased transitions,
-   so each episode scene picks poses rather than hand-keying angles. Hand swaps mid-way through the move.
-7. **The standing rules:** CLAUDE.md and DECISIONS.md ban talking bob and sway, and this clip uses a walk bob
-   and idle breathing at your request. Decide whether the rig is allowed to breathe in episodes before we
-   use it there.
-8. **Render time:** about 3 minutes for 15 s here, so about 70 minutes for 6 minutes. That's fine in the background.
+1. **Side-view legs** for real walks and crouches; the front-facing side-step and plie are the limit of the
+   current art.
+2. **Hip and shoulder pieces** that don't bulge or show seams (still open).
+3. **A forward-pointing hand** if he needs to point at the viewer.
+4. **Brows** clear of the fringe, so raised brows read.
+5. **Rhubarb in the pipeline:** it needs the line text; for episodes, run it per script line.
+6. **Pose library:** 10 poses now (8 + set-down + point at both); episodes will want more (shrug, present,
+   count on fingers...).
+7. **The standing rules:** the clip keeps a walk bob and subtle idle breathing. Decide whether the animated
+   rig may breathe in episodes.
+8. **Render time:** a few minutes for 15 s (as before), so roughly an hour for 6 minutes, in the background.
