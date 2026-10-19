@@ -1,0 +1,214 @@
+{
+ "skin": [
+  233.0,
+  186.0,
+  154.0
+ ],
+ "line": [
+  18.0,
+  8.0,
+  3.0
+ ],
+ "parts": {
+  "hand2-point-down-r": {
+   "w": 393,
+   "h": 689,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    0,
+    -1
+   ]
+  },
+  "hand2-point-down-l": {
+   "w": 393,
+   "h": 689,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    0,
+    -1
+   ]
+  },
+  "hand2-point-45-r": {
+   "w": 511,
+   "h": 625,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    0.45,
+    -1
+   ]
+  },
+  "hand2-point-45-l": {
+   "w": 511,
+   "h": 625,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    -0.45,
+    -1
+   ]
+  },
+  "hand2-point-viewer-r": {
+   "w": 467,
+   "h": 434,
+   "sheet": "sheet1-pointing-right",
+   "wrist": null
+  },
+  "hand2-point-viewer-l": {
+   "w": 467,
+   "h": 434,
+   "sheet": "sheet1-pointing-right",
+   "wrist": null
+  },
+  "hand2-point-curl-r": {
+   "w": 430,
+   "h": 690,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    0,
+    -1
+   ]
+  },
+  "hand2-point-curl-l": {
+   "w": 430,
+   "h": 690,
+   "sheet": "sheet1-pointing-right",
+   "wrist": [
+    0,
+    -1
+   ]
+  },
+  "hand2-point-up-r": {
+   "w": 504,
+   "h": 738,
+   "sheet": "sheet2-pointing-left",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-point-up-l": {
+   "w": 504,
+   "h": 738,
+   "sheet": "sheet2-pointing-left",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-front-r": {
+   "w": 350,
+   "h": 797,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-front-l": {
+   "w": 350,
+   "h": 797,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-side-r": {
+   "w": 612,
+   "h": 649,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    -1,
+    0
+   ]
+  },
+  "hand2-thumbs-side-l": {
+   "w": 612,
+   "h": 649,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    1,
+    0
+   ]
+  },
+  "hand2-thumbs-tuck-r": {
+   "w": 462,
+   "h": 624,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-tuck-l": {
+   "w": 462,
+   "h": 624,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-half-r": {
+   "w": 553,
+   "h": 649,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-thumbs-half-l": {
+   "w": 553,
+   "h": 649,
+   "sheet": "sheet3-thumbs",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-half-closed-r": {
+   "w": 586,
+   "h": 858,
+   "sheet": "sheet5-extras",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-half-closed-l": {
+   "w": 586,
+   "h": 858,
+   "sheet": "sheet5-extras",
+   "wrist": [
+    0,
+    1
+   ]
+  },
+  "hand2-grip-front-r": {
+   "w": 394,
+   "h": 282,
+   "sheet": "sheet6-grip-green",
+   "wrist": [
+    -1,
+    0
+   ],
+   "rod": {
+    "x": 285.0,
+    "width": 47
+   }
+  },
+  "hand2-grip-front-l": {
+   "w": 394,
+   "h": 282,
+   "sheet": "sheet6-grip-green",
+   "wrist": [
+    1,
+    0
+   ],
+   "rod": {
+    "x": 108.0,
+    "width": 47
+   }
+  }
+ }
+}

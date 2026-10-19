@@ -18,6 +18,8 @@ from scipy.spatial import ConvexHull
 HERE = Path(__file__).resolve().parent
 P = HERE / "ren" / "parts"
 meta = json.loads((P / "parts.json").read_text())["parts"]
+META2 = json.loads((P / "parts-v2.json").read_text())["parts"] if (P / "parts-v2.json").exists() else {}
+meta.update(META2)  # second hand set (rig/build_hands_v2.py)
 PUBLIC = HERE.parent / "remotion" / "public" / "rig" / "ren"
 
 
@@ -232,6 +234,34 @@ for side in "rl":
 for side, other, d in (("r", "l", (1, 0)), ("l", "r", (-1, 0))):
     hand(f"hand-pointout-{side}", f"hand-point-{other}", d, side, k_hand)
 
+
+# Second hand set (rig/build_hands_v2.py). Same wrist method. Hands drawn on one sheet are in proportion to
+# each other, so each sheet gets one scale: the median over its hands of "wrist = 85% of the cuff width".
+# The grip sheet's wrist is a wide forearm stub, so the grip is sized to the same area as the tucked-thumb fist.
+# point-viewer has no wrist (the fist faces the camera): it sits on the wrist point, drawn in front of the
+# forearm, which is meant to be foreshortened towards the camera.
+per_hand = {n: 0.85 * CUFF / wrist(n, e["wrist"])[2] for n, e in META2.items() if e["wrist"] and "rod" not in e}
+sheet_k = {}
+for n, k in per_hand.items():
+    sheet_k.setdefault(META2[n]["sheet"], []).append(k)
+sheet_k = {sh: float(np.median(v)) for sh, v in sheet_k.items()}
+k2 = {n: sheet_k.get(e["sheet"], 0) for n, e in META2.items()}
+for n, e in META2.items():
+    if "rod" in e:
+        ref = n.replace("grip-front", "thumbs-tuck")
+        k2[n] = k2[ref] * np.sqrt(alpha(ref).sum() / alpha(n).sum())
+for n, e in META2.items():
+    side = n[-1]
+    if e["wrist"]:
+        hand(n, n, e["wrist"], side, float(k2[n]))
+    else:
+        ys, xs = np.nonzero(alpha(n))
+        part(n, n, (xs.mean(), ys.mean()), f"forearm-{side}", rig[f"forearm-{side}"]["end"], float(k2[n]), bone=90, z=53, slot=f"hand-{side}")
+        hands[n] = {"rest": 90, "wrist_width": None}
+    if "rod" in e:  # grip: the rod's centre line at the middle of the fist; a held object goes behind the hand
+        ys, xs = np.nonzero(alpha(n))
+        rig[n]["grip"] = [e["rod"]["x"], round(float(ys.mean()), 1)]
+        rig[n]["grip_width"] = e["rod"]["width"]
 
 # Holding: the hollow of the C-shaped hold hand is the grip (where a held object's centre line passes).
 # "front" is a clip polygon over the fingers above the hollow; the renderer draws that part again in

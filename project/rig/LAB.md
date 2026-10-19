@@ -32,6 +32,11 @@ Nothing from here is used in episodes.
 - **Explainer-style version** (`ren-rig-explainer`): slide-in, still holds, popping props and tags, boots
   glide to the floor, a "?" callout, slow camera push-ins with cuts and a wince close-up. Waiting for the
   owner to compare the two.
+- **Hand set 2:** owner-generated sheets in `rig/ren/source/hands-v2/` (prompts: `rig/hand-prompts.md`).
+  `rig/build_hands_v2.py` cuts out 11 right hands, recolours them to Ren's skin and outline, and mirrors
+  them for the left (`hand2-*` parts). `make_rig.py` measures their wrists like gate 2 and gives each sheet
+  one scale (wrist = 85% of the cuff); the front grip is sized by area. Check: `rig/ren/checks/hand-grid-v2.png`.
+  Waiting for approval; no clip uses them yet.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

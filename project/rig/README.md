@@ -11,6 +11,7 @@ still use the locked busts in `characters/`.
 | Face grid | `npx remotion still src/index.ts ren-face-grid ../rig/ren/checks/face-grid.png` | every eye set and mouth on the head (`--props '{"guides":true}'` adds anchors and the 40% ticks) |
 | Hand grid | `npx remotion still src/index.ts ren-hand-grid ../rig/ren/checks/hand-grid.png` | every hand on its forearm at 0, 45 and 90 degrees (`--props '{"guides":true}'` adds the forearm axis and wrist anchor) |
 | Poses | `npx remotion still src/index.ts ren-pose ../rig/ren/checks/poses/<name>.png --props '{"name":"<name>"}'`, and `ren-pose-sheet` for all eight | pose library in `remotion/src/rig/poses.ts` |
+| Hand set 2 | `.tools/venv/bin/python rig/build_hands_v2.py`, then make_rig, then `npx remotion still src/index.ts ren-hand-grid-v2 ../rig/ren/checks/hand-grid-v2.png` | new hands cut out, recoloured, mirrored; grid at 0/45/90 degrees |
 | Hand test | `npx remotion still src/index.ts ren-rig-hands ../rig/ren/checks/rig-hands.png` | four poses with sheet hands |
 | Compare | `.tools/venv/bin/python rig/compare.py` | `rig/ren/checks/rig-vs-original.png` |
 
