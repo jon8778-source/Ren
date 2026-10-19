@@ -60,14 +60,14 @@ export const POSES: Record<string, PoseDef> = {
   },
   wince: {
     label: "7. Wince",
-    angles: {"upperarm-r": 14, "forearm-r": 20, "upperarm-l": -14, "forearm-l": -20, head: -5},
-    hands: {r: {part: "hand-fist-r", tilt: 0}, l: {part: "hand-fist-l", tilt: 0}},
+    angles: {"upperarm-r": 10, "forearm-r": 10, "upperarm-l": -10, "forearm-l": -10, head: -5},
+    hands: {r: {part: "hand-fist-r", angle: 0}, l: {part: "hand-fist-l", angle: 0}}, // knuckles down, along the forearm
     face: {eyes: "closed", mouth: "wince", brows: 20},
   },
   celebrate: {
     label: "8. Celebrate",
     angles: {"upperarm-r": 138, "forearm-r": 28, "upperarm-l": -138, "forearm-l": -28},
-    hands: {r: {part: "hand-fist-r", tilt: 0}, l: {part: "hand-fist-l", tilt: 0}},
+    hands: {r: {part: "hand-fist-r", angle: 0}, l: {part: "hand-fist-l", angle: 0}}, // knuckles up, along the forearm
     face: {eyes: "happy", mouth: "smile", brows: -35},
   },
 };
@@ -86,15 +86,17 @@ const SHOE_X = {
 };
 const FLOOR_GAP = 70; // rig units between a shoe and a floor boot
 
-// Where a floor boot stands (rig units from the root): its left edge x and its top y
+// Boots on Ren's right (screen left) are flipped, so every toe points away from him.
+export const flipFor = (side: "r" | "l") => side === "r";
+
+// Where a floor boot's shaft centre stands (rig units from the root), with its outline FLOOR_GAP clear of the shoe
 export const floorBoot = (side: "r" | "l", kind: BootKind) => {
-  const w = 190 * BOOT_RIG;
-  const toe = kind === "cheap" ? 168 * BOOT_RIG : 184 * BOOT_RIG; // both toes point screen right
-  const left = side === "r" ? SHOE_X.r - FLOOR_GAP - toe : SHOE_X.l + FLOOR_GAP;
-  return {left, top: FLOOR - BOOT_GEOM[kind].soleY * BOOT_RIG, w};
+  const g = BOOT_GEOM[kind];
+  const x = side === "r" ? SHOE_X.r - FLOOR_GAP - (g.shaftX - g.x0) * BOOT_RIG : SHOE_X.l + FLOOR_GAP + (g.shaftX - g.x0) * BOOT_RIG;
+  return {x, top: FLOOR - g.soleY * BOOT_RIG};
 };
 
-export type Placed = {pose: RigPose; boots: {kind: BootKind; x: number; y: number; rot: number; k: number; z: number}[]};
+export type Placed = {pose: RigPose; boots: {kind: BootKind; x: number; y: number; rot: number; k: number; z: number; flip: boolean}[]};
 
 // A pose definition placed on the canvas: root at (x, y), `scale` canvas px per rig unit.
 // Optional overrides let a timeline blend angles and swap faces without redefining the pose.
@@ -124,13 +126,13 @@ export const place = (def: PoseDef, x: number, y: number, scale: number, extra?:
       const g = apply(sol.images[hand], PARTS[hand].grip!);
       const hm = sol.images[hand];
       const tilt = (Math.atan2(hm[1], hm[0]) * 180) / Math.PI; // the hand image's world rotation
-      boots.push({kind, x: g[0], y: g[1], rot: tilt, k: scale * BOOT_RIG, z: (pose.z?.[hand] ?? 51) + 0.2});
+      boots.push({kind, x: g[0], y: g[1], rot: tilt, k: scale * BOOT_RIG, z: (pose.z?.[hand] ?? 51) + 0.2, flip: flipFor(side)});
     }
     const fk = def.floor?.[side];
     if (fk) {
       const fb = floorBoot(side, fk);
       const g = BOOT_GEOM[fk];
-      boots.push({kind: fk, x: x + (fb.left + g.shaftX * BOOT_RIG) * scale, y: y + (fb.top + g.gripY * BOOT_RIG) * scale, rot: 0, k: scale * BOOT_RIG, z: 49});
+      boots.push({kind: fk, x: x + fb.x * scale, y: y + (fb.top + g.gripY * BOOT_RIG) * scale, rot: 0, k: scale * BOOT_RIG, z: 49, flip: flipFor(side)});
     }
   }
   return {pose, boots};

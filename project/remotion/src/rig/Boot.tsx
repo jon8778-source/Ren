@@ -7,18 +7,19 @@ export type BootKind = "cheap" | "prem";
 export const BOOT_COLORS = {ink: "#13233F", gold: "#F5B82E", goldEdge: "#C98A0B", red: "#E23D3D", line: "#E3E7EE", muted: "#7A8496", outline: "#1d1f26"};
 const C = BOOT_COLORS;
 
-// Shaft centre line (x) and the height a hand grips it at (y); sole bottom (y). Boot units.
-export const BOOT_GEOM: Record<BootKind, {shaftX: number; gripY: number; soleY: number}> = {
-  cheap: {shaftX: 78, gripY: 78, soleY: 182},
-  prem: {shaftX: 65, gripY: 78, soleY: 197},
+// Shaft centre line (x), the height a hand grips it at (y), sole bottom (y) and the boot's left and right
+// edges (x). Boot units, toe pointing right; a flipped boot is mirrored about its shaft centre line.
+export const BOOT_GEOM: Record<BootKind, {shaftX: number; gripY: number; soleY: number; x0: number; x1: number}> = {
+  cheap: {shaftX: 78, gripY: 78, soleY: 182, x0: 36, x1: 168},
+  prem: {shaftX: 65, gripY: 78, soleY: 197, x0: 20, x1: 184},
 };
 export const BOOT_RIG = 1.7; // rig units per boot unit
 
-export const Boot: React.FC<{kind: BootKind; tag?: boolean}> = ({kind, tag = true}) => {
+export const Boot: React.FC<{kind: BootKind; tag?: boolean; flip?: boolean}> = ({kind, tag = true, flip = false}) => {
   const prem = kind === "prem";
   return (
     <div style={{position: "relative", width: 190, height: 200}}>
-      <svg width="190" height="200" viewBox="0 0 190 200" style={{overflow: "visible", position: "absolute", left: 0, top: 0}}>
+      <svg width="190" height="200" viewBox="0 0 190 200" style={{overflow: "visible", position: "absolute", left: 0, top: 0, transformOrigin: `${BOOT_GEOM[kind].shaftX}px 0`, transform: flip ? "scaleX(-1)" : undefined}}>
         {prem ? (
           <>
             <path d="M48 8 H112 V118 Q150 120 172 142 Q182 154 178 166 H30 V8 Z" transform="translate(-6 0)" fill={C.ink} stroke={C.outline} strokeWidth="7" strokeLinejoin="round" />

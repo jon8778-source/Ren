@@ -19,7 +19,8 @@ Nothing from here is used in episodes.
   tilt), a face, and boots held or on the floor. Holding uses new `hand-holdout-*` parts (the other side's
   hold art, so the grip opens outward) with a grip point and a finger clip in `rig.json`; the renderer draws
   the fingers again in front of the boot. Boots moved to `remotion/src/rig/Boot.tsx`, tags above the shaft.
-  Stills: `rig/ren/checks/poses/`. Waiting for approval.
+  Boots on his right are mirrored so every toe points away from him. Wince and celebrate fists follow
+  the forearm (knuckles down, knuckles up). Stills: `rig/ren/checks/poses/`. Waiting for approval.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

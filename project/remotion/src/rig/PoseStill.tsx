@@ -20,7 +20,7 @@ export const PlacedRen: React.FC<{placed: Placed; shadow?: boolean}> = ({placed,
             at: [b.x, b.y] as [number, number], z: b.z,
             node: (
               <div style={{position: "absolute", left: 0, top: 0, transformOrigin: "0 0", transform: `rotate(${b.rot}deg) scale(${b.k}) translate(${-BOOT_GEOM[b.kind].shaftX}px, ${-BOOT_GEOM[b.kind].gripY}px)`}}>
-                <Boot kind={b.kind} />
+                <Boot kind={b.kind} flip={b.flip} />
               </div>
             ),
           })),
