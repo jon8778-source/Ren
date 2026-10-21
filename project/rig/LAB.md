@@ -48,6 +48,15 @@ Nothing from here is used in episodes.
     like the episodes (slide in, one small pop per change, no lip sync); the motion comes from price cards that
     count up, a VS badge, a "?", a Follow button, and a camera that glides between Ren and the cards.
   Waiting for the owner to compare.
+- **Full-body drawings in the still clip:** the owner generated 10 full-body poses from `rig/fullbody-prompts.md`
+  (plus a redone "worried"; the first one is kept as `frustrated`). Sources: `rig/ren/source/fullbody/`.
+  `rig/build_fullbody.py` cuts them out on one shared canvas (all drawn at the same size, soles on the same row,
+  so swaps never move Ren), mirrors pointing and presenting so they reach towards the cards on screen right, and
+  writes `remotion/public/rig/fullbody/` plus a check on magenta (`rig/checks/fullbody-on-magenta.png`).
+  `ren-still-explainer` now uses them: neutral, waving, pointing ($60), presenting ($300), worried (wince
+  close-up), thinking ("which pair?"), shocked ("surprise you"), thumbs-up ("Follow"). Holding-card is ready
+  for later (its green rectangle is to be replaced by a graphic). These are lab art; for episodes they still
+  need approval and the manifest route.
 
 ## What exists
 - `rig/build_parts.py`: cuts the owner's sheets (`rig/ren/source/`) into transparent parts.

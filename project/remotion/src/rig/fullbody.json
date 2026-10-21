@@ -1,0 +1,20 @@
+{
+ "w": 1320,
+ "h": 2290,
+ "feetY": 2273,
+ "headTopY": 16,
+ "centerX": 644,
+ "poses": [
+  "neutral",
+  "waving",
+  "presenting",
+  "pointing",
+  "thinking",
+  "worried",
+  "frustrated",
+  "shocked",
+  "shrug",
+  "thumbs-up",
+  "holding-card"
+ ]
+}

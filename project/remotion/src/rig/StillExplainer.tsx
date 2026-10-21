@@ -1,45 +1,49 @@
-import {AbsoluteFill, Audio, Easing, interpolate, spring, staticFile, useCurrentFrame} from "remotion";
+import {AbsoluteFill, Audio, Easing, Img, interpolate, spring, staticFile, useCurrentFrame} from "remotion";
 import {FONT} from "../fonts";
 import {Boot, BOOT_COLORS} from "./Boot";
+import FB from "./fullbody.json";
 import {clamp} from "./motion";
-import {FLOOR, place, POSES} from "./poses";
-import {RenRig, solve} from "./RenRig";
 import TL from "./test-timeline.json";
 
-// The boots clip with Ren as a still image, like the episodes: one full-body drawing per line, held perfectly
-// still, swapped with the episodes' small pop; no lip sync. The movement comes from the graphics (price cards
+// The boots clip with Ren as a still image, like the episodes: one full-body drawing per line (the owner's
+// pose drawings, cut out by rig/build_fullbody.py, all on one shared canvas so the feet never move), held
+// perfectly still, swapped with the episodes' small pop; no lip sync. The movement comes from the graphics (price cards
 // that pop in and count up, a VS badge, a "?", a Follow button) and from a camera that glides between Ren and
 // the cards and pushes in slowly through each line. Same script, voice and timings as the rig clips. 60 fps.
 const FPS = 30, OUT_PER_FRAME = 2;
 const C = {...BOOT_COLORS, bg: "#F3F5F8"};
 const s = (sec: number) => Math.round(sec * FPS);
 
-// The world (canvas px): Ren stands on the left, the two price cards are stacked on the right
-const REN = {x: 330, y: 1060, scale: 0.5};
-const CARD = {cheap: {x: 790, y: 640}, prem: {x: 790, y: 1200}, w: 400, h: 470};
-const VS = {x: 790, y: 920};
-const FEET_Y = REN.y + FLOOR * REN.scale;
-const apply = (m: number[], p: number[]) => [m[0] * p[0] + m[2] * p[1] + m[4], m[1] * p[0] + m[3] * p[1] + m[5]];
+// The world (canvas px): Ren stands on the left (centre line REN.x, soles on FEET_Y, REN.h tall), the two
+// price cards are stacked on the right
+const REN = {x: 300, h: 930};
+const FEET_Y = 1484;
+const K = REN.h / (FB.feetY - FB.headTopY); // canvas px per image px
+const IMG = {left: REN.x - FB.centerX * K, top: FEET_Y - FB.feetY * K, w: FB.w * K, h: FB.h * K};
+const HEAD = {x: REN.x, y: FEET_Y - REN.h};  // top of the head
+const CARD = {cheap: {x: 810, y: 640}, prem: {x: 810, y: 1200}, w: 380, h: 470};
+const VS = {x: 810, y: 920};
 
-// Ren's still for each line: a library pose plus a face. Changes get the episodes' pop.
-type Still = {at: number; pose: string; eyes?: string; mouth?: string; head?: number};
-const STILLS: Still[] = [
-  {at: 0, pose: "neutral", mouth: "smile"},
-  {at: s(1.6), pose: "wave", eyes: "happy", mouth: "smile"},
-  {at: s(3.1), pose: "neutral", mouth: "smile"},
-  {at: s(8.1), pose: "neutral", eyes: "closed", mouth: "wince", head: -5},
-  {at: s(8.8), pose: "neutral", mouth: "closed", head: 3},
-  {at: s(11.5), pose: "neutral", eyes: "happy", mouth: "smile"},
+// Ren's drawing for each line. Changes get the episodes' pop.
+const STILLS: {at: number; pose: string}[] = [
+  {at: 0, pose: "neutral"},
+  {at: s(1.6), pose: "waving"},       // "Hi, I'm Ren!"
+  {at: s(3.1), pose: "pointing"},     // "These boots cost sixty dollars." (up at the top card)
+  {at: s(6.1), pose: "presenting"},   // "These ones cost three hundred." (palm out to the lower card)
+  {at: s(8.1), pose: "worried"},      // the wince
+  {at: s(8.8), pose: "thinking"},     // "So which pair is actually cheaper?"
+  {at: s(11.7), pose: "shocked"},     // "The answer might surprise you."
+  {at: s(13.0), pose: "thumbs-up"},   // "Follow to find out!"
 ];
 
 // Camera: [from frame, focus x, focus y, zoom]. The focus is put at the middle of the screen. It glides to each
 // new shot over GLIDE frames, then pushes in slowly (PUSH per second) until the next one.
 const SHOTS: [number, number, number, number][] = [
   [0, 540, 900, 1.0],              // wide: Ren slides in
-  [s(1.45), 360, 700, 1.45],       // Ren, waving
-  [s(3.0), 760, 660, 1.5],         // the $60 card
-  [s(6.0), 760, 1210, 1.5],        // the $300 card
-  [s(8.1), 330, 470, 2.3],         // close-up: the wince
+  [s(1.45), 320, 820, 1.45],       // Ren, waving
+  [s(3.0), 600, 800, 1.2],         // Ren pointing up at the $60 card
+  [s(6.0), 600, 1060, 1.2],        // Ren presenting the $300 card
+  [s(8.1), 300, 700, 2.2],         // close-up: the wince
   [s(8.8), 560, 920, 1.0],         // wide: Ren and both cards, VS
   [s(11.4), 560, 860, 1.06],       // Ren and both cards for the last line, slow push
 ];
@@ -86,9 +90,6 @@ export const StillExplainer: React.FC = () => {
   while (si + 1 < STILLS.length && f >= STILLS[si + 1].at) si++;
   const st = STILLS[si];
   const pp = si > 0 ? 1 - pop(f, st.at) : 0;
-  const def = POSES[st.pose];
-  const placed = place({...def, face: {...def.face, eyes: st.eyes, mouth: st.mouth}}, REN.x, REN.y, REN.scale, {angles: {head: st.head ?? 0}});
-  const head = apply(solve(placed.pose).frames.head, [0, -1500]); // top of the head
   const vs = pop(f, s(9.0));
   const q = pop(f, s(9.4)) * interpolate(f, [s(11.2), s(11.4)], [1, 0], clamp);
   const follow = pop(f, s(13.0));
@@ -100,7 +101,10 @@ export const StillExplainer: React.FC = () => {
         <div style={{position: "absolute", left: REN.x - 150, top: FEET_Y - 14, width: 300, height: 28, borderRadius: "50%", background: C.line, opacity: enter}} />
         <AbsoluteFill style={{opacity: enter, transform: `translateX(${(1 - enter) * -420}px)`}}>
           <AbsoluteFill style={{transformOrigin: `${REN.x}px ${FEET_Y}px`, transform: `scale(${1 + pp * 0.04}, ${1 - pp * 0.04})`}}>
-            <RenRig pose={placed.pose} />
+            {FB.poses.map((p) => (
+              // every drawing stays mounted (loaded before its line), only the current one shows
+              <Img key={p} src={staticFile(`rig/fullbody/${p}.png`)} style={{position: "absolute", left: IMG.left, top: IMG.top, width: IMG.w, height: IMG.h, opacity: p === st.pose ? 1 : 0}} />
+            ))}
           </AbsoluteFill>
         </AbsoluteFill>
         <Card kind="cheap" f={f} at={s(3.15)} />
@@ -109,7 +113,7 @@ export const StillExplainer: React.FC = () => {
           <div style={{position: "absolute", left: VS.x - 70, top: VS.y - 70, width: 140, height: 140, borderRadius: 70, background: C.ink, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontWeight: 700, fontSize: 64, transform: `scale(${vs})`, zIndex: 900}}>VS</div>
         ) : null}
         {q > 0 ? (
-          <div style={{position: "absolute", left: head[0] + 110, top: head[1] - 60, width: 130, height: 130, borderRadius: 65, background: C.gold, border: `6px solid ${C.ink}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontWeight: 700, fontSize: 92, color: C.ink, transform: `scale(${q})`, zIndex: 900}}>?</div>
+          <div style={{position: "absolute", left: HEAD.x + 120, top: HEAD.y - 20, width: 130, height: 130, borderRadius: 65, background: C.gold, border: `6px solid ${C.ink}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontWeight: 700, fontSize: 92, color: C.ink, transform: `scale(${q})`, zIndex: 900}}>?</div>
         ) : null}
       </AbsoluteFill>
       {follow > 0 ? (
