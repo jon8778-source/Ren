@@ -1,0 +1,123 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 28.296,
+ "lines": [
+  {
+   "id": "h02",
+   "section": "short-trip",
+   "text": "You're twenty-eight.",
+   "refs": [
+    "you.start_age"
+   ],
+   "start": 0.41,
+   "end": 1.518,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "short-trip",
+   "text": "You've got three thousand dollars.",
+   "refs": [
+    "you.lump"
+   ],
+   "start": 1.968,
+   "end": 3.819,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "short-trip",
+   "text": "You can take the trip you've talked about for years\u2026 or invest it.",
+   "refs": [],
+   "start": 4.269,
+   "end": 7.828,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "short-trip",
+   "text": "At seven percent a year, that three thousand becomes about fifty-one thousand dollars by the time you're seventy.",
+   "refs": [
+    "you.rate_pct",
+    "you.lump",
+    "you.about_51k",
+    "you.end_age"
+   ],
+   "start": 8.278,
+   "end": 15.019,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "short-trip",
+   "text": "So the smart move is obvious, right?",
+   "refs": [],
+   "start": 15.469,
+   "end": 17.584,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "short-trip",
+   "text": "Well\u2026 not quite.",
+   "refs": [],
+   "start": 18.034,
+   "end": 19.235,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "short-trip",
+   "text": "Because there's something that money can't buy back.",
+   "refs": [],
+   "start": 19.685,
+   "end": 22.243,
+   "chunk": 0
+  },
+  {
+   "id": "e02",
+   "section": "short-trip",
+   "text": "If your foundations are solid, the trip might be the better investment.",
+   "refs": [],
+   "start": 22.693,
+   "end": 26.676,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 26.296,
+   "leading_silence_s": 0.02,
+   "lufs": -22.4,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from trip-vs-51k/audio/voice.wav"
+  }
+ ]
+}

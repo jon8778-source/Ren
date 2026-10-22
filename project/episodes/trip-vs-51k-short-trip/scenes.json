@@ -1,0 +1,192 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 4
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 3.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "You're",
+    "title": "Age {you.start_age|plain}",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "You've got",
+    "title": "{you.lump}",
+    "subtitle": "",
+    "money_note": true
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@h04+2.2"
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h05",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}",
+    "right_from": "{you.lump}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    "@h05+1.6"
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h06",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}",
+    "glow": "right"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "h07",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Well...",
+    "title": "Not quite",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "h08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "There's something",
+    "title": "money can't",
+    "subtitle": "buy back"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "If your foundations are solid",
+    "title": "the trip might be",
+    "subtitle": "the better investment"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.6
+   ],
+   "line": "e02",
+   "id": "s08"
+  }
+ ]
+}

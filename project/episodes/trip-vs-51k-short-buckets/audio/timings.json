@@ -1,0 +1,114 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 29.187,
+ "lines": [
+  {
+   "id": "b02",
+   "section": "short-buckets",
+   "text": "Perkins suggests something called time buckets, and it's simple.",
+   "refs": [],
+   "start": 0.41,
+   "end": 3.861,
+   "chunk": 0
+  },
+  {
+   "id": "b03",
+   "section": "short-buckets",
+   "text": "Grab a sheet of paper and draw five boxes: your thirties, forties, fifties, sixties and seventies.",
+   "refs": [
+    "you.boxes"
+   ],
+   "start": 4.311,
+   "end": 10.516,
+   "chunk": 0
+  },
+  {
+   "id": "b06",
+   "section": "short-buckets",
+   "text": "Some things fit anywhere.",
+   "refs": [],
+   "start": 10.966,
+   "end": 12.506,
+   "chunk": 0
+  },
+  {
+   "id": "b07",
+   "section": "short-buckets",
+   "text": "A cooking class works at thirty or seventy.",
+   "refs": [
+    "=30",
+    "=70"
+   ],
+   "start": 12.956,
+   "end": 15.539,
+   "chunk": 0
+  },
+  {
+   "id": "b08",
+   "section": "short-buckets",
+   "text": "Others only fit in one or two boxes, like skiing hard, backpacking, or building sandcastles with a five-year-old.",
+   "refs": [
+    "=1",
+    "=2",
+    "you.kid_age"
+   ],
+   "start": 15.989,
+   "end": 23.092,
+   "chunk": 0
+  },
+  {
+   "id": "b09",
+   "section": "short-buckets",
+   "text": "Those are the ones with an expiry date.",
+   "refs": [],
+   "start": 23.542,
+   "end": 25.85,
+   "chunk": 0
+  },
+  {
+   "id": "b10",
+   "section": "short-buckets",
+   "text": "Fund those first.",
+   "refs": [],
+   "start": 26.3,
+   "end": 27.567,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 27.187,
+   "leading_silence_s": 0.02,
+   "lufs": -22.3,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from trip-vs-51k/audio/voice.wav"
+  }
+ ]
+}

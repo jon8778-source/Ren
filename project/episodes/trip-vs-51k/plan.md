@@ -43,3 +43,9 @@
 - The EXPIRES stamp is drawn in code (the attached PNG has its lettering baked in). The backpack, skis and
   sandcastle icons are the owner's, in project/assets/icons.
 - Thumbnail: Option 1 (renders/thumbnail-a.png, layout j). Two shorts follow per the standing rules.
+
+## Shorts
+- short-trip (28.3 s): h02-h08 + e02. short-buckets (29.2 s): b02, b03, b06-b10. Both QC OVERALL PASS.
+- The last line of each uses a statement card, so the closing disclaimer pill doesn't sit on a tall graphic;
+  short-buckets starts its closing disclaimer 3.2 s from the end (after the EXPIRES moment).
+- pipeline/shorts.py now copies sources.json (the owner's verified claims) and takes an optional end_disclaimer_s.

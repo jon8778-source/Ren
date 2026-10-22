@@ -1,0 +1,75 @@
+{
+  "description_footer": "Full video on the channel: The $3,000 Trip vs $51,000 at 70: Which Is Worth More?\n\nIdeas from Die With Zero by Bill Perkins.\nCheck out the Money Leak Audit Workbook: [WORKBOOK LINK]\n\nExample only. Assumes 7% average yearly return, before inflation. Educational only, not financial advice.\n#shorts",
+  "shorts": {
+    "short-trip": {
+      "title": "$3,000 trip at 28, or $51,433 at 70?",
+      "description": "Invest $3,000 at 28 and it could be about $51,000 by 70. So the smart move is obvious... right?",
+      "lines": [
+        "h02",
+        "h03",
+        "h04",
+        "h05",
+        "h06",
+        "h07",
+        "h08",
+        "e02"
+      ],
+      "scenes": {
+        "e02": {
+          "layout": "character_right",
+          "character": {
+            "id": "ren",
+            "pose": "pointing"
+          },
+          "graphic": {
+            "type": "statement",
+            "lead": "If your foundations are solid",
+            "title": "the trip might be",
+            "subtitle": "the better investment"
+          },
+          "camera": "push",
+          "beats": [
+            0.1,
+            0.6,
+            1.6
+          ]
+        }
+      }
+    },
+    "short-buckets": {
+      "title": "Some experiences expire. Fund those first.",
+      "description": "Draw five boxes, one for each decade, and fill them with what you want to do. Some things fit anywhere. Others have an expiry date.",
+      "lines": [
+        "b02",
+        "b03",
+        "b06",
+        "b07",
+        "b08",
+        "b09",
+        "b10"
+      ],
+      "scenes": {
+        "b10": {
+          "layout": "character_right",
+          "character": {
+            "id": "ren",
+            "pose": "thumbs-up"
+          },
+          "graphic": {
+            "type": "statement",
+            "lead": "",
+            "title": "Fund these",
+            "subtitle": "first"
+          },
+          "camera": "push",
+          "beats": [
+            0,
+            0.1,
+            0.4
+          ]
+        }
+      },
+      "end_disclaimer_s": 3.2
+    }
+  }
+}

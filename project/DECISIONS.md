@@ -34,7 +34,12 @@ Repo jon8778-source/Ren; work on branch ccr-a31871f7-ihoco0 (PR #2 → main). Wo
 8. Cut-out puppet rig test (15 s 9:16 walk-in, boots, point, thumbs up): owner found too many errors. Moved to the
    branch lab/animated-ren (never merged into main), which is the test environment for an animated Ren. Not used in episodes. Standing rules unchanged: locked busts, no walking,
    bob, sway or breathing, solid white background.
-9. Rejected/avoided: invented stats, unsourced "most/many people" claims, typed numbers on screen, inconsistent character art (Yara 45/70 regenerated from Yara 25), 3-line captions, content in YouTube controls area, shaking, music, coloured backgrounds.
+9. "The $3,000 Trip vs $51,000 at 70" (3:54): owner's brief asked for the puppet rig, music, Poppins and "free" CTA;
+   owner chose the locked busts, Ren's voice and the standing rules, and the shorter length. Changes: "Lots of people..."
+   and "money tends to go up..." softened; standing CTA. Die With Zero attributions and the 7% assumption verified by the
+   owner. $3,000 x 1.07^42 = $51,432.77, shown as $51,433. Owner's backpack/skis/sandcastle icons in project/assets/icons;
+   EXPIRES stamp drawn in code. Thumbnail Option 1 (layout j). Shorts: trip vs invest, time buckets.
+10. Rejected/avoided: invented stats, unsourced "most/many people" claims, typed numbers on screen, inconsistent character art (Yara 45/70 regenerated from Yara 25), 3-line captions, content in YouTube controls area, shaking, music, coloured backgrounds.
 
 ## 4. Active rules for next videos
 - "New episode: <topic>" → follow CLAUDE.md. Gates: plan/questions → script OK (before voice) → 60-s pilot → "APPROVED" → full video + QC report → thumbnail choice → 2 shorts.
