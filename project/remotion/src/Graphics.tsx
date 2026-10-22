@@ -816,8 +816,21 @@ export const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}
     cash: <>{[0, 1, 2, 3].map((i) => <g key={i} transform={`translate(0 ${-i * 22})`}><rect x="22" y="128" width="156" height="44" rx="8" fill={T.save} {...k} /><circle cx="100" cy="150" r="12" fill="none" stroke="#fff" strokeWidth="5" /><rect x="36" y="142" width="16" height="16" rx="4" fill="#fff" opacity="0.7" /><rect x="148" y="142" width="16" height="16" rx="4" fill="#fff" opacity="0.7" /></g>)}<rect x="88" y="54" width="24" height="122" fill={T.gold} opacity="0.9" /></>,
     postcard: <><rect x="10" y="30" width="180" height="130" rx="10" fill="#fff" {...k} /><rect x="22" y="42" width="156" height="106" rx="4" fill="#dff1fb" /><circle cx="142" cy="68" r="14" fill={T.gold} /><path d="M22 112 Q60 100 100 110 T178 106 V124 H22 Z" fill="#7cc3e8" /><path d="M22 124 H178 V148 H22 Z" fill="#f6dfa6" /><path d="M56 124 Q52 96 60 78" fill="none" stroke="#8a5a2b" strokeWidth="6" strokeLinecap="round" /><path d="M60 78 Q44 72 34 80 M60 78 Q74 66 86 72 M60 78 Q50 62 40 64 M60 78 Q70 84 80 92" fill="none" stroke={T.save} strokeWidth="6" strokeLinecap="round" /></>,
     sparkle: <path d="M100 20 Q108 84 180 95 Q108 106 100 170 Q92 106 20 95 Q92 84 100 20 Z" fill={T.gold} stroke={T.gold_edge} strokeWidth="6" strokeLinejoin="round" />,
+    hourglass: <><path d="M50 16 H150 M50 174 H150" {...k} strokeWidth={10} /><path d="M60 20 Q60 80 100 95 Q140 80 140 20 Z M60 170 Q60 110 100 95 Q140 110 140 170 Z" fill="#fff" {...k} /><path d="M78 58 Q100 66 122 58 Q118 78 100 88 Q82 78 78 58 Z M70 166 Q100 124 130 166 Z" fill={T.gold} /></>,
+    rocker: <><path d="M60 30 Q56 80 64 120 H140" fill="none" {...k} strokeWidth={10} /><path d="M64 120 L52 160 M140 120 L148 160" {...k} strokeWidth={9} /><path d="M24 150 Q100 190 176 150" fill="none" stroke={T.gold_edge} strokeWidth="10" strokeLinecap="round" /><rect x="60" y="104" width="86" height="18" rx="6" fill={T.gold} {...k} /><path d="M60 40 H40 M140 92 V70 H120" {...k} strokeWidth={8} /></>,
+    ship: <><path d="M20 120 H180 L156 160 H44 Z" fill={T.ink} {...k} /><rect x="50" y="86" width="100" height="34" rx="4" fill="#fff" {...k} /><rect x="66" y="60" width="64" height="26" rx="4" fill="#fff" {...k} /><rect x="104" y="34" width="18" height="26" fill={T.cost} {...k} />{[64, 86, 108, 130].map((x) => <circle key={x} cx={x} cy="103" r="6" fill="#7cc3e8" />)}<path d="M10 172 Q30 162 50 172 T90 172 T130 172 T170 172 T200 172" fill="none" stroke="#7cc3e8" strokeWidth="6" /></>,
+    bills: <><rect x="46" y="24" width="108" height="146" rx="8" fill="#fff" {...k} /><path d="M66 56 H134 M66 80 H134 M66 104 H112" stroke={T.line} strokeWidth="9" strokeLinecap="round" /><rect x="66" y="126" width="68" height="22" rx="6" fill={T.cost} /></>,
+    gift: <><rect x="34" y="78" width="132" height="92" rx="8" fill={T.cost} {...k} /><rect x="24" y="56" width="152" height="30" rx="8" fill={T.cost} {...k} /><path d="M100 56 V170" stroke={T.gold} strokeWidth="16" /><path d="M100 56 Q70 18 58 40 Q52 56 100 56 Q130 18 142 40 Q148 56 100 56" fill="none" stroke={T.gold_edge} strokeWidth="9" strokeLinejoin="round" /></>,
+    key: <><circle cx="62" cy="96" r="38" fill={T.gold} {...k} /><circle cx="62" cy="96" r="14" fill="#fff" {...k} /><path d="M98 96 H178 V122 M150 96 V118" fill="none" {...k} strokeWidth={14} /><path d="M98 96 H178" stroke={T.gold} strokeWidth="6" /><path d="M30 40 L60 20 L90 40" fill="none" stroke={T.save} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" /></>,
+    tent: <><path d="M20 166 L100 34 L180 166 Z" fill={T.save} {...k} /><path d="M100 34 L74 166 H126 Z" fill="#157a45" {...k} /><path d="M100 96 L84 166 H116 Z" fill={T.ink} /><path d="M6 168 H194" {...k} /></>,
+    dinner: <><rect x="20" y="96" width="160" height="16" rx="6" fill={T.gold_edge} {...k} /><path d="M40 112 V170 M160 112 V170" {...k} strokeWidth={9} /><ellipse cx="70" cy="86" rx="26" ry="9" fill="#fff" {...k} /><ellipse cx="130" cy="86" rx="26" ry="9" fill="#fff" {...k} /><path d="M100 90 V50 Q100 34 110 34" fill="none" stroke={T.cost} strokeWidth="8" strokeLinecap="round" /><path d="M96 60 Q90 40 100 22 Q110 40 104 60 Z" fill={T.gold} /></>,
+    jar: <><rect x="54" y="20" width="92" height="20" rx="6" fill={T.ink} {...k} /><path d="M48 44 H152 Q166 60 166 90 V160 Q166 176 150 176 H50 Q34 176 34 160 V90 Q34 60 48 44 Z" fill="#eef6fb" {...k} /></>,
+    paper: <><path d="M40 14 H136 L166 44 V178 H40 Z" fill="#fff" {...k} /><path d="M136 14 V44 H166" fill="none" {...k} />{[0, 1, 2, 3, 4].map((i) => <rect key={i} x="58" y={54 + i * 24} width="88" height="16" rx="4" fill="none" stroke={T.ink} strokeWidth="4" />)}</>,
+    friends: <><rect x="14" y="20" width="172" height="150" rx="10" fill="#fff" {...k} /><rect x="26" y="32" width="148" height="126" rx="4" fill={T.line} />{[60, 100, 140].map((x, i) => <g key={x} fill={T.muted}><circle cx={x} cy={i === 1 ? 74 : 82} r="16" /><path d={`M${x - 26} 158 Q${x - 26} ${i === 1 ? 98 : 106} ${x} ${i === 1 ? 98 : 106} Q${x + 26} ${i === 1 ? 98 : 106} ${x + 26} 158 Z`} /></g>)}</>,
+    kids: <><rect x="14" y="20" width="172" height="150" rx="10" fill="#fff" {...k} /><rect x="26" y="32" width="148" height="126" rx="4" fill={T.line} /><g fill={T.muted}><circle cx="78" cy="70" r="18" /><path d="M48 158 Q48 96 78 96 Q108 96 108 158 Z" /><circle cx="132" cy="100" r="12" /><path d="M114 158 Q114 118 132 118 Q150 118 150 158 Z" /></g></>,
     cooking: <><path d="M56 96 Q30 90 34 64 Q38 40 64 46 Q72 22 100 24 Q128 22 136 46 Q162 40 166 64 Q170 90 144 96 V140 H56 Z" fill="#fff" {...k} /><rect x="56" y="140" width="88" height="26" rx="6" fill={T.line} {...k} /></>,
   };
+  if (["backpack", "skis", "sandcastle"].includes(icon)) return <Img src={staticFile(`assets/icons/${icon}.png`)} style={{width: 200, height: 190, objectFit: "contain"}} />;
   return <svg width="200" height="190" viewBox="0 0 200 190">{art[icon] ?? null}</svg>;
 };
 
@@ -1090,7 +1103,154 @@ const Dividend: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+// Code-drawn stamp (lettering in code, not in the image)
+const Stamp: React.FC<{text: string; T: Config["theme"]; size?: number; show?: number}> = ({text, T, size = 46, show = 1}) => (
+  <div style={{display: "inline-block", fontSize: size, fontWeight: 700, color: T.cost, border: `6px solid ${T.cost}`, outline: `3px solid ${T.cost}`, outlineOffset: 4, borderRadius: 14, padding: "0 16px", background: "rgba(255,255,255,0.85)", transform: `rotate(-12deg) scale(${2 - show})`, opacity: show, whiteSpace: "nowrap"}}>{text}</div>
+);
+
+// Time buckets: five decade boxes; icons appear in the boxes they fit, and fade with a stamp where they expire
+const Buckets: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const rows: {label: string; icons: string[]; expired?: string[]}[] = g.boxes;
+  const stage = (i: number) => b(i, 12); // 0 boxes, 1 cooking, 2 early icons, 3 expiry
+  return (
+    <Center gap={18}>
+      {g.title ? <div style={{fontSize: F.subhead, fontWeight: 700, color: T.ink, opacity: stage(0)}}>{g.title}</div> : null}
+      <div style={{display: "flex", gap: 16}}>
+        {rows.map((r, i) => {
+          const box = interpolate(stage(0), [i * 0.12, i * 0.12 + 0.5], [0, 1], {extrapolateLeft: "clamp", extrapolateRight: "clamp"});
+          return (
+            <div key={i} style={{width: 200, height: 560, borderRadius: 28, border: `5px solid ${T.ink}`, overflow: "hidden", background: "#fff", opacity: box, transform: `translateY(${(1 - box) * 40}px)`, position: "relative"}}>
+              <div style={{height: 76, background: T.ink, color: "#fff", fontSize: F.subhead, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>{r.label}</div>
+              <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 2, paddingTop: 8}}>
+                {g.show_cooking ? <div style={{transform: `scale(${0.62 * stage(1)})`, height: 120, marginTop: -30, transformOrigin: "50% 50%"}}><ItemIcon icon="cooking" T={T} /></div> : null}
+                {r.icons.map((ic) => <div key={ic} style={{transform: `scale(${0.62 * stage(2)})`, height: 120, marginTop: -30, transformOrigin: "50% 50%"}}><ItemIcon icon={ic} T={T} /></div>)}
+                {(r.expired || []).map((ic) => <div key={ic} style={{transform: `scale(${0.62 * stage(2)})`, height: 120, marginTop: -30, opacity: 1 - 0.7 * stage(3), filter: `grayscale(${stage(3)})`}}><ItemIcon icon={ic} T={T} /></div>)}
+              </div>
+              {(r.expired || []).length ? <div style={{position: "absolute", left: 0, right: 0, top: 270, display: "flex", justifyContent: "center"}}><Stamp text="EXPIRES" T={T} size={40} show={stage(3)} /></div> : null}
+            </div>
+          );
+        })}
+      </div>
+      <div style={{height: 70}}>{g.caption ? <div style={{fontSize: F.title, fontWeight: 700, color: T.save, ...rise(b(4), 30)}}>{g.caption}</div> : null}</div>
+    </Center>
+  );
+};
+
+// One gift on a life timeline: the same amount arriving at two ages
+const GiveTimeline: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 1040, A0 = g.from_value, A1 = g.to_value;
+  const x = (age: number) => 40 + ((age - A0) / (A1 - A0)) * (W - 80);
+  const marks: {age: number; icon: string; label: string; tone: string}[] = g.marks;
+  return (
+    <Center gap={14}>
+      <div style={{position: "relative", width: W, height: 470}}>
+        <div style={{position: "absolute", left: 40, right: 40, top: 330, height: 12, borderRadius: 6, background: T.line, opacity: b(0)}} />
+        {[A0, A1].map((a, i) => <div key={i} style={{position: "absolute", left: x(a) - 80, width: 160, top: 360, textAlign: "center", fontSize: F.label, fontWeight: 600, color: T.muted, opacity: b(0)}}>Age {i ? g.to : g.from}</div>)}
+        {marks.map((m, i) => {
+          const v = b(1 + i, 11);
+          return (
+            <div key={i} style={{position: "absolute", left: x(m.age) - 150, width: 300, top: 0, display: "flex", flexDirection: "column", alignItems: "center", opacity: v, transform: `translateY(${(1 - v) * -60}px)`}}>
+              <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, m.tone)}}>{m.label}</div>
+              <div style={{transform: "scale(0.9)"}}><ItemIcon icon={m.icon} T={T} /></div>
+              <div style={{width: 26, height: 26, borderRadius: 13, background: tone(T, m.tone), marginTop: 6}} />
+            </div>
+          );
+        })}
+      </div>
+      <div style={{height: 76}}>{g.caption ? <div style={{fontSize: F.title, fontWeight: 700, color: T.ink, ...rise(b(1 + marks.length), 30)}}>{g.caption}</div> : null}</div>
+      <MoneyNote config={config} show={b(0)} />
+    </Center>
+  );
+};
+
+// Savings line rising to a dashed "Enough" target (illustrative, no numbers)
+const EnoughChart: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 920, H = 480;
+  const pts: [number, number][] = Array.from({length: 40}, (_, i) => [40 + (i / 39) * (W - 80), H - 60 - Math.pow(i / 39, 1.6) * (H - 140)]);
+  const line = useLine(pts, b(0, 30));
+  const tY = H - 60 - 0.62 * (H - 140);
+  return (
+    <Center gap={12}>
+      <div style={{alignSelf: "flex-end", fontSize: F.label, fontWeight: 600, color: T.muted, border: `3px solid ${T.line}`, borderRadius: 999, padding: "2px 22px"}}>Illustrative</div>
+      <svg width={W} height={H}>
+        <line x1={40} y1={H - 60} x2={W - 20} y2={H - 60} stroke={T.line} strokeWidth="5" />
+        <path d={line.d} fill="none" stroke={T.save} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" strokeDasharray={line.len} strokeDashoffset={line.offset} />
+        <g opacity={b(1)}>
+          <line x1={40} y1={tY} x2={W - 20} y2={tY} stroke={T.gold_edge} strokeWidth="7" strokeDasharray="22 14" />
+          <text x={50} y={tY - 18} fontSize={F.subhead} fontWeight={700} fill={T.gold_edge} fontFamily="Fredoka">{g.target_label}</text>
+        </g>
+        <text x={40} y={H - 14} fontSize={F.label} fontWeight={600} fill={T.muted} fontFamily="Fredoka">{g.x_label}</text>
+      </svg>
+      <div style={{height: 70}}>{g.caption ? <div style={{fontSize: F.subhead, fontWeight: 700, color: T.save, ...rise(b(2), 30)}}>{g.caption}</div> : null}</div>
+    </Center>
+  );
+};
+
+// A jar that fills one step per month
+const LifeJar: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const steps = 6;
+  const start = (beats[1] ?? 0.5) * fps;
+  const filled = Math.min(steps, Math.max(0, Math.floor((frame - start) / (0.45 * fps)) + 1));
+  return (
+    <Center gap={20}>
+      <div style={{display: "flex", alignItems: "flex-end", gap: 50, opacity: b(0)}}>
+        <div style={{position: "relative", width: 300, height: 290}}>
+          <div style={{position: "absolute", left: 50, right: 50, bottom: 22, height: 220, borderRadius: "0 0 24px 24px", overflow: "hidden", display: "flex", flexDirection: "column-reverse"}}>
+            {Array.from({length: steps}).map((_, i) => <div key={i} style={{height: 220 / steps, background: i < filled ? (i % 2 ? T.gold : "#f7c95d") : "transparent", borderTop: i < filled ? `3px solid ${T.gold_edge}` : "none"}} />)}
+          </div>
+          <div style={{position: "absolute", inset: 0, transform: "scale(1.5)", transformOrigin: "50% 100%"}}><ItemIcon icon="jar" T={T} /></div>
+        </div>
+        <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 30}}>
+          {Array.from({length: steps}).map((_, i) => <div key={i} style={{fontSize: F.label, fontWeight: 600, color: i < filled ? T.ink : T.line}}>Month {i + 1}</div>)}
+        </div>
+      </div>
+      <div style={{fontSize: F.title, fontWeight: 700, color: T.ink, ...rise(b(0), 30)}}>{g.title}</div>
+      <div style={{fontSize: F.subhead, fontWeight: 600, color: T.save, ...rise(b(2), 20)}}>{g.subtitle}</div>
+    </Center>
+  );
+};
+
+// Ticks: a short checklist with green check marks
+const Checklist: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  return (
+    <Center gap={30}>
+      <div style={{fontSize: F.title, fontWeight: 700, alignSelf: "flex-start", ...rise(b(0))}}>{g.title}</div>
+      {g.items.map((it: string, i: number) => {
+        const v = b(i + 1, 11);
+        return (
+          <div key={i} style={{alignSelf: "stretch", display: "flex", alignItems: "center", gap: 28, fontSize: F.subhead, fontWeight: 600, opacity: Math.max(0.25, v)}}>
+            <svg width="84" height="84" viewBox="0 0 84 84"><circle cx="42" cy="42" r="38" fill={v > 0.05 ? T.save : T.line} /><path d="M24 44 L37 57 L61 30" fill="none" stroke="#fff" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="60" strokeDashoffset={60 * (1 - v)} /></svg>
+            <span>{it}</span>
+          </div>
+        );
+      })}
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
+  buckets: Buckets,
+  give_timeline: GiveTimeline,
+  enough_chart: EnoughChart,
+  life_jar: LifeJar,
+  checklist: Checklist,
   split: Split,
   book: BookCard,
   dividend: Dividend,

@@ -343,6 +343,1181 @@
     2.3,
     "@m10+3.0"
    ]
+  },
+  {
+   "id": "s15",
+   "line": "c01",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "At {you.end_age|plain}",
+    "title": "{you.future_70}",
+    "subtitle": "It's real money",
+    "money_note": true
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    "@c02"
+   ]
+  },
+  {
+   "id": "s16",
+   "line": "c03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "ship",
+      "title": "A cruise"
+     },
+     {
+      "icon": "bills",
+      "title": "Bills"
+     },
+     {
+      "icon": "gift",
+      "title": "Gifts"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@c03+0.6",
+    "@c03+1.6",
+    "@c03+2.6"
+   ]
+  },
+  {
+   "id": "s17",
+   "line": "c04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "",
+    "title": "All good",
+    "subtitle": "things"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s18",
+   "line": "c05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "backpack",
+      "title": "Backpacking at 28",
+      "tone": "cost"
+     }
+    ],
+    "tag": "Can't buy it at 70",
+    "tag_tone": "cost"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@c05+1.6"
+   ]
+  },
+  {
+   "id": "s19",
+   "line": "c06",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "friends",
+      "title": "Friends who moved away"
+     },
+     {
+      "icon": "kids",
+      "title": "Kids who grew up"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@c06+0.6",
+    "@c06+3.0"
+   ]
+  },
+  {
+   "id": "s20",
+   "line": "c07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "energy_chart",
+    "series": [
+     [
+      28,
+      3000
+     ],
+     [
+      30,
+      3435
+     ],
+     [
+      32,
+      3932
+     ],
+     [
+      34,
+      4502
+     ],
+     [
+      36,
+      5155
+     ],
+     [
+      38,
+      5901
+     ],
+     [
+      40,
+      6757
+     ],
+     [
+      42,
+      7736
+     ],
+     [
+      44,
+      8856
+     ],
+     [
+      46,
+      10140
+     ],
+     [
+      48,
+      11609
+     ],
+     [
+      50,
+      13291
+     ],
+     [
+      52,
+      15217
+     ],
+     [
+      54,
+      17422
+     ],
+     [
+      56,
+      19947
+     ],
+     [
+      58,
+      22837
+     ],
+     [
+      60,
+      26146
+     ],
+     [
+      62,
+      29934
+     ],
+     [
+      64,
+      34272
+     ],
+     [
+      66,
+      39238
+     ],
+     [
+      68,
+      44923
+     ],
+     [
+      70,
+      51433
+     ]
+    ],
+    "money_label": "Money",
+    "energy_label": "Energy & health"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.3,
+    "@c08+0.2"
+   ]
+  },
+  {
+   "id": "s21",
+   "line": "c09",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "",
+    "title": "Some experiences",
+    "subtitle": "expire"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.1,
+    0.8
+   ]
+  },
+  {
+   "id": "s22",
+   "line": "c10",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Not because",
+    "title": "you can't",
+    "subtitle": "afford them"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0
+   ]
+  },
+  {
+   "id": "s23",
+   "line": "c11",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Because",
+    "title": "you've aged",
+    "subtitle": "out of them"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    0.9
+   ]
+  },
+  {
+   "id": "s24",
+   "line": "b01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "So how do you",
+    "subtitle": "avoid that?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s25",
+   "line": "b02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "book",
+    "lead": "From Die With Zero",
+    "title": "Time buckets",
+    "author": "Bill Perkins"
+   },
+   "camera": "push",
+   "beats": [
+    0.1
+   ]
+  },
+  {
+   "id": "s26",
+   "line": "b03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "paper",
+      "title": "A sheet of paper"
+     }
+    ],
+    "tag": "Draw {you.boxes|plain} boxes"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@b03+1.2"
+   ]
+  },
+  {
+   "id": "s27",
+   "line": "b03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "buckets",
+    "boxes": [
+     {
+      "label": "30s",
+      "icons": []
+     },
+     {
+      "label": "40s",
+      "icons": []
+     },
+     {
+      "label": "50s",
+      "icons": []
+     },
+     {
+      "label": "60s",
+      "icons": []
+     },
+     {
+      "label": "70s",
+      "icons": []
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0
+   ],
+   "offset": 3.0
+  },
+  {
+   "id": "s28",
+   "line": "b04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "list",
+    "title": "Fill them with",
+    "numbered": false,
+    "items": [
+     "Trips",
+     "Hobbies",
+     "Skills",
+     "Time with people"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@b04+1.4",
+    "@b04+2.0",
+    "@b04+2.6",
+    "@b04+3.2"
+   ]
+  },
+  {
+   "id": "s29",
+   "line": "b05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Then you'll",
+    "title": "notice something",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s30",
+   "line": "b06",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "buckets",
+    "boxes": [
+     {
+      "label": "30s",
+      "icons": []
+     },
+     {
+      "label": "40s",
+      "icons": []
+     },
+     {
+      "label": "50s",
+      "icons": []
+     },
+     {
+      "label": "60s",
+      "icons": []
+     },
+     {
+      "label": "70s",
+      "icons": []
+     }
+    ],
+    "show_cooking": true,
+    "title": "Some things fit anywhere"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@b07+0.3"
+   ]
+  },
+  {
+   "id": "s31",
+   "line": "b08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "buckets",
+    "boxes": [
+     {
+      "label": "30s",
+      "icons": [
+       "backpack",
+       "sandcastle"
+      ]
+     },
+     {
+      "label": "40s",
+      "icons": [
+       "skis",
+       "sandcastle"
+      ]
+     },
+     {
+      "label": "50s",
+      "icons": [
+       "skis"
+      ]
+     },
+     {
+      "label": "60s",
+      "icons": [],
+      "expired": [
+       "backpack",
+       "skis"
+      ]
+     },
+     {
+      "label": "70s",
+      "icons": [],
+      "expired": [
+       "backpack",
+       "sandcastle"
+      ]
+     }
+    ],
+    "show_cooking": true
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    "@b08+1.2",
+    "@b09+0.3"
+   ]
+  },
+  {
+   "id": "s32",
+   "line": "b10",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "buckets",
+    "boxes": [
+     {
+      "label": "30s",
+      "icons": [
+       "backpack",
+       "sandcastle"
+      ]
+     },
+     {
+      "label": "40s",
+      "icons": [
+       "skis",
+       "sandcastle"
+      ]
+     },
+     {
+      "label": "50s",
+      "icons": [
+       "skis"
+      ]
+     },
+     {
+      "label": "60s",
+      "icons": [],
+      "expired": [
+       "backpack",
+       "skis"
+      ]
+     },
+     {
+      "label": "70s",
+      "icons": [],
+      "expired": [
+       "backpack",
+       "sandcastle"
+      ]
+     }
+    ],
+    "show_cooking": true,
+    "caption": "Fund these first"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0,
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s33",
+   "line": "g01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "The same idea",
+    "title": "applies to giving",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s34",
+   "line": "g02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "gift",
+      "title": "Leaving money to your kids",
+      "tone": "save"
+     }
+    ],
+    "tag": "Lovely"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@g02+1.2"
+   ]
+  },
+  {
+   "id": "s35",
+   "line": "g03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "But think about",
+    "subtitle": "the timing"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s36",
+   "line": "g04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "give_timeline",
+    "from": "{you.kids_at|plain}",
+    "to": "{you.live_to|plain}",
+    "marks": [
+     {
+      "age": 60,
+      "icon": "kids",
+      "label": "Kids inherit at {you.inherit_age|plain}",
+      "tone": "ink"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@g04+3.2"
+   ]
+  },
+  {
+   "id": "s37",
+   "line": "g05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "give_timeline",
+    "from": "{you.kids_at|plain}",
+    "to": "{you.live_to|plain}",
+    "marks": [
+     {
+      "age": 60,
+      "icon": "gift",
+      "label": "{you.gift} at {you.inherit_age|plain}",
+      "tone": "ink"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s38",
+   "line": "g06",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "give_timeline",
+    "from": "{you.kids_at|plain}",
+    "to": "{you.live_to|plain}",
+    "marks": [
+     {
+      "age": 60,
+      "icon": "gift",
+      "label": "{you.gift} at {you.inherit_age|plain}",
+      "tone": "ink"
+     },
+     {
+      "age": 30,
+      "icon": "key",
+      "label": "{you.gift} at {you.gift_early_age|plain}",
+      "tone": "save"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0.4
+   ]
+  },
+  {
+   "id": "s39",
+   "line": "g07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "give_timeline",
+    "from": "{you.kids_at|plain}",
+    "to": "{you.live_to|plain}",
+    "marks": [
+     {
+      "age": 60,
+      "icon": "gift",
+      "label": "{you.gift} at {you.inherit_age|plain}",
+      "tone": "ink"
+     },
+     {
+      "age": 30,
+      "icon": "key",
+      "label": "{you.gift} at {you.gift_early_age|plain}",
+      "tone": "save"
+     }
+    ],
+    "caption": "Same money. Different impact."
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s40",
+   "line": "g08",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "If you can afford to",
+    "title": "Give while it",
+    "subtitle": "matters most"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@g08+1.4",
+    "@g08+3.0"
+   ]
+  },
+  {
+   "id": "s41",
+   "line": "r01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Not on a credit card",
+    "title": "This is not",
+    "subtitle": "\"spend it all\""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@r01+1.4",
+    "@r01+2.8"
+   ]
+  },
+  {
+   "id": "s42",
+   "line": "r02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Die With Zero only works",
+    "title": "if you won't",
+    "subtitle": "run out"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.2
+   ]
+  },
+  {
+   "id": "s43",
+   "line": "r03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "checklist",
+    "title": "Foundations first",
+    "items": [
+     "Emergency fund",
+     "No high-interest debt",
+     "Retirement on track"
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@r04+0.9",
+    "@r04+2.4",
+    "@r04+4.0"
+   ]
+  },
+  {
+   "id": "s44",
+   "line": "r05",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "enough_chart",
+    "target_label": "Enough",
+    "x_label": "Your savings over time"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@r05+1.2"
+   ]
+  },
+  {
+   "id": "s45",
+   "line": "r07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "enough_chart",
+    "target_label": "Enough",
+    "x_label": "Your savings over time",
+    "caption": "Safety \u2192 permission"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    "@r07+2.0"
+   ]
+  },
+  {
+   "id": "s46",
+   "line": "r08",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "life_jar",
+    "title": "Life fund",
+    "subtitle": "Spend on purpose, not on impulse"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    "@r08+4.0"
+   ]
+  },
+  {
+   "id": "s47",
+   "line": "r09",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Plenty of the",
+    "title": "best memories",
+    "subtitle": "are cheap"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4,
+    1.0
+   ]
+  },
+  {
+   "id": "s48",
+   "line": "r10",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "icon_cards",
+    "cards": [
+     {
+      "icon": "tent",
+      "title": "Camping"
+     },
+     {
+      "icon": "postcard",
+      "title": "The beach"
+     },
+     {
+      "icon": "dinner",
+      "title": "Dinner with friends"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@r10+1.3",
+    "@r10+2.6"
+   ]
+  },
+  {
+   "id": "s49",
+   "line": "e01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s50",
+   "line": "e02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}",
+    "glow": "left"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0,
+    "@e02+1.6"
+   ]
+  },
+  {
+   "id": "s51",
+   "line": "e03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Not on a spreadsheet",
+    "title": "but in",
+    "subtitle": "your life"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.3
+   ]
+  },
+  {
+   "id": "s52",
+   "line": "e04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "",
+    "title": "Save on purpose.",
+    "subtitle": "Spend on purpose."
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.1,
+    "@e04+1.2"
+   ]
+  },
+  {
+   "id": "s53",
+   "line": "e05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "The goal was never",
+    "title": "to die with",
+    "subtitle": "the most money"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.3
+   ]
+  },
+  {
+   "id": "s54",
+   "line": "e06",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "It was to live",
+    "title": "the best life",
+    "subtitle": "your money could buy"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.3
+   ]
+  },
+  {
+   "id": "s55",
+   "line": "e07",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "cta",
+    "title": "Money Leak Audit Workbook",
+    "lines": [
+     "Find room for",
+     "your time buckets"
+    ],
+    "where": "In the description"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    1.4
+   ]
+  },
+  {
+   "id": "s56",
+   "line": "e08",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "waving"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "",
+    "title": "I'm Ren",
+    "subtitle": "See you next time"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.1,
+    0.6
+   ]
   }
  ]
 }

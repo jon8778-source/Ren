@@ -159,6 +159,9 @@ def main():
     public = PROJECT / "remotion" / "public"
     shutil.rmtree(public / "characters", ignore_errors=True)
     shutil.copytree(PROJECT / "characters", public / "characters")
+    shutil.rmtree(public / "assets", ignore_errors=True)
+    if (PROJECT / "assets").exists():  # shared icons (e.g. the time-bucket backpack, skis, sandcastle)
+        shutil.copytree(PROJECT / "assets", public / "assets")
     (public / "audio").mkdir(exist_ok=True)
     shutil.copy(ep / "audio" / "voice.mp3", public / "audio" / "voice.mp3")
 
