@@ -20,3 +20,8 @@ you,1,value,inherit_age,60,final
 you,1,value,gift,10000,final
 you,1,value,gift_early_age,30,final
 you,1,value,dividend_end_age,68,final
+you,1,value,decade_30,30,final
+you,1,value,decade_40,40,final
+you,1,value,decade_50,50,final
+you,1,value,decade_60,60,final
+you,1,value,decade_70,70,final

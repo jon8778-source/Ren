@@ -11,3 +11,4 @@ you.gift_early_age < you.inherit_age | Ten thousand at thirty comes thirty years
 you.dividend_years > you.trip_weeks | The trip lasts two weeks; the dividend lasts forty years
 you.boxes == 5 | Five boxes: thirties to seventies
 you.start_age + you.dividend_years == you.dividend_end_age | The forty-year dividend runs from 28 to 68
+[you.decade_30, you.decade_40, you.decade_50, you.decade_60, you.decade_70] == [30, 40, 50, 60, 70] | Five boxes: thirties to seventies

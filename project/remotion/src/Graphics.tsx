@@ -1125,11 +1125,11 @@ const Buckets: React.FC<P> = ({g, beats, config}) => {
             <div key={i} style={{width: 200, height: 560, borderRadius: 28, border: `5px solid ${T.ink}`, overflow: "hidden", background: "#fff", opacity: box, transform: `translateY(${(1 - box) * 40}px)`, position: "relative"}}>
               <div style={{height: 76, background: T.ink, color: "#fff", fontSize: F.subhead, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center"}}>{r.label}</div>
               <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 2, paddingTop: 8}}>
-                {g.show_cooking ? <div style={{transform: `scale(${0.62 * stage(1)})`, height: 120, marginTop: -30, transformOrigin: "50% 50%"}}><ItemIcon icon="cooking" T={T} /></div> : null}
-                {r.icons.map((ic) => <div key={ic} style={{transform: `scale(${0.62 * stage(2)})`, height: 120, marginTop: -30, transformOrigin: "50% 50%"}}><ItemIcon icon={ic} T={T} /></div>)}
-                {(r.expired || []).map((ic) => <div key={ic} style={{transform: `scale(${0.62 * stage(2)})`, height: 120, marginTop: -30, opacity: 1 - 0.7 * stage(3), filter: `grayscale(${stage(3)})`}}><ItemIcon icon={ic} T={T} /></div>)}
+                {g.show_cooking ? <div style={{width: 200, height: 140, display: "flex", justifyContent: "center", alignItems: "center"}}><div style={{transform: `scale(${0.66 * stage(1)})`}}><ItemIcon icon="cooking" T={T} /></div></div> : null}
+                {r.icons.map((ic) => <div key={ic} style={{width: 200, height: 140, display: "flex", justifyContent: "center", alignItems: "center"}}><div style={{transform: `scale(${0.66 * stage(2)})`}}><ItemIcon icon={ic} T={T} /></div></div>)}
+                {(r.expired || []).map((ic) => <div key={ic} style={{width: 200, height: 140, display: "flex", justifyContent: "center", alignItems: "center", opacity: 1 - 0.7 * stage(3), filter: `grayscale(${stage(3)})`}}><div style={{transform: `scale(${0.66 * stage(2)})`}}><ItemIcon icon={ic} T={T} /></div></div>)}
               </div>
-              {(r.expired || []).length ? <div style={{position: "absolute", left: 0, right: 0, top: 270, display: "flex", justifyContent: "center"}}><Stamp text="EXPIRES" T={T} size={40} show={stage(3)} /></div> : null}
+              {(r.expired || []).length ? <div style={{position: "absolute", left: 0, right: 0, top: 300, display: "flex", justifyContent: "center"}}><Stamp text="EXPIRES" T={T} size={40} show={stage(3)} /></div> : null}
             </div>
           );
         })}
@@ -1155,10 +1155,10 @@ const GiveTimeline: React.FC<P> = ({g, beats, config}) => {
         {marks.map((m, i) => {
           const v = b(1 + i, 11);
           return (
-            <div key={i} style={{position: "absolute", left: x(m.age) - 150, width: 300, top: 0, display: "flex", flexDirection: "column", alignItems: "center", opacity: v, transform: `translateY(${(1 - v) * -60}px)`}}>
-              <div style={{fontSize: F.subhead, fontWeight: 700, color: tone(T, m.tone)}}>{m.label}</div>
+            <div key={i} style={{position: "absolute", left: Math.max(0, Math.min(W - 420, x(m.age) - 210)), width: 420, top: 40, display: "flex", flexDirection: "column", alignItems: x(m.age) < W * 0.25 ? "flex-start" : "center", opacity: v, transform: `translateY(${(1 - v) * -60}px)`}}>
+              <div style={{fontSize: F.body, fontWeight: 700, color: tone(T, m.tone), whiteSpace: "nowrap"}}>{m.label}</div>
               <div style={{transform: "scale(0.9)"}}><ItemIcon icon={m.icon} T={T} /></div>
-              <div style={{width: 26, height: 26, borderRadius: 13, background: tone(T, m.tone), marginTop: 6}} />
+              <div style={{position: "absolute", left: x(m.age) - Math.max(0, Math.min(W - 420, x(m.age) - 210)) - 13, top: 277, width: 26, height: 26, borderRadius: 13, background: tone(T, m.tone)}} />
             </div>
           );
         })}
@@ -1205,17 +1205,21 @@ const LifeJar: React.FC<P> = ({g, beats, config}) => {
   const steps = 6;
   const start = (beats[1] ?? 0.5) * fps;
   const filled = Math.min(steps, Math.max(0, Math.floor((frame - start) / (0.45 * fps)) + 1));
+  const top = 80, bottom = 340, h = (bottom - top) / steps;
   return (
     <Center gap={20}>
-      <div style={{display: "flex", alignItems: "flex-end", gap: 50, opacity: b(0)}}>
-        <div style={{position: "relative", width: 300, height: 290}}>
-          <div style={{position: "absolute", left: 50, right: 50, bottom: 22, height: 220, borderRadius: "0 0 24px 24px", overflow: "hidden", display: "flex", flexDirection: "column-reverse"}}>
-            {Array.from({length: steps}).map((_, i) => <div key={i} style={{height: 220 / steps, background: i < filled ? (i % 2 ? T.gold : "#f7c95d") : "transparent", borderTop: i < filled ? `3px solid ${T.gold_edge}` : "none"}} />)}
-          </div>
-          <div style={{position: "absolute", inset: 0, transform: "scale(1.5)", transformOrigin: "50% 100%"}}><ItemIcon icon="jar" T={T} /></div>
-        </div>
-        <div style={{display: "flex", flexDirection: "column", gap: 10, marginBottom: 30}}>
-          {Array.from({length: steps}).map((_, i) => <div key={i} style={{fontSize: F.label, fontWeight: 600, color: i < filled ? T.ink : T.line}}>Month {i + 1}</div>)}
+      <div style={{display: "flex", alignItems: "center", gap: 60, opacity: b(0)}}>
+        <svg width="300" height="360" viewBox="0 0 300 360">
+          <defs><clipPath id="jarBody"><path d="M70 66 H230 Q252 90 252 130 V318 Q252 344 226 344 H74 Q48 344 48 318 V130 Q48 90 70 66 Z" /></clipPath></defs>
+          <path d="M70 66 H230 Q252 90 252 130 V318 Q252 344 226 344 H74 Q48 344 48 318 V130 Q48 90 70 66 Z" fill="#eef6fb" />
+          <g clipPath="url(#jarBody)">
+            {Array.from({length: steps}).map((_, i) => <rect key={i} x="40" y={bottom - (i + 1) * h + 4} width="220" height={h} fill={i < filled ? (i % 2 ? T.gold : "#f7c95d") : "none"} stroke={i < filled ? T.gold_edge : "none"} strokeWidth="3" />)}
+          </g>
+          <path d="M70 66 H230 Q252 90 252 130 V318 Q252 344 226 344 H74 Q48 344 48 318 V130 Q48 90 70 66 Z" fill="none" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
+          <rect x="80" y="26" width="140" height="34" rx="8" fill={T.ink} />
+        </svg>
+        <div style={{display: "flex", flexDirection: "column", gap: 8}}>
+          {Array.from({length: steps}).map((_, i) => <div key={i} style={{fontSize: F.label, fontWeight: 600, color: steps - 1 - i < filled ? T.ink : T.line}}>Month {steps - i}</div>)}
         </div>
       </div>
       <div style={{fontSize: F.title, fontWeight: 700, color: T.ink, ...rise(b(0), 30)}}>{g.title}</div>

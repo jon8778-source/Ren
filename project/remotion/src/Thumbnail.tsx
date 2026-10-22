@@ -4,7 +4,7 @@ import {ItemIcon} from "./Graphics";
 
 // YouTube thumbnail, 1280x720. Three layouts; every amount is passed in from the assumptions table.
 export type ThumbProps = {
-  variant: "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i";
+  variant: "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j";
   text?: Record<string, string>;
   theme: Record<string, string>;
   bill: string;
@@ -187,8 +187,25 @@ const I: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
   </AbsoluteFill>
 );
 
+// J: trip vs invest. Ren between a plane ticket and a cash stack, "$3,000?" vs "$51,000?"
+const J: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
+  <AbsoluteFill>
+    <div style={{position: "absolute", left: 40, top: 40, width: 440, textAlign: "center"}}>
+      <div style={{fontSize: 118, fontWeight: 700, color: T.ink, lineHeight: 1}}>{text.left}</div>
+      <div style={{marginTop: 10}}><Pill bg={T.ink} color="#fff" size={44}>THE TRIP</Pill></div>
+      <div style={{marginTop: 26, transform: "scale(1.6) rotate(-8deg)", transformOrigin: "50% 0"}}><ItemIcon icon="ticket" T={T as any} /></div>
+    </div>
+    <div style={{position: "absolute", right: 40, top: 40, width: 440, textAlign: "center"}}>
+      <div style={{fontSize: 118, fontWeight: 700, color: T.save, lineHeight: 1}}>{text.right}</div>
+      <div style={{marginTop: 10}}><Pill bg={T.save} color="#fff" size={44}>{text.age}</Pill></div>
+      <div style={{marginTop: 26, transform: "scale(1.6) rotate(6deg)", transformOrigin: "50% 0"}}><ItemIcon icon="cash" T={T as any} /></div>
+    </div>
+    <Img src={staticFile("characters/ren/thinking.png")} style={{position: "absolute", left: 470, bottom: 0, height: 600, width: 340, objectFit: "contain", objectPosition: "50% 100%"}} />
+  </AbsoluteFill>
+);
+
 export const Thumbnail: React.FC<ThumbProps> = (p) => {
-  const V = {a: A, b: B, c: C, d: D, e: E, f: F_, g: G, h: H, i: I}[p.variant];
+  const V = {a: A, b: B, c: C, d: D, e: E, f: F_, g: G, h: H, i: I, j: J}[p.variant];
   return (
     <AbsoluteFill style={{background: "#fff", fontFamily: FONT}}>
       <V {...p} />

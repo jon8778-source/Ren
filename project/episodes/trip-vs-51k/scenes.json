@@ -432,11 +432,11 @@
     "cards": [
      {
       "icon": "backpack",
-      "title": "Backpacking at 28",
+      "title": "Backpacking at {you.start_age|plain}",
       "tone": "cost"
      }
     ],
-    "tag": "Can't buy it at 70",
+    "tag": "Can't buy it at {you.end_age|plain}",
     "tag_tone": "cost"
    },
    "camera": "push",
@@ -674,13 +674,15 @@
    },
    "graphic": {
     "type": "book",
-    "lead": "From Die With Zero",
-    "title": "Time buckets",
-    "author": "Bill Perkins"
+    "lead": "From the same book",
+    "title": "Die With Zero",
+    "author": "Bill Perkins",
+    "caption": "Time buckets"
    },
    "camera": "push",
    "beats": [
-    0.1
+    0.1,
+    "@b02+1.4"
    ]
   },
   {
@@ -719,23 +721,23 @@
     "type": "buckets",
     "boxes": [
      {
-      "label": "30s",
+      "label": "{you.decade_30|plain}s",
       "icons": []
      },
      {
-      "label": "40s",
+      "label": "{you.decade_40|plain}s",
       "icons": []
      },
      {
-      "label": "50s",
+      "label": "{you.decade_50|plain}s",
       "icons": []
      },
      {
-      "label": "60s",
+      "label": "{you.decade_60|plain}s",
       "icons": []
      },
      {
-      "label": "70s",
+      "label": "{you.decade_70|plain}s",
       "icons": []
      }
     ]
@@ -806,23 +808,23 @@
     "type": "buckets",
     "boxes": [
      {
-      "label": "30s",
+      "label": "{you.decade_30|plain}s",
       "icons": []
      },
      {
-      "label": "40s",
+      "label": "{you.decade_40|plain}s",
       "icons": []
      },
      {
-      "label": "50s",
+      "label": "{you.decade_50|plain}s",
       "icons": []
      },
      {
-      "label": "60s",
+      "label": "{you.decade_60|plain}s",
       "icons": []
      },
      {
-      "label": "70s",
+      "label": "{you.decade_70|plain}s",
       "icons": []
      }
     ],
@@ -847,27 +849,27 @@
     "type": "buckets",
     "boxes": [
      {
-      "label": "30s",
+      "label": "{you.decade_30|plain}s",
       "icons": [
        "backpack",
        "sandcastle"
       ]
      },
      {
-      "label": "40s",
+      "label": "{you.decade_40|plain}s",
       "icons": [
        "skis",
        "sandcastle"
       ]
      },
      {
-      "label": "50s",
+      "label": "{you.decade_50|plain}s",
       "icons": [
        "skis"
       ]
      },
      {
-      "label": "60s",
+      "label": "{you.decade_60|plain}s",
       "icons": [],
       "expired": [
        "backpack",
@@ -875,7 +877,7 @@
       ]
      },
      {
-      "label": "70s",
+      "label": "{you.decade_70|plain}s",
       "icons": [],
       "expired": [
        "backpack",
@@ -905,27 +907,27 @@
     "type": "buckets",
     "boxes": [
      {
-      "label": "30s",
+      "label": "{you.decade_30|plain}s",
       "icons": [
        "backpack",
        "sandcastle"
       ]
      },
      {
-      "label": "40s",
+      "label": "{you.decade_40|plain}s",
       "icons": [
        "skis",
        "sandcastle"
       ]
      },
      {
-      "label": "50s",
+      "label": "{you.decade_50|plain}s",
       "icons": [
        "skis"
       ]
      },
      {
-      "label": "60s",
+      "label": "{you.decade_60|plain}s",
       "icons": [],
       "expired": [
        "backpack",
@@ -933,7 +935,7 @@
       ]
      },
      {
-      "label": "70s",
+      "label": "{you.decade_70|plain}s",
       "icons": [],
       "expired": [
        "backpack",

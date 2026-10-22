@@ -34,3 +34,12 @@
 
 ## Script gate
 - Owner: "OK, all changes approved and claims verified."
+
+## Full video (Gate 3)
+- 3:54, 56 scenes, QC OVERALL PASS (reports/qc-final.md). Pilot approved by the owner.
+- Fixed during the frame check: overlapping icons in the time buckets, the timeline labels running together,
+  the jar fill drawn outside the jar, and the book card reading as if "Time buckets" were a book. QC caught
+  hand-typed decade and age labels; they now come from the table.
+- The EXPIRES stamp is drawn in code (the attached PNG has its lettering baked in). The backpack, skis and
+  sandcastle icons are the owner's, in project/assets/icons.
+- Thumbnail: Option 1 (renders/thumbnail-a.png, layout j). Two shorts follow per the standing rules.

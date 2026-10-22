@@ -39,6 +39,11 @@
    "gift": 10000.0,
    "gift_early_age": 30.0,
    "dividend_end_age": 68.0,
+   "decade_30": 30.0,
+   "decade_40": 40.0,
+   "decade_50": 50.0,
+   "decade_60": 60.0,
+   "decade_70": 70.0,
    "income_multiple_vs_level1": 1
   }
  },
