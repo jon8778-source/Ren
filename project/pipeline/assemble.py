@@ -25,7 +25,9 @@ REF = re.compile(r"\{([^}|]+)(?:\|(plain))?\}")
 def fill(text, assumptions):
     def sub(m):
         v = resolve_ref(m[1], assumptions)
-        return f"{v:,.0f}" if m[2] == "plain" else money(v)
+        if m[2] == "plain":
+            return f"{v:,.0f}" if v == int(v) else f"{v:,.1f}"  # "2.5 hours", not "2"
+        return money(v)
     return REF.sub(sub, text)
 
 
@@ -64,9 +66,11 @@ def resolve_graphic(g, assumptions, manifest):
             out[k] = [{**resolve_graphic({x: y for x, y in r.items() if x != "character"}, assumptions, manifest),
                        "src": f"characters/{r['character']}/{r.get('pose', 'neutral')}.png"} for r in v]
         elif k == "people":
-            out[k] = [{"id": p, "name": manifest[p]["name"],
-                       "src": f"characters/{p}/{g.get('highlight_pose', 'neutral') if p == g.get('highlight') else 'neutral'}.png"}
-                      for p in v]
+            out[k] = []
+            for p in v:  # "max-30" or "max-30:happy"
+                pid, _, pose = p.partition(":")
+                pose = pose or (g.get("highlight_pose", "neutral") if pid == g.get("highlight") else "neutral")
+                out[k].append({"id": pid, "name": manifest[pid]["name"], "src": f"characters/{pid}/{pose}.png"})
         elif isinstance(v, str):
             out[k] = fill(v, assumptions)
             whole = REF.fullmatch(v)
@@ -155,6 +159,9 @@ def main():
     public = PROJECT / "remotion" / "public"
     shutil.rmtree(public / "characters", ignore_errors=True)
     shutil.copytree(PROJECT / "characters", public / "characters")
+    shutil.rmtree(public / "assets", ignore_errors=True)
+    if (PROJECT / "assets").exists():  # shared icons (e.g. the time-bucket backpack, skis, sandcastle)
+        shutil.copytree(PROJECT / "assets", public / "assets")
     (public / "audio").mkdir(exist_ok=True)
     shutil.copy(ep / "audio" / "voice.mp3", public / "audio" / "voice.mp3")
 

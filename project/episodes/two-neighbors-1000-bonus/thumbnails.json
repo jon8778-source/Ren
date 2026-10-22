@@ -1,0 +1,5 @@
+{
+  "_note": "Options a/b/c render layouts g/h/i. The amount is the shared bonus from the assumptions table.",
+  "variants": "ghi",
+  "text": { "money": "{bill}" }
+}

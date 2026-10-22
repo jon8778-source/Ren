@@ -1,0 +1,131 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 29.562,
+ "lines": [
+  {
+   "id": "l01",
+   "section": "short-lena",
+   "text": "Lena splits her bonus three ways.",
+   "refs": [
+    "=3"
+   ],
+   "start": 0.41,
+   "end": 2.531,
+   "chunk": 0
+  },
+  {
+   "id": "l02",
+   "section": "short-lena",
+   "text": "Four hundred dollars goes to a cleaner.",
+   "refs": [
+    "lena30.cleaner"
+   ],
+   "start": 2.981,
+   "end": 5.28,
+   "chunk": 0
+  },
+  {
+   "id": "l03",
+   "section": "short-lena",
+   "text": "Four visits, about two and a half hours each.",
+   "refs": [
+    "lena30.cleaner_visits",
+    "lena30.hours_per_visit"
+   ],
+   "start": 5.73,
+   "end": 8.202,
+   "chunk": 0
+  },
+  {
+   "id": "l04",
+   "section": "short-lena",
+   "text": "That's ten hours of her weekends handed back.",
+   "refs": [
+    "lena30.hours_back"
+   ],
+   "start": 8.652,
+   "end": 11.226,
+   "chunk": 0
+  },
+  {
+   "id": "l05",
+   "section": "short-lena",
+   "text": "Four hundred and fifty dollars goes to a weekend away with her two oldest friends, booked three months ahead.",
+   "refs": [
+    "lena30.trip",
+    "lena30.trip_friends",
+    "lena30.trip_months_ahead"
+   ],
+   "start": 11.676,
+   "end": 17.761,
+   "chunk": 0
+  },
+  {
+   "id": "l06",
+   "section": "short-lena",
+   "text": "And the last one hundred and fifty pays for a cooking class with her partner.",
+   "refs": [
+    "lena30.cooking_class"
+   ],
+   "start": 18.211,
+   "end": 22.357,
+   "chunk": 0
+  },
+  {
+   "id": "y01",
+   "section": "short-lena",
+   "text": "Fast forward one year.",
+   "refs": [
+    "lena30.years_later"
+   ],
+   "start": 22.807,
+   "end": 24.367,
+   "chunk": 0
+  },
+  {
+   "id": "y04",
+   "section": "short-lena",
+   "text": "Next door, Lena is still laughing about the weekend away.",
+   "refs": [],
+   "start": 24.817,
+   "end": 27.942,
+   "chunk": 0
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 27.562,
+   "leading_silence_s": 0.02,
+   "lufs": -22.3,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   },
+   "source": "cut from two-neighbors-1000-bonus/audio/voice.wav"
+  }
+ ]
+}

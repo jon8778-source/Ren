@@ -1,0 +1,22 @@
+character,level,category,item,amount,status
+all,0,bill,The trip (example cost),3000,final
+you,1,income,Money available at 28,3000,final
+you,1,fixed,Trip or invest,3000,final
+you,1,value,lump,3000,final
+you,1,value,start_age,28,final
+you,1,value,end_age,70,final
+you,1,value,years,42,final
+you,1,value,rate,0.07,final
+you,1,value,rate_pct,7,final
+you,1,value,future_70,51432.77,final
+you,1,value,about_51k,51000,final
+you,1,value,trip_weeks,2,final
+you,1,value,dividend_years,40,final
+you,1,value,boxes,5,final
+you,1,value,kid_age,5,final
+you,1,value,kids_at,28,final
+you,1,value,live_to,88,final
+you,1,value,inherit_age,60,final
+you,1,value,gift,10000,final
+you,1,value,gift_early_age,30,final
+you,1,value,dividend_end_age,68,final

@@ -1,0 +1,788 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 252.302,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "Meet Max and Lena.",
+   "refs": [],
+   "start": 0.4,
+   "end": 1.874,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "Same street. Same salary.",
+   "refs": [],
+   "start": 2.294,
+   "end": 4.078,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "And on the same Friday, they both open an envelope with a one thousand dollar bonus inside.",
+   "refs": [
+    "bill"
+   ],
+   "start": 4.498,
+   "end": 10.198,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "A year from now, one of them will barely remember what they spent it on.",
+   "refs": [],
+   "start": 10.618,
+   "end": 14.488,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "The other will still be feeling the benefit every single week.",
+   "refs": [],
+   "start": 14.908,
+   "end": 18.15,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "Same money. Completely different results.",
+   "refs": [],
+   "start": 18.57,
+   "end": 20.965,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "So what did Lena know that Max didn't?",
+   "refs": [],
+   "start": 21.385,
+   "end": 23.634,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "meet",
+   "text": "Max and Lena are both thirty.",
+   "refs": [
+    "max30.age"
+   ],
+   "start": 24.434,
+   "end": 26.458,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "meet",
+   "text": "They both earn sixty thousand dollars a year, and they've lived next door to each other for three years.",
+   "refs": [
+    "max30.gross_salary",
+    "max30.years_next_door"
+   ],
+   "start": 26.878,
+   "end": 32.663,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "meet",
+   "text": "They borrow each other's ladders, they wave over the fence, and they both work hard.",
+   "refs": [],
+   "start": 33.083,
+   "end": 37.53,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "meet",
+   "text": "Neither of them is bad with money.",
+   "refs": [],
+   "start": 37.95,
+   "end": 40.028,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "meet",
+   "text": "Quick note: Max and Lena are made up, and the numbers are just examples, not financial advice.",
+   "refs": [],
+   "start": 40.448,
+   "end": 46.259,
+   "chunk": 0
+  },
+  {
+   "id": "x01",
+   "section": "max",
+   "text": "Max knows exactly what he wants.",
+   "refs": [],
+   "start": 47.059,
+   "end": 49.201,
+   "chunk": 0
+  },
+  {
+   "id": "x02",
+   "section": "max",
+   "text": "That same weekend, he walks out of the store with a brand new sixty-five inch TV for seven hundred dollars.",
+   "refs": [
+    "max30.tv_inches",
+    "max30.tv"
+   ],
+   "start": 49.621,
+   "end": 56.121,
+   "chunk": 1
+  },
+  {
+   "id": "x03",
+   "section": "max",
+   "text": "With the last three hundred, he buys a pair of sneakers he's been eyeing for months.",
+   "refs": [
+    "max30.sneakers"
+   ],
+   "start": 56.541,
+   "end": 61.012,
+   "chunk": 1
+  },
+  {
+   "id": "x04",
+   "section": "max",
+   "text": "And honestly? The first week is great.",
+   "refs": [],
+   "start": 61.432,
+   "end": 63.657,
+   "chunk": 1
+  },
+  {
+   "id": "x05",
+   "section": "max",
+   "text": "Movie night feels like being at the theater.",
+   "refs": [],
+   "start": 64.077,
+   "end": 66.418,
+   "chunk": 1
+  },
+  {
+   "id": "x06",
+   "section": "max",
+   "text": "The sneakers get compliments at work.",
+   "refs": [],
+   "start": 66.838,
+   "end": 69.058,
+   "chunk": 1
+  },
+  {
+   "id": "x07",
+   "section": "max",
+   "text": "But by week three, something changes.",
+   "refs": [
+    "max30.fade_week"
+   ],
+   "start": 69.478,
+   "end": 71.597,
+   "chunk": 1
+  },
+  {
+   "id": "x08",
+   "section": "max",
+   "text": "The TV is just... the TV. The sneakers are just shoes.",
+   "refs": [],
+   "start": 72.017,
+   "end": 75.626,
+   "chunk": 1
+  },
+  {
+   "id": "x09",
+   "section": "max",
+   "text": "Nothing went wrong.",
+   "refs": [],
+   "start": 76.046,
+   "end": 77.27,
+   "chunk": 1
+  },
+  {
+   "id": "x10",
+   "section": "max",
+   "text": "Max still owns everything he bought.",
+   "refs": [],
+   "start": 77.69,
+   "end": 79.78,
+   "chunk": 1
+  },
+  {
+   "id": "x11",
+   "section": "max",
+   "text": "It just stopped feeling special.",
+   "refs": [],
+   "start": 80.2,
+   "end": 82.027,
+   "chunk": 1
+  },
+  {
+   "id": "l01",
+   "section": "lena",
+   "text": "Lena splits her bonus three ways.",
+   "refs": [
+    "=3"
+   ],
+   "start": 82.827,
+   "end": 84.948,
+   "chunk": 1
+  },
+  {
+   "id": "l02",
+   "section": "lena",
+   "text": "Four hundred dollars goes to a cleaner.",
+   "refs": [
+    "lena30.cleaner"
+   ],
+   "start": 85.368,
+   "end": 87.667,
+   "chunk": 1
+  },
+  {
+   "id": "l03",
+   "section": "lena",
+   "text": "Four visits, about two and a half hours each.",
+   "refs": [
+    "lena30.cleaner_visits",
+    "lena30.hours_per_visit"
+   ],
+   "start": 88.087,
+   "end": 90.559,
+   "chunk": 1
+  },
+  {
+   "id": "l04",
+   "section": "lena",
+   "text": "That's ten hours of her weekends handed back.",
+   "refs": [
+    "lena30.hours_back"
+   ],
+   "start": 90.979,
+   "end": 93.553,
+   "chunk": 1
+  },
+  {
+   "id": "l05",
+   "section": "lena",
+   "text": "Four hundred and fifty dollars goes to a weekend away with her two oldest friends, booked three months ahead.",
+   "refs": [
+    "lena30.trip",
+    "lena30.trip_friends",
+    "lena30.trip_months_ahead"
+   ],
+   "start": 93.973,
+   "end": 100.058,
+   "chunk": 1
+  },
+  {
+   "id": "l06",
+   "section": "lena",
+   "text": "And the last one hundred and fifty pays for a cooking class with her partner.",
+   "refs": [
+    "lena30.cooking_class"
+   ],
+   "start": 100.478,
+   "end": 104.624,
+   "chunk": 2
+  },
+  {
+   "id": "l07",
+   "section": "lena",
+   "text": "None of it sits on a shelf.",
+   "refs": [],
+   "start": 105.044,
+   "end": 106.638,
+   "chunk": 2
+  },
+  {
+   "id": "l08",
+   "section": "lena",
+   "text": "Some of it she won't even enjoy for months.",
+   "refs": [],
+   "start": 107.058,
+   "end": 109.477,
+   "chunk": 2
+  },
+  {
+   "id": "l09",
+   "section": "lena",
+   "text": "But the moment she books that trip, something starts happening.",
+   "refs": [],
+   "start": 109.897,
+   "end": 113.186,
+   "chunk": 2
+  },
+  {
+   "id": "y01",
+   "section": "later",
+   "text": "Fast forward one year.",
+   "refs": [
+    "lena30.years_later"
+   ],
+   "start": 113.986,
+   "end": 115.546,
+   "chunk": 2
+  },
+  {
+   "id": "y02",
+   "section": "later",
+   "text": "Max's TV is still on the wall.",
+   "refs": [],
+   "start": 115.966,
+   "end": 118.023,
+   "chunk": 2
+  },
+  {
+   "id": "y03",
+   "section": "later",
+   "text": "He watches it most nights, but he doesn't really notice it anymore.",
+   "refs": [],
+   "start": 118.443,
+   "end": 122.168,
+   "chunk": 2
+  },
+  {
+   "id": "y04",
+   "section": "later",
+   "text": "Next door, Lena is still laughing about the weekend away.",
+   "refs": [],
+   "start": 122.588,
+   "end": 125.713,
+   "chunk": 2
+  },
+  {
+   "id": "y05",
+   "section": "later",
+   "text": "She still makes the curry she learned at the cooking class.",
+   "refs": [],
+   "start": 126.133,
+   "end": 129.001,
+   "chunk": 2
+  },
+  {
+   "id": "y06",
+   "section": "later",
+   "text": "And those ten hours? She spent them in the park, not scrubbing the bathroom.",
+   "refs": [
+    "lena30.hours_back"
+   ],
+   "start": 129.421,
+   "end": 133.647,
+   "chunk": 2
+  },
+  {
+   "id": "y07",
+   "section": "later",
+   "text": "Same thousand dollars. Very different year.",
+   "refs": [],
+   "start": 134.067,
+   "end": 136.654,
+   "chunk": 2
+  },
+  {
+   "id": "w01",
+   "section": "why",
+   "text": "So what happened?",
+   "refs": [],
+   "start": 137.454,
+   "end": 138.654,
+   "chunk": 2
+  },
+  {
+   "id": "w03",
+   "section": "why",
+   "text": "When we buy something new, we get a happiness boost.",
+   "refs": [],
+   "start": 139.074,
+   "end": 141.788,
+   "chunk": 2
+  },
+  {
+   "id": "w04",
+   "section": "why",
+   "text": "But we get used to it fast, and the feeling fades back to normal.",
+   "refs": [],
+   "start": 142.208,
+   "end": 145.883,
+   "chunk": 2
+  },
+  {
+   "id": "w05",
+   "section": "why",
+   "text": "Experiences work differently.",
+   "refs": [],
+   "start": 146.303,
+   "end": 148.112,
+   "chunk": 2
+  },
+  {
+   "id": "w06",
+   "section": "why",
+   "text": "You look forward to them before, you enjoy them during, and you get to relive them afterward.",
+   "refs": [],
+   "start": 148.532,
+   "end": 153.476,
+   "chunk": 2
+  },
+  {
+   "id": "w07",
+   "section": "why",
+   "text": "Max got one spike. Lena got three.",
+   "refs": [
+    "max30.spikes",
+    "lena30.spikes"
+   ],
+   "start": 153.896,
+   "end": 156.475,
+   "chunk": 3
+  },
+  {
+   "id": "w08",
+   "section": "why",
+   "text": "So here's how to spend like Lena.",
+   "refs": [],
+   "start": 156.895,
+   "end": 158.74,
+   "chunk": 3
+  },
+  {
+   "id": "r01",
+   "section": "rules",
+   "text": "Rule one: buy experiences over things.",
+   "refs": [
+    "=1"
+   ],
+   "start": 159.54,
+   "end": 162.024,
+   "chunk": 3
+  },
+  {
+   "id": "r02",
+   "section": "rules",
+   "text": "Experiences become part of our story, and we don't compare them as much.",
+   "refs": [],
+   "start": 162.444,
+   "end": 166.678,
+   "chunk": 3
+  },
+  {
+   "id": "r03",
+   "section": "rules",
+   "text": "A new phone gets outdated. A great trip doesn't.",
+   "refs": [],
+   "start": 167.098,
+   "end": 170.144,
+   "chunk": 3
+  },
+  {
+   "id": "r04",
+   "section": "rules",
+   "text": "Rule two: buy back your time.",
+   "refs": [
+    "=2"
+   ],
+   "start": 170.564,
+   "end": 172.44,
+   "chunk": 3
+  },
+  {
+   "id": "r05",
+   "section": "rules",
+   "text": "If there's a task you hate and you can afford to hand it off, that can be money well spent.",
+   "refs": [],
+   "start": 172.86,
+   "end": 177.578,
+   "chunk": 3
+  },
+  {
+   "id": "r06",
+   "section": "rules",
+   "text": "Ask yourself: what job drains me the most, and what would it cost to skip it?",
+   "refs": [],
+   "start": 177.998,
+   "end": 182.225,
+   "chunk": 3
+  },
+  {
+   "id": "r07",
+   "section": "rules",
+   "text": "Rule three: spend on other people.",
+   "refs": [
+    "=3"
+   ],
+   "start": 182.645,
+   "end": 184.661,
+   "chunk": 3
+  },
+  {
+   "id": "r08",
+   "section": "rules",
+   "text": "Lena's weekend away and her cooking class were really about time with the people she cares about.",
+   "refs": [],
+   "start": 185.081,
+   "end": 190.58,
+   "chunk": 3
+  },
+  {
+   "id": "r09",
+   "section": "rules",
+   "text": "It doesn't have to be big. A coffee, a dinner, a shared day out.",
+   "refs": [],
+   "start": 191.0,
+   "end": 194.557,
+   "chunk": 3
+  },
+  {
+   "id": "r10",
+   "section": "rules",
+   "text": "Rule four: pay now, enjoy later.",
+   "refs": [
+    "=4"
+   ],
+   "start": 194.977,
+   "end": 197.1,
+   "chunk": 3
+  },
+  {
+   "id": "r11",
+   "section": "rules",
+   "text": "Looking forward to an experience can be a big part of the fun.",
+   "refs": [],
+   "start": 197.52,
+   "end": 200.936,
+   "chunk": 3
+  },
+  {
+   "id": "r12",
+   "section": "rules",
+   "text": "Book things ahead, and you get weeks of excitement before the day even arrives.",
+   "refs": [],
+   "start": 201.356,
+   "end": 205.775,
+   "chunk": 3
+  },
+  {
+   "id": "r13",
+   "section": "rules",
+   "text": "Rule five: make treats rare so they stay special.",
+   "refs": [
+    "lena30.rules"
+   ],
+   "start": 206.195,
+   "end": 209.128,
+   "chunk": 4
+  },
+  {
+   "id": "r14",
+   "section": "rules",
+   "text": "A fancy coffee every day stops feeling like a treat.",
+   "refs": [],
+   "start": 209.548,
+   "end": 212.696,
+   "chunk": 4
+  },
+  {
+   "id": "r15",
+   "section": "rules",
+   "text": "Make it a Friday thing, and suddenly it's something to look forward to again.",
+   "refs": [],
+   "start": 213.116,
+   "end": 217.167,
+   "chunk": 4
+  },
+  {
+   "id": "s01",
+   "section": "side",
+   "text": "Let's look at them side by side.",
+   "refs": [],
+   "start": 217.967,
+   "end": 219.946,
+   "chunk": 4
+  },
+  {
+   "id": "s02",
+   "section": "side",
+   "text": "Max spent one thousand dollars, and a year later, he owns a TV and some worn-in sneakers.",
+   "refs": [
+    "bill"
+   ],
+   "start": 220.366,
+   "end": 225.824,
+   "chunk": 4
+  },
+  {
+   "id": "s03",
+   "section": "side",
+   "text": "Lena spent the same one thousand dollars, and she got ten free hours, a weekend she'll never forget, a new skill, and time with the people she loves.",
+   "refs": [
+    "bill",
+    "lena30.hours_back"
+   ],
+   "start": 226.244,
+   "end": 235.194,
+   "chunk": 4
+  },
+  {
+   "id": "s04",
+   "section": "side",
+   "text": "Max didn't waste his money. Lena just made it go further.",
+   "refs": [],
+   "start": 235.614,
+   "end": 239.113,
+   "chunk": 4
+  },
+  {
+   "id": "c01",
+   "section": "close",
+   "text": "It's not how much you spend. It's what you spend it on.",
+   "refs": [],
+   "start": 239.913,
+   "end": 242.983,
+   "chunk": 4
+  },
+  {
+   "id": "c02",
+   "section": "close",
+   "text": "Check out the Money Leak Audit Workbook in the description.",
+   "refs": [],
+   "start": 243.403,
+   "end": 246.42,
+   "chunk": 4
+  },
+  {
+   "id": "c03",
+   "section": "close",
+   "text": "Remember, everyone's different, and this isn't financial advice.",
+   "refs": [],
+   "start": 246.84,
+   "end": 250.702,
+   "chunk": 4
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 48.801,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 49.621,
+   "duration": 50.438,
+   "leading_silence_s": 0.01,
+   "lufs": -22.3,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_02.wav",
+   "start": 100.478,
+   "duration": 52.998,
+   "leading_silence_s": 0.01,
+   "lufs": -22.1,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_03.wav",
+   "start": 153.896,
+   "duration": 51.879,
+   "leading_silence_s": 0.01,
+   "lufs": -22.3,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_04.wav",
+   "start": 206.195,
+   "duration": 44.507,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

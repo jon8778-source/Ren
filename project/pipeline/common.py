@@ -64,6 +64,10 @@ def spoken_numbers(text):
                 current = 0
         elif w == "and" and active and i + 1 < len(words) and (words[i + 1] in UNITS or words[i + 1] in TENS):
             continue
+        elif w == "and" and active and words[i + 1:i + 3] == ["a", "half"]:
+            current += 0.5  # "two and a half"
+            found.append(total + current)
+            total, current, active = 0, 0, False
         else:
             if active:
                 found.append(total + current)

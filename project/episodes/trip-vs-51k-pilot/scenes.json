@@ -1,0 +1,348 @@
+{
+ "overlays": [
+  {
+   "type": "disclaimer",
+   "from": 0,
+   "to": 6
+  },
+  {
+   "type": "disclaimer",
+   "from_end": 5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s01",
+   "line": "h01",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "question",
+    "title": "A question that",
+    "subtitle": "sounds easy"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.4
+   ]
+  },
+  {
+   "id": "s02",
+   "line": "h02",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "You're",
+    "title": "Age {you.start_age|plain}",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s03",
+   "line": "h03",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "You've got",
+    "title": "{you.lump}",
+    "subtitle": "",
+    "money_note": true
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.3
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "h04",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "?"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@h04+2.2"
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "h05",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}",
+    "right_from": "{you.lump}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    "@h05+1.6"
+   ]
+  },
+  {
+   "id": "s06",
+   "line": "h06",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "split",
+    "left_icon": "ticket",
+    "left_label": "Trip at {you.start_age|plain}",
+    "left_amount": "{you.lump}",
+    "right_icon": "cash",
+    "right_label": "Invested to {you.end_age|plain}",
+    "right_amount": "{you.future_70}",
+    "glow": "right"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0,
+    0,
+    0.3
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "h07",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "worried"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "Well...",
+    "title": "Not quite",
+    "subtitle": ""
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.5
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "h08",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thinking"
+   },
+   "graphic": {
+    "type": "statement",
+    "lead": "There's something",
+    "title": "money can't",
+    "subtitle": "buy back"
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "id": "s09",
+   "line": "m01",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "book",
+    "lead": "An idea from",
+    "title": "Die With Zero",
+    "author": "Bill Perkins"
+   },
+   "camera": "push",
+   "beats": [
+    0.1
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "m02",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "pointing"
+   },
+   "graphic": {
+    "type": "book",
+    "lead": "An idea from",
+    "title": "Die With Zero",
+    "author": "Bill Perkins",
+    "caption": "The memory dividend"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.4
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "m03",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "tiles",
+    "tiles": [
+     {
+      "label": "The experience",
+      "tone": "ink"
+     },
+     {
+      "label": "The memory",
+      "tone": "save"
+     },
+     {
+      "label": "Keeps paying out",
+      "tone": "gold"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    "@m03+0.2",
+    "@m04+0.1",
+    "@m04+1.6"
+   ]
+  },
+  {
+   "id": "s12",
+   "line": "m05",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "dividend",
+    "count": 3,
+    "labels": [
+     "The story",
+     "A song",
+     "\"Remember when...\""
+    ],
+    "from": "Age {you.start_age|plain}",
+    "to": "Age {you.dividend_end_age|plain}"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    "@m05+0.6",
+    "@m06+0.6",
+    "@m07+0.6"
+   ]
+  },
+  {
+   "id": "s13",
+   "line": "m08",
+   "layout": "character_right",
+   "character": {
+    "id": "ren",
+    "pose": "talking"
+   },
+   "graphic": {
+    "type": "result",
+    "stats": [
+     {
+      "label": "The trip lasts",
+      "value": "{you.trip_weeks|plain} weeks",
+      "tone": "ink"
+     },
+     {
+      "label": "The dividend lasts",
+      "value": "{you.dividend_years|plain} years",
+      "tone": "save"
+     }
+    ]
+   },
+   "camera": "push",
+   "beats": [
+    0.1,
+    "@m09+0.1"
+   ]
+  },
+  {
+   "id": "s14",
+   "line": "m10",
+   "layout": "character_left",
+   "character": {
+    "id": "ren",
+    "pose": "thumbs-up"
+   },
+   "graphic": {
+    "type": "dividend",
+    "count": 8,
+    "show": 0,
+    "from": "Age {you.start_age|plain}",
+    "to": "Age {you.dividend_end_age|plain}",
+    "caption": "The memory dividend"
+   },
+   "camera": "push",
+   "beats": [
+    0,
+    0.2,
+    0.5,
+    0.8,
+    1.1,
+    1.4,
+    1.7,
+    2.0,
+    2.3,
+    "@m10+3.0"
+   ]
+  }
+ ]
+}

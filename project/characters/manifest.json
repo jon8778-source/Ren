@@ -159,6 +159,46 @@
     "neutral": "3fcbf754edea67f1d1660117e8d06f557bc7441087b43c1029cbd5e6db6a5e59",
     "worried": "3e4679175c71db8ffb1bc349eb69edabdf811a52b409b9ea253bb5a09ba88d94"
    }
+  },
+  "max-30": {
+   "role": "spends on things, age 30",
+   "name": "Max",
+   "poses": {
+    "happy": "353575abb7c8341a0cdd05db744ac0d27f480d0ad15b8fa05fa079fcf19c1ef6",
+    "neutral": "238317114a203fdaa64ec922d7e18ac6c8d5d689aa305220d0f354d3df8afce0",
+    "regretful": "900ef83104a2752678a3896e6066c116be87a3a08328ac61f057070b3a462f28",
+    "worried": "1f0eaa462bb89f6d4bdda0c9a54e13bd8395bf5893ab5b46824de19d52d639c7"
+   }
+  },
+  "max-31": {
+   "role": "spends on things, one year later",
+   "name": "Max",
+   "poses": {
+    "happy": "f768dfb7efbfccdd854d74b7a096b2b3fff8508e8b5347cbe247c9dd89a48b1c",
+    "neutral": "77c0d3cfa7225185ece3942df51bbe7915cd48d9abfc9304f582c06cf35593ad",
+    "shrug": "0a27e2e7d062c5cd637a57ebfa9897cabf3695ca672d2fe67c13c5b76d4f5db8",
+    "worried": "2146218cf2d84d1d99631dc5208a5ba5b978bb6814f670869cb4e78ea65dd14c"
+   }
+  },
+  "lena-30": {
+   "role": "spends on time, experiences and people, age 30",
+   "name": "Lena",
+   "poses": {
+    "content": "f15f255978f6c6ff8a62ecdfe2108efcb91a1c8ce4156e30c4b6b2deae0dff9c",
+    "happy": "be1eb64aeafe8e1d152455e9806dcfc9e5a494ac23e2f05b2516302b405c54c9",
+    "neutral": "6cf89188f4fcee30db3de2b6835a2230d4e46bf216b405b127174c30b74a82cd",
+    "worried": "4bfb93cc7036b236dffde9ad96f198dea7b5088fd83f26999bc593ef2d4b7e17"
+   }
+  },
+  "lena-31": {
+   "role": "spends on time, experiences and people, one year later",
+   "name": "Lena",
+   "poses": {
+    "content": "b5430685f229562102ee2c86c7c2dd51fd97e0b2f839366e9ea97d712009c288",
+    "happy": "b2613ddaea5652651606260a511c3dd0cd2053628fcfcf9ec92b9330e566c0b3",
+    "neutral": "6da71015c8768c54a9ea190c61f104b22fde2a7f80adf7efce136b1443cfcc62",
+    "worried": "876b1c706c9331935eec9a0fd391029106d03c002f93f7fbef9df7550b8041e5"
+   }
   }
  }
 }

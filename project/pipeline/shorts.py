@@ -52,8 +52,9 @@ def main():
     for name, sh in spec["shorts"].items():
         out = ep.parent / f"{ep.name}-{name}"
         (out / "audio").mkdir(parents=True, exist_ok=True)
-        for f in ("assumptions.csv", "claims.txt"):
-            shutil.copy(ep / f, out / f)
+        for f in ("assumptions.csv", "claims.txt", "sources.json"):  # sources: the owner's verified claims
+            if (ep / f).exists():
+                shutil.copy(ep / f, out / f)
         subprocess.run([sys.executable, str(Path(__file__).parent / "calc.py"), str(out)], check=True, capture_output=True)
 
         # Audio: each line's own samples from the long track, laid out with fixed gaps
@@ -97,7 +98,7 @@ def main():
             scenes.append(s)
         for i, s in enumerate(scenes, 1):
             s["id"] = f"s{i:02d}"
-        (out / "scenes.json").write_text(json.dumps({"overlays": [{"type": "disclaimer", "from": 0, "to": 4}, {"type": "disclaimer", "from_end": 3.5}],
+        (out / "scenes.json").write_text(json.dumps({"overlays": [{"type": "disclaimer", "from": 0, "to": 4}, {"type": "disclaimer", "from_end": sh.get("end_disclaimer_s", 3.5)}],
                                                      "scenes": scenes}, indent=1, ensure_ascii=False) + "\n")
         (out / "description.txt").write_text(sh["description"].strip() + "\n\n" + spec["description_footer"].strip() + "\n")
         print(f"{out.name}: {len(sh['lines'])} lines, {len(track) / sr:.1f}s")

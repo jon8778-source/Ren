@@ -1,0 +1,13 @@
+# Story claims in script.md, checked against the assumptions table by pipeline/calc.py.
+# Format: python expression | what the script says
+you.lump == bill == 3000 | You've got three thousand dollars (the trip costs the same)
+you.end_age - you.start_age == you.years == 42 | From twenty-eight to seventy is 42 years of growth
+round(you.rate * 100, 6) == you.rate_pct == 7 | At seven percent a year
+abs(you.lump * (1 + you.rate) ** you.years - you.future_70) < 0.01 | 3,000 x 1.07^42 = 51,432.77 (on screen: $51,433)
+abs(you.future_70 - you.about_51k) < 1000 | "about fifty-one thousand dollars"
+you.future_70 / you.lump > 17 | The money grows about seventeen-fold
+you.live_to - you.kids_at == you.inherit_age == 60 | Kids at twenty-eight, live to eighty-eight: they inherit at sixty
+you.gift_early_age < you.inherit_age | Ten thousand at thirty comes thirty years earlier than at sixty
+you.dividend_years > you.trip_weeks | The trip lasts two weeks; the dividend lasts forty years
+you.boxes == 5 | Five boxes: thirties to seventies
+you.start_age + you.dividend_years == you.dividend_end_age | The forty-year dividend runs from 28 to 68

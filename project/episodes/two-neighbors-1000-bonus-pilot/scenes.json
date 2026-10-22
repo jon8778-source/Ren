@@ -1,0 +1,46 @@
+{
+ "overlays": [
+  {"type": "disclaimer", "from": 0, "to": 6},
+  {"type": "disclaimer", "from_end": 5}
+ ],
+ "scenes": [
+  {"id": "s01", "line": "h01", "layout": "character_left", "character": {"id": "ren", "pose": "waving"},
+   "graphic": {"type": "lineup", "people": ["max-30", "lena-30"], "enter": true}, "camera": "push", "beats": [0.1, 0.5]},
+  {"id": "s02", "line": "h02", "layout": "character_left", "character": {"id": "ren", "pose": "pointing"},
+   "graphic": {"type": "houses", "people": ["max-30", "lena-30"], "tag": "Same street. Same salary."}, "camera": "push", "beats": [0, 0.2, 0.4, "@h02+1.0"]},
+  {"id": "s03", "line": "h03", "layout": "character_right", "character": {"id": "max-30", "pose": "happy"},
+   "graphic": {"type": "envelope", "label": "Friday bonus", "amount": "{bill}"}, "camera": "push", "beats": [0.1, "@h03+3.3"]},
+  {"id": "s04", "line": "h04", "layout": "character_right", "character": {"id": "max-31", "pose": "shrug"},
+   "graphic": {"type": "statement", "lead": "A year from now", "title": "One barely remembers", "subtitle": "what it went on"}, "camera": "push", "beats": [0.1, 0.9, 2.4]},
+  {"id": "s05", "line": "h05", "layout": "character_left", "character": {"id": "lena-31", "pose": "content"},
+   "graphic": {"type": "statement", "lead": "The other", "title": "still feels it", "subtitle": "every single week"}, "camera": "push", "beats": [0.1, 0.6, 2.0]},
+  {"id": "s06", "line": "h06", "layout": "character_left", "character": {"id": "ren", "pose": "talking"},
+   "graphic": {"type": "lineup", "people": ["max-31:shrug", "lena-31:happy"], "tag": "Same money, different results"}, "camera": "push", "beats": ["@h06+1.0"]},
+  {"id": "s07", "line": "h07", "layout": "character_left", "character": {"id": "ren", "pose": "thinking"},
+   "graphic": {"type": "question", "title": "What did Lena know", "subtitle": "that Max didn't?"}, "camera": "push", "beats": [0.1, 0.5]},
+  {"id": "s08", "line": "m01", "layout": "character_right", "character": {"id": "ren", "pose": "talking"},
+   "graphic": {"type": "lineup", "people": ["max-30", "lena-30"], "labels": ["Age {max30.age|plain}", "Age {lena30.age|plain}"]}, "camera": "push", "beats": [0.2, 0.6]},
+  {"id": "s09", "line": "m02", "layout": "character_right", "character": {"id": "ren", "pose": "neutral"},
+   "graphic": {"type": "result", "stats": [{"label": "Max earns", "value": "{max30.gross_salary}", "tone": "ink"}, {"label": "Lena earns", "value": "{lena30.gross_salary}", "tone": "ink"}], "equation": "a year, each"}, "camera": "push", "beats": [0.1, 0.4, 1.2]},
+  {"id": "s10", "line": "m02", "offset": 2.6, "layout": "character_left", "character": {"id": "ren", "pose": "pointing"},
+   "graphic": {"type": "houses", "people": ["max-30:happy", "lena-30:happy"], "tag": "Next door for {max30.years_next_door|plain} years"}, "camera": "push", "beats": [0, 0, 0, 0.6]},
+  {"id": "s11", "line": "m03", "layout": "character_left", "character": {"id": "ren", "pose": "talking"},
+   "graphic": {"type": "list", "title": "Good neighbors", "numbered": false, "items": ["Borrow ladders", "Wave over the fence", "Both work hard"]}, "camera": "push", "beats": [0, "@m03+0.1", "@m03+1.5", "@m03+3.1"]},
+  {"id": "s12", "line": "m04", "layout": "character_right", "character": {"id": "ren", "pose": "thumbs-up"},
+   "graphic": {"type": "statement", "lead": "Max and Lena", "title": "Neither is bad", "subtitle": "with money"}, "camera": "push", "beats": [0.1, 0.4, 1.0]},
+  {"id": "s13", "line": "m05", "layout": "character_right", "character": {"id": "ren", "pose": "neutral"},
+   "graphic": {"type": "statement", "lead": "Quick note", "title": "Made-up people", "subtitle": "Example figures", "note": "Educational only, not financial advice"}, "camera": "push", "beats": [0.1, 0.6, 2.0, 3.0]},
+  {"id": "s14", "line": "x01", "layout": "character_right", "character": {"id": "max-30", "pose": "happy"},
+   "graphic": {"type": "statement", "lead": "Max", "title": "knows exactly", "subtitle": "what he wants"}, "camera": "push", "beats": [0.1, 0.4, 1.0]},
+  {"id": "s15", "line": "x02", "layout": "character_left", "character": {"id": "max-30", "pose": "happy"},
+   "graphic": {"type": "spend", "start": "{bill}", "left_label": "Left in the envelope", "reveal": 1, "items": [
+     {"icon": "tv", "label": "{max30.tv_inches|plain}-inch TV", "amount": "{max30.tv}"},
+     {"icon": "sneakers", "label": "Sneakers", "amount": "{max30.sneakers}"}]}, "camera": "push", "beats": ["@x02+4.0"]},
+  {"id": "s16", "line": "x03", "layout": "character_left", "character": {"id": "max-30", "pose": "happy"},
+   "graphic": {"type": "spend", "start": "{bill}", "left_label": "Left in the envelope", "show": 1, "items": [
+     {"icon": "tv", "label": "{max30.tv_inches|plain}-inch TV", "amount": "{max30.tv}"},
+     {"icon": "sneakers", "label": "Sneakers", "amount": "{max30.sneakers}"}]}, "camera": "push", "beats": ["@x03+2.3"]},
+  {"id": "s17", "line": "x04", "layout": "character_right", "character": {"id": "max-30", "pose": "happy"},
+   "graphic": {"type": "statement", "lead": "Week one", "title": "Honestly?", "subtitle": "It's great"}, "camera": "push", "beats": [0.1, 0.3, 1.2]}
+ ]
+}

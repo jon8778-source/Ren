@@ -1,0 +1,755 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 233.792,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "Here's a question that sounds easy.",
+   "refs": [],
+   "start": 0.4,
+   "end": 2.427,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "You're twenty-eight.",
+   "refs": [
+    "you.start_age"
+   ],
+   "start": 2.847,
+   "end": 3.955,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "You've got three thousand dollars.",
+   "refs": [
+    "you.lump"
+   ],
+   "start": 4.375,
+   "end": 6.226,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "You can take the trip you've talked about for years\u2026 or invest it.",
+   "refs": [],
+   "start": 6.646,
+   "end": 10.205,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "At seven percent a year, that three thousand becomes about fifty-one thousand dollars by the time you're seventy.",
+   "refs": [
+    "you.rate_pct",
+    "you.lump",
+    "you.about_51k",
+    "you.end_age"
+   ],
+   "start": 10.625,
+   "end": 17.366,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "So the smart move is obvious, right?",
+   "refs": [],
+   "start": 17.786,
+   "end": 19.901,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "Well\u2026 not quite.",
+   "refs": [],
+   "start": 20.321,
+   "end": 21.522,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "hook",
+   "text": "Because there's something that money can't buy back.",
+   "refs": [],
+   "start": 21.942,
+   "end": 24.5,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "memory",
+   "text": "There's an idea from a book called Die With Zero by Bill Perkins.",
+   "refs": [
+    "=0"
+   ],
+   "start": 25.3,
+   "end": 29.063,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "memory",
+   "text": "He calls it the memory dividend.",
+   "refs": [],
+   "start": 29.483,
+   "end": 31.455,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "memory",
+   "text": "When you pay for an experience, you don't just get the experience.",
+   "refs": [],
+   "start": 31.875,
+   "end": 35.316,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "memory",
+   "text": "You get the memory, and that memory keeps paying out.",
+   "refs": [],
+   "start": 35.736,
+   "end": 38.566,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "memory",
+   "text": "Every time you tell the story.",
+   "refs": [],
+   "start": 38.986,
+   "end": 40.789,
+   "chunk": 0
+  },
+  {
+   "id": "m06",
+   "section": "memory",
+   "text": "Every time a song takes you back to that beach.",
+   "refs": [],
+   "start": 41.209,
+   "end": 43.857,
+   "chunk": 0
+  },
+  {
+   "id": "m07",
+   "section": "memory",
+   "text": "Every time a friend says \"remember when\u2026\"",
+   "refs": [],
+   "start": 44.277,
+   "end": 46.582,
+   "chunk": 0
+  },
+  {
+   "id": "m08",
+   "section": "memory",
+   "text": "The trip lasts two weeks.",
+   "refs": [
+    "you.trip_weeks"
+   ],
+   "start": 47.002,
+   "end": 48.591,
+   "chunk": 0
+  },
+  {
+   "id": "m09",
+   "section": "memory",
+   "text": "The dividend lasts forty years.",
+   "refs": [
+    "you.dividend_years"
+   ],
+   "start": 49.011,
+   "end": 50.954,
+   "chunk": 0
+  },
+  {
+   "id": "m10",
+   "section": "memory",
+   "text": "And just like interest, the earlier you invest in a memory, the longer it pays you back.",
+   "refs": [],
+   "start": 51.374,
+   "end": 56.167,
+   "chunk": 1
+  },
+  {
+   "id": "c01",
+   "section": "catch",
+   "text": "Now let's look at that fifty-one thousand dollars at seventy.",
+   "refs": [
+    "you.about_51k",
+    "you.end_age"
+   ],
+   "start": 56.967,
+   "end": 60.232,
+   "chunk": 1
+  },
+  {
+   "id": "c02",
+   "section": "catch",
+   "text": "It's real money.",
+   "refs": [],
+   "start": 60.652,
+   "end": 61.84,
+   "chunk": 1
+  },
+  {
+   "id": "c03",
+   "section": "catch",
+   "text": "It could pay for a cruise, help with bills, or become a gift for the grandkids.",
+   "refs": [],
+   "start": 62.26,
+   "end": 66.457,
+   "chunk": 1
+  },
+  {
+   "id": "c04",
+   "section": "catch",
+   "text": "All good things.",
+   "refs": [],
+   "start": 66.877,
+   "end": 68.029,
+   "chunk": 1
+  },
+  {
+   "id": "c05",
+   "section": "catch",
+   "text": "But it can't buy you a backpacking trip with twenty-eight-year-old knees.",
+   "refs": [
+    "you.start_age"
+   ],
+   "start": 68.449,
+   "end": 72.271,
+   "chunk": 1
+  },
+  {
+   "id": "c06",
+   "section": "catch",
+   "text": "It can't buy a week with friends who've since moved away, or with kids who've since grown up.",
+   "refs": [],
+   "start": 72.691,
+   "end": 77.864,
+   "chunk": 1
+  },
+  {
+   "id": "c07",
+   "section": "catch",
+   "text": "Your money can keep growing as you get older.",
+   "refs": [],
+   "start": 78.284,
+   "end": 80.812,
+   "chunk": 1
+  },
+  {
+   "id": "c08",
+   "section": "catch",
+   "text": "Your health and energy don't always keep up.",
+   "refs": [],
+   "start": 81.232,
+   "end": 83.733,
+   "chunk": 1
+  },
+  {
+   "id": "c09",
+   "section": "catch",
+   "text": "And some experiences quietly expire.",
+   "refs": [],
+   "start": 84.153,
+   "end": 86.655,
+   "chunk": 1
+  },
+  {
+   "id": "c10",
+   "section": "catch",
+   "text": "That's not because you can't afford them.",
+   "refs": [],
+   "start": 87.075,
+   "end": 89.269,
+   "chunk": 1
+  },
+  {
+   "id": "c11",
+   "section": "catch",
+   "text": "It's because you've aged out of them.",
+   "refs": [],
+   "start": 89.689,
+   "end": 91.688,
+   "chunk": 1
+  },
+  {
+   "id": "b01",
+   "section": "buckets",
+   "text": "So how do you avoid that?",
+   "refs": [],
+   "start": 92.488,
+   "end": 94.04,
+   "chunk": 1
+  },
+  {
+   "id": "b02",
+   "section": "buckets",
+   "text": "Perkins suggests something called time buckets, and it's simple.",
+   "refs": [],
+   "start": 94.46,
+   "end": 97.911,
+   "chunk": 1
+  },
+  {
+   "id": "b03",
+   "section": "buckets",
+   "text": "Grab a sheet of paper and draw five boxes: your thirties, forties, fifties, sixties and seventies.",
+   "refs": [
+    "you.boxes"
+   ],
+   "start": 98.331,
+   "end": 104.536,
+   "chunk": 1
+  },
+  {
+   "id": "b04",
+   "section": "buckets",
+   "text": "Fill them with what you want to do: trips, hobbies, skills, time with people.",
+   "refs": [],
+   "start": 104.956,
+   "end": 109.252,
+   "chunk": 2
+  },
+  {
+   "id": "b05",
+   "section": "buckets",
+   "text": "Then you'll notice something.",
+   "refs": [],
+   "start": 109.672,
+   "end": 111.139,
+   "chunk": 2
+  },
+  {
+   "id": "b06",
+   "section": "buckets",
+   "text": "Some things fit anywhere.",
+   "refs": [],
+   "start": 111.559,
+   "end": 113.099,
+   "chunk": 2
+  },
+  {
+   "id": "b07",
+   "section": "buckets",
+   "text": "A cooking class works at thirty or seventy.",
+   "refs": [
+    "=30",
+    "=70"
+   ],
+   "start": 113.519,
+   "end": 116.102,
+   "chunk": 2
+  },
+  {
+   "id": "b08",
+   "section": "buckets",
+   "text": "Others only fit in one or two boxes, like skiing hard, backpacking, or building sandcastles with a five-year-old.",
+   "refs": [
+    "=1",
+    "=2",
+    "you.kid_age"
+   ],
+   "start": 116.522,
+   "end": 123.625,
+   "chunk": 2
+  },
+  {
+   "id": "b09",
+   "section": "buckets",
+   "text": "Those are the ones with an expiry date.",
+   "refs": [],
+   "start": 124.045,
+   "end": 126.353,
+   "chunk": 2
+  },
+  {
+   "id": "b10",
+   "section": "buckets",
+   "text": "Fund those first.",
+   "refs": [],
+   "start": 126.773,
+   "end": 128.04,
+   "chunk": 2
+  },
+  {
+   "id": "g01",
+   "section": "give",
+   "text": "The same idea applies to giving.",
+   "refs": [],
+   "start": 128.84,
+   "end": 130.927,
+   "chunk": 2
+  },
+  {
+   "id": "g02",
+   "section": "give",
+   "text": "If you plan to leave money to your kids, that's lovely.",
+   "refs": [],
+   "start": 131.347,
+   "end": 134.136,
+   "chunk": 2
+  },
+  {
+   "id": "g03",
+   "section": "give",
+   "text": "But think about the timing.",
+   "refs": [],
+   "start": 134.556,
+   "end": 136.063,
+   "chunk": 2
+  },
+  {
+   "id": "g04",
+   "section": "give",
+   "text": "If you have kids around twenty-eight and live to eighty-eight, they inherit at sixty.",
+   "refs": [
+    "you.kids_at",
+    "you.live_to",
+    "you.inherit_age"
+   ],
+   "start": 136.483,
+   "end": 141.037,
+   "chunk": 2
+  },
+  {
+   "id": "g05",
+   "section": "give",
+   "text": "Ten thousand dollars at sixty is nice.",
+   "refs": [
+    "you.gift",
+    "you.inherit_age"
+   ],
+   "start": 141.457,
+   "end": 143.921,
+   "chunk": 2
+  },
+  {
+   "id": "g06",
+   "section": "give",
+   "text": "Ten thousand dollars at thirty could be a first home deposit, or breathing room with a new baby.",
+   "refs": [
+    "you.gift",
+    "you.gift_early_age"
+   ],
+   "start": 144.341,
+   "end": 149.882,
+   "chunk": 2
+  },
+  {
+   "id": "g07",
+   "section": "give",
+   "text": "It's the same money with a very different impact.",
+   "refs": [],
+   "start": 150.302,
+   "end": 152.875,
+   "chunk": 2
+  },
+  {
+   "id": "g08",
+   "section": "give",
+   "text": "So if you can afford to, consider giving some of it while it makes the biggest difference, and while you're around to see it.",
+   "refs": [],
+   "start": 153.295,
+   "end": 159.812,
+   "chunk": 2
+  },
+  {
+   "id": "r01",
+   "section": "guard",
+   "text": "Now, before anyone books a flight on a credit card: this is not \"spend it all.\"",
+   "refs": [],
+   "start": 160.612,
+   "end": 165.213,
+   "chunk": 3
+  },
+  {
+   "id": "r02",
+   "section": "guard",
+   "text": "Die With Zero only works if you won't run out.",
+   "refs": [
+    "=0"
+   ],
+   "start": 165.633,
+   "end": 168.41,
+   "chunk": 3
+  },
+  {
+   "id": "r03",
+   "section": "guard",
+   "text": "So, foundations first.",
+   "refs": [],
+   "start": 168.83,
+   "end": 170.487,
+   "chunk": 3
+  },
+  {
+   "id": "r04",
+   "section": "guard",
+   "text": "That means an emergency fund, no high-interest debt, and retirement savings on track.",
+   "refs": [],
+   "start": 170.907,
+   "end": 176.307,
+   "chunk": 3
+  },
+  {
+   "id": "r05",
+   "section": "guard",
+   "text": "Second, know your \"enough\" number.",
+   "refs": [],
+   "start": 176.727,
+   "end": 178.54,
+   "chunk": 3
+  },
+  {
+   "id": "r06",
+   "section": "guard",
+   "text": "That's roughly what you'll need for the life you want later.",
+   "refs": [],
+   "start": 178.96,
+   "end": 181.781,
+   "chunk": 3
+  },
+  {
+   "id": "r07",
+   "section": "guard",
+   "text": "Once you're on track for it, extra savings stop being safety and start being permission.",
+   "refs": [],
+   "start": 182.201,
+   "end": 187.058,
+   "chunk": 3
+  },
+  {
+   "id": "r08",
+   "section": "guard",
+   "text": "Third, give your buckets a budget: a set amount each month for experiences, so you spend on purpose, not on impulse.",
+   "refs": [],
+   "start": 187.478,
+   "end": 194.359,
+   "chunk": 3
+  },
+  {
+   "id": "r09",
+   "section": "guard",
+   "text": "And remember, plenty of the best memories are cheap.",
+   "refs": [],
+   "start": 194.779,
+   "end": 197.638,
+   "chunk": 3
+  },
+  {
+   "id": "r10",
+   "section": "guard",
+   "text": "A camping weekend. A day at the beach. A long dinner with friends.",
+   "refs": [],
+   "start": 198.058,
+   "end": 201.983,
+   "chunk": 3
+  },
+  {
+   "id": "e01",
+   "section": "close",
+   "text": "So, which is it: the three-thousand-dollar trip, or fifty-one thousand at seventy?",
+   "refs": [
+    "you.lump",
+    "you.about_51k",
+    "you.end_age"
+   ],
+   "start": 202.783,
+   "end": 207.327,
+   "chunk": 3
+  },
+  {
+   "id": "e02",
+   "section": "close",
+   "text": "If your foundations are solid, the trip might be the better investment.",
+   "refs": [],
+   "start": 207.747,
+   "end": 211.73,
+   "chunk": 3
+  },
+  {
+   "id": "e03",
+   "section": "close",
+   "text": "Not on a spreadsheet, but in your life.",
+   "refs": [],
+   "start": 212.15,
+   "end": 214.177,
+   "chunk": 3
+  },
+  {
+   "id": "e04",
+   "section": "close",
+   "text": "Save on purpose. Spend on purpose.",
+   "refs": [],
+   "start": 214.597,
+   "end": 216.809,
+   "chunk": 4
+  },
+  {
+   "id": "e05",
+   "section": "close",
+   "text": "The goal was never to die with the most money.",
+   "refs": [],
+   "start": 217.229,
+   "end": 219.756,
+   "chunk": 4
+  },
+  {
+   "id": "e06",
+   "section": "close",
+   "text": "It was to live the best life your money could buy.",
+   "refs": [],
+   "start": 220.176,
+   "end": 222.774,
+   "chunk": 4
+  },
+  {
+   "id": "e07",
+   "section": "close",
+   "text": "If you want help finding room in your budget for your time buckets, check out the Money Leak Audit Workbook in the description.",
+   "refs": [],
+   "start": 223.194,
+   "end": 230.123,
+   "chunk": 4
+  },
+  {
+   "id": "e08",
+   "section": "close",
+   "text": "I'm Ren. See you next time.",
+   "refs": [],
+   "start": 230.543,
+   "end": 232.192,
+   "chunk": 4
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 50.554,
+   "leading_silence_s": 0.01,
+   "lufs": -22.2,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 51.374,
+   "duration": 53.162,
+   "leading_silence_s": 0.01,
+   "lufs": -22.3,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_02.wav",
+   "start": 104.956,
+   "duration": 54.857,
+   "leading_silence_s": 0.01,
+   "lufs": -22.3,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_03.wav",
+   "start": 160.612,
+   "duration": 53.565,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_04.wav",
+   "start": 214.597,
+   "duration": 17.594,
+   "leading_silence_s": 0.01,
+   "lufs": -22.5,
+   "median_pitch_hz": 132.38145865964958,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

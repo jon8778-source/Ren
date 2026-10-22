@@ -1,9 +1,10 @@
 import {AbsoluteFill, Img, staticFile} from "remotion";
 import {FONT} from "./fonts";
+import {ItemIcon} from "./Graphics";
 
 // YouTube thumbnail, 1280x720. Three layouts; every amount is passed in from the assumptions table.
 export type ThumbProps = {
-  variant: "a" | "b" | "c" | "d" | "e" | "f";
+  variant: "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j";
   text?: Record<string, string>;
   theme: Record<string, string>;
   bill: string;
@@ -131,8 +132,80 @@ const F_: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
   </AbsoluteFill>
 );
 
+// Bonus envelope prop (same drawing as the video), with an optional amount card sticking out
+const BonusEnvelope: React.FC<{T: Record<string, string>; w: number; amount?: string; rotate?: number}> = ({T, w, amount, rotate = -5}) => (
+  <div style={{position: "relative", width: w, height: w * 0.9, transform: `rotate(${rotate}deg)`}}>
+    <svg width={w} height={w * 0.9} viewBox="0 0 560 504" style={{position: "absolute", inset: 0}}>
+      <rect x="5" y="149" width="550" height="350" rx="24" fill="#fdf7ea" stroke={T.ink} strokeWidth="10" />
+      <path d="M8 154 L280 10 L552 154" fill={T.gold} stroke={T.ink} strokeWidth="10" strokeLinejoin="round" />
+      <rect x="50" y="40" width="460" height="260" rx="14" fill="#fff" stroke={T.ink} strokeWidth="8" />
+      <path d="M5 294 L280 394 L555 294 V475 Q555 499 531 499 H29 Q5 499 5 475 Z" fill="#fdf7ea" stroke={T.ink} strokeWidth="10" strokeLinejoin="round" />
+    </svg>
+    {amount ? <div style={{position: "absolute", left: 0, right: 0, top: w * 0.13, textAlign: "center", fontSize: w * 0.2, fontWeight: 700, color: T.save}}>{amount}</div> : null}
+  </div>
+);
+
+// G: Max vs Lena a year later, the same envelope between them (layout C style)
+const G: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
+  <AbsoluteFill>
+    <div style={{position: "absolute", left: 0, right: 0, top: 26, textAlign: "center", fontSize: 100, fontWeight: 700, color: T.ink}}>
+      WHO'S <span style={{color: T.save}}>HAPPIER?</span>
+    </div>
+    <Img src={staticFile("characters/max-31/shrug.png")} style={{position: "absolute", left: 10, bottom: 0, height: 500, width: 400, objectFit: "contain", objectPosition: "50% 100%"}} />
+    <Img src={staticFile("characters/lena-31/happy.png")} style={{position: "absolute", right: 10, bottom: 0, height: 500, width: 400, objectFit: "contain", objectPosition: "50% 100%"}} />
+    <div style={{position: "absolute", left: 460, top: 200}}><BonusEnvelope T={T} w={360} amount={text.money} /></div>
+    <div style={{position: "absolute", left: 0, right: 0, bottom: 40, textAlign: "center"}}><Pill bg={T.ink} color="#fff" size={52}>SAME BONUS</Pill></div>
+  </AbsoluteFill>
+);
+
+// H: the big number and Lena, happy a year later
+const H: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
+  <AbsoluteFill>
+    <div style={{position: "absolute", left: 50, top: 50}}>
+      <Pill bg={T.save} color="#fff" size={110}>{text.money}</Pill>
+      <div style={{fontSize: 100, fontWeight: 700, color: T.ink, lineHeight: 0.95, marginTop: 26}}>
+        ONLY ONE
+        <div style={{color: T.save}}>WAS HAPPIER</div>
+      </div>
+      <div style={{marginTop: 26}}><Pill bg={T.gold} color={T.ink} size={56} rotate={-3}>a year later</Pill></div>
+    </div>
+    <Img src={staticFile("characters/lena-31/happy.png")} style={{position: "absolute", right: 10, bottom: 0, height: 660, width: 520, objectFit: "contain", objectPosition: "50% 100%"}} />
+  </AbsoluteFill>
+);
+
+// I: things vs time, each person with what they bought
+const I: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
+  <AbsoluteFill>
+    <div style={{position: "absolute", left: 0, right: 0, top: 26, textAlign: "center", fontSize: 100, fontWeight: 700, color: T.ink}}>
+      <span style={{color: T.cost}}>THINGS</span> <span style={{color: T.muted}}>vs</span> <span style={{color: T.save}}>TIME</span>
+    </div>
+    <Img src={staticFile("characters/max-31/shrug.png")} style={{position: "absolute", left: 0, bottom: 0, height: 480, width: 400, objectFit: "contain", objectPosition: "50% 100%"}} />
+    <Img src={staticFile("characters/lena-31/happy.png")} style={{position: "absolute", right: 0, bottom: 0, height: 480, width: 400, objectFit: "contain", objectPosition: "50% 100%"}} />
+    <div style={{position: "absolute", left: 400, top: 270, transform: "scale(1.3) rotate(-6deg)", transformOrigin: "0 0"}}><ItemIcon icon="tv" T={T as any} /></div>
+    <div style={{position: "absolute", left: 640, top: 290, transform: "scale(1.3) rotate(6deg)", transformOrigin: "0 0"}}><ItemIcon icon="trip" T={T as any} /></div>
+    <div style={{position: "absolute", left: 0, right: 0, top: 160, textAlign: "center"}}><Pill bg={T.gold} color={T.ink} size={52}>Same {text.money}. One year later.</Pill></div>
+  </AbsoluteFill>
+);
+
+// J: trip vs invest. Ren between a plane ticket and a cash stack, "$3,000?" vs "$51,000?"
+const J: React.FC<ThumbProps> = ({theme: T, text = {}}) => (
+  <AbsoluteFill>
+    <div style={{position: "absolute", left: 40, top: 40, width: 440, textAlign: "center"}}>
+      <div style={{fontSize: 118, fontWeight: 700, color: T.ink, lineHeight: 1}}>{text.left}</div>
+      <div style={{marginTop: 10}}><Pill bg={T.ink} color="#fff" size={44}>THE TRIP</Pill></div>
+      <div style={{marginTop: 26, transform: "scale(1.6) rotate(-8deg)", transformOrigin: "50% 0"}}><ItemIcon icon="ticket" T={T as any} /></div>
+    </div>
+    <div style={{position: "absolute", right: 40, top: 40, width: 440, textAlign: "center"}}>
+      <div style={{fontSize: 118, fontWeight: 700, color: T.save, lineHeight: 1}}>{text.right}</div>
+      <div style={{marginTop: 10}}><Pill bg={T.save} color="#fff" size={44}>{text.age}</Pill></div>
+      <div style={{marginTop: 26, transform: "scale(1.6) rotate(6deg)", transformOrigin: "50% 0"}}><ItemIcon icon="cash" T={T as any} /></div>
+    </div>
+    <Img src={staticFile("characters/ren/thinking.png")} style={{position: "absolute", left: 470, bottom: 0, height: 600, width: 340, objectFit: "contain", objectPosition: "50% 100%"}} />
+  </AbsoluteFill>
+);
+
 export const Thumbnail: React.FC<ThumbProps> = (p) => {
-  const V = {a: A, b: B, c: C, d: D, e: E, f: F_}[p.variant];
+  const V = {a: A, b: B, c: C, d: D, e: E, f: F_, g: G, h: H, i: I, j: J}[p.variant];
   return (
     <AbsoluteFill style={{background: "#fff", fontFamily: FONT}}>
       <V {...p} />
