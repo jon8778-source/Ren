@@ -1,0 +1,45 @@
+{
+ "bill": 3000.0,
+ "bill_due_days": null,
+ "characters": {
+  "you": {
+   "level": 1,
+   "status": "final",
+   "income": 3000.0,
+   "fixed_items": [
+    {
+     "item": "Trip or invest",
+     "amount": 3000.0
+    }
+   ],
+   "fixed_total": 3000.0,
+   "leak_items": [],
+   "leaks_total": 0,
+   "left_over": 0.0,
+   "savings": 0,
+   "bill_covered_by_savings": 0,
+   "bill_shortfall": 3000.0,
+   "savings_after_bill": 0.0,
+   "fixed_share_pct": 100,
+   "lump": 3000.0,
+   "start_age": 28.0,
+   "end_age": 70.0,
+   "years": 42.0,
+   "rate": 0.07,
+   "rate_pct": 7.0,
+   "future_70": 51432.77,
+   "about_51k": 51000.0,
+   "trip_weeks": 2.0,
+   "dividend_years": 40.0,
+   "boxes": 5.0,
+   "kid_age": 5.0,
+   "kids_at": 28.0,
+   "live_to": 88.0,
+   "inherit_age": 60.0,
+   "gift": 10000.0,
+   "gift_early_age": 30.0,
+   "income_multiple_vs_level1": 1
+  }
+ },
+ "problems": []
+}

@@ -1,0 +1,34 @@
+{
+ "h05": {
+  "claim": "A 7% average yearly return (before inflation) is the example's assumption, not a promise or a real-world statistic",
+  "source": "Owner's example assumption; shown on screen as 'Example only. Assumes 7% average yearly return, before inflation. Not financial advice.'",
+  "url": "",
+  "on_screen": "Example only. Assumes 7% average yearly return, before inflation. Not financial advice.",
+  "status": "VERIFY",
+  "note": "Owner to confirm the assumption and its on-screen label."
+ },
+ "m01": {
+  "claim": "The 'memory dividend' is an idea from the book Die With Zero by Bill Perkins",
+  "source": "Bill Perkins, 'Die With Zero: Getting All You Can from Your Money and Your Life' (2020), publisher description",
+  "url": "https://www.foyles.co.uk/book/die-with-zero/bill-perkins/9780358567097",
+  "on_screen": "Idea from: Die With Zero, Bill Perkins",
+  "status": "VERIFY",
+  "note": "Publisher copy and reviews describe memory dividends and time buckets. Owner to confirm."
+ },
+ "b02": {
+  "claim": "Perkins suggests 'time buckets': planning experiences by decade of life",
+  "source": "Bill Perkins, 'Die With Zero' (2020)",
+  "url": "https://www.foyles.co.uk/book/die-with-zero/bill-perkins/9780358567097",
+  "on_screen": "Time buckets (Die With Zero, Bill Perkins)",
+  "status": "VERIFY",
+  "note": "Owner to confirm."
+ },
+ "g02": {
+  "claim": "Die With Zero is not about running out: it assumes you keep enough for the rest of your life",
+  "source": "Bill Perkins, 'Die With Zero' (2020)",
+  "url": "https://www.foyles.co.uk/book/die-with-zero/bill-perkins/9780358567097",
+  "on_screen": "",
+  "status": "VERIFY",
+  "note": "Owner to confirm."
+ }
+}

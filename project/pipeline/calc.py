@@ -103,7 +103,7 @@ def check_claims(ep: Path, data):
     path = ep / "claims.txt"
     if not path.exists():
         return []
-    helpers = dict(bill=data["bill"], min=min, max=max, round=round)
+    helpers = dict(bill=data["bill"], min=min, max=max, round=round, abs=abs)
     clash = sorted(set(helpers) & set(data["characters"]))
     if clash:
         return [f"character id {c!r} clashes with a claims.txt helper name; rename it" for c in clash]
