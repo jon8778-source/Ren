@@ -1,0 +1,239 @@
+{
+ "settings": {
+  "engine": "kokoro-82m (q8 onnx)",
+  "blend": {
+   "am_michael": 0.5,
+   "am_eric": 0.5
+  },
+  "speed": 0.93,
+  "gap_s": 0.42,
+  "section_gap_s": 0.8,
+  "lead_s": 0.4,
+  "max_chunk_s": 55,
+  "target_lufs": -16
+ },
+ "duration": 57.767,
+ "lines": [
+  {
+   "id": "h01",
+   "section": "hook",
+   "text": "Here's a question that sounds easy.",
+   "refs": [],
+   "start": 0.4,
+   "end": 2.427,
+   "chunk": 0
+  },
+  {
+   "id": "h02",
+   "section": "hook",
+   "text": "You're twenty-eight.",
+   "refs": [
+    "you.start_age"
+   ],
+   "start": 2.847,
+   "end": 3.955,
+   "chunk": 0
+  },
+  {
+   "id": "h03",
+   "section": "hook",
+   "text": "You've got three thousand dollars.",
+   "refs": [
+    "you.lump"
+   ],
+   "start": 4.375,
+   "end": 6.226,
+   "chunk": 0
+  },
+  {
+   "id": "h04",
+   "section": "hook",
+   "text": "You can take the trip you've talked about for years\u2026 or invest it.",
+   "refs": [],
+   "start": 6.646,
+   "end": 10.205,
+   "chunk": 0
+  },
+  {
+   "id": "h05",
+   "section": "hook",
+   "text": "At seven percent a year, that three thousand becomes about fifty-one thousand dollars by the time you're seventy.",
+   "refs": [
+    "you.rate_pct",
+    "you.lump",
+    "you.about_51k",
+    "you.end_age"
+   ],
+   "start": 10.625,
+   "end": 17.366,
+   "chunk": 0
+  },
+  {
+   "id": "h06",
+   "section": "hook",
+   "text": "So the smart move is obvious, right?",
+   "refs": [],
+   "start": 17.786,
+   "end": 19.901,
+   "chunk": 0
+  },
+  {
+   "id": "h07",
+   "section": "hook",
+   "text": "Well\u2026 not quite.",
+   "refs": [],
+   "start": 20.321,
+   "end": 21.522,
+   "chunk": 0
+  },
+  {
+   "id": "h08",
+   "section": "hook",
+   "text": "Because there's something that money can't buy back.",
+   "refs": [],
+   "start": 21.942,
+   "end": 24.5,
+   "chunk": 0
+  },
+  {
+   "id": "m01",
+   "section": "memory",
+   "text": "There's an idea from a book called Die With Zero by Bill Perkins.",
+   "refs": [
+    "=0"
+   ],
+   "start": 25.3,
+   "end": 29.063,
+   "chunk": 0
+  },
+  {
+   "id": "m02",
+   "section": "memory",
+   "text": "He calls it the memory dividend.",
+   "refs": [],
+   "start": 29.483,
+   "end": 31.455,
+   "chunk": 0
+  },
+  {
+   "id": "m03",
+   "section": "memory",
+   "text": "When you pay for an experience, you don't just get the experience.",
+   "refs": [],
+   "start": 31.875,
+   "end": 35.316,
+   "chunk": 0
+  },
+  {
+   "id": "m04",
+   "section": "memory",
+   "text": "You get the memory, and that memory keeps paying out.",
+   "refs": [],
+   "start": 35.736,
+   "end": 38.566,
+   "chunk": 0
+  },
+  {
+   "id": "m05",
+   "section": "memory",
+   "text": "Every time you tell the story.",
+   "refs": [],
+   "start": 38.986,
+   "end": 40.789,
+   "chunk": 0
+  },
+  {
+   "id": "m06",
+   "section": "memory",
+   "text": "Every time a song takes you back to that beach.",
+   "refs": [],
+   "start": 41.209,
+   "end": 43.857,
+   "chunk": 0
+  },
+  {
+   "id": "m07",
+   "section": "memory",
+   "text": "Every time a friend says \"remember when\u2026\"",
+   "refs": [],
+   "start": 44.277,
+   "end": 46.582,
+   "chunk": 0
+  },
+  {
+   "id": "m08",
+   "section": "memory",
+   "text": "The trip lasts two weeks.",
+   "refs": [
+    "you.trip_weeks"
+   ],
+   "start": 47.002,
+   "end": 48.591,
+   "chunk": 0
+  },
+  {
+   "id": "m09",
+   "section": "memory",
+   "text": "The dividend lasts forty years.",
+   "refs": [
+    "you.dividend_years"
+   ],
+   "start": 49.011,
+   "end": 50.954,
+   "chunk": 0
+  },
+  {
+   "id": "m10",
+   "section": "memory",
+   "text": "And just like interest, the earlier you invest in a memory, the longer it pays you back.",
+   "refs": [],
+   "start": 51.374,
+   "end": 56.167,
+   "chunk": 1
+  }
+ ],
+ "chunks": [
+  {
+   "file": "chunk_00.wav",
+   "start": 0.4,
+   "duration": 50.554,
+   "leading_silence_s": 0.01,
+   "lufs": -22.2,
+   "median_pitch_hz": 133.14833664814137,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  },
+  {
+   "file": "chunk_01.wav",
+   "start": 51.374,
+   "duration": 4.794,
+   "leading_silence_s": 0.01,
+   "lufs": -22.7,
+   "median_pitch_hz": 131.6189975633551,
+   "settings": {
+    "engine": "kokoro-82m (q8 onnx)",
+    "blend": {
+     "am_michael": 0.5,
+     "am_eric": 0.5
+    },
+    "speed": 0.93,
+    "gap_s": 0.42,
+    "section_gap_s": 0.8,
+    "lead_s": 0.4,
+    "max_chunk_s": 55,
+    "target_lufs": -16
+   }
+  }
+ ]
+}

@@ -26,8 +26,11 @@
 3. [e07] "grab my free 50/30/20 workbook. The link's in the description." → "check out the Money Leak Audit Workbook in the
    description." (standing call to action, no "free").
 
-## Claims needing your OK (sources.json, status VERIFY)
+## Claims (sources.json): verified by the owner at the script gate
 - [h05] 7% average yearly return: the example's assumption, labelled on screen as such.
 - [m01] "memory dividend" and [b02] "time buckets" are ideas from Die With Zero by Bill Perkins; [r02] the book assumes you
   don't run out. Source: publisher page https://www.foyles.co.uk/book/die-with-zero/bill-perkins/9780358567097 (publisher
   copy and reviews describe both ideas). The book card on screen is a plain generic design, with no real cover art.
+
+## Script gate
+- Owner: "OK, all changes approved and claims verified."

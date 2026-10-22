@@ -1,4 +1,4 @@
-import {Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
+import {Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from "remotion";
 import type {Box, Config, Graphic} from "./types";
 
 type P = {g: Graphic; beats: number[]; box: Box; config: Config};
@@ -127,6 +127,13 @@ const Question: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+// The brief's note for money screens (replaces the "Example figures" tag there)
+const MoneyNote: React.FC<{config: Config; show?: number}> = ({config, show = 1}) => (
+  <div style={{fontSize: config.layout.fonts.label, fontWeight: 600, color: config.theme.muted, border: `3px solid ${config.theme.line}`, borderRadius: 24, padding: "4px 26px", textAlign: "center", maxWidth: 1060, lineHeight: 1.15, opacity: show}}>
+    Example only. Assumes 7% average yearly return, before inflation. Not financial advice.
+  </div>
+);
+
 const Statement: React.FC<P> = ({g, beats, config}) => {
   const b = useBeats(beats);
   const T = config.theme;
@@ -135,7 +142,7 @@ const Statement: React.FC<P> = ({g, beats, config}) => {
   const money = [g.lead, g.title, g.subtitle].some((t) => typeof t === "string" && t.includes("$"));
   return (
     <Center gap={22}>
-      {money ? <ExampleTag config={config} /> : null}
+      {money && !g.money_note ? <ExampleTag config={config} /> : null}
       <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(b(0))}}>{g.lead}</div>
       <div style={{fontSize: F.title, fontWeight: 700, textAlign: "center", lineHeight: 1.05, ...rise(b(1))}}>{g.title}</div>
       <div style={{position: "relative", fontSize: (g.subtitle || "").length > 28 ? F.subhead : F.title, fontWeight: 700, color: T.save, textAlign: "center", ...rise(u)}}>
@@ -143,6 +150,7 @@ const Statement: React.FC<P> = ({g, beats, config}) => {
         <div style={{position: "absolute", left: 0, bottom: -10, height: 12, width: "100%", borderRadius: 6, background: T.gold, transformOrigin: "0 50%", transform: `scaleX(${u})`}} />
       </div>
       {g.note ? <div style={{marginTop: 26, fontSize: F.label, fontWeight: 600, color: T.muted, textAlign: "center", maxWidth: 1000, ...rise(b(3), 20)}}>{g.note}</div> : null}
+      {g.money_note ? <div style={{marginTop: 30}}><MoneyNote config={config} /></div> : null}
     </Center>
   );
 };
@@ -804,6 +812,10 @@ export const ItemIcon: React.FC<{icon: string; T: Config["theme"]}> = ({icon, T}
     trip: <><rect x="40" y="62" width="120" height="106" rx="16" fill={T.gold} {...k} /><path d="M76 62 V40 H124 V62" fill="none" {...k} /><path d="M40 100 H160" {...k} /><circle cx="64" cy="176" r="8" fill={T.ink} /><circle cx="136" cy="176" r="8" fill={T.ink} /></>,
     phone: <><rect x="60" y="14" width="80" height="160" rx="16" fill={T.ink} {...k} /><rect x="70" y="32" width="60" height="112" rx="4" fill={T.line} /><circle cx="100" cy="158" r="6" fill="#fff" /></>,
     coffee: <><path d="M50 70 H140 L130 170 H60 Z" fill="#fff" {...k} /><rect x="44" y="56" width="102" height="18" rx="8" fill={T.gold} {...k} /><path d="M140 96 Q170 96 166 122 Q162 144 134 142" fill="none" {...k} /><path d="M80 40 Q74 28 82 16 M108 40 Q102 28 110 16" fill="none" stroke={T.muted} strokeWidth="6" strokeLinecap="round" /></>,
+    ticket: <><path d="M10 50 H190 V82 A16 16 0 0 0 190 114 V146 H10 V114 A16 16 0 0 0 10 82 Z" fill="#fff" {...k} /><path d="M136 54 V142" stroke={T.muted} strokeWidth="5" strokeDasharray="9 8" /><path d="M40 104 L104 88 L118 70 L126 72 L118 92 L128 96 L132 88 L138 90 L134 104 L138 118 L132 120 L128 112 L118 114 L124 134 L116 136 L102 116 L40 112 Z" fill={T.ink} /><rect x="146" y="76" width="34" height="10" rx="4" fill={T.gold} /><rect x="146" y="98" width="26" height="10" rx="4" fill={T.line} /></>,
+    cash: <>{[0, 1, 2, 3].map((i) => <g key={i} transform={`translate(0 ${-i * 22})`}><rect x="22" y="128" width="156" height="44" rx="8" fill={T.save} {...k} /><circle cx="100" cy="150" r="12" fill="none" stroke="#fff" strokeWidth="5" /><rect x="36" y="142" width="16" height="16" rx="4" fill="#fff" opacity="0.7" /><rect x="148" y="142" width="16" height="16" rx="4" fill="#fff" opacity="0.7" /></g>)}<rect x="88" y="54" width="24" height="122" fill={T.gold} opacity="0.9" /></>,
+    postcard: <><rect x="10" y="30" width="180" height="130" rx="10" fill="#fff" {...k} /><rect x="22" y="42" width="156" height="106" rx="4" fill="#dff1fb" /><circle cx="142" cy="68" r="14" fill={T.gold} /><path d="M22 112 Q60 100 100 110 T178 106 V124 H22 Z" fill="#7cc3e8" /><path d="M22 124 H178 V148 H22 Z" fill="#f6dfa6" /><path d="M56 124 Q52 96 60 78" fill="none" stroke="#8a5a2b" strokeWidth="6" strokeLinecap="round" /><path d="M60 78 Q44 72 34 80 M60 78 Q74 66 86 72 M60 78 Q50 62 40 64 M60 78 Q70 84 80 92" fill="none" stroke={T.save} strokeWidth="6" strokeLinecap="round" /></>,
+    sparkle: <path d="M100 20 Q108 84 180 95 Q108 106 100 170 Q92 106 20 95 Q92 84 100 20 Z" fill={T.gold} stroke={T.gold_edge} strokeWidth="6" strokeLinejoin="round" />,
     cooking: <><path d="M56 96 Q30 90 34 64 Q38 40 64 46 Q72 22 100 24 Q128 22 136 46 Q162 40 166 64 Q170 90 144 96 V140 H56 Z" fill="#fff" {...k} /><rect x="56" y="140" width="88" height="26" rx="6" fill={T.line} {...k} /></>,
   };
   return <svg width="200" height="190" viewBox="0 0 200 190">{art[icon] ?? null}</svg>;
@@ -993,7 +1005,95 @@ const SideBySide: React.FC<P> = ({g, beats, config}) => {
   );
 };
 
+// Split screen: two choices side by side; the right amount can count up from a start value
+const Split: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const at = (beats[2] ?? 0) * fps;
+  const count = g.right_from_value !== undefined && beats.length > 2
+    ? interpolate(frame, [at, at + 1.6 * fps], [g.right_from_value, g.right_amount_value], {extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic)})
+    : g.right_amount_value;
+  const glow = g.glow ? b(3, 12) : 0;
+  const panel = (side: "left" | "right", s: number, tone: string, amount: string, dim: number) => (
+    <div style={{width: 510, height: 520, borderRadius: 36, border: `7px solid ${tone}`, background: "#fff", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, opacity: s * dim, transform: `translateY(${(1 - s) * 50}px) scale(${1 + (g.glow === side ? 0.05 * glow : 0)})`, boxShadow: g.glow === side ? `0 0 ${60 * glow}px ${T.gold}` : "none"}}>
+      <div style={{transform: "scale(1.25)", margin: "14px 0 18px"}}><ItemIcon icon={g[`${side}_icon`]} T={T} /></div>
+      <div style={{fontSize: F.subhead, fontWeight: 700, color: T.ink, textAlign: "center", lineHeight: 1.05}}>{g[`${side}_label`]}</div>
+      <div style={{fontSize: F.number, fontWeight: 700, color: tone, lineHeight: 1}}>{amount}</div>
+    </div>
+  );
+  const dimOther = (side: string) => (g.glow && g.glow !== side ? 1 - 0.45 * glow : 1);
+  return (
+    <Center gap={20}>
+      <div style={{display: "flex", gap: 40, alignItems: "center"}}>
+        {panel("left", b(0), T.ink, g.left_amount, dimOther("left"))}
+        <div style={{fontSize: F.title, fontWeight: 700, color: T.muted, opacity: b(1)}}>vs</div>
+        {panel("right", b(1), T.save, count === undefined ? g.right_amount ?? "" : `$${Math.round(count).toLocaleString("en-US")}`, dimOther("right"))}
+      </div>
+      <MoneyNote config={config} show={b(0)} />
+    </Center>
+  );
+};
+
+// A plain, generic book card (no real cover art), with an optional overlay line under it
+const BookCard: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const s = b(0, 12);
+  return (
+    <Center gap={28}>
+      <div style={{fontSize: F.subhead, fontWeight: 600, color: T.muted, ...rise(s, 30)}}>{g.lead}</div>
+      <div style={{width: 400, height: 520, borderRadius: "12px 26px 26px 12px", background: T.ink, boxShadow: "-18px 0 0 #0b1629 inset", padding: "56px 40px", boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between", transform: `rotate(${-3 + (1 - s) * -8}deg) translateY(${(1 - s) * 80}px)`, opacity: s}}>
+        <div style={{height: 14, borderRadius: 7, background: T.gold}} />
+        <div style={{fontSize: 74, fontWeight: 700, color: "#fff", lineHeight: 1.02}}>{g.title}</div>
+        <div style={{fontSize: F.body, fontWeight: 600, color: T.gold}}>{g.author}</div>
+      </div>
+      {g.caption ? <div style={{fontSize: F.title, fontWeight: 700, color: T.save, ...rise(b(1), 30)}}>{g.caption}</div> : null}
+    </Center>
+  );
+};
+
+// The memory dividend: a postcard at the start of a timeline sends out sparkles along the years
+const Dividend: React.FC<P> = ({g, beats, config}) => {
+  const b = useBeats(beats);
+  const T = config.theme;
+  const F = config.layout.fonts;
+  const W = 1060, LINE_Y = 360, X0 = 370, X1 = W - 190;
+  const n: number = g.count;
+  const labels: string[] = g.labels || [];
+  const pre: number = g.show ?? 0;
+  const size = n > 4 ? 100 : 130;
+  return (
+    <Center gap={10}>
+      <div style={{position: "relative", width: W, height: 470}}>
+        <div style={{position: "absolute", left: X0 - 40, right: 30, top: LINE_Y, height: 12, borderRadius: 6, background: T.line, opacity: b(0)}} />
+        <div style={{position: "absolute", left: 0, top: LINE_Y - 250, transform: `scale(${1.2 * (0.6 + 0.4 * b(0, 12))})`, transformOrigin: "0 100%", opacity: b(0)}}><ItemIcon icon="postcard" T={T} /></div>
+        {Array.from({length: n}).map((_, i) => {
+          const v = i < pre ? 1 : b(1 + i - pre, 10);
+          const x = X0 + (n === 1 ? 0 : (i / (n - 1)) * (X1 - X0)) - size / 2;
+          const y = LINE_Y - size - 30;
+          return (
+            <div key={i} style={{position: "absolute", left: x, top: y, width: size, height: size, opacity: v, transform: `translate(${(1 - v) * -(x - 120)}px, ${(1 - v) * 40}px) scale(${0.3 + 0.7 * v})`}}>
+              <svg width={size} height={size} viewBox="0 0 200 190"><path d="M100 20 Q108 84 180 95 Q108 106 100 170 Q92 106 20 95 Q92 84 100 20 Z" fill={T.gold} stroke={T.gold_edge} strokeWidth="8" strokeLinejoin="round" /></svg>
+              {labels[i] ? <div style={{position: "absolute", left: size / 2 - 170, width: 340, top: -64, textAlign: "center", fontSize: F.label, fontWeight: 700, color: T.ink, whiteSpace: "nowrap"}}>{labels[i]}</div> : null}
+            </div>
+          );
+        })}
+        <div style={{position: "absolute", left: 10, top: LINE_Y + 30, fontSize: F.label, fontWeight: 600, color: T.muted, opacity: b(0)}}>{g.from}</div>
+        <div style={{position: "absolute", right: 30, top: LINE_Y + 30, fontSize: F.label, fontWeight: 600, color: T.muted, opacity: b(0)}}>{g.to}</div>
+      </div>
+      <div style={{height: 100}}>{g.caption ? <div style={{fontSize: F.title, fontWeight: 700, color: T.save, ...rise(b(n - pre + 1), 30)}}>{g.caption}</div> : null}</div>
+    </Center>
+  );
+};
+
 const VIEWS: Record<string, React.FC<P>> = {
+  split: Split,
+  book: BookCard,
+  dividend: Dividend,
   joy_chart: JoyChart,
   icon_cards: IconCards,
   week_treats: WeekTreats,

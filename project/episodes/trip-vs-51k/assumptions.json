@@ -38,6 +38,7 @@
    "inherit_age": 60.0,
    "gift": 10000.0,
    "gift_early_age": 30.0,
+   "dividend_end_age": 68.0,
    "income_multiple_vs_level1": 1
   }
  },
