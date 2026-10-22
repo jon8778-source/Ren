@@ -49,3 +49,26 @@ Repo jon8778-source/Ren; work on branch ccr-a31871f7-ihoco0 (PR #2 → main). Wo
 - QC must be OVERALL PASS; fix causes, never loosen checks. Check frames from every scene and fix overlaps before sending.
 - Claude can't hear audio: owner checks pronunciation and pace.
 - Commit and push after each stage; keep the branch merged with main.
+
+## 5. Lessons learned (pipeline gotchas)
+- Owner's shared files can arrive cut off or under odd names (trailing spaces, no .md): check the size and ask for
+  the full file before planning.
+- Gate order in practice: plan/questions → script OK → 60 s pilot (a separate `<id>-pilot/` folder with a subset
+  script; voice it there) → full + QC → thumbnail → 2 shorts. Commit and push after each step.
+- Owner briefs sometimes override standing rules (rig, music, fonts, "free" CTA). List each conflict as a decision
+  with options and wait; the owner has kept the standing rules every time so far.
+- Character art: owner sends 1x4 sheets (prompts in `episodes/two-neighbors-1000-bonus/character-prompts.md`);
+  split with `split_sheet.py`, check on magenta, add sha256 hashes to `characters/manifest.json`.
+- `calc.py`: character ids can't clash with helpers (`max`, `min`, `round`, `abs`, `bill`); every character needs one
+  `income` row; compare floats with `round()`/`abs()`. "Zero" counts as a spoken number (tag `{=0}`).
+- QC "on-screen numbers": any digit typed in scenes.json fails, including labels like "30s" or "at 70". Put the
+  value in assumptions.csv and use `{ref|plain}`. Lines with "percent" etc. need a sources.json entry the owner marks verified.
+- Never use a far-future beat (e.g. 9999) to hide an item: QC counts it as a huge hold. Use a template option
+  (`reveal`, `show`).
+- QC's safe-zone check only covers the bottom 130 px: check every scene's frame by eye for graphics hitting the
+  captions or overlapping each other.
+- Shorts: the closing disclaimer pill (top of the 9:16 frame) collides with tall graphics. Give the last line a
+  statement card, and use `end_disclaimer_s` in shorts.json if needed. Don't move config.vertical.json's content box
+  (it then hits Ren's head).
+- Kokoro at speed 0.93 is about 168 words a minute: 6 minutes needs about 1,000 words. Measure word counts early.
+- Puppet rig: lives only on branch `lab/animated-ren` (notes in `project/rig/LAB.md` there); never in episodes.
