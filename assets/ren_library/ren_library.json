@@ -1,0 +1,334 @@
+{
+ "resolution": [
+  1280,
+  720
+ ],
+ "fps": 24,
+ "background": "#FFFFFF",
+ "neutral_pose": "start and end frame",
+ "audio": "discard source audio",
+ "clips": [
+  {
+   "file": "ren_celebrate_fist_pump.mp4",
+   "source_name": "ren_celebrate_fist_pump",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 10,
+   "x_offset_px": 4,
+   "mirrorable": false,
+   "notes": "Open grin ~2s"
+  },
+  {
+   "file": "ren_clipboard_tick.mp4",
+   "source_name": "ren_clipboard_tick",
+   "status": "ok",
+   "in_s": 0.75,
+   "out_s": 10,
+   "x_offset_px": 16,
+   "mirrorable": false,
+   "notes": "Brief open smile"
+  },
+  {
+   "file": "ren_confused.mp4",
+   "source_name": "ren_confused",
+   "status": "ok",
+   "in_s": 2.0,
+   "out_s": 7.38,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": "Stray arm wave before scratch; trimmed"
+  },
+  {
+   "file": "ren_count_fingers.mp4",
+   "source_name": "ren_count_fingers",
+   "status": "ok",
+   "in_s": 0.75,
+   "out_s": 8.5,
+   "x_offset_px": -4,
+   "mirrorable": false,
+   "notes": "Brief open mouth"
+  },
+  {
+   "file": "ren_empty_pockets.mp4",
+   "source_name": "ren_empty_pockets",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 10,
+   "x_offset_px": 18,
+   "mirrorable": false,
+   "notes": "Open grin ~2s"
+  },
+  {
+   "file": "ren_explain_hands.mp4",
+   "source_name": "ren_explain_hands",
+   "status": "ok",
+   "in_s": 9.0,
+   "out_s": 28.0,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": "30s take; mouth closed and hands gesturing 9.0-28.0s; mouth talks before 8.5s and at 28.25s"
+  },
+  {
+   "file": "ren_facepalm.mp4",
+   "source_name": "ren_facepalm",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 7.75,
+   "x_offset_px": 26,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_hold_phone.mp4",
+   "source_name": "ren_hold_phone",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 10,
+   "x_offset_px": -6,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_idea.mp4",
+   "source_name": "ren_idea",
+   "status": "ok",
+   "in_s": 0.62,
+   "out_s": 7.0,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": "Open grin ~3s"
+  },
+  {
+   "file": "ren_idle_calm.mp4",
+   "source_name": "ren_idle_calm",
+   "status": "ok",
+   "in_s": 0.0,
+   "out_s": 10.0,
+   "x_offset_px": 0,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_idle_listen.mp4",
+   "source_name": "ren_idle_listen",
+   "status": "ok",
+   "in_s": 0.0,
+   "out_s": 10.0,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_lean_in.mp4",
+   "source_name": "ren_lean_in",
+   "status": "ok",
+   "in_s": 0.88,
+   "out_s": 8.38,
+   "x_offset_px": 8,
+   "mirrorable": false,
+   "notes": "Zooms to close-up; use as a deliberate secret moment"
+  },
+  {
+   "file": "ren_nod_yes.mp4",
+   "source_name": "ren_nod_yes",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 9.0,
+   "x_offset_px": 4,
+   "mirrorable": false,
+   "notes": "Ends slightly off neutral; trimmed last second"
+  },
+  {
+   "file": "ren_open_arms.mp4",
+   "source_name": "ren_open_arms",
+   "status": "ok",
+   "in_s": 1.38,
+   "out_s": 7.0,
+   "x_offset_px": 14,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_point_camera.mp4",
+   "source_name": "ren_point_camera",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 5.88,
+   "x_offset_px": -12,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_point_down_right.mp4",
+   "source_name": "ren_point_down_right",
+   "status": "ok",
+   "in_s": 1.0,
+   "out_s": 7.0,
+   "x_offset_px": 1,
+   "mirrorable": true,
+   "notes": "Regenerated; points clearly to bottom-right corner, mouth closed"
+  },
+  {
+   "file": "ren_point_right.mp4",
+   "source_name": "ren_point_right (mirror for left)",
+   "status": "ok",
+   "in_s": 1.0,
+   "out_s": 6.38,
+   "x_offset_px": 40,
+   "mirrorable": true,
+   "notes": ""
+  },
+  {
+   "file": "ren_point_up.mp4",
+   "source_name": "ren_point_up",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 9.0,
+   "x_offset_px": 0,
+   "mirrorable": false,
+   "notes": "Ends slightly off neutral; trimmed last second"
+  },
+  {
+   "file": "ren_present_palm_left.mp4",
+   "source_name": "ren_present_palm_right (mirror for left)",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 7.88,
+   "x_offset_px": 4,
+   "mirrorable": true,
+   "faces": "left",
+   "notes": "Actually presents to screen left; mirror for right"
+  },
+  {
+   "file": "ren_relieved.mp4",
+   "source_name": "ren_relieved",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 7.88,
+   "x_offset_px": 18,
+   "mirrorable": false,
+   "notes": "Open grin ~2s"
+  },
+  {
+   "file": "ren_rub_hands.mp4",
+   "source_name": "ren_rub_hands",
+   "status": "ok",
+   "in_s": 0,
+   "out_s": 7.88,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": "Toothy grin ~3s"
+  },
+  {
+   "file": "ren_shake_no.mp4",
+   "source_name": "ren_shake_no",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 7.25,
+   "x_offset_px": -6,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_shocked.mp4",
+   "source_name": "ren_shocked",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 6.5,
+   "x_offset_px": 18,
+   "mirrorable": false,
+   "notes": "Open mouth during shock"
+  },
+  {
+   "file": "ren_shrug.mp4",
+   "source_name": "ren_shrug",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 10,
+   "x_offset_px": 2,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_thinking.mp4",
+   "source_name": "ren_thinking",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 9.12,
+   "x_offset_px": 12,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_thumbs_up.mp4",
+   "source_name": "ren_thumbs_up",
+   "status": "ok",
+   "in_s": 2.75,
+   "out_s": 8.0,
+   "x_offset_px": 15,
+   "mirrorable": false,
+   "notes": "Regenerated; white background fixed; toothy grin ~1s at peak; starts after small wave"
+  },
+  {
+   "file": "ren_walk_in_left.mp4",
+   "source_name": "ren_walk_in_left (mirror for right)",
+   "status": "ok",
+   "in_s": 0.0,
+   "out_s": 10.0,
+   "x_offset_px": 0,
+   "mirrorable": true,
+   "notes": ""
+  },
+  {
+   "file": "ren_walk_in_place_profile.mp4",
+   "source_name": "ren_walk_in_place_profile",
+   "status": "ok",
+   "in_s": 0.0,
+   "out_s": 10.0,
+   "x_offset_px": 6,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_walk_off_right.mp4",
+   "source_name": "ren_walk_off_right (mirror for left)",
+   "status": "ok",
+   "in_s": 0.0,
+   "out_s": 10,
+   "x_offset_px": 12,
+   "mirrorable": true,
+   "notes": ""
+  },
+  {
+   "file": "ren_wave_bye.mp4",
+   "source_name": "ren_wave_bye",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 6.12,
+   "x_offset_px": 24,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_wave_hello.mp4",
+   "source_name": "ren_wave_hello",
+   "status": "ok",
+   "in_s": 1.12,
+   "out_s": 10,
+   "x_offset_px": 10,
+   "mirrorable": false,
+   "notes": ""
+  },
+  {
+   "file": "ren_worried.mp4",
+   "source_name": "ren_worried",
+   "status": "ok",
+   "in_s": 1.25,
+   "out_s": 7.0,
+   "x_offset_px": 18,
+   "mirrorable": false,
+   "notes": "Gritted teeth ~2s"
+  }
+ ],
+ "notes": "in_s/out_s = usable window. x_offset_px = shift to centre Ren at x=640. Rename source files to \"file\" names (drop the \"(mirror for ...)\" suffix, palm_right -> palm_left)."
+}
