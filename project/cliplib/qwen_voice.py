@@ -13,6 +13,7 @@ import json
 import os
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 from gradio_client import Client, handle_file
@@ -42,6 +43,7 @@ def main():
         text = shot.get("voice", "").strip()
         if not text:
             continue
+        t0 = time.monotonic()
         try:
             audio, status = client.predict(
                 ref_audio=handle_file(str(REF / "ren_reference.wav")),
@@ -54,6 +56,7 @@ def main():
             )
         except Exception as e:  # quota, rate limit, Space asleep or down: stop, never fall back
             raise SystemExit(f"line {k}: the Space failed: {type(e).__name__}: {e}")
+        took = time.monotonic() - t0  # queue + GPU + transfer: an upper bound on the GPU time charged
         if not audio or status.startswith("Error"):
             raise SystemExit(f"line {k}: {status}")
         path = out / f"line_{k:02d}.wav"
@@ -63,7 +66,7 @@ def main():
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", audio, str(path)], check=True)
         dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                              "-of", "csv=p=0", str(path)]))
-        print(f"{path.name}: {dur:.2f}s  {text}  ({status})")
+        print(f"{path.name}: {dur:.2f}s of audio in {took:.1f}s  {text}  ({status})")
 
 
 if __name__ == "__main__":
