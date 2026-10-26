@@ -10,11 +10,15 @@ Each shot plays one library clip (assets/ren_library, metadata in ren_library.js
   - shorter shot: cut at the neutral frame nearest the requested length (either side; if it falls
     before, ren_idle_calm fills the rest, so the shot can come out a little longer than asked);
   - longer shot: the clip's whole window, then ren_idle_calm;
+  - a shot whose voice line would run into the next line is held on ren_idle_calm until it fits
+    (next line starts at least config voice.gap_s after this one ends); the voice is never sped up;
   - 0.3s crossfade between shots, source audio discarded.
 Text overlays go in a panel beside Ren; the script measures Ren's bounding box on every rendered
 frame and refuses to render if any text would touch him. The voice uses the same Kokoro blend,
 speed, edge trim and loudness target as pipeline/voice.py, one line per shot, placed at voice_at.
-Writes <out>/video.mp4 and <out>/report.json (timings, cut points, fills, notes per shot).
+With --voice-dir, each shot's line comes from <dir>/line_01.wav, line_02.wav, ... instead (same edge
+trim and loudness target) and starts at the shot's start.
+Writes <out>/video.mp4, <out>/voice_only.wav and <out>/report.json (timings, cut points, fills, notes).
 
 Shot list:
 {
@@ -122,16 +126,38 @@ def plan_shot(lib, shot):
     pieces = [(c, a, cut - a, mirror)]
     fill = want - (cut - a)
     if fill > 0:
-        idle = clip_entry(lib, FILLER)
-        ia, ib = round(idle["in_s"] * FPS), round(idle["out_s"] * FPS)
-        while fill > 0:
-            n = min(fill, ib - ia)
-            pieces.append((idle, ia, n, False))
-            fill -= n
-        note += f"; {FILLER[:-4]} fills {(want - (cut - a)) / FPS:.2f}s"
+        hold_idle(lib, pieces, fill)
+        note += f"; {FILLER[:-4]} fills {fill / FPS:.2f}s"
     elif fill < -1:
         note += f"; shot runs {-fill / FPS:.2f}s longer than asked"
     return pieces, sum(p[2] for p in pieces), note
+
+
+def hold_idle(lib, pieces, frames):
+    """Append `frames` of ren_idle_calm (from its in_s, repeating its window if needed) to a shot."""
+    idle = clip_entry(lib, FILLER)
+    ia, ib = round(idle["in_s"] * FPS), round(idle["out_s"] * FPS)
+    while frames > 0:
+        n = min(frames, ib - ia)
+        pieces.append((idle, ia, n, False))
+        frames -= n
+
+
+def load_lines(folder, count):
+    """line_01.wav ... from folder as mono SR float arrays, edges trimmed like synth_lines."""
+    out = []
+    for k in range(count):
+        path = Path(folder) / f"line_{k + 1:02d}.wav"
+        if not path.exists():
+            raise SystemExit(f"{path} missing")
+        raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(path), "-ac", "1", "-ar", str(SR),
+                                       "-f", "f32le", "-"])
+        a = np.frombuffer(raw, np.float32)
+        idx = np.where(np.abs(a) > 0.01)[0]
+        if not len(idx):
+            raise SystemExit(f"{path} is silent")
+        out.append(a[max(0, idx[0] - int(0.01 * SR)): idx[-1] + int(0.08 * SR)].copy())
+    return out
 
 
 def piece_filter(i, entry, start, n, mirror, ren_x):
@@ -213,6 +239,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("shots")
     ap.add_argument("--out")
+    ap.add_argument("--voice-dir", help="Use line_01.wav, line_02.wav, ... from here instead of Kokoro")
     args = ap.parse_args()
     spec = json.loads(Path(args.shots).read_text())
     out = Path(args.out or PROJECT / "cliplib" / "out" / Path(args.shots).stem)
@@ -225,10 +252,28 @@ def main():
     ren_x = spec.get("ren_x", W // 2)
     shots = spec["shots"]
 
-    # 1. Plan every shot and render its picture (no text yet)
+    # 1. Voice lines first, so a shot can be held long enough for its line
+    if args.voice_dir:
+        audio = load_lines(args.voice_dir, len(shots))
+        voice_at = [0.0] * len(shots)
+    else:
+        audio = synth_lines([s.get("voice", "") for s in shots], cfg["voice"])
+        voice_at = [s.get("voice_at", 0.4) for s in shots]
+
+    # 2. Plan every shot and render its picture (no text yet)
     plans = []
     for k, shot in enumerate(shots):
         pieces, n, note = plan_shot(lib, shot)
+        if audio[k] is not None:
+            # This line must end gap_s before the next shot's line starts (or 0.6s before the end, if last)
+            end = voice_at[k] + len(audio[k]) / SR
+            nxt = voice_at[k + 1] if k + 1 < len(shots) and audio[k + 1] is not None else None
+            need = end + XFADE + cfg["voice"]["gap_s"] - nxt if nxt is not None else end + 0.6
+            short = int(np.ceil(need * FPS)) - n
+            if short > 0:
+                hold_idle(lib, pieces, short)
+                n += short
+                note += f"; held {short / FPS:.2f}s on {FILLER[:-4]} for the voice line"
         seg = build / f"shot{k:02d}_ren.mp4"
         inputs, graph = [], []
         for i, (entry, start, cnt, mirror) in enumerate(pieces):
@@ -243,7 +288,7 @@ def main():
                                   "mirror": p[3]} for p in pieces],
                       "ren_bbox": ren_bbox(seg), "segment": seg})
 
-    # 2. Text panel beside Ren: everything on the far side of his widest reach in any shot
+    # 3. Text panel beside Ren: everything on the far side of his widest reach in any shot
     right_side = ren_x < W // 2
     reach = max(p["ren_bbox"][2] for p in plans) if right_side else min(p["ren_bbox"][0] for p in plans)
     margin = cfg["layout"]["margin"] // 2
@@ -259,28 +304,25 @@ def main():
         y = H - margin // 2 - sum(f.getmetrics())
         disc_box, _ = text_png(disc_png, spec["disclaimer"], "small", "muted", theme, panel, y)
 
-    # 3. Voice: one line per shot, placed at the shot's voice_at on the final timeline
+    # 4. Place each line on the final timeline
     starts, t = [], 0.0
     for p in plans:
         starts.append(t)
         t += p["duration_s"] - XFADE
     total = t + XFADE
-    audio = synth_lines([s.get("voice", "") for s in shots], cfg["voice"])
     for k, (p, s, a) in enumerate(zip(plans, shots, audio)):
         p["start_s"] = round(starts[k], 3)
         if a is None:
             continue
-        at = s.get("voice_at", 0.4)
-        vs, ve = starts[k] + at, starts[k] + at + len(a) / SR
+        vs, ve = starts[k] + voice_at[k], starts[k] + voice_at[k] + len(a) / SR
         p.update(voice=s["voice"], voice_start_s=round(vs, 3), voice_end_s=round(ve, 3))
-        if ve > starts[k] + p["duration_s"] - 0.05:
-            raise SystemExit(f"shot {k}: voice runs {len(a) / SR:.2f}s from {at}s but the shot is {p['duration_s']}s; "
-                             f"lengthen it to at least {at + len(a) / SR + 0.05:.2f}s")
+        if args.voice_dir:
+            p["voice_file"] = str(Path(args.voice_dir) / f"line_{k + 1:02d}.wav")
     for k in range(1, len(plans)):
         if "voice_start_s" in plans[k] and "voice_end_s" in plans[k - 1]:
             plans[k]["gap_before_s"] = round(plans[k]["voice_start_s"] - plans[k - 1]["voice_end_s"], 3)
 
-    # 4. Overlays per shot, checked against Ren's box on every frame of that shot
+    # 5. Overlays per shot, checked against Ren's box on every frame of that shot
     for k, (p, s) in enumerate(zip(plans, shots)):
         ovs = s.get("overlays", [])
         heights = []
@@ -315,7 +357,7 @@ def main():
              "-frames:v", str(p["frames"]), "-r", str(FPS), "-c:v", "libx264", "-crf", "12", "-preset", "fast", str(seg)])
         p["segment"] = seg
 
-    # 5. Crossfade the shots, lay the disclaimer over everything, mux the voice
+    # 6. Crossfade the shots, lay the disclaimer over everything, mux the voice
     voice = np.zeros(int((total + 0.5) * SR), dtype=np.float32)
     for p, a in zip(plans, audio):
         if a is not None:
@@ -323,6 +365,12 @@ def main():
             voice[i:i + len(a)] += a
     voice = voice[:int(total * SR)]
     sf.write(build / "voice.wav", voice, SR)
+    vc = cfg["voice"]
+    voice_only = out / "voice_only.wav"  # the exact track muxed below
+    run(["ffmpeg", "-v", "error", "-y", "-i", str(build / "voice.wav"), "-af",
+         f"highpass=f=70,loudnorm=I={vc['target_lufs']}:TP=-1.5:LRA=9,aresample=48000,"
+         f"apad=whole_len={round(total * 48000)},atrim=end_sample={round(total * 48000)}",
+         "-c:a", "pcm_s16le", str(voice_only)])
     inputs, graph, last, off = [], [], "0:v", 0.0
     for k, p in enumerate(plans):
         inputs += ["-i", str(p["segment"])]
@@ -335,16 +383,14 @@ def main():
         inputs += ["-loop", "1", "-framerate", str(FPS), "-i", str(disc_png)]
         graph.append(f"[{last}][{n}:v]overlay=0:0:shortest=1[d]")
         last, n = "d", n + 1
-    inputs += ["-i", str(build / "voice.wav")]
-    vc = cfg["voice"]
-    graph.append(f"[{last}]format=yuv420p[v];[{n}:a]highpass=f=70,loudnorm=I={vc['target_lufs']}:TP=-1.5:LRA=9,"
-                 f"aresample=48000[a]")
+    inputs += ["-i", str(voice_only)]
+    graph.append(f"[{last}]format=yuv420p[v];[{n}:a]anull[a]")
     final = out / "video.mp4"
     run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(graph), "-map", "[v]", "-map", "[a]",
          "-frames:v", str(round(total * FPS)), "-r", str(FPS), "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(final)])
 
-    # 6. Report
+    # 7. Report
     for p, s in zip(plans, shots):
         c = lib[s["clip"] if s["clip"].endswith(".mp4") else s["clip"] + ".mp4"]
         p["clip_notes"] = c.get("notes", "")
@@ -352,7 +398,7 @@ def main():
         p["segment"] = str(p["segment"])
         for o in p.get("overlays", []):
             o["png"] = str(o["png"])
-    report = {"video": str(final), "duration_s": round(total, 3), "ren_x": ren_x, "text_panel_x": list(panel),
+    report = {"video": str(final), "voice_only": str(voice_only), "duration_s": round(total, 3), "ren_x": ren_x, "text_panel_x": list(panel),
               "voice_settings": vc, "shots": plans}
     (out / "report.json").write_text(json.dumps(report, indent=1) + "\n")
     for p in plans:
