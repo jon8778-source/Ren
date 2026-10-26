@@ -1,0 +1,128 @@
+{
+ "title": "Your $4 daily coffee costs $1,460 a year",
+ "ren_x": 330,
+ "disclaimer": "Example only, not financial advice",
+ "shots": [
+  {
+   "clip": "ren_walk_in_left",
+   "mirror": false,
+   "duration": 5.7,
+   "voice": "Hey, it's Ren. Let's talk about your morning coffee.",
+   "voice_at": 2.2,
+   "overlays": [
+    {
+     "text": "Your daily coffee",
+     "style": "title",
+     "color": "ink",
+     "at": 1.0
+    },
+    {
+     "text": "What does it cost in a year?",
+     "style": "body",
+     "color": "muted",
+     "at": 2.2
+    }
+   ],
+   "skip_s": 1.5
+  },
+  {
+   "clip": "ren_point_right",
+   "mirror": false,
+   "duration": 5.0,
+   "voice": "Four dollars a day, times three hundred sixty-five days.",
+   "voice_at": 0.4,
+   "overlays": [
+    {
+     "text": "$4 a day",
+     "style": "number",
+     "color": "ink",
+     "at": 0.7
+    },
+    {
+     "text": "× 365 days",
+     "style": "title",
+     "color": "muted",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "clip": "ren_shocked",
+   "mirror": false,
+   "duration": 5.1,
+   "voice": "That's one thousand, four hundred sixty dollars a year!",
+   "voice_at": 0.4,
+   "overlays": [
+    {
+     "text": "$1,460",
+     "style": "number",
+     "color": "cost",
+     "at": 0.8
+    },
+    {
+     "text": "a year",
+     "style": "body",
+     "color": "cost",
+     "at": 1.2
+    }
+   ]
+  },
+  {
+   "clip": "ren_present_palm_left",
+   "mirror": true,
+   "duration": 5.3,
+   "voice": "Cut it to two dollars a day, and you keep seven hundred thirty dollars a year.",
+   "voice_at": 0.4,
+   "overlays": [
+    {
+     "text": "$2 a day instead",
+     "style": "title",
+     "color": "ink",
+     "at": 0.6
+    },
+    {
+     "text": "$730 a year back",
+     "style": "title",
+     "color": "save",
+     "at": 2.4
+    }
+   ]
+  },
+  {
+   "clip": "ren_thumbs_up",
+   "mirror": false,
+   "duration": 5.2,
+   "voice": "Check out the Money Leak Audit Workbook in the description.",
+   "voice_at": 0.4,
+   "overlays": [
+    {
+     "text": "Money Leak Audit Workbook",
+     "style": "title",
+     "color": "ink",
+     "at": 0.5
+    },
+    {
+     "text": "in the description",
+     "style": "body",
+     "color": "muted",
+     "at": 1.0
+    }
+   ]
+  },
+  {
+   "clip": "ren_wave_bye",
+   "mirror": false,
+   "duration": 4.5,
+   "voice": "See you next time!",
+   "voice_at": 0.4,
+   "overlays": [
+    {
+     "text": "See you next time!",
+     "style": "title",
+     "color": "ink",
+     "at": 0.4
+    }
+   ]
+  }
+ ]
+}
