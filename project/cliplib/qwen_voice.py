@@ -1,0 +1,70 @@
+"""Generate a shot list's voice lines with Ren's cloned voice on the Qwen/Qwen3-TTS Space.
+
+  .tools/venv/bin/python cliplib/qwen_voice.py cliplib/shots/<name>.json [--out ../voice/lines]
+
+Calls the Space's Voice Clone (Base) endpoint, /generate_voice_clone, with the 1.7B model and the
+same reference (Audio/ren_reference.wav + Audio/ren_reference.txt) for every line, and saves one
+WAV per shot as line_01.wav, line_02.wav, ... for render_shots.py --voice-dir. If the environment
+has HF_TOKEN set, it is passed to the Space (it is never written anywhere). Any error from the
+Space, including quota or rate limits, stops the run: there is no fallback voice.
+"""
+import argparse
+import json
+import os
+import shutil
+import subprocess
+from pathlib import Path
+
+from gradio_client import Client, handle_file
+
+PROJECT = Path(__file__).resolve().parent.parent
+REF = PROJECT.parent / "Audio"
+SPACE = "Qwen/Qwen3-TTS"
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("shots")
+    ap.add_argument("--out", default=str(PROJECT.parent / "voice" / "lines"))
+    ap.add_argument("--only", type=int, nargs="*", help="Line numbers to (re)generate, 1-based")
+    args = ap.parse_args()
+    shots = json.loads(Path(args.shots).read_text())["shots"]
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+
+    # The transcript file opens with a stray quote mark; strip quotes only, keep every word as written
+    ref_text = (REF / "ren_reference.txt").read_text().strip().strip('"“”').strip()
+    client = Client(SPACE, token=os.environ.get("HF_TOKEN") or None, verbose=False)
+
+    for k, shot in enumerate(shots, 1):
+        if args.only and k not in args.only:
+            continue
+        text = shot.get("voice", "").strip()
+        if not text:
+            continue
+        try:
+            audio, status = client.predict(
+                ref_audio=handle_file(str(REF / "ren_reference.wav")),
+                ref_text=ref_text,
+                target_text=text,
+                language="English",
+                use_xvector_only=False,
+                model_size="1.7B",
+                api_name="/generate_voice_clone",
+            )
+        except Exception as e:  # quota, rate limit, Space asleep or down: stop, never fall back
+            raise SystemExit(f"line {k}: the Space failed: {type(e).__name__}: {e}")
+        if not audio or status.startswith("Error"):
+            raise SystemExit(f"line {k}: {status}")
+        path = out / f"line_{k:02d}.wav"
+        if Path(audio).suffix.lower() == ".wav":
+            shutil.copyfile(audio, path)
+        else:
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", audio, str(path)], check=True)
+        dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                             "-of", "csv=p=0", str(path)]))
+        print(f"{path.name}: {dur:.2f}s  {text}  ({status})")
+
+
+if __name__ == "__main__":
+    main()
