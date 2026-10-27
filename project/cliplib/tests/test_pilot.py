@@ -63,6 +63,7 @@ class PilotTests(unittest.TestCase):
             folder = Path(tmp)
             self.fixture(folder)
             api.return_value.get_space_runtime.return_value = SimpleNamespace(hardware='zero-a10g', stage='RUNNING')
+            api.return_value.space_info.return_value = SimpleNamespace(sha='test-space-revision')
             api.return_value.get_zero_gpu_quota.return_value = SimpleNamespace(
                 remaining=80, base=300, overquota_used=0, resets_at=None)
             pilot.resume(folder, False)
@@ -87,6 +88,7 @@ class PilotTests(unittest.TestCase):
             raw = folder / 'returned.wav'
             self.tone(raw)
             api.return_value.get_space_runtime.return_value = SimpleNamespace(hardware='zero-a10g', stage='RUNNING')
+            api.return_value.space_info.return_value = SimpleNamespace(sha='test-space-revision')
             api.return_value.get_zero_gpu_quota.return_value = SimpleNamespace(
                 remaining=250, base=300, overquota_used=0, resets_at=None)
             client.return_value.predict.return_value = (str(raw), 'Success')
@@ -117,6 +119,13 @@ class PilotTests(unittest.TestCase):
     def test_transcription_comparison_detects_changed_words(self):
         self.assertEqual(pilot.word_error_rate('Keep the coffee.', 'Keep the coffee'), 0)
         self.assertGreater(pilot.word_error_rate('Keep the coffee.', 'Cut the coffee'), .1)
+
+    def test_quota_reset_timestamp_jitter_does_not_hide_usage(self):
+        before = {'remaining_gpu_seconds': 184.6, 'reset_at': '2026-10-28T20:40:00.934+00:00'}
+        after = {'remaining_gpu_seconds': 154.6, 'reset_at': '2026-10-28T20:40:01.224+00:00'}
+        self.assertAlmostEqual(pilot.quota_decrease(before, after), 30)
+        after['remaining_gpu_seconds'] = 300
+        self.assertIsNone(pilot.quota_decrease(before, after))
 
 
 if __name__ == '__main__':

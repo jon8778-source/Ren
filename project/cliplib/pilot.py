@@ -227,6 +227,14 @@ def quota(api):
             'overquota_used': q.overquota_used, 'reset_at': q.resets_at.isoformat() if q.resets_at else None}
 
 
+def quota_decrease(before, after):
+    # The Hub recomputes reset timestamps with subsecond jitter; exact string equality is unreliable.
+    a, b = before.get('reset_at'), after.get('reset_at')
+    same_window = a == b or bool(a and b and abs((datetime.fromisoformat(a) - datetime.fromisoformat(b)).total_seconds()) < 60)
+    difference = before['remaining_gpu_seconds'] - after['remaining_gpu_seconds']
+    return difference if same_window and difference >= 0 else None
+
+
 def resume(folder, publish):
     from gradio_client import Client, handle_file
     from huggingface_hub import HfApi
@@ -243,6 +251,10 @@ def resume(folder, publish):
     runtime = api.get_space_runtime(VOICE['space'])
     if not str(runtime.hardware).startswith('zero-') or str(runtime.stage) != 'RUNNING':
         raise ValueError('Space is not running on ZeroGPU; stopped without generation')
+    revision = api.space_info(VOICE['space']).sha
+    if manifest.get('space_revision') and manifest['space_revision'] != revision:
+        raise ValueError('Upstream Space revision changed; inspect model/defaults before approving further generation')
+    manifest['space_revision'] = revision
     client = None
     for s in manifest['segments']:
         if s['status'] == 'complete':
@@ -256,12 +268,28 @@ def resume(folder, publish):
                   f"reserve {FREE_RESERVE}; reset {before['reset_at']}. No further requests.")
             return
         if client is None:
-            client = Client(VOICE['space'], token=os.environ['HF_TOKEN'], verbose=False)
-        attempt = {'started_at': now(), 'settings': s['settings'], 'before': before}
+            import httpx
+            client = Client(VOICE['space'], token=os.environ['HF_TOKEN'], verbose=False,
+                            httpx_kwargs={'timeout': httpx.Timeout(120, connect=30)})
+        attempt = {'started_at': now(), 'settings': s['settings'], 'before': before,
+                   'phase': 'reference_upload', 'network_read_timeout_seconds': 120}
         s['attempts'].append(attempt)
         s['status'] = 'inflight'
         checkpoint(folder, manifest, publish)  # remote durable intent BEFORE call; never replay an unknown request
         print(f"Generating {s['id']}: {word_count(s['text'])} words; one request", flush=True)
+        # Record queue admission separately from upload. On upload failure no inference was submitted;
+        # an uncertain queue POST must never be replayed automatically.
+        send_data = client.send_data
+
+        def tracked_send(*args, **kwargs):
+            attempt['phase'] = 'queue_submission'
+            checkpoint(folder, manifest)
+            event = send_data(*args, **kwargs)
+            attempt.update(phase='queued', event_id=event, session_hash=client.session_hash)
+            checkpoint(folder, manifest, publish)
+            return event
+
+        client.send_data = tracked_send
         t0 = time.monotonic()
         try:
             result, status = client.predict(
@@ -269,6 +297,7 @@ def resume(folder, publish):
                 ref_text=(ROOT / VOICE['transcript']).read_text().strip().strip('"“”').strip(),
                 target_text=s['text'], language='English', use_xvector_only=True,
                 model_size='1.7B', api_name='/generate_voice_clone')
+            attempt['phase'] = 'returned'
             attempt['elapsed_seconds'] = time.monotonic() - t0
             attempt['space_status'] = safe_error(status)
             if not result or status.startswith('Error'):
@@ -288,14 +317,18 @@ def resume(folder, publish):
         except Exception as e:
             attempt['elapsed_seconds'] = time.monotonic() - t0
             attempt['error'] = safe_error(e)
+            attempt['error_type'] = type(e).__name__
             s['status'] = 'invalid' if s.get('file') else 'failed'
             manifest['overall_status'] = 'generation_failure'
+            if not s.get('file') and re.search(r'\bquota\b|rate.?limit', str(e), re.I):
+                s['status'] = 'quota_blocked'
+                manifest['overall_status'] = 'quota_checkpoint'
+        finally:
+            client.send_data = send_data
         try:
             after = quota(api)
             attempt['after'] = after
-            attempt['observed_quota_decrease_gpu_seconds'] = (
-                max(0, before['remaining_gpu_seconds'] - after['remaining_gpu_seconds'])
-                if before['reset_at'] == after['reset_at'] else None)
+            attempt['observed_quota_decrease_gpu_seconds'] = quota_decrease(before, after)
             manifest['quota_events'].append({'segment': s['id'], 'phase': 'after', **after})
             if after['overquota_used'] > before['overquota_used']:
                 manifest['overall_status'] = 'quota_policy_stop'
@@ -455,7 +488,7 @@ def main():
                 if s['id'] not in args.segments:
                     continue
                 if args.command == 'reject':
-                    s.setdefault('history', []).append({k: v for k, v in s.items() if k != 'history'})
+                    s.setdefault('history', []).append(json.loads(json.dumps({k: v for k, v in s.items() if k != 'history'})))
                     text = s.pop('pending_text', s['text'])
                     settings = s.pop('pending_settings', current_settings())
                     s.update(status='rejected', rejection_reason=args.reason, text=text, settings=settings,

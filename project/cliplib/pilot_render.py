@@ -22,8 +22,15 @@ def cuts(total_frames):
         i += 1
     if len(result) > 1 and result[-1][1] < 36:
         transfer = 36 - result[-1][1]
-        result[-2][1] -= transfer
-        result[-1][1] += transfer
+        for donor in reversed(result[:-1]):
+            take = min(transfer, max(0, donor[1] - 36))
+            donor[1] -= take
+            result[-1][1] += take
+            transfer -= take
+            if not transfer:
+                break
+        if transfer:
+            raise ValueError('Cannot schedule natural visual cuts for this segment')
     return result
 
 
@@ -51,6 +58,8 @@ def visual_plan(folder, segment_durations):
         for kind, n in cuts(frames):
             shot = {'kind': kind, 'duration': n / hybrid.FPS, 'segment_id': s['id'],
                     'title': s['title'], 'subtitle': 'Spend with intention. Keep tomorrow in view.'}
+            if s['id'] == 's001':
+                shot['title'] = 'Keep the coffee?'
             if kind == 'ren':
                 clip = available[actor % len(available)]
                 actor += 1

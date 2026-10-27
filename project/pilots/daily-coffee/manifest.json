@@ -118,7 +118,8 @@
             "overquota_used": 0,
             "reset_at": "2026-10-28T20:40:01.224000+00:00"
           },
-          "observed_quota_decrease_gpu_seconds": null
+          "observed_quota_decrease_gpu_seconds": 0.0,
+          "phase": "unknown; original five-second timeout did not record phase"
         }
       ]
     },
@@ -420,5 +421,5 @@
   "free_reserve_gpu_seconds": 120,
   "overall_status": "generation_failure",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-27T22:01:30.395579+00:00"
+  "updated_at": "2026-10-27T22:07:13.875966+00:00"
 }

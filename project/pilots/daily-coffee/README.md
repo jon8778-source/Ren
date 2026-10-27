@@ -41,6 +41,12 @@ request, for the demo's 60-second GPU allocation; unused quota is left for the n
 If quota is insufficient, no request is submitted. Reset times, observed quota changes and elapsed
 request times are recorded separately. There is no paid hardware or endpoint API in this workflow.
 If quota cannot be read, Space hardware is not ZeroGPU, or a request fails, generation stops.
+Network reads/uploads have a 120-second timeout, independently of generation parameters. Upload,
+queue submission and returned-result phases are recorded. A queued event ID is checkpointed when
+available; an uncertain queue POST or lost result is never replayed automatically. A quota rejection
+can continue on a later explicit `resume` after the free balance has recovered. Other failed requests
+require investigation and explicit rejection before another attempt. The upstream Space revision is
+recorded; a changed revision blocks generation until its model/defaults have been reviewed.
 
 `--publish-checkpoints` commits and pushes only this pilot directory to `codex/ren-coffee-pilot`.
 It never merges or pushes main. It saves an inflight intent before requesting speech, then saves each
