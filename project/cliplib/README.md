@@ -37,6 +37,15 @@ Optional `HF_TOKEN` belongs in the runtime environment; never commit it. No paid
 by these scripts. The public Space can sleep, change its API or run out of free quota. If it fails,
 stop and report the error; never silently replace the voice with Kokoro or another speaker.
 
+For the single-sentence coffee test (`What if your coffee is worth keeping?`), use `--only 1`.
+The hosted wrapper rejects returned audio longer than 10 seconds before copying or converting it
+to an accepted line file. An overlong result is a generation failure even if the Space reports
+success: stop without retrying, trimming, speeding up or generating further lines. Other narration
+is not subject to this test-specific limit. Report elapsed request time separately from GPU quota.
+For a controlled speaker-embedding-only diagnostic, add `--xvector-only`; the default remains false.
+Rejected audio is retained as `rejected_line_01.wav` (or its original extension), never as an accepted
+line file. A duration pass still requires listening review to confirm the words and voice.
+
 Local/self-hosted option (install separately on a suitable computer or GPU host):
 
 ```sh

@@ -1,0 +1,7 @@
+.workflow.lock
+*.tmp
+processed/
+build/
+renders/
+.cache/
+__pycache__/

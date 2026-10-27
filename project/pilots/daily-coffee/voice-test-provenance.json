@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "target_text": "What if your coffee is worth keeping?",
+    "language": "English",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "use_xvector_only": true,
+    "reference_wav_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "reference_transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+    "maximum_accepted_duration_seconds": 10,
+    "only_line": 1,
+    "generation_command_invocations": 1
+  },
+  "original_sha256": "911506e01391e3f03b3134616d9a383467d37684f96c46e993445d5e78b5dac6",
+  "review": "duration passed; owner listening review pending"
+}

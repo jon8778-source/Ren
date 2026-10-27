@@ -140,6 +140,15 @@ def picture(s, frame, base, ren_frame=None):
             d.rounded_rectangle((100, 460, 1180, 492), radius=16, fill='#E3E7EE')
             if ease > .01:
                 d.rounded_rectangle((100, 460, 100 + round(1080 * ease), 492), radius=16, fill=GOLD)
+        elif s.get('steps'):
+            for k, text in enumerate(s['steps'][:3]):
+                reveal = min(1, max(0, progress * 3 - k))
+                ystep = 285 + k * 70
+                d.rounded_rectangle((100, ystep, 1170, ystep + 54), radius=12, fill='#E3E7EE')
+                if reveal:
+                    d.rounded_rectangle((100, ystep, 100 + max(12, round(1070 * reveal)), ystep + 54),
+                                        radius=12, fill=GOLD)
+                d.text((125, ystep + 6), text, font=font(32), fill=INK)
         y = 530
     label(d, s.get('subtitle', ''), max(265, y + 24), 36, INK, x)
     d.rectangle((0, 654, W, H), fill='white')
@@ -152,15 +161,22 @@ def main():
     ap.add_argument('shots', type=Path)
     ap.add_argument('--out', type=Path, default=HERE / 'out/hybrid')
     ap.add_argument('--voice-dir', type=Path)
+    ap.add_argument('--narration', type=Path, help='Complete continuous narration; independent of visual cuts')
     ap.add_argument('--silent-preview', action='store_true', help='Explicitly render a visual-only preview')
     ap.add_argument('--validate-only', action='store_true')
     args = ap.parse_args()
+    if sum(bool(x) for x in (args.voice_dir, args.narration, args.silent_preview)) > 1:
+        ap.error('Choose only one of --voice-dir, --narration, --silent-preview')
     spec = json.loads(args.shots.read_text())
     shots = validate(spec, args.shots.resolve().parent)
     if args.validate_only:
         print(f'VALID: {len(shots)} shots, {sum(s["duration"] for s in shots):.2f}s')
         return
-    if not args.voice_dir and not args.silent_preview:
+    if args.narration:
+        expected = sum(round(s['duration'] * FPS) for s in shots) / FPS
+        if not args.narration.is_file() or abs(duration(args.narration) - expected) > 1 / FPS + .001:
+            ap.error('Continuous narration must match the visual timeline within one frame')
+    if not args.voice_dir and not args.narration and not args.silent_preview:
         ap.error('Supply --voice-dir with cloned narration, or explicitly use --silent-preview')
     args.out.mkdir(parents=True, exist_ok=True)
     segments, report, cursor = [], [], 0
@@ -205,9 +221,16 @@ def main():
     listing = args.out / 'concat.txt'
     listing.write_text(''.join(f"file '{p.name}'\n" for p in segments))
     final = args.out / 'video.mp4'
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', str(listing),
-                    '-c:v', 'copy', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=9', '-c:a', 'aac', '-movflags', '+faststart', str(final)], check=True)
-    (args.out / 'report.json').write_text(json.dumps({'duration_s': cursor / FPS, 'silent_preview': not bool(args.voice_dir), 'shots': report}, indent=2) + '\n')
+    mux = ['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', str(listing)]
+    if args.narration:
+        mux += ['-i', str(args.narration), '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy',
+                '-c:a', 'aac', '-b:a', '192k']
+    else:
+        mux += ['-c:v', 'copy', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=9', '-c:a', 'aac']
+    subprocess.run(mux + ['-movflags', '+faststart', str(final)], check=True)
+    (args.out / 'report.json').write_text(json.dumps({'duration_s': cursor / FPS,
+        'silent_preview': not bool(args.voice_dir or args.narration), 'continuous_narration': bool(args.narration),
+        'shots': report}, indent=2) + '\n')
     print(final)
 
 

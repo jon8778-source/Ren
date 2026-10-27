@@ -1,0 +1,13 @@
+{
+  "label": "Illustrative example figures — not audience statistics",
+  "currency": "USD",
+  "calculations": [
+    {"id": "annual_coffee", "inputs": [4, 365], "operation": "multiply", "result": 1460, "note": "Daily purchase; before replacement costs"},
+    {"id": "replacement_difference", "inputs": [4, 1], "operation": "subtract", "result": 3, "note": "Illustrative one-dollar home alternative"},
+    {"id": "annual_difference", "inputs": [3, 365], "operation": "multiply", "result": 1095, "note": "Net illustrative difference"},
+    {"id": "two_days_weekly", "inputs": [2, 4, 52], "operation": "multiply", "result": 416, "note": "Before replacement costs"}
+  ],
+  "investment_return_assumption": null,
+  "unsupported_statistics": [],
+  "description": "Is Your Daily Coffee Really the Problem? A practical look at opportunity cost without shaming small pleasures. All calculations are illustrative. Educational only, not financial advice. Money Leak Audit Workbook: [WORKBOOK LINK]."
+}

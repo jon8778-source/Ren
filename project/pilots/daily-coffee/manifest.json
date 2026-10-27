@@ -1,0 +1,371 @@
+{
+  "schema": 1,
+  "title": "Is Your Daily Coffee Really the Problem?",
+  "created_at": "2026-10-27T21:59:05.543816+00:00",
+  "script_sha256": "61d263fcffc7025e93be0e80ae5511196775a688777a0a874abb6635a4390a4a",
+  "settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "target_duration_s": [
+    285,
+    315
+  ],
+  "segments": [
+    {
+      "id": "s001",
+      "title": "The question",
+      "text": "What if your coffee is worth keeping?",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "06cb9c2aa60356a9d3ccb25b1b75e121b2704534bc751681817bbe4f624446d9",
+      "status": "complete",
+      "attempts": [],
+      "file": "audio/s001-06cb9c2aa603.wav",
+      "sha256": "911506e01391e3f03b3134616d9a383467d37684f96c46e993445d5e78b5dac6",
+      "validation": {
+        "duration_s": 2.456875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 7,
+        "duration_bounds_s": [
+          1.5555555555555556,
+          10
+        ],
+        "active_fraction": 0.6829268292682927,
+        "max_internal_silence_s": 0.04,
+        "trim_start_s": 0.36,
+        "trim_end_s": 2.456875,
+        "processed_duration_s": 2.0968750000000003,
+        "median_pitch_hz": 160.0,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false
+      },
+      "imported_from": "xvector-only diagnostic"
+    },
+    {
+      "id": "s002",
+      "title": "No shame",
+      "text": "You open your budget, spot that little daily purchase, and suddenly a cup of coffee is standing trial for your entire financial future. But a useful budget is not a competition to enjoy life the least. It is a plan for what your money needs to do. Before you cut something you love, ask which problem you are actually trying to solve.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "7884638c63e5fd76fee255a0ad24786bcfb6ac03435b6416c2cb507e6a59f273",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s003",
+      "title": "Honest arithmetic",
+      "text": "First, let us do the arithmetic honestly. Imagine a coffee that costs four dollars, bought every day for three hundred and sixty five days. Four times three hundred and sixty five is one thousand four hundred and sixty dollars. That is an illustrative example, not a claim about your spending. Your price, schedule, and choices could make the real number quite different.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "cddb98b1a4bf83818c5d97074833a8b6ef7e6c5f9234354f96491d5a4be6e276",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s004",
+      "title": "Gross versus net",
+      "text": "And that total is not automatically money you can recover. If you make coffee at home instead, the beans, milk, and other supplies still cost something. The useful comparison is the difference between the two choices. If the alternative costs one dollar a day, the difference is three dollars, or one thousand and ninety five dollars across that same illustrative year.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "00d61c8e51cc284a875ef3505a2774e92233072eec36f761fb082d76e8a738a7",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s005",
+      "title": "Opportunity cost",
+      "text": "That difference has an opportunity cost. In plain English, choosing one thing means giving up the next best thing you could have done with the same money. That might be a small emergency cushion, less debt, a weekend away, or something you value today. We do not need a predicted investment return to understand the trade. We just need an honest alternative.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "a8ac72b41de4e642a5cb8b1920f52bd5ed9b3102d59b8b3e955dfe2d31cbf24e",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s006",
+      "title": "Two people, different value",
+      "text": "Picture two people making the same purchase. For Max, that coffee is ten quiet minutes before a demanding shift. He looks forward to it. For Lena, it is an automatic stop she barely notices, and sometimes she leaves half the cup untouched. The receipts look alike. The value does not. A sensible decision can be different for each of them without either person being irresponsible.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "90fe7f039d30c7fb6f83ad5550e447d50ea724a2ffcb2973c4be112166d310c2",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s007",
+      "title": "Check the actual gap",
+      "text": "Now look at the problem the budget needs to solve. If your essential bills exceed your income, a coffee calculation does not make the larger gap disappear. Start with housing, transport, debt payments, and other commitments you can realistically change. Some costs are difficult to move quickly. This is not a reason to blame yourself. It is a reason to match the action to the problem.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "51a136fcd0dcd18c19496fc0fb342f14985e94662875e5cc80c955bbe90ac4b8",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s008",
+      "title": "Keep the wider view",
+      "text": "Small purchases still matter when they add up or crowd out something more important. But so can a recurring charge you no longer use, an avoidable fee, or a larger commitment that no longer fits your life. Compare actual dollars, practical effort, and personal value. Do not assume the cheapest pleasure is the first thing that deserves to go. Review the whole picture.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "765100b7b5908efc5371af76809f04b357646b1c79862e0e416cacee33acc960",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s009",
+      "title": "A middle option",
+      "text": "You also have more than two choices. Keep the coffee every day, make it at home, choose a less expensive order, or buy it on the days you enjoy it most. For another illustration, skipping two four dollar purchases a week for fifty two weeks frees four hundred and sixteen dollars before replacement costs. That is a choice to consider, not a rule to obey.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "f64eaf44a7bc0545ae6aa26dae59579e6d0b65672454e3aa6fa94d6d9f5729bb",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s010",
+      "title": "Name the alternative",
+      "text": "Give any money you release a job. Otherwise, the sacrifice can feel real while the benefit stays invisible. You might transfer the difference into a separate savings pot after each week, or put it towards a specific bill. Choose a destination that matters to you. This does not guarantee a financial result. It simply makes the choice easier to see and follow through.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "e95578e02da1b0c6545ca48c1851fdc886a1c7a891c102a03132d7b994e26440",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s011",
+      "title": "Three questions",
+      "text": "Try three questions before changing the habit. Do I notice and enjoy this purchase? Does it fit after essentials and my realistic savings or debt plan? Would I prefer the best alternative use of the money? There is no universal answer hiding in the coffee cup. Your priorities, your obligations, and your actual numbers supply the answer. Write them down instead of judging yourself.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "65ceb7b7623bdfea8d2b7989cc8208775d55156d94a134370431b72565679ea3",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s012",
+      "title": "A fair experiment",
+      "text": "If you are unsure, run a small experiment rather than making a permanent promise. For two weeks, keep the coffees you genuinely look forward to and replace the automatic ones. Record what you actually spent, including the replacement. Notice whether the change makes your day worse, better, or simply different. Then decide whether the money released was worth the experience you gave up.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "47488ccc1d33639963991420ec58176a48d9833a03fb07dd84e51b49170f7de6",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s013",
+      "title": "When keeping it is reasonable",
+      "text": "Keeping the coffee can be a deliberate decision too. If your essentials are covered, your plan is realistic, and this little ritual adds value, you do not need to defend every sip. Enjoy it on purpose. If the budget is under pressure, make a temporary adjustment with a clear reason. A changed plan is not a moral verdict on the person holding the cup.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "a6ba47520463d09aea29e520592205f38bc5efb465b347903c0e5b688cd90ec1",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s014",
+      "title": "A practical first step",
+      "text": "Here is a practical place to start today. Look at one week of actual transactions. Circle one purchase you value and one you would not miss. Estimate the difference you could genuinely keep, not the headline total. Choose where that difference will go. Then check again after another week. You are building a repeatable decision, not trying to win an argument with a spreadsheet.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "995af8134948eb446205243f1346494d5680233249b76763161d19da4e5e204f",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s015",
+      "title": "Close",
+      "text": "So, is your daily coffee really the problem? Sometimes it is a useful place to make a change. Sometimes it is an affordable pleasure worth protecting. The aim is not to remove all enjoyment from today. It is to give both today and tomorrow a place in your plan. Check out the Money Leak Audit Workbook in the description. Educational only, not financial advice.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "e26d39b4273c84846b5958cfc372cb6d0dc8860ebb31cc8275c14510a3a962cb",
+      "status": "pending",
+      "attempts": []
+    }
+  ],
+  "quota_events": [],
+  "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
+  "free_reserve_gpu_seconds": 120,
+  "overall_status": "prepared",
+  "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
+  "updated_at": "2026-10-27T22:00:11.047009+00:00"
+}

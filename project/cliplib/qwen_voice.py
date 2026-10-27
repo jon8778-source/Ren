@@ -10,6 +10,7 @@ Space, including quota or rate limits, stops the run: there is no fallback voice
 """
 import argparse
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -21,6 +22,25 @@ from gradio_client import Client, handle_file
 PROJECT = Path(__file__).resolve().parent.parent
 REF = PROJECT.parent / "Audio"
 SPACE = "Qwen/Qwen3-TTS"
+COFFEE_TEST_TEXT = "What if your coffee is worth keeping?"
+COFFEE_TEST_MAX_SECONDS = 10.0
+
+
+def validate_generated_duration(text, audio):
+    """Reject malformed/overlong test output before accepting or converting it."""
+    duration = float(subprocess.check_output([
+        "ffprobe", "-v", "error", "-show_entries", "format=duration",
+        "-of", "csv=p=0", str(audio),
+    ]))
+    if not math.isfinite(duration) or duration <= 0:
+        raise ValueError("generated audio has an invalid duration")
+    if text.strip() == COFFEE_TEST_TEXT and duration > COFFEE_TEST_MAX_SECONDS:
+        raise ValueError(
+            f"generation failed: coffee test returned {duration:.3f}s; "
+            f"maximum is {COFFEE_TEST_MAX_SECONDS:g}s. "
+            "Output rejected; do not trim it or retry automatically."
+        )
+    return duration
 
 
 def main():
@@ -28,6 +48,7 @@ def main():
     ap.add_argument("shots")
     ap.add_argument("--out", default=str(PROJECT.parent / "voice" / "lines"))
     ap.add_argument("--only", type=int, nargs="*", help="Line numbers to (re)generate, 1-based")
+    ap.add_argument("--xvector-only", action="store_true", help="Use speaker embedding only for voice cloning")
     args = ap.parse_args()
     shots = json.loads(Path(args.shots).read_text())["shots"]
     out = Path(args.out)
@@ -53,22 +74,26 @@ def main():
                 ref_text=ref_text,
                 target_text=text,
                 language="English",
-                use_xvector_only=False,
+                use_xvector_only=args.xvector_only,
                 model_size="1.7B",
                 api_name="/generate_voice_clone",
             )
         except Exception as e:  # quota, rate limit, Space asleep or down: stop, never fall back
             raise SystemExit(f"line {k}: the Space failed: {type(e).__name__}: {e}")
-        took = time.monotonic() - t0  # queue + GPU + transfer: an upper bound on the GPU time charged
+        took = time.monotonic() - t0  # elapsed queue + generation + transfer, not billed GPU-seconds
         if not audio or status.startswith("Error"):
             raise SystemExit(f"line {k}: {status}")
+        try:
+            dur = validate_generated_duration(text, audio)
+        except ValueError as e:
+            rejected = out / f"rejected_line_{k:02d}{Path(audio).suffix}"
+            shutil.copyfile(audio, rejected)
+            raise SystemExit(f"line {k}: {e} Original preserved at {rejected}") from e
         path = out / f"line_{k:02d}.wav"
         if Path(audio).suffix.lower() == ".wav":
             shutil.copyfile(audio, path)
         else:
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", audio, str(path)], check=True)
-        dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                                             "-of", "csv=p=0", str(path)]))
         print(f"{path.name}: {dur:.2f}s of audio in {took:.1f}s  {text}  ({status})")
 
 
