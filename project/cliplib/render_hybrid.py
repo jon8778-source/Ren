@@ -152,7 +152,7 @@ def picture(s, frame, base, ren_frame=None):
         y = 530
     label(d, s.get('subtitle', ''), max(265, y + 24), 36, INK, x)
     d.rectangle((0, 654, W, H), fill='white')
-    d.text((48, 670), 'Illustrative example | Educational only, not financial advice', font=font(23), fill=INK)
+    d.text((48, 668), 'Illustrative example | Educational only, not financial advice', font=font(30), fill=INK)
     return im
 
 

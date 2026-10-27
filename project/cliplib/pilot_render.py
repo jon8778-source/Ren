@@ -11,8 +11,10 @@ import render_hybrid as hybrid
 from pilot import ROOT, checkpoint, load, process_segment, save
 
 
-def cuts(total_frames):
+def cuts(total_frames, story_pair=False):
     kinds = [('ren', 108), ('graphic', 78), ('ren', 108), ('story', 54), ('ren', 108)]
+    if story_pair:
+        kinds = [('ren', 108), ('story', 54), ('ren', 108), ('story', 54), ('ren', 108)]
     remaining, result, i = total_frames, [], 0
     while remaining:
         kind, maximum = kinds[i % len(kinds)]
@@ -43,7 +45,23 @@ def visual_plan(folder, segment_durations):
                  not any(x in c['file'] for x in ('walk', 'exit', 'enter'))]
     if not available:
         raise ValueError('No suitable approved animated Ren clips')
-    available.sort(key=lambda c: c['file'])
+    clips = {Path(c['file']).stem: c for c in available}
+    primary = dict(zip([f's{i:03d}' for i in range(1, 16)], [
+        'ren_point_camera', 'ren_open_arms', 'ren_count_fingers', 'ren_point_right', 'ren_thinking',
+        'ren_explain_hands', 'ren_thinking', 'ren_hold_phone', 'ren_count_fingers', 'ren_point_down_right',
+        'ren_count_fingers', 'ren_clipboard_tick', 'ren_nod_yes', 'ren_clipboard_tick', 'ren_wave_bye']))
+    steps = {
+        's002': ['Notice the purchase', 'Name the real problem', 'Choose without shame'],
+        's005': ['This choice', 'The best alternative', 'Your opportunity cost'],
+        's007': ['Essential bills', 'Realistic changes', 'Match the actual gap'],
+        's008': ['Dollars saved', 'Effort required', 'Value to you'],
+        's010': ['Choose a purpose', 'Move the difference', 'Check the result'],
+        's011': ['Enjoy it?', 'Does it fit?', 'Prefer the alternative?'],
+        's012': ['Try two weeks', 'Record actual spending', 'Notice what changes'],
+        's013': ['Essentials covered', 'Plan is realistic', 'Enjoy deliberately'],
+        's014': ['Review a week', 'Choose one change', 'Give savings a job'],
+        's015': ['Enjoy today', 'Protect tomorrow', 'Spend with intention'],
+    }
     shots, frames_so_far, seconds_so_far, actor = [], 0, 0., 0
     cues = {
         's003': (1460, '$4 × 365 days = $1,460'),
@@ -55,17 +73,22 @@ def visual_plan(folder, segment_durations):
         target = math.ceil(seconds_so_far * hybrid.FPS)
         frames = target - frames_so_far
         frames_so_far = target
-        for kind, n in cuts(frames):
+        local_actor, story_index = 0, 0
+        for kind, n in cuts(frames, story_pair=s['id'] == 's006'):
             shot = {'kind': kind, 'duration': n / hybrid.FPS, 'segment_id': s['id'],
                     'title': s['title'], 'subtitle': 'Spend with intention. Keep tomorrow in view.'}
             if s['id'] == 's001':
                 shot['title'] = 'Keep the coffee?'
             if kind == 'ren':
-                clip = available[actor % len(available)]
+                sequence = [primary[s['id']], 'ren_explain_hands', 'ren_open_arms', 'ren_thinking']
+                clip = clips[sequence[local_actor % len(sequence)]]
+                local_actor += 1
                 actor += 1
                 shot['clip'] = Path(clip['file']).stem
             elif kind == 'story':
-                character = 'max-30' if actor % 2 else 'lena-30'
+                character = ('max-30' if story_index % 2 == 0 else 'lena-30') if s['id'] == 's006' else (
+                    'max-30' if actor % 2 else 'lena-30')
+                story_index += 1
                 # Absolute paths only in generated, ignored build output, not durable source settings.
                 shot['image'] = str(ROOT / f'project/characters/{character}/neutral.png')
                 shot['subtitle'] = 'Different priorities. Different choices.'
@@ -73,7 +96,7 @@ def visual_plan(folder, segment_durations):
                 value, caption = cues[s['id']]
                 shot.update(value=value, subtitle=caption)
             else:
-                shot.update(steps=['Enjoy it?', 'Does it fit?', 'What is the alternative?'],
+                shot.update(steps=steps.get(s['id'], ['Enjoy it?', 'Does it fit?', 'What is the alternative?']),
                             subtitle='Your priorities, your actual numbers.')
             shots.append(shot)
     return {'title': m['title'], 'shots': shots}

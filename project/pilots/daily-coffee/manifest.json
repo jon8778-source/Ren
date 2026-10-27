@@ -63,7 +63,9 @@
         "listening": "pending",
         "voice_identity": "same cloning settings; listening review required",
         "reference_pitch_hz": 124.35567010309279,
-        "pitch_review_flag": false
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": null,
+        "boundary_voice_review_flag": false
       },
       "imported_from": "xvector-only diagnostic"
     },
@@ -238,7 +240,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -3.5369191867335825,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -319,7 +325,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -0.9162106335613784,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -400,7 +410,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.0018400744546911412,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -722,7 +736,7 @@
   "free_reserve_gpu_seconds": 120,
   "overall_status": "quota_checkpoint",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-27T22:09:40.444875+00:00",
+  "updated_at": "2026-10-27T22:14:54.894467+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s005",
   "quota": {

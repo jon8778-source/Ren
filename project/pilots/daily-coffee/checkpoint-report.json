@@ -1,17 +1,16 @@
 {
-  "overall": "generation_failure",
+  "overall": "quota_checkpoint",
   "segments": {
-    "complete": 1,
-    "failed": 1,
-    "pending": 13
+    "complete": 4,
+    "pending": 11
   },
-  "completed_original_audio_seconds": 2.456875,
-  "observed_quota_decrease_gpu_seconds": 0,
-  "request_elapsed_seconds": 5.076282701999844,
+  "completed_original_audio_seconds": 62.9475,
+  "observed_quota_decrease_gpu_seconds": 87.001574,
+  "request_elapsed_seconds": 106.09878226399996,
+  "new_original_audio_seconds": 60.490624999999994,
+  "estimated_quota_gpu_seconds_per_audio_second": 1.4382654171617504,
+  "client_generation_attempts": 4,
   "remaining_segments": [
-    "s002",
-    "s003",
-    "s004",
     "s005",
     "s006",
     "s007",
@@ -25,19 +24,23 @@
     "s015"
   ],
   "last_quota": {
-    "segment": "s002",
-    "phase": "after",
-    "at": "2026-10-27T22:01:30.395550+00:00",
-    "remaining_gpu_seconds": 184.632927,
+    "at": "2026-10-27T22:09:40.444849+00:00",
+    "remaining_gpu_seconds": 97.63135299999999,
     "base_gpu_seconds": 300,
     "overquota_used": 0,
-    "reset_at": "2026-10-28T20:40:01.224000+00:00"
+    "reset_at": "2026-10-28T20:40:01.231000+00:00"
   },
-  "resume_command": "python project/cliplib/pilot.py resume --publish-checkpoints",
+  "resume_command": "bash project/pilots/daily-coffee/resume.sh",
   "limitations": [
     "Owner listening review pending; no automatic claim of British accent/voice identity",
     "ASR requires an already available local model; never silently downloads or uses a voice service",
     "Bundled office and narrative art are template placeholders",
     "Final 285\u2013315s duration cannot be confirmed until all narration is generated"
-  ]
+  ],
+  "capacity_estimate": {
+    "sample": "three paragraph-sized generation returns; earlier imported diagnostic excluded",
+    "quota_gpu_seconds_per_audio_second": 1.4382654171617504,
+    "estimated_quota_gpu_seconds_for_five_minutes": 431.4796251485251,
+    "caution": "Small-sample estimate only; excludes unused safety reserve and future variation. Elapsed time is not GPU usage."
+  }
 }

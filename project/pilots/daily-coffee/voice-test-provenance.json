@@ -13,5 +13,7 @@
     "generation_command_invocations": 1
   },
   "original_sha256": "911506e01391e3f03b3134616d9a383467d37684f96c46e993445d5e78b5dac6",
-  "review": "duration passed; owner listening review pending"
+  "review": "duration passed; owner listening review pending",
+  "prior_diagnostic_quota_decrease_gpu_seconds": 7.367073,
+  "prior_diagnostic_total_elapsed_seconds": 16.53
 }

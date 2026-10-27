@@ -31,8 +31,12 @@ python project/cliplib/pilot.py verify
 python project/cliplib/pilot.py assemble
 ```
 
-Exact resume command, after activating the venv:
-`python project/cliplib/pilot.py resume --publish-checkpoints`
+Exact resume command (also bootstraps a fresh-task interpreter if necessary):
+`bash project/pilots/daily-coffee/resume.sh`
+
+The launcher uses the retained onboarding interpreter when available, otherwise an ignored local
+venv installed from the pinned requirements. `REN_PILOT_PYTHON` can select an existing interpreter.
+It checks the branch and token presence without printing the token. It never creates a worktree.
 
 Only `resume` can generate speech. It selects only missing/pending or explicitly rejected segments;
 completed originals are hash-checked and reused. There is no automatic voice retry or fallback.

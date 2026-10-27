@@ -260,6 +260,7 @@ def resume(folder, publish):
         if s['status'] == 'complete':
             continue
         before = quota(api)  # no token/header values in checkpoints
+        manifest['quota'] = before
         manifest['quota_events'].append({'segment': s['id'], 'phase': 'before', **before})
         if before['remaining_gpu_seconds'] < FREE_RESERVE:
             manifest.update(overall_status='quota_checkpoint', blocked_segment=s['id'], quota=before)
@@ -327,6 +328,7 @@ def resume(folder, publish):
             client.send_data = send_data
         try:
             after = quota(api)
+            manifest['quota'] = after
             attempt['after'] = after
             attempt['observed_quota_decrease_gpu_seconds'] = quota_decrease(before, after)
             manifest['quota_events'].append({'segment': s['id'], 'phase': 'after', **after})
@@ -384,16 +386,51 @@ def status(folder):
     measured = sum(s.get('validation', {}).get('duration_s', 0) for s in m['segments'] if s['status'] == 'complete')
     used = sum(a.get('observed_quota_decrease_gpu_seconds') or 0 for s in m['segments'] for a in s['attempts'])
     elapsed = sum(a.get('elapsed_seconds', 0) for s in m['segments'] for a in s['attempts'])
+    new_audio = sum(s.get('validation', {}).get('duration_s', 0) for s in m['segments']
+                    if s['status'] == 'complete' and s['attempts'])
     report = {'overall': m['overall_status'], 'segments': counts, 'completed_original_audio_seconds': measured,
               'observed_quota_decrease_gpu_seconds': used, 'request_elapsed_seconds': elapsed,
+              'new_original_audio_seconds': new_audio,
+              'estimated_quota_gpu_seconds_per_audio_second': used / new_audio if new_audio else None,
+              'client_generation_attempts': sum(len(s['attempts']) for s in m['segments']),
               'remaining_segments': [s['id'] for s in m['segments'] if s['status'] != 'complete'],
               'last_quota': m.get('quota') or (m['quota_events'][-1] if m['quota_events'] else None),
-              'resume_command': 'python project/cliplib/pilot.py resume --publish-checkpoints',
+              'resume_command': 'bash project/pilots/daily-coffee/resume.sh',
               'limitations': ['Owner listening review pending; no automatic claim of British accent/voice identity',
                               'ASR requires an already available local model; never silently downloads or uses a voice service',
                               'Bundled office and narrative art are template placeholders',
                               'Final 285–315s duration cannot be confirmed until all narration is generated']}
     save(folder / 'checkpoint-report.json', report)
+    q = report['last_quota'] or {}
+    remaining = ', '.join(report['remaining_segments']) or 'none'
+    lines = [f"# {m['title']} — checkpoint", '', f"Updated: {now()}", '',
+             '**This is not a completed video or a complete narration track.**', '',
+             f"State: `{m['overall_status']}`. Completed segments: {counts.get('complete', 0)}/{len(m['segments'])}.",
+             f"Original audio retained: {measured:.3f} seconds, including the reused diagnostic opening.",
+             f"New original audio: {new_audio:.3f} seconds. Remaining: {remaining}.", '',
+             f"Reported free balance: {q.get('remaining_gpu_seconds')} GPU-seconds. "
+             f"Next-request reserve: {FREE_RESERVE} GPU-seconds; the balance is not necessarily exhausted.",
+             f"Reported reset: {q.get('reset_at')}. No paid hardware or voice fallback was used.", '',
+             f"Observed quota decrease for this pilot batch: {used:.6f} GPU-seconds.",
+             f"Request elapsed time: {elapsed:.3f} seconds, including queue/transfer/checkpoint overhead "
+             'and any failed attempt. This is not GPU usage.', '',
+             '## Resume', '', 'On branch `codex/ren-coffee-pilot`, from the repository root:', '',
+             '```sh', report['resume_command'], '```', '',
+             'The launcher checks free quota before requesting anything. Completed WAVs are hash-checked '
+             'and reused. It does not automatically replay failed or interrupted requests.', '',
+             '## Quality and limits', '',
+             '- Original WAVs, text, settings, reference hashes and per-attempt results are in `manifest.json`.',
+             '- Current completed originals pass duration, corruption, silence and clipping checks.',
+             '- Edge-only silence trimming and level matching affect derived files, never originals.',
+             '- ASR is unavailable locally; all spoken words, British accent, speaker identity and boundaries '
+             'still require listening review. No owner approvals have been fabricated.',
+             '- Office and narrative artwork are bundled template placeholders, not approved office/Alex art.',
+             '- Continuous narration across visual cuts was functionally verified with existing test audio; '
+             'no partial pilot is being delivered as finished.',
+             '- Final 285–315-second duration is enforced at assembly, without speech-speed changes or silence padding.',
+             '- Script and all completed originals are committed on this branch. Credentials, models and temporary '
+             'render caches are excluded. Nothing is merged into main.', '']
+    (folder / 'CHECKPOINT.md').write_text('\n'.join(lines))
     print(json.dumps(report, indent=2))
 
 
@@ -418,8 +455,10 @@ def verify(folder, asr_model=None):
         from faster_whisper import WhisperModel
         model = WhisperModel(str(asr_model), device='cpu', compute_type='int8', local_files_only=True)
     reference_pitch = inspect_audio_for_pitch(ROOT / VOICE['reference'])
+    previous_pitch = None
     for s in m['segments']:
         if s['status'] != 'complete':
+            previous_pitch = None
             continue
         metrics = inspect_audio(folder / s['file'], s['text'])
         old = s.get('validation', {})
@@ -427,6 +466,10 @@ def verify(folder, asr_model=None):
         pitch = metrics['median_pitch_hz']
         metrics['reference_pitch_hz'] = reference_pitch
         metrics['pitch_review_flag'] = bool(pitch and reference_pitch and abs(12 * math.log2(pitch / reference_pitch)) > 5)
+        metrics['boundary_pitch_shift_semitones'] = 12 * math.log2(pitch / previous_pitch) if pitch and previous_pitch else None
+        metrics['boundary_voice_review_flag'] = bool(metrics['boundary_pitch_shift_semitones'] is not None and
+                                                    abs(metrics['boundary_pitch_shift_semitones']) > 5)
+        previous_pitch = pitch
         if model:
             parts, _ = model.transcribe(str(folder / s['file']), language='en', beam_size=5)
             transcript = ' '.join(part.text.strip() for part in parts)
