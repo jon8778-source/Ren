@@ -42,5 +42,12 @@
     "quota_gpu_seconds_per_audio_second": 1.4382654171617504,
     "estimated_quota_gpu_seconds_for_five_minutes": 431.4796251485251,
     "caution": "Small-sample estimate only; excludes unused safety reserve and future variation. Elapsed time is not GPU usage."
+  },
+  "visual_preflight": {
+    "shots": 84,
+    "estimated_duration_s": 291.491875,
+    "all_shot_layouts_and_source_windows": "pass",
+    "excluded_asset": "ren_explain_hands: metadata end 28s but actual clip 10.005s; insufficient window starting at 9s",
+    "note": "Estimates only; actual full visual timeline requires remaining narration"
   }
 }

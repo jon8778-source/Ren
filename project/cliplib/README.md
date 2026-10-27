@@ -29,7 +29,7 @@ engine; no separate model training is needed.
 Hosted option (uses the public Qwen demo, subject to availability and quota):
 
 ```sh
-python project/cliplib/qwen_voice.py project/cliplib/shots/hybrid_coffee.json --out project/cliplib/out/hybrid-voice
+python project/cliplib/qwen_voice.py project/cliplib/shots/hybrid_coffee.json --xvector-only --out project/cliplib/out/hybrid-voice
 python project/cliplib/render_hybrid.py project/cliplib/shots/hybrid_coffee.json --voice-dir project/cliplib/out/hybrid-voice
 ```
 

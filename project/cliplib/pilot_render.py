@@ -48,7 +48,7 @@ def visual_plan(folder, segment_durations):
     clips = {Path(c['file']).stem: c for c in available}
     primary = dict(zip([f's{i:03d}' for i in range(1, 16)], [
         'ren_point_camera', 'ren_open_arms', 'ren_count_fingers', 'ren_point_right', 'ren_thinking',
-        'ren_explain_hands', 'ren_thinking', 'ren_hold_phone', 'ren_count_fingers', 'ren_point_down_right',
+        'ren_open_arms', 'ren_thinking', 'ren_hold_phone', 'ren_count_fingers', 'ren_point_down_right',
         'ren_count_fingers', 'ren_clipboard_tick', 'ren_nod_yes', 'ren_clipboard_tick', 'ren_wave_bye']))
     steps = {
         's002': ['Notice the purchase', 'Name the real problem', 'Choose without shame'],
@@ -80,7 +80,9 @@ def visual_plan(folder, segment_durations):
             if s['id'] == 's001':
                 shot['title'] = 'Keep the coffee?'
             if kind == 'ren':
-                sequence = [primary[s['id']], 'ren_explain_hands', 'ren_open_arms', 'ren_thinking']
+                sequence = [primary[s['id']]] + [name for name in
+                    ['ren_point_right', 'ren_open_arms', 'ren_thinking', 'ren_clipboard_tick']
+                    if name != primary[s['id']]]
                 clip = clips[sequence[local_actor % len(sequence)]]
                 local_actor += 1
                 actor += 1
