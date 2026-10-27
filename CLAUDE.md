@@ -1,5 +1,15 @@
 # Ren videos
 
+## Current animation prototype route (27 October 2026)
+
+For new animated prototypes, use `project/cliplib/README.md` and `render_hybrid.py`: animated Ren
+in an office, brief story cutaways and moving infographics, with the Qwen cloned voice. This is the
+owner-requested update to the prototype style and supersedes the white-only/static-bust/Kokoro
+rules below **for this route**. The office and story art in the example are placeholders until the
+approved office/Alex assets are supplied. Do not describe them as the exact approved artwork.
+The legacy episode workflow below still applies to existing episodes.
+
+
 Animated personal-finance videos narrated by Ren, the mascot. Owner: the channel creator, who reviews
 at fixed gates. Two systems live here:
 
