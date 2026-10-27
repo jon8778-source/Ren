@@ -340,7 +340,7 @@
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
       "fingerprint": "00d61c8e51cc284a875ef3505a2774e92233072eec36f761fb082d76e8a738a7",
-      "status": "inflight",
+      "status": "complete",
       "attempts": [
         {
           "started_at": "2026-10-27T22:08:58.873396+00:00",
@@ -364,12 +364,44 @@
             "overquota_used": 0,
             "reset_at": "2026-10-28T20:40:01.673000+00:00"
           },
-          "phase": "queued",
+          "phase": "returned",
           "network_read_timeout_seconds": 120,
           "event_id": "d50356ce26304159875a38b2c2c4936a",
-          "session_hash": "842cf5b5-f69a-44af-8051-6a0623a0a60c"
+          "session_hash": "842cf5b5-f69a-44af-8051-6a0623a0a60c",
+          "elapsed_seconds": 34.17584815000009,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-10-27T22:09:36.807407+00:00",
+            "remaining_gpu_seconds": 97.63135299999999,
+            "base_gpu_seconds": 300,
+            "overquota_used": 0,
+            "reset_at": "2026-10-28T20:40:01.593000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 29.368015000000014
         }
-      ]
+      ],
+      "file": "audio/s004-00d61c8e51cc-a1.wav",
+      "sha256": "5fa513d58bd61473cf40f0f759f813ee56c7fb3079122d0dbfa42a299d140b97",
+      "validation": {
+        "duration_s": 20.376875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 61,
+        "duration_bounds_s": [
+          13.555555555555555,
+          36.888888888888886
+        ],
+        "active_fraction": 0.8243375858684985,
+        "max_internal_silence_s": 0.6,
+        "trim_start_s": 0.5,
+        "trim_end_s": 20.376875,
+        "processed_duration_s": 19.876875,
+        "median_pitch_hz": 123.72448979591837,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
     },
     {
       "id": "s005",
@@ -666,12 +698,21 @@
       "base_gpu_seconds": 300,
       "overquota_used": 0,
       "reset_at": "2026-10-28T20:40:01.673000+00:00"
+    },
+    {
+      "segment": "s004",
+      "phase": "after",
+      "at": "2026-10-27T22:09:36.807407+00:00",
+      "remaining_gpu_seconds": 97.63135299999999,
+      "base_gpu_seconds": 300,
+      "overquota_used": 0,
+      "reset_at": "2026-10-28T20:40:01.593000+00:00"
     }
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
   "overall_status": "generation_failure",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-27T22:09:03.589034+00:00",
+  "updated_at": "2026-10-27T22:09:36.807446+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228"
 }
