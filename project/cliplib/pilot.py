@@ -230,7 +230,8 @@ def quota(api):
 def quota_decrease(before, after):
     # The Hub recomputes reset timestamps with subsecond jitter; exact string equality is unreliable.
     a, b = before.get('reset_at'), after.get('reset_at')
-    same_window = a == b or bool(a and b and abs((datetime.fromisoformat(a) - datetime.fromisoformat(b)).total_seconds()) < 60)
+    fresh_window = a is None and before.get('base_gpu_seconds') == before['remaining_gpu_seconds']
+    same_window = fresh_window or a == b or bool(a and b and abs((datetime.fromisoformat(a) - datetime.fromisoformat(b)).total_seconds()) < 60)
     difference = before['remaining_gpu_seconds'] - after['remaining_gpu_seconds']
     return difference if same_window and difference >= 0 else None
 
@@ -276,6 +277,7 @@ def resume(folder, publish):
                    'phase': 'reference_upload', 'network_read_timeout_seconds': 120}
         s['attempts'].append(attempt)
         s['status'] = 'inflight'
+        manifest['overall_status'] = 'generating'
         checkpoint(folder, manifest, publish)  # remote durable intent BEFORE call; never replay an unknown request
         print(f"Generating {s['id']}: {word_count(s['text'])} words; one request", flush=True)
         # Record queue admission separately from upload. On upload failure no inference was submitted;

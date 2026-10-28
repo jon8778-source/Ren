@@ -465,7 +465,16 @@
           "session_hash": "c120d8b1-3cb0-4ccb-82cb-c93d3b509e84",
           "elapsed_seconds": 40.67589428699284,
           "space_status": "Voice clone generation completed successfully!",
-          "quota_after_error": "Server error '503 Service Unavailable' for url 'https://huggingface.co/api/spaces/zero-gpu/quota'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503\n\nupstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+          "quota_after_error": "Server error '503 Service Unavailable' for url 'https://huggingface.co/api/spaces/zero-gpu/quota'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503\n\nupstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+          "after": {
+            "at": "2026-10-28T21:02:39.285014+00:00",
+            "remaining_gpu_seconds": 271.29593,
+            "base_gpu_seconds": 300,
+            "overquota_used": 0,
+            "reset_at": "2026-10-29T21:01:04.089000+00:00"
+          },
+          "quota_recovery_note": "Delayed read after HTTP 503; no further pilot generation occurred before this observation",
+          "observed_quota_decrease_gpu_seconds": 28.70407
         }
       ],
       "file": "audio/s005-a8ac72b41de4-a1.wav",
@@ -792,20 +801,29 @@
       "base_gpu_seconds": 300,
       "overquota_used": 0,
       "reset_at": null
+    },
+    {
+      "segment": "s005",
+      "phase": "after_recovered",
+      "at": "2026-10-28T21:02:39.285014+00:00",
+      "remaining_gpu_seconds": 271.29593,
+      "base_gpu_seconds": 300,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T21:01:04.089000+00:00"
     }
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
   "overall_status": "quota_unknown_stop",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T21:01:44.046688+00:00",
+  "updated_at": "2026-10-28T21:03:34.448138+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s005",
   "quota": {
-    "at": "2026-10-28T21:00:50.527633+00:00",
-    "remaining_gpu_seconds": 300,
+    "at": "2026-10-28T21:02:39.285014+00:00",
+    "remaining_gpu_seconds": 271.29593,
     "base_gpu_seconds": 300,
     "overquota_used": 0,
-    "reset_at": null
+    "reset_at": "2026-10-29T21:01:04.089000+00:00"
   }
 }

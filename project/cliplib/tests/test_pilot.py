@@ -127,6 +127,12 @@ class PilotTests(unittest.TestCase):
         after['remaining_gpu_seconds'] = 300
         self.assertIsNone(pilot.quota_decrease(before, after))
 
+    def test_first_request_after_reset_records_consumption(self):
+        before = {'remaining_gpu_seconds': 300, 'base_gpu_seconds': 300, 'reset_at': None}
+        after = {'remaining_gpu_seconds': 270, 'base_gpu_seconds': 300,
+                 'reset_at': '2026-10-29T21:00:00+00:00'}
+        self.assertEqual(pilot.quota_decrease(before, after), 30)
+
 
 if __name__ == '__main__':
     unittest.main()
