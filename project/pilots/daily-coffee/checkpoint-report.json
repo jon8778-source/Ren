@@ -1,22 +1,16 @@
 {
   "overall": "quota_checkpoint",
   "segments": {
-    "complete": 4,
-    "pending": 11
+    "complete": 10,
+    "pending": 5
   },
-  "completed_original_audio_seconds": 62.9475,
-  "observed_quota_decrease_gpu_seconds": 87.001574,
-  "request_elapsed_seconds": 106.09878226399996,
-  "new_original_audio_seconds": 60.490624999999994,
-  "estimated_quota_gpu_seconds_per_audio_second": 1.4382654171617504,
-  "client_generation_attempts": 4,
+  "completed_original_audio_seconds": 189.60875,
+  "observed_quota_decrease_gpu_seconds": 269.14378700000003,
+  "request_elapsed_seconds": 329.5439075860031,
+  "new_original_audio_seconds": 187.151875,
+  "estimated_quota_gpu_seconds_per_audio_second": 1.4381036097020137,
+  "client_generation_attempts": 10,
   "remaining_segments": [
-    "s005",
-    "s006",
-    "s007",
-    "s008",
-    "s009",
-    "s010",
     "s011",
     "s012",
     "s013",
@@ -24,11 +18,11 @@
     "s015"
   ],
   "last_quota": {
-    "at": "2026-10-27T22:09:40.444849+00:00",
-    "remaining_gpu_seconds": 97.63135299999999,
+    "at": "2026-10-28T21:08:00.596865+00:00",
+    "remaining_gpu_seconds": 117.85778699999997,
     "base_gpu_seconds": 300,
     "overquota_used": 0,
-    "reset_at": "2026-10-28T20:40:01.231000+00:00"
+    "reset_at": "2026-10-29T21:01:03.789000+00:00"
   },
   "resume_command": "bash project/pilots/daily-coffee/resume.sh",
   "limitations": [
@@ -37,17 +31,13 @@
     "Bundled office and narrative art are template placeholders",
     "Final 285\u2013315s duration cannot be confirmed until all narration is generated"
   ],
-  "capacity_estimate": {
-    "sample": "three paragraph-sized generation returns; earlier imported diagnostic excluded",
-    "quota_gpu_seconds_per_audio_second": 1.4382654171617504,
-    "estimated_quota_gpu_seconds_for_five_minutes": 431.4796251485251,
-    "caution": "Small-sample estimate only; excludes unused safety reserve and future variation. Elapsed time is not GPU usage."
+  "latest_resume": {
+    "date": "2026-10-28",
+    "new_segments": 6,
+    "new_original_audio_seconds": 126.66125,
+    "observed_quota_decrease_gpu_seconds": 182.14221300000003,
+    "generation_attempt_elapsed_seconds": 223.44512532200315,
+    "quota_observation_recovery": "One HTTP 503; delayed read recovered before any further generation; s005 reused without retry"
   },
-  "visual_preflight": {
-    "shots": 84,
-    "estimated_duration_s": 291.491875,
-    "all_shot_layouts_and_source_windows": "pass",
-    "excluded_asset": "ren_explain_hands: metadata end 28s but actual clip 10.005s; insufficient window starting at 9s",
-    "note": "Estimates only; actual full visual timeline requires remaining narration"
-  }
+  "acoustic_boundary_review_flags": []
 }

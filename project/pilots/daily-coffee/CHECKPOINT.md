@@ -1,18 +1,18 @@
 # Is Your Daily Coffee Really the Problem? — checkpoint
 
-Updated: 2026-10-27T22:14:54.898465+00:00
+Updated: 2026-10-28T21:09:16.667491+00:00
 
 **This is not a completed video or a complete narration track.**
 
-State: `quota_checkpoint`. Completed segments: 4/15.
-Original audio retained: 62.947 seconds, including the reused diagnostic opening.
-New original audio: 60.491 seconds. Remaining: s005, s006, s007, s008, s009, s010, s011, s012, s013, s014, s015.
+State: `quota_checkpoint`. Completed segments: 10/15.
+Original audio retained: 189.609 seconds, including the reused diagnostic opening.
+New original audio: 187.152 seconds. Remaining: s011, s012, s013, s014, s015.
 
-Reported free balance: 97.63135299999999 GPU-seconds. Next-request reserve: 120 GPU-seconds; the balance is not necessarily exhausted.
-Reported reset: 2026-10-28T20:40:01.231000+00:00. No paid hardware or voice fallback was used.
+Reported free balance: 117.85778699999997 GPU-seconds. Next-request reserve: 120 GPU-seconds; the balance is not necessarily exhausted.
+Reported reset: 2026-10-29T21:01:03.789000+00:00. No paid hardware or voice fallback was used.
 
-Observed quota decrease for this pilot batch: 87.001574 GPU-seconds.
-Request elapsed time: 106.099 seconds, including queue/transfer/checkpoint overhead and any failed attempt. This is not GPU usage.
+Observed quota decrease for this pilot batch: 269.143787 GPU-seconds.
+Request elapsed time: 329.544 seconds, including queue/transfer/checkpoint overhead and any failed attempt. This is not GPU usage.
 
 ## Resume
 
@@ -35,8 +35,8 @@ The launcher checks free quota before requesting anything. Completed WAVs are ha
 - Final 285–315-second duration is enforced at assembly, without speech-speed changes or silence padding.
 - Script and all completed originals are committed on this branch. Credentials, models and temporary render caches are excluded. Nothing is merged into main.
 
-## Capacity estimate
+## Latest resume — 28 October 2026
 
-The three paragraph returns used about 1.44 quota GPU-seconds per second of narration. At that observed rate, five minutes would use roughly 432 quota GPU-seconds, before accounting for the conservative unused reserve or future variation. This is a small-sample estimate, not a quota guarantee. The reused opening test was generated earlier and is excluded from the batch cost.
+Six new paragraph WAVs retained: 126.661 seconds. Observed quota decrease: 182.142213 GPU-seconds. Generation-attempt elapsed time: 223.445 seconds. One quota observation returned HTTP 503; a later read recovered the balance before generation continued. No completed segment was regenerated.
 
-Validation in this task: 21 tests passed; complete planned storyboard preflight passed; continuous narration across two visual cuts was functionally rendered with existing test audio. All completed original hashes were verified. No acoustic pitch-discontinuity flags were raised, but listening remains required.
+All ten saved original hashes were verified; derived edge-only trimming and level matching were exercised. Acoustic boundary flags: []. Words and voice remain pending listening review. The workflow has 22 passing unit tests; no implementation or model-setting changes were made beyond accounting for the first request after a quota reset and marking active generation accurately.
