@@ -1627,9 +1627,9 @@
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
-  "overall_status": "generating",
+  "overall_status": "narration_generated_review_pending",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T22:19:30.796877+00:00",
+  "updated_at": "2026-10-28T22:19:33.663440+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s011",
   "quota": {
