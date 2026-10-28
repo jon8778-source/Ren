@@ -1200,20 +1200,29 @@
       "base_gpu_seconds": 300,
       "overquota_used": 0,
       "reset_at": "2026-10-29T21:01:03.918000+00:00"
+    },
+    {
+      "segment": "s011",
+      "phase": "before",
+      "at": "2026-10-28T21:08:00.596865+00:00",
+      "remaining_gpu_seconds": 117.85778699999997,
+      "base_gpu_seconds": 300,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T21:01:03.789000+00:00"
     }
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
-  "overall_status": "generating",
+  "overall_status": "quota_checkpoint",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T21:07:55.137383+00:00",
+  "updated_at": "2026-10-28T21:08:00.596892+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
-  "blocked_segment": "s005",
+  "blocked_segment": "s011",
   "quota": {
-    "at": "2026-10-28T21:07:55.137351+00:00",
+    "at": "2026-10-28T21:08:00.596865+00:00",
     "remaining_gpu_seconds": 117.85778699999997,
     "base_gpu_seconds": 300,
     "overquota_used": 0,
-    "reset_at": "2026-10-29T21:01:03.918000+00:00"
+    "reset_at": "2026-10-29T21:01:03.789000+00:00"
   }
 }
