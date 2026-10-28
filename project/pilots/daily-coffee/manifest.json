@@ -1007,7 +1007,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 4.293152327125139,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -1088,7 +1092,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -4.212063933021433,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -1169,7 +1177,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.16332517822383516,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -1250,7 +1262,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 3.140010840838656,
+        "boundary_voice_review_flag": false
       }
     },
     {
@@ -1331,7 +1347,11 @@
         "technical": "pass",
         "transcription": "unavailable; listening review required",
         "listening": "pending",
-        "voice_identity": "same cloning settings; listening review required"
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -0.09808717734840322,
+        "boundary_voice_review_flag": false
       }
     }
   ],
@@ -1627,9 +1647,9 @@
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
-  "overall_status": "narration_generated_review_pending",
+  "overall_status": "pilot_rendered_review_pending",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T22:19:33.663440+00:00",
+  "updated_at": "2026-10-28T22:35:31.926260+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s011",
   "quota": {
@@ -1638,5 +1658,19 @@
     "base_gpu_seconds": 2400,
     "overquota_used": 0,
     "reset_at": "2026-10-29T22:15:59.575000+00:00"
+  },
+  "deliverables": {
+    "deliverables/narration.mp3": {
+      "sha256": "6d4f63451a6c52dae6083790d9e35b90512964f3eb6183b06dd6c3a8892ca6d5",
+      "bytes": 7085420
+    },
+    "deliverables/narration.wav": {
+      "sha256": "8e7507861b5772425433e5ec32b539c34450247b82f90a0568a74b864c58b106",
+      "bytes": 42502152
+    },
+    "deliverables/ren-coffee-pilot.mp4": {
+      "sha256": "d5a75f2208d50f8bfc6074b881666ed946ecb49e007d141f78d64f276420523b",
+      "bytes": 14102836
+    }
   }
 }

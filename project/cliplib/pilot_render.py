@@ -79,6 +79,8 @@ def visual_plan(folder, segment_durations):
                     'title': s['title'], 'subtitle': 'Spend with intention. Keep tomorrow in view.'}
             if s['id'] == 's001':
                 shot['title'] = 'Keep the coffee?'
+            elif s['id'] == 's015':
+                shot['title'] = 'Spend with intention'
             if kind == 'ren':
                 sequence = [primary[s['id']]] + [name for name in
                     ['ren_point_right', 'ren_open_arms', 'ren_thinking', 'ren_clipboard_tick']
@@ -101,6 +103,8 @@ def visual_plan(folder, segment_durations):
                 shot.update(steps=steps.get(s['id'], ['Enjoy it?', 'Does it fit?', 'What is the alternative?']),
                             subtitle='Your priorities, your actual numbers.')
             shots.append(shot)
+    if shots and shots[-1]['segment_id'] == 's015' and shots[-1]['kind'] == 'ren':
+        shots[-1].update(clip='ren_wave_bye', subtitle='Money Leak Audit Workbook in the description.')
     return {'title': m['title'], 'shots': shots}
 
 

@@ -105,6 +105,9 @@ Source clip audio is discarded; no music. The bundled office and narrative still
 placeholders, not the approved office/Alex artwork. All figures are labelled illustrative.
 
 The full video is `renders/video.mp4`; complete narration is `build/narration.wav`.
+Delivered review copies are retained in `deliverables/` (MP4, WAV and an MP3 convenience copy),
+with hashes and measured checks in `quality-report.json`. These final review files are deliverables,
+not temporary caches, and are kept on the pilot branch for access from a fresh task.
 One midpoint frame per shot is exported to `build/review-frames/` for visual inspection. The brief
 `quality-report.json` lists review gaps honestly; legacy episode QC is not a pass for this renderer.
 Incomplete work produces `checkpoint-report.json`, not a partial video labelled finished.

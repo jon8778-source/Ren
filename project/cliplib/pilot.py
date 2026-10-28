@@ -390,23 +390,27 @@ def status(folder):
     elapsed = sum(a.get('elapsed_seconds', 0) for s in m['segments'] for a in s['attempts'])
     new_audio = sum(s.get('validation', {}).get('duration_s', 0) for s in m['segments']
                     if s['status'] == 'complete' and s['attempts'])
+    rendered = m['overall_status'] == 'pilot_rendered_review_pending' and counts.get('complete') == len(m['segments'])
     report = {'overall': m['overall_status'], 'segments': counts, 'completed_original_audio_seconds': measured,
               'observed_quota_decrease_gpu_seconds': used, 'request_elapsed_seconds': elapsed,
               'new_original_audio_seconds': new_audio,
               'estimated_quota_gpu_seconds_per_audio_second': used / new_audio if new_audio else None,
               'client_generation_attempts': sum(len(s['attempts']) for s in m['segments']),
+              'complete_pilot_rendered_for_review': rendered,
               'remaining_segments': [s['id'] for s in m['segments'] if s['status'] != 'complete'],
               'last_quota': m.get('quota') or (m['quota_events'][-1] if m['quota_events'] else None),
               'resume_command': 'bash project/pilots/daily-coffee/resume.sh',
               'limitations': ['Owner listening review pending; no automatic claim of British accent/voice identity',
                               'ASR requires an already available local model; never silently downloads or uses a voice service',
                               'Bundled office and narrative art are template placeholders',
+                              'Final duration and media checks are recorded in quality-report.json' if rendered else
                               'Final 285–315s duration cannot be confirmed until all narration is generated']}
     save(folder / 'checkpoint-report.json', report)
     q = report['last_quota'] or {}
     remaining = ', '.join(report['remaining_segments']) or 'none'
     lines = [f"# {m['title']} — checkpoint", '', f"Updated: {now()}", '',
-             '**This is not a completed video or a complete narration track.**', '',
+             ('**Complete pilot rendered for review; voice/words still await owner listening confirmation.**'
+              if rendered else '**This is not a completed video or a complete narration track.**'), '',
              f"State: `{m['overall_status']}`. Completed segments: {counts.get('complete', 0)}/{len(m['segments'])}.",
              f"Original audio retained: {measured:.3f} seconds, including the reused diagnostic opening.",
              f"New original audio: {new_audio:.3f} seconds. Remaining: {remaining}.", '',

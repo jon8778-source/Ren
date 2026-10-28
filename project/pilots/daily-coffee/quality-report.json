@@ -1,0 +1,132 @@
+{
+  "status": "complete pilot for review; not publishing approval",
+  "narration_duration_s": 295.153125,
+  "video_duration_s": 295.187663,
+  "target_duration_s": [
+    285,
+    315
+  ],
+  "visual_shots": 84,
+  "music": false,
+  "source_clip_audio": false,
+  "speed_changes": false,
+  "duration_padding": false,
+  "edge_silence_only": true,
+  "master_target_lufs": -16,
+  "master_true_peak_target_dbtp": -1.5,
+  "listening_review_pending": [
+    "s001",
+    "s002",
+    "s003",
+    "s004",
+    "s005",
+    "s006",
+    "s007",
+    "s008",
+    "s009",
+    "s010",
+    "s011",
+    "s012",
+    "s013",
+    "s014",
+    "s015"
+  ],
+  "acoustic_voice_consistency_flags": [],
+  "visual_review": "All 84 shot midpoint frames inspected; arithmetic end frames, both character cutaways and revised closing also inspected. No visible crop/overlap found in sampled frames; full-motion owner playback review still required.",
+  "placeholder_art": "Bundled office and narrative character stills; not approved office/Alex artwork",
+  "narration": "build/narration.wav",
+  "video": "renders/video.mp4",
+  "deliverables": {
+    "deliverables/narration.mp3": {
+      "sha256": "6d4f63451a6c52dae6083790d9e35b90512964f3eb6183b06dd6c3a8892ca6d5",
+      "bytes": 7085420
+    },
+    "deliverables/narration.wav": {
+      "sha256": "8e7507861b5772425433e5ec32b539c34450247b82f90a0568a74b864c58b106",
+      "bytes": 42502152
+    },
+    "deliverables/ren-coffee-pilot.mp4": {
+      "sha256": "d5a75f2208d50f8bfc6074b881666ed946ecb49e007d141f78d64f276420523b",
+      "bytes": 14102836
+    }
+  },
+  "master_audio_measurements": {
+    "duration_s": 295.153125,
+    "sample_rate": 48000,
+    "channels": 1,
+    "subtype": "PCM_24",
+    "integrated_lufs": -16.09,
+    "true_peak_dbtp": -1.5,
+    "loudness_range_lu": 2.1
+  },
+  "encoded_video_measurements": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1",
+          "duration": "295.166667"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "duration": "295.153000"
+        }
+      ],
+      "format": {
+        "duration": "295.187663",
+        "size": "14102836"
+      }
+    },
+    "encoded_audio_loudness": {
+      "input_i": "-16.10",
+      "input_tp": "-1.34",
+      "input_lra": "2.10",
+      "input_thresh": "-26.59",
+      "output_i": "-15.96",
+      "output_tp": "-1.50",
+      "output_lra": "2.10",
+      "output_thresh": "-26.45",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.04"
+    },
+    "faststart": true
+  },
+  "narration_original_seconds": 297.093125,
+  "edge_silence_removed_seconds": 1.94,
+  "voice_configuration": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "script_sha256": "61d263fcffc7025e93be0e80ae5511196775a688777a0a874abb6635a4390a4a",
+  "quota_usage": {
+    "observed_pilot_batch_decrease_gpu_seconds": 422.5529649999999,
+    "generation_attempt_elapsed_seconds": 506.98295497600157,
+    "prior_reused_diagnostic_quota_gpu_seconds": 7.367073,
+    "overquota_used": 0,
+    "latest_remaining_gpu_seconds": 2246.590822,
+    "latest_base_gpu_seconds": 2400,
+    "billing_policy": "Public ZeroGPU account allowance only. No hardware upgrade, paid endpoint, credit top-up or over-quota request was made. The account API reported base 2400 during the final resume; it previously reported 300.",
+    "scope": "Elapsed attempts include queue/transfer/checkpoint overhead, exclude offline quota waiting and video rendering; quota units are not elapsed time."
+  },
+  "transcription": "No installed local ASR model; word accuracy marked for listening review, not claimed verified.",
+  "validation": "22 unit tests passed; original hashes, continuous audio timing, codec compatibility, faststart and level/headroom checks passed.",
+  "deliverable_status": "Complete rendered pilot for review; not owner-approved for publication"
+}
