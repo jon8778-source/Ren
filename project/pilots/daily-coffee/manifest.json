@@ -971,8 +971,10 @@
             "overquota_used": 0,
             "reset_at": null
           },
-          "phase": "reference_upload",
-          "network_read_timeout_seconds": 120
+          "phase": "queued",
+          "network_read_timeout_seconds": 120,
+          "event_id": "5f6bead3a2b44f4eb4e2378fc698a289",
+          "session_hash": "68519a9c-bd8c-4d52-9558-7a3b5c4e6705"
         }
       ]
     },
@@ -1274,7 +1276,7 @@
   "free_reserve_gpu_seconds": 120,
   "overall_status": "generating",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T22:15:54.000064+00:00",
+  "updated_at": "2026-10-28T22:15:59.875369+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s011",
   "quota": {
