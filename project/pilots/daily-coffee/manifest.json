@@ -761,8 +761,34 @@
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
       "fingerprint": "f64eaf44a7bc0545ae6aa26dae59579e6d0b65672454e3aa6fa94d6d9f5729bb",
-      "status": "pending",
-      "attempts": []
+      "status": "inflight",
+      "attempts": [
+        {
+          "started_at": "2026-10-28T21:06:36.763885+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-10-28T21:06:36.763860+00:00",
+            "remaining_gpu_seconds": 172.15502199999997,
+            "base_gpu_seconds": 300,
+            "overquota_used": 0,
+            "reset_at": "2026-10-29T21:01:04.577000+00:00"
+          },
+          "phase": "reference_upload",
+          "network_read_timeout_seconds": 120
+        }
+      ]
     },
     {
       "id": "s010",
@@ -1044,20 +1070,29 @@
       "base_gpu_seconds": 300,
       "overquota_used": 0,
       "reset_at": "2026-10-29T21:01:04.739000+00:00"
+    },
+    {
+      "segment": "s009",
+      "phase": "before",
+      "at": "2026-10-28T21:06:36.763860+00:00",
+      "remaining_gpu_seconds": 172.15502199999997,
+      "base_gpu_seconds": 300,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T21:01:04.577000+00:00"
     }
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
   "overall_status": "generating",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T21:06:30.931321+00:00",
+  "updated_at": "2026-10-28T21:06:36.763890+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s005",
   "quota": {
-    "at": "2026-10-28T21:06:30.931290+00:00",
+    "at": "2026-10-28T21:06:36.763860+00:00",
     "remaining_gpu_seconds": 172.15502199999997,
     "base_gpu_seconds": 300,
     "overquota_used": 0,
-    "reset_at": "2026-10-29T21:01:04.739000+00:00"
+    "reset_at": "2026-10-29T21:01:04.577000+00:00"
   }
 }
