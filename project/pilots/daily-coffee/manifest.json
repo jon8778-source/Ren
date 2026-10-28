@@ -435,7 +435,7 @@
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
       "fingerprint": "a8ac72b41de4e642a5cb8b1920f52bd5ed9b3102d59b8b3e955dfe2d31cbf24e",
-      "status": "inflight",
+      "status": "complete",
       "attempts": [
         {
           "started_at": "2026-10-28T21:00:54.506707+00:00",
@@ -459,12 +459,37 @@
             "overquota_used": 0,
             "reset_at": null
           },
-          "phase": "queued",
+          "phase": "returned",
           "network_read_timeout_seconds": 120,
           "event_id": "0a0ca1112fce44a998cb4d5abb86cb2b",
-          "session_hash": "c120d8b1-3cb0-4ccb-82cb-c93d3b509e84"
+          "session_hash": "c120d8b1-3cb0-4ccb-82cb-c93d3b509e84",
+          "elapsed_seconds": 40.67589428699284,
+          "space_status": "Voice clone generation completed successfully!",
+          "quota_after_error": "Server error '503 Service Unavailable' for url 'https://huggingface.co/api/spaces/zero-gpu/quota'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503\n\nupstream connect error or disconnect/reset before headers. reset reason: connection timeout"
         }
-      ]
+      ],
+      "file": "audio/s005-a8ac72b41de4-a1.wav",
+      "sha256": "38bdaf4880f323cc899e427f469f8adc4240208fc62c5845f679f6d0fbb16312",
+      "validation": {
+        "duration_s": 19.736875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 62,
+        "duration_bounds_s": [
+          13.777777777777779,
+          37.44444444444444
+        ],
+        "active_fraction": 0.8024316109422492,
+        "max_internal_silence_s": 0.56,
+        "trim_start_s": 0,
+        "trim_end_s": 19.736875,
+        "processed_duration_s": 19.736875,
+        "median_pitch_hz": 121.8274111675127,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
     },
     {
       "id": "s006",
@@ -771,9 +796,9 @@
   ],
   "hardware_policy": "public ZeroGPU only; no hardware upgrades, paid endpoints or fallback",
   "free_reserve_gpu_seconds": 120,
-  "overall_status": "quota_checkpoint",
+  "overall_status": "quota_unknown_stop",
   "voice_test_review": "duration passed; words/accent/identity not yet confirmed by owner",
-  "updated_at": "2026-10-28T21:01:04.425187+00:00",
+  "updated_at": "2026-10-28T21:01:44.046688+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "blocked_segment": "s005",
   "quota": {
