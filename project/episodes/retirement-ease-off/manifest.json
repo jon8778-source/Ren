@@ -675,8 +675,10 @@
             "overquota_used": 0,
             "reset_at": "2026-10-29T22:16:00.211000+00:00"
           },
-          "phase": "reference_upload",
-          "network_read_timeout_seconds": 120
+          "phase": "queued",
+          "network_read_timeout_seconds": 120,
+          "event_id": "2ece44ea832543fcb27cde3be7609086",
+          "session_hash": "34c78938-50a1-45d6-a83b-ac6f13eea4ee"
         }
       ]
     },
@@ -966,7 +968,7 @@
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
-  "updated_at": "2026-10-29T20:07:00.376780+00:00",
+  "updated_at": "2026-10-29T20:07:07.134955+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "quota": {
     "at": "2026-10-29T20:07:00.376754+00:00",
