@@ -29,6 +29,7 @@ W,H,FPS = v3.W,v3.H,v3.FPS
 INK,GREEN,CREAM,MUTED = v3.INK,v3.GREEN,v3.CREAM,v3.MUTED
 A=json.loads((BASE/'assumptions.json').read_text())
 C=json.loads((BASE/'calculations.json').read_text())
+ACTOR_CACHE={}
 
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(path,data): pilot.save(path,data)
@@ -79,7 +80,10 @@ def picture(s,f,actor=None):
         # The episode's wide framing includes trainers; its closer framing uses
         # a gentler 1.25x scale rather than enlarging the actor 1.65x.
         scale=1.25 if s['close'] else .9
-        rgba=v3.actor_rgba(actor).resize((round(W*scale),round(H*scale)),Image.Resampling.LANCZOS)
+        key=(s['clip'],f)
+        if key not in ACTOR_CACHE:
+            ACTOR_CACHE[key]=v3.actor_rgba(actor)
+        rgba=ACTOR_CACHE[key].resize((round(W*scale),round(H*scale)),Image.Resampling.LANCZOS)
         im.paste(rgba,(150 if s['close'] else 374,25 if s['close'] else 45),rgba)
         d=ImageDraw.Draw(im)
         # Wall annotation above the furniture, screen-left of presenting Ren.
