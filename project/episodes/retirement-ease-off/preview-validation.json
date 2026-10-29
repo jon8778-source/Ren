@@ -1,24 +1,27 @@
 {
-  "status": "technical render pass; visual/audio/source review pending",
-  "duration_s": 55.0,
+  "mode": "opening preview",
+  "shots": 22,
+  "shot_limits": "pass",
   "frames": 1320,
-  "resolution": [
+  "artwork_sha256": {
+    "alex-cafe.png": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+    "alex-home.png": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+    "supporting-cast.png": "07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e",
+    "office.png": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+  },
+  "equation_frames_checked": 0,
+  "fixed_correct_equations": "pass",
+  "no_reference_similarity_target": true,
+  "source_dimensions": [
     1280,
     720
   ],
-  "fps": 24,
-  "codecs": [
-    "h264",
-    "aac"
-  ],
+  "listening": "not performed; pronunciation, words and identity unconfirmed",
+  "duration_s": 55.0,
+  "video_frames": 1320,
+  "audio_source_correlation": 0.9999749524381001,
   "full_decode": "pass",
-  "every_shot_frame_count": "pass",
-  "sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f",
-  "actor_decode_resolution": [
-    1280,
-    720
-  ],
-  "no_music": true,
-  "no_source_audio": true,
-  "approved_artwork_preserved": true
+  "every_encoded_shot_count": "pass",
+  "final_sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f",
+  "narration_sha256": "0ffc5fc6de868295f871869224c53631c6d8deb0c50305fa5d7e1df34ebeb720"
 }
