@@ -64,9 +64,9 @@ def main():
             for f in range(s['frames']):
                 assert render.picture(s,f).crop(box).tobytes()==baseline
                 equation_frames+=1
-    report=dict(checked_out_commit=run(['git','-C',str(ROOT),'rev-parse','HEAD']).stdout.strip(),
-        fresh_checkout=True,frames=1479,fps=24,duration_seconds=61.625,resolution=[1280,720],
-        codecs=['h264','aac'],output_sha256=hashlib.sha256(final.read_bytes()).hexdigest(),full_decode='pass',shot_counts='19/19 pass',
+    report=dict(source_worktree_modified=bool(run(['git','-C',str(ROOT),'diff','--name-only','--',str(BASE/'render.py')]).stdout.strip()),checked_out_commit=run(['git','-C',str(ROOT),'rev-parse','HEAD']).stdout.strip(),
+        frames=1479,fps=24,duration_seconds=61.625,resolution=[1280,720],
+        actor_decode_resolution=[render.ACTOR_W,render.ACTOR_H],codecs=['h264','aac'],output_sha256=hashlib.sha256(final.read_bytes()).hexdigest(),full_decode='pass',shot_counts='19/19 pass',
         artwork_sha256=art_hashes,narration_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
         audio_samples_checked=len(y),audio_source_correlation=correlation,new_voice_requests=0,
         equations={'annual_spend':render.YEAR,'daily_difference':render.DIFFERENCE,'annual_difference':render.NET,'source_frames_checked':equation_frames,'fixed_text':'pass'},
@@ -77,8 +77,14 @@ def main():
         stats=BASE/'build/reference-ssim.log'
         run(['ffmpeg','-v','error','-xerror','-i',str(final),'-i',str(args.reference),'-lavfi',f'ssim=stats_file={stats}','-an','-f','null','-'])
         values=[float(re.search(r'All:([0-9.]+)',line)[1]) for line in stats.read_text().splitlines()]
-        assert len(values)==1479 and min(values)>.99,(len(values),min(values))
-        report['reference_comparison']=dict(sha256=reference_sha,frames_checked=len(values),minimum_ssim=min(values),mean_ssim=sum(values)/len(values))
+        assert len(values)==1479,len(values)
+        unaffected=[]
+        offset=0
+        for shot in render.SHOTS:
+            if shot['kind']!='ren': unaffected.extend(values[offset:offset+shot['frames']])
+            offset+=shot['frames']
+        assert min(unaffected)>.99,min(unaffected)
+        report['reference_comparison']=dict(sha256=reference_sha,frames_compared=len(values),minimum_ssim=min(values),mean_ssim=sum(values)/len(values),unaffected_frames_checked=len(unaffected),minimum_unaffected_ssim=min(unaffected),note='Ren pixels intentionally improved by native-resolution decode; unchanged story and graphic frames retain the original similarity gate.')
     (BASE/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))
 

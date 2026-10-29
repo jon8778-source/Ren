@@ -1,0 +1,133 @@
+{
+  "checked_out_commit": "bf193aee2c042651884143bec1cf1be9febc0b11",
+  "fresh_checkout": true,
+  "frames": 1479,
+  "fps": 24,
+  "duration_seconds": 61.625,
+  "resolution": [
+    1280,
+    720
+  ],
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "output_sha256": "1329fbf19852d9b5ac54cd8655917900bc588c2e65edc3ff3d20c7c5c9d1d70b",
+  "full_decode": "pass",
+  "shot_counts": "19/19 pass",
+  "artwork_sha256": {
+    "alex-cafe.png": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+    "alex-home.png": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+    "supporting-cast.png": "07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e",
+    "office.png": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+  },
+  "narration_sha256": "8e7507861b5772425433e5ec32b539c34450247b82f90a0568a74b864c58b106",
+  "audio_samples_checked": 2958000,
+  "audio_source_correlation": 0.999970057062925,
+  "new_voice_requests": 0,
+  "equations": {
+    "annual_spend": 1460,
+    "daily_difference": 3,
+    "annual_difference": 1095,
+    "source_frames_checked": 209,
+    "fixed_text": "pass"
+  },
+  "gesture_intervals": [
+    {
+      "shot": 1,
+      "clip": "ren_present_palm_left.mp4",
+      "start": 1.12,
+      "end": 3.2033333333333336,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 2,
+      "clip": "ren_nod_yes.mp4",
+      "start": 1.12,
+      "end": 5.286666666666667,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 5,
+      "clip": "ren_shake_no.mp4",
+      "start": 1.25,
+      "end": 5.75,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 6,
+      "clip": "ren_thinking.mp4",
+      "start": 1.25,
+      "end": 3.9583333333333335,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 8,
+      "clip": "ren_present_palm_left.mp4",
+      "start": 1.12,
+      "end": 4.578333333333333,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 10,
+      "clip": "ren_nod_yes.mp4",
+      "start": 1.12,
+      "end": 5.37,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 12,
+      "clip": "ren_present_palm_left.mp4",
+      "start": 1.12,
+      "end": 5.62,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 13,
+      "clip": "ren_thinking.mp4",
+      "start": 1.25,
+      "end": 3.3333333333333335,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 14,
+      "clip": "ren_shake_no.mp4",
+      "start": 1.25,
+      "end": 5.083333333333334,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 16,
+      "clip": "ren_present_palm_left.mp4",
+      "start": 1.12,
+      "end": 5.245,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    },
+    {
+      "shot": 18,
+      "clip": "ren_nod_yes.mp4",
+      "start": 1.12,
+      "end": 5.328333333333333,
+      "actual_source_duration": 10.005,
+      "mirrored": false
+    }
+  ],
+  "renderer_sha256": "17330b437edf12a9011123110d75e36b48df83126537274207b81e32883c2ec5",
+  "reference_comparison": {
+    "sha256": "f95725ea9ccec4665aaa11a860e4d1445697f00d54ad1fd7ef90910ffaea4d93",
+    "frames_checked": 1479,
+    "minimum_ssim": 0.992776,
+    "mean_ssim": 0.9978929006085193
+  },
+  "visual_review": "All 19 shot midpoints inspected: clear office furniture; no branding heading or bottom bar; varied framing; matching Alex scenes; single French-press mug; closed-mouth poses and gestures toward screen-left content. Full-frame comparison covers all gesture intervals."
+}

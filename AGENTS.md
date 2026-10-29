@@ -12,3 +12,14 @@ artwork/ chunks and restored automatically by render.py (or unpack_artwork.py);
 SHA-256 checks prevent substitution or corruption. See README.md and
 validation.json for fresh-checkout verification. Keep prototype work separate
 from main and preserve approved narration. No new voice requests are needed.
+
+## Character sharpness and GitHub task recovery
+
+Decode Ren clips at their native 1280×720 resolution before matting and the
+final composition resize. Do not downsample them to 640×360. Check the face,
+glasses, hair, hands and clothing at 100% output size in wide and close shots;
+resolution/frame-count checks alone do not establish visual sharpness.
+For GitHub publishing, follow project/GITHUB_TASK_WORKFLOW.md and maintain
+project/GITHUB_TASK_STATUS.md with remotely verified checkpoints. These are
+publishing safeguards, not an Android client-sync fix. Resume from the remote
+branch after an interruption; do not regenerate approved art or narration.

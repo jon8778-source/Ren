@@ -138,6 +138,10 @@
   "duration": 61.625,
   "source_narration_sha256": "8e7507861b5772425433e5ec32b539c34450247b82f90a0568a74b864c58b106",
   "new_voice_requests": 0,
+  "actor_decode_resolution": [
+    1280,
+    720
+  ],
   "maths": {
     "annual": 1460,
     "daily_difference": 3,

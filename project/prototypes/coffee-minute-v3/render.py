@@ -12,6 +12,7 @@ from scipy.ndimage import binary_propagation
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parents[2]
 W, H, FPS = 1280, 720, 24
+ACTOR_W, ACTOR_H = 1280, 720
 INK, GREEN, CREAM, MUTED = '#172A3A', '#3F665B', '#FAF6EE', '#63736D'
 DAILY, HOME, DAYS = 4, 1, 365
 YEAR, DIFFERENCE, NET = DAILY * DAYS, DAILY - HOME, (DAILY - HOME) * DAYS
@@ -86,7 +87,8 @@ def picture(s,frame,actor=None):
         return large.crop((cx,cy,cx+W,cy+H))
     if k=='ren':
         im=ART['office.png'].copy()
-        # Source decoded at half resolution. Preserve enclosed white shirt/shoes.
+        # Matte the native-resolution source before one final composition resize.
+        # Preserve enclosed white shirt/shoes; never downsample the actor first.
         close=s.get('close',False)
         factor=3.3 if close else 2.2
         rgba=actor_rgba(actor)
@@ -158,17 +160,19 @@ def main(preview=False):
         if s['kind']=='ren':
             path=ROOT/'assets/ren_library'/('ren_'+s['clip']+'.mp4')
             meta=clips[path.name]
+            dimensions=json.loads(sp.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height','-of','json',str(path)]))['streams'][0]
+            assert (dimensions['width'],dimensions['height'])==(ACTOR_W,ACTOR_H), f'Unexpected actor source dimensions: {path}'
             assert meta['in_s']+s['frames']/FPS<=meta['out_s']
-            decoder=sp.Popen(['ffmpeg','-v','error','-xerror','-ss',str(meta['in_s']),'-i',str(path),'-an','-vf','fps=24,scale=640:360','-frames:v',str(s['frames']),'-f','rawvideo','-pix_fmt','rgb24','-'],stdout=sp.PIPE)
+            decoder=sp.Popen(['ffmpeg','-v','error','-xerror','-ss',str(meta['in_s']),'-i',str(path),'-an','-vf','fps=24','-frames:v',str(s['frames']),'-f','rawvideo','-pix_fmt','rgb24','-'],stdout=sp.PIPE)
         encoder=None
         if not preview:
             encoder=sp.Popen(['ffmpeg','-v','error','-xerror','-y','-f','rawvideo','-pix_fmt','rgb24','-s','1280x720','-r','24','-i','-','-an','-c:v','libx264','-threads','2','-preset','fast','-crf','19','-pix_fmt','yuv420p',str(out/f'shot_{i:02d}.mp4')],stdin=sp.PIPE)
         for f in range(s['frames']):
             actor=None
             if decoder:
-                raw=decoder.stdout.read(640*360*3)
-                assert len(raw)==640*360*3
-                actor=Image.frombytes('RGB',(640,360),raw)
+                raw=decoder.stdout.read(ACTOR_W*ACTOR_H*3)
+                assert len(raw)==ACTOR_W*ACTOR_H*3
+                actor=Image.frombytes('RGB',(ACTOR_W,ACTOR_H),raw)
             if encoder or f==s['frames']//2:
                 im=picture(s,f,actor)
                 if i in (1,len(SHOTS)):
@@ -198,10 +202,10 @@ def main(preview=False):
     concat=out/'concat.txt'
     concat.write_text('\n'.join("file 'shot_%02d.mp4'"%i for i in range(1,len(SHOTS)+1)))
     final=BASE/'Ren_61s_Coffee_Prototype_v3.mp4'
-    cmd(['ffmpeg','-v','error','-xerror','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(narration),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-t','61.625','-movflags','+faststart',str(final)])
+    cmd(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(narration),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-t','61.625','-movflags','+faststart',str(final)])
     check_video(final,1479)
     cmd(['ffmpeg','-v','error','-xerror','-i',str(final),'-f','null','-'])
-    (BASE/'revision-report.json').write_text(json.dumps(dict(shots=report,duration=61.625,source_narration_sha256=hashlib.sha256(audio.read_bytes()).hexdigest(),new_voice_requests=0,maths=dict(annual=YEAR,daily_difference=DIFFERENCE,annual_difference=NET),lip_sync=False),indent=2))
+    (BASE/'revision-report.json').write_text(json.dumps(dict(shots=report,duration=61.625,source_narration_sha256=hashlib.sha256(audio.read_bytes()).hexdigest(),new_voice_requests=0,actor_decode_resolution=[ACTOR_W,ACTOR_H],maths=dict(annual=YEAR,daily_difference=DIFFERENCE,annual_difference=NET),lip_sync=False),indent=2))
     print(final,flush=True)
 
 if __name__=='__main__':

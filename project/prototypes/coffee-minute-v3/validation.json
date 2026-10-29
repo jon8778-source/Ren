@@ -1,6 +1,6 @@
 {
+  "source_worktree_modified": true,
   "checked_out_commit": "bf193aee2c042651884143bec1cf1be9febc0b11",
-  "fresh_checkout": true,
   "frames": 1479,
   "fps": 24,
   "duration_seconds": 61.625,
@@ -8,11 +8,15 @@
     1280,
     720
   ],
+  "actor_decode_resolution": [
+    1280,
+    720
+  ],
   "codecs": [
     "h264",
     "aac"
   ],
-  "output_sha256": "1329fbf19852d9b5ac54cd8655917900bc588c2e65edc3ff3d20c7c5c9d1d70b",
+  "output_sha256": "32efa685e92f79b8641d9572e1a5daf4d747c0dedc35bed96a3fe5760edd6bc9",
   "full_decode": "pass",
   "shot_counts": "19/19 pass",
   "artwork_sha256": {
@@ -122,12 +126,15 @@
       "mirrored": false
     }
   ],
-  "renderer_sha256": "17330b437edf12a9011123110d75e36b48df83126537274207b81e32883c2ec5",
+  "renderer_sha256": "4e7973365ed8a0e5686eb67e81e7616a4e41871220270c6f75133dca616d3103",
   "reference_comparison": {
     "sha256": "f95725ea9ccec4665aaa11a860e4d1445697f00d54ad1fd7ef90910ffaea4d93",
-    "frames_checked": 1479,
-    "minimum_ssim": 0.992776,
-    "mean_ssim": 0.9978929006085193
+    "frames_compared": 1479,
+    "minimum_ssim": 0.979102,
+    "mean_ssim": 0.9901552521974307,
+    "unaffected_frames_checked": 521,
+    "minimum_unaffected_ssim": 0.992776,
+    "note": "Ren pixels intentionally improved by native-resolution decode; unchanged story and graphic frames retain the original similarity gate."
   },
-  "visual_review": "All 19 shot midpoints inspected: clear office furniture; no branding heading or bottom bar; varied framing; matching Alex scenes; single French-press mug; closed-mouth poses and gestures toward screen-left content. Full-frame comparison covers all gesture intervals."
+  "visual_review": "All 19 shot midpoints inspected, plus a same-frame close-up comparison at 100% size. Native-resolution decoding visibly improves glasses, hair and jacket outlines. Approved office, Alex scenes, framing and closed-mouth gestures are preserved."
 }

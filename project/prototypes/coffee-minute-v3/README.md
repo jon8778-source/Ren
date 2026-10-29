@@ -2,7 +2,8 @@
 
 Renderer recovered from GitHub blob `ba896a3752ba6bfbafef1eede46fffc085fdf5f8`.
 Original shot design and timing are preserved. Changes add lossless artwork
-unpacking and fatal FFmpeg error handling, including a complete final decode.
+unpacking, native-resolution actor decoding, and fatal FFmpeg error handling,
+including a complete final decode.
 
 ## Fresh checkout
 
@@ -53,7 +54,7 @@ The renderer verifies each shot frame count and decodes the complete MP4 with
 errors fatal. See `validation.json` for recorded verification results once run.
 Follow `project/REN_VIDEO_RULES.md`. Do not merge into main without Jon's instruction.
 
-## Verification
+## Historical approved baseline
 
 The fresh checkout at `bf193aee2c042651884143bec1cf1be9febc0b11` rendered
 successfully with the pinned dependencies in a new venv. All 19 shot midpoints
@@ -62,7 +63,7 @@ seconds, H.264/AAC, and passes a complete decode with errors fatal. All 209
 source calculation frames retain identical, correct equation text. All 1,479
 encoded frames were compared with the approved reference: minimum SSIM
 0.992776, mean 0.997893. Narration comparison covers 2,958,000 samples with
-correlation 0.999970. No new voice requests. See `validation.json` for hashes
+correlation 0.999970. No new voice requests. See `validation-approved-baseline.json` for the original hashes
 and detailed results; `revision-report.json` records all shot timings.
 
 After rendering, rerun structural, audio and equation checks with:
@@ -79,3 +80,22 @@ or replaced by the scripts.
 The output MP4 is generated locally and supplied separately in the handover.
 Only source, approved artwork, dependencies, documentation and verification
 reports are stored on this prototype branch. Main remains unchanged.
+
+## Character sharpness correction
+
+The earlier renderer reduced the 1280×720 animation source to 640×360 before
+matting, then enlarged that reduced image for the office shots. This discarded
+half the source samples in each dimension and made close-ups visibly soft.
+The current renderer decodes and mattes the original 1280×720 frames, then
+resizes once to the existing composition dimensions. Source dimensions are
+checked before decoding. Existing framing, artwork, shot timing and narration
+are preserved. No sharpening filter, generated replacement, new animation,
+voice request or AI upscale is used. The output remains 1280×720 at 24 fps.
+
+A same-frame before/after close-up was inspected at 100% size, showing cleaner
+facial features, hair and clothing edges. All shot midpoints are reviewed in
+build/contact.jpg. The current validation.json records native decode dimensions,
+full video decoding, shot counts, source checksums, equations, and narration
+continuity. Full-frame similarity with the original reference is reported;
+the original strict similarity gate remains on unchanged story/graphic frames.
+Ren pixels intentionally change to preserve more source detail.

@@ -13,13 +13,16 @@ project/prototypes/coffee-minute-v3/. The approved artwork is stored losslessly
 as text chunks in artwork/; render.py restores the exact original PNG bytes
 into assets/ and verifies their SHA-256 hashes. No artwork was regenerated.
 
-A fresh checkout of published commit bf193aee2c042651884143bec1cf1be9febc0b11
+The historical baseline at published commit bf193aee2c042651884143bec1cf1be9febc0b11
 successfully rendered 1280×720 H.264/AAC, 24 fps, 61.625 seconds (1,479 frames).
 All 19 shots were inspected. All 1,479 frames passed comparison with the
 approved reference (minimum SSIM 0.992776, mean 0.997893). Full decoding passed
 with errors fatal. All 209 calculation frames kept fixed, correct equations.
 Narration continuity and artwork checksums passed; new voice requests: zero.
-See README.md, validate.py and validation.json for commands and evidence.
+The baseline evidence is retained in validation-approved-baseline.json.
+The current renderer corrects an avoidable character-resolution loss by decoding
+Ren at native 1280×720 instead of 640×360 before matting and compositing.
+See README.md, validate.py and validation.json for current checks and evidence.
 
 Included approved originals:
 - Welcoming sage-accented home office.png — desk and chair remain visible.
@@ -38,6 +41,9 @@ ChatGPT files. The newly reproduced MP4 is supplied separately with this handove
   bottom yellow progress bar or persistent footer.
 - Alternate wider and closer Ren shots. Use brief story cutaways and purposeful
   motion in objects, receipts, calendars and comparisons.
+- Decode and matte Ren at native source resolution. Never halve the source
+  resolution before enlarging him into the scene. Inspect 100% face and edge
+  crops in both wide and close framing; frame-count checks do not catch blur.
 - Reuse the existing animation library. No new animation batch is required.
   V3 used ren_present_palm_left, ren_nod_yes, ren_shake_no and ren_thinking.
 - Keep the mouth closed for the current narrator-led format. No random talking
