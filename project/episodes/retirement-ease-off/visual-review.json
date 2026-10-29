@@ -1,0 +1,15 @@
+{
+  "encoded_midpoints_inspected": 122,
+  "transition_boundaries_inspected": 13,
+  "transition_frames_inspected": 78,
+  "native_face_samples_inspected": 32,
+  "wide_and_close_encoded_review_resolution": [
+    1280,
+    720
+  ],
+  "sampled_mouths": "closed",
+  "sampled_matting_clothing_trainers": "intact",
+  "sampled_layout": "no faces, hands or furniture obscured",
+  "review_method": "frame inspection; no full-motion playback or listening",
+  "overall": "reviewed with listening/alignment/source-verification limits"
+}

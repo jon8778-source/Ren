@@ -27,13 +27,16 @@ The cloud's existing /workspace/ren-voice-test-venv is also supported. Keep
 HF_TOKEN in configured environment/secrets. Never paste it into a command or
 commit it. resume.sh checks branch and token presence without logging values.
 
-## Recover the recorded queue-full rejection
+## Historical queue recovery (already completed)
 
+No recovery command is needed for the current complete narration.
 No automatic retry occurs. The first s004 attempt was rejected before admission:
 QueueError, no event ID, no output, observed quota decrease zero. The failure
 remains in manifest.json. The following explicit recovery command validates
 those precise facts and allows one later attempt; it does not call Qwen itself.
 Uncertain failures/timeouts and later repeat failures require separate review.
+The recovery below was executed once after the correct queue-status endpoint
+reported queue_size=0. It succeeded. Failure evidence is retained.
 
 ```bash
 bash project/episodes/retirement-ease-off/resume.sh recover-queue-rejection
@@ -60,7 +63,14 @@ python project/episodes/retirement-ease-off/render.py --plan-stills
 python project/episodes/retirement-ease-off/validate.py --plan
 ```
 
-After all narration is complete:
+Resume the whole episode from saved files, without new voice calls when all
+segments are already valid:
+
+```bash
+bash project/episodes/retirement-ease-off/produce.sh
+```
+
+Or run individual stages after all narration is complete:
 
 ```bash
 python project/episodes/retirement-ease-off/render.py --stills

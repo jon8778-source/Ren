@@ -1,0 +1,132 @@
+{
+  "state": "rendered_for_review; outstanding listening/alignment, primary-source verification and export",
+  "outputs": {
+    "Ren_When_Can_You_Ease_Off_Saving_v3.mp4": {
+      "file": "deliverables/Ren_When_Can_You_Ease_Off_Saving_v3.mp4",
+      "bytes": 25108748,
+      "sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00"
+    },
+    "Ren_Retirement_Opening_v3.mp4": {
+      "file": "deliverables/Ren_Retirement_Opening_v3.mp4",
+      "bytes": 5167225,
+      "sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f"
+    },
+    "Ren_Retirement_Narration.wav": {
+      "file": "deliverables/Ren_Retirement_Narration.wav",
+      "bytes": 48767804,
+      "sha256": "f1d5dc690d4c20775f257bf381369bb9f94535904f53d324b5bc78c626cfa534"
+    },
+    "shot-contact-sheet.jpg": {
+      "file": "deliverables/shot-contact-sheet.jpg",
+      "bytes": 998102,
+      "sha256": "62aa8ca34dbe99bfd395e2ed886c41c4f16c665c6db8b373465b30097c6f6515"
+    }
+  },
+  "technical_validation": {
+    "mode": "full episode",
+    "shots": 122,
+    "shot_limits": "pass",
+    "frames": 8128,
+    "artwork_sha256": {
+      "alex-cafe.png": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+      "alex-home.png": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+      "supporting-cast.png": "07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e",
+      "office.png": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+    },
+    "equation_frames_checked": 667,
+    "fixed_correct_equations": "pass",
+    "no_reference_similarity_target": true,
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "listening": "not performed; pronunciation, words and identity unconfirmed",
+    "duration_s": 338.666667,
+    "video_frames": 8128,
+    "audio_source_correlation": 0.9999765856317511,
+    "full_decode": "pass",
+    "every_encoded_shot_count": "pass",
+    "final_sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00",
+    "narration_sha256": "f1d5dc690d4c20775f257bf381369bb9f94535904f53d324b5bc78c626cfa534"
+  },
+  "preview_validation": {
+    "mode": "opening preview",
+    "shots": 22,
+    "shot_limits": "pass",
+    "frames": 1320,
+    "artwork_sha256": {
+      "alex-cafe.png": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+      "alex-home.png": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+      "supporting-cast.png": "07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e",
+      "office.png": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+    },
+    "equation_frames_checked": 0,
+    "fixed_correct_equations": "pass",
+    "no_reference_similarity_target": true,
+    "source_dimensions": [
+      1280,
+      720
+    ],
+    "listening": "not performed; pronunciation, words and identity unconfirmed",
+    "duration_s": 55.0,
+    "video_frames": 1320,
+    "audio_source_correlation": 0.9999749524381001,
+    "full_decode": "pass",
+    "every_encoded_shot_count": "pass",
+    "final_sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f",
+    "narration_sha256": "0ffc5fc6de868295f871869224c53631c6d8deb0c50305fa5d7e1df34ebeb720"
+  },
+  "visual_review": {
+    "encoded_midpoints_inspected": 122,
+    "transition_boundaries_inspected": 13,
+    "transition_frames_inspected": 78,
+    "native_face_samples_inspected": 32,
+    "wide_and_close_encoded_review_resolution": [
+      1280,
+      720
+    ],
+    "sampled_mouths": "closed",
+    "sampled_matting_clothing_trainers": "intact",
+    "sampled_layout": "no faces, hands or furniture obscured",
+    "review_method": "frame inspection; no full-motion playback or listening",
+    "overall": "reviewed with listening/alignment/source-verification limits"
+  },
+  "usage": {
+    "quota_consumed_gpu_seconds": 487.45256500000005,
+    "instrumented_attempt_elapsed_seconds": 572.7891778490448,
+    "generation_calls": 15,
+    "returned_original_wavs": 14,
+    "queue_full_rejections": 1,
+    "explicit_reviewed_recoveries": 1,
+    "overquota_used": 0,
+    "last_reported_quota": {
+      "at": "2026-10-29T20:12:42.653963+00:00",
+      "remaining_gpu_seconds": 1759.138257,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T22:15:59.434000+00:00"
+    },
+    "original_duration_s": 340.885,
+    "edge_trim_removed_s": 2.2200000000000024,
+    "narration_duration_s": 338.665,
+    "elapsed_excludes": "offline waits, diagnosis, dependency downloads, CPU video rendering",
+    "quota_units_note": "Reported ZeroGPU allowance decrease; not elapsed wall time or independently measured physical GPU residency"
+  },
+  "loudness": {
+    "master_integrated_lufs": -18.02,
+    "master_true_peak_dbtp": -2.0,
+    "encoded_integrated_lufs": -18.03,
+    "encoded_true_peak_dbtp": -1.91,
+    "lra_lu": 2.3
+  },
+  "script_unchanged": true,
+  "main_changed_by_task": false,
+  "coffee_prototype_changed": false,
+  "new_art_generated": false,
+  "remaining_blockers": [
+    "Listening: words, pronunciation, identity, delivery and boundaries unconfirmed",
+    "Paragraph cut alignment needs listening pass",
+    "Primary-source requests blocked by network policy",
+    "No attachment/export tool exposed; workspace download unverified"
+  ]
+}

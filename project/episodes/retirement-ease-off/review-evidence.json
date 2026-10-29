@@ -1,0 +1,14 @@
+{
+  "encoded_shot_midpoints": 122,
+  "transition_boundaries_sampled": 13,
+  "frames_per_boundary": 6,
+  "transition_offsets_frames": [
+    -7,
+    -2,
+    -1,
+    0,
+    1,
+    6
+  ],
+  "note": "Frame samples, not a claim of full-motion playback or listening"
+}

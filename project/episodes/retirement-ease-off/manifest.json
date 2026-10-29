@@ -1525,7 +1525,7 @@
       "reset_at": "2026-10-29T22:15:59.434000+00:00"
     }
   ],
-  "overall_status": "narration_generated_review_pending",
+  "overall_status": "rendered_for_review",
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
@@ -1544,5 +1544,35 @@
     "settings_reference_hashes": "match approved voice",
     "pronunciation_and_identity": "listening review unavailable; not confirmed",
     "decision": "continue under owner production authorization with listening limitation recorded"
-  }
+  },
+  "deliverables": {
+    "Ren_When_Can_You_Ease_Off_Saving_v3.mp4": {
+      "file": "deliverables/Ren_When_Can_You_Ease_Off_Saving_v3.mp4",
+      "bytes": 25108748,
+      "sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00"
+    },
+    "Ren_Retirement_Opening_v3.mp4": {
+      "file": "deliverables/Ren_Retirement_Opening_v3.mp4",
+      "bytes": 5167225,
+      "sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f"
+    },
+    "Ren_Retirement_Narration.wav": {
+      "file": "deliverables/Ren_Retirement_Narration.wav",
+      "bytes": 48767804,
+      "sha256": "f1d5dc690d4c20775f257bf381369bb9f94535904f53d324b5bc78c626cfa534"
+    },
+    "shot-contact-sheet.jpg": {
+      "file": "deliverables/shot-contact-sheet.jpg",
+      "bytes": 998102,
+      "sha256": "62aa8ca34dbe99bfd395e2ed886c41c4f16c665c6db8b373465b30097c6f6515"
+    }
+  },
+  "remaining_blockers": [
+    "Listening: words, pronunciation, identity, delivery and boundaries unconfirmed",
+    "Paragraph cut alignment needs listening pass",
+    "Primary-source requests blocked by network policy",
+    "No attachment/export tool exposed; workspace download unverified"
+  ],
+  "master_duration_s": 338.665,
+  "video_duration_s": 338.666667
 }
