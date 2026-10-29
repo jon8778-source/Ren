@@ -1,0 +1,9 @@
+{
+  "starting_branch": "codex/ren-approved-v3",
+  "starting_remote_commit": "c6bb363baf13666cce15ece777fde39190ffe8a7",
+  "approved_sharpness_content_commit": "bb7688c011f31326a32484b1805db228ff981631",
+  "working_branch": "codex/retirement-ease-off-v3",
+  "prototype_files_changed": false,
+  "voice_reference_files_changed": false,
+  "new_artwork_generated": false
+}
