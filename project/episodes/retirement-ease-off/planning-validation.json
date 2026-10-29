@@ -1,0 +1,20 @@
+{
+  "mode": "provisional planning only",
+  "shots": 124,
+  "shot_limits": "pass",
+  "frames": 8461,
+  "artwork_sha256": {
+    "alex-cafe.png": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+    "alex-home.png": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+    "supporting-cast.png": "07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e",
+    "office.png": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+  },
+  "equation_frames_checked": 729,
+  "fixed_correct_equations": "pass",
+  "no_reference_similarity_target": true,
+  "source_dimensions": [
+    1280,
+    720
+  ],
+  "listening": "not performed; pronunciation, words and identity unconfirmed"
+}
