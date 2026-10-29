@@ -103,7 +103,7 @@ def checkpoint(folder, manifest, publish=False):
         if path.is_file() and token and token in path.read_bytes():
             raise RuntimeError('Secret detected in checkpoint; publication blocked')
     if staged:
-        subprocess.run(['git', 'commit', '-m', 'Checkpoint daily coffee pilot'], cwd=ROOT, check=True,
+        subprocess.run(['git', 'commit', '-m', 'Checkpoint ' + manifest.get('title', 'Ren narration')], cwd=ROOT, check=True,
                        stdout=subprocess.DEVNULL)
     subprocess.run(['git', 'push', 'origin', f'HEAD:refs/heads/{BRANCH}'], cwd=ROOT, check=True,
                    stdout=subprocess.DEVNULL)
