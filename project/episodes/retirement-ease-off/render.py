@@ -38,8 +38,27 @@ def line(d,xy,fill=GREEN,width=5): d.line(xy,fill=fill,width=width)
 def card(d,box,title,body='',accent=GREEN,size=34):
     d.rounded_rectangle(box,22,fill='#E5EBE1',outline=accent,width=3)
     x,y,_,_=box
+    width=box[2]-x-48
+    def wrap(value,fs):
+        lines=[]
+        for original in value.split('\n'):
+            row=''
+            for word in original.split():
+                candidate=(row+' '+word).strip()
+                if row and d.textlength(candidate,font=v3.font(fs))>width:
+                    lines.append(row); row=word
+                else: row=candidate
+            lines.append(row)
+        return '\n'.join(lines)
+    title=wrap(title,size)
+    while title.count('\n')>1 and size>26:
+        size-=1; title=wrap(title.replace('\n',' '),size)
     txt(d,x+24,y+22,title,size,accent)
-    if body: txt(d,x+24,y+83,body,30)
+    bottom=y+22+(size+8)*(title.count('\n')+1)
+    if body:
+        body=wrap(body,28)
+        assert bottom+15+(28+8)*(body.count('\n')+1)<=box[3]-8, (title,body,box)
+        txt(d,x+24,bottom+15,body,28)
 
 def arrow(d,x,y,x2,y2):
     line(d,(x,y,x2,y2)); d.polygon([(x2,y2),(x2-14,y2-10),(x2-14,y2+10)],fill=GREEN)
@@ -55,12 +74,18 @@ def picture(s,f,actor=None):
     p=f/max(1,s['frames']-1); ease=1-(1-min(1,p/.38))**3
     k=s['motif']; para=s['paragraph']; variant=s.get('part',0)
     if s['kind']=='ren':
-        im=v3.picture(dict(kind='ren',frames=s['frames'],title='',close=s['close']),f,actor)
+        im=v3.ART['office.png'].copy()
+        # Reuse v3's native matte and single LANCZOS composition resize.
+        # The episode's wide framing includes trainers; its closer framing uses
+        # a gentler 1.25x scale rather than enlarging the actor 1.65x.
+        scale=1.25 if s['close'] else .9
+        rgba=v3.actor_rgba(actor).resize((round(W*scale),round(H*scale)),Image.Resampling.LANCZOS)
+        im.paste(rgba,(150 if s['close'] else 374,25 if s['close'] else 45),rgba)
         d=ImageDraw.Draw(im)
         # Wall annotation above the furniture, screen-left of presenting Ren.
         title=s['title']
         txt(d,70,55,title,35 if max(map(len,title.split('\n'))) < 25 else 30)
-        if k=='booking': txt(d,80,225,'PLAN ✓  •  TRIP ✓',32,GREEN)
+        if k=='booking': txt(d,80,225,'PLAN CHECKED • TRIP CONFIRMED',30,GREEN)
     else:
         im=Image.new('RGB',(W,H),CREAM); d=ImageDraw.Draw(im)
         title=s['title']; size=43
@@ -76,7 +101,7 @@ def picture(s,f,actor=None):
                 xx=775+round(250*(1-ease))
                 card(d,(xx,255,xx+420,520),'INVEST INSTEAD?','What could this\nmoney become?',size=32)
                 arrow(d,740,380,xx-12,380)
-            else:
+            elif para>50:
                 card(d,(815,280,1205,505),'PLANNING','Goal\nSetbacks\nReview date',size=32)
         elif k=='cards':
             for i,(title,body) in enumerate([('Save less','Lower contributions\nKeep working'),('Stop new\ncontributions','Keep working\nInvestments remain'),('Retire','Stop working\nFund living costs')]):
@@ -86,16 +111,16 @@ def picture(s,f,actor=None):
         elif k=='coast':
             card(d,(65,210,580,375),'EMPLOYMENT INCOME','Pays current living expenses')
             card(d,(700,210,1210,375),'INVESTMENTS','New contributions stop')
-            arrow(d,590,290,690,290)
+            # No income-to-investment arrow after contributions stop.
             if p<.35:
                 xx=590+round(95*p/.35); d.ellipse((xx,270,xx+18,288),fill=GREEN)
-            txt(d,690,398,'STOP CONTRIBUTIONS ≠ STOP WORK',28,GREEN)
+            txt(d,690,398,'STILL WORKING • LIVING COSTS COVERED',25,GREEN)
             line(d,(100,530,1170,530)); marker=100+round(1000*ease)
             d.ellipse((marker-10,520,marker+10,540),fill=GREEN)
             txt(d,90,560,'Today',30); txt(d,890,560,'Later retirement',30)
         elif k in ('setup','target','scenario_a','scenario_b','comparison'):
             scenario=k in ('scenario_a','scenario_b','comparison')
-            txt(d,65,185,f"Age {A['current_age']} → {A['retirement_age']}    |    {A['years']} years    |    ${A['new_contributions']} new contributions",32)
+            txt(d,65,185,f"Age {A['current_age']} to {A['retirement_age']}    |    {A['years']} years    |    ${A['new_contributions']} new contributions",32)
             if k=='setup':
                 txt(d,115,290,f"${A['starting_balance']:,}",98,GREEN)
                 txt(d,120,420,'Starting retirement investments',36)
@@ -107,8 +132,16 @@ def picture(s,f,actor=None):
                 for row,idx in enumerate(indices):
                     rate=A['real_returns_after_fees'][idx]; total=C['displayed_outcomes'][idx]
                     y=270+row*170
-                    equation=f"${A['starting_balance']:,} × {1+rate:.2f}^{A['years']} ≈ ${total:,}"
-                    txt(d,75,y,equation,45 if len(indices)==2 else 53,GREEN)
+                    expression=f"${A['starting_balance']:,} × {1+rate:.2f}^{A['years']}"
+                    fs=45 if len(indices)==2 else 53
+                    txt(d,75,y,expression,fs,GREEN)
+                    # Fredoka lacks the approximately-equal glyph: draw the
+                    # mathematical sign explicitly instead of showing tofu.
+                    xx=95+d.textlength(expression,font=v3.font(fs))
+                    for yy in (y+22,y+36):
+                        points=[(xx+t,yy+4*math.sin(t/32*2*math.pi)) for t in range(33)]
+                        d.line(points,fill=GREEN,width=3)
+                    txt(d,xx+48,y,f'${total:,}',fs,GREEN)
                     txt(d,80,y+70,f"Scenario {'AB'[idx]}: {rate:.0%} annual real return after fees",31)
                 # Only a separate timeline moves; equations never count up.
                 line(d,(85,620,85+round(1080*ease),620),width=7)
@@ -161,30 +194,40 @@ def picture(s,f,actor=None):
         txt(d,35,682,'Educational only, not financial advice',20)
     return im
 
-def audio_and_shots(preview=False):
+def audio_and_shots(preview=False, plan=False):
     m=json.loads((BASE/'manifest.json').read_text()); done=[]
+    assert m['settings']==pilot.current_settings(), 'Voice settings/reference changed'
+    parts=json.loads((BASE/'segments.json').read_text())
+    assert ' '.join((BASE/'script.md').read_text().split())==' '.join(s['text'] for s in parts)
+    for old,new in zip(m['segments'],parts):
+        assert old['id']==new['id'] and old['fingerprint']==pilot.fingerprint(new['text'],m['settings']), 'Stale audio text'
     for s in m['segments']:
-        if s['status']!='complete': break
-        assert digest(BASE/s['file'])==s['sha256']
+        if s['status']!='complete' and not plan: break
+        if s['status']=='complete': assert digest(BASE/s['file'])==s['sha256']
         done.append(s)
-    if not preview and len(done)!=len(m['segments']): raise ValueError('Narration incomplete; no full render')
+    if not preview and not plan and len(done)!=len(m['segments']): raise ValueError('Narration incomplete; no full render')
     if preview and sum(s['validation']['processed_duration_s'] for s in done)<45:
         raise ValueError('Opening preview needs at least 45 seconds of completed narration')
     pcm=[]; audio_segments=[]; total=0
     for s in done:
-        path,v=pilot.process_segment(BASE,s); a,rate=sf.read(path)
-        assert rate==48000
-        pcm.append(a); audio_segments.append(dict(id=s['id'],start_s=total/48000,end_s=(total+len(a))/48000,source_sha256=s['sha256'],processed_sha256=digest(path)))
-        total+=len(a)
+        if s['status']=='complete':
+            path,v=pilot.process_segment(BASE,s); a,rate=sf.read(path)
+            assert rate==48000
+            pcm.append(a); n=len(a); meta=dict(source_sha256=s['sha256'],processed_sha256=digest(path),timing='measured')
+        else:
+            # Planning only. No synthetic/silent narration file is created.
+            n=round(pilot.word_count(s['text'])/2.8*48000); meta=dict(timing='provisional at 168 wpm; missing audio')
+        audio_segments.append(dict(id=s['id'],start_s=total/48000,end_s=(total+n)/48000,**meta))
+        total+=n
         if preview and total/48000>=50: break
     audio=np.concatenate(pcm)
     # Preview may end mid-paragraph; this is an extract, never labelled full.
     if preview: audio=audio[:min(len(audio),55*48000)]
-    dur=len(audio)/48000
+    dur=total/48000 if plan else len(audio)/48000
     if dur>480: raise ValueError(f'Natural narration {dur:.2f}s exceeds 8 minutes; propose a script trim')
     out=BASE/'build'; out.mkdir(exist_ok=True)
     track=out/('preview-narration.wav' if preview else 'narration.wav')
-    sf.write(track,audio,48000,subtype='PCM_24')
+    if not plan: sf.write(track,audio,48000,subtype='PCM_24')
     paragraphs=(BASE/'script.md').read_text().strip().split('\n\n'); assert len(paragraphs)==len(BEATS)
     shots=[]; cursor=0; para_idx=0; ren_count=0; last_pose=None
     for s,seg in zip(done,audio_segments):
@@ -200,6 +243,7 @@ def audio_and_shots(preview=False):
             begin=start_frame+round((seg['end_s']-seg['start_s'])*24*cumulative/words)
             cumulative+=pilot.word_count(para)
             end=min(end_frame,start_frame+round((seg['end_s']-seg['start_s'])*24*cumulative/words))
+            if idx==segment_paras[-1][0]: end=end_frame
             if end<=begin: continue
             motif,title,subtitle=BEATS[idx]
             isren=motif=='ren'
@@ -227,17 +271,18 @@ def audio_and_shots(preview=False):
     assert shots[0]['start_frame']==0
     assert all(x['end_frame']==y['start_frame'] for x,y in zip(shots,shots[1:]))
     assert sum(s['frames'] for s in shots)==round(dur*24)
-    save(BASE/('preview-shots.json' if preview else 'shots.json'),dict(fps=24,duration_s=dur,frames=round(dur*24),timing='Paragraph timing estimated by word weights within real generated segments; listening alignment review pending',audio_segments=audio_segments,shots=shots))
+    save(BASE/('planned-shots.json' if plan else 'preview-shots.json' if preview else 'shots.json'),dict(fps=24,duration_s=dur,frames=round(dur*24),timing='PROVISIONAL missing segments; not production timing' if plan else 'Paragraph timing estimated by word weights within real generated segments; listening alignment review pending',audio_segments=audio_segments,shots=shots))
     return track,shots,dur
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--preview',action='store_true'); ap.add_argument('--stills',action='store_true'); args=ap.parse_args()
-    track,shots,dur=audio_and_shots(args.preview)
-    out=BASE/'build'/('preview' if args.preview else 'full'); out.mkdir(parents=True,exist_ok=True)
+    ap=argparse.ArgumentParser(); ap.add_argument('--preview',action='store_true'); ap.add_argument('--stills',action='store_true'); ap.add_argument('--plan-stills',action='store_true'); args=ap.parse_args()
+    if args.plan_stills: args.stills=True
+    track,shots,dur=audio_and_shots(args.preview,args.plan_stills)
+    out=BASE/'build'/('planned' if args.plan_stills else 'preview' if args.preview else 'full'); out.mkdir(parents=True,exist_ok=True)
     thumbs=[]
     for i,s in enumerate(shots):
         path=out/(s['id']+'.mp4'); png=out/(s['id']+'.png')
-        fp=hashlib.sha256(json.dumps(s,sort_keys=True).encode()+(BASE/'render.py').read_bytes()+(BASE/'design.py').read_bytes()).hexdigest()
+        fp=hashlib.sha256(json.dumps(s,sort_keys=True).encode()+(BASE/'render.py').read_bytes()+(BASE/'design.py').read_bytes()+(Path(v3.__file__)).read_bytes()+(BASE/'assumptions.json').read_bytes()+(BASE/'calculations.json').read_bytes()).hexdigest()
         state=out/(s['id']+'.hash')
         if not args.stills and path.exists() and state.exists() and state.read_text()==fp:
             v3.check_video(path,s['frames']); thumbs.append(Image.open(png).resize((320,180))); continue
@@ -270,7 +315,7 @@ def main():
     for page in range(math.ceil(len(thumbs)/24)):
         batch=thumbs[page*24:(page+1)*24]; contact=Image.new('RGB',(1280,180*math.ceil(len(batch)/4)),CREAM)
         for i,t in enumerate(batch): contact.paste(t,((i%4)*320,(i//4)*180))
-        contact.save(deliver/f"{'preview' if args.preview else 'full'}-contact-{page+1:02d}.jpg")
+        contact.save(deliver/f"{'planned' if args.plan_stills else 'preview' if args.preview else 'full'}-contact-{page+1:02d}.jpg")
     if args.stills: return
     concat=out/'concat.txt'; concat.write_text('\n'.join(f"file '{s['id']}.mp4'" for s in shots))
     final=deliver/('Ren_Retirement_Opening_v3.mp4' if args.preview else 'Ren_When_Can_You_Ease_Off_Saving_v3.mp4')

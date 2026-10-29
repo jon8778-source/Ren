@@ -57,13 +57,27 @@ def calculate():
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('command', choices=['init','opening','resume','verify','status','calculate'])
+    p.add_argument('command', choices=['init','opening','resume','verify','status','calculate','recover-queue-rejection'])
     args = p.parse_args()
     with (BASE / '.workflow.lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if args.command == 'calculate':
             calculate(); return
         init()
+        if args.command=='recover-queue-rejection':
+            m=pilot.load(BASE)
+            candidates=[s for s in m['segments'] if s['status']=='failed']
+            if len(candidates)!=1: raise ValueError('Expected exactly one reviewed queue rejection')
+            s=candidates[0]; a=s['attempts'][-1]
+            if not (a.get('error_type')=='QueueError' and a.get('error')=='Queue is full! Please try again.'
+                    and a.get('phase')=='queue_submission' and not a.get('event_id')
+                    and a.get('observed_quota_decrease_gpu_seconds')==0 and len(s['attempts'])==1):
+                raise ValueError('Not an uncharged pre-admission rejection; manual recovery required')
+            s['status']='pending'
+            s['recovery']={'at':pilot.now(),'reason':'Explicit operator recovery of queue-full rejection; no event admitted, no charge; original failure retained'}
+            m['overall_status']='ready_after_explicit_queue_recovery'
+            pilot.checkpoint(BASE,m,True)
+            print('Queue rejection reviewed and re-armed. No generation submitted. Run resume separately.'); return
         if args.command in ('opening','resume'):
             m = pilot.load(BASE)
             if args.command == 'resume' and not m.get('opening_technical_review'):
