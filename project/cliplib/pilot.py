@@ -93,6 +93,13 @@ def checkpoint(folder, manifest, publish=False):
     relative = str(folder.relative_to(ROOT))
     # Only pilot files; caches/processed tracks/renders/locks are ignored. Never git add the workspace.
     subprocess.run(['git', 'add', '--', relative], cwd=ROOT, check=True)
+    for segment in manifest.get('segments', []):
+        if segment.get('file'):
+            original = str((folder / segment['file']).relative_to(ROOT))
+            tracked = subprocess.run(['git', 'ls-files', '--error-unmatch', '--', original],
+                                     cwd=ROOT, capture_output=True)
+            if tracked.returncode:
+                raise RuntimeError(f'Original audio excluded from durable checkpoint: {original}; inspect ignore rules')
     staged = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '--', relative], cwd=ROOT, text=True)
     other = subprocess.check_output(['git', 'diff', '--cached', '--name-only'], cwd=ROOT, text=True)
     if set(other.splitlines()) - set(staged.splitlines()):
