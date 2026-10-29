@@ -5,5 +5,6 @@
   "working_branch": "codex/retirement-ease-off-v3",
   "prototype_files_changed": false,
   "voice_reference_files_changed": false,
-  "new_artwork_generated": false
+  "new_artwork_generated": false,
+  "main_remote_observed_sha": "67ba8b54c0c664ec32d2128e6876882391cdd25a"
 }
