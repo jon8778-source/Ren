@@ -397,11 +397,11 @@
       "reset_at": "2026-10-29T22:15:59.731000+00:00"
     }
   ],
-  "overall_status": "generating",
+  "overall_status": "generation_batch_checkpoint",
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
-  "updated_at": "2026-10-29T19:51:57.926016+00:00",
+  "updated_at": "2026-10-29T19:52:00.454958+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "quota": {
     "at": "2026-10-29T19:51:57.925972+00:00",
