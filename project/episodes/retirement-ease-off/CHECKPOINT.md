@@ -10,7 +10,7 @@ Media are in ignored deliverables/, separate from Git. Reproducible sources and
 original WAVs are pushed. No new generation is needed to rebuild.
 
 Remaining: listening/alignment review; primary-source access is blocked by proxy;
-reliable artifact export is not exposed by this session. Not publication-approved.
+the owner-authorized temporary MP4 download is verified (short expiry). Not publication-approved.
 
 Exact resume/rebuild command:
 
@@ -20,3 +20,7 @@ bash project/episodes/retirement-ease-off/produce.sh
 
 This reuses completed valid audio. Do not run historical queue-recovery commands:
 the one diagnosed queue rejection was already recovered. No voice segments remain.
+
+Visual feedback revision is complete: framing stays fixed until a cutaway and
+captions stay in the clear wall beside Ren. See framing-revision.json.
+No narration was generated; the encoded audio is identical to the prior video.

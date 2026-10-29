@@ -16,12 +16,19 @@
     1280,
     720
   ],
+  "consecutive_office_framing": "fixed until cutaway",
+  "office_text_box": [
+    610,
+    80,
+    840,
+    420
+  ],
   "listening": "not performed; pronunciation, words and identity unconfirmed",
   "duration_s": 55.0,
   "video_frames": 1320,
   "audio_source_correlation": 0.9999749524381001,
   "full_decode": "pass",
   "every_encoded_shot_count": "pass",
-  "final_sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f",
+  "final_sha256": "8cfdff95e14df518de219a63aa19eb0a89cd95973b85b8772e12f73c4422f1ed",
   "narration_sha256": "0ffc5fc6de868295f871869224c53631c6d8deb0c50305fa5d7e1df34ebeb720"
 }

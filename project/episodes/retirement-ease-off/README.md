@@ -82,7 +82,9 @@ The renderer imports the actual approved v3 artwork, font, native-resolution
 matting, command runner and encoded frame-count validation. Episode code extends
 its shot pipeline for continuous measured narration, episode props, and reusable
 per-shot encodes. Wide framing includes trainers; closer framing limits actor
-scale to 1.25x native. No half-resolution decode, sharpening, mirroring, body
+scale to 1.15x native. Framing is held across consecutive Ren shots and changes
+only after a cutaway. Captions are wrapped into the clear wall beside Ren
+(610,80)–(840,420), with a per-frame check against his gesture silhouette. No half-resolution decode, sharpening, mirroring, body
 wobble, source audio or music. All graphics are drawn in code. No new art or
 coffee-specific Alex scenes are used.
 
@@ -96,7 +98,9 @@ The MP4s and contact sheets are under ignored deliverables/; render caches are
 ignored build/. **Do not add videos to Git history.** Audio originals and their
 hashes are durable source checkpoints. A task environment without a supported
 file-export mechanism must report that delivery limitation, never fabricate an
-attachment/library ID or upload to an unrelated public host.
+attachment/library ID. Temporary public hosting was subsequently authorized
+by the owner for MP4 review downloads; verify the full downloaded SHA-256 and
+report its short expiry.
 
 ## Remaining review
 

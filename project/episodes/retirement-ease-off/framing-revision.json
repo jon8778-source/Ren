@@ -12,5 +12,15 @@
   "narration_regenerated": false,
   "hf_generation_calls": 0,
   "previous_full_sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00",
-  "stage": "rendering revised office shots"
+  "stage": "rendered and validated",
+  "office_runs": 32,
+  "office_shots_rerendered": 41,
+  "consecutive_office_boundaries_checked": 9,
+  "office_frames_with_text_overlap_checks": 2925,
+  "encoded_audio_bitstream_unchanged": true,
+  "encoded_office_midpoints_inspected": 41,
+  "consecutive_boundary_frames_inspected": 36,
+  "full_decode": "pass",
+  "video_sha256": "3b0d3faa7ffa1784804fcab8951202f9eb520f01f8772b2bb5f72730a7a7236b",
+  "preview_sha256": "8cfdff95e14df518de219a63aa19eb0a89cd95973b85b8772e12f73c4422f1ed"
 }

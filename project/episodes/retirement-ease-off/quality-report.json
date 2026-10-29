@@ -1,15 +1,15 @@
 {
-  "state": "rendered_for_review; outstanding listening/alignment, primary-source verification and export",
+  "state": "revised render ready for review; listening/alignment and source verification remain",
   "outputs": {
     "Ren_When_Can_You_Ease_Off_Saving_v3.mp4": {
       "file": "deliverables/Ren_When_Can_You_Ease_Off_Saving_v3.mp4",
-      "bytes": 25108748,
-      "sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00"
+      "bytes": 24952024,
+      "sha256": "3b0d3faa7ffa1784804fcab8951202f9eb520f01f8772b2bb5f72730a7a7236b"
     },
     "Ren_Retirement_Opening_v3.mp4": {
       "file": "deliverables/Ren_Retirement_Opening_v3.mp4",
-      "bytes": 5167225,
-      "sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f"
+      "bytes": 5243748,
+      "sha256": "8cfdff95e14df518de219a63aa19eb0a89cd95973b85b8772e12f73c4422f1ed"
     },
     "Ren_Retirement_Narration.wav": {
       "file": "deliverables/Ren_Retirement_Narration.wav",
@@ -18,8 +18,8 @@
     },
     "shot-contact-sheet.jpg": {
       "file": "deliverables/shot-contact-sheet.jpg",
-      "bytes": 998102,
-      "sha256": "62aa8ca34dbe99bfd395e2ed886c41c4f16c665c6db8b373465b30097c6f6515"
+      "bytes": 1012929,
+      "sha256": "1df52d72dd69fc2bf037114401f5e7fbe2dc604ea1e5f3f31e8da6e24e0cc108"
     }
   },
   "technical_validation": {
@@ -40,13 +40,20 @@
       1280,
       720
     ],
+    "consecutive_office_framing": "fixed until cutaway",
+    "office_text_box": [
+      610,
+      80,
+      840,
+      420
+    ],
     "listening": "not performed; pronunciation, words and identity unconfirmed",
     "duration_s": 338.666667,
     "video_frames": 8128,
     "audio_source_correlation": 0.9999765856317511,
     "full_decode": "pass",
     "every_encoded_shot_count": "pass",
-    "final_sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00",
+    "final_sha256": "3b0d3faa7ffa1784804fcab8951202f9eb520f01f8772b2bb5f72730a7a7236b",
     "narration_sha256": "f1d5dc690d4c20775f257bf381369bb9f94535904f53d324b5bc78c626cfa534"
   },
   "preview_validation": {
@@ -67,13 +74,20 @@
       1280,
       720
     ],
+    "consecutive_office_framing": "fixed until cutaway",
+    "office_text_box": [
+      610,
+      80,
+      840,
+      420
+    ],
     "listening": "not performed; pronunciation, words and identity unconfirmed",
     "duration_s": 55.0,
     "video_frames": 1320,
     "audio_source_correlation": 0.9999749524381001,
     "full_decode": "pass",
     "every_encoded_shot_count": "pass",
-    "final_sha256": "90e18b6988d599954ab05a565119dc4eccd2c828a791c54027adcb7a96c9011f",
+    "final_sha256": "8cfdff95e14df518de219a63aa19eb0a89cd95973b85b8772e12f73c4422f1ed",
     "narration_sha256": "0ffc5fc6de868295f871869224c53631c6d8deb0c50305fa5d7e1df34ebeb720"
   },
   "visual_review": {
@@ -89,7 +103,21 @@
     "sampled_matting_clothing_trainers": "intact",
     "sampled_layout": "no faces, hands or furniture obscured",
     "review_method": "frame inspection; no full-motion playback or listening",
-    "overall": "reviewed with listening/alignment/source-verification limits"
+    "overall": "reviewed with listening/alignment/source-verification limits",
+    "framing_revision": {
+      "office_runs": 32,
+      "office_shots_rerendered": 41,
+      "consecutive_office_boundaries_checked": 9,
+      "office_frames_with_text_overlap_checks": 2925,
+      "encoded_office_midpoints_inspected": 41,
+      "consecutive_boundary_frames_inspected": 36
+    },
+    "office_text_box": [
+      610,
+      80,
+      840,
+      420
+    ]
   },
   "usage": {
     "quota_consumed_gpu_seconds": 487.45256500000005,
@@ -126,7 +154,33 @@
   "remaining_blockers": [
     "Listening: words, pronunciation, identity, delivery and boundaries unconfirmed",
     "Paragraph cut alignment needs listening pass",
-    "Primary-source requests blocked by network policy",
-    "No attachment/export tool exposed; workspace download unverified"
-  ]
+    "Primary-source requests blocked by network policy"
+  ],
+  "framing_revision": {
+    "change": "Stable Ren framing between cutaways and captions in wall area beside Ren",
+    "office_text_box": [
+      610,
+      80,
+      840,
+      420
+    ],
+    "consecutive_ren_framing": "fixed",
+    "graphics_reused": 81,
+    "graphics_reuse_proof": "Graphic branch and helper ASTs identical; shot inputs unchanged except unused close field; previous cache fingerprints matched",
+    "narration_regenerated": false,
+    "hf_generation_calls": 0,
+    "previous_full_sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00",
+    "stage": "rendered and validated",
+    "office_runs": 32,
+    "office_shots_rerendered": 41,
+    "consecutive_office_boundaries_checked": 9,
+    "office_frames_with_text_overlap_checks": 2925,
+    "encoded_audio_bitstream_unchanged": true,
+    "encoded_office_midpoints_inspected": 41,
+    "consecutive_boundary_frames_inspected": 36,
+    "full_decode": "pass",
+    "video_sha256": "3b0d3faa7ffa1784804fcab8951202f9eb520f01f8772b2bb5f72730a7a7236b",
+    "preview_sha256": "8cfdff95e14df518de219a63aa19eb0a89cd95973b85b8772e12f73c4422f1ed"
+  },
+  "delivery": "Owner-authorized temporary HTTPS MP4 download verified against original SHA-256"
 }

@@ -19,6 +19,18 @@ original WAVs, hashes and reports are on codex/retirement-ease-off-v3. Main and
 the approved coffee prototype, its original assets/audio, and voice reference
 have no changes. No new artwork, thumbnails, Shorts or YouTube publication.
 
+## Office revision from owner feedback
+
+Ren now holds one framing through each consecutive office passage; framing
+changes only after a non-office cutaway. All 32 office passages obey this rule.
+Office captions are wrapped into the blank wall beside Ren at (610,80)–(840,420),
+clear of furniture and wall artwork. Caption bounds are validated, and every
+rendered Ren frame checks the caption area against his matte silhouette.
+The closer scale is now 1.15x native. All 41 office shots were re-rendered;
+81 unchanged graphic shots were reused after source/shot-input equivalence checks.
+The encoded narration bitstream is byte-identical to the previous version.
+No new voice requests or Hugging Face allowance were used for this revision.
+
 ## Runtime and narration
 
 Your exact script is unchanged: 980 whitespace-delimited words. Its natural
@@ -88,9 +100,10 @@ voice service was used. See usage.json.
 3. Current primary US sources could not be retrieved: the network policy rejects
    IRS, SSA, Department of Labor and Investor.gov requests. sources.md records
    the claim/source checklist honestly; those pages were not verified live.
-4. This session exposes no attachment/upload/export tool. Local workspace files
-   are prepared, but reliable client download/export is unverified. No file IDs
-   have been invented, and no MP4 was forced into Git or an unrelated public host.
+4. The owner authorized temporary public file hosting after Android could not
+   open workspace links. A normal HTTPS MP4 download is supplied separately and
+   checked against the original SHA-256. Such links expire after about one hour.
+   No MP4 is added to Git.
 
 Resume/rebuild with `bash project/episodes/retirement-ease-off/produce.sh`.
 Completed valid audio is reused without a new voice request. Details and pinned

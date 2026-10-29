@@ -6,7 +6,7 @@ Saved checkpoint, not a live app progress indicator.
 | --- | --- |
 | Task | When Can You Ease Off Saving for Retirement? |
 | Branch | `codex/retirement-ease-off-v3` |
-| Stage | Revising office framing and caption placement from owner feedback |
+| Stage | Revised framing/caption render validated and ready for review |
 | Full MP4 | 338.666667 seconds; 1280×720; 24 fps; H.264/AAC |
 | Opening | 55 seconds; technically validated |
 | Audio | All 14 original WAVs saved with hashes; complete master exported |
@@ -14,7 +14,7 @@ Saved checkpoint, not a live app progress indicator.
 | Visual review | Every encoded shot midpoint; 78 frames at 13 transitions; wide/close 100% inspection |
 | Runtime aim | Natural exact-script delivery is 5:38.67, shorter than seven-minute aim; no padding/speed change |
 | Voice cost | 487.452565 allowance GPU-seconds; 572.789178 request elapsed seconds; overquota=0 |
-| Remaining | Listening/paragraph alignment, live primary-source verification, reliable file export |
+| Remaining | Listening/paragraph alignment and live primary-source verification |
 | Main / coffee originals | Unchanged |
 | Publishing | Source checkpoints pushed; media outside Git; no YouTube upload or merge |
 
@@ -35,13 +35,17 @@ No narration segments remain. Rebuild with:
 The network policy blocks IRS/SSA/DOL/Investor.gov retrieval. Local ASR weights
 were unavailable through the proxy. No listening or full-motion playback is
 claimed. See sources.md and quality-report.json for precise limits.
-This session exposes no attachment/export tool; workspace media exist but client
-download has not been verified. No fabricated Library IDs or public-host upload.
+The owner subsequently authorized temporary public MP4 hosting. A normal HTTPS
+download has been verified by matching the full remote file SHA-256.
 
 ## Current visual revision
 
-Keep the same framing between consecutive Ren shots; change framing only after
-a cutaway. Office text is constrained to the clear wall beside Ren at
-(610,80)–(840,420), outside furniture and gestures. Revised source frames inspected;
-41 office shots re-rendering, 81 graphic shots reused after source-equivalence
-checks. No new voice requests; original narration and script preserved.
+Complete: all 41 office shots re-rendered; framing fixed in each of 32 office
+passages and all nine consecutive Ren boundaries. Captions stay beside Ren in
+(610,80)–(840,420); 2,925 office frames passed silhouette-overlap assertions.
+All changed encoded midpoints and 36 frames around consecutive Ren boundaries
+were inspected. Full/preview decoding and frame counts pass. Encoded narration
+is byte-identical; no new voice calls. Main and coffee originals unchanged.
+
+Owner-authorized temporary HTTPS MP4 hosting was verified by full download and
+SHA-256 comparison. Links expire in about one hour. See framing-revision.json.

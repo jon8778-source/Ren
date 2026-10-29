@@ -11,5 +11,19 @@
   "sampled_matting_clothing_trainers": "intact",
   "sampled_layout": "no faces, hands or furniture obscured",
   "review_method": "frame inspection; no full-motion playback or listening",
-  "overall": "reviewed with listening/alignment/source-verification limits"
+  "overall": "reviewed with listening/alignment/source-verification limits",
+  "framing_revision": {
+    "office_runs": 32,
+    "office_shots_rerendered": 41,
+    "consecutive_office_boundaries_checked": 9,
+    "office_frames_with_text_overlap_checks": 2925,
+    "encoded_office_midpoints_inspected": 41,
+    "consecutive_boundary_frames_inspected": 36
+  },
+  "office_text_box": [
+    610,
+    80,
+    840,
+    420
+  ]
 }
