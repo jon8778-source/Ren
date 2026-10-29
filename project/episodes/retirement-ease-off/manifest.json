@@ -975,8 +975,34 @@
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
       "fingerprint": "cff6a0bced2b8d8b2c2bd486695295a18792201ce8a9d5a627079ecad5155313",
-      "status": "pending",
-      "attempts": []
+      "status": "inflight",
+      "attempts": [
+        {
+          "started_at": "2026-10-29T20:10:28.732395+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-10-29T20:10:28.732372+00:00",
+            "remaining_gpu_seconds": 1857.617992,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-10-29T22:15:59.539000+00:00"
+          },
+          "phase": "reference_upload",
+          "network_read_timeout_seconds": 120
+        }
+      ]
     },
     {
       "id": "s013",
@@ -1237,20 +1263,29 @@
       "base_gpu_seconds": 2400,
       "overquota_used": 0,
       "reset_at": "2026-10-29T22:15:59.663000+00:00"
+    },
+    {
+      "segment": "s012",
+      "phase": "before",
+      "at": "2026-10-29T20:10:28.732372+00:00",
+      "remaining_gpu_seconds": 1857.617992,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T22:15:59.539000+00:00"
     }
   ],
   "overall_status": "generating",
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
-  "updated_at": "2026-10-29T20:10:24.832490+00:00",
+  "updated_at": "2026-10-29T20:10:28.732400+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "quota": {
-    "at": "2026-10-29T20:10:24.832465+00:00",
+    "at": "2026-10-29T20:10:28.732372+00:00",
     "remaining_gpu_seconds": 1857.617992,
     "base_gpu_seconds": 2400,
     "overquota_used": 0,
-    "reset_at": "2026-10-29T22:15:59.663000+00:00"
+    "reset_at": "2026-10-29T22:15:59.539000+00:00"
   },
   "opening_technical_review": {
     "duration_seconds": 12.216875,
