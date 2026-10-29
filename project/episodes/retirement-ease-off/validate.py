@@ -33,7 +33,12 @@ def main():
             p=probe(source)
             assert (p['streams'][0]['width'],p['streams'][0]['height'])==(1280,720)
             assert s['source_start_s']+s['frames']/24<=float(p['format']['duration'])
-            if i and shots[i-1]['kind']=='ren': assert shots[i-1]['clip']!=s['clip']
+            if i and shots[i-1]['kind']=='ren':
+                assert shots[i-1]['clip']!=s['clip']
+                assert shots[i-1]['close']==s['close'], 'Framing changed without a cutaway'
+            _,_,bounds=episode.office_caption(s['title'])
+            safe=episode.OFFICE_TEXT_BOX
+            assert bounds[0]>=safe[0] and bounds[1]>=safe[1] and bounds[2]<=safe[2] and bounds[3]<=safe[3]
     art={}
     for a in json.loads((Path(v.__file__).parent/'artwork/manifest.json').read_text()):
         actual=episode.digest(Path(v.__file__).parent/'assets'/a['file']); assert actual==a['sha256']; art[a['file']]=actual
@@ -50,6 +55,7 @@ def main():
                 shots=len(shots),shot_limits='pass',frames=m['frames'],artwork_sha256=art,
                 equation_frames_checked=equation_frames,fixed_correct_equations='pass',
                 no_reference_similarity_target=True,source_dimensions=[1280,720],
+                consecutive_office_framing='fixed until cutaway',office_text_box=list(episode.OFFICE_TEXT_BOX),
                 listening='not performed; pronunciation, words and identity unconfirmed')
     if not args.plan:
         out=BASE/'build'/('preview' if args.preview else 'full')

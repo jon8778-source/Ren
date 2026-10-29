@@ -1,0 +1,16 @@
+{
+  "change": "Stable Ren framing between cutaways and captions in wall area beside Ren",
+  "office_text_box": [
+    610,
+    80,
+    840,
+    420
+  ],
+  "consecutive_ren_framing": "fixed",
+  "graphics_reused": 81,
+  "graphics_reuse_proof": "Graphic branch and helper ASTs identical; shot inputs unchanged except unused close field; previous cache fingerprints matched",
+  "narration_regenerated": false,
+  "hf_generation_calls": 0,
+  "previous_full_sha256": "be5463ad86a3446185926ea3eed02d334a7726f5d2c4cfe765e07f2fabbbff00",
+  "stage": "rendering revised office shots"
+}

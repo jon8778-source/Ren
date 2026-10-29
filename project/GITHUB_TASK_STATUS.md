@@ -6,7 +6,7 @@ Saved checkpoint, not a live app progress indicator.
 | --- | --- |
 | Task | When Can You Ease Off Saving for Retirement? |
 | Branch | `codex/retirement-ease-off-v3` |
-| Stage | Full video rendered for review; release/reliable artifact export incomplete |
+| Stage | Revising office framing and caption placement from owner feedback |
 | Full MP4 | 338.666667 seconds; 1280×720; 24 fps; H.264/AAC |
 | Opening | 55 seconds; technically validated |
 | Audio | All 14 original WAVs saved with hashes; complete master exported |
@@ -37,3 +37,11 @@ were unavailable through the proxy. No listening or full-motion playback is
 claimed. See sources.md and quality-report.json for precise limits.
 This session exposes no attachment/export tool; workspace media exist but client
 download has not been verified. No fabricated Library IDs or public-host upload.
+
+## Current visual revision
+
+Keep the same framing between consecutive Ren shots; change framing only after
+a cutaway. Office text is constrained to the clear wall beside Ren at
+(610,80)–(840,420), outside furniture and gestures. Revised source frames inspected;
+41 office shots re-rendering, 81 graphic shots reused after source-equivalence
+checks. No new voice requests; original narration and script preserved.

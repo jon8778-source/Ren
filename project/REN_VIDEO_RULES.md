@@ -39,7 +39,11 @@ ChatGPT files. The newly reproduced MP4 is supplied separately with this handove
   style. Supporting characters and environments must match that visual world.
 - No large white panel obscuring the office desk/chair, Ren/Finance heading,
   bottom yellow progress bar or persistent footer.
-- Alternate wider and closer Ren shots. Use brief story cutaways and purposeful
+- Keep one Ren framing throughout each uninterrupted office passage. Alternate
+  wider and closer framing only after a cutaway, not between consecutive Ren
+  shots (owner feedback on the retirement episode). Place office captions in
+  the clear wall space beside Ren, never over the desk, chair or wall artwork.
+  Use brief story cutaways and purposeful
   motion in objects, receipts, calendars and comparisons.
 - Decode and matte Ren at native source resolution. Never halve the source
   resolution before enlarging him into the scene. Inspect 100% face and edge

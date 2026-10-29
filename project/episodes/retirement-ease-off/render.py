@@ -32,6 +32,31 @@ C=json.loads((BASE/'calculations.json').read_text())
 ACTOR_CACHE={}
 RENDER_CODE=Path(__file__).read_bytes()
 DESIGN_CODE=(BASE/'design.py').read_bytes()
+OFFICE_TEXT_BOX=(610,80,840,420)
+
+def office_caption(title):
+    """Fit Fredoka text into the clear wall between the furniture and Ren."""
+    left,top,right,bottom=OFFICE_TEXT_BOX
+    measure=ImageDraw.Draw(Image.new('L',(1,1)))
+    for size in (34,33,32,31,30):
+        rows=[]; row=''
+        for word in title.replace('\n',' ').split():
+            candidate=(row+' '+word).strip()
+            if measure.textlength(candidate,font=v3.font(size))>right-left:
+                if not row: break
+                rows.append(row); row=word
+                if measure.textlength(word,font=v3.font(size))>right-left: break
+            else: row=candidate
+        else:
+            rows.append(row); value='\n'.join(rows)
+            bounds=measure.multiline_textbbox((left,top),value,font=v3.font(size),spacing=8)
+            if bounds[2]<=right and bounds[3]<=bottom:
+                return value,size,bounds
+    raise ValueError(f'Office caption does not fit its furniture-free wall area: {title}')
+
+def actor_placement(close):
+    scale=1.15 if close else .9
+    return scale,(364 if close else 524,25 if close else 45)
 
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(path,data): pilot.save(path,data)
@@ -79,19 +104,20 @@ def picture(s,f,actor=None):
     if s['kind']=='ren':
         im=v3.ART['office.png'].copy()
         # Reuse v3's native matte and single LANCZOS composition resize.
-        # The episode's wide framing includes trainers; its closer framing uses
-        # a gentler 1.25x scale rather than enlarging the actor 1.65x.
-        scale=1.25 if s['close'] else .9
+        # Framing remains fixed until a non-office cutaway; leave a wall column
+        # beside Ren for captions, outside the desk/chair and gesture envelope.
+        scale,position=actor_placement(s['close'])
         key=(s['clip'],f)
         if key not in ACTOR_CACHE:
             ACTOR_CACHE[key]=v3.actor_rgba(actor)
         rgba=ACTOR_CACHE[key].resize((round(W*scale),round(H*scale)),Image.Resampling.LANCZOS)
-        im.paste(rgba,(150 if s['close'] else 374,25 if s['close'] else 45),rgba)
+        im.paste(rgba,position,rgba)
         d=ImageDraw.Draw(im)
-        # Wall annotation above the furniture, screen-left of presenting Ren.
-        title=s['title']
-        txt(d,70,55,title,35 if max(map(len,title.split('\n'))) < 25 else 30)
-        if k=='booking': txt(d,80,225,'PLAN CHECKED • TRIP CONFIRMED',30,GREEN)
+        title,size,bounds=office_caption(s['title'])
+        left,top,right,bottom=bounds
+        actor_overlap=rgba.getchannel('A').crop((left-position[0],top-position[1],right-position[0],bottom-position[1]))
+        assert actor_overlap.getextrema()[1]<=20, f"Office text intersects Ren: {s['id']} frame {f}"
+        txt(d,OFFICE_TEXT_BOX[0],OFFICE_TEXT_BOX[1],title,size)
     else:
         im=Image.new('RGB',(W,H),CREAM); d=ImageDraw.Draw(im)
         title=s['title']; size=43
@@ -282,6 +308,8 @@ def audio_and_shots(preview=False, plan=False):
     if not plan: sf.write(track,audio,48000,subtype='PCM_24')
     paragraphs=(BASE/'script.md').read_text().strip().split('\n\n'); assert len(paragraphs)==len(BEATS)
     shots=[]; cursor=0; para_idx=0; ren_count=0; last_pose=None
+    office_run=-1
+    office_close=False
     for s,seg in zip(done,audio_segments):
         segment_paras=[]; consumed=''
         while para_idx<len(paragraphs):
@@ -308,6 +336,9 @@ def audio_and_shots(preview=False, plan=False):
                 clip=['present_palm_left','nod_yes','shake_no','thinking'][ren_count%4]
                 if ren:
                     ren_count+=1; assert clip!=last_pose; last_pose=clip
+                    if not shots or shots[-1]['kind']!='ren':
+                        office_run+=1
+                        office_close=bool(office_run%2)
                 # On Ren inserts use a concise caption in the same semantic scene.
                 ren_title=title.replace('. ','\n')
                 if ren and not isren:
@@ -317,7 +348,7 @@ def audio_and_shots(preview=False, plan=False):
                                   kind='ren' if ren else 'graphic',motif=motif,title=ren_title if ren else title,
                                   subtitle=subtitle,frames=b-a,start_frame=a,end_frame=b,
                                   start_s=a/24,end_s=b/24,part=part,clip=clip if ren else None,
-                                  close=bool(ren_count%2),mirrored=False,source_start_s=1.25,
+                                  close=office_close if ren else False,mirrored=False,source_start_s=1.25,
                                   asset='approved office + Ren library' if ren else 'code-drawn episode props',
                                   disclaimer=(a<72 or (not preview and b>round(dur*24)-72))))
     assert shots[0]['start_frame']==0
