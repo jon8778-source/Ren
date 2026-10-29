@@ -287,7 +287,7 @@
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
       "fingerprint": "56cba5dceede5cf27aa644db17351e1b70d1858b389d7240faa206ffb3ef3f34",
-      "status": "pending",
+      "status": "inflight",
       "attempts": [
         {
           "started_at": "2026-10-29T19:54:40.322513+00:00",
@@ -324,6 +324,31 @@
             "reset_at": "2026-10-29T22:15:59.327000+00:00"
           },
           "observed_quota_decrease_gpu_seconds": 0.0
+        },
+        {
+          "started_at": "2026-10-29T20:03:49.345699+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-10-29T20:03:45.261690+00:00",
+            "remaining_gpu_seconds": 2147.851106,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-10-29T22:16:00.066000+00:00"
+          },
+          "phase": "reference_upload",
+          "network_read_timeout_seconds": 120
         }
       ],
       "recovery": {
@@ -614,20 +639,29 @@
       "base_gpu_seconds": 2400,
       "overquota_used": 0,
       "reset_at": "2026-10-29T22:15:59.327000+00:00"
+    },
+    {
+      "segment": "s004",
+      "phase": "before",
+      "at": "2026-10-29T20:03:45.261690+00:00",
+      "remaining_gpu_seconds": 2147.851106,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-10-29T22:16:00.066000+00:00"
     }
   ],
-  "overall_status": "ready_after_explicit_queue_recovery",
+  "overall_status": "generating",
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
-  "updated_at": "2026-10-29T20:03:34.738902+00:00",
+  "updated_at": "2026-10-29T20:03:49.345726+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "quota": {
-    "at": "2026-10-29T19:54:50.542412+00:00",
+    "at": "2026-10-29T20:03:45.261690+00:00",
     "remaining_gpu_seconds": 2147.851106,
     "base_gpu_seconds": 2400,
     "overquota_used": 0,
-    "reset_at": "2026-10-29T22:15:59.327000+00:00"
+    "reset_at": "2026-10-29T22:16:00.066000+00:00"
   },
   "opening_technical_review": {
     "duration_seconds": 12.216875,
