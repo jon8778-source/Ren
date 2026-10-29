@@ -23,9 +23,11 @@ Saved checkpoint, not a live app progress indicator.
 [Resume/rebuild instructions](episodes/retirement-ease-off/README.md)
 
 Starting remote v3 tip: c6bb363baf13666cce15ece777fde39190ffe8a7.
-Last verified content checkpoint: 9fb62cc14e6bdfbb128daa3c6e679cbfbc4404e6.
-Later final-report commits supersede it; this record will identify their verified
-content checkpoint after remote verification.
+Last verified content checkpoint: [7b6365e](https://github.com/jon8778-source/Ren/commit/7b6365ea04de1695a0d37a2ef207ddd4206fd68d).
+All 14 original WAV hashes and 14 source/report paths were checked against the
+fetched remote commit. See episodes/retirement-ease-off/remote-verification.json.
+The episode now overrides the legacy WAV ignore rule; publishing rejects any
+future checkpoint missing a saved original WAV.
 
 No narration segments remain. Rebuild with:
 `bash project/episodes/retirement-ease-off/produce.sh`.

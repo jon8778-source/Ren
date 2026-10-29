@@ -1,0 +1,25 @@
+{
+  "verified_remote_content_commit": "7b6365ea04de1695a0d37a2ef207ddd4206fd68d",
+  "branch": "codex/retirement-ease-off-v3",
+  "source_report_paths_verified": 14,
+  "original_wavs_verified": {
+    "audio/s001-a12808794e00-a1.wav": "2db0c3dd8179201f58224d1aa67058adbd85dca0d033d2eb25db2ecfa64b29b3",
+    "audio/s002-f4ca8c0e9344-a1.wav": "98557ae4b47c6748da33658d56370e99ce76d8400242a366c01a1e96069b0780",
+    "audio/s003-b06c38e11d6a-a1.wav": "a0719745b1da2b6562a070e934b2b015febc78c1b5bb45720d6962f94fe13f5f",
+    "audio/s004-56cba5dceede-a2.wav": "b98ced96d672441b3de811fbca3d4aa3f84179553095a8a4bf6f960a974eaf50",
+    "audio/s005-a3f434b8a941-a1.wav": "30f556ec9eee3391342a5c90f4d0c3f97378628756e2c955030c6311eeb8f64e",
+    "audio/s006-2ea56dcea0da-a1.wav": "002e4efd2e45fd8daa567bffabf39facd5a4e856942a303322901b7d9404580f",
+    "audio/s007-ab59656590cd-a1.wav": "795a6dc02c4f2b3dc93d8ccb489e9d573f7e3c7d4786daf694b3b30a826217b6",
+    "audio/s008-bc50b530f0c5-a1.wav": "7a4fe87cdc72e90dbb21bea34d2a60ed3282337b98d8fd3d0cd3329ba0985064",
+    "audio/s009-2b89f2d39b36-a1.wav": "55a8866c0ea86849393ae381284dea896e31e436ebbf68a24ac6977a9e9a0c40",
+    "audio/s010-61cfdf37175e-a1.wav": "ba7ad1360339c01c462e9baafc5cac37ae52fc42ddf4287d06a38ca351f63014",
+    "audio/s011-907199853141-a1.wav": "c46db6737160feb1371731ba598b0a46552de7ede287b88e9b8cf46f0ad36d6a",
+    "audio/s012-cff6a0bced2b-a1.wav": "63d0882160b21fb994672b62de0d308942fe3fa10e74ac30bb699fc696c44bd2",
+    "audio/s013-c3c593667cd6-a1.wav": "fb8f577a3678e9a44d92b2e9e0dc1d5680bd636790c61b59de72f34e51c35dc2",
+    "audio/s014-907ad87b701c-a1.wav": "7f9b49aa68807c665a142c0a1bab811f3b758f0e04dadf2f99bb5e41cb5b473d"
+  },
+  "main_remote_sha": "67ba8b54c0c664ec32d2128e6876882391cdd25a",
+  "protected_coffee_and_reference_diff": "empty",
+  "media_in_git": false,
+  "artifact_export": "shared workspace files prepared; client download unverified"
+}
