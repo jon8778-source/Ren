@@ -108,13 +108,25 @@ def picture(s,f,actor=None):
                 x=65+i*390; y=230+round(30*(1-min(1,max(0,p*4-i*.45))))
                 card(d,(x,y,x+365,y+330),title,accent=GREEN,size=34)
                 txt(d,x+24,y+160,body,29)
+                if variant%3==i:
+                    d.rounded_rectangle((x+10,y+10,x+355,y+320),16,outline=GREEN,width=8)
+                    txt(d,x+24,y+265,'Different job. Different needs.',24,GREEN)
         elif k=='coast':
-            card(d,(65,210,580,375),'EMPLOYMENT INCOME','Pays current living expenses')
-            card(d,(700,210,1210,375),'INVESTMENTS','New contributions stop')
-            # No income-to-investment arrow after contributions stop.
-            if p<.35:
-                xx=590+round(95*p/.35); d.ellipse((xx,270,xx+18,288),fill=GREEN)
-            txt(d,690,398,'STILL WORKING • LIVING COSTS COVERED',25,GREEN)
+            before=para==13 and variant==0
+            if para==12 and variant%2==0:
+                card(d,(65,210,580,420),'EMPLOYMENT INCOME','Your paycheck')
+                card(d,(700,210,1210,420),'LIVING EXPENSES','Current life stays funded')
+                arrow(d,590,310,690,310)
+            else:
+                card(d,(65,210,580,375),'EMPLOYMENT INCOME','Pays current living expenses')
+                card(d,(700,210,1210,375),'INVESTMENTS','Contributions entering' if before else 'New contributions stop')
+                if before:
+                    arrow(d,590,290,690,290)
+                    xx=590+round(75*p); d.ellipse((xx,270,xx+18,288),fill=GREEN)
+                    txt(d,690,398,'BEFORE EASING OFF',28,GREEN)
+                else:
+                    # No income-to-investment arrow after contributions stop.
+                    txt(d,690,398,'STILL WORKING • LIVING COSTS COVERED',25,GREEN)
             line(d,(100,530,1170,530)); marker=100+round(1000*ease)
             d.ellipse((marker-10,520,marker+10,540),fill=GREEN)
             txt(d,90,560,'Today',30); txt(d,890,560,'Later retirement',30)
@@ -131,7 +143,7 @@ def picture(s,f,actor=None):
                 indices=[0,1] if k=='comparison' else [0 if k=='scenario_a' else 1]
                 for row,idx in enumerate(indices):
                     rate=A['real_returns_after_fees'][idx]; total=C['displayed_outcomes'][idx]
-                    y=270+row*170
+                    y=(255 if variant%2 else 290) + row*170
                     expression=f"${A['starting_balance']:,} × {1+rate:.2f}^{A['years']}"
                     fs=45 if len(indices)==2 else 53
                     txt(d,75,y,expression,fs,GREEN)
@@ -143,6 +155,14 @@ def picture(s,f,actor=None):
                         d.line(points,fill=GREEN,width=3)
                     txt(d,xx+48,y,f'${total:,}',fs,GREEN)
                     txt(d,80,y+70,f"Scenario {'AB'[idx]}: {rate:.0%} annual real return after fees",31)
+                if len(indices)==1:
+                    idx=indices[0]
+                    if variant%2:
+                        txt(d,80,445,f"${C['displayed_outcomes'][idx]:,}",88,GREEN)
+                        txt(d,85,550,'Hypothetical retirement balance',33)
+                    else:
+                        txt(d,80,455,f"Illustrative target: ${A['illustrative_target']:,}",41)
+                        txt(d,85,530,'Not a universal retirement requirement',30,MUTED)
                 # Only a separate timeline moves; equations never count up.
                 line(d,(85,620,85+round(1080*ease),620),width=7)
             txt(d,65,660,"Hypothetical • Today’s purchasing power • Before withdrawal taxes",25,MUTED)
@@ -150,6 +170,8 @@ def picture(s,f,actor=None):
             active=0 if para<32 else 1 if para<38 else 2
             worksheet(d,active)
             txt(d,65,555,'A realistic plan, with room for setbacks',35,GREEN)
+            if variant%2:
+                txt(d,65,615,['A spending plan, not a guessed target.','Try a less favorable future.','Make the extra take-home purposeful.'][active],29,MUTED)
         elif k=='budget':
             labels=['Housing','Food','Taxes','Health insurance','Travel','Occasional repairs']
             for i,label in enumerate(labels):
