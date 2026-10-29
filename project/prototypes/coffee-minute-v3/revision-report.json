@@ -1,0 +1,147 @@
+{
+  "shots": [
+    {
+      "shot": 1,
+      "kind": "ren",
+      "frames": 50,
+      "title": "KEEP THE\nCOFFEE?",
+      "clip": "present_palm_left"
+    },
+    {
+      "shot": 2,
+      "kind": "ren",
+      "frames": 100,
+      "title": "COFFEE\nON TRIAL?",
+      "clip": "nod_yes",
+      "close": true
+    },
+    {
+      "shot": 3,
+      "kind": "story",
+      "frames": 54,
+      "title": "",
+      "image": "alex-cafe.png"
+    },
+    {
+      "shot": 4,
+      "kind": "purpose",
+      "frames": 72,
+      "title": "What should your money do?"
+    },
+    {
+      "shot": 5,
+      "kind": "ren",
+      "frames": 108,
+      "title": "LESS JOY\nIS NOT THE GOAL.",
+      "clip": "shake_no"
+    },
+    {
+      "shot": 6,
+      "kind": "ren",
+      "frames": 65,
+      "title": "WHAT NEEDS\nTO CHANGE?",
+      "clip": "thinking",
+      "close": true
+    },
+    {
+      "shot": 7,
+      "kind": "story",
+      "frames": 54,
+      "title": "",
+      "image": "alex-cafe.png",
+      "detail": true
+    },
+    {
+      "shot": 8,
+      "kind": "ren",
+      "frames": 83,
+      "title": "START WITH\nTHE NUMBERS.",
+      "clip": "present_palm_left"
+    },
+    {
+      "shot": 9,
+      "kind": "daily",
+      "frames": 78,
+      "title": "An illustrative daily habit"
+    },
+    {
+      "shot": 10,
+      "kind": "ren",
+      "frames": 102,
+      "title": "EVERY DAY.\n365 DAYS.",
+      "clip": "nod_yes",
+      "close": true
+    },
+    {
+      "shot": 11,
+      "kind": "annual",
+      "frames": 78,
+      "title": "Across a full year"
+    },
+    {
+      "shot": 12,
+      "kind": "ren",
+      "frames": 108,
+      "title": "YOUR NUMBERS\nMAY DIFFER.",
+      "clip": "present_palm_left"
+    },
+    {
+      "shot": 13,
+      "kind": "ren",
+      "frames": 50,
+      "title": "AN EXAMPLE.\nYOUR BUDGET\nMAY DIFFER.",
+      "clip": "thinking",
+      "close": true
+    },
+    {
+      "shot": 14,
+      "kind": "ren",
+      "frames": 92,
+      "title": "SPENDING\nIS NOT THE SAME\nAS SAVING.",
+      "clip": "shake_no"
+    },
+    {
+      "shot": 15,
+      "kind": "story",
+      "frames": 54,
+      "title": "",
+      "image": "alex-home.png"
+    },
+    {
+      "shot": 16,
+      "kind": "ren",
+      "frames": 99,
+      "title": "COMPARE THE\nDIFFERENCE.",
+      "clip": "present_palm_left",
+      "close": true
+    },
+    {
+      "shot": 17,
+      "kind": "net",
+      "frames": 78,
+      "title": "Compare the two choices"
+    },
+    {
+      "shot": 18,
+      "kind": "ren",
+      "frames": 101,
+      "title": "THREE DOLLARS\nLESS PER DAY.",
+      "clip": "nod_yes"
+    },
+    {
+      "shot": 19,
+      "kind": "netannual",
+      "frames": 53,
+      "title": "The illustrative yearly difference"
+    }
+  ],
+  "duration": 61.625,
+  "source_narration_sha256": "8e7507861b5772425433e5ec32b539c34450247b82f90a0568a74b864c58b106",
+  "new_voice_requests": 0,
+  "maths": {
+    "annual": 1460,
+    "daily_difference": 3,
+    "annual_difference": 1095
+  },
+  "lip_sync": false
+}

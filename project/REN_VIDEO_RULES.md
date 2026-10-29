@@ -7,17 +7,28 @@ this route. Existing production episodes remain unchanged.
 
 ## Publication status
 
-This commit publishes the approved RULES. The v3 renderer and newly generated
-artwork have not been published with it. Do not claim that a fresh checkout can
-reproduce v3 yet or silently use placeholder artwork. The approved reference
-video is Ren_61s_Coffee_Prototype_v3.mp4 in the owner's ChatGPT files.
+The v3 renderer, all four approved original artworks, pinned dependencies,
+run instructions and validation are now published in
+project/prototypes/coffee-minute-v3/. The approved artwork is stored losslessly
+as text chunks in artwork/; render.py restores the exact original PNG bytes
+into assets/ and verifies their SHA-256 hashes. No artwork was regenerated.
 
-Required artwork for that later handover:
-- Approved sage office, with desk and chair clearly visible.
-- Approved supporting cast: Alex, revised fair-skinned Maya, and Sam.
-- Alex buying coffee at a cafe.
-- Alex pouring from a French press into ONE mug at home. Do not use the earlier
-  dripper image that looked like two stacked cups.
+A fresh checkout of published commit bf193aee2c042651884143bec1cf1be9febc0b11
+successfully rendered 1280×720 H.264/AAC, 24 fps, 61.625 seconds (1,479 frames).
+All 19 shots were inspected. All 1,479 frames passed comparison with the
+approved reference (minimum SSIM 0.992776, mean 0.997893). Full decoding passed
+with errors fatal. All 209 calculation frames kept fixed, correct equations.
+Narration continuity and artwork checksums passed; new voice requests: zero.
+See README.md, validate.py and validation.json for commands and evidence.
+
+Included approved originals:
+- Welcoming sage-accented home office.png — desk and chair remain visible.
+- Centered Maya in illustrated character lineup.png — Alex, revised Maya, Sam.
+- Alex taps to pay for coffee.png.
+- Alex pours French press coffee.png — corrected ONE-mug home scene.
+
+The approved reference remains Ren_61s_Coffee_Prototype_v3.mp4 in the owner's
+ChatGPT files. The newly reproduced MP4 is supplied separately with this handover.
 
 ## Characters and editing
 
