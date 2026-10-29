@@ -58,6 +58,7 @@ def calculate():
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('command', choices=['init','opening','resume','verify','status','calculate','recover-queue-rejection'])
+    p.add_argument('--asr-model',type=Path)
     args = p.parse_args()
     with (BASE / '.workflow.lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -86,7 +87,7 @@ def main():
                 print('Opening already exists; not regenerated'); return
             pilot.resume(BASE, True, max_segments=1 if args.command == 'opening' else None)
         elif args.command == 'verify':
-            pilot.verify(BASE)
+            pilot.verify(BASE,args.asr_model)
         elif args.command == 'status':
             m = pilot.load(BASE)
             print(json.dumps({'status':m['overall_status'], 'quota':m.get('quota'),
