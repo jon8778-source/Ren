@@ -117,7 +117,8 @@
       80,
       840,
       420
-    ]
+    ],
+    "review_scope_note": "For this revision, 41 changed encoded office midpoints and 36 frames around all nine consecutive office boundaries were inspected. Prior review was retained for 81 unchanged graphic encodes. No full-motion playback or listening was performed."
   },
   "usage": {
     "quota_consumed_gpu_seconds": 487.45256500000005,

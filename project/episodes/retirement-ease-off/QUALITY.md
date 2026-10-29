@@ -63,7 +63,10 @@ returns after fees; the illustrative target is not a withdrawal entitlement.
 Balances are in today's purchasing power, before withdrawal taxes. No realistic
 market forecast or guaranteed return is presented.
 
-All 122 encoded midpoints and 78 frames around 13 transitions were inspected.
+The original production review inspected all 122 encoded midpoints and 78 frames
+around 13 transitions. For this revision, all 41 changed encoded office midpoints
+and 36 frames around all nine consecutive office boundaries were inspected;
+previous review was retained for the 81 unchanged graphic encodes.
 Wide/closer encoded shots were inspected at 1280×720 for face, glasses, hair,
 hands, clothes and trainers. Native 1280×720 matting is retained; no sharpening,
 half-resolution decode, upscaling model, mirroring or added body wobble. White
