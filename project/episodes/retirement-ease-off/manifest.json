@@ -1473,11 +1473,11 @@
       "reset_at": "2026-10-29T22:15:59.434000+00:00"
     }
   ],
-  "overall_status": "generating",
+  "overall_status": "narration_generated_review_pending",
   "free_reserve_gpu_seconds": 120,
   "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
   "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
-  "updated_at": "2026-10-29T20:12:42.653989+00:00",
+  "updated_at": "2026-10-29T20:12:46.021255+00:00",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
   "quota": {
     "at": "2026-10-29T20:12:42.653963+00:00",
