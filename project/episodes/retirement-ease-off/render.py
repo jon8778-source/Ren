@@ -30,6 +30,8 @@ INK,GREEN,CREAM,MUTED = v3.INK,v3.GREEN,v3.CREAM,v3.MUTED
 A=json.loads((BASE/'assumptions.json').read_text())
 C=json.loads((BASE/'calculations.json').read_text())
 ACTOR_CACHE={}
+RENDER_CODE=Path(__file__).read_bytes()
+DESIGN_CODE=(BASE/'design.py').read_bytes()
 
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def save(path,data): pilot.save(path,data)
@@ -138,11 +140,21 @@ def picture(s,f,actor=None):
             scenario=k in ('scenario_a','scenario_b','comparison')
             txt(d,65,185,f"Age {A['current_age']} to {A['retirement_age']}    |    {A['years']} years    |    ${A['new_contributions']} new contributions",32)
             if k=='setup':
-                txt(d,115,290,f"${A['starting_balance']:,}",98,GREEN)
-                txt(d,120,420,'Starting retirement investments',36)
+                if variant%2:
+                    card(d,(65,270,580,510),f"AGE {A['current_age']}",f"${A['starting_balance']:,} invested",size=52)
+                    card(d,(740,270,1210,510),f"AGE {A['retirement_age']}",'Retirement goal',size=52)
+                    arrow(d,595,395,720,395)
+                else:
+                    txt(d,115,290,f"${A['starting_balance']:,}",98,GREEN)
+                    txt(d,120,420,'Starting retirement investments',36)
             elif k=='target':
-                txt(d,115,290,f"${A['illustrative_target']:,}",98,GREEN)
-                txt(d,120,420,'Illustrative target • Not a universal requirement',32)
+                if variant%2:
+                    card(d,(65,270,580,510),'SPENDING PLAN','Your retirement budget',size=38)
+                    card(d,(740,270,1210,510),f"${A['illustrative_target']:,}",'Illustrative target',size=48)
+                    arrow(d,595,395,720,395)
+                else:
+                    txt(d,115,290,f"${A['illustrative_target']:,}",98,GREEN)
+                    txt(d,120,420,'Illustrative target • Not a universal requirement',32)
             else:
                 indices=[0,1] if k=='comparison' else [0 if k=='scenario_a' else 1]
                 for row,idx in enumerate(indices):
@@ -182,6 +194,8 @@ def picture(s,f,actor=None):
                 x=65+(i%3)*395; y=220+(i//3)*180
                 offset=round(20*(1-min(1,max(0,p*6-i*.4))))
                 card(d,(x,y+offset,x+365,y+135+offset),label,size=30)
+                if i==(variant+(2 if para==28 else 0))%6:
+                    d.rounded_rectangle((x+7,y+offset+7,x+358,y+128+offset),16,outline=GREEN,width=7)
         elif k in ('income','bridge','real'):
             labels={'income':[('RETIREMENT BUDGET','What life will cost'),('DEPENDABLE INCOME','Amount and start date'),('INVESTMENT GAP','What remains to fund')],
                     'bridge':[('WORK ENDS','Spending continues'),('BRIDGE YEARS','Account-access rules'),('BENEFITS BEGIN','Check your own timing')],
@@ -189,6 +203,8 @@ def picture(s,f,actor=None):
             for i,(label,body) in enumerate(labels):
                 x=65+i*390; card(d,(x,250,x+365,490),label,body,size=26)
                 if i<2: arrow(d,x+368,535,x+390,535)
+                if variant%3==i:
+                    d.rounded_rectangle((x+7,257,x+358,483),16,outline=GREEN,width=7)
         elif k in ('setbacks','reserve','purpose','decision','match','balance'):
             labels={
                 'setbacks':[('LOWER RETURNS','Less growth'),('HIGHER SPENDING','More to fund'),('LONGER RETIREMENT','More time'),('CONTRIBUTION GAP','Pause new saving')],
@@ -204,10 +220,20 @@ def picture(s,f,actor=None):
             x=65+(selected%2)*610; y=215+(selected//2)*205
             line(d,(x+24,y+147,x+24+round(515*ease),y+147),width=6)
         elif k=='tax':
-            card(d,(65,250,435,480),f"${A['contribution_reduction']:,} LESS",'Pre-tax 401(k)\ncontribution',size=35)
-            card(d,(485,250,790,480),'TAX STEP','Taxes take\na share',size=35)
-            card(d,(840,250,1210,480),'TAKE-HOME','Check the actual\npayroll change',size=35)
-            arrow(d,442,365,477,365); arrow(d,798,365,832,365)
+            if variant%4==1:
+                card(d,(65,240,580,490),f"${A['contribution_reduction']:,} LESS",'Reduced pre-tax\n401(k) contribution',size=48)
+                card(d,(740,240,1210,490),'TAX STEP','Taxable income changes',size=43)
+                arrow(d,595,365,720,365)
+            elif variant%4==2:
+                card(d,(65,240,580,490),'TAX STEP','Taxes take a share',size=48)
+                card(d,(740,240,1210,490),'TAKE-HOME','Check your actual\npayroll change',size=43)
+                arrow(d,595,365,720,365)
+            else:
+                card(d,(65,250,435,480),f"${A['contribution_reduction']:,} LESS",'Pre-tax 401(k)\ncontribution',size=35)
+                card(d,(485,250,790,480),'TAX STEP','Taxes take\na share',size=35)
+                card(d,(840,250,1210,480),'TAKE-HOME','Check the actual\npayroll change',size=35)
+                arrow(d,442,365,477,365); arrow(d,798,365,832,365)
+                if variant%4==3: d.rounded_rectangle((847,257,1203,473),16,outline=GREEN,width=7)
             txt(d,80,555,'No tax rate or take-home amount assumed',33,MUTED)
         elif k=='calendar':
             card(d,(65,220,605,560),'CHOSEN CONTRIBUTION','Set the amount\nGive extra take-home a purpose\nReview after major changes',size=32)
@@ -308,7 +334,7 @@ def main():
     thumbs=[]
     for i,s in enumerate(shots):
         path=out/(s['id']+'.mp4'); png=out/(s['id']+'.png')
-        fp=hashlib.sha256(json.dumps(s,sort_keys=True).encode()+(BASE/'render.py').read_bytes()+(BASE/'design.py').read_bytes()+(Path(v3.__file__)).read_bytes()+(BASE/'assumptions.json').read_bytes()+(BASE/'calculations.json').read_bytes()).hexdigest()
+        fp=hashlib.sha256(json.dumps(s,sort_keys=True).encode()+RENDER_CODE+DESIGN_CODE+(Path(v3.__file__)).read_bytes()+(BASE/'assumptions.json').read_bytes()+(BASE/'calculations.json').read_bytes()).hexdigest()
         state=out/(s['id']+'.hash')
         if not args.stills and path.exists() and state.exists() and state.read_text()==fp:
             v3.check_video(path,s['frames']); thumbs.append(Image.open(png).resize((320,180))); continue

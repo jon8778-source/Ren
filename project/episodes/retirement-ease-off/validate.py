@@ -22,6 +22,9 @@ def main():
     m=json.loads(shots_path.read_text()); shots=m['shots']; v=episode.v3
     assert sum(s['frames'] for s in shots)==m['frames']
     assert all(a['end_frame']==b['start_frame'] for a,b in zip(shots,shots[1:]))
+    for a,b in zip(shots,shots[1:]):
+        if a['kind']==b['kind']=='graphic':
+            assert episode.picture(a,a['frames']-1).tobytes()!=episode.picture(b,0).tobytes(), (a['id'],b['id'],'identical graphic cut')
     for i,s in enumerate(shots):
         assert 0<s['frames']<=(132 if s['kind']=='ren' else 60 if s['kind']=='story' else 84)
         assert not s['mirrored']
