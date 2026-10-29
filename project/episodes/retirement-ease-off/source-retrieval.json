@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.irs.gov/retirement-plans/retirement-plans-faqs-regarding-salary-deferral-contributions",
+    "retrieval": "blocked or unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://www.ssa.gov/retirement",
+    "retrieval": "blocked or unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/what-you-should-know-about-your-retirement-plan",
+    "retrieval": "blocked or unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+    "retrieval": "blocked or unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]
