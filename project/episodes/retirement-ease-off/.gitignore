@@ -6,3 +6,4 @@ deliverables/
 .workflow.lock
 *.tmp
 __pycache__/
+!audio/*.wav
