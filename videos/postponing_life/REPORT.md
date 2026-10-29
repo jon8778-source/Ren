@@ -1,11 +1,19 @@
 # What If You Keep Postponing the Life You're Saving For? — REPORT
 
-Script: `scripts/Ren_Postponing_Life_Script_v2.md` (v2, used word for word; [S1]–[S12] markers are not spoken).
+Script: `scripts/Ren_Postponing_Life_Script_v3.md` (v3, Alex only, used word for word; [S1]–[S12] markers are not spoken).
+v2 is kept beside it for reference.
 Branch: `video/postponing-life`.
 
 ## Gate 1 — inventory and plan (no rendering yet)
 
-Status: **waiting for Jon's approval of this plan.**
+Status: **plan revised from Jon's answers; waiting for approval of script v3 and this plan.**
+
+### Decisions (Jon, 29 Oct)
+
+- **Palette:** navy on white. Code-built text and graphics use Fredoka with `config.json` navy `#13233F` on white `#FFFFFF`. Muted grey is for small captions. Red and green are used only where a graphic needs them.
+- **Maya:** set aside. `supporting-cast.png` is not used.
+- **Script:** rewritten as v3 with Alex alone. Maya is removed; her lines become Alex's own thoughts, and the friend appears only as a text message.
+- **Voice:** run the Qwen3-TTS 1.7B Base model in this container, with the same reference WAV and transcript, so there's no Space quota.
 
 ### 1. Production template
 
@@ -16,8 +24,8 @@ will need extending for 1920×1080, story stills, push-ins, speaker tags and the
 
 There is no "template palette and fonts" to follow. The repo's house style (`project/config.json`)
 is Fredoka with navy/green/red/gold on white. Alex's stills use warm cream/sage/rust. Proposal:
-Fredoka plus the config colours for all code-built text, with stills keeping their own palette. **Needs
-your decision.**
+Fredoka plus the config colours for all code-built text, with stills keeping their own palette.
+**Decided: navy on white.**
 
 ### 2. Ren clips
 
@@ -58,7 +66,7 @@ whose checksums match their manifest:
 
 Alex: short wavy auburn hair, sage-green overshirt over a cream tee, dark trousers. **Flag:**
 `supporting-cast.png`'s source name is "Centered Maya in illustrated character lineup". That
-conflicts with "Maya has no approved design". I will not use her or that image unless you say so.
+conflicts with "Maya has no approved design". **Set aside (Jon).**
 These stills are 1672×941, so 1920×1080 is a 1.15× upscale. Fine.
 
 ### 4. Ren's voice
@@ -74,7 +82,7 @@ These stills are 1672×941, so 1920×1080 is a 1.15× upscale. Fine.
 
 ### 5. Timing
 
-At about 150 wpm with short pauses: **984 words, about 7:05**, not the script's "about 6½ minutes".
+At about 150 wpm with short pauses: **984 words (v2), about 7:05; v3 is 960 words, about 6:55**, not the script's "about 6½ minutes".
 The S1+S2 pilot is 148 words, about 64s. Real timings come from the real voice.
 
 ### 6. Shot plan
@@ -87,14 +95,14 @@ fall on sentence ends. Every on-screen word is a code overlay. Speaker tags appe
 |---|---|---|---|---|
 | S1 | 0:00–0:42 | "photo…fridge" **D** fridge photo, push-in → "never been there" **S** fridge door, wider → "researched cabins…socks" **S** Alex at laptop with cabin listings → "ready for four years" **D** photo again → "Next year…" **S** Alex at laptop → "some reasons are very good" **P** `thinking` → "I'm Ren…" **P** `wave_hello` | "4 years"; **Alex:** tag on his line; title card "What If You Keep Postponing the Life You're Saving For?" | **Yes**: aspiration |
 | S2 | 0:42–1:04 | "car had just broken down" **S** broken-down car → "debt…optimism" **P** `worried` → "they waited… retirement" **I** 3-step ticks: pay down the card → emergency savings → retirement → "Waiting helped" **P** `nod_yes` | step labels; "Waiting helped" | — |
-| S3 | 1:04–1:48 | "Maya brought up the trip" **S** Maya's phone or hand (implied) → "Alex opened their accounts" **S** Alex at laptop → "Let's get a little more comfortable" quote → "photo stayed on the fridge" **D** fridge, slower push → "raise… target" **I** savings target line moving up → "moving summit" **I** mountain summit icon sliding up | **Alex:** tag; "Savings target" | **Yes**: still waiting |
-| S4 | 1:48–2:13 | "looking at cabins again" **S** Alex at laptop, prices changed → Maya's questions with **Maya:** tags **D** crop on Alex's face → "He didn't answer" **P** `thinking` | **Maya:** tags | — |
+| S3 | 1:04–1:48 | "the trip came up again" **D** mountain photo, quick → "Alex opened his accounts" **S** Alex at laptop → "Let's get a little more comfortable" quote → "photo stayed on the fridge" **D** fridge, slower push → "raise… target" **I** savings target line moving up → "moving summit" **I** mountain summit icon sliding up | **Alex:** tag; "Savings target" | **Yes**: still waiting |
+| S4 | 1:48–2:13 | "looking at cabins again" **S** Alex at laptop, prices changed → his two questions to himself **D** crop on Alex's face → "He didn't have an answer" **P** `thinking` | **Alex:** tags | — |
 | S5 | 2:13–3:02 | Ren steps out **P** `walk_in_left` → `open_arms`/`present_palm` with text beside him: "Alex isn't foolish" → "permission" → cabin growing **I** two nights → a week, simple → big windows → "helping each other postpone" **P** `shrug` | Key phrases beside Ren | — |
-| S6 | 3:02–3:45 | friend's picture **S** phone in Maya's hand showing trail, sandwich, view → **Maya:**/**Alex:** quotes → "what they actually want" **I** three icons: days outside, breakfast without work messages, time together → "smaller size" **P** `idea` | Speaker tags; 3 labels | — |
+| S6 | 3:02–3:45 | friend's picture **S** phone in Alex's hand; the message and the trail photo are drawn on its screen in code → Alex's first and second thoughts → "what he actually wants" **I** three icons: days outside, breakfast without work messages, time off from house jobs → "smaller size" **P** `idea` | **Alex:** tags; message text; 3 labels | — |
 | S7 | 3:45–4:26 | "sit down with their budget" **S** Alex at laptop with spreadsheet → "Alex is delighted" **P** `rub_hands` → budget **I** categories (stay, gas, food, park fees, buffer) ticked one by one, no $ → "trade-off" **P** `clipboard_tick` | Categories; caption "Example only, not financial advice" whenever the budget is shown | — |
 | S8 | 4:26–4:52 | "clicks book" **I** "Book" button press → "thinks about canceling" **P** `worried` → plan re-check **I** ticks: bills covered, savings on track → "isn't evidence…" **P** `point_camera` | "Bills covered", "Savings on track" | — |
 | S9 | 4:52–5:15 | **P** `open_arms` → **I** three icons: local walk, free event, afternoon with someone | 3 labels | — |
-| S10 | 5:15–5:41 | rain **S** rainy cabin window → "forgets the coffee" **S** Alex staring into an empty mug → walk **S** Alex on a muddy trail (Maya implied) | — | — |
+| S10 | 5:15–5:41 | rain **S** rainy cabin window → "forgets the coffee" **S** Alex staring into an empty mug → walk **S** Alex alone on a muddy trail | — | — |
 | S11 | 5:41–6:19 | home **D** fridge → second photo appears beside the mountain (animated in) → "mud on his jeans" **D** crop on weekend photo → "a month later" **P** `nod_yes` → "proof…" **P** `relieved` | — | **Yes**: second photo |
 | S12 | 6:19–7:05 | challenge **P** `point_camera` → 3 steps **I** pick one → ask what you want → find a version that fits → "give someday a next step" **P** `thumbs_up` → fridge, both photos **D** slow push-out → CTA and sign-off **P** `wave_bye` | Steps; "What's still on your fridge?"; "Educational only, not financial advice" (house rule) | **Yes**: final shot |
 
@@ -104,10 +112,10 @@ fall on sentence ends. Every on-screen word is a code overlay. Speaker tags appe
 |---|---|---|
 | Fridge door, no photos | S1, S3, S11, S12 | **New still**, prompt A. Photos are composited on in code, so all four appearances match and the second photo can animate in. |
 | Mountain photo | S1, S3, S11, S12 | **New still**, prompt B, composited onto the fridge |
-| Weekend photo | S11, S12 | **New still**, prompt C. Maya can't appear, so it shows Alex alone, as if Maya took it. Note the script says "They both look happy". |
+| Weekend photo | S11, S12 | **New still**, prompt C: Alex alone, a selfie |
 | Alex at laptop | S1, S3, S4, S7 | **New still**, prompt D. Screen content (cabins, spreadsheet) is added in code, so one still covers all four. |
 | Broken-down car | S2 | **New still**, prompt E. Or, cheaper: a code-built icon card. |
-| Phone in Maya's hand | S3, S6 | **New still**, prompt F. Screen content added in code. |
+| Phone in Alex's hand | S6 | **New still**, prompt F. Screen content added in code. |
 | Rainy cabin window, empty mug | S10 | **New still**, prompt G |
 | Alex on a muddy trail | S10 | **New still**, prompt H |
 | Infographics: 3 steps, target line, cabin growth, budget, book button, icons | S2–S12 | **Code-built**, no new art |
@@ -121,18 +129,15 @@ sleeves over a cream T-shirt, dark trousers".
 
 - **A, fridge door:** "Close view of a cream retro fridge door in a sage-green kitchen, a few plain magnets, an empty clear space at eye level for a photo, no photos, no paper, no people. [style]"
 - **B, mountain photo:** "A slightly faded printed travel photo of a snowy mountain above a pine forest and a lake, white photo border, a strip of tape on the top edge, straight-on, isolated on a plain background. [style]"
-- **C, weekend photo:** "A printed snapshot with a white border: [Alex] on a forest trail in light rain, grinning, mud on his jeans, holding a slightly squashed sandwich, casual and unglamorous. [style]"
+- **C, weekend photo:** "A printed selfie snapshot with a white border: [Alex] alone on a forest trail in light rain, grinning, mud on his jeans, holding a slightly squashed sandwich, casual and unglamorous. [style]"
 - **D, Alex at laptop:** "[Alex] sits at a wooden desk in a cosy home office, side-on, looking at an open laptop, the screen blank and facing the viewer at an angle, thoughtful expression, plants and a window. [style]"
 - **E, broken-down car:** "A small dusty hatchback at the side of a quiet road with its hood up and hazard lights on, cloudy sky, no people. [style]"
-- **F, phone in hand:** "A woman's hand (only the hand and sleeve, rust-coloured knit) holding a smartphone towards the viewer, blank bright screen, cosy living-room background softly out of focus. [style]"
+- **F, phone in hand:** "A man's hand and sage-green shirt cuff holding a smartphone towards the viewer, blank bright screen, cosy living-room background softly out of focus. [style]"
 - **G, rainy window:** "[Alex] at a small wooden cabin table by a rain-streaked window, staring into an empty coffee mug with mock despair, forest outside, morning light. [style]"
 - **H, muddy trail:** "[Alex] walking along a muddy forest trail towards a viewpoint, seen from three-quarter behind, small backpack, misty valley ahead. [style]"
 
 ### 8. Things I'm unsure about
 
-1. **Palette:** house config colours, Alex's palette, or a mix (see section 1)?
-2. **The "Centered Maya" line-up image:** discard it?
-3. **The weekend photo:** Alex alone, or allow Maya's hand or the back of her head in it?
-4. **Disclaimer wording:** the house rule is "Educational only, not financial advice" at the start and end, and in the description. Your prompt adds "Example only, not financial advice" for budget scenes. I've planned both.
-5. **Voice route:** new token, running the model ourselves, or your own WAVs? Until then, the PLACEHOLDER VOICE for timing.
-6. **Frame rate:** your prompt says 24 fps; the main pipeline's config uses 30. I'll follow your 24.
+1. **The friend's message in S6:** shown as text on Alex's phone. Is a friend existing off-screen OK?
+2. **Disclaimer wording:** the house rule is "Educational only, not financial advice" at the start and end, and in the description. Your prompt adds "Example only, not financial advice" for budget scenes. I've planned both.
+3. **Frame rate:** your prompt says 24 fps; the main pipeline's config uses 30. I'll follow your 24.
