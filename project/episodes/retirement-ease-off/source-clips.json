@@ -1,0 +1,34 @@
+[
+  {
+    "clip": "present_palm_left",
+    "duration": 10.005,
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  {
+    "clip": "nod_yes",
+    "duration": 10.005,
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  {
+    "clip": "shake_no",
+    "duration": 10.005,
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  {
+    "clip": "thinking",
+    "duration": 10.005,
+    "resolution": [
+      1280,
+      720
+    ]
+  }
+]

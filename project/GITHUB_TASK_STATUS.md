@@ -1,35 +1,17 @@
 # Ren GitHub task status
 
-Saved GitHub checkpoint, not the Android app's live progress indicator.
-Last reviewed: 29 October 2026.
+Task: When Can You Ease Off Saving for Retirement?
+Branch: `codex/retirement-ease-off-v3`.
+Stage: script and voice checkpoint prepared; opening generation next.
 
-| Item | Verified state |
-| --- | --- |
-| Task | Ren v3 handover and character-sharpness correction |
-| Branch | `codex/ren-approved-v3` |
-| Publishing | Complete |
-| Last verified content commit | [bb7688c](https://github.com/jon8778-source/Ren/commit/bb7688c011f31326a32484b1805db228ff981631) |
-| Character correction | Decode original 1280×720 source; removed 640×360 reduction |
-| Renderer | Published version matches the tested source |
-| Artwork and voice | Approved originals preserved; no generation requests |
-| Validation | 19 shots; 1,479 frames at 24 fps; full decode passed; equations and audio passed |
-| Visual review | All shot midpoints and a same-frame close-up comparison at 100% size |
-| Remaining task work | None |
-| Main | Unchanged |
-| Android display | Stale progress reported; client-side cause not confirmed or patched |
+Completed: inspected remote approved v3 implementation, preserved prototype originals,
+saved exact owner narration (980 whitespace-delimited words), 14 independent voice
+segments, shared assumptions, calculation checks, source clip probes and resumable
+voice adapter. HF_TOKEN available; value never logged.
 
-[Open renderer and instructions](https://github.com/jon8778-source/Ren/tree/codex/ren-approved-v3/project/prototypes/coffee-minute-v3)
+Remaining: primary-source record, opening technical check, preview, remaining voice,
+episode shots/graphics, full render and per-shot/full-decode/visual validation.
+No completed episode video yet. No merge or changes to main.
 
-[Play corrected sharp-character MP4](https://chatgpt.com/library?file_id=libfile_13029d9f00c08191982a1efc87f348c7&account_id=personal)
-
-[Current validation evidence](prototypes/coffee-minute-v3/validation.json)
-
-[Historical approved baseline](prototypes/coffee-minute-v3/validation-approved-baseline.json)
-
-## Publishing safeguards
-
-AGENTS.md directs future Ren tasks to use
-[GITHUB_TASK_WORKFLOW.md](GITHUB_TASK_WORKFLOW.md): smaller writes, committed
-checkpoints, remote verification and recovery from the first missing item.
-These safeguards are published. They do not change the Android app or guarantee
-live app sync. This page updates only when a task explicitly commits an update.
+Starting v3 content commit: bb7688c011f31326a32484b1805db228ff981631.
+Source checkpoints will be verified remotely before reporting completion.

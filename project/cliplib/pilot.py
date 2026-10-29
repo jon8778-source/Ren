@@ -236,7 +236,7 @@ def quota_decrease(before, after):
     return difference if same_window and difference >= 0 else None
 
 
-def resume(folder, publish):
+def resume(folder, publish, max_segments=None):
     from gradio_client import Client, handle_file
     from huggingface_hub import HfApi
     manifest = load(folder)
@@ -257,6 +257,7 @@ def resume(folder, publish):
         raise ValueError('Upstream Space revision changed; inspect model/defaults before approving further generation')
     manifest['space_revision'] = revision
     client = None
+    generated_count = 0
     for s in manifest['segments']:
         if s['status'] == 'complete':
             continue
@@ -351,6 +352,11 @@ def resume(folder, publish):
             print(f"STOPPED at {s['id']}: {attempt.get('error')}; no retry", flush=True)
             return
         print(f"Saved {s['id']}: {s['validation']['duration_s']:.3f}s; listening review pending", flush=True)
+        generated_count += 1
+        if max_segments is not None and generated_count >= max_segments:
+            manifest['overall_status'] = 'generation_batch_checkpoint'
+            checkpoint(folder, manifest, publish)
+            return
     manifest['overall_status'] = 'narration_generated_review_pending'
     checkpoint(folder, manifest, publish)
 

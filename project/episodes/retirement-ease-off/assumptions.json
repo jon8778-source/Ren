@@ -1,0 +1,17 @@
+{
+  "current_age": 40,
+  "retirement_age": 65,
+  "years": 25,
+  "starting_balance": 400000,
+  "new_contributions": 0,
+  "illustrative_target": 1000000,
+  "real_returns_after_fees": [
+    0.04,
+    0.02
+  ],
+  "compounding": "annual",
+  "contribution_reduction": 500,
+  "currency_basis": "today\u2019s purchasing power",
+  "withdrawal_taxes": "excluded",
+  "guaranteed": false
+}

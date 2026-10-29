@@ -1,0 +1,7 @@
+example.years == 25 | Forty to sixty-five is twenty-five years.
+round(example.scenario_a) == 1066335 | Four percent real annual return gives approximately $1,066,335.
+round(example.scenario_b) == 656242 | Two percent real annual return gives approximately $656,242.
+round(example.scenario_a / 10000) / 100 == 1.07 | Spoken scenario A rounding is $1.07 million.
+round(example.scenario_b / 1000) == 656 | Spoken scenario B rounding is $656 thousand.
+example.new_contributions == 0 | Both scenarios have no additional contributions.
+example.illustrative_target == 1000000 | Target is illustrative, not a spending entitlement.

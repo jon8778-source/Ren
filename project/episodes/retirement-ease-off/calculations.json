@@ -1,0 +1,16 @@
+{
+  "assumptions_sha256": "165a7e0c48d84244b76442f4f22f1f791cca9b10984469fc5a4a0f9a31a45ab1",
+  "outcomes": [
+    1066334.5325949688,
+    656242.3977858922
+  ],
+  "displayed_outcomes": [
+    1066335,
+    656242
+  ],
+  "spoken_rounding": [
+    "roughly one point zero seven million",
+    "roughly six hundred and fifty-six thousand"
+  ],
+  "status": "MATHS OK"
+}

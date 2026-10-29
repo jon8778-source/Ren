@@ -1,0 +1,8 @@
+.cache/
+build/
+review/
+processed/
+deliverables/
+.workflow.lock
+*.tmp
+__pycache__/

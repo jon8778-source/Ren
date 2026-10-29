@@ -1,0 +1,326 @@
+{
+  "schema": 1,
+  "title": "When Can You Ease Off Saving for Retirement?",
+  "created_at": "2026-10-29T19:51:07.561844+00:00",
+  "script_sha256": "3a167fb73b67dc4b9057f5a253661ad8b02284c873f4114748483a7c1beef999",
+  "settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "target_duration_s": [
+    420,
+    450
+  ],
+  "maximum_duration_s": 480,
+  "segments": [
+    {
+      "id": "s001",
+      "title": "Passage 1",
+      "text": "You finally book the trip. Then, before the confirmation email even arrives, you calculate what that money could have become if you\u2019d invested it instead. Congratulations. Your vacation now has a retirement penalty.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "a12808794e00fef3e20dbe25b3dac259df88312a9ebc52b3c44970c7113e9fb5",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s002",
+      "title": "Passage 2",
+      "text": "I\u2019m Ren. And today we\u2019re asking a question that responsible savers don\u2019t always feel allowed to ask: When can you ease off saving for retirement? Because \u201csave more\u201d is useful advice when you\u2019re getting started. But if there\u2019s never a point where you can ease up, what exactly are you working toward? The answer needs more than reassurance. It needs a plan that can survive a little disappointment. Let\u2019s build one. First, there are three very different things people mean by easing off.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "f4ca8c0e934458dbd6509d67449f78b23572cafd9e937fe69136205934d0662c",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s003",
+      "title": "Passage 3",
+      "text": "Saving a little less. Stopping new retirement contributions. And retiring altogether. Those require very different amounts of money. You might have enough invested to reduce contributions while continuing to work for another twenty years. That doesn\u2019t mean you can quit next Tuesday. Your paycheck still needs to cover your life. And your investments still need time. The idea that your existing investments could grow enough to fund a later retirement is often called Coast FIRE.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "b06c38e11d6a8c9707f71ce7f23dd8ec567d0a62513ff8f04c4e998eb3339275",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s004",
+      "title": "Passage 4",
+      "text": "Useful idea. Dangerous if you treat a projection like a promise. Here\u2019s a made-up example. You\u2019re forty, aiming to retire at sixty-five, with four hundred thousand dollars invested for retirement. Suppose a separate spending plan suggests you need one million dollars invested when you retire, measured in today\u2019s purchasing power. That target is just for this example; it isn\u2019t a universal retirement number.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "56cba5dceede5cf27aa644db17351e1b70d1858b389d7240faa206ffb3ef3f34",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s005",
+      "title": "Passage 5",
+      "text": "If your investments grow by four percent a year after inflation and fees, that four hundred thousand could become roughly one point zero seven million over twenty-five years, with no new contributions. That looks like permission to stop. But change the assumed growth to two percent after inflation and fees, and you finish with roughly six hundred and fifty-six thousand dollars. Same starting money. Same retirement date. Very different ending.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "a3f434b8a94165142a442eaeb075585a45a2dd804fd15aa920b7506f98f24ff3",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s006",
+      "title": "Passage 6",
+      "text": "Neither rate is a forecast. These are simplified calculations, and real markets won\u2019t deliver the same return every year. The lesson is that your answer depends heavily on the assumptions you put into the calculator. So before you reduce anything, ask three questions. First: have I actually priced the retirement I want? \u201cA million dollars sounds good\u201d is a feeling. A retirement budget is a plan. Think about housing, food, taxes, health insurance, travel, and the expenses that arrive occasionally but expensively.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "2ea56dcea0da3f6d1c73edbab9a0e179ea8cd8e65e7f9360fe0f64b26cc6b12d",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s007",
+      "title": "Passage 7",
+      "text": "A paid-off mortgage doesn\u2019t pay your property taxes or replace your roof. Then estimate what Social Security or other dependable income could cover, and when it begins. Your investments need to cover the remaining gap. If you want to retire early, include the years before those payments start, plus how you\u2019ll fund spending before retirement accounts are readily accessible. And keep inflation consistent. A target expressed in today\u2019s dollars needs growth assumptions that account for inflation too.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "ab59656590cd70838a31560b1fb08313bbaecef215ba22fd3a7286ecce197136",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s008",
+      "title": "Passage 8",
+      "text": "Second: does the plan still work when life is less cooperative? Try lower returns. Higher spending. A longer retirement. A period when you can\u2019t contribute. If one slightly worse assumption breaks everything, you haven\u2019t found much room to ease off yet. And check your position outside retirement accounts. Do you have an emergency reserve? Is expensive debt under control? Would one broken furnace send you straight to a credit card? Retirement progress matters. So does being financially stable this year.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "bc50b530f0c54fdc50e08d8091f30682b8ec6001d5de457434717551969a10e0",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s009",
+      "title": "Passage 9",
+      "text": "Third: what would saving less actually give me? This is where the spreadsheet needs to meet your life. Maybe it buys a family trip while your parents can join you. Maybe it pays for help at home, or gives you room to work fewer hours. Or maybe it disappears into subscriptions you forget you have. You\u2019re deciding what the next dollar is for. Give it a specific job.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "2b89f2d39b3649e0e326dfd28433ff445b7baff4b0511f689a67ffbb6ebec75f",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s010",
+      "title": "Passage 10",
+      "text": "Also, reducing a pre-tax 401(k) contribution by five hundred dollars won\u2019t usually put five hundred dollars into your spending account. Taxes take a share. Check the actual change in take-home pay before making plans. Here\u2019s how I\u2019d turn those answers into a decision. Run your current contribution level through a retirement planner. Then run a lower level through the same assumptions, including the less favorable scenarios. What changes? Your retirement date? Your future spending? Your margin for error?",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "61cfdf37175e2756f1273e57cc47e7ded76dbb5e9e15a97a6410c29f1c4e2cae",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s011",
+      "title": "Passage 11",
+      "text": "You might discover that a modest reduction still supports your goal. Or that the trade-off costs more future freedom than you want to give up. Either answer is useful. If you do reduce contributions, consider keeping enough to capture your employer\u2019s full match, if offered, and check the plan\u2019s rules and vesting conditions. Then try a measured reduction rather than treating this as a permanent switch. Choose the amount. Decide where the extra take-home pay goes. Put a review date on the calendar.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "9071998531413aeeb3f71cea7125d069ece1c1d005ec8ca22af2a3fbc00a0be2",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s012",
+      "title": "Passage 12",
+      "text": "Revisit the plan each year, and after major changes in income, family circumstances, or retirement goals. If the outlook deteriorates materially, be willing to save more, spend less, or adjust the date. That\u2019s a decision you can manage. The hardest part may still be emotional. After years of watching your balance rise, saving can become the thing that makes you feel safe. Spending feels like undoing your progress, even when you planned for it.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "cff6a0bced2b8d8b2c2bd486695295a18792201ce8a9d5a627079ecad5155313",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s013",
+      "title": "Passage 13",
+      "text": "But every purchase can be compared with decades of hypothetical investment growth. Follow that thought far enough, and you can talk yourself out of almost anything. Future you deserves security. Present you deserves a place in the budget too. So when can you ease off? When a realistic plan shows that lower contributions can still support your retirement, with room for setbacks, and you understand what you\u2019re choosing in return. You don\u2019t have to stop saving to start enjoying what saving has made possible.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "c3c593667cd6d2b9d68a3357e574028f133576694f440bddda15a2d05d25e21b",
+      "status": "pending",
+      "attempts": []
+    },
+    {
+      "id": "s014",
+      "title": "Passage 14",
+      "text": "What would you make room for if you knew you were on track? Tell me in the comments. I\u2019m Ren. Let\u2019s make money matter to the life we actually want.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "907ad87b701ca070a3269829150655bf98b34542bc4fb47cc5bbcdcce972b0a2",
+      "status": "pending",
+      "attempts": []
+    }
+  ],
+  "quota_events": [],
+  "overall_status": "prepared",
+  "free_reserve_gpu_seconds": 120,
+  "hardware_policy": "public ZeroGPU only; no paid fallback or overquota",
+  "voice_provenance": "Approved v3 rules and identical daily-coffee settings/reference hashes",
+  "updated_at": "2026-10-29T19:51:07.562115+00:00"
+}
