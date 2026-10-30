@@ -126,5 +126,708 @@
   "duration_s": 1.96,
   "wpm": 153,
   "problems": []
+ },
+ "S3_01.wav": {
+  "text": "Then the trip came up again.",
+  "heard": "Then the trip came up again.",
+  "match": 1.0,
+  "duration_s": 1.39,
+  "wpm": 258,
+  "problems": [
+   "fast (258 wpm)"
+  ]
+ },
+ "S3_02.wav": {
+  "text": "Alex opened his accounts.",
+  "heard": "Alex opened his accounts.",
+  "match": 1.0,
+  "duration_s": 1.51,
+  "wpm": 159,
+  "problems": []
+ },
+ "S3_03.wav": {
+  "text": "He could afford it now. But he’d just hit a savings milestone, and spending any of it felt like going backward.",
+  "heard": "He could afford it now, but he just hit a savings milestone and spending any of it felt like going backward.",
+  "match": 0.95,
+  "duration_s": 5.5,
+  "wpm": 218,
+  "problems": [
+   "words differ"
+  ]
+ },
+ "S3_04.wav": {
+  "text": "“Let me get a little more comfortable first.”",
+  "heard": "Let me get a little more comfortable first.",
+  "match": 1.0,
+  "duration_s": 2.12,
+  "wpm": 227,
+  "problems": []
+ },
+ "S3_05.wav": {
+  "text": "So the photo stayed on the fridge.",
+  "heard": "so the photos stayed on the fridge.",
+  "match": 0.857,
+  "duration_s": 1.79,
+  "wpm": 234,
+  "problems": [
+   "words differ",
+   "fast (234 wpm)"
+  ]
+ },
+ "S3_06.wav": {
+  "text": "Another year passed. Alex got a raise.",
+  "heard": "Another year passed, Alex got a raise.",
+  "match": 1.0,
+  "duration_s": 2.48,
+  "wpm": 170,
+  "problems": []
+ },
+ "S3_07.wav": {
+  "text": "Then he raised his savings target.",
+  "heard": "Then he raised his savings target.",
+  "match": 1.0,
+  "duration_s": 1.65,
+  "wpm": 219,
+  "problems": []
+ },
+ "S3_08.wav": {
+  "text": "The new target wasn’t unreasonable. Neither was the one after that.",
+  "heard": "The new target wasn't unreasonable, neither was the one after that.",
+  "match": 1.0,
+  "duration_s": 3.07,
+  "wpm": 215,
+  "problems": []
+ },
+ "S3_09.wav": {
+  "text": "But something was happening.",
+  "heard": "But something was happening.",
+  "match": 1.0,
+  "duration_s": 1.24,
+  "wpm": 194,
+  "problems": []
+ },
+ "S3_10.wav": {
+  "text": "Whenever his finances improved, the definition of “ready” improved with them.",
+  "heard": "Whenever his finances improved, the definition of ready improved with them.",
+  "match": 1.0,
+  "duration_s": 4.16,
+  "wpm": 159,
+  "problems": []
+ },
+ "S3_11.wav": {
+  "text": "His mountain had developed a moving summit.",
+  "heard": "His mountain had developed a moving summit.",
+  "match": 1.0,
+  "duration_s": 2.45,
+  "wpm": 172,
+  "problems": []
+ },
+ "S4_01.wav": {
+  "text": "One evening, he caught himself looking at cabins again.",
+  "heard": "One evening he caught himself looking at cabins again.",
+  "match": 1.0,
+  "duration_s": 2.88,
+  "wpm": 188,
+  "problems": []
+ },
+ "S4_02.wav": {
+  "text": "Same website. Same mountains. Different prices.",
+  "heard": "Same website, same mountains, different prices.",
+  "match": 1.0,
+  "duration_s": 3.03,
+  "wpm": 119,
+  "problems": []
+ },
+ "S4_03.wav": {
+  "text": "So he asked himself, “What would have to happen for me to actually book this?”",
+  "heard": "So he asked himself, what would have to happen for me to actually book this?",
+  "match": 1.0,
+  "duration_s": 3.66,
+  "wpm": 246,
+  "problems": [
+   "fast (246 wpm)"
+  ]
+ },
+ "S4_04.wav": {
+  "text": "He started listing numbers.",
+  "heard": "He started listing numbers.",
+  "match": 1.0,
+  "duration_s": 1.38,
+  "wpm": 174,
+  "problems": []
+ },
+ "S4_05.wav": {
+  "text": "Then he stopped.",
+  "heard": "Then he stopped.",
+  "match": 1.0,
+  "duration_s": 0.76,
+  "wpm": 237,
+  "problems": [
+   "fast (237 wpm)"
+  ]
+ },
+ "S4_06.wav": {
+  "text": "“And if I reach those numbers, will I feel comfortable spending it?”",
+  "heard": "And if I reach those numbers will I feel comfortable spending it?",
+  "match": 1.0,
+  "duration_s": 2.88,
+  "wpm": 229,
+  "problems": []
+ },
+ "S4_07.wav": {
+  "text": "He didn’t have an answer straight away.",
+  "heard": "He didn't have an answer straight away.",
+  "match": 1.0,
+  "duration_s": 1.64,
+  "wpm": 255,
+  "problems": [
+   "fast (255 wpm)"
+  ]
+ },
+ "S4_08.wav": {
+  "text": "Because he wasn’t sure.",
+  "heard": "because he wasn't sure.",
+  "match": 1.0,
+  "duration_s": 1.23,
+  "wpm": 195,
+  "problems": []
+ },
+ "S5_01.wav": {
+  "text": "Let’s pause his story here.",
+  "heard": "Let's pause his story here.",
+  "match": 1.0,
+  "duration_s": 1.42,
+  "wpm": 211,
+  "problems": []
+ },
+ "S5_02.wav": {
+  "text": "Alex isn’t foolish. He remembers when a car repair became a crisis, and money in the bank means options.",
+  "heard": "Alex isn't foolish. He remembers when a car repair became a crisis and money in the bank means options.",
+  "match": 1.0,
+  "duration_s": 5.83,
+  "wpm": 185,
+  "problems": []
+ },
+ "S5_03.wav": {
+  "text": "But he’s started treating every planned expense like the start of another emergency.",
+  "heard": "But he started treating every planned expense like the start of another emergency.",
+  "match": 0.923,
+  "duration_s": 3.99,
+  "wpm": 196,
+  "problems": [
+   "words differ"
+  ]
+ },
+ "S5_04.wav": {
+  "text": "He knows how to save for the trip.",
+  "heard": "He knows how to save for the trip.",
+  "match": 1.0,
+  "duration_s": 1.57,
+  "wpm": 305,
+  "problems": [
+   "fast (305 wpm)"
+  ]
+ },
+ "S5_05.wav": {
+  "text": "He hasn’t worked out how to give himself permission to take it.",
+  "heard": "He hasn't worked out how to give himself permission to take it.",
+  "match": 1.0,
+  "duration_s": 2.86,
+  "wpm": 252,
+  "problems": [
+   "fast (252 wpm)"
+  ]
+ },
+ "S5_06.wav": {
+  "text": "And there’s something else.",
+  "heard": "and there's something else.",
+  "match": 1.0,
+  "duration_s": 1.03,
+  "wpm": 175,
+  "problems": []
+ },
+ "S5_07.wav": {
+  "text": "The trip itself has grown.",
+  "heard": "The trip itself has grown.",
+  "match": 1.0,
+  "duration_s": 1.58,
+  "wpm": 189,
+  "problems": []
+ },
+ "S5_08.wav": {
+  "text": "Two nights became a week. A simple cabin became the beautiful one with the huge windows.",
+  "heard": "Two nights became a week. A simple cabin became the beautiful one with the huge windows.",
+  "match": 1.0,
+  "duration_s": 4.98,
+  "wpm": 193,
+  "problems": []
+ },
+ "S5_09.wav": {
+  "text": "He wanted it to feel worth the wait.",
+  "heard": "He wanted it to feel worth the wait.",
+  "match": 1.0,
+  "duration_s": 1.73,
+  "wpm": 278,
+  "problems": [
+   "fast (278 wpm)"
+  ]
+ },
+ "S5_10.wav": {
+  "text": "But the bigger it gets, the more reluctant he becomes.",
+  "heard": "But the bigger it gets, the more reluctant he becomes.",
+  "match": 1.0,
+  "duration_s": 2.89,
+  "wpm": 208,
+  "problems": []
+ },
+ "S5_11.wav": {
+  "text": "Without meaning to, he’s making it harder to say yes.",
+  "heard": "Without meaning to, he's making it harder to say yes.",
+  "match": 1.0,
+  "duration_s": 2.93,
+  "wpm": 205,
+  "problems": []
+ },
+ "S6_01.wav": {
+  "text": "Then a friend sends him a picture.",
+  "heard": "Then a friend sends him a picture.",
+  "match": 1.0,
+  "duration_s": 1.37,
+  "wpm": 307,
+  "problems": [
+   "fast (307 wpm)"
+  ]
+ },
+ "S6_02.wav": {
+  "text": "A muddy trail. A sandwich. A view.",
+  "heard": "A muddy trail, a sandwich, a view.",
+  "match": 1.0,
+  "duration_s": 2.33,
+  "wpm": 181,
+  "problems": []
+ },
+ "S6_03.wav": {
+  "text": "“You’d love this. Only a couple of hours away.”",
+  "heard": "You'd love this, only a couple of hours away.",
+  "match": 1.0,
+  "duration_s": 2.56,
+  "wpm": 211,
+  "problems": []
+ },
+ "S6_04.wav": {
+  "text": "Alex’s first thought is, “It’s not really the trip I planned.”",
+  "heard": "Alex's first thought is, it's not really the trip I planned.",
+  "match": 1.0,
+  "duration_s": 3.29,
+  "wpm": 201,
+  "problems": []
+ },
+ "S6_05.wav": {
+  "text": "His second thought is, “I know. But what part am I waiting for?”",
+  "heard": "His second thought is, I know, but what part am I waiting for?",
+  "match": 1.0,
+  "duration_s": 3.46,
+  "wpm": 225,
+  "problems": []
+ },
+ "S6_06.wav": {
+  "text": "What he actually wants is a few days outside. Breakfast without checking work messages. Time that doesn’t involve deciding what needs fixing in the house.",
+  "heard": "What he actually wants is a few days outside, breakfast without checking work messages, time that doesn't involve deciding what needs fixing in the house.",
+  "match": 1.0,
+  "duration_s": 7.99,
+  "wpm": 188,
+  "problems": []
+ },
+ "S6_07.wav": {
+  "text": "The expensive cabin would be lovely.",
+  "heard": "The expensive cabin would be lovely.",
+  "match": 1.0,
+  "duration_s": 1.87,
+  "wpm": 193,
+  "problems": []
+ },
+ "S6_08.wav": {
+  "text": "But the things he wanted most came in a smaller size.",
+  "heard": "But the things he wanted most came in a smaller size.",
+  "match": 1.0,
+  "duration_s": 2.82,
+  "wpm": 234,
+  "problems": [
+   "fast (234 wpm)"
+  ]
+ },
+ "S7_01.wav": {
+  "text": "So he sits down with his budget.",
+  "heard": "so he sits down with his budget.",
+  "match": 1.0,
+  "duration_s": 1.72,
+  "wpm": 245,
+  "problems": [
+   "fast (245 wpm)"
+  ]
+ },
+ "S7_02.wav": {
+  "text": "This is the less cinematic part of the story. Nobody runs to the airport.",
+  "heard": "This is the less cinematic part of the story. Nobody runs to the airport.",
+  "match": 1.0,
+  "duration_s": 4.05,
+  "wpm": 208,
+  "problems": []
+ },
+ "S7_03.wav": {
+  "text": "There’s a spreadsheet.",
+  "heard": "There's a spreadsheet.",
+  "match": 1.0,
+  "duration_s": 0.95,
+  "wpm": 189,
+  "problems": []
+ },
+ "S7_04.wav": {
+  "text": "Alex is delighted.",
+  "heard": "Alex is delighted.",
+  "match": 1.0,
+  "duration_s": 1.2,
+  "wpm": 150,
+  "problems": []
+ },
+ "S7_05.wav": {
+  "text": "He checks his bills and goals, and settles on an amount he can spend without borrowing or touching the emergency fund.",
+  "heard": "He checks his bills and goals and settles on an amount he can spend without borrowing or touching the emergency fund.",
+  "match": 1.0,
+  "duration_s": 6.14,
+  "wpm": 186,
+  "problems": []
+ },
+ "S7_06.wav": {
+  "text": "Then he prices the whole weekend. Somewhere to stay. Gas. Food. Park fees. A little extra for whatever he’s forgotten.",
+  "heard": "Then he prices the whole weekend, somewhere to stay, gas, food, park fees, a little extra for whatever he's forgotten.",
+  "match": 1.0,
+  "duration_s": 7.27,
+  "wpm": 165,
+  "problems": []
+ },
+ "S7_07.wav": {
+  "text": "Two nights nearby. Packed lunches. No fancy cabin.",
+  "heard": "Two nights nearby, packed lunches, no fancy cabin.",
+  "match": 1.0,
+  "duration_s": 3.49,
+  "wpm": 138,
+  "problems": []
+ },
+ "S7_08.wav": {
+  "text": "There’s still a trade-off. That money won’t be saved or invested.",
+  "heard": "there's still a trade-off that money won't be saved or invested.",
+  "match": 1.0,
+  "duration_s": 3.39,
+  "wpm": 212,
+  "problems": []
+ },
+ "S7_09.wav": {
+  "text": "He decides the weekend is worth that cost.",
+  "heard": "He decides the weekend is worth that cost.",
+  "match": 1.0,
+  "duration_s": 2.36,
+  "wpm": 203,
+  "problems": []
+ },
+ "S8_01.wav": {
+  "text": "Then the hardest part.",
+  "heard": "then the hardest part.",
+  "match": 1.0,
+  "duration_s": 1.05,
+  "wpm": 228,
+  "problems": []
+ },
+ "S8_02.wav": {
+  "text": "Alex clicks “book.”",
+  "heard": "Alex clicks book.",
+  "match": 1.0,
+  "duration_s": 1.11,
+  "wpm": 162,
+  "problems": []
+ },
+ "S8_03.wav": {
+  "text": "He feels excited for about three seconds.",
+  "heard": "He feels excited for about 3 seconds.",
+  "match": 0.857,
+  "duration_s": 2.28,
+  "wpm": 184,
+  "problems": [
+   "words differ"
+  ]
+ },
+ "S8_04.wav": {
+  "text": "Then he thinks about canceling.",
+  "heard": "Then he thinks about canceling.",
+  "match": 1.0,
+  "duration_s": 1.64,
+  "wpm": 183,
+  "problems": []
+ },
+ "S8_05.wav": {
+  "text": "He doesn’t tell himself he’s being ridiculous. He just looks at the plan again.",
+  "heard": "He doesn't tell himself he's being ridiculous. He just looks at the plan again.",
+  "match": 1.0,
+  "duration_s": 3.9,
+  "wpm": 215,
+  "problems": []
+ },
+ "S8_06.wav": {
+  "text": "Bills covered. Savings on track. Nothing has changed in five minutes.",
+  "heard": "Bills covered, savings on track. Nothing has changed in five minutes.",
+  "match": 1.0,
+  "duration_s": 4.06,
+  "wpm": 163,
+  "problems": []
+ },
+ "S8_07.wav": {
+  "text": "The discomfort is real.",
+  "heard": "The discomfort is real.",
+  "match": 1.0,
+  "duration_s": 1.4,
+  "wpm": 172,
+  "problems": []
+ },
+ "S8_08.wav": {
+  "text": "It just isn’t evidence that booking was a mistake.",
+  "heard": "It just isn't evidence that booking was a mistake.",
+  "match": 1.0,
+  "duration_s": 2.65,
+  "wpm": 204,
+  "problems": []
+ },
+ "S9_01.wav": {
+  "text": "Now, if your budget has no room right now, your version of this story looks different.",
+  "heard": "Now, if your budget has no room right now, your version of this story looks different.",
+  "match": 1.0,
+  "duration_s": 4.79,
+  "wpm": 200,
+  "problems": []
+ },
+ "S9_02.wav": {
+  "text": "You might be in the part where Alex needed to wait.",
+  "heard": "You might be in the part where Alex needed to wait.",
+  "match": 1.0,
+  "duration_s": 2.38,
+  "wpm": 277,
+  "problems": [
+   "fast (277 wpm)"
+  ]
+ },
+ "S9_03.wav": {
+  "text": "That deserves respect.",
+  "heard": "That deserves respect.",
+  "match": 1.0,
+  "duration_s": 1.23,
+  "wpm": 146,
+  "problems": []
+ },
+ "S9_04.wav": {
+  "text": "A local walk, a free event, or an afternoon with someone you care about can still give you something to look forward to.",
+  "heard": "A local walk, a free event, or an afternoon with someone you care about can still give you something to look forward to.",
+  "match": 1.0,
+  "duration_s": 6.12,
+  "wpm": 225,
+  "problems": []
+ },
+ "S10_01.wav": {
+  "text": "Alex finally takes his weekend.",
+  "heard": "Alex finally takes his weekend.",
+  "match": 1.0,
+  "duration_s": 1.89,
+  "wpm": 159,
+  "problems": []
+ },
+ "S10_02.wav": {
+  "text": "It rains on the first morning.",
+  "heard": "It rains on the first morning.",
+  "match": 1.0,
+  "duration_s": 1.51,
+  "wpm": 239,
+  "problems": [
+   "fast (239 wpm)"
+  ]
+ },
+ "S10_03.wav": {
+  "text": "He forgets the coffee.",
+  "heard": "He forgets the coffee.",
+  "match": 1.0,
+  "duration_s": 1.18,
+  "wpm": 203,
+  "problems": []
+ },
+ "S10_04.wav": {
+  "text": "He takes a photo of himself staring into an empty mug like he’s just received terrible financial news.",
+  "heard": "He takes a photo of himself staring into an empty mug like he's just received terrible financial news.",
+  "match": 1.0,
+  "duration_s": 5.44,
+  "wpm": 199,
+  "problems": []
+ },
+ "S10_05.wav": {
+  "text": "He walks. He gets briefly lost. He eats a slightly flattened sandwich.",
+  "heard": "He walks. He gets briefly lost. He eats a slightly flattened sandwich.",
+  "match": 1.0,
+  "duration_s": 4.77,
+  "wpm": 151,
+  "problems": []
+ },
+ "S10_06.wav": {
+  "text": "And he thinks about something other than work, bills, or when he’ll finally go away.",
+  "heard": "and he thinks about something other than work, bills, or when he'll finally go away.",
+  "match": 1.0,
+  "duration_s": 4.64,
+  "wpm": 181,
+  "problems": []
+ },
+ "S11_01.wav": {
+  "text": "When he gets home, the mountain photo stays on the fridge. He still wants the bigger trip.",
+  "heard": "When he gets home, the mountain photo stays on the fridge. He still wants the bigger trip.",
+  "match": 1.0,
+  "duration_s": 4.58,
+  "wpm": 223,
+  "problems": []
+ },
+ "S11_02.wav": {
+  "text": "But next to it, he puts a photo from his weekend.",
+  "heard": "but next to it, he puts a photo from his weekend.",
+  "match": 1.0,
+  "duration_s": 2.61,
+  "wpm": 253,
+  "problems": [
+   "fast (253 wpm)"
+  ]
+ },
+ "S11_03.wav": {
+  "text": "He has mud on his jeans. He doesn’t look particularly glamorous.",
+  "heard": "He has mud on his jeans, he doesn't look particularly glamorous.",
+  "match": 1.0,
+  "duration_s": 3.51,
+  "wpm": 188,
+  "problems": []
+ },
+ "S11_04.wav": {
+  "text": "He looks happy.",
+  "heard": "He looks happy.",
+  "match": 1.0,
+  "duration_s": 0.82,
+  "wpm": 219,
+  "problems": []
+ },
+ "S11_05.wav": {
+  "text": "A month later, he reviews his finances. Some things still need attention. One weekend didn’t fix everything.",
+  "heard": "A month later he reviews his finances. Some things still need attention. One weekend didn't fix everything.",
+  "match": 1.0,
+  "duration_s": 5.84,
+  "wpm": 175,
+  "problems": []
+ },
+ "S11_06.wav": {
+  "text": "But he stuck to the plan.",
+  "heard": "But he stuck to the plan.",
+  "match": 1.0,
+  "duration_s": 1.33,
+  "wpm": 270,
+  "problems": [
+   "fast (270 wpm)"
+  ]
+ },
+ "S11_07.wav": {
+  "text": "And Alex has something he didn’t have before: proof that he can spend on purpose and still be a responsible saver.",
+  "heard": "and Alex has something he didn't have before, proof that he can spend on purpose and still be a responsible saver.",
+  "match": 1.0,
+  "duration_s": 6.26,
+  "wpm": 182,
+  "problems": []
+ },
+ "S12_01.wav": {
+  "text": "So here’s my challenge.",
+  "heard": "So here's my challenge.",
+  "match": 1.0,
+  "duration_s": 1.25,
+  "wpm": 191,
+  "problems": []
+ },
+ "S12_02.wav": {
+  "text": "Pick one thing you keep postponing.",
+  "heard": "Pick one thing you keep postponing.",
+  "match": 1.0,
+  "duration_s": 1.83,
+  "wpm": 197,
+  "problems": []
+ },
+ "S12_03.wav": {
+  "text": "Ask what you actually want from it.",
+  "heard": "Ask what you actually want from it.",
+  "match": 1.0,
+  "duration_s": 1.67,
+  "wpm": 252,
+  "problems": [
+   "fast (252 wpm)"
+  ]
+ },
+ "S12_04.wav": {
+  "text": "Then find a version that fits your money, your time, and your life as it is now.",
+  "heard": "Then find a version that fits your money, your time, and your life as it is now.",
+  "match": 1.0,
+  "duration_s": 4.92,
+  "wpm": 195,
+  "problems": []
+ },
+ "S12_05.wav": {
+  "text": "Maybe you book it. Maybe you set a date and start saving toward it. Maybe you make the phone call that costs nothing.",
+  "heard": "Maybe you book it, maybe you set a date and start saving toward it, maybe you make the phone call that costs nothing.",
+  "match": 1.0,
+  "duration_s": 5.64,
+  "wpm": 234,
+  "problems": [
+   "fast (234 wpm)"
+  ]
+ },
+ "S12_06.wav": {
+  "text": "Just give “someday” a next step.",
+  "heard": "Just give someday a next step.",
+  "match": 1.0,
+  "duration_s": 1.72,
+  "wpm": 210,
+  "problems": []
+ },
+ "S12_07.wav": {
+  "text": "Alex’s fridge used to show him a place he wanted to go.",
+  "heard": "Alex's fridge used to show him a place he wanted to go.",
+  "match": 1.0,
+  "duration_s": 2.97,
+  "wpm": 243,
+  "problems": [
+   "fast (243 wpm)"
+  ]
+ },
+ "S12_08.wav": {
+  "text": "Now it also shows him somewhere he’s been.",
+  "heard": "Now it also shows him somewhere he's been.",
+  "match": 1.0,
+  "duration_s": 2.01,
+  "wpm": 239,
+  "problems": [
+   "fast (239 wpm)"
+  ]
+ },
+ "S12_09.wav": {
+  "text": "What’s still sitting on your fridge? Tell me in the comments.",
+  "heard": "What's still sitting on your fridge? Tell me in the comments.",
+  "match": 1.0,
+  "duration_s": 3.19,
+  "wpm": 207,
+  "problems": []
+ },
+ "S12_10.wav": {
+  "text": "I’m Ren. Subscribe for more on building wealth and making room for the life it’s meant to support.",
+  "heard": "I'm Wren, subscribe for more on building wealth and making room for the life it's meant to support.",
+  "match": 0.941,
+  "duration_s": 5.28,
+  "wpm": 193,
+  "problems": [
+   "words differ"
+  ]
  }
 }

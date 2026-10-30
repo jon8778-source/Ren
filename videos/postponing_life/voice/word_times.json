@@ -1,4 +1,269 @@
 {
+ "S1_01": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "has",
+   "start": 0.3,
+   "end": 0.52
+  },
+  {
+   "word": "a",
+   "start": 0.52,
+   "end": 0.7
+  },
+  {
+   "word": "photo",
+   "start": 0.7,
+   "end": 0.94
+  },
+  {
+   "word": "of",
+   "start": 0.94,
+   "end": 1.12
+  },
+  {
+   "word": "a",
+   "start": 1.12,
+   "end": 1.26
+  },
+  {
+   "word": "mountain",
+   "start": 1.26,
+   "end": 1.58
+  },
+  {
+   "word": "taped",
+   "start": 1.58,
+   "end": 1.98
+  },
+  {
+   "word": "to",
+   "start": 1.98,
+   "end": 2.2
+  },
+  {
+   "word": "his",
+   "start": 2.2,
+   "end": 2.32
+  },
+  {
+   "word": "fridge.",
+   "start": 2.32,
+   "end": 2.6
+  }
+ ],
+ "S1_02": [
+  {
+   "word": "He's",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "never",
+   "start": 0.26,
+   "end": 0.48
+  },
+  {
+   "word": "been",
+   "start": 0.48,
+   "end": 0.7
+  },
+  {
+   "word": "there.",
+   "start": 0.7,
+   "end": 0.9
+  }
+ ],
+ "S1_03": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.1
+  },
+  {
+   "word": "he's",
+   "start": 0.1,
+   "end": 0.36
+  },
+  {
+   "word": "researched",
+   "start": 0.36,
+   "end": 0.76
+  },
+  {
+   "word": "the",
+   "start": 0.76,
+   "end": 1.0
+  },
+  {
+   "word": "cabins,",
+   "start": 1.0,
+   "end": 1.38
+  },
+  {
+   "word": "compared",
+   "start": 1.5,
+   "end": 1.74
+  },
+  {
+   "word": "the",
+   "start": 1.74,
+   "end": 1.9
+  },
+  {
+   "word": "routes,",
+   "start": 1.9,
+   "end": 2.22
+  },
+  {
+   "word": "and",
+   "start": 2.52,
+   "end": 2.66
+  },
+  {
+   "word": "watched",
+   "start": 2.66,
+   "end": 2.96
+  },
+  {
+   "word": "a",
+   "start": 2.96,
+   "end": 3.12
+  },
+  {
+   "word": "man",
+   "start": 3.12,
+   "end": 3.26
+  },
+  {
+   "word": "on",
+   "start": 3.26,
+   "end": 3.46
+  },
+  {
+   "word": "YouTube",
+   "start": 3.46,
+   "end": 3.8
+  },
+  {
+   "word": "explain",
+   "start": 3.8,
+   "end": 4.26
+  },
+  {
+   "word": "which",
+   "start": 4.26,
+   "end": 4.5
+  },
+  {
+   "word": "hiking",
+   "start": 4.5,
+   "end": 4.88
+  },
+  {
+   "word": "socks",
+   "start": 4.88,
+   "end": 5.22
+  },
+  {
+   "word": "will",
+   "start": 5.22,
+   "end": 5.4
+  },
+  {
+   "word": "apparently",
+   "start": 5.4,
+   "end": 5.8
+  },
+  {
+   "word": "change",
+   "start": 5.8,
+   "end": 6.12
+  },
+  {
+   "word": "his",
+   "start": 6.12,
+   "end": 6.28
+  },
+  {
+   "word": "life.",
+   "start": 6.28,
+   "end": 6.52
+  }
+ ],
+ "S1_04": [
+  {
+   "word": "He's",
+   "start": 0.0,
+   "end": 0.22
+  },
+  {
+   "word": "been",
+   "start": 0.22,
+   "end": 0.32
+  },
+  {
+   "word": "ready",
+   "start": 0.32,
+   "end": 0.58
+  },
+  {
+   "word": "for",
+   "start": 0.58,
+   "end": 0.8
+  },
+  {
+   "word": "four",
+   "start": 0.8,
+   "end": 1.1
+  },
+  {
+   "word": "years.",
+   "start": 1.1,
+   "end": 1.42
+  }
+ ],
+ "S1_05": [
+  {
+   "word": "Every",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "year",
+   "start": 0.32,
+   "end": 0.62
+  },
+  {
+   "word": "Alex",
+   "start": 0.62,
+   "end": 0.92
+  },
+  {
+   "word": "says",
+   "start": 0.92,
+   "end": 1.16
+  },
+  {
+   "word": "the",
+   "start": 1.16,
+   "end": 1.34
+  },
+  {
+   "word": "same",
+   "start": 1.34,
+   "end": 1.56
+  },
+  {
+   "word": "thing.",
+   "start": 1.56,
+   "end": 1.8
+  }
+ ],
  "S1_06": [
   {
    "word": "Next",
@@ -39,6 +304,256 @@
    "word": "position.",
    "start": 1.34,
    "end": 1.76
+  }
+ ],
+ "S1_07": [
+  {
+   "word": "and",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "every",
+   "start": 0.18,
+   "end": 0.5
+  },
+  {
+   "word": "year,",
+   "start": 0.5,
+   "end": 0.88
+  },
+  {
+   "word": "he",
+   "start": 1.14,
+   "end": 1.26
+  },
+  {
+   "word": "has",
+   "start": 1.26,
+   "end": 1.48
+  },
+  {
+   "word": "a",
+   "start": 1.48,
+   "end": 1.64
+  },
+  {
+   "word": "reason.",
+   "start": 1.64,
+   "end": 1.88
+  }
+ ],
+ "S1_08": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "uncomfortable",
+   "start": 0.16,
+   "end": 0.64
+  },
+  {
+   "word": "part?",
+   "start": 0.64,
+   "end": 1.0
+  }
+ ],
+ "S1_09": [
+  {
+   "word": "Some",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "of",
+   "start": 0.18,
+   "end": 0.32
+  },
+  {
+   "word": "those",
+   "start": 0.32,
+   "end": 0.46
+  },
+  {
+   "word": "reasons",
+   "start": 0.46,
+   "end": 0.78
+  },
+  {
+   "word": "are",
+   "start": 0.78,
+   "end": 1.0
+  },
+  {
+   "word": "very",
+   "start": 1.0,
+   "end": 1.3
+  },
+  {
+   "word": "good.",
+   "start": 1.3,
+   "end": 1.52
+  }
+ ],
+ "S1_10": [
+  {
+   "word": "I'm",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "Ren,",
+   "start": 0.26,
+   "end": 0.52
+  },
+  {
+   "word": "and",
+   "start": 0.94,
+   "end": 1.14
+  },
+  {
+   "word": "this",
+   "start": 1.14,
+   "end": 1.28
+  },
+  {
+   "word": "is",
+   "start": 1.28,
+   "end": 1.38
+  },
+  {
+   "word": "a",
+   "start": 1.38,
+   "end": 1.52
+  },
+  {
+   "word": "story",
+   "start": 1.52,
+   "end": 1.82
+  },
+  {
+   "word": "about",
+   "start": 1.82,
+   "end": 2.02
+  },
+  {
+   "word": "what",
+   "start": 2.02,
+   "end": 2.32
+  },
+  {
+   "word": "happens",
+   "start": 2.32,
+   "end": 2.7
+  },
+  {
+   "word": "when",
+   "start": 2.7,
+   "end": 2.92
+  },
+  {
+   "word": "you",
+   "start": 2.92,
+   "end": 3.08
+  },
+  {
+   "word": "keep",
+   "start": 3.08,
+   "end": 3.26
+  },
+  {
+   "word": "postponing",
+   "start": 3.26,
+   "end": 3.86
+  },
+  {
+   "word": "the",
+   "start": 3.86,
+   "end": 4.04
+  },
+  {
+   "word": "life",
+   "start": 4.04,
+   "end": 4.26
+  },
+  {
+   "word": "you're",
+   "start": 4.26,
+   "end": 4.52
+  },
+  {
+   "word": "saving",
+   "start": 4.52,
+   "end": 4.72
+  },
+  {
+   "word": "for.",
+   "start": 4.72,
+   "end": 5.02
+  }
+ ],
+ "S2_01": [
+  {
+   "word": "When",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "that",
+   "start": 0.32,
+   "end": 0.5
+  },
+  {
+   "word": "photo",
+   "start": 0.5,
+   "end": 0.78
+  },
+  {
+   "word": "first",
+   "start": 0.78,
+   "end": 1.04
+  },
+  {
+   "word": "went",
+   "start": 1.04,
+   "end": 1.28
+  },
+  {
+   "word": "up,",
+   "start": 1.28,
+   "end": 1.56
+  },
+  {
+   "word": "his",
+   "start": 1.78,
+   "end": 1.9
+  },
+  {
+   "word": "car",
+   "start": 1.9,
+   "end": 2.16
+  },
+  {
+   "word": "had",
+   "start": 2.16,
+   "end": 2.34
+  },
+  {
+   "word": "just",
+   "start": 2.34,
+   "end": 2.52
+  },
+  {
+   "word": "broken",
+   "start": 2.52,
+   "end": 2.84
+  },
+  {
+   "word": "down.",
+   "start": 2.84,
+   "end": 3.14
   }
  ],
  "S2_02": [
@@ -123,6 +638,23 @@
    "end": 5.2
   }
  ],
+ "S2_03": [
+  {
+   "word": "So",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "he",
+   "start": 0.2,
+   "end": 0.34
+  },
+  {
+   "word": "waited.",
+   "start": 0.34,
+   "end": 0.64
+  }
+ ],
  "S2_04": [
   {
    "word": "He",
@@ -198,6 +730,4272 @@
    "word": "retirement.",
    "start": 4.62,
    "end": 5.04
+  }
+ ],
+ "S2_05": [
+  {
+   "word": "That",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "was",
+   "start": 0.2,
+   "end": 0.38
+  },
+  {
+   "word": "progress.",
+   "start": 0.38,
+   "end": 0.9
+  },
+  {
+   "word": "Waiting",
+   "start": 1.38,
+   "end": 1.54
+  },
+  {
+   "word": "helped.",
+   "start": 1.54,
+   "end": 1.82
+  }
+ ],
+ "S3_01": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "the",
+   "start": 0.2,
+   "end": 0.34
+  },
+  {
+   "word": "trip",
+   "start": 0.34,
+   "end": 0.56
+  },
+  {
+   "word": "came",
+   "start": 0.56,
+   "end": 0.78
+  },
+  {
+   "word": "up",
+   "start": 0.78,
+   "end": 0.98
+  },
+  {
+   "word": "again.",
+   "start": 0.98,
+   "end": 1.26
+  }
+ ],
+ "S3_02": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "opened",
+   "start": 0.32,
+   "end": 0.72
+  },
+  {
+   "word": "his",
+   "start": 0.72,
+   "end": 0.9
+  },
+  {
+   "word": "accounts.",
+   "start": 0.9,
+   "end": 1.24
+  }
+ ],
+ "S3_03": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "could",
+   "start": 0.12,
+   "end": 0.26
+  },
+  {
+   "word": "afford",
+   "start": 0.26,
+   "end": 0.52
+  },
+  {
+   "word": "it",
+   "start": 0.52,
+   "end": 0.7
+  },
+  {
+   "word": "now,",
+   "start": 0.7,
+   "end": 1.06
+  },
+  {
+   "word": "but",
+   "start": 1.24,
+   "end": 1.48
+  },
+  {
+   "word": "he",
+   "start": 1.48,
+   "end": 1.58
+  },
+  {
+   "word": "just",
+   "start": 1.58,
+   "end": 1.82
+  },
+  {
+   "word": "hit",
+   "start": 1.82,
+   "end": 2.06
+  },
+  {
+   "word": "a",
+   "start": 2.06,
+   "end": 2.28
+  },
+  {
+   "word": "savings",
+   "start": 2.28,
+   "end": 2.6
+  },
+  {
+   "word": "milestone",
+   "start": 2.6,
+   "end": 3.12
+  },
+  {
+   "word": "and",
+   "start": 3.12,
+   "end": 3.44
+  },
+  {
+   "word": "spending",
+   "start": 3.44,
+   "end": 3.78
+  },
+  {
+   "word": "any",
+   "start": 3.78,
+   "end": 4.06
+  },
+  {
+   "word": "of",
+   "start": 4.06,
+   "end": 4.22
+  },
+  {
+   "word": "it",
+   "start": 4.22,
+   "end": 4.36
+  },
+  {
+   "word": "felt",
+   "start": 4.36,
+   "end": 4.58
+  },
+  {
+   "word": "like",
+   "start": 4.58,
+   "end": 4.8
+  },
+  {
+   "word": "going",
+   "start": 4.8,
+   "end": 5.02
+  },
+  {
+   "word": "backward.",
+   "start": 5.02,
+   "end": 5.38
+  }
+ ],
+ "S3_04": [
+  {
+   "word": "Let",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "me",
+   "start": 0.18,
+   "end": 0.32
+  },
+  {
+   "word": "get",
+   "start": 0.32,
+   "end": 0.46
+  },
+  {
+   "word": "a",
+   "start": 0.46,
+   "end": 0.58
+  },
+  {
+   "word": "little",
+   "start": 0.58,
+   "end": 0.74
+  },
+  {
+   "word": "more",
+   "start": 0.74,
+   "end": 0.98
+  },
+  {
+   "word": "comfortable",
+   "start": 0.98,
+   "end": 1.4
+  },
+  {
+   "word": "first.",
+   "start": 1.4,
+   "end": 1.82
+  }
+ ],
+ "S3_05": [
+  {
+   "word": "so",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "the",
+   "start": 0.18,
+   "end": 0.36
+  },
+  {
+   "word": "photos",
+   "start": 0.36,
+   "end": 0.64
+  },
+  {
+   "word": "stayed",
+   "start": 0.64,
+   "end": 0.94
+  },
+  {
+   "word": "on",
+   "start": 0.94,
+   "end": 1.14
+  },
+  {
+   "word": "the",
+   "start": 1.14,
+   "end": 1.26
+  },
+  {
+   "word": "fridge.",
+   "start": 1.26,
+   "end": 1.54
+  }
+ ],
+ "S3_06": [
+  {
+   "word": "Another",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "year",
+   "start": 0.3,
+   "end": 0.52
+  },
+  {
+   "word": "passed,",
+   "start": 0.52,
+   "end": 1.02
+  },
+  {
+   "word": "Alex",
+   "start": 1.42,
+   "end": 1.66
+  },
+  {
+   "word": "got",
+   "start": 1.66,
+   "end": 1.92
+  },
+  {
+   "word": "a",
+   "start": 1.92,
+   "end": 2.04
+  },
+  {
+   "word": "raise.",
+   "start": 2.04,
+   "end": 2.3
+  }
+ ],
+ "S3_07": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.22
+  },
+  {
+   "word": "he",
+   "start": 0.22,
+   "end": 0.34
+  },
+  {
+   "word": "raised",
+   "start": 0.34,
+   "end": 0.62
+  },
+  {
+   "word": "his",
+   "start": 0.62,
+   "end": 0.8
+  },
+  {
+   "word": "savings",
+   "start": 0.8,
+   "end": 1.12
+  },
+  {
+   "word": "target.",
+   "start": 1.12,
+   "end": 1.5
+  }
+ ],
+ "S3_08": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "new",
+   "start": 0.14,
+   "end": 0.26
+  },
+  {
+   "word": "target",
+   "start": 0.26,
+   "end": 0.64
+  },
+  {
+   "word": "wasn't",
+   "start": 0.64,
+   "end": 1.06
+  },
+  {
+   "word": "unreasonable,",
+   "start": 1.06,
+   "end": 1.6
+  },
+  {
+   "word": "neither",
+   "start": 1.9,
+   "end": 2.08
+  },
+  {
+   "word": "was",
+   "start": 2.08,
+   "end": 2.26
+  },
+  {
+   "word": "the",
+   "start": 2.26,
+   "end": 2.4
+  },
+  {
+   "word": "one",
+   "start": 2.4,
+   "end": 2.54
+  },
+  {
+   "word": "after",
+   "start": 2.54,
+   "end": 2.82
+  },
+  {
+   "word": "that.",
+   "start": 2.82,
+   "end": 3.04
+  }
+ ],
+ "S3_09": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "something",
+   "start": 0.14,
+   "end": 0.44
+  },
+  {
+   "word": "was",
+   "start": 0.44,
+   "end": 0.66
+  },
+  {
+   "word": "happening.",
+   "start": 0.66,
+   "end": 0.98
+  }
+ ],
+ "S3_10": [
+  {
+   "word": "Whenever",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "his",
+   "start": 0.26,
+   "end": 0.5
+  },
+  {
+   "word": "finances",
+   "start": 0.5,
+   "end": 0.94
+  },
+  {
+   "word": "improved,",
+   "start": 0.94,
+   "end": 1.6
+  },
+  {
+   "word": "the",
+   "start": 1.92,
+   "end": 2.0
+  },
+  {
+   "word": "definition",
+   "start": 2.0,
+   "end": 2.42
+  },
+  {
+   "word": "of",
+   "start": 2.42,
+   "end": 2.66
+  },
+  {
+   "word": "ready",
+   "start": 2.66,
+   "end": 2.96
+  },
+  {
+   "word": "improved",
+   "start": 2.96,
+   "end": 3.64
+  },
+  {
+   "word": "with",
+   "start": 3.64,
+   "end": 3.88
+  },
+  {
+   "word": "them.",
+   "start": 3.88,
+   "end": 4.06
+  }
+ ],
+ "S3_11": [
+  {
+   "word": "His",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "mountain",
+   "start": 0.18,
+   "end": 0.58
+  },
+  {
+   "word": "had",
+   "start": 0.58,
+   "end": 0.84
+  },
+  {
+   "word": "developed",
+   "start": 0.84,
+   "end": 1.28
+  },
+  {
+   "word": "a",
+   "start": 1.28,
+   "end": 1.5
+  },
+  {
+   "word": "moving",
+   "start": 1.5,
+   "end": 1.82
+  },
+  {
+   "word": "summit.",
+   "start": 1.82,
+   "end": 2.24
+  }
+ ],
+ "S4_01": [
+  {
+   "word": "One",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "evening",
+   "start": 0.26,
+   "end": 0.6
+  },
+  {
+   "word": "he",
+   "start": 0.6,
+   "end": 0.86
+  },
+  {
+   "word": "caught",
+   "start": 0.86,
+   "end": 1.12
+  },
+  {
+   "word": "himself",
+   "start": 1.12,
+   "end": 1.48
+  },
+  {
+   "word": "looking",
+   "start": 1.48,
+   "end": 1.78
+  },
+  {
+   "word": "at",
+   "start": 1.78,
+   "end": 2.0
+  },
+  {
+   "word": "cabins",
+   "start": 2.0,
+   "end": 2.42
+  },
+  {
+   "word": "again.",
+   "start": 2.42,
+   "end": 2.72
+  }
+ ],
+ "S4_02": [
+  {
+   "word": "Same",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "website,",
+   "start": 0.3,
+   "end": 0.76
+  },
+  {
+   "word": "same",
+   "start": 1.2,
+   "end": 1.34
+  },
+  {
+   "word": "mountains,",
+   "start": 1.34,
+   "end": 1.8
+  },
+  {
+   "word": "different",
+   "start": 2.2,
+   "end": 2.4
+  },
+  {
+   "word": "prices.",
+   "start": 2.4,
+   "end": 2.82
+  }
+ ],
+ "S4_03": [
+  {
+   "word": "So",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "he",
+   "start": 0.2,
+   "end": 0.38
+  },
+  {
+   "word": "asked",
+   "start": 0.38,
+   "end": 0.62
+  },
+  {
+   "word": "himself,",
+   "start": 0.62,
+   "end": 1.02
+  },
+  {
+   "word": "what",
+   "start": 1.34,
+   "end": 1.48
+  },
+  {
+   "word": "would",
+   "start": 1.48,
+   "end": 1.62
+  },
+  {
+   "word": "have",
+   "start": 1.62,
+   "end": 1.84
+  },
+  {
+   "word": "to",
+   "start": 1.84,
+   "end": 2.0
+  },
+  {
+   "word": "happen",
+   "start": 2.0,
+   "end": 2.26
+  },
+  {
+   "word": "for",
+   "start": 2.26,
+   "end": 2.44
+  },
+  {
+   "word": "me",
+   "start": 2.44,
+   "end": 2.56
+  },
+  {
+   "word": "to",
+   "start": 2.56,
+   "end": 2.7
+  },
+  {
+   "word": "actually",
+   "start": 2.7,
+   "end": 3.0
+  },
+  {
+   "word": "book",
+   "start": 3.0,
+   "end": 3.24
+  },
+  {
+   "word": "this?",
+   "start": 3.24,
+   "end": 3.5
+  }
+ ],
+ "S4_04": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "started",
+   "start": 0.14,
+   "end": 0.42
+  },
+  {
+   "word": "listing",
+   "start": 0.42,
+   "end": 0.8
+  },
+  {
+   "word": "numbers.",
+   "start": 0.8,
+   "end": 1.14
+  }
+ ],
+ "S4_05": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "he",
+   "start": 0.2,
+   "end": 0.34
+  },
+  {
+   "word": "stopped.",
+   "start": 0.34,
+   "end": 0.64
+  }
+ ],
+ "S4_06": [
+  {
+   "word": "And",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "if",
+   "start": 0.12,
+   "end": 0.26
+  },
+  {
+   "word": "I",
+   "start": 0.26,
+   "end": 0.4
+  },
+  {
+   "word": "reach",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "word": "those",
+   "start": 0.64,
+   "end": 0.9
+  },
+  {
+   "word": "numbers",
+   "start": 0.9,
+   "end": 1.3
+  },
+  {
+   "word": "will",
+   "start": 1.3,
+   "end": 1.48
+  },
+  {
+   "word": "I",
+   "start": 1.48,
+   "end": 1.62
+  },
+  {
+   "word": "feel",
+   "start": 1.62,
+   "end": 1.82
+  },
+  {
+   "word": "comfortable",
+   "start": 1.82,
+   "end": 2.26
+  },
+  {
+   "word": "spending",
+   "start": 2.26,
+   "end": 2.64
+  },
+  {
+   "word": "it?",
+   "start": 2.64,
+   "end": 2.86
+  }
+ ],
+ "S4_07": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "didn't",
+   "start": 0.16,
+   "end": 0.42
+  },
+  {
+   "word": "have",
+   "start": 0.42,
+   "end": 0.54
+  },
+  {
+   "word": "an",
+   "start": 0.54,
+   "end": 0.66
+  },
+  {
+   "word": "answer",
+   "start": 0.66,
+   "end": 0.92
+  },
+  {
+   "word": "straight",
+   "start": 0.92,
+   "end": 1.22
+  },
+  {
+   "word": "away.",
+   "start": 1.22,
+   "end": 1.48
+  }
+ ],
+ "S4_08": [
+  {
+   "word": "because",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "he",
+   "start": 0.26,
+   "end": 0.44
+  },
+  {
+   "word": "wasn't",
+   "start": 0.44,
+   "end": 0.82
+  },
+  {
+   "word": "sure.",
+   "start": 0.82,
+   "end": 1.04
+  }
+ ],
+ "S5_01": [
+  {
+   "word": "Let's",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "word": "pause",
+   "start": 0.34,
+   "end": 0.52
+  },
+  {
+   "word": "his",
+   "start": 0.52,
+   "end": 0.72
+  },
+  {
+   "word": "story",
+   "start": 0.72,
+   "end": 1.08
+  },
+  {
+   "word": "here.",
+   "start": 1.08,
+   "end": 1.3
+  }
+ ],
+ "S5_02": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "isn't",
+   "start": 0.32,
+   "end": 0.76
+  },
+  {
+   "word": "foolish.",
+   "start": 0.76,
+   "end": 1.1
+  },
+  {
+   "word": "He",
+   "start": 1.6,
+   "end": 1.66
+  },
+  {
+   "word": "remembers",
+   "start": 1.66,
+   "end": 2.02
+  },
+  {
+   "word": "when",
+   "start": 2.02,
+   "end": 2.26
+  },
+  {
+   "word": "a",
+   "start": 2.26,
+   "end": 2.38
+  },
+  {
+   "word": "car",
+   "start": 2.38,
+   "end": 2.64
+  },
+  {
+   "word": "repair",
+   "start": 2.64,
+   "end": 2.98
+  },
+  {
+   "word": "became",
+   "start": 2.98,
+   "end": 3.28
+  },
+  {
+   "word": "a",
+   "start": 3.28,
+   "end": 3.52
+  },
+  {
+   "word": "crisis",
+   "start": 3.52,
+   "end": 3.86
+  },
+  {
+   "word": "and",
+   "start": 3.86,
+   "end": 4.2
+  },
+  {
+   "word": "money",
+   "start": 4.2,
+   "end": 4.48
+  },
+  {
+   "word": "in",
+   "start": 4.48,
+   "end": 4.62
+  },
+  {
+   "word": "the",
+   "start": 4.62,
+   "end": 4.7
+  },
+  {
+   "word": "bank",
+   "start": 4.7,
+   "end": 4.96
+  },
+  {
+   "word": "means",
+   "start": 4.96,
+   "end": 5.24
+  },
+  {
+   "word": "options.",
+   "start": 5.24,
+   "end": 5.62
+  }
+ ],
+ "S5_03": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "he",
+   "start": 0.12,
+   "end": 0.24
+  },
+  {
+   "word": "started",
+   "start": 0.24,
+   "end": 0.56
+  },
+  {
+   "word": "treating",
+   "start": 0.56,
+   "end": 0.9
+  },
+  {
+   "word": "every",
+   "start": 0.9,
+   "end": 1.34
+  },
+  {
+   "word": "planned",
+   "start": 1.34,
+   "end": 1.72
+  },
+  {
+   "word": "expense",
+   "start": 1.72,
+   "end": 2.14
+  },
+  {
+   "word": "like",
+   "start": 2.14,
+   "end": 2.4
+  },
+  {
+   "word": "the",
+   "start": 2.4,
+   "end": 2.56
+  },
+  {
+   "word": "start",
+   "start": 2.56,
+   "end": 2.84
+  },
+  {
+   "word": "of",
+   "start": 2.84,
+   "end": 2.96
+  },
+  {
+   "word": "another",
+   "start": 2.96,
+   "end": 3.26
+  },
+  {
+   "word": "emergency.",
+   "start": 3.26,
+   "end": 3.66
+  }
+ ],
+ "S5_04": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "knows",
+   "start": 0.14,
+   "end": 0.4
+  },
+  {
+   "word": "how",
+   "start": 0.4,
+   "end": 0.56
+  },
+  {
+   "word": "to",
+   "start": 0.56,
+   "end": 0.7
+  },
+  {
+   "word": "save",
+   "start": 0.7,
+   "end": 0.96
+  },
+  {
+   "word": "for",
+   "start": 0.96,
+   "end": 1.14
+  },
+  {
+   "word": "the",
+   "start": 1.14,
+   "end": 1.24
+  },
+  {
+   "word": "trip.",
+   "start": 1.24,
+   "end": 1.48
+  }
+ ],
+ "S5_05": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "hasn't",
+   "start": 0.18,
+   "end": 0.52
+  },
+  {
+   "word": "worked",
+   "start": 0.52,
+   "end": 0.74
+  },
+  {
+   "word": "out",
+   "start": 0.74,
+   "end": 0.96
+  },
+  {
+   "word": "how",
+   "start": 0.96,
+   "end": 1.14
+  },
+  {
+   "word": "to",
+   "start": 1.14,
+   "end": 1.28
+  },
+  {
+   "word": "give",
+   "start": 1.28,
+   "end": 1.44
+  },
+  {
+   "word": "himself",
+   "start": 1.44,
+   "end": 1.76
+  },
+  {
+   "word": "permission",
+   "start": 1.76,
+   "end": 2.2
+  },
+  {
+   "word": "to",
+   "start": 2.2,
+   "end": 2.44
+  },
+  {
+   "word": "take",
+   "start": 2.44,
+   "end": 2.64
+  },
+  {
+   "word": "it.",
+   "start": 2.64,
+   "end": 2.82
+  }
+ ],
+ "S5_06": [
+  {
+   "word": "and",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "there's",
+   "start": 0.14,
+   "end": 0.36
+  },
+  {
+   "word": "something",
+   "start": 0.36,
+   "end": 0.58
+  },
+  {
+   "word": "else.",
+   "start": 0.58,
+   "end": 0.82
+  }
+ ],
+ "S5_07": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "trip",
+   "start": 0.14,
+   "end": 0.42
+  },
+  {
+   "word": "itself",
+   "start": 0.42,
+   "end": 0.88
+  },
+  {
+   "word": "has",
+   "start": 0.88,
+   "end": 1.06
+  },
+  {
+   "word": "grown.",
+   "start": 1.06,
+   "end": 1.36
+  }
+ ],
+ "S5_08": [
+  {
+   "word": "Two",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "nights",
+   "start": 0.16,
+   "end": 0.46
+  },
+  {
+   "word": "became",
+   "start": 0.46,
+   "end": 0.8
+  },
+  {
+   "word": "a",
+   "start": 0.8,
+   "end": 1.0
+  },
+  {
+   "word": "week.",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "word": "A",
+   "start": 1.78,
+   "end": 1.96
+  },
+  {
+   "word": "simple",
+   "start": 1.96,
+   "end": 2.2
+  },
+  {
+   "word": "cabin",
+   "start": 2.2,
+   "end": 2.6
+  },
+  {
+   "word": "became",
+   "start": 2.6,
+   "end": 2.98
+  },
+  {
+   "word": "the",
+   "start": 2.98,
+   "end": 3.16
+  },
+  {
+   "word": "beautiful",
+   "start": 3.16,
+   "end": 3.52
+  },
+  {
+   "word": "one",
+   "start": 3.52,
+   "end": 3.84
+  },
+  {
+   "word": "with",
+   "start": 3.84,
+   "end": 4.02
+  },
+  {
+   "word": "the",
+   "start": 4.02,
+   "end": 4.16
+  },
+  {
+   "word": "huge",
+   "start": 4.16,
+   "end": 4.38
+  },
+  {
+   "word": "windows.",
+   "start": 4.38,
+   "end": 4.72
+  }
+ ],
+ "S5_09": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "wanted",
+   "start": 0.16,
+   "end": 0.38
+  },
+  {
+   "word": "it",
+   "start": 0.38,
+   "end": 0.54
+  },
+  {
+   "word": "to",
+   "start": 0.54,
+   "end": 0.68
+  },
+  {
+   "word": "feel",
+   "start": 0.68,
+   "end": 0.92
+  },
+  {
+   "word": "worth",
+   "start": 0.92,
+   "end": 1.14
+  },
+  {
+   "word": "the",
+   "start": 1.14,
+   "end": 1.36
+  },
+  {
+   "word": "wait.",
+   "start": 1.36,
+   "end": 1.58
+  }
+ ],
+ "S5_10": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "the",
+   "start": 0.12,
+   "end": 0.28
+  },
+  {
+   "word": "bigger",
+   "start": 0.28,
+   "end": 0.5
+  },
+  {
+   "word": "it",
+   "start": 0.5,
+   "end": 0.68
+  },
+  {
+   "word": "gets,",
+   "start": 0.68,
+   "end": 1.02
+  },
+  {
+   "word": "the",
+   "start": 1.42,
+   "end": 1.46
+  },
+  {
+   "word": "more",
+   "start": 1.46,
+   "end": 1.72
+  },
+  {
+   "word": "reluctant",
+   "start": 1.72,
+   "end": 2.2
+  },
+  {
+   "word": "he",
+   "start": 2.2,
+   "end": 2.38
+  },
+  {
+   "word": "becomes.",
+   "start": 2.38,
+   "end": 2.68
+  }
+ ],
+ "S5_11": [
+  {
+   "word": "Without",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "word": "meaning",
+   "start": 0.24,
+   "end": 0.54
+  },
+  {
+   "word": "to,",
+   "start": 0.54,
+   "end": 0.88
+  },
+  {
+   "word": "he's",
+   "start": 1.16,
+   "end": 1.4
+  },
+  {
+   "word": "making",
+   "start": 1.4,
+   "end": 1.64
+  },
+  {
+   "word": "it",
+   "start": 1.64,
+   "end": 1.82
+  },
+  {
+   "word": "harder",
+   "start": 1.82,
+   "end": 2.08
+  },
+  {
+   "word": "to",
+   "start": 2.08,
+   "end": 2.28
+  },
+  {
+   "word": "say",
+   "start": 2.28,
+   "end": 2.44
+  },
+  {
+   "word": "yes.",
+   "start": 2.44,
+   "end": 2.74
+  }
+ ],
+ "S6_01": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "a",
+   "start": 0.14,
+   "end": 0.24
+  },
+  {
+   "word": "friend",
+   "start": 0.24,
+   "end": 0.46
+  },
+  {
+   "word": "sends",
+   "start": 0.46,
+   "end": 0.76
+  },
+  {
+   "word": "him",
+   "start": 0.76,
+   "end": 0.86
+  },
+  {
+   "word": "a",
+   "start": 0.86,
+   "end": 1.02
+  },
+  {
+   "word": "picture.",
+   "start": 1.02,
+   "end": 1.24
+  }
+ ],
+ "S6_02": [
+  {
+   "word": "A",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "muddy",
+   "start": 0.14,
+   "end": 0.36
+  },
+  {
+   "word": "trail,",
+   "start": 0.36,
+   "end": 0.76
+  },
+  {
+   "word": "a",
+   "start": 0.96,
+   "end": 1.04
+  },
+  {
+   "word": "sandwich,",
+   "start": 1.04,
+   "end": 1.52
+  },
+  {
+   "word": "a",
+   "start": 1.92,
+   "end": 1.96
+  },
+  {
+   "word": "view.",
+   "start": 1.96,
+   "end": 2.24
+  }
+ ],
+ "S6_03": [
+  {
+   "word": "You'd",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "love",
+   "start": 0.3,
+   "end": 0.44
+  },
+  {
+   "word": "this,",
+   "start": 0.44,
+   "end": 0.78
+  },
+  {
+   "word": "only",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "word": "a",
+   "start": 1.32,
+   "end": 1.5
+  },
+  {
+   "word": "couple",
+   "start": 1.5,
+   "end": 1.68
+  },
+  {
+   "word": "of",
+   "start": 1.68,
+   "end": 1.86
+  },
+  {
+   "word": "hours",
+   "start": 1.86,
+   "end": 2.08
+  },
+  {
+   "word": "away.",
+   "start": 2.08,
+   "end": 2.36
+  }
+ ],
+ "S6_04": [
+  {
+   "word": "Alex's",
+   "start": 0.0,
+   "end": 0.56
+  },
+  {
+   "word": "first",
+   "start": 0.56,
+   "end": 0.78
+  },
+  {
+   "word": "thought",
+   "start": 0.78,
+   "end": 1.06
+  },
+  {
+   "word": "is,",
+   "start": 1.06,
+   "end": 1.32
+  },
+  {
+   "word": "it's",
+   "start": 1.68,
+   "end": 1.88
+  },
+  {
+   "word": "not",
+   "start": 1.88,
+   "end": 2.02
+  },
+  {
+   "word": "really",
+   "start": 2.02,
+   "end": 2.3
+  },
+  {
+   "word": "the",
+   "start": 2.3,
+   "end": 2.48
+  },
+  {
+   "word": "trip",
+   "start": 2.48,
+   "end": 2.7
+  },
+  {
+   "word": "I",
+   "start": 2.7,
+   "end": 2.86
+  },
+  {
+   "word": "planned.",
+   "start": 2.86,
+   "end": 3.16
+  }
+ ],
+ "S6_05": [
+  {
+   "word": "His",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "second",
+   "start": 0.14,
+   "end": 0.48
+  },
+  {
+   "word": "thought",
+   "start": 0.48,
+   "end": 0.76
+  },
+  {
+   "word": "is,",
+   "start": 0.76,
+   "end": 1.02
+  },
+  {
+   "word": "I",
+   "start": 1.32,
+   "end": 1.4
+  },
+  {
+   "word": "know,",
+   "start": 1.4,
+   "end": 1.68
+  },
+  {
+   "word": "but",
+   "start": 2.0,
+   "end": 2.14
+  },
+  {
+   "word": "what",
+   "start": 2.14,
+   "end": 2.34
+  },
+  {
+   "word": "part",
+   "start": 2.34,
+   "end": 2.52
+  },
+  {
+   "word": "am",
+   "start": 2.52,
+   "end": 2.62
+  },
+  {
+   "word": "I",
+   "start": 2.62,
+   "end": 2.76
+  },
+  {
+   "word": "waiting",
+   "start": 2.76,
+   "end": 3.0
+  },
+  {
+   "word": "for?",
+   "start": 3.0,
+   "end": 3.32
+  }
+ ],
+ "S6_06": [
+  {
+   "word": "What",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "he",
+   "start": 0.16,
+   "end": 0.3
+  },
+  {
+   "word": "actually",
+   "start": 0.3,
+   "end": 0.7
+  },
+  {
+   "word": "wants",
+   "start": 0.7,
+   "end": 1.02
+  },
+  {
+   "word": "is",
+   "start": 1.02,
+   "end": 1.2
+  },
+  {
+   "word": "a",
+   "start": 1.2,
+   "end": 1.36
+  },
+  {
+   "word": "few",
+   "start": 1.36,
+   "end": 1.5
+  },
+  {
+   "word": "days",
+   "start": 1.5,
+   "end": 1.76
+  },
+  {
+   "word": "outside,",
+   "start": 1.76,
+   "end": 2.34
+  },
+  {
+   "word": "breakfast",
+   "start": 2.78,
+   "end": 3.1
+  },
+  {
+   "word": "without",
+   "start": 3.1,
+   "end": 3.4
+  },
+  {
+   "word": "checking",
+   "start": 3.4,
+   "end": 3.82
+  },
+  {
+   "word": "work",
+   "start": 3.82,
+   "end": 4.1
+  },
+  {
+   "word": "messages,",
+   "start": 4.1,
+   "end": 4.6
+  },
+  {
+   "word": "time",
+   "start": 5.2,
+   "end": 5.34
+  },
+  {
+   "word": "that",
+   "start": 5.34,
+   "end": 5.5
+  },
+  {
+   "word": "doesn't",
+   "start": 5.5,
+   "end": 5.88
+  },
+  {
+   "word": "involve",
+   "start": 5.88,
+   "end": 6.08
+  },
+  {
+   "word": "deciding",
+   "start": 6.08,
+   "end": 6.52
+  },
+  {
+   "word": "what",
+   "start": 6.52,
+   "end": 6.74
+  },
+  {
+   "word": "needs",
+   "start": 6.74,
+   "end": 6.96
+  },
+  {
+   "word": "fixing",
+   "start": 6.96,
+   "end": 7.3
+  },
+  {
+   "word": "in",
+   "start": 7.3,
+   "end": 7.48
+  },
+  {
+   "word": "the",
+   "start": 7.48,
+   "end": 7.56
+  },
+  {
+   "word": "house.",
+   "start": 7.56,
+   "end": 7.84
+  }
+ ],
+ "S6_07": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "expensive",
+   "start": 0.12,
+   "end": 0.58
+  },
+  {
+   "word": "cabin",
+   "start": 0.58,
+   "end": 1.0
+  },
+  {
+   "word": "would",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "word": "be",
+   "start": 1.24,
+   "end": 1.42
+  },
+  {
+   "word": "lovely.",
+   "start": 1.42,
+   "end": 1.7
+  }
+ ],
+ "S6_08": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.1
+  },
+  {
+   "word": "the",
+   "start": 0.1,
+   "end": 0.3
+  },
+  {
+   "word": "things",
+   "start": 0.3,
+   "end": 0.5
+  },
+  {
+   "word": "he",
+   "start": 0.5,
+   "end": 0.7
+  },
+  {
+   "word": "wanted",
+   "start": 0.7,
+   "end": 0.98
+  },
+  {
+   "word": "most",
+   "start": 0.98,
+   "end": 1.4
+  },
+  {
+   "word": "came",
+   "start": 1.4,
+   "end": 1.66
+  },
+  {
+   "word": "in",
+   "start": 1.66,
+   "end": 1.76
+  },
+  {
+   "word": "a",
+   "start": 1.76,
+   "end": 1.92
+  },
+  {
+   "word": "smaller",
+   "start": 1.92,
+   "end": 2.24
+  },
+  {
+   "word": "size.",
+   "start": 2.24,
+   "end": 2.66
+  }
+ ],
+ "S7_01": [
+  {
+   "word": "so",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "he",
+   "start": 0.18,
+   "end": 0.3
+  },
+  {
+   "word": "sits",
+   "start": 0.3,
+   "end": 0.62
+  },
+  {
+   "word": "down",
+   "start": 0.62,
+   "end": 0.94
+  },
+  {
+   "word": "with",
+   "start": 0.94,
+   "end": 1.12
+  },
+  {
+   "word": "his",
+   "start": 1.12,
+   "end": 1.24
+  },
+  {
+   "word": "budget.",
+   "start": 1.24,
+   "end": 1.52
+  }
+ ],
+ "S7_02": [
+  {
+   "word": "This",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "word": "is",
+   "start": 0.28,
+   "end": 0.46
+  },
+  {
+   "word": "the",
+   "start": 0.46,
+   "end": 0.6
+  },
+  {
+   "word": "less",
+   "start": 0.6,
+   "end": 0.82
+  },
+  {
+   "word": "cinematic",
+   "start": 0.82,
+   "end": 1.26
+  },
+  {
+   "word": "part",
+   "start": 1.26,
+   "end": 1.54
+  },
+  {
+   "word": "of",
+   "start": 1.54,
+   "end": 1.68
+  },
+  {
+   "word": "the",
+   "start": 1.68,
+   "end": 1.78
+  },
+  {
+   "word": "story.",
+   "start": 1.78,
+   "end": 2.12
+  },
+  {
+   "word": "Nobody",
+   "start": 2.7,
+   "end": 3.0
+  },
+  {
+   "word": "runs",
+   "start": 3.0,
+   "end": 3.36
+  },
+  {
+   "word": "to",
+   "start": 3.36,
+   "end": 3.54
+  },
+  {
+   "word": "the",
+   "start": 3.54,
+   "end": 3.68
+  },
+  {
+   "word": "airport.",
+   "start": 3.68,
+   "end": 3.94
+  }
+ ],
+ "S7_03": [
+  {
+   "word": "There's",
+   "start": 0.0,
+   "end": 0.22
+  },
+  {
+   "word": "a",
+   "start": 0.22,
+   "end": 0.32
+  },
+  {
+   "word": "spreadsheet.",
+   "start": 0.32,
+   "end": 0.7
+  }
+ ],
+ "S7_04": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "word": "is",
+   "start": 0.38,
+   "end": 0.7
+  },
+  {
+   "word": "delighted.",
+   "start": 0.7,
+   "end": 1.04
+  }
+ ],
+ "S7_05": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "checks",
+   "start": 0.12,
+   "end": 0.5
+  },
+  {
+   "word": "his",
+   "start": 0.5,
+   "end": 0.68
+  },
+  {
+   "word": "bills",
+   "start": 0.68,
+   "end": 1.0
+  },
+  {
+   "word": "and",
+   "start": 1.0,
+   "end": 1.24
+  },
+  {
+   "word": "goals",
+   "start": 1.24,
+   "end": 1.68
+  },
+  {
+   "word": "and",
+   "start": 1.68,
+   "end": 2.08
+  },
+  {
+   "word": "settles",
+   "start": 2.08,
+   "end": 2.46
+  },
+  {
+   "word": "on",
+   "start": 2.46,
+   "end": 2.68
+  },
+  {
+   "word": "an",
+   "start": 2.68,
+   "end": 2.78
+  },
+  {
+   "word": "amount",
+   "start": 2.78,
+   "end": 3.08
+  },
+  {
+   "word": "he",
+   "start": 3.08,
+   "end": 3.26
+  },
+  {
+   "word": "can",
+   "start": 3.26,
+   "end": 3.44
+  },
+  {
+   "word": "spend",
+   "start": 3.44,
+   "end": 3.74
+  },
+  {
+   "word": "without",
+   "start": 3.74,
+   "end": 4.04
+  },
+  {
+   "word": "borrowing",
+   "start": 4.04,
+   "end": 4.58
+  },
+  {
+   "word": "or",
+   "start": 4.58,
+   "end": 4.78
+  },
+  {
+   "word": "touching",
+   "start": 4.78,
+   "end": 5.08
+  },
+  {
+   "word": "the",
+   "start": 5.08,
+   "end": 5.28
+  },
+  {
+   "word": "emergency",
+   "start": 5.28,
+   "end": 5.72
+  },
+  {
+   "word": "fund.",
+   "start": 5.72,
+   "end": 6.04
+  }
+ ],
+ "S7_06": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "word": "he",
+   "start": 0.24,
+   "end": 0.38
+  },
+  {
+   "word": "prices",
+   "start": 0.38,
+   "end": 0.74
+  },
+  {
+   "word": "the",
+   "start": 0.74,
+   "end": 0.98
+  },
+  {
+   "word": "whole",
+   "start": 0.98,
+   "end": 1.14
+  },
+  {
+   "word": "weekend,",
+   "start": 1.14,
+   "end": 1.58
+  },
+  {
+   "word": "somewhere",
+   "start": 2.06,
+   "end": 2.26
+  },
+  {
+   "word": "to",
+   "start": 2.26,
+   "end": 2.44
+  },
+  {
+   "word": "stay,",
+   "start": 2.44,
+   "end": 2.8
+  },
+  {
+   "word": "gas,",
+   "start": 3.22,
+   "end": 3.48
+  },
+  {
+   "word": "food,",
+   "start": 3.9,
+   "end": 4.12
+  },
+  {
+   "word": "park",
+   "start": 4.56,
+   "end": 4.7
+  },
+  {
+   "word": "fees,",
+   "start": 4.7,
+   "end": 5.08
+  },
+  {
+   "word": "a",
+   "start": 5.42,
+   "end": 5.52
+  },
+  {
+   "word": "little",
+   "start": 5.52,
+   "end": 5.7
+  },
+  {
+   "word": "extra",
+   "start": 5.7,
+   "end": 6.04
+  },
+  {
+   "word": "for",
+   "start": 6.04,
+   "end": 6.26
+  },
+  {
+   "word": "whatever",
+   "start": 6.26,
+   "end": 6.54
+  },
+  {
+   "word": "he's",
+   "start": 6.54,
+   "end": 6.84
+  },
+  {
+   "word": "forgotten.",
+   "start": 6.84,
+   "end": 7.14
+  }
+ ],
+ "S7_07": [
+  {
+   "word": "Two",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "nights",
+   "start": 0.18,
+   "end": 0.46
+  },
+  {
+   "word": "nearby,",
+   "start": 0.46,
+   "end": 0.96
+  },
+  {
+   "word": "packed",
+   "start": 1.48,
+   "end": 1.7
+  },
+  {
+   "word": "lunches,",
+   "start": 1.7,
+   "end": 2.22
+  },
+  {
+   "word": "no",
+   "start": 2.54,
+   "end": 2.66
+  },
+  {
+   "word": "fancy",
+   "start": 2.66,
+   "end": 3.02
+  },
+  {
+   "word": "cabin.",
+   "start": 3.02,
+   "end": 3.34
+  }
+ ],
+ "S7_08": [
+  {
+   "word": "there's",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "still",
+   "start": 0.26,
+   "end": 0.4
+  },
+  {
+   "word": "a",
+   "start": 0.4,
+   "end": 0.62
+  },
+  {
+   "word": "trade",
+   "start": 0.62,
+   "end": 0.76
+  },
+  {
+   "word": "-off",
+   "start": 0.76,
+   "end": 1.08
+  },
+  {
+   "word": "that",
+   "start": 1.08,
+   "end": 1.44
+  },
+  {
+   "word": "money",
+   "start": 1.44,
+   "end": 1.7
+  },
+  {
+   "word": "won't",
+   "start": 1.7,
+   "end": 2.0
+  },
+  {
+   "word": "be",
+   "start": 2.0,
+   "end": 2.08
+  },
+  {
+   "word": "saved",
+   "start": 2.08,
+   "end": 2.52
+  },
+  {
+   "word": "or",
+   "start": 2.52,
+   "end": 2.76
+  },
+  {
+   "word": "invested.",
+   "start": 2.76,
+   "end": 3.22
+  }
+ ],
+ "S7_09": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "decides",
+   "start": 0.16,
+   "end": 0.66
+  },
+  {
+   "word": "the",
+   "start": 0.66,
+   "end": 0.86
+  },
+  {
+   "word": "weekend",
+   "start": 0.86,
+   "end": 1.18
+  },
+  {
+   "word": "is",
+   "start": 1.18,
+   "end": 1.42
+  },
+  {
+   "word": "worth",
+   "start": 1.42,
+   "end": 1.66
+  },
+  {
+   "word": "that",
+   "start": 1.66,
+   "end": 1.92
+  },
+  {
+   "word": "cost.",
+   "start": 1.92,
+   "end": 2.2
+  }
+ ],
+ "S8_01": [
+  {
+   "word": "then",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "the",
+   "start": 0.2,
+   "end": 0.38
+  },
+  {
+   "word": "hardest",
+   "start": 0.38,
+   "end": 0.66
+  },
+  {
+   "word": "part.",
+   "start": 0.66,
+   "end": 0.94
+  }
+ ],
+ "S8_02": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "word": "clicks",
+   "start": 0.34,
+   "end": 0.64
+  },
+  {
+   "word": "book.",
+   "start": 0.64,
+   "end": 0.92
+  }
+ ],
+ "S8_03": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "feels",
+   "start": 0.18,
+   "end": 0.4
+  },
+  {
+   "word": "excited",
+   "start": 0.4,
+   "end": 0.82
+  },
+  {
+   "word": "for",
+   "start": 0.82,
+   "end": 1.1
+  },
+  {
+   "word": "about",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "word": "3",
+   "start": 1.32,
+   "end": 1.66
+  },
+  {
+   "word": "seconds.",
+   "start": 1.66,
+   "end": 2.06
+  }
+ ],
+ "S8_04": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "he",
+   "start": 0.2,
+   "end": 0.4
+  },
+  {
+   "word": "thinks",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "word": "about",
+   "start": 0.64,
+   "end": 0.92
+  },
+  {
+   "word": "canceling.",
+   "start": 0.92,
+   "end": 1.52
+  }
+ ],
+ "S8_05": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "doesn't",
+   "start": 0.18,
+   "end": 0.48
+  },
+  {
+   "word": "tell",
+   "start": 0.48,
+   "end": 0.62
+  },
+  {
+   "word": "himself",
+   "start": 0.62,
+   "end": 0.98
+  },
+  {
+   "word": "he's",
+   "start": 0.98,
+   "end": 1.24
+  },
+  {
+   "word": "being",
+   "start": 1.24,
+   "end": 1.42
+  },
+  {
+   "word": "ridiculous.",
+   "start": 1.42,
+   "end": 1.96
+  },
+  {
+   "word": "He",
+   "start": 2.52,
+   "end": 2.64
+  },
+  {
+   "word": "just",
+   "start": 2.64,
+   "end": 2.82
+  },
+  {
+   "word": "looks",
+   "start": 2.82,
+   "end": 3.04
+  },
+  {
+   "word": "at",
+   "start": 3.04,
+   "end": 3.18
+  },
+  {
+   "word": "the",
+   "start": 3.18,
+   "end": 3.32
+  },
+  {
+   "word": "plan",
+   "start": 3.32,
+   "end": 3.54
+  },
+  {
+   "word": "again.",
+   "start": 3.54,
+   "end": 3.78
+  }
+ ],
+ "S8_06": [
+  {
+   "word": "Bills",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "covered,",
+   "start": 0.3,
+   "end": 0.7
+  },
+  {
+   "word": "savings",
+   "start": 0.88,
+   "end": 1.2
+  },
+  {
+   "word": "on",
+   "start": 1.2,
+   "end": 1.44
+  },
+  {
+   "word": "track.",
+   "start": 1.44,
+   "end": 1.84
+  },
+  {
+   "word": "Nothing",
+   "start": 2.3,
+   "end": 2.54
+  },
+  {
+   "word": "has",
+   "start": 2.54,
+   "end": 2.72
+  },
+  {
+   "word": "changed",
+   "start": 2.72,
+   "end": 3.08
+  },
+  {
+   "word": "in",
+   "start": 3.08,
+   "end": 3.32
+  },
+  {
+   "word": "five",
+   "start": 3.32,
+   "end": 3.56
+  },
+  {
+   "word": "minutes.",
+   "start": 3.56,
+   "end": 3.86
+  }
+ ],
+ "S8_07": [
+  {
+   "word": "The",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "discomfort",
+   "start": 0.14,
+   "end": 0.62
+  },
+  {
+   "word": "is",
+   "start": 0.62,
+   "end": 1.0
+  },
+  {
+   "word": "real.",
+   "start": 1.0,
+   "end": 1.2
+  }
+ ],
+ "S8_08": [
+  {
+   "word": "It",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "just",
+   "start": 0.12,
+   "end": 0.42
+  },
+  {
+   "word": "isn't",
+   "start": 0.42,
+   "end": 0.9
+  },
+  {
+   "word": "evidence",
+   "start": 0.9,
+   "end": 1.22
+  },
+  {
+   "word": "that",
+   "start": 1.22,
+   "end": 1.5
+  },
+  {
+   "word": "booking",
+   "start": 1.5,
+   "end": 1.82
+  },
+  {
+   "word": "was",
+   "start": 1.82,
+   "end": 2.06
+  },
+  {
+   "word": "a",
+   "start": 2.06,
+   "end": 2.18
+  },
+  {
+   "word": "mistake.",
+   "start": 2.18,
+   "end": 2.46
+  }
+ ],
+ "S9_01": [
+  {
+   "word": "Now,",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "word": "if",
+   "start": 0.7,
+   "end": 0.82
+  },
+  {
+   "word": "your",
+   "start": 0.82,
+   "end": 1.02
+  },
+  {
+   "word": "budget",
+   "start": 1.02,
+   "end": 1.28
+  },
+  {
+   "word": "has",
+   "start": 1.28,
+   "end": 1.52
+  },
+  {
+   "word": "no",
+   "start": 1.52,
+   "end": 1.74
+  },
+  {
+   "word": "room",
+   "start": 1.74,
+   "end": 1.96
+  },
+  {
+   "word": "right",
+   "start": 1.96,
+   "end": 2.16
+  },
+  {
+   "word": "now,",
+   "start": 2.16,
+   "end": 2.56
+  },
+  {
+   "word": "your",
+   "start": 3.06,
+   "end": 3.22
+  },
+  {
+   "word": "version",
+   "start": 3.22,
+   "end": 3.52
+  },
+  {
+   "word": "of",
+   "start": 3.52,
+   "end": 3.68
+  },
+  {
+   "word": "this",
+   "start": 3.68,
+   "end": 3.82
+  },
+  {
+   "word": "story",
+   "start": 3.82,
+   "end": 4.1
+  },
+  {
+   "word": "looks",
+   "start": 4.1,
+   "end": 4.34
+  },
+  {
+   "word": "different.",
+   "start": 4.34,
+   "end": 4.66
+  }
+ ],
+ "S9_02": [
+  {
+   "word": "You",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "might",
+   "start": 0.12,
+   "end": 0.3
+  },
+  {
+   "word": "be",
+   "start": 0.3,
+   "end": 0.48
+  },
+  {
+   "word": "in",
+   "start": 0.48,
+   "end": 0.58
+  },
+  {
+   "word": "the",
+   "start": 0.58,
+   "end": 0.68
+  },
+  {
+   "word": "part",
+   "start": 0.68,
+   "end": 0.92
+  },
+  {
+   "word": "where",
+   "start": 0.92,
+   "end": 1.14
+  },
+  {
+   "word": "Alex",
+   "start": 1.14,
+   "end": 1.48
+  },
+  {
+   "word": "needed",
+   "start": 1.48,
+   "end": 1.74
+  },
+  {
+   "word": "to",
+   "start": 1.74,
+   "end": 1.94
+  },
+  {
+   "word": "wait.",
+   "start": 1.94,
+   "end": 2.16
+  }
+ ],
+ "S9_03": [
+  {
+   "word": "That",
+   "start": 0.0,
+   "end": 0.22
+  },
+  {
+   "word": "deserves",
+   "start": 0.22,
+   "end": 0.62
+  },
+  {
+   "word": "respect.",
+   "start": 0.62,
+   "end": 0.98
+  }
+ ],
+ "S9_04": [
+  {
+   "word": "A",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "local",
+   "start": 0.16,
+   "end": 0.42
+  },
+  {
+   "word": "walk,",
+   "start": 0.42,
+   "end": 0.78
+  },
+  {
+   "word": "a",
+   "start": 1.04,
+   "end": 1.04
+  },
+  {
+   "word": "free",
+   "start": 1.04,
+   "end": 1.3
+  },
+  {
+   "word": "event,",
+   "start": 1.3,
+   "end": 1.68
+  },
+  {
+   "word": "or",
+   "start": 1.88,
+   "end": 1.98
+  },
+  {
+   "word": "an",
+   "start": 1.98,
+   "end": 2.1
+  },
+  {
+   "word": "afternoon",
+   "start": 2.1,
+   "end": 2.48
+  },
+  {
+   "word": "with",
+   "start": 2.48,
+   "end": 2.72
+  },
+  {
+   "word": "someone",
+   "start": 2.72,
+   "end": 3.0
+  },
+  {
+   "word": "you",
+   "start": 3.0,
+   "end": 3.2
+  },
+  {
+   "word": "care",
+   "start": 3.2,
+   "end": 3.42
+  },
+  {
+   "word": "about",
+   "start": 3.42,
+   "end": 3.76
+  },
+  {
+   "word": "can",
+   "start": 3.76,
+   "end": 4.14
+  },
+  {
+   "word": "still",
+   "start": 4.14,
+   "end": 4.42
+  },
+  {
+   "word": "give",
+   "start": 4.42,
+   "end": 4.64
+  },
+  {
+   "word": "you",
+   "start": 4.64,
+   "end": 4.82
+  },
+  {
+   "word": "something",
+   "start": 4.82,
+   "end": 5.08
+  },
+  {
+   "word": "to",
+   "start": 5.08,
+   "end": 5.28
+  },
+  {
+   "word": "look",
+   "start": 5.28,
+   "end": 5.42
+  },
+  {
+   "word": "forward",
+   "start": 5.42,
+   "end": 5.74
+  },
+  {
+   "word": "to.",
+   "start": 5.74,
+   "end": 6.02
+  }
+ ],
+ "S10_01": [
+  {
+   "word": "Alex",
+   "start": 0.0,
+   "end": 0.34
+  },
+  {
+   "word": "finally",
+   "start": 0.34,
+   "end": 0.8
+  },
+  {
+   "word": "takes",
+   "start": 0.8,
+   "end": 1.12
+  },
+  {
+   "word": "his",
+   "start": 1.12,
+   "end": 1.32
+  },
+  {
+   "word": "weekend.",
+   "start": 1.32,
+   "end": 1.64
+  }
+ ],
+ "S10_02": [
+  {
+   "word": "It",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "rains",
+   "start": 0.12,
+   "end": 0.48
+  },
+  {
+   "word": "on",
+   "start": 0.48,
+   "end": 0.68
+  },
+  {
+   "word": "the",
+   "start": 0.68,
+   "end": 0.8
+  },
+  {
+   "word": "first",
+   "start": 0.8,
+   "end": 1.06
+  },
+  {
+   "word": "morning.",
+   "start": 1.06,
+   "end": 1.36
+  }
+ ],
+ "S10_03": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "forgets",
+   "start": 0.16,
+   "end": 0.54
+  },
+  {
+   "word": "the",
+   "start": 0.54,
+   "end": 0.7
+  },
+  {
+   "word": "coffee.",
+   "start": 0.7,
+   "end": 1.02
+  }
+ ],
+ "S10_04": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.1
+  },
+  {
+   "word": "takes",
+   "start": 0.1,
+   "end": 0.32
+  },
+  {
+   "word": "a",
+   "start": 0.32,
+   "end": 0.46
+  },
+  {
+   "word": "photo",
+   "start": 0.46,
+   "end": 0.72
+  },
+  {
+   "word": "of",
+   "start": 0.72,
+   "end": 0.88
+  },
+  {
+   "word": "himself",
+   "start": 0.88,
+   "end": 1.26
+  },
+  {
+   "word": "staring",
+   "start": 1.26,
+   "end": 1.72
+  },
+  {
+   "word": "into",
+   "start": 1.72,
+   "end": 1.98
+  },
+  {
+   "word": "an",
+   "start": 1.98,
+   "end": 2.16
+  },
+  {
+   "word": "empty",
+   "start": 2.16,
+   "end": 2.42
+  },
+  {
+   "word": "mug",
+   "start": 2.42,
+   "end": 2.76
+  },
+  {
+   "word": "like",
+   "start": 2.76,
+   "end": 2.98
+  },
+  {
+   "word": "he's",
+   "start": 2.98,
+   "end": 3.26
+  },
+  {
+   "word": "just",
+   "start": 3.26,
+   "end": 3.4
+  },
+  {
+   "word": "received",
+   "start": 3.4,
+   "end": 3.86
+  },
+  {
+   "word": "terrible",
+   "start": 3.86,
+   "end": 4.4
+  },
+  {
+   "word": "financial",
+   "start": 4.4,
+   "end": 4.86
+  },
+  {
+   "word": "news.",
+   "start": 4.86,
+   "end": 5.28
+  }
+ ],
+ "S10_05": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "walks.",
+   "start": 0.14,
+   "end": 0.56
+  },
+  {
+   "word": "He",
+   "start": 1.12,
+   "end": 1.22
+  },
+  {
+   "word": "gets",
+   "start": 1.22,
+   "end": 1.4
+  },
+  {
+   "word": "briefly",
+   "start": 1.4,
+   "end": 1.78
+  },
+  {
+   "word": "lost.",
+   "start": 1.78,
+   "end": 2.26
+  },
+  {
+   "word": "He",
+   "start": 2.88,
+   "end": 3.0
+  },
+  {
+   "word": "eats",
+   "start": 3.0,
+   "end": 3.22
+  },
+  {
+   "word": "a",
+   "start": 3.22,
+   "end": 3.42
+  },
+  {
+   "word": "slightly",
+   "start": 3.42,
+   "end": 3.72
+  },
+  {
+   "word": "flattened",
+   "start": 3.72,
+   "end": 4.16
+  },
+  {
+   "word": "sandwich.",
+   "start": 4.16,
+   "end": 4.62
+  }
+ ],
+ "S10_06": [
+  {
+   "word": "and",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "he",
+   "start": 0.14,
+   "end": 0.32
+  },
+  {
+   "word": "thinks",
+   "start": 0.32,
+   "end": 0.6
+  },
+  {
+   "word": "about",
+   "start": 0.6,
+   "end": 0.86
+  },
+  {
+   "word": "something",
+   "start": 0.86,
+   "end": 1.32
+  },
+  {
+   "word": "other",
+   "start": 1.32,
+   "end": 1.62
+  },
+  {
+   "word": "than",
+   "start": 1.62,
+   "end": 1.88
+  },
+  {
+   "word": "work,",
+   "start": 1.88,
+   "end": 2.18
+  },
+  {
+   "word": "bills,",
+   "start": 2.66,
+   "end": 3.02
+  },
+  {
+   "word": "or",
+   "start": 3.2,
+   "end": 3.34
+  },
+  {
+   "word": "when",
+   "start": 3.34,
+   "end": 3.46
+  },
+  {
+   "word": "he'll",
+   "start": 3.46,
+   "end": 3.76
+  },
+  {
+   "word": "finally",
+   "start": 3.76,
+   "end": 4.04
+  },
+  {
+   "word": "go",
+   "start": 4.04,
+   "end": 4.26
+  },
+  {
+   "word": "away.",
+   "start": 4.26,
+   "end": 4.54
+  }
+ ],
+ "S11_01": [
+  {
+   "word": "When",
+   "start": 0.0,
+   "end": 0.4
+  },
+  {
+   "word": "he",
+   "start": 0.4,
+   "end": 0.54
+  },
+  {
+   "word": "gets",
+   "start": 0.54,
+   "end": 0.74
+  },
+  {
+   "word": "home,",
+   "start": 0.74,
+   "end": 0.98
+  },
+  {
+   "word": "the",
+   "start": 1.14,
+   "end": 1.22
+  },
+  {
+   "word": "mountain",
+   "start": 1.22,
+   "end": 1.5
+  },
+  {
+   "word": "photo",
+   "start": 1.5,
+   "end": 1.82
+  },
+  {
+   "word": "stays",
+   "start": 1.82,
+   "end": 2.22
+  },
+  {
+   "word": "on",
+   "start": 2.22,
+   "end": 2.42
+  },
+  {
+   "word": "the",
+   "start": 2.42,
+   "end": 2.52
+  },
+  {
+   "word": "fridge.",
+   "start": 2.52,
+   "end": 2.84
+  },
+  {
+   "word": "He",
+   "start": 3.32,
+   "end": 3.44
+  },
+  {
+   "word": "still",
+   "start": 3.44,
+   "end": 3.68
+  },
+  {
+   "word": "wants",
+   "start": 3.68,
+   "end": 3.96
+  },
+  {
+   "word": "the",
+   "start": 3.96,
+   "end": 4.12
+  },
+  {
+   "word": "bigger",
+   "start": 4.12,
+   "end": 4.3
+  },
+  {
+   "word": "trip.",
+   "start": 4.3,
+   "end": 4.56
+  }
+ ],
+ "S11_02": [
+  {
+   "word": "but",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "next",
+   "start": 0.16,
+   "end": 0.42
+  },
+  {
+   "word": "to",
+   "start": 0.42,
+   "end": 0.62
+  },
+  {
+   "word": "it,",
+   "start": 0.62,
+   "end": 0.88
+  },
+  {
+   "word": "he",
+   "start": 0.96,
+   "end": 1.06
+  },
+  {
+   "word": "puts",
+   "start": 1.06,
+   "end": 1.28
+  },
+  {
+   "word": "a",
+   "start": 1.28,
+   "end": 1.4
+  },
+  {
+   "word": "photo",
+   "start": 1.4,
+   "end": 1.7
+  },
+  {
+   "word": "from",
+   "start": 1.7,
+   "end": 1.94
+  },
+  {
+   "word": "his",
+   "start": 1.94,
+   "end": 2.08
+  },
+  {
+   "word": "weekend.",
+   "start": 2.08,
+   "end": 2.4
+  }
+ ],
+ "S11_03": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "has",
+   "start": 0.12,
+   "end": 0.3
+  },
+  {
+   "word": "mud",
+   "start": 0.3,
+   "end": 0.56
+  },
+  {
+   "word": "on",
+   "start": 0.56,
+   "end": 0.74
+  },
+  {
+   "word": "his",
+   "start": 0.74,
+   "end": 0.88
+  },
+  {
+   "word": "jeans,",
+   "start": 0.88,
+   "end": 1.26
+  },
+  {
+   "word": "he",
+   "start": 1.56,
+   "end": 1.64
+  },
+  {
+   "word": "doesn't",
+   "start": 1.64,
+   "end": 1.92
+  },
+  {
+   "word": "look",
+   "start": 1.92,
+   "end": 2.12
+  },
+  {
+   "word": "particularly",
+   "start": 2.12,
+   "end": 2.64
+  },
+  {
+   "word": "glamorous.",
+   "start": 2.64,
+   "end": 3.18
+  }
+ ],
+ "S11_04": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "looks",
+   "start": 0.14,
+   "end": 0.36
+  },
+  {
+   "word": "happy.",
+   "start": 0.36,
+   "end": 0.7
+  }
+ ],
+ "S11_05": [
+  {
+   "word": "A",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "month",
+   "start": 0.16,
+   "end": 0.32
+  },
+  {
+   "word": "later",
+   "start": 0.32,
+   "end": 0.64
+  },
+  {
+   "word": "he",
+   "start": 0.64,
+   "end": 0.88
+  },
+  {
+   "word": "reviews",
+   "start": 0.88,
+   "end": 1.22
+  },
+  {
+   "word": "his",
+   "start": 1.22,
+   "end": 1.48
+  },
+  {
+   "word": "finances.",
+   "start": 1.48,
+   "end": 1.92
+  },
+  {
+   "word": "Some",
+   "start": 2.52,
+   "end": 2.64
+  },
+  {
+   "word": "things",
+   "start": 2.64,
+   "end": 2.92
+  },
+  {
+   "word": "still",
+   "start": 2.92,
+   "end": 3.22
+  },
+  {
+   "word": "need",
+   "start": 3.22,
+   "end": 3.4
+  },
+  {
+   "word": "attention.",
+   "start": 3.4,
+   "end": 3.86
+  },
+  {
+   "word": "One",
+   "start": 4.28,
+   "end": 4.46
+  },
+  {
+   "word": "weekend",
+   "start": 4.46,
+   "end": 4.78
+  },
+  {
+   "word": "didn't",
+   "start": 4.78,
+   "end": 5.14
+  },
+  {
+   "word": "fix",
+   "start": 5.14,
+   "end": 5.3
+  },
+  {
+   "word": "everything.",
+   "start": 5.3,
+   "end": 5.68
+  }
+ ],
+ "S11_06": [
+  {
+   "word": "But",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "he",
+   "start": 0.18,
+   "end": 0.34
+  },
+  {
+   "word": "stuck",
+   "start": 0.34,
+   "end": 0.6
+  },
+  {
+   "word": "to",
+   "start": 0.6,
+   "end": 0.78
+  },
+  {
+   "word": "the",
+   "start": 0.78,
+   "end": 0.88
+  },
+  {
+   "word": "plan.",
+   "start": 0.88,
+   "end": 1.16
+  }
+ ],
+ "S11_07": [
+  {
+   "word": "and",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "Alex",
+   "start": 0.16,
+   "end": 0.46
+  },
+  {
+   "word": "has",
+   "start": 0.46,
+   "end": 0.72
+  },
+  {
+   "word": "something",
+   "start": 0.72,
+   "end": 1.0
+  },
+  {
+   "word": "he",
+   "start": 1.0,
+   "end": 1.2
+  },
+  {
+   "word": "didn't",
+   "start": 1.2,
+   "end": 1.5
+  },
+  {
+   "word": "have",
+   "start": 1.5,
+   "end": 1.68
+  },
+  {
+   "word": "before,",
+   "start": 1.68,
+   "end": 2.18
+  },
+  {
+   "word": "proof",
+   "start": 2.76,
+   "end": 2.9
+  },
+  {
+   "word": "that",
+   "start": 2.9,
+   "end": 3.1
+  },
+  {
+   "word": "he",
+   "start": 3.1,
+   "end": 3.22
+  },
+  {
+   "word": "can",
+   "start": 3.22,
+   "end": 3.4
+  },
+  {
+   "word": "spend",
+   "start": 3.4,
+   "end": 3.66
+  },
+  {
+   "word": "on",
+   "start": 3.66,
+   "end": 3.88
+  },
+  {
+   "word": "purpose",
+   "start": 3.88,
+   "end": 4.24
+  },
+  {
+   "word": "and",
+   "start": 4.24,
+   "end": 4.56
+  },
+  {
+   "word": "still",
+   "start": 4.56,
+   "end": 4.84
+  },
+  {
+   "word": "be",
+   "start": 4.84,
+   "end": 5.04
+  },
+  {
+   "word": "a",
+   "start": 5.04,
+   "end": 5.18
+  },
+  {
+   "word": "responsible",
+   "start": 5.18,
+   "end": 5.7
+  },
+  {
+   "word": "saver.",
+   "start": 5.7,
+   "end": 6.14
+  }
+ ],
+ "S12_01": [
+  {
+   "word": "So",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "here's",
+   "start": 0.18,
+   "end": 0.52
+  },
+  {
+   "word": "my",
+   "start": 0.52,
+   "end": 0.66
+  },
+  {
+   "word": "challenge.",
+   "start": 0.66,
+   "end": 1.02
+  }
+ ],
+ "S12_02": [
+  {
+   "word": "Pick",
+   "start": 0.0,
+   "end": 0.16
+  },
+  {
+   "word": "one",
+   "start": 0.16,
+   "end": 0.46
+  },
+  {
+   "word": "thing",
+   "start": 0.46,
+   "end": 0.64
+  },
+  {
+   "word": "you",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "word": "keep",
+   "start": 0.8,
+   "end": 1.08
+  },
+  {
+   "word": "postponing.",
+   "start": 1.08,
+   "end": 1.7
+  }
+ ],
+ "S12_03": [
+  {
+   "word": "Ask",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "what",
+   "start": 0.26,
+   "end": 0.42
+  },
+  {
+   "word": "you",
+   "start": 0.42,
+   "end": 0.58
+  },
+  {
+   "word": "actually",
+   "start": 0.58,
+   "end": 0.92
+  },
+  {
+   "word": "want",
+   "start": 0.92,
+   "end": 1.16
+  },
+  {
+   "word": "from",
+   "start": 1.16,
+   "end": 1.38
+  },
+  {
+   "word": "it.",
+   "start": 1.38,
+   "end": 1.56
+  }
+ ],
+ "S12_04": [
+  {
+   "word": "Then",
+   "start": 0.0,
+   "end": 0.22
+  },
+  {
+   "word": "find",
+   "start": 0.22,
+   "end": 0.52
+  },
+  {
+   "word": "a",
+   "start": 0.52,
+   "end": 0.7
+  },
+  {
+   "word": "version",
+   "start": 0.7,
+   "end": 0.96
+  },
+  {
+   "word": "that",
+   "start": 0.96,
+   "end": 1.16
+  },
+  {
+   "word": "fits",
+   "start": 1.16,
+   "end": 1.4
+  },
+  {
+   "word": "your",
+   "start": 1.4,
+   "end": 1.6
+  },
+  {
+   "word": "money,",
+   "start": 1.6,
+   "end": 1.88
+  },
+  {
+   "word": "your",
+   "start": 2.4,
+   "end": 2.44
+  },
+  {
+   "word": "time,",
+   "start": 2.44,
+   "end": 2.86
+  },
+  {
+   "word": "and",
+   "start": 3.08,
+   "end": 3.18
+  },
+  {
+   "word": "your",
+   "start": 3.18,
+   "end": 3.32
+  },
+  {
+   "word": "life",
+   "start": 3.32,
+   "end": 3.64
+  },
+  {
+   "word": "as",
+   "start": 3.64,
+   "end": 4.14
+  },
+  {
+   "word": "it",
+   "start": 4.14,
+   "end": 4.26
+  },
+  {
+   "word": "is",
+   "start": 4.26,
+   "end": 4.42
+  },
+  {
+   "word": "now.",
+   "start": 4.42,
+   "end": 4.76
+  }
+ ],
+ "S12_05": [
+  {
+   "word": "Maybe",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "word": "you",
+   "start": 0.28,
+   "end": 0.48
+  },
+  {
+   "word": "book",
+   "start": 0.48,
+   "end": 0.64
+  },
+  {
+   "word": "it,",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "word": "maybe",
+   "start": 1.0,
+   "end": 1.08
+  },
+  {
+   "word": "you",
+   "start": 1.08,
+   "end": 1.26
+  },
+  {
+   "word": "set",
+   "start": 1.26,
+   "end": 1.42
+  },
+  {
+   "word": "a",
+   "start": 1.42,
+   "end": 1.54
+  },
+  {
+   "word": "date",
+   "start": 1.54,
+   "end": 1.84
+  },
+  {
+   "word": "and",
+   "start": 1.84,
+   "end": 2.04
+  },
+  {
+   "word": "start",
+   "start": 2.04,
+   "end": 2.26
+  },
+  {
+   "word": "saving",
+   "start": 2.26,
+   "end": 2.64
+  },
+  {
+   "word": "toward",
+   "start": 2.64,
+   "end": 2.9
+  },
+  {
+   "word": "it,",
+   "start": 2.9,
+   "end": 3.12
+  },
+  {
+   "word": "maybe",
+   "start": 3.42,
+   "end": 3.58
+  },
+  {
+   "word": "you",
+   "start": 3.58,
+   "end": 3.72
+  },
+  {
+   "word": "make",
+   "start": 3.72,
+   "end": 3.86
+  },
+  {
+   "word": "the",
+   "start": 3.86,
+   "end": 4.02
+  },
+  {
+   "word": "phone",
+   "start": 4.02,
+   "end": 4.2
+  },
+  {
+   "word": "call",
+   "start": 4.2,
+   "end": 4.48
+  },
+  {
+   "word": "that",
+   "start": 4.48,
+   "end": 4.64
+  },
+  {
+   "word": "costs",
+   "start": 4.64,
+   "end": 5.06
+  },
+  {
+   "word": "nothing.",
+   "start": 5.06,
+   "end": 5.44
+  }
+ ],
+ "S12_06": [
+  {
+   "word": "Just",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "word": "give",
+   "start": 0.24,
+   "end": 0.44
+  },
+  {
+   "word": "someday",
+   "start": 0.44,
+   "end": 0.92
+  },
+  {
+   "word": "a",
+   "start": 0.92,
+   "end": 1.12
+  },
+  {
+   "word": "next",
+   "start": 1.12,
+   "end": 1.3
+  },
+  {
+   "word": "step.",
+   "start": 1.3,
+   "end": 1.68
+  }
+ ],
+ "S12_07": [
+  {
+   "word": "Alex's",
+   "start": 0.0,
+   "end": 0.58
+  },
+  {
+   "word": "fridge",
+   "start": 0.58,
+   "end": 0.84
+  },
+  {
+   "word": "used",
+   "start": 0.84,
+   "end": 1.1
+  },
+  {
+   "word": "to",
+   "start": 1.1,
+   "end": 1.3
+  },
+  {
+   "word": "show",
+   "start": 1.3,
+   "end": 1.5
+  },
+  {
+   "word": "him",
+   "start": 1.5,
+   "end": 1.62
+  },
+  {
+   "word": "a",
+   "start": 1.62,
+   "end": 1.78
+  },
+  {
+   "word": "place",
+   "start": 1.78,
+   "end": 2.06
+  },
+  {
+   "word": "he",
+   "start": 2.06,
+   "end": 2.26
+  },
+  {
+   "word": "wanted",
+   "start": 2.26,
+   "end": 2.5
+  },
+  {
+   "word": "to",
+   "start": 2.5,
+   "end": 2.68
+  },
+  {
+   "word": "go.",
+   "start": 2.68,
+   "end": 2.88
+  }
+ ],
+ "S12_08": [
+  {
+   "word": "Now",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "it",
+   "start": 0.18,
+   "end": 0.32
+  },
+  {
+   "word": "also",
+   "start": 0.32,
+   "end": 0.6
+  },
+  {
+   "word": "shows",
+   "start": 0.6,
+   "end": 0.96
+  },
+  {
+   "word": "him",
+   "start": 0.96,
+   "end": 1.12
+  },
+  {
+   "word": "somewhere",
+   "start": 1.12,
+   "end": 1.44
+  },
+  {
+   "word": "he's",
+   "start": 1.44,
+   "end": 1.72
+  },
+  {
+   "word": "been.",
+   "start": 1.72,
+   "end": 1.88
+  }
+ ],
+ "S12_09": [
+  {
+   "word": "What's",
+   "start": 0.0,
+   "end": 0.38
+  },
+  {
+   "word": "still",
+   "start": 0.38,
+   "end": 0.56
+  },
+  {
+   "word": "sitting",
+   "start": 0.56,
+   "end": 0.88
+  },
+  {
+   "word": "on",
+   "start": 0.88,
+   "end": 1.1
+  },
+  {
+   "word": "your",
+   "start": 1.1,
+   "end": 1.24
+  },
+  {
+   "word": "fridge?",
+   "start": 1.24,
+   "end": 1.66
+  },
+  {
+   "word": "Tell",
+   "start": 2.24,
+   "end": 2.34
+  },
+  {
+   "word": "me",
+   "start": 2.34,
+   "end": 2.48
+  },
+  {
+   "word": "in",
+   "start": 2.48,
+   "end": 2.56
+  },
+  {
+   "word": "the",
+   "start": 2.56,
+   "end": 2.68
+  },
+  {
+   "word": "comments.",
+   "start": 2.68,
+   "end": 2.94
+  }
+ ],
+ "S12_10": [
+  {
+   "word": "I'm",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "word": "Wren,",
+   "start": 0.28,
+   "end": 0.6
+  },
+  {
+   "word": "subscribe",
+   "start": 1.06,
+   "end": 1.42
+  },
+  {
+   "word": "for",
+   "start": 1.42,
+   "end": 1.72
+  },
+  {
+   "word": "more",
+   "start": 1.72,
+   "end": 1.98
+  },
+  {
+   "word": "on",
+   "start": 1.98,
+   "end": 2.26
+  },
+  {
+   "word": "building",
+   "start": 2.26,
+   "end": 2.56
+  },
+  {
+   "word": "wealth",
+   "start": 2.56,
+   "end": 2.9
+  },
+  {
+   "word": "and",
+   "start": 2.9,
+   "end": 3.14
+  },
+  {
+   "word": "making",
+   "start": 3.14,
+   "end": 3.38
+  },
+  {
+   "word": "room",
+   "start": 3.38,
+   "end": 3.7
+  },
+  {
+   "word": "for",
+   "start": 3.7,
+   "end": 3.92
+  },
+  {
+   "word": "the",
+   "start": 3.92,
+   "end": 4.04
+  },
+  {
+   "word": "life",
+   "start": 4.04,
+   "end": 4.26
+  },
+  {
+   "word": "it's",
+   "start": 4.26,
+   "end": 4.52
+  },
+  {
+   "word": "meant",
+   "start": 4.52,
+   "end": 4.62
+  },
+  {
+   "word": "to",
+   "start": 4.62,
+   "end": 4.82
+  },
+  {
+   "word": "support.",
+   "start": 4.82,
+   "end": 5.16
   }
  ]
 }

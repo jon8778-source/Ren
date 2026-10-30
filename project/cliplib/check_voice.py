@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 from faster_whisper import WhisperModel
 
-NUMBER_WORDS = {"4": "four", "365": "three hundred sixty five"}
+NUMBER_WORDS = {"3": "three", "4": "four", "365": "three hundred sixty five"}
 
 
 def words(text):
