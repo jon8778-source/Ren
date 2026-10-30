@@ -170,6 +170,10 @@ def icon(d, kind, cx, cy, s=90):
         d.ellipse((cx + s * .2, cy - s * .2, cx + s * .7, cy + s * .3), fill=GREEN)
         d.line((cx + s * .33, cy + s * .05, cx + s * .43, cy + s * .15, cx + s * .6, cy - s * .08), fill=WHITE,
                width=6)
+    elif kind == "tree":
+        d.polygon([(cx, cy - s * .7), (cx - s * .45, cy + s * .1), (cx + s * .45, cy + s * .1)], fill=GREEN)
+        d.polygon([(cx, cy - s * .45), (cx - s * .55, cy + s * .4), (cx + s * .55, cy + s * .4)], fill=GREEN)
+        d.rectangle((cx - s * .08, cy + s * .4, cx + s * .08, cy + s * .7), fill="#7A5236")
     elif kind == "path":
         d.line([(cx - s * .6, cy + s * .5), (cx - s * .1, cy + s * .1), (cx + s * .2, cy + s * .25),
                 (cx + s * .6, cy - s * .4)], fill=GREEN, width=16, joint="curve")
@@ -462,7 +466,7 @@ def build(out):
             dict(lines=[("Waiting helped.", 84, 700, NAVY)], y=440, at=S("S2_05"))], end_on=8.0)),
         # S3
         ("S3_02", "story still", "D_alex_laptop + accounts screen", still(
-            lambda t: laptop("accounts", min(1, max(0, (t - S("S3_02")) / 2.5))), (980, 520, 1.3), (1030, 560, 1.7))),
+            lambda t: laptop("accounts", min(1, max(0, (t - S("S3_02")) / 2.5))), (820, 450, 1.12), (860, 440, 1.3))),
         ("S3_03", "presenter", "ren_shake_no", presenter("ren_shake_no", [
             dict(lines=[("He could afford it now.", 60, 600, NAVY)], y=330, at=S("S3_03")),
             dict(lines=[("But spending it felt", 60, 600, NAVY), ("like going backward.", 60, 600, NAVY)], y=520,
@@ -473,24 +477,26 @@ def build(out):
                   at=S("S3_04") - 0.05)])),
         ("S3_05", "story still", "fridge (anchor: still waiting)", still(fridge, (836, 470, 1.15), (px, py, 1.55))),
         ("S3_08", "infographic", "savings vs a moving target", white(g_target)),
-        ("S3_11", "presenter", "ren_point_up", presenter("ren_point_up", [
+        ("S3_10", "presenter", "ren_point_up", presenter("ren_point_up", [
             dict(lines=[("Whenever his finances improved,", 52, 600, NAVY), ("“ready” moved too.", 52, 600, NAVY)],
-                 y=300, at=S("S3_10")),
-            dict(lines=[("A moving summit.", 76, 700, NAVY)], y=560, at=S("S3_11"))])),
+                 y=400, at=S("S3_10"))])),
+        ("S3_11", "detail crop", "fridge photo close: a moving summit", still(
+            fridge, (px + 150, py + 10, 2.0), (px + 140, py, 2.2),
+            [dict(lines=[("A moving summit.", 84, 700, NAVY)], x=1290, y=380, at=S("S3_11"))])),
         # S4
         ("S4_02", "story still", "D_alex_laptop + listings", still(
-            lambda t: laptop("listings", min(1, max(0, (t - S("S4_01")) / 6))), (900, 520, 1.25), (980, 540, 1.55))),
+            lambda t: laptop("listings", min(1, max(0, (t - S("S4_01")) / 6))), (820, 450, 1.12), (860, 430, 1.3))),
         ("S4_03", "story still", "D_alex_laptop close; Alex: tag", still(
             laptop("listings", 1.0), (700, 380, 1.55), (720, 360, 1.7),
             [dict(lines=alex_quote(["“What would have to happen", "for me to actually", "book this?”"]),
-                  x=1150, y=260, at=word("S4_03", "what") - 0.1)])),
+                  x=W - 50, y=260, anchor="ra", at=word("S4_03", "what") - 0.1)])),
         ("S4_05", "presenter", "ren_count_fingers", presenter("ren_count_fingers", [
             dict(lines=[("He started listing numbers.", 60, 600, NAVY)], y=380, at=S("S4_04")),
-            dict(lines=[("Then he stopped.", 60, 600, MUTED)], y=560, at=S("S4_05"))])),
+            dict(lines=[("Then he stopped.", 60, 600, MUTED)], y=560, at=S("S4_05"))], end_on=8.17)),
         ("S4_06", "story still", "D_alex_laptop, face; Alex: tag", still(
             laptop("listings", 1.0), (620, 320, 1.9), (630, 310, 2.0),
             [dict(lines=alex_quote(["“And if I reach those numbers,", "will I feel comfortable", "spending it?”"]),
-                  x=1060, y=240, at=S("S4_06") - 0.05)])),
+                  x=W - 50, y=240, anchor="ra", at=S("S4_06") - 0.05)])),
         ("S4_08", "presenter", "ren_shrug", presenter("ren_shrug", [
             dict(lines=[("He wasn’t sure.", 72, 700, NAVY)], y=440, at=S("S4_08"))])),
         # S5
@@ -505,9 +511,14 @@ def build(out):
             extra=lambda f, t, x0: [tick_badge(f, x0 - 50, 395, 34, fade(t, S("S5_04") + 0.8)),
                                     plain_text(f, "?", x0 - 66, 548, 80, 700, RED, fade(t, S("S5_05") + 1.2))])),
         ("S5_08", "infographic", "the cabin grows", white(g_cabin)),
-        ("S5_11", "presenter", "ren_confused", presenter("ren_confused", [
+        ("S5_10", "presenter", "ren_confused", presenter("ren_confused", [
+            dict(lines=[("He wanted it to feel", 60, 600, NAVY), ("worth the wait.", 60, 600, NAVY)], y=330,
+                 at=S("S5_09")),
             dict(lines=[("The bigger it gets,", 60, 600, NAVY), ("the harder it is to say yes.", 60, 600, NAVY)],
-                 y=400, at=S("S5_10"))])),
+                 y=540, at=S("S5_10"))])),
+        ("S5_11", "story still", "D_alex_laptop + listings, slow push", still(
+            laptop("listings", 1.0), (836, 470, 1.05), (860, 450, 1.25),
+            [dict(lines=[("Harder to say yes.", 64, 700, NAVY)], x=W - 60, y=120, anchor="ra", at=S("S5_11"))])),
         # S6
         ("S6_03", "story still", "F_phone_in_hand + friend's message", still(
             phone, (836, 470, 1.15), (820, 420, 1.45))),
@@ -525,10 +536,10 @@ def build(out):
             mirror=True)),
         # S7
         ("S7_02", "story still", "D_alex_laptop + budget sheet", still(
-            laptop("sheet"), (900, 520, 1.15), (980, 540, 1.45), cap=EXAMPLE)),
+            laptop("sheet"), (820, 450, 1.12), (860, 430, 1.3), cap=EXAMPLE)),
         ("S7_04", "presenter", "ren_rub_hands", presenter("ren_rub_hands", [
             dict(lines=[("There’s a spreadsheet.", 64, 600, NAVY)], y=360, at=S("S7_03")),
-            dict(lines=[("Alex is delighted.", 64, 700, GREEN)], y=540, at=S("S7_04"))])),
+            dict(lines=[("Alex is delighted.", 64, 700, GREEN)], y=540, at=S("S7_04"))], end_on=7.88)),
         ("S7_05", "infographic", "checks before spending", tick_list("Before he spends anything", [
             ("Bills checked", word("S7_05", "bills")), ("Goals checked", word("S7_05", "goals")),
             ("No borrowing", word("S7_05", "borrowing")), ("Emergency fund untouched", word("S7_05", "emergency"))],
@@ -544,6 +555,8 @@ def build(out):
             dict(lines=[("Excited…", 64, 700, GREEN), ("for about three seconds.", 52, 600, NAVY)], y=330,
                  at=S("S8_03")),
             dict(lines=[("Then: cancel?", 64, 700, RED)], y=580, at=S("S8_04"))])),
+        ("S8_05", "story still", "D_alex_laptop + budget sheet, closer", still(
+            laptop("sheet"), (760, 380, 1.5), (780, 360, 1.62), cap=EXAMPLE)),
         ("S8_06", "infographic", "the plan, checked again", tick_list("He looks at the plan again", [
             ("Bills covered", word("S8_06", "bills")), ("Savings on track", word("S8_06", "savings")),
             ("Nothing has changed", word("S8_06", "nothing"))], S("S8_05") - 0.1, cap=EXAMPLE)),
@@ -552,11 +565,14 @@ def build(out):
             dict(lines=[("It isn’t evidence", 64, 700, NAVY), ("booking was a mistake.", 64, 700, NAVY)], y=520,
                  at=S("S8_08"))])),
         # S9
-        ("S9_03", "presenter", "ren_point_right", presenter("ren_point_right", [
-            dict(lines=[("No room in the", 58, 600, NAVY), ("budget right now?", 58, 600, NAVY)], y=300, at=S("S9_01")),
-            dict(lines=[("Waiting deserves", 64, 700, NAVY), ("respect.", 64, 700, NAVY)], y=540, at=S("S9_03"))])),
+        ("S9_01", "presenter", "ren_point_right", presenter("ren_point_right", [
+            dict(lines=[("No room in the", 64, 700, NAVY), ("budget right now?", 64, 700, NAVY)], y=420, at=S("S9_01"))])),
+        ("S9_03", "presenter", "ren_open_arms", presenter("ren_open_arms", [
+            dict(lines=[("You might be where", 58, 600, NAVY), ("Alex had to wait.", 58, 600, NAVY)], y=300,
+                 at=S("S9_02")),
+            dict(lines=[("That deserves", 64, 700, NAVY), ("respect.", 64, 700, NAVY)], y=540, at=S("S9_03"))])),
         ("S9_04", "infographic", "free things to look forward to", icon_row("Something to look forward to", [
-            ("path", "A local walk", "", word("S9_04", "local")),
+            ("tree", "A local walk", "", word("S9_04", "local")),
             ("star", "A free event", "", word("S9_04", "free")),
             ("people", "An afternoon with", "someone you care about", word("S9_04", "afternoon"))],
             S("S9_04") - 0.1)),
@@ -564,17 +580,21 @@ def build(out):
         ("S10_02", "story still", "G_empty_mug (cropped clear of the French press)", still(
             mug, (700, 470, 1.25), (720, 450, 1.4))),
         ("S10_04", "story still", "G_empty_mug, close on Alex and the mug", still(mug, (740, 420, 1.75), (735, 410, 1.9))),
-        ("S10_06", "story still", "H_trail", still(trail, (836, 470, 1.0), (900, 430, 1.22))),
+        ("S10_05", "story still", "H_trail, wide", still(trail, (836, 470, 1.0), (880, 450, 1.12))),
+        ("S10_06", "story still", "H_trail, closer on Alex", still(trail, (700, 520, 1.6), (720, 500, 1.75))),
         # S11
         ("S11_01", "story still", "fridge, mountain photo", still(fridge, (836, 470, 1.0), (900, 400, 1.18))),
         ("S11_02", "story still", "fridge: the weekend photo goes up (anchor)", None),
         ("S11_04", "detail crop", "C_weekend_selfie", still(selfie_still, (836, 455, 1.3), (820, 430, 1.55),
                                                             [dict(lines=[("He looks happy.", 64, 700, NAVY)], x=1320, y=880,
                                                                   anchor="lb", at=S("S11_04"))])),
+        ("S11_05", "story still", "D_alex_laptop + accounts screen, a month later", still(
+            laptop("accounts", 1.0), (836, 470, 1.05), (850, 450, 1.2),
+            [dict(lines=[("A month later", 56, 600, MUTED)], x=W - 60, y=110, anchor="ra", at=S("S11_05")),
+             dict(lines=[("Not everything is fixed.", 56, 600, NAVY)], x=W - 60, y=250, anchor="ra",
+                  at=word("S11_05", "some"))])),
         ("S11_06", "presenter", "ren_thumbs_up", presenter("ren_thumbs_up", [
-            dict(lines=[("A month later", 56, 600, MUTED)], y=300, at=S("S11_05")),
-            dict(lines=[("Not everything is fixed.", 56, 600, NAVY)], y=430, at=word("S11_05", "some")),
-            dict(lines=[("But he stuck to the plan.", 60, 700, GREEN)], y=600, at=S("S11_06"))])),
+            dict(lines=[("But he stuck", 72, 700, GREEN), ("to the plan.", 72, 700, GREEN)], y=420, at=S("S11_06"))])),
         ("S11_07", "presenter", "ren_idea", presenter("ren_idea", [
             dict(lines=[("Proof he can spend", 60, 700, NAVY), ("on purpose and still", 60, 700, NAVY),
                         ("be a responsible saver.", 60, 700, NAVY)], y=380, at=word("S11_07", "proof"))])),
@@ -593,6 +613,10 @@ def build(out):
         ("S12_06", "presenter", "ren_nod_yes", presenter("ren_nod_yes", [
             dict(lines=[("Give “someday”", 76, 700, NAVY), ("a next step.", 76, 700, NAVY)], y=420,
                  at=S("S12_06"))], end_on=8.0)),
+        ("S12_08", "story still", "fridge: both photos", still(both, (890, 390, 1.6), (880, 385, 1.4))),
+        ("S12_09", "presenter", "ren_hold_phone", presenter("ren_hold_phone", [
+            dict(lines=[("What’s still sitting", 64, 700, NAVY), ("on your fridge?", 64, 700, NAVY),
+                        ("Tell me in the comments.", 44, 500, MUTED)], y=360, at=S("S12_09"))])),
         ("S12_10", "story still", "fridge: both photos (final shot)", None),
     ]
 
@@ -616,12 +640,9 @@ def build(out):
 
     def f_final(t, a, b, k):
         x = ease((t - a) / (b - a))
-        f = camera(both, lerp(890, 836, x), lerp(390, 470, x), lerp(1.55, 1.0, x)).convert("RGBA")
-        boxes = [text_card(f, [("What’s still sitting", 56, 700, NAVY), ("on your fridge?", 56, 700, NAVY),
-                               ("Tell me in the comments.", 40, 500, MUTED)], W - 70, 760, "rb",
-                           alpha=fade(t, S("S12_09") - 0.1) * (1 - fade(t, S("S12_10") + 0.2, 0.3))),
-                 text_card(f, [("Subscribe", 64, 700, NAVY), ("for more on building wealth", 40, 500, MUTED),
-                               ("and making room for your life", 40, 500, MUTED)], W - 70, 760, "rb",
+        f = camera(both, lerp(880, 836, x), lerp(385, 470, x), lerp(1.4, 1.0, x)).convert("RGBA")
+        boxes = [text_card(f, [("Subscribe", 64, 700, NAVY), ("for more on building wealth", 40, 500, MUTED),
+                               ("and making room for your life", 40, 500, MUTED)], W - 70, 930, "rb",
                            alpha=fade(t, S("S12_10") + 0.5)),
                  caption(f, EDU, fade(t, S("S12_10") + 0.5))]
         return f, boxes
