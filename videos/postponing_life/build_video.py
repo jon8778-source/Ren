@@ -588,15 +588,14 @@ def build(out):
         ("S11_04", "detail crop", "C_weekend_selfie", still(selfie_still, (836, 455, 1.3), (820, 430, 1.55),
                                                             [dict(lines=[("He looks happy.", 64, 700, NAVY)], x=1320, y=880,
                                                                   anchor="lb", at=S("S11_04"))])),
-        ("S11_05", "story still", "D_alex_laptop + accounts screen, a month later", still(
+        ("S11_06", "story still", "D_alex_laptop + accounts screen, a month later", still(
             laptop("accounts", 1.0), (836, 470, 1.05), (850, 450, 1.2),
             [dict(lines=[("A month later", 56, 600, MUTED)], x=W - 60, y=110, anchor="ra", at=S("S11_05")),
              dict(lines=[("Not everything is fixed.", 56, 600, NAVY)], x=W - 60, y=250, anchor="ra",
-                  at=word("S11_05", "some"))])),
-        ("S11_06", "presenter", "ren_thumbs_up", presenter("ren_thumbs_up", [
-            dict(lines=[("But he stuck", 72, 700, GREEN), ("to the plan.", 72, 700, GREEN)], y=420, at=S("S11_06"))],
-            end_on=8.0)),
-        ("S11_07", "presenter", "ren_idea", presenter("ren_idea", [
+                  at=word("S11_05", "some")),
+             dict(lines=[("But he stuck to the plan.", 60, 700, GREEN)], x=W - 60, y=390, anchor="ra",
+                  at=S("S11_06"))])),
+        ("S11_07", "presenter", "ren_thumbs_up", presenter("ren_thumbs_up", [
             dict(lines=[("Proof he can spend", 60, 700, NAVY), ("on purpose and still", 60, 700, NAVY),
                         ("be a responsible saver.", 60, 700, NAVY)], y=380, at=word("S11_07", "proof"))])),
         # S12
