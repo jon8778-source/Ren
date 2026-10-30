@@ -40,10 +40,10 @@
   ],
   "hf_generation_calls": 0,
   "music": false,
-  "final_sha256": "0f57ac2f8b66cee69de2d7971df857c03b3e230e869f5e18c2e905d82f2ba2f3",
+  "final_sha256": "7e370e506b2036e30126414876ec73af26e883e83d6371d984dea556a68eda03",
   "encoded_midpoints_inspected": 22,
   "encoded_transition_samples_inspected": 24,
   "consecutive_ren_framing": "unchanged across consecutive office shots",
-  "visual_review": "22 shot midpoints and 24 transition frames inspected; no full-motion playback or listening claimed",
-  "listening": "not performed; source narration review limits retained"
+  "visual_review": "22 encoded shot midpoints and 24 transition samples inspected; no full-motion playback or listening claimed",
+  "listening": "not performed; existing narration review limits apply"
 }

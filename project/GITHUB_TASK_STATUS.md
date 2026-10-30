@@ -64,4 +64,5 @@ verification remains a review item. No YouTube upload or merge into main.
 
 [Short quality report](episodes/retirement-ease-off/shorts/one-minute/QUALITY.md)
 
-Generated MP4 remains outside Git; temporary HTTPS download prepared separately.
+Generated MP4 remains outside Git; owner-authorized temporary HTTPS download
+verified by downloading the full file and matching its SHA-256.

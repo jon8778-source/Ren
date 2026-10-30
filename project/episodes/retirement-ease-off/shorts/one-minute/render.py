@@ -79,7 +79,14 @@ def portrait(frame,shot,index,total,absolute):
         # the neighbouring investment card in this portrait crop.
         paste_crop(out,frame,(paper_x,210,paper_x+650,520),(35,270),570)
         if shot['motif']=='booking':paste_crop(out,frame,(815,280,1205,505),(35,580),540)
-        else:paste_crop(out,frame,(775,255,1280,520),(35,580),570)
+        else:
+            # Keep only the arriving investment card. A fixed broad crop can
+            # otherwise capture a fragment of the neighbouring moving paper.
+            card_x=775+round(250*(1-ease))
+            card=Image.new('RGB',(505,265),CREAM)
+            card.paste(frame.crop((card_x,255,min(1280,card_x+420),520)),(card_x-775,0))
+            card=card.resize((570,round(265*570/505)),Image.Resampling.LANCZOS)
+            out.paste(card,(35,580))
     else:raise ValueError('Unreviewed landscape layout: '+shot['motif'])
     return out
 
