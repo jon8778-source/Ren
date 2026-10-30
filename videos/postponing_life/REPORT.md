@@ -149,4 +149,4 @@ sleeves over a cream T-shirt, dark trousers".
 - **Checked:** `project/cliplib/check_voice.py` (faster-whisper medium.en) heard every one of the 15 lines word for word. Four short lines are faster than 230 wpm; the average is about 205 wpm. Results are in `voice/voice_check.json`.
 - **Loudness:** before mixing, -18.0 LUFS (S1) and -17.5 LUFS (S2). The final mix normalises to -16.
 - **Speed here (4 CPU cores):** about 6 minutes to load the model, then 26–68s per line. The whole script would take roughly 1–1½ hours.
-- **Open:** keep the natural pace, or slow the narration to 90% (S1 would run 32.9s)?
+- **Pace (Jon, 30 Oct):** keep the natural pace. No slow-down.
