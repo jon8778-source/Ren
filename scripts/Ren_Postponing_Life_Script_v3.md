@@ -14,7 +14,7 @@
 
 [S1 — Hook]
 
-Alex has a photo of a mountain taped to his fridge.
+Alex has a photo of a mountain, taped to his fridge.
 
 He’s never been there.
 
