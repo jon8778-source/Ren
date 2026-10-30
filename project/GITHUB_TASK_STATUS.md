@@ -68,3 +68,18 @@ Generated MP4 remains outside Git; owner-authorized temporary HTTPS download
 verified by downloading the full file and matching its SHA-256.
 
 Short source checkpoint remotely verified: [ca53b64](https://github.com/jon8778-source/Ren/commit/ca53b6465de701035b4fe733a584881231144ef8).
+
+## Left-side Ren layout test — 30 October 2026
+
+Owner requested a silent 10-second layout experiment. Branch:
+`codex/ren-left-layout-prototype`. Complete: 1280×720, 24 fps, H.264,
+240 frames, no audio stream. Ren remains full-body on the left; text and a
+small booking graphic occupy the clear right wall. Two five-second gestures
+use the existing native-resolution v3 matte, approved character and office.
+All shot counts and fatal-error final decode pass. Twelve encoded frames,
+including the shot boundary, and two frames at 100% output size were inspected.
+No full-motion playback is claimed. No voice requests or artwork generation.
+This is an option for owner review; existing production layout rules, episodes,
+approved coffee prototype and main remain unchanged.
+
+[Layout prototype source and validation](prototypes/ren-left-layout/README.md)

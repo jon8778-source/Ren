@@ -1,0 +1,79 @@
+{
+  "output": "Ren_Left_Layout_10s_Silent.mp4",
+  "sha256": "4dcc08cb75cfa07ec9dd3fe4c2bf2cdd581dbb23aa58752a31ac70a6f40dde36",
+  "duration": 10,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frames": 240,
+  "audio_streams": 0,
+  "new_voice_requests": 0,
+  "full_decode": "pass",
+  "shots": [
+    {
+      "shot": 1,
+      "clip": "thinking",
+      "source_sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354",
+      "source_duration": 10.005,
+      "source_interval": [
+        1.25,
+        6.25
+      ],
+      "start": 0,
+      "duration": 5,
+      "frames": 120,
+      "title": "When can you\nease off?"
+    },
+    {
+      "shot": 2,
+      "clip": "nod_yes",
+      "source_sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
+      "source_duration": 10.005,
+      "source_interval": [
+        1.25,
+        6.25
+      ],
+      "start": 5,
+      "duration": 5,
+      "frames": 120,
+      "title": "Make room for\nlife now, too."
+    }
+  ],
+  "matte": "approved v3, native 1280x720",
+  "actor_scale": 0.9,
+  "actor_position": [
+    -300,
+    45
+  ],
+  "mirrored": false,
+  "framing": "fixed throughout",
+  "content_region": [
+    650,
+    70,
+    1210,
+    480
+  ],
+  "visual_review": {
+    "encoded_frames_inspected": [
+      0,
+      24,
+      60,
+      96,
+      118,
+      119,
+      120,
+      121,
+      144,
+      180,
+      216,
+      239
+    ],
+    "native_output_inspections": [
+      60,
+      180
+    ],
+    "findings": "Fixed full-body composition, closed mouths in inspected samples, intact white clothing/trainers, readable right-hand content clear of furniture. No mirroring. Sampled visual review, not full-motion playback."
+  }
+}
