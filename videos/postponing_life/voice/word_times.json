@@ -1,0 +1,203 @@
+{
+ "S1_06": [
+  {
+   "word": "Next",
+   "start": 0.0,
+   "end": 0.28
+  },
+  {
+   "word": "year,",
+   "start": 0.28,
+   "end": 0.58
+  },
+  {
+   "word": "I'll",
+   "start": 0.76,
+   "end": 0.88
+  },
+  {
+   "word": "be",
+   "start": 0.88,
+   "end": 0.96
+  },
+  {
+   "word": "in",
+   "start": 0.96,
+   "end": 1.04
+  },
+  {
+   "word": "a",
+   "start": 1.04,
+   "end": 1.16
+  },
+  {
+   "word": "better",
+   "start": 1.16,
+   "end": 1.34
+  },
+  {
+   "word": "position.",
+   "start": 1.34,
+   "end": 1.76
+  }
+ ],
+ "S2_02": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.14
+  },
+  {
+   "word": "had",
+   "start": 0.14,
+   "end": 0.32
+  },
+  {
+   "word": "credit",
+   "start": 0.32,
+   "end": 0.64
+  },
+  {
+   "word": "card",
+   "start": 0.64,
+   "end": 0.9
+  },
+  {
+   "word": "debt,",
+   "start": 0.9,
+   "end": 1.2
+  },
+  {
+   "word": "very",
+   "start": 1.58,
+   "end": 1.78
+  },
+  {
+   "word": "little",
+   "start": 1.78,
+   "end": 2.02
+  },
+  {
+   "word": "savings,",
+   "start": 2.02,
+   "end": 2.46
+  },
+  {
+   "word": "and",
+   "start": 2.94,
+   "end": 3.04
+  },
+  {
+   "word": "a",
+   "start": 3.04,
+   "end": 3.12
+  },
+  {
+   "word": "vacation",
+   "start": 3.12,
+   "end": 3.54
+  },
+  {
+   "word": "budget",
+   "start": 3.54,
+   "end": 3.86
+  },
+  {
+   "word": "that",
+   "start": 3.86,
+   "end": 4.1
+  },
+  {
+   "word": "was",
+   "start": 4.1,
+   "end": 4.26
+  },
+  {
+   "word": "mostly",
+   "start": 4.26,
+   "end": 4.66
+  },
+  {
+   "word": "optimism.",
+   "start": 4.66,
+   "end": 5.2
+  }
+ ],
+ "S2_04": [
+  {
+   "word": "He",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "paid",
+   "start": 0.12,
+   "end": 0.38
+  },
+  {
+   "word": "down",
+   "start": 0.38,
+   "end": 0.6
+  },
+  {
+   "word": "the",
+   "start": 0.6,
+   "end": 0.72
+  },
+  {
+   "word": "card,",
+   "start": 0.72,
+   "end": 1.08
+  },
+  {
+   "word": "built",
+   "start": 1.52,
+   "end": 1.68
+  },
+  {
+   "word": "up",
+   "start": 1.68,
+   "end": 1.92
+  },
+  {
+   "word": "emergency",
+   "start": 1.92,
+   "end": 2.38
+  },
+  {
+   "word": "savings,",
+   "start": 2.38,
+   "end": 2.96
+  },
+  {
+   "word": "started",
+   "start": 3.32,
+   "end": 3.54
+  },
+  {
+   "word": "putting",
+   "start": 3.54,
+   "end": 3.82
+  },
+  {
+   "word": "money",
+   "start": 3.82,
+   "end": 4.12
+  },
+  {
+   "word": "away",
+   "start": 4.12,
+   "end": 4.38
+  },
+  {
+   "word": "for",
+   "start": 4.38,
+   "end": 4.62
+  },
+  {
+   "word": "retirement.",
+   "start": 4.62,
+   "end": 5.04
+  }
+ ]
+}
