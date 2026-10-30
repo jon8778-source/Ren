@@ -1,0 +1,49 @@
+{
+  "status": "technical pass; visual and listening review limits documented",
+  "source_video_sha256": "3b0d3faa7ffa1784804fcab8951202f9eb520f01f8772b2bb5f72730a7a7236b",
+  "source_audio_sha256": "f1d5dc690d4c20775f257bf381369bb9f94535904f53d324b5bc78c626cfa534",
+  "source_segments": [
+    "s012",
+    "s013",
+    "s014"
+  ],
+  "source_audio_interval_s": [
+    277.480625,
+    338.665
+  ],
+  "source_video_interval_frames": [
+    6660,
+    8128
+  ],
+  "source_midpoints_independently_verified": 22,
+  "frames": 1468,
+  "duration_s": 61.184,
+  "audio_duration_s": 61.184375,
+  "resolution": [
+    720,
+    1280
+  ],
+  "fps": 24,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "full_decode": "pass",
+  "continuous_audio_correlation": 0.9999748932882633,
+  "audio_samples_identical_to_master_excerpt": true,
+  "character_pixels": "native crop; no upscaling/mirroring",
+  "important_content_bounds": [
+    35,
+    65,
+    620,
+    1000
+  ],
+  "hf_generation_calls": 0,
+  "music": false,
+  "final_sha256": "0f57ac2f8b66cee69de2d7971df857c03b3e230e869f5e18c2e905d82f2ba2f3",
+  "encoded_midpoints_inspected": 22,
+  "encoded_transition_samples_inspected": 24,
+  "consecutive_ren_framing": "unchanged across consecutive office shots",
+  "visual_review": "22 shot midpoints and 24 transition frames inspected; no full-motion playback or listening claimed",
+  "listening": "not performed; source narration review limits retained"
+}

@@ -1,0 +1,5 @@
+Revisit the plan each year, and after major changes in income, family circumstances, or retirement goals. If the outlook deteriorates materially, be willing to save more, spend less, or adjust the date. That’s a decision you can manage. The hardest part may still be emotional. After years of watching your balance rise, saving can become the thing that makes you feel safe. Spending feels like undoing your progress, even when you planned for it.
+
+But every purchase can be compared with decades of hypothetical investment growth. Follow that thought far enough, and you can talk yourself out of almost anything. Future you deserves security. Present you deserves a place in the budget too. So when can you ease off? When a realistic plan shows that lower contributions can still support your retirement, with room for setbacks, and you understand what you’re choosing in return. You don’t have to stop saving to start enjoying what saving has made possible.
+
+What would you make room for if you knew you were on track? Tell me in the comments. I’m Ren. Let’s make money matter to the life we actually want.

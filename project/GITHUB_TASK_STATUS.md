@@ -49,3 +49,19 @@ is byte-identical; no new voice calls. Main and coffee originals unchanged.
 
 Owner-authorized temporary HTTPS MP4 hosting was verified by full download and
 SHA-256 comparison. Links expire in about one hour. See framing-revision.json.
+
+## One-minute YouTube Short — 30 October 2026
+
+Owner authorized a Short from the existing video after the long-form task.
+The 61.184-second portrait cut is rendered for review: 720×1280, 24 fps,
+H.264/AAC; 1,468 frames; 22 mapped shots; full fatal-error decode passes.
+The existing final three narration segments are reused unchanged. No new voice
+requests, no speed change, no music. Original long video remains unchanged.
+All 22 encoded midpoints and 24 transition frames were inspected. Listening
+verification remains a review item. No YouTube upload or merge into main.
+
+[Short sources and instructions](episodes/retirement-ease-off/shorts/one-minute/README.md)
+
+[Short quality report](episodes/retirement-ease-off/shorts/one-minute/QUALITY.md)
+
+Generated MP4 remains outside Git; temporary HTTPS download prepared separately.
