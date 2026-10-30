@@ -153,7 +153,7 @@ sleeves over a cream T-shirt, dark trousers".
 
 ## Gate 2 — 60-second pilot (S1 + S2)
 
-Status: **rendered; waiting for Jon's review.** Files: `pilot/pilot_S1-S2.mp4`, voice only
+Status: **revision 2 rendered (Ren in the office); waiting for Jon's review.** Files: `pilot/pilot_S1-S2.mp4`, voice only
 `pilot/pilot_S1-S2_voice.wav`, checks `pilot/pilot_report.json`. Built by `build_pilot.py`.
 
 - **Duration:** 50.1s. Ren's natural pace is quicker than the 150 wpm estimate, so it's under the 60 seconds aimed for.
@@ -184,3 +184,9 @@ Cuts sit midway through the pauses between lines, with 0.25s dissolves.
 - **Text I added:** "and still waiting" (shot 3) isn't in the script; it's on-screen only. Easy to drop.
 - **Disclaimer:** "Educational only, not financial advice" shows for the first 3s (house rule). There's no budget on screen, so no "Example only" caption yet.
 - **The fridge photo** reads as being on the fridge: the code composite of B on A, with tape and a soft shadow.
+
+### Revision 2 (Jon: "use Ren in the office background")
+
+- **Ren's backdrop:** all four presenter shots now place Ren in front of the approved `office.png` (from `codex/retirement-ease-off-v3`, checksum verified, copied to `stills/`). The office is softly blurred, and a faint shadow sits at his feet. This replaces the house "plain white background" rule for this video, at Jon's request.
+- **How Ren is cut out:** only white that touches the edge of the frame, plus enclosed pure-white pockets (such as the gap under a waving arm), is removed. His pale T-shirt stays solid; a simple colour key had made it see-through, and that's now fixed. His edges are cleaned of white fringing. His frames are not otherwise changed.
+- **Unchanged:** the story stills, the infographic (still on white), the timing, the narration (-16.2 LUFS) and the length (50.1s).

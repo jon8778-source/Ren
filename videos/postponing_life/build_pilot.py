@@ -7,8 +7,9 @@ approved clips (assets/ren_library, ren_library.json). Output: 1920x1080, 24 fps
 renders/pilot_S1-S2.mp4, renders/pilot_S1-S2_voice.wav and renders/pilot_report.json.
 
 Every shot is a function of global time. Cuts sit midway through the pause between two lines, with a
-0.25s dissolve. Ren's clips are only keyed to white, scaled 1.5x and positioned; his frames are never
-redrawn. All text, ticks and screen contents are drawn here in code (Fredoka, navy on white).
+0.25s dissolve. Ren's clips only have their plain background removed, then are scaled 1.5x and placed in front
+of the approved office still; his frames are never redrawn. All text, ticks and screen contents
+are drawn here in code (Fredoka, navy on white).
 """
 import argparse
 import json
@@ -237,24 +238,78 @@ class RenShot:
         elif n > want:
             note += f"; ends {(n - want) / FPS:.2f}s before its neutral frame (dissolve covers it)"
         self.note, self.pieces = note, pieces
-        inputs, graph = [], []
+        # Ren's frames, unshifted; his background is removed below
+        inputs, graph, shifts = [], [], []
         for i, (entry, start, cnt, mir) in enumerate(pieces):
             inputs += ["-i", str(rs.LIB / entry["file"])]
-            graph.append(rs.piece_filter(i, entry, start, cnt, mir, REN_X_1280))
-        graph.append("".join(f"[s{i}]" for i in range(len(pieces))) + f"concat=n={len(pieces)}:v=1:a=0,"
-                     f"scale={W}:{H}:flags=lanczos,format=rgb24[v]")
+            graph.append(f"[{i}:v]trim=start_frame={start}:end_frame={start + cnt},setpts=PTS-STARTPTS,"
+                         f"format=rgb24{',hflip' if mir else ''}[s{i}]")
+            off = -entry["x_offset_px"] if mir else entry["x_offset_px"]
+            shifts += [round(((REN_X_1280 - 640) + off) * 1.5)] * cnt
+        graph.append("".join(f"[s{i}]" for i in range(len(pieces))) + f"concat=n={len(pieces)}:v=1:a=0[v]")
         raw = subprocess.check_output(["ffmpeg", "-v", "error", *inputs, "-filter_complex", ";".join(graph),
-                                       "-map", "[v]", "-frames:v", str(want), "-f", "rawvideo", "-"])
-        self.frames = np.frombuffer(raw, np.uint8).reshape(-1, H, W, 3)
-        dark = (self.frames[::4].min(axis=3) < 200).any(0)
-        cols, rows = np.where(dark.any(0))[0], np.where(dark.any(1))[0]
-        self.bbox = (int(cols.min()), int(rows.min()), int(cols.max()), int(rows.max()))
+                                       "-map", "[v]", "-frames:v", str(want), "-f", "rawvideo", "-pix_fmt", "rgb24",
+                                       "-"])
+        rgb = np.frombuffer(raw, np.uint8).reshape(-1, 720, 1280, 3)
+        self.frames = np.stack([cut_out(f) for f in rgb])
+        self.shifts = (shifts + shifts[-1:] * want)[:len(self.frames)]
+        solid = (self.frames[::4, ..., 3] > 128).any(0)
+        cols, rows = np.where(solid.any(0))[0], np.where(solid.any(1))[0]
+        self.bbox = (int(cols.min() * 1.5 + min(self.shifts)), int(rows.min() * 1.5),
+                     int(cols.max() * 1.5 + max(self.shifts)), int(rows.max() * 1.5))
+        feet = np.where(solid[int(rows.max()) - 40:int(rows.max())].any(0))[0]
+        self.feet_x = int((feet.min() + feet.max()) / 2 * 1.5 + np.median(self.shifts))
         self.used = [{"file": p[0]["file"], "from_s": round(p[1] / FPS, 2), "len_s": round(p[2] / FPS, 2),
                       "mirror": p[3]} for p in pieces]
 
     def frame(self, local_t):
         i = min(int(local_t * FPS), len(self.frames) - 1)
-        return Image.fromarray(self.frames[i]).convert("RGBA")
+        f = office_backdrop().copy()
+        ren = Image.fromarray(self.frames[i], "RGBA").resize((W, H), Image.LANCZOS)
+        f.alpha_composite(contact_shadow(self.feet_x, self.bbox[3]))
+        f.alpha_composite(ren, (self.shifts[i], 0))
+        return f
+
+
+def cut_out(rgb):
+    """RGBA Ren from one clip frame: near-white connected to the frame's edge, plus enclosed pure-white
+    pockets, is background, so his pale T-shirt (enclosed by the jacket, and greyer) stays solid. Edges are softened by a pixel and the white mixed
+    into them is removed, so no light fringe shows against the office."""
+    from scipy import ndimage
+    lo, hi = rgb.min(2).astype(int), rgb.max(2).astype(int)
+    near = (lo > 215) & (hi - lo < 25)
+    lab, _ = ndimage.label(near)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    bg = np.isin(lab, edge[edge > 0])
+    # Background pockets enclosed by an arm (e.g. waving) are near-pure white (~250); the shirt is ~225-238
+    pure = (lo > 243) & (hi - lo < 12) & ~bg
+    plab, n = ndimage.label(pure)
+    if n:
+        sizes = ndimage.sum(pure, plab, range(1, n + 1))
+        bg |= np.isin(plab, np.where(sizes > 150)[0] + 1)
+    a = ndimage.gaussian_filter((~bg).astype(np.float32), 0.7)[..., None]
+    c = rgb.astype(np.float32)
+    c = np.where(a > 0.02, (c - (1 - a) * 255.0) / np.maximum(a, 0.02), 0)
+    return np.concatenate([np.clip(c, 0, 255), a * 255], 2).astype(np.uint8)
+
+
+_OFFICE = None
+
+
+def office_backdrop():
+    """The approved office still, filling 1920x1080, softly blurred so Ren and the text stand out."""
+    global _OFFICE
+    if _OFFICE is None:
+        img = Image.open(STILLS / "office.png").convert("RGB")
+        _OFFICE = camera(img, img.width / 2, img.height / 2, 1.0).filter(ImageFilter.GaussianBlur(4)).convert("RGBA")
+    return _OFFICE
+
+
+def contact_shadow(cx, floor_y):
+    """A faint soft shadow under Ren's feet so he stands on the office floor."""
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(sh).ellipse((cx - 190, floor_y - 22, cx + 190, floor_y + 22), fill=(60, 40, 20, 70))
+    return sh.filter(ImageFilter.GaussianBlur(14))
 
 
 # ---------------------------------------------------------------------------------------------
