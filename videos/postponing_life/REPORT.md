@@ -150,3 +150,37 @@ sleeves over a cream T-shirt, dark trousers".
 - **Loudness:** before mixing, -18.0 LUFS (S1) and -17.5 LUFS (S2). The final mix normalises to -16.
 - **Speed here (4 CPU cores):** about 6 minutes to load the model, then 26–68s per line. The whole script would take roughly 1–1½ hours.
 - **Pace (Jon, 30 Oct):** keep the natural pace. No slow-down.
+
+## Gate 2 — 60-second pilot (S1 + S2)
+
+Status: **rendered; waiting for Jon's review.** Files: `pilot/pilot_S1-S2.mp4`, voice only
+`pilot/pilot_S1-S2_voice.wav`, checks `pilot/pilot_report.json`. Built by `build_pilot.py`.
+
+- **Duration:** 50.1s. Ren's natural pace is quicker than the 150 wpm estimate, so it's under the 60 seconds aimed for.
+- **Format:** 1920×1080, 24 fps, H.264 + AAC 192k.
+- **Narration:** -16.2 LUFS integrated, true peak -1.2 dBTP. The voice is the only audio; no music or clip audio.
+- **Validator:** this is my own check, because the template's validator doesn't exist. Format OK; no text touches Ren on any frame; no Ren clip is repeated. **Flag:** two shots last 7.3s and 7.2s (shot 2, the laptop; shot 9, the infographic), just over the 7s rule. Each covers one unbroken sentence and keeps moving (scrolling listings, ticks), so I didn't cut mid-sentence.
+
+| # | Time (s) | Type | Asset | Narration |
+|---|---|---|---|---|
+| 1 | 0.00–4.96 | story still, push-in to the photo | A_fridge + B_mountain_photo composited; opening disclaimer | S1 lines 1–2 |
+| 2 | 4.71–11.98 | story still | D_alex_laptop + code-built cabin listings scrolling on the screen | S1 line 3 |
+| 3 | 11.73–14.02 | detail crop, slow push | fridge photo close-up; "4 years / and still waiting" | S1 line 4 |
+| 4 | 13.77–18.68 | story still, closer | D_alex_laptop; **Alex:** tag and quote card during his line | S1 lines 5–6 |
+| 5 | 18.43–24.82 | presenter | `ren_thinking` (1.25–7.6s of the clip); "Some of those reasons are very good." | S1 lines 7–9 |
+| 6 | 24.57–30.57 | presenter | `ren_wave_hello` (1.12–7.1s); title | S1 line 10 |
+| 7 | 30.32–34.39 | story still, push-in | E_car | S2 line 1 |
+| 8 | 34.14–40.15 | presenter | `ren_worried` (whole 1.25–7.0s window + 0.3s `idle_calm`); three labels on their words | S2 line 2 |
+| 9 | 39.90–47.07 | infographic | code-built 3 steps; ticks on "card", "savings", "retirement" | S2 lines 3–4 |
+| 10 | 46.82–50.12 | presenter | `ren_nod_yes` (4.71–8.0s, ending on its neutral frame); "Waiting helped." | S2 line 5 |
+
+Cuts sit midway through the pauses between lines, with 0.25s dissolves.
+
+**Flags and unsure points**
+- **Open mouth during narration:** `ren_worried`'s notes say "Gritted teeth ~2s", and it plays under S2's debt line.
+- **Shots ending early:** `ren_thinking` and `ren_wave_hello` end 0.6s and 0.1s before their neutral frames; the dissolves cover it.
+- **Shots starting mid-gesture:** `ren_nod_yes` starts 3.6s into its window, mid-nod, with the dissolve covering the start.
+- **Ren's sharpness:** his clips are scaled up 1.5× from 1280×720, so he's slightly softer than the stills.
+- **Text I added:** "and still waiting" (shot 3) isn't in the script; it's on-screen only. Easy to drop.
+- **Disclaimer:** "Educational only, not financial advice" shows for the first 3s (house rule). There's no budget on screen, so no "Example only" caption yet.
+- **The fridge photo** reads as being on the fridge: the code composite of B on A, with tape and a soft shadow.

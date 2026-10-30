@@ -221,9 +221,15 @@ def plain_text(frame, text, x, y, px, weight=600, colour=NAVY, alpha=1.0):
 class RenShot:
     """Frames of one approved Ren clip, planned with the library's neutral-frame rules."""
 
-    def __init__(self, lib, clip, seconds, mirror=False):
+    def __init__(self, lib, clip, seconds, mirror=False, end_on=None):
         self.clip, self.mirror = clip, mirror
-        pieces, n, note = rs.plan_shot(lib, {"clip": clip, "duration": seconds, "mirror": mirror})
+        shot = {"clip": clip, "duration": seconds, "mirror": mirror}
+        if end_on is not None:  # start partway in so the shot ends on the neutral frame at `end_on` seconds
+            c = lib[clip + ".mp4"]
+            shot["skip_s"] = max(0.0, end_on - c["in_s"] - seconds)
+        pieces, n, note = rs.plan_shot(lib, shot)
+        if shot.get("skip_s"):
+            note = f"starts {shot['skip_s']:.2f}s into the window (dissolve covers it); " + note
         want = math.ceil(seconds * FPS)
         if n < want:
             rs.hold_idle(lib, pieces, want - n)
@@ -276,10 +282,10 @@ def build(out):
             laptop_cache[key] = laptop_still(key)
         return laptop_cache[key]
 
-    def ren_shot(k, clip):
+    def ren_shot(k, clip, end_on=None):
         a, b = spans[k]
         if k not in ren:
-            ren[k] = RenShot(lib, clip, b - a)
+            ren[k] = RenShot(lib, clip, b - a, end_on=end_on)
         return ren[k]
 
     def panel_x(r):
@@ -291,7 +297,7 @@ def build(out):
         x = ease((t - a) / (b - a))
         f = camera(fridge, lerp(836, px, x), lerp(470, py, x), lerp(1.0, 1.7, x)).convert("RGBA")
         box = text_card(f, [("Educational only, not financial advice", 30, 500, MUTED)], W - 60, H - 50, "rb",
-                        pad=22, alpha=1 - fade(t, b - 0.9, 0.5))
+                        pad=22, alpha=1 - fade(t, 2.8, 0.4))
         return f, [box]
 
     def s1(t):  # Alex researching cabins: listings scroll on the laptop
@@ -302,7 +308,7 @@ def build(out):
     def s2(t):  # the photo, close: "4 years"
         a, b = spans[2]
         x = (t - a) / (b - a)
-        f = camera(fridge, px + 210, py + 20, lerp(2.15, 2.35, x)).convert("RGBA")
+        f = camera(fridge, px + 150, py + 10, lerp(2.0, 2.15, x)).convert("RGBA")
         box = text_card(f, [("4 years", 120, 700, NAVY), ("and still waiting", 44, 500, MUTED)], 1290, 330,
                         alpha=fade(t, L["S1_04"]["start"] - 0.1))
         return f, [box]
@@ -381,7 +387,7 @@ def build(out):
 
     def s9(t):  # Ren nods: waiting helped
         a, _ = spans[9]
-        r = ren_shot(9, "ren_nod_yes")
+        r = ren_shot(9, "ren_nod_yes", end_on=8.0)
         f = r.frame(t - a)
         box = text_card(f, [("Waiting helped.", 84, 700, NAVY)], panel_x(r), 440,
                         alpha=fade(t, L["S2_05"]["start"] - 0.1))
