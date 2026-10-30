@@ -1,0 +1,195 @@
+{
+ "video": "/home/user/Ren/videos/postponing_life/renders/postponing_life_short.mp4",
+ "voice_only": "/home/user/Ren/videos/postponing_life/renders/postponing_life_short_voice.wav",
+ "duration_s": 60.44,
+ "format": "1080,1920,24/1",
+ "narration_lufs": -16.3,
+ "narration_true_peak_dbtp": -1.1,
+ "lines": [
+  "S1_01",
+  "S1_02",
+  "S1_04",
+  "S1_05",
+  "S1_06",
+  "S3_10",
+  "S3_11",
+  "S6_01",
+  "S6_02",
+  "S6_03",
+  "S6_04",
+  "S6_05",
+  "S7_05",
+  "S8_02",
+  "S11_02",
+  "S11_04",
+  "S12_06",
+  "S12_07",
+  "S12_08",
+  "S12_09"
+ ],
+ "issues": [],
+ "shots": [
+  {
+   "shot": 1,
+   "start": 0.0,
+   "end": 5.04,
+   "type": "tall still",
+   "asset": "fridge with the mountain photo",
+   "lines": [
+    "S1_01",
+    "S1_02"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 2,
+   "start": 4.79,
+   "end": 7.18,
+   "type": "tall still",
+   "asset": "the photo, close; 4 years",
+   "lines": [
+    "S1_04"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 3,
+   "start": 6.93,
+   "end": 11.93,
+   "type": "story still",
+   "asset": "D_alex_laptop; Alex: tag",
+   "lines": [
+    "S1_05",
+    "S1_06"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 4,
+   "start": 11.68,
+   "end": 19.55,
+   "type": "presenter",
+   "asset": "ren_point_up",
+   "lines": [
+    "S3_10",
+    "S3_11"
+   ],
+   "text_outside_safe_area": false,
+   "clip": "ren_point_up",
+   "clip_plan": "clip window 7.88s used whole",
+   "clip_notes": "Ends slightly off neutral; trimmed last second",
+   "text_over_ren": false
+  },
+  {
+   "shot": 5,
+   "start": 19.3,
+   "end": 27.15,
+   "type": "tall still",
+   "asset": "F_phone_in_hand + message",
+   "lines": [
+    "S6_01",
+    "S6_02",
+    "S6_03"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 6,
+   "start": 26.9,
+   "end": 34.84,
+   "type": "presenter",
+   "asset": "ren_idle_listen",
+   "lines": [
+    "S6_04",
+    "S6_05"
+   ],
+   "text_outside_safe_area": false,
+   "clip": "ren_idle_listen",
+   "clip_plan": "cut at neutral frame 8.25s (asked 7.92s); shot runs 0.38s longer than asked; ends 0.33s before its neutral frame (dissolve covers it)",
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 7,
+   "start": 34.59,
+   "end": 41.58,
+   "type": "infographic",
+   "asset": "checks before spending",
+   "lines": [
+    "S7_05"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 8,
+   "start": 41.33,
+   "end": 43.29,
+   "type": "infographic",
+   "asset": "the Book button",
+   "lines": [
+    "S8_02"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 9,
+   "start": 43.04,
+   "end": 46.51,
+   "type": "story still",
+   "asset": "fridge: the weekend photo goes up",
+   "lines": [
+    "S11_02"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 10,
+   "start": 46.26,
+   "end": 47.93,
+   "type": "tall still",
+   "asset": "C_weekend_selfie",
+   "lines": [
+    "S11_04"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 11,
+   "start": 47.68,
+   "end": 50.16,
+   "type": "presenter",
+   "asset": "ren_nod_yes",
+   "lines": [
+    "S12_06"
+   ],
+   "text_outside_safe_area": false,
+   "clip": "ren_nod_yes",
+   "clip_plan": "starts 4.40s into the window (dissolve covers it); cut at neutral frame 8.00s (asked 8.00s)",
+   "clip_notes": "Ends slightly off neutral; trimmed last second",
+   "text_over_ren": false
+  },
+  {
+   "shot": 12,
+   "start": 49.91,
+   "end": 55.97,
+   "type": "story still",
+   "asset": "fridge: both photos",
+   "lines": [
+    "S12_07",
+    "S12_08"
+   ],
+   "text_outside_safe_area": false
+  },
+  {
+   "shot": 13,
+   "start": 55.72,
+   "end": 60.44,
+   "type": "story still",
+   "asset": "fridge: both photos (final)",
+   "lines": [
+    "S12_09"
+   ],
+   "text_outside_safe_area": false
+  }
+ ]
+}

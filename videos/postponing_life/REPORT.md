@@ -278,3 +278,14 @@ which reuses the approved pilot's shots for S1–S2. Rendered videos and voice-o
 | 59 | 311.7–317.7 | S12_07–S12_08 | story still | fridge: both photos |
 | 60 | 317.5–321.3 | S12_09 | presenter | ren_hold_phone |
 | 61 | 321.1–327.9 | S12_10 | story still | fridge: both photos (final shot) |
+
+## Short (vertical, ~60 seconds)
+
+Jon asked for one short of about a minute. Built by `build_short.py`; checks in `short/postponing_life_short_report.json`.
+The video itself is not stored in git.
+
+- **Format:** 60.4s, 1080×1920, 24 fps. Narration -16.3 LUFS, true peak -1.1 dBTP.
+- **Narration:** 20 of the long video's own narration lines, the same voice files, so it sounds identical: S1_01, S1_02, S1_04–06, S3_10–11, S6_01–05, S7_05, S8_02, S11_02, S11_04, S12_06–09.
+- **Story:** the fridge photo, "Next year", the moving summit, the friend's picture, Alex's two thoughts, the check before spending (no borrowing, emergency fund untouched), "book", the weekend photo going up, "someday" a next step, and the comment question.
+- **Layout** (`project/config.vertical.json`): no text below y=1500 or in the right 130px; the disclaimer at the top at the start and end; "Example only, not financial advice" on the spending checklist. Wide stills are shown whole over a blurred fill; the phone and selfie fill the frame; Ren presents from the office with text above him.
+- **Validator:** no text outside the safe area and none touching Ren.
