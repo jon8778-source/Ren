@@ -83,3 +83,8 @@ This is an option for owner review; existing production layout rules, episodes,
 approved coffee prototype and main remain unchanged.
 
 [Layout prototype source and validation](prototypes/ren-left-layout/README.md)
+
+Prototype source checkpoint remotely fetched and verified:
+[93f85f0](https://github.com/jon8778-source/Ren/commit/93f85f02965cf8e288e12306afbf01f80e5bf96e).
+Temporary HTTPS MP4 delivery was verified by downloading the full file and
+matching SHA-256. Media remains outside Git; the link expires in about an hour.
