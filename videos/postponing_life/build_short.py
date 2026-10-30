@@ -4,9 +4,9 @@
 
 Uses the same per-line voice files as the long video (voice/lines), so the short sounds identical, and
 the same stills, Ren clips and house style. Layout follows project/config.vertical.json: nothing below
-y=1500 (YouTube's controls), the right 130px kept clear, the disclaimer at y=150. Story stills are shown
-whole across the middle of the frame over a blurred fill; tall subjects (the phone, the selfie) fill
-the frame; Ren presents from the office with text above him.
+y=1500 (YouTube's controls), the right 130px kept clear, the disclaimer at y=150. Story stills fill a
+large 4:5 panel from under the disclaimer to the controls, blending into a soft fill of the same picture;
+Ren presents from the office at nearly full height, with text above his head; graphics fill the screen.
 Writes renders/postponing_life_short.mp4, renders/postponing_life_short_voice.wav and a report.
 """
 import argparse
@@ -26,7 +26,8 @@ from build_pilot import GREEN, LINE, MUTED, NAVY, STILLS, VOICE, WHITE, ease, fa
 W, H, FPS, XF = 1080, 1920, 24, 0.25
 LEAD, GAP, BEAT, TAIL = 0.4, 0.42, 0.6, 1.2
 SAFE_BOTTOM, RIGHT_CLEAR, DISC_Y = 1500, 130, 150
-REN_SCALE, FEET_Y = 1.15, 1470
+REN_SCALE, HEAD_Y = 2.0, 660          # Ren fills the height; text sits above his head
+PANEL_TOP, PANEL_H = 150, 1350            # stills: a 4:5 panel from under the disclaimer to the controls
 EDU, EXAMPLE = "Educational only, not financial advice", "Example only, not financial advice"
 LINES = ["S1_01", "S1_02", "S1_04", "S1_05", "S1_06", "S3_10", "S3_11", "S6_01", "S6_02", "S6_03", "S6_04",
          "S6_05", "S7_05", "S8_02", "S11_02", "S11_04", "S12_06", "S12_07", "S12_08", "S12_09"]
@@ -67,15 +68,18 @@ def cover(img, cx, cy, zoom, size):
     return img.resize(size, Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
 
 
-def fit_frame(img, cx, cy, zoom, top=300):
-    """A 16:9 view of a still across the frame, over a soft blurred fill of the same picture."""
-    view = cover(img, cx, cy, zoom, (W, round(W * 9 / 16)))
-    bg = view.resize((W // 8, H // 8)).filter(ImageFilter.GaussianBlur(6)).resize((W, H), Image.BICUBIC)
-    bg = Image.blend(bg, Image.new("RGB", (W, H), "#F6F1E8"), 0.45).convert("RGBA")
-    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(shadow).rectangle((0, top + 10, W, top + view.height + 18), fill=(19, 35, 63, 50))
-    bg.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(12)))
-    bg.paste(view, (0, top))
+def panel_frame(img, cx, cy, zoom):
+    """A large 4:5 view of a still filling most of the screen (zoom 1 = the widest 4:5 view the still
+    allows, about 45% of its width), blending at top and bottom into a soft fill of the same picture."""
+    view = cover(img, cx, cy, zoom, (W, PANEL_H))
+    bg = cover(img, cx, cy, zoom, (W, H)).resize((W // 10, H // 10)).filter(ImageFilter.GaussianBlur(4))
+    bg = Image.blend(bg.resize((W, H), Image.BICUBIC), Image.new("RGB", (W, H), "#F6F1E8"), 0.3).convert("RGBA")
+    mask = Image.new("L", (W, PANEL_H), 255)
+    d = ImageDraw.Draw(mask)
+    for i in range(40):  # feather the top and bottom edges into the fill
+        d.line((0, i, W, i), fill=int(255 * i / 40))
+        d.line((0, PANEL_H - 1 - i, W, PANEL_H - 1 - i), fill=int(255 * i / 40))
+    bg.paste(view, (0, PANEL_TOP), mask)
     return bg
 
 
@@ -133,15 +137,11 @@ def build(out):
             fr = fr.resize((round(1280 * REN_SCALE), round(720 * REN_SCALE)), Image.LANCZOS)
             off = r.shifts[i] / 1.5 - (bp.REN_X_1280 - 640)       # the clip's x_offset for this frame
             x = round(W / 2 - (640 - off) * REN_SCALE)
-            feet = r.bbox[3] / 1.5
-            y = round(FEET_Y - feet * REN_SCALE)
-            sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-            ImageDraw.Draw(sh).ellipse((W / 2 - 150, FEET_Y - 18, W / 2 + 150, FEET_Y + 18), fill=(60, 40, 20, 70))
-            f.alpha_composite(sh.filter(ImageFilter.GaussianBlur(12)))
+            y = round(HEAD_Y - r.bbox[1] / 1.5 * REN_SCALE)  # his feet run behind YouTube's controls
             f.alpha_composite(fr, (x, y))
             ren_top = y + r.bbox[1] / 1.5 * REN_SCALE
             boxes = [card(f, c["lines"], c["y"], c["at"], t=t) for c in cards]
-            r.box = (x + r.bbox[0] / 1.5 * REN_SCALE, ren_top, x + r.bbox[2] / 1.5 * REN_SCALE, FEET_Y)
+            r.box = (x + r.bbox[0] / 1.5 * REN_SCALE, ren_top, x + r.bbox[2] / 1.5 * REN_SCALE, H)
             return f, boxes
         fn.clip = clip
         return fn
@@ -150,19 +150,11 @@ def build(out):
         def fn(t, a, b, k):
             x = ease((t - a) / (b - a))
             src = img(t) if callable(img) else img
-            f = fit_frame(src, lerp(cam0[0], cam1[0], x), lerp(cam0[1], cam1[1], x), lerp(cam0[2], cam1[2], x))
+            f = panel_frame(src, lerp(cam0[0], cam1[0], x), lerp(cam0[1], cam1[1], x), lerp(cam0[2], cam1[2], x))
             boxes = [card(f, c["lines"], c["y"], c["at"], t=t) for c in cards]
             if cap:
                 boxes.append(disclaimer(f, cap, 1.0))
             return f, boxes
-        return fn
-
-    def tall(img, cam0, cam1, cards=()):
-        def fn(t, a, b, k):
-            x = ease((t - a) / (b - a))
-            f = cover(img, lerp(cam0[0], cam1[0], x), lerp(cam0[1], cam1[1], x), lerp(cam0[2], cam1[2], x),
-                      (W, H)).convert("RGBA")
-            return f, [card(f, c["lines"], c["y"], c["at"], t=t) for c in cards]
         return fn
 
     def alex(lines):
@@ -174,36 +166,36 @@ def build(out):
     # --- graphics ---------------------------------------------------------------------------------
     def g_checks(t, a, b, k):
         f = Image.new("RGBA", (W, H), WHITE)
-        bp.plain_text(f, "Before he spends", 90, 330, 76, 700, NAVY)
-        bp.plain_text(f, "anything:", 90, 425, 76, 700, NAVY)
+        bp.plain_text(f, "Before he spends", 80, 280, 92, 700, NAVY)
+        bp.plain_text(f, "anything:", 80, 395, 92, 700, NAVY)
         d = ImageDraw.Draw(f)
         for i, (label, w) in enumerate([("Bills checked", "bills"), ("Goals checked", "goals"),
                                         ("No borrowing", "borrowing"), ("Emergency fund", "emergency")]):
-            y = 640 + i * 170
+            y = 640 + i * 205
             on = fade(t, word("S7_05", w), 0.25)
-            d.ellipse((90, y - 50, 190, y + 50), outline=LINE, width=8, fill=WHITE)
-            bv.tick_badge(f, 140, y, 50, on)
-            bp.plain_text(f, label, 230, y - 38, 62, 600, NAVY if on > 0.5 else MUTED, 0.35 + 0.65 * on)
-        bp.plain_text(f, "untouched", 230, 640 + 3 * 170 + 32, 62, 600, NAVY if fade(t, word("S7_05", "emergency")) > .5
+            d.ellipse((80, y - 65, 210, y + 65), outline=LINE, width=10, fill=WHITE)
+            bv.tick_badge(f, 145, y, 65, on)
+            bp.plain_text(f, label, 250, y - 48, 78, 600, NAVY if on > 0.5 else MUTED, 0.35 + 0.65 * on)
+        bp.plain_text(f, "untouched", 250, 640 + 3 * 205 + 44, 78, 600, NAVY if fade(t, word("S7_05", "emergency")) > .5
                       else MUTED, 0.35 + 0.65 * fade(t, word("S7_05", "emergency"), 0.25))
         return f, [disclaimer(f, EXAMPLE, 1.0)]
 
     def g_book(t, a, b, k):
         f = Image.new("RGBA", (W, H), WHITE)
-        bp.plain_text(f, "Alex clicks \u201cbook.\u201d", 120, 560, 70, 700, NAVY, fade(t, S("S8_02") - 0.1))
+        bp.plain_text(f, "Alex clicks \u201cbook.\u201d", 90, 470, 96, 700, NAVY, fade(t, S("S8_02") - 0.1))
         d = ImageDraw.Draw(f)
         click = word("S8_02", "book")
         pressed, done = fade(t, click, 0.12), fade(t, click + 0.35, 0.3)
         s = 1 - 0.05 * pressed * (1 - done)
-        cx, cy, bw, bh = (W - RIGHT_CLEAR) / 2 + 30, 820, 620 * s, 190 * s
-        d.rounded_rectangle((cx - bw / 2, cy - bh / 2, cx + bw / 2, cy + bh / 2), 44, fill=GREEN if done > .5 else NAVY)
+        cx, cy, bw, bh = (W - RIGHT_CLEAR) / 2 + 30, 950, 820 * s, 270 * s
+        d.rounded_rectangle((cx - bw / 2, cy - bh / 2, cx + bw / 2, cy + bh / 2), 60, fill=GREEN if done > .5 else NAVY)
         label = "Booked" if done > 0.5 else "Book"
-        tw = d.textlength(label, font=font(96, 700))
-        d.text((cx - tw / 2, cy - 60), label, font=font(96, 700), fill=WHITE)
+        tw = d.textlength(label, font=font(130, 700))
+        d.text((cx - tw / 2, cy - 82), label, font=font(130, 700), fill=WHITE)
         kk = ease((t - (click - 1.0)) / 0.9)
-        mx, my = lerp(W - 200, cx + 120, kk), lerp(1350, cy + 40, kk)
-        d.polygon([(mx, my), (mx, my + 80), (mx + 20, my + 62), (mx + 38, my + 100), (mx + 52, my + 94),
-                   (mx + 34, my + 56), (mx + 62, my + 54)], fill=WHITE, outline=NAVY)
+        mx, my = lerp(W - 220, cx + 160, kk), lerp(1420, cy + 50, kk)
+        d.polygon([(mx, my), (mx, my + 110), (mx + 28, my + 85), (mx + 52, my + 138), (mx + 72, my + 129),
+                   (mx + 47, my + 77), (mx + 86, my + 74)], fill=WHITE, outline=NAVY)
         return f, []
 
     def f_photo_up(t, a, b, k):
@@ -216,46 +208,46 @@ def build(out):
             ph.putalpha(ph.getchannel("A").point(lambda v: int(v * min(1, p * 1.6))))
             cx, cy = 1085, lerp(220, 385, p)
             img.alpha_composite(ph, (int(cx - ph.width / 2), int(cy - ph.height / 2)))
-        return fit_frame(img.convert("RGB"), 892, 390, 1.75), []
+        return panel_frame(img.convert("RGB"), 885, 380, 1.0), []
 
     def f_end(t, a, b, k):
         x = ease((t - a) / (b - a))
-        f = fit_frame(both, lerp(892, 860, x), lerp(390, 430, x), lerp(1.75, 1.3, x))
+        f = panel_frame(both, 885, lerp(420, 450, x), 1.0)
         boxes = [card(f, [("What’s still sitting", 66, 700, NAVY), ("on your fridge?", 66, 700, NAVY),
-                          ("Tell me in the comments.", 46, 500, MUTED)], 1000, S("S12_09"), t=t),
+                          ("Tell me in the comments.", 46, 500, MUTED)], 1130, S("S12_09"), t=t),
                  disclaimer(f, EDU, fade(t, S("S12_09")))]
         return f, boxes
 
     def f_open(t, a, b, k):
         x = ease((t - a) / (b - a))
-        f = cover(fridge, lerp(px + 60, px, x), lerp(py + 60, py, x), lerp(1.2, 1.55, x), (W, H)).convert("RGBA")
+        f = panel_frame(fridge, lerp(px + 40, px, x), lerp(py + 60, py + 30, x), lerp(1.0, 1.25, x))
         return f, [disclaimer(f, EDU, 1 - fade(t, b - 0.8, 0.4))]
 
     shots = [
-        (("S1_01", "S1_02"), "tall still", "fridge with the mountain photo", f_open),
-        (("S1_04",), "tall still", "the photo, close; 4 years", tall(fridge, (px, py + 90, 2.0), (px, py + 85, 2.1), [
-            dict(lines=[("4 years", 130, 700, NAVY), ("and still waiting", 50, 500, MUTED)], y=1180,
+        (("S1_01", "S1_02"), "story still", "fridge with the mountain photo", f_open),
+        (("S1_04",), "story still", "the photo, close; 4 years", fit(fridge, (px, py + 120, 1.35), (px, py + 110, 1.45), [
+            dict(lines=[("4 years", 130, 700, NAVY), ("and still waiting", 50, 500, MUTED)], y=1100,
                  at=S("S1_04"))])),
-        (("S1_05", "S1_06"), "story still", "D_alex_laptop; Alex: tag", fit(laptop, (700, 420, 1.35), (720, 400, 1.5), [
-            dict(lines=alex(["“Next year. I’ll be", "in a better position.”"]), y=1000, at=S("S1_06") - 0.1)])),
+        (("S1_05", "S1_06"), "story still", "D_alex_laptop; Alex: tag", fit(laptop, (720, 470, 1.0), (740, 450, 1.08), [
+            dict(lines=alex(["“Next year. I’ll be", "in a better position.”"]), y=1150, at=S("S1_06") - 0.1)])),
         (("S3_10", "S3_11"), "presenter", "ren_point_up", presenter("ren_point_up", [
             dict(lines=[("Every time he got closer,", 54, 600, NAVY), ("“ready” moved too.", 54, 600, NAVY)],
-                 y=230, at=S("S3_10")),
-            dict(lines=[("A moving summit.", 70, 700, NAVY)], y=440, at=S("S3_11"))])),
-        (("S6_01", "S6_02", "S6_03"), "tall still", "F_phone_in_hand + message", tall(
-            phone, (800, 420, 1.0), (790, 400, 1.12))),
+                 y=220, at=S("S3_10")),
+            dict(lines=[("A moving summit.", 70, 700, NAVY)], y=430, at=S("S3_11"))])),
+        (("S6_01", "S6_02", "S6_03"), "story still", "F_phone_in_hand + message", fit(
+            phone, (790, 470, 1.0), (790, 450, 1.06))),
         (("S6_04", "S6_05"), "presenter", "ren_idle_listen", presenter("ren_idle_listen", [
-            dict(lines=alex_s(["“It’s not really the", "trip I planned.”"]), y=210, at=word("S6_04", "it")),
-            dict(lines=alex_s(["“But what part am", "I waiting for?”"]), y=440, at=word("S6_05", "know") - 0.3)])),
+            dict(lines=alex_s(["“It’s not really the", "trip I planned.”"]), y=200, at=word("S6_04", "it")),
+            dict(lines=alex_s(["“But what part am", "I waiting for?”"]), y=420, at=word("S6_05", "know") - 0.3)])),
         (("S7_05",), "infographic", "checks before spending", g_checks),
         (("S8_02",), "infographic", "the Book button", g_book),
         (("S11_02",), "story still", "fridge: the weekend photo goes up", f_photo_up),
-        (("S11_04",), "tall still", "C_weekend_selfie", tall(selfie_still, (760, 430, 1.0), (760, 420, 1.1), [
-            dict(lines=[("He looks happy.", 72, 700, NAVY)], y=1250, at=S("S11_04"))])),
+        (("S11_04",), "story still", "C_weekend_selfie", fit(selfie_still, (790, 455, 1.0), (790, 445, 1.06), [
+            dict(lines=[("He looks happy.", 72, 700, NAVY)], y=1320, at=S("S11_04"))])),
         (("S12_06",), "presenter", "ren_nod_yes", presenter("ren_nod_yes", [
-            dict(lines=[("Give “someday”", 76, 700, NAVY), ("a next step.", 76, 700, NAVY)], y=300,
+            dict(lines=[("Give “someday”", 76, 700, NAVY), ("a next step.", 76, 700, NAVY)], y=280,
                  at=S("S12_06"))], end_on=8.0)),
-        (("S12_07", "S12_08"), "story still", "fridge: both photos", fit(both, (892, 390, 1.9), (892, 390, 1.6), [
+        (("S12_07", "S12_08"), "story still", "fridge: both photos", fit(both, (885, 380, 1.0), (885, 420, 1.0), [
             dict(lines=[("Then: a place he wanted to go.", 50, 600, MUTED)], y=1000, at=S("S12_07")),
             dict(lines=[("Now: somewhere he’s been.", 58, 700, NAVY)], y=1150, at=S("S12_08"))])),
         (("S12_09",), "story still", "fridge: both photos (final)", f_end),

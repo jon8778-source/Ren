@@ -289,3 +289,12 @@ The video itself is not stored in git.
 - **Story:** the fridge photo, "Next year", the moving summit, the friend's picture, Alex's two thoughts, the check before spending (no borrowing, emergency fund untouched), "book", the weekend photo going up, "someday" a next step, and the comment question.
 - **Layout** (`project/config.vertical.json`): no text below y=1500 or in the right 130px; the disclaimer at the top at the start and end; "Example only, not financial advice" on the spending checklist. Wide stills are shown whole over a blurred fill; the phone and selfie fill the frame; Ren presents from the office with text above him.
 - **Validator:** no text outside the safe area and none touching Ren.
+
+### Short revision 2 (Jon: "not very portrait friendly")
+
+- **Too much empty screen, or zoomed too close:** wide stills were a thin 16:9 band with blur above and below, or a tall crop that zoomed in too far.
+- **Stills:** now a large 4:5 panel filling the screen from the disclaimer down to YouTube's controls. That shows about 45% of each picture's width, against 32% for a full-height crop, and blends into a soft fill of the same image.
+- **Ren:** shown at nearly full height (2× clip scale) with his text above his head.
+- **Graphics:** the checklist and "Book" screen are enlarged to fill the frame.
+- **Closing fridge shots:** kept at the widest view so both photos are always fully in frame.
+- **Checks:** 60.4s, -16.3 LUFS; validator: no text outside the safe area, none touching Ren.
