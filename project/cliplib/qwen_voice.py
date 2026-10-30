@@ -35,7 +35,10 @@ def main():
 
     # The transcript file opens with a stray quote mark; strip quotes only, keep every word as written
     ref_text = (REF / "ren_reference.txt").read_text().strip().strip('"“”').strip()
-    client = Client(SPACE, token=os.environ.get("HF_TOKEN") or None, verbose=False)
+    try:
+        client = Client(SPACE, token=os.environ.get("HF_TOKEN") or None, verbose=False)
+    except Exception as e:
+        raise SystemExit(f"Cannot connect to {SPACE}: {type(e).__name__}: {e}") from e
 
     for k, shot in enumerate(shots, 1):
         if args.only and k not in args.only:

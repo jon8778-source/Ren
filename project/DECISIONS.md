@@ -1,5 +1,16 @@
 # Ren Video Production & Decision Log
 
+## Current prototype update — 27 October 2026
+
+Owner requested the newer hybrid style and voice reference integration. For animation prototypes,
+use `cliplib/render_hybrid.py` and `cliplib/README.md`: real Ren clip animation, office backgrounds,
+story stills capped at 2.5s, count-up graphics capped at 3.5s, frequent returns to Ren. Qwen Base
+clones the voice from `Audio/ren_reference.wav` plus its exact transcript; hosted and local wrappers
+are available. No separate voice training is required. No automatic fallback voice or long idle holds.
+This overrides the older white-only/static-bust/Kokoro decisions below for the prototype route.
+The bundled office and story portrait are placeholders pending approved office/Alex assets.
+
+
 Repo jon8778-source/Ren; work on branch ccr-a31871f7-ihoco0 (PR #2 → main). Workflow: CLAUDE.md + project/README.md. Setup: `cd project && ./setup.sh`.
 
 ## 1. Core aesthetics & style
