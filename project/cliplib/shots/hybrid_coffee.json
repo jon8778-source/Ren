@@ -1,0 +1,61 @@
+{
+  "title": "Coffee, with intention \u2014 hybrid prototype",
+  "shots": [
+    {
+      "kind": "ren",
+      "clip": "ren_point_camera",
+      "duration": 4,
+      "title": "Keep the coffee?",
+      "subtitle": "Give your spending a purpose.",
+      "voice": "What if your coffee is worth keeping?"
+    },
+    {
+      "kind": "graphic",
+      "duration": 3,
+      "title": "Four dollars every day",
+      "value": 1460,
+      "subtitle": "365 days \u00d7 $4 = $1,460 a year",
+      "voice": "Four dollars daily becomes fourteen sixty yearly."
+    },
+    {
+      "kind": "ren",
+      "clip": "ren_shake_no",
+      "duration": 4,
+      "title": "Price is only half the story",
+      "subtitle": "What does it add to your day?",
+      "voice": "The price alone does not tell the whole story."
+    },
+    {
+      "kind": "story",
+      "image": "../../characters/max-30/neutral.png",
+      "duration": 2.5,
+      "title": "Your morning ritual",
+      "subtitle": "A pause before the day starts.",
+      "voice": "Maybe it is your morning ritual."
+    },
+    {
+      "kind": "ren",
+      "clip": "ren_point_right",
+      "duration": 4,
+      "title": "Look at the trade-off",
+      "subtitle": "Compare what matters to you.",
+      "voice": "Compare that ritual with something else you want."
+    },
+    {
+      "kind": "graphic",
+      "duration": 3,
+      "title": "One illustrative alternative",
+      "value": 730,
+      "subtitle": "$2 less each day, kept for experiences",
+      "voice": "Two dollars less keeps seven thirty yearly."
+    },
+    {
+      "kind": "ren",
+      "clip": "ren_open_arms",
+      "duration": 4,
+      "title": "Spend with intention",
+      "subtitle": "Enjoy today. Keep tomorrow in view.",
+      "voice": "Choose deliberately. Your money should support your life."
+    }
+  ]
+}
