@@ -257,8 +257,10 @@ class RenShot:
         cols, rows = np.where(solid.any(0))[0], np.where(solid.any(1))[0]
         self.bbox = (int(cols.min() * 1.5 + min(self.shifts)), int(rows.min() * 1.5),
                      int(cols.max() * 1.5 + max(self.shifts)), int(rows.max() * 1.5))
-        feet = np.where(solid[int(rows.max()) - 40:int(rows.max())].any(0))[0]
-        self.feet_x = int((feet.min() + feet.max()) / 2 * 1.5 + np.median(self.shifts))
+        self.feet_x = []  # per frame, so the shadow follows Ren when he walks
+        for i, fr in enumerate(self.frames):
+            cols_i = np.where((fr[int(rows.max()) - 40:int(rows.max()) + 1, :, 3] > 128).any(0))[0]
+            self.feet_x.append(int((cols_i.min() + cols_i.max()) / 2 * 1.5 + self.shifts[i]) if len(cols_i) else None)
         self.used = [{"file": p[0]["file"], "from_s": round(p[1] / FPS, 2), "len_s": round(p[2] / FPS, 2),
                       "mirror": p[3]} for p in pieces]
 
@@ -266,7 +268,8 @@ class RenShot:
         i = min(int(local_t * FPS), len(self.frames) - 1)
         f = office_backdrop().copy()
         ren = Image.fromarray(self.frames[i], "RGBA").resize((W, H), Image.LANCZOS)
-        f.alpha_composite(contact_shadow(self.feet_x, self.bbox[3]))
+        if self.feet_x[i] is not None:
+            f.alpha_composite(contact_shadow(self.feet_x[i], self.bbox[3]))
         f.alpha_composite(ren, (self.shifts[i], 0))
         return f
 
