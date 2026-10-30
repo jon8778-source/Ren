@@ -482,7 +482,7 @@ def build(out):
                  y=400, at=S("S3_10"))])),
         ("S3_11", "detail crop", "fridge photo close: a moving summit", still(
             fridge, (px + 150, py + 10, 2.0), (px + 140, py, 2.2),
-            [dict(lines=[("A moving summit.", 84, 700, NAVY)], x=1290, y=380, at=S("S3_11"))])),
+            [dict(lines=[("A moving summit.", 84, 700, NAVY)], x=W - 60, y=380, anchor="ra", at=S("S3_11"))])),
         # S4
         ("S4_02", "story still", "D_alex_laptop + listings", still(
             lambda t: laptop("listings", min(1, max(0, (t - S("S4_01")) / 6))), (820, 450, 1.12), (860, 430, 1.3))),
@@ -594,7 +594,8 @@ def build(out):
              dict(lines=[("Not everything is fixed.", 56, 600, NAVY)], x=W - 60, y=250, anchor="ra",
                   at=word("S11_05", "some"))])),
         ("S11_06", "presenter", "ren_thumbs_up", presenter("ren_thumbs_up", [
-            dict(lines=[("But he stuck", 72, 700, GREEN), ("to the plan.", 72, 700, GREEN)], y=420, at=S("S11_06"))])),
+            dict(lines=[("But he stuck", 72, 700, GREEN), ("to the plan.", 72, 700, GREEN)], y=420, at=S("S11_06"))],
+            end_on=8.0)),
         ("S11_07", "presenter", "ren_idea", presenter("ren_idea", [
             dict(lines=[("Proof he can spend", 60, 700, NAVY), ("on purpose and still", 60, 700, NAVY),
                         ("be a responsible saver.", 60, 700, NAVY)], y=380, at=word("S11_07", "proof"))])),
