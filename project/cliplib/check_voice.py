@@ -5,7 +5,7 @@
 Reads timings.json written by qwen_local_voice.py, runs faster-whisper (medium.en, CPU) on every
 lines/<section>_<nn>.wav, and compares words after normalising case, punctuation and spelled-out
 numbers. Also flags lines faster than --max-wpm. Writes voice_check.json beside timings.json and exits
-non-zero if any line fails. Speech-to-text is a stand-in for listening: it catches wrong, missing or
+non-zero if any line fails. Word timings for every line go to word_times.json (used to sync graphics). Speech-to-text is a stand-in for listening: it catches wrong, missing or
 runaway words, not accent or tone.
 """
 import argparse
@@ -44,12 +44,16 @@ def main():
     voice = Path(args.voice_dir)
     timings = json.loads((voice / "timings.json").read_text())
     model = WhisperModel(args.model, device="cpu", compute_type="int8")
-    report, failed = {}, 0
+    report, failed, word_times = {}, 0, {}
     for sid, sec in timings.items():
         for line in sec["lines"]:
             path = voice / "lines" / f"{sid}_{line['line']:02d}.wav"
-            segs, _ = model.transcribe(load(path), beam_size=5, condition_on_previous_text=False)
+            segs, _ = model.transcribe(load(path), beam_size=5, condition_on_previous_text=False,
+                                       word_timestamps=True)
+            segs = list(segs)
             heard = " ".join(s.text.strip() for s in segs)
+            word_times[path.stem] = [{"word": w.word.strip(), "start": round(w.start, 2), "end": round(w.end, 2)}
+                                     for s in segs for w in s.words]
             want, got = words(line["text"]), words(heard)
             ratio = difflib.SequenceMatcher(None, want, got).ratio()
             dur = line["end"] - line["start"]
@@ -66,6 +70,7 @@ def main():
             print(f"{mark} {path.name} {dur:5.2f}s {wpm:4.0f}wpm  heard: {heard}"
                   + (f"   [{'; '.join(problems)}]" if problems else ""), flush=True)
     (voice / "voice_check.json").write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n")
+    (voice / "word_times.json").write_text(json.dumps(word_times, indent=1, ensure_ascii=False) + "\n")
     print(f"{failed} line(s) need attention" if failed else "all lines match the script")
     sys.exit(1 if failed else 0)
 
