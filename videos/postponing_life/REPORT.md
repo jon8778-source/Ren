@@ -298,3 +298,10 @@ The video itself is not stored in git.
 - **Graphics:** the checklist and "Book" screen are enlarged to fill the frame.
 - **Closing fridge shots:** kept at the widest view so both photos are always fully in frame.
 - **Checks:** 60.4s, -16.3 LUFS; validator: no text outside the safe area, none touching Ren.
+
+### Short revision 3 (Jon: "Ren looks too small, smaller than his desk")
+
+- **Ren's size:** 2.5× clip scale (from 2.0×), framed from the head to about the knees. The top of his head, including a raised hand, stays at y=660, below the text.
+- **Background:** the office behind him now uses the wall-and-window side, since the portrait crop enlarges the still about 2× and the desk dwarfed him.
+- **Stacked Alex cards:** slightly smaller and higher.
+- **Validator:** now requires at least 40px between any text and Ren, and passes on every shot.

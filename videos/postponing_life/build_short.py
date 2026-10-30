@@ -26,7 +26,7 @@ from build_pilot import GREEN, LINE, MUTED, NAVY, STILLS, VOICE, WHITE, ease, fa
 W, H, FPS, XF = 1080, 1920, 24, 0.25
 LEAD, GAP, BEAT, TAIL = 0.4, 0.42, 0.6, 1.2
 SAFE_BOTTOM, RIGHT_CLEAR, DISC_Y = 1500, 130, 150
-REN_SCALE, HEAD_Y = 2.0, 660          # Ren fills the height; text sits above his head
+REN_SCALE, HEAD_Y = 2.5, 660          # Ren framed from the head to about the knees; text sits above him
 PANEL_TOP, PANEL_H = 150, 1350            # stills: a 4:5 panel from under the disclaimer to the controls
 EDU, EXAMPLE = "Educational only, not financial advice", "Example only, not financial advice"
 LINES = ["S1_01", "S1_02", "S1_04", "S1_05", "S1_06", "S3_10", "S3_11", "S6_01", "S6_02", "S6_03", "S6_04",
@@ -90,7 +90,8 @@ def office():
     global _OFFICE
     if _OFFICE is None:
         img = Image.open(STILLS / "office.png").convert("RGB")
-        _OFFICE = cover(img, 900, 470, 1.0, (W, H)).filter(ImageFilter.GaussianBlur(5)).convert("RGBA")
+        # the wall-and-window side of the office, so no furniture behind him looks bigger than he is
+        _OFFICE = cover(img, 1250, 470, 1.0, (W, H)).filter(ImageFilter.GaussianBlur(5)).convert("RGBA")
     return _OFFICE
 
 
@@ -161,7 +162,7 @@ def build(out):
         return [("Alex:", 40, 600, MUTED)] + [(s, 58, 600, NAVY) for s in lines]
 
     def alex_s(lines):  # slightly smaller, for two stacked cards above Ren
-        return [("Alex:", 34, 600, MUTED)] + [(s, 50, 600, NAVY) for s in lines]
+        return [("Alex:", 32, 600, MUTED)] + [(s, 46, 600, NAVY) for s in lines]
 
     # --- graphics ---------------------------------------------------------------------------------
     def g_checks(t, a, b, k):
@@ -237,8 +238,8 @@ def build(out):
         (("S6_01", "S6_02", "S6_03"), "story still", "F_phone_in_hand + message", fit(
             phone, (790, 470, 1.0), (790, 450, 1.06))),
         (("S6_04", "S6_05"), "presenter", "ren_idle_listen", presenter("ren_idle_listen", [
-            dict(lines=alex_s(["“It’s not really the", "trip I planned.”"]), y=200, at=word("S6_04", "it")),
-            dict(lines=alex_s(["“But what part am", "I waiting for?”"]), y=420, at=word("S6_05", "know") - 0.3)])),
+            dict(lines=alex_s(["“It’s not really the", "trip I planned.”"]), y=180, at=word("S6_04", "it")),
+            dict(lines=alex_s(["“But what part am", "I waiting for?”"]), y=385, at=word("S6_05", "know") - 0.3)])),
         (("S7_05",), "infographic", "checks before spending", g_checks),
         (("S8_02",), "infographic", "the Book button", g_book),
         (("S11_02",), "story still", "fridge: the weekend photo goes up", f_photo_up),
@@ -280,7 +281,7 @@ def build(out):
         if k in ren:
             r = ren[k]
             entry.update(clip=r.clip, clip_plan=r.note, clip_notes=lib[r.clip + ".mp4"].get("notes", ""),
-                         text_over_ren=any(x[3] > r.box[1] + 10 and x[1] < r.box[3] and x[2] > r.box[0] and x[0] < r.box[2]
+                         text_over_ren=any(x[3] > r.box[1] - 40 and x[1] < r.box[3] and x[2] > r.box[0] and x[0] < r.box[2]
                                            for x in boxes))
             r.frames = None
         log.append(entry)
