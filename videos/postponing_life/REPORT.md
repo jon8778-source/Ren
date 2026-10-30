@@ -141,3 +141,12 @@ sleeves over a cream T-shirt, dark trousers".
 1. **The friend's message in S6:** shown as text on Alex's phone. Is a friend existing off-screen OK?
 2. **Disclaimer wording:** the house rule is "Educational only, not financial advice" at the start and end, and in the description. Your prompt adds "Example only, not financial advice" for budget scenes. I've planned both.
 3. **Frame rate:** your prompt says 24 fps; the main pipeline's config uses 30. I'll follow your 24.
+
+### Voice update (30 Oct)
+
+- **Fixed reference:** `Audio/ren_reference.txt` didn't match `Audio/ren_reference.wav` (it was a different take). That made Qwen run on to its 163s limit on almost every line. Corrected to the transcript of the recording (Jon approved).
+- **S1 and S2:** narrated locally with Qwen3-TTS 1.7B Base in `voice/`: S1.wav 29.65s and S2.wav 18.27s, about **48s** in total, not the estimated 64s.
+- **Checked:** `project/cliplib/check_voice.py` (faster-whisper medium.en) heard every one of the 15 lines word for word. Four short lines are faster than 230 wpm; the average is about 205 wpm. Results are in `voice/voice_check.json`.
+- **Loudness:** before mixing, -18.0 LUFS (S1) and -17.5 LUFS (S2). The final mix normalises to -16.
+- **Speed here (4 CPU cores):** about 6 minutes to load the model, then 26–68s per line. The whole script would take roughly 1–1½ hours.
+- **Open:** keep the natural pace, or slow the narration to 90% (S1 would run 32.9s)?
