@@ -1,0 +1,130 @@
+{
+ "S1_01.wav": {
+  "text": "Alex has a photo of a mountain, taped to his fridge.",
+  "heard": "Alex has a photo of a mountain taped to his fridge.",
+  "match": 1.0,
+  "duration_s": 2.8,
+  "wpm": 236,
+  "problems": [
+   "fast (236 wpm)"
+  ]
+ },
+ "S1_02.wav": {
+  "text": "He’s never been there.",
+  "heard": "He's never been there.",
+  "match": 1.0,
+  "duration_s": 1.0,
+  "wpm": 239,
+  "problems": [
+   "fast (239 wpm)"
+  ]
+ },
+ "S1_03.wav": {
+  "text": "But he’s researched the cabins, compared the routes, and watched a man on YouTube explain which hiking socks will apparently change his life.",
+  "heard": "But he's researched the cabins, compared the routes, and watched a man on YouTube explain which hiking socks will apparently change his life.",
+  "match": 1.0,
+  "duration_s": 6.6,
+  "wpm": 200,
+  "problems": []
+ },
+ "S1_04.wav": {
+  "text": "He’s been ready for four years.",
+  "heard": "He's been ready for four years.",
+  "match": 1.0,
+  "duration_s": 1.62,
+  "wpm": 222,
+  "problems": []
+ },
+ "S1_05.wav": {
+  "text": "Every year, Alex says the same thing.",
+  "heard": "Every year Alex says the same thing.",
+  "match": 1.0,
+  "duration_s": 1.92,
+  "wpm": 219,
+  "problems": []
+ },
+ "S1_06.wav": {
+  "text": "“Next year. I’ll be in a better position.”",
+  "heard": "Next year, I'll be in a better position.",
+  "match": 1.0,
+  "duration_s": 1.91,
+  "wpm": 252,
+  "problems": [
+   "fast (252 wpm)"
+  ]
+ },
+ "S1_07.wav": {
+  "text": "And every year, he has a reason.",
+  "heard": "and every year, he has a reason.",
+  "match": 1.0,
+  "duration_s": 2.05,
+  "wpm": 176,
+  "problems": []
+ },
+ "S1_08.wav": {
+  "text": "The uncomfortable part?",
+  "heard": "The uncomfortable part?",
+  "match": 1.0,
+  "duration_s": 1.2,
+  "wpm": 150,
+  "problems": []
+ },
+ "S1_09.wav": {
+  "text": "Some of those reasons are very good.",
+  "heard": "Some of those reasons are very good.",
+  "match": 1.0,
+  "duration_s": 1.64,
+  "wpm": 256,
+  "problems": [
+   "fast (256 wpm)"
+  ]
+ },
+ "S1_10.wav": {
+  "text": "I’m Ren. And this is a story about what happens when you keep postponing the life you’re saving for.",
+  "heard": "I'm Ren, and this is a story about what happens when you keep postponing the life you're saving for.",
+  "match": 1.0,
+  "duration_s": 5.14,
+  "wpm": 210,
+  "problems": []
+ },
+ "S2_01.wav": {
+  "text": "When that photo first went up, his car had just broken down.",
+  "heard": "When that photo first went up, his car had just broken down.",
+  "match": 1.0,
+  "duration_s": 3.21,
+  "wpm": 224,
+  "problems": []
+ },
+ "S2_02.wav": {
+  "text": "He had credit card debt, very little savings, and a vacation budget that was mostly optimism.",
+  "heard": "He had credit card debt, very little savings, and a vacation budget that was mostly optimism.",
+  "match": 1.0,
+  "duration_s": 5.34,
+  "wpm": 169,
+  "problems": []
+ },
+ "S2_03.wav": {
+  "text": "So he waited.",
+  "heard": "So he waited.",
+  "match": 1.0,
+  "duration_s": 0.78,
+  "wpm": 230,
+  "problems": []
+ },
+ "S2_04.wav": {
+  "text": "He paid down the card. Built up emergency savings. Started putting money away for retirement.",
+  "heard": "He paid down the card, built up emergency savings, started putting money away for retirement.",
+  "match": 1.0,
+  "duration_s": 5.3,
+  "wpm": 170,
+  "problems": []
+ },
+ "S2_05.wav": {
+  "text": "That was progress. Waiting helped.",
+  "heard": "That was progress. Waiting helped.",
+  "match": 1.0,
+  "duration_s": 1.96,
+  "wpm": 153,
+  "problems": []
+ }
+}

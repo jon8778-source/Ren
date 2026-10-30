@@ -1,0 +1,134 @@
+{
+ "S1": {
+  "duration": 29.648,
+  "sample_rate": 24000,
+  "lines": [
+   {
+    "line": 1,
+    "text": "Alex has a photo of a mountain, taped to his fridge.",
+    "start": 0.0,
+    "end": 2.796,
+    "quote": false,
+    "gen_s": 68.5
+   },
+   {
+    "line": 2,
+    "text": "He’s never been there.",
+    "start": 3.216,
+    "end": 4.22,
+    "quote": false,
+    "gen_s": 28.7
+   },
+   {
+    "line": 3,
+    "text": "But he’s researched the cabins, compared the routes, and watched a man on YouTube explain which hiking socks will apparently change his life.",
+    "start": 4.64,
+    "end": 11.242,
+    "quote": false,
+    "gen_s": 61.1
+   },
+   {
+    "line": 4,
+    "text": "He’s been ready for four years.",
+    "start": 11.662,
+    "end": 13.282,
+    "quote": false,
+    "gen_s": 29.0
+   },
+   {
+    "line": 5,
+    "text": "Every year, Alex says the same thing.",
+    "start": 13.702,
+    "end": 15.617,
+    "quote": false,
+    "gen_s": 33.9
+   },
+   {
+    "line": 6,
+    "text": "“Next year. I’ll be in a better position.”",
+    "start": 16.037,
+    "end": 17.942,
+    "quote": true,
+    "gen_s": 31.9
+   },
+   {
+    "line": 7,
+    "text": "And every year, he has a reason.",
+    "start": 18.362,
+    "end": 20.409,
+    "quote": false,
+    "gen_s": 34.4
+   },
+   {
+    "line": 8,
+    "text": "The uncomfortable part?",
+    "start": 20.829,
+    "end": 22.029,
+    "quote": false,
+    "gen_s": 26.3
+   },
+   {
+    "line": 9,
+    "text": "Some of those reasons are very good.",
+    "start": 22.449,
+    "end": 24.09,
+    "quote": false,
+    "gen_s": 29.2
+   },
+   {
+    "line": 10,
+    "text": "I’m Ren. And this is a story about what happens when you keep postponing the life you’re saving for.",
+    "start": 24.51,
+    "end": 29.648,
+    "quote": false,
+    "gen_s": 52.2
+   }
+  ]
+ },
+ "S2": {
+  "duration": 18.271,
+  "sample_rate": 24000,
+  "lines": [
+   {
+    "line": 1,
+    "text": "When that photo first went up, his car had just broken down.",
+    "start": 0.0,
+    "end": 3.209,
+    "quote": false,
+    "gen_s": 39.1
+   },
+   {
+    "line": 2,
+    "text": "He had credit card debt, very little savings, and a vacation budget that was mostly optimism.",
+    "start": 3.629,
+    "end": 8.97,
+    "quote": false,
+    "gen_s": 56.7
+   },
+   {
+    "line": 3,
+    "text": "So he waited.",
+    "start": 9.39,
+    "end": 10.173,
+    "quote": false,
+    "gen_s": 25.8
+   },
+   {
+    "line": 4,
+    "text": "He paid down the card. Built up emergency savings. Started putting money away for retirement.",
+    "start": 10.593,
+    "end": 15.892,
+    "quote": false,
+    "gen_s": 53.9
+   },
+   {
+    "line": 5,
+    "text": "That was progress. Waiting helped.",
+    "start": 16.312,
+    "end": 18.271,
+    "quote": false,
+    "gen_s": 31.2
+   }
+  ]
+ }
+}
