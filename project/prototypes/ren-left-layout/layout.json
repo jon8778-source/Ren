@@ -1,0 +1,18 @@
+{
+  "id": "ren-left-content-right-v1",
+  "owner_approved_date": "2026-10-30",
+  "scope": "Future landscape v3 office shots",
+  "canvas": [1280, 720],
+  "actor_native_decode": [1280, 720],
+  "actor_scale": 0.9,
+  "actor_composite_size": [1152, 648],
+  "actor_canvas_position": [-300, 45],
+  "actor_solid_alpha_threshold": 20,
+  "actor_visible_right_exclusive": 620,
+  "content_bounds": [650, 70, 1210, 480],
+  "framing": "Fixed full body throughout each uninterrupted office passage",
+  "mirror_actor": false,
+  "mirror_office": false,
+  "reference_render": "Ren_Left_Layout_10s_Silent.mp4",
+  "reference_sha256": "4dcc08cb75cfa07ec9dd3fe4c2bf2cdd581dbb23aa58752a31ac70a6f40dde36"
+}

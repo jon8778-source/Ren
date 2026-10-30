@@ -5,6 +5,13 @@ These owner-approved v3 rules supersede conflicting older prototype styling
 in CLAUDE.md and project/DECISIONS.md. Continue using their existing workflow
 for legacy production episodes.
 
+For future landscape v3 office shots, use the owner-approved **Ren left,
+text/illustrations right** layout from project/prototypes/ren-left-layout/.
+Read its layout.json and README.md before creating a new episode renderer.
+This supersedes earlier right-side Ren placement in the coffee and retirement
+renderers. Keep the approved steady full-body framing; do not copy their old
+placement coordinates into a new video.
+
 The approved v3 renderer, all four original artworks, pinned dependencies,
 run instructions and validation results are published under
 project/prototypes/coffee-minute-v3/. Artwork is stored losslessly in the

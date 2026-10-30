@@ -5,6 +5,37 @@ Use this as the visual direction for future hybrid prototypes. These rules
 supersede conflicting legacy white-only/static-bust/Kokoro instructions for
 this route. Existing production episodes remain unchanged.
 
+On 30 October 2026 Jon approved the silent left-side Ren prototype as the
+default office composition for future videos. This takes precedence over
+earlier right-side character/text positions in existing renderers.
+
+## Approved default office layout — Ren left, content right
+
+- Reuse project/prototypes/ren-left-layout/layout.json for future 16:9 office
+  shots, with the visual reference and implementation in that directory.
+- At 1280×720, matte Ren at native resolution, resize once to 90%
+  (1152×648), and place the full source canvas at (-300,45). The transparent
+  canvas extends offscreen; the complete visible character remains on the left.
+- Keep this full-body scale and position throughout an uninterrupted office
+  passage. Do not alternate full-body/zoom shots. A deliberate different
+  framing needs a cutaway first and visual review.
+- Put text and illustrations on the clear right-hand wall within
+  (650,70)–(1210,480). Use the prototype typography and spacing. Fit and wrap
+  content; split crowded material across shots rather than covering furniture
+  or making text too small. Keep Ren's face, hands, clothing and gesture
+  envelope clear; the solid silhouette must stay left of x620.
+- Preserve the approved office artwork as-is. Ren may naturally stand in front
+  of some furniture, as in the approved test; text/graphic overlays must not
+  cover furniture. Do not mirror the office or Ren to achieve this layout.
+- Use gestures suited to right-side content. Thinking and nod are demonstrated
+  in the approved test. Inspect pointing/presenting gestures before reuse;
+  the existing palm-left clip points away from right-side content.
+- Full-screen graphic/story cutaways can use the full frame. Recompose portrait
+  adaptations explicitly; do not apply landscape coordinates directly to Shorts.
+- Validate content bounds and character separation on every office frame,
+  then inspect encoded shots at full output size. Historical renderer office
+  coordinates are not the default for new episodes.
+
 ## Publication status
 
 The v3 renderer, all four approved original artworks, pinned dependencies,
@@ -39,8 +70,8 @@ ChatGPT files. The newly reproduced MP4 is supplied separately with this handove
   style. Supporting characters and environments must match that visual world.
 - No large white panel obscuring the office desk/chair, Ren/Finance heading,
   bottom yellow progress bar or persistent footer.
-- Keep one Ren framing throughout each uninterrupted office passage. Alternate
-  wider and closer framing only after a cutaway, not between consecutive Ren
+- Keep one Ren framing throughout each uninterrupted office passage. Change
+  framing only after a cutaway, not between consecutive Ren
   shots (owner feedback on the retirement episode). Place office captions in
   the clear wall space beside Ren, never over the desk, chair or wall artwork.
   Use brief story cutaways and purposeful

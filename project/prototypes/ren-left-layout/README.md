@@ -1,8 +1,11 @@
 # Ren on the left — silent layout experiment
 
-Owner-requested 10-second prototype, separate from the completed retirement
-episode and approved coffee originals. This is a layout option for review,
-not a replacement for the standing production layout.
+Owner-approved on 30 October 2026 as the default office layout for future
+landscape v3 videos. Completed episodes and approved coffee originals remain
+unchanged. See project/REN_VIDEO_RULES.md for standing rules. The reusable
+layout.json saves the exact approved coordinates, scale, content bounds and
+reference hash. Future episode renderers must reuse this preset instead of
+the older right-side Ren placement in historical renderers.
 
 Ren stays at one full-body size and position for two five-second shots.
 The existing thinking and nod gestures are not mirrored. Text, a three-step

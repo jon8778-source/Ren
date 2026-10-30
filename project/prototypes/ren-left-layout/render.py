@@ -15,7 +15,9 @@ import render as v3
 BUILD = BASE / 'build'
 OUT = BASE / 'deliverables'
 W, H, FPS = 1280, 720, 24
-SCALE, POSITION = .9, (-300, 45)
+LAYOUT = json.loads((BASE / 'layout.json').read_text())
+SCALE = LAYOUT['actor_scale']
+POSITION = tuple(LAYOUT['actor_canvas_position'])
 SHOTS = [('thinking', 'When can you\nease off?'),
          ('nod_yes', 'Make room for\nlife now, too.')]
 
@@ -25,7 +27,7 @@ def digest(p):
 def compose(raw, shot, f):
     im = v3.ART['office.png'].copy()
     actor = v3.actor_rgba(Image.frombytes('RGB', (W, H), raw))
-    actor = actor.resize((1152, 648), Image.Resampling.LANCZOS)
+    actor = actor.resize(tuple(LAYOUT['actor_composite_size']), Image.Resampling.LANCZOS)
     im.paste(actor, POSITION, actor)
     # All content is on the existing clear right-hand wall, above the floor
     # and entirely outside the desk/chair envelope. No background panel.
@@ -53,8 +55,8 @@ def compose(raw, shot, f):
     if f < 36 and shot == 0 or f >= 84 and shot == 1:
         v3.text(d, (650, 455), 'Educational only · Not financial advice', 20, v3.MUTED)
     # The actual visible silhouette must remain left of the content region.
-    solid=actor.getchannel('A').point(lambda a: 255 if a>20 else 0)
-    assert solid.getbbox()[2] + POSITION[0] < 620
+    solid=actor.getchannel('A').point(lambda a: 255 if a>LAYOUT['actor_solid_alpha_threshold'] else 0)
+    assert solid.getbbox()[2] + POSITION[0] < LAYOUT['actor_visible_right_exclusive']
     return im
 
 def main():

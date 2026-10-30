@@ -79,8 +79,12 @@ use the existing native-resolution v3 matte, approved character and office.
 All shot counts and fatal-error final decode pass. Twelve encoded frames,
 including the shot boundary, and two frames at 100% output size were inspected.
 No full-motion playback is claimed. No voice requests or artwork generation.
-This is an option for owner review; existing production layout rules, episodes,
-approved coffee prototype and main remain unchanged.
+Owner approved this layout on 30 October: **Ren left, text/illustrations right**
+is now the default for future landscape v3 office shots. AGENTS.md and
+REN_VIDEO_RULES.md direct future development to the prototype and reusable
+layout.json. The prototype renderer now reads that same preset. Existing
+videos, approved coffee originals and main remain unchanged. No new narration
+or video render is needed for this policy/preset update.
 
 [Layout prototype source and validation](prototypes/ren-left-layout/README.md)
 
