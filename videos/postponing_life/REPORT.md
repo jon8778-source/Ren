@@ -190,3 +190,91 @@ Cuts sit midway through the pauses between lines, with 0.25s dissolves.
 - **Ren's backdrop:** all four presenter shots now place Ren in front of the approved `office.png` (from `codex/retirement-ease-off-v3`, checksum verified, copied to `stills/`). The office is softly blurred, and a faint shadow sits at his feet. This replaces the house "plain white background" rule for this video, at Jon's request.
 - **How Ren is cut out:** only white that touches the edge of the frame, plus enclosed pure-white pockets (such as the gap under a waving arm), is removed. His pale T-shirt stays solid; a simple colour key had made it see-through, and that's now fixed. His edges are cleaned of white fringing. His frames are not otherwise changed.
 - **Unchanged:** the story stills, the infographic (still on white), the timing, the narration (-16.2 LUFS) and the length (50.1s).
+
+
+## Gate 3 — full production (S1–S12)
+
+Status: **rendered; waiting for Jon's review.** Approved by Jon ("approved for full production").
+Files: `final/postponing_life.mp4`, voice only `final/postponing_life_voice.wav`, checks
+`final/postponing_life_report.json`, YouTube description `description.txt`. Built by `build_video.py`,
+which reuses the approved pilot's shots for S1–S2.
+
+- **Duration:** 327.9s (5:28) at 1920×1080, 24 fps. The script's estimate was 6½–7 minutes; Ren's natural pace is quicker.
+- **Narration:** -16.3 LUFS integrated, true peak -1.0 dBTP. All 97 lines are in Ren's cloned voice (Qwen3-TTS 1.7B Base, run locally), checked by speech-to-text (`voice/voice_check.json`).
+- **Lines to listen to:** speech-to-text heard S3_03 "he just hit" (script: "he'd just hit"), S5_03 "he started" (script: "he's started") and S3_05 "photos stayed" (script: "photo stayed"). Two other mismatches are checker artefacts ("3" for "three", "Wren" for "Ren").
+- **Validator:** no text touches Ren in any of 61 shots. Same clip back to back: none.
+- **Ren clips used twice:** ren_count_fingers, ren_nod_yes, ren_open_arms, ren_point_camera.
+- **Shots over 7s:** D_alex_laptop + listings (7.3s), savings vs a moving target (8.7s), ren_walk_in_left (8.5s), the cabin grows (9.1s), F_phone_in_hand + friend's message (8.0s), ren_idle_listen (7.8s), what he actually wants (8.7s), weekend budget categories (no $) (11.8s), G_empty_mug, close on Alex and the mug (7.7s), D_alex_laptop + accounts screen, a month later (8.3s), challenge steps (7.7s). Each covers one unbroken sentence and keeps moving (graphics revealing on the narration, Ren walking in, camera pushes or cards appearing). The final fridge shot was split so it ends on the fridge.
+- **Open-mouth notes during narration:** `ren_worried`, `ren_count_fingers` (twice), `ren_rub_hands`, `ren_celebrate_fist_pump`, `ren_thumbs_up`.
+- **Fixes after reviewing every shot:**
+  - Alex's face kept in frame on the laptop shots.
+  - Quote cards kept inside the frame.
+  - Gestures that returned to neutral after 1s now start partway in and end on their neutral frame.
+  - Long holds split at natural pauses.
+  - Thumbs-up moved to a line long enough for the whole gesture.
+  - The S10 mug shots are cropped so the French press never shows (it contradicted "he forgets the coffee").
+- **Not done:** no music; no shorts or thumbnails (not part of this brief).
+
+| # | Time (s) | Lines | Type | Asset |
+|---|---|---|---|---|
+| 1 | 0.0–5.0 | S1_01–S1_02 | story still | A_fridge + B_mountain_photo |
+| 2 | 4.7–12.0 | S1_03 | story still | D_alex_laptop + listings |
+| 3 | 11.7–14.0 | S1_04 | detail crop | fridge photo close; 4 years |
+| 4 | 13.8–18.7 | S1_05–S1_06 | story still | D_alex_laptop close; Alex: tag |
+| 5 | 18.4–24.8 | S1_07–S1_09 | presenter | ren_thinking |
+| 6 | 24.6–30.6 | S1_10 | presenter | ren_wave_hello |
+| 7 | 30.3–34.4 | S2_01 | story still | E_car |
+| 8 | 34.1–40.1 | S2_02 | presenter | ren_worried |
+| 9 | 39.9–47.1 | S2_03–S2_04 | infographic | three steps |
+| 10 | 46.8–49.6 | S2_05 | presenter | ren_nod_yes |
+| 11 | 49.4–53.6 | S3_01–S3_02 | story still | D_alex_laptop + accounts screen |
+| 12 | 53.3–59.5 | S3_03 | presenter | ren_shake_no |
+| 13 | 59.2–62.0 | S3_04 | story still | D_alex_laptop close; Alex: tag |
+| 14 | 61.8–64.2 | S3_05 | story still | fridge (anchor: still waiting) |
+| 15 | 64.0–72.7 | S3_06–S3_08 | infographic | savings vs a moving target |
+| 16 | 72.5–78.9 | S3_09–S3_10 | presenter | ren_point_up |
+| 17 | 78.7–82.0 | S3_11 | detail crop | fridge photo close: a moving summit |
+| 18 | 81.7–88.9 | S4_01–S4_02 | story still | D_alex_laptop + listings |
+| 19 | 88.7–93.0 | S4_03 | story still | D_alex_laptop close; Alex: tag |
+| 20 | 92.8–96.0 | S4_04–S4_05 | presenter | ren_count_fingers |
+| 21 | 95.7–99.3 | S4_06 | story still | D_alex_laptop, face; Alex: tag |
+| 22 | 99.0–103.2 | S4_07–S4_08 | presenter | ren_shrug |
+| 23 | 103.0–111.5 | S5_01–S5_02 | presenter | ren_walk_in_left |
+| 24 | 111.2–115.9 | S5_03 | infographic | planned expense → emergency? |
+| 25 | 115.6–121.2 | S5_04–S5_05 | presenter | ren_open_arms |
+| 26 | 120.9–130.0 | S5_06–S5_08 | infographic | the cabin grows |
+| 27 | 129.8–135.5 | S5_09–S5_10 | presenter | ren_confused |
+| 28 | 135.2–139.0 | S5_11 | story still | D_alex_laptop + listings, slow push |
+| 29 | 138.8–146.7 | S6_01–S6_03 | story still | F_phone_in_hand + friend's message |
+| 30 | 146.5–154.3 | S6_04–S6_05 | presenter | ren_idle_listen |
+| 31 | 154.1–162.7 | S6_06 | infographic | what he actually wants |
+| 32 | 162.5–168.4 | S6_07–S6_08 | presenter | ren_present_palm_left (mirrored) |
+| 33 | 168.2–175.2 | S7_01–S7_02 | story still | D_alex_laptop + budget sheet |
+| 34 | 175.0–178.2 | S7_03–S7_04 | presenter | ren_rub_hands |
+| 35 | 178.0–184.8 | S7_05 | infographic | checks before spending |
+| 36 | 184.5–196.4 | S7_06–S7_07 | infographic | weekend budget categories (no $) |
+| 37 | 196.1–203.2 | S7_08–S7_09 | presenter | ren_point_down_right |
+| 38 | 202.9–206.3 | S8_01–S8_02 | infographic | the Book button |
+| 39 | 206.1–211.1 | S8_03–S8_04 | presenter | ren_celebrate_fist_pump |
+| 40 | 210.9–215.4 | S8_05 | story still | D_alex_laptop + budget sheet, closer |
+| 41 | 215.2–219.9 | S8_06 | infographic | the plan, checked again |
+| 42 | 219.7–225.0 | S8_07–S8_08 | presenter | ren_point_camera |
+| 43 | 224.7–230.4 | S9_01 | presenter | ren_point_right |
+| 44 | 230.1–234.8 | S9_02–S9_03 | presenter | ren_open_arms |
+| 45 | 234.6–241.6 | S9_04 | infographic | free things to look forward to |
+| 46 | 241.3–246.0 | S10_01–S10_02 | story still | G_empty_mug (cropped clear of the French press) |
+| 47 | 245.8–253.5 | S10_03–S10_04 | story still | G_empty_mug, close on Alex and the mug |
+| 48 | 253.2–258.6 | S10_05 | story still | H_trail, wide |
+| 49 | 258.4–263.9 | S10_06 | story still | H_trail, closer on Alex |
+| 50 | 263.6–269.1 | S11_01 | story still | fridge, mountain photo |
+| 51 | 268.9–272.1 | S11_02 | story still | fridge: the weekend photo goes up (anchor) |
+| 52 | 271.9–277.3 | S11_03–S11_04 | detail crop | C_weekend_selfie |
+| 53 | 277.1–285.3 | S11_05–S11_06 | story still | D_alex_laptop + accounts screen, a month later |
+| 54 | 285.1–292.2 | S11_07 | presenter | ren_thumbs_up |
+| 55 | 291.9–296.3 | S12_01–S12_02 | presenter | ren_point_camera |
+| 56 | 296.0–303.7 | S12_03–S12_04 | infographic | challenge steps |
+| 57 | 303.5–309.8 | S12_05 | presenter | ren_count_fingers |
+| 58 | 309.5–311.9 | S12_06 | presenter | ren_nod_yes |
+| 59 | 311.7–317.7 | S12_07–S12_08 | story still | fridge: both photos |
+| 60 | 317.5–321.3 | S12_09 | presenter | ren_hold_phone |
+| 61 | 321.1–327.9 | S12_10 | story still | fridge: both photos (final shot) |

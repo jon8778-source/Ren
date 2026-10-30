@@ -1,0 +1,1095 @@
+{
+ "video": "/home/user/Ren/videos/postponing_life/renders/postponing_life.mp4",
+ "voice_only": "/home/user/Ren/videos/postponing_life/renders/postponing_life_voice.wav",
+ "duration_s": 327.9,
+ "format": "1920,1080,24/1",
+ "narration_lufs": -16.3,
+ "narration_true_peak_dbtp": -1.0,
+ "final_mix_lufs": -16.3,
+ "sections_start_s": {
+  "S1": 0.4,
+  "S2": 30.85,
+  "S3": 49.92,
+  "S4": 82.27,
+  "S5": 103.47,
+  "S6": 139.28,
+  "S7": 168.71,
+  "S8": 203.43,
+  "S9": 225.26,
+  "S10": 241.85,
+  "S11": 264.18,
+  "S12": 292.45
+ },
+ "repeated_ren_clips": {
+  "ren_count_fingers": [
+   92.76,
+   303.47
+  ],
+  "ren_nod_yes": [
+   46.82,
+   309.53
+  ],
+  "ren_open_arms": [
+   115.63,
+   230.14
+  ],
+  "ren_point_camera": [
+   219.66,
+   291.93
+  ]
+ },
+ "long_shots": [
+  [
+   2,
+   7.3,
+   "D_alex_laptop + listings"
+  ],
+  [
+   15,
+   8.7,
+   "savings vs a moving target"
+  ],
+  [
+   23,
+   8.5,
+   "ren_walk_in_left"
+  ],
+  [
+   26,
+   9.1,
+   "the cabin grows"
+  ],
+  [
+   29,
+   8.0,
+   "F_phone_in_hand + friend's message"
+  ],
+  [
+   30,
+   7.8,
+   "ren_idle_listen"
+  ],
+  [
+   31,
+   8.7,
+   "what he actually wants"
+  ],
+  [
+   36,
+   11.8,
+   "weekend budget categories (no $)"
+  ],
+  [
+   47,
+   7.7,
+   "G_empty_mug, close on Alex and the mug"
+  ],
+  [
+   53,
+   8.3,
+   "D_alex_laptop + accounts screen, a month later"
+  ],
+  [
+   56,
+   7.7,
+   "challenge steps"
+  ]
+ ],
+ "issues": [
+  "11 shot(s) over 7s"
+ ],
+ "shots": [
+  {
+   "shot": 1,
+   "start": 0.0,
+   "end": 4.96,
+   "type": "story still",
+   "asset": "A_fridge + B_mountain_photo",
+   "lines": "S1_01–S1_02"
+  },
+  {
+   "shot": 2,
+   "start": 4.71,
+   "end": 11.98,
+   "type": "story still",
+   "asset": "D_alex_laptop + listings",
+   "lines": "S1_03"
+  },
+  {
+   "shot": 3,
+   "start": 11.73,
+   "end": 14.02,
+   "type": "detail crop",
+   "asset": "fridge photo close; 4 years",
+   "lines": "S1_04"
+  },
+  {
+   "shot": 4,
+   "start": 13.77,
+   "end": 18.68,
+   "type": "story still",
+   "asset": "D_alex_laptop close; Alex: tag",
+   "lines": "S1_05–S1_06"
+  },
+  {
+   "shot": 5,
+   "start": 18.43,
+   "end": 24.82,
+   "type": "presenter",
+   "asset": "ren_thinking",
+   "lines": "S1_07–S1_09",
+   "clip": "ren_thinking",
+   "clip_plan": "cut at neutral frame 8.21s (asked 7.67s); shot runs 0.58s longer than asked; ends 0.58s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_thinking.mp4",
+     "from_s": 1.25,
+     "len_s": 7.0,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    350,
+    42,
+    685,
+    1060
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 6,
+   "start": 24.57,
+   "end": 30.57,
+   "type": "presenter",
+   "asset": "ren_wave_hello",
+   "lines": "S1_10",
+   "clip": "ren_wave_hello",
+   "clip_plan": "cut at neutral frame 7.17s (asked 7.12s); shot runs 0.08s longer than asked; ends 0.08s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_wave_hello.mp4",
+     "from_s": 1.12,
+     "len_s": 6.08,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    171,
+    61,
+    686,
+    1054
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 7,
+   "start": 30.32,
+   "end": 34.39,
+   "type": "story still",
+   "asset": "E_car",
+   "lines": "S2_01"
+  },
+  {
+   "shot": 8,
+   "start": 34.14,
+   "end": 40.15,
+   "type": "presenter",
+   "asset": "ren_worried",
+   "lines": "S2_02",
+   "clip": "ren_worried",
+   "clip_plan": "clip window 5.75s used whole; ren_idle_calm fills 0.25s; held 0.04s on ren_idle_calm",
+   "pieces": [
+    {
+     "file": "ren_worried.mp4",
+     "from_s": 1.25,
+     "len_s": 5.75,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.25,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.04,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    311,
+    57,
+    701,
+    1053
+   ],
+   "clip_notes": "Gritted teeth ~2s",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 9,
+   "start": 39.9,
+   "end": 47.07,
+   "type": "infographic",
+   "asset": "three steps",
+   "lines": "S2_03–S2_04"
+  },
+  {
+   "shot": 10,
+   "start": 46.82,
+   "end": 49.64,
+   "type": "presenter",
+   "asset": "ren_nod_yes",
+   "lines": "S2_05",
+   "clip": "ren_nod_yes",
+   "clip_plan": "starts 4.06s into the window (dissolve covers it); cut at neutral frame 8.00s (asked 8.00s); ends 0.04s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_nod_yes.mp4",
+     "from_s": 5.17,
+     "len_s": 2.88,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    349,
+    57,
+    670,
+    1053
+   ],
+   "clip_notes": "Ends slightly off neutral; trimmed last second",
+   "text_over_ren": false
+  },
+  {
+   "shot": 11,
+   "start": 49.39,
+   "end": 53.58,
+   "type": "story still",
+   "asset": "D_alex_laptop + accounts screen",
+   "lines": "S3_01–S3_02"
+  },
+  {
+   "shot": 12,
+   "start": 53.33,
+   "end": 59.5,
+   "type": "presenter",
+   "asset": "ren_shake_no",
+   "lines": "S3_03",
+   "clip": "ren_shake_no",
+   "clip_plan": "clip window 6.00s used whole; ren_idle_calm fills 0.17s; held 0.04s on ren_idle_calm",
+   "pieces": [
+    {
+     "file": "ren_shake_no.mp4",
+     "from_s": 1.25,
+     "len_s": 6.0,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.17,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.04,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    176,
+    58,
+    686,
+    1051
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 13,
+   "start": 59.25,
+   "end": 62.03,
+   "type": "story still",
+   "asset": "D_alex_laptop close; Alex: tag",
+   "lines": "S3_04"
+  },
+  {
+   "shot": 14,
+   "start": 61.78,
+   "end": 64.25,
+   "type": "story still",
+   "asset": "fridge (anchor: still waiting)",
+   "lines": "S3_05"
+  },
+  {
+   "shot": 15,
+   "start": 64.0,
+   "end": 72.7,
+   "type": "infographic",
+   "asset": "savings vs a moving target",
+   "lines": "S3_06–S3_08"
+  },
+  {
+   "shot": 16,
+   "start": 72.45,
+   "end": 78.94,
+   "type": "presenter",
+   "asset": "ren_point_up",
+   "lines": "S3_09–S3_10",
+   "clip": "ren_point_up",
+   "clip_plan": "cut at neutral frame 7.58s (asked 7.62s)",
+   "pieces": [
+    {
+     "file": "ren_point_up.mp4",
+     "from_s": 1.12,
+     "len_s": 6.5,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    200,
+    45,
+    685,
+    1054
+   ],
+   "clip_notes": "Ends slightly off neutral; trimmed last second",
+   "text_over_ren": false
+  },
+  {
+   "shot": 17,
+   "start": 78.69,
+   "end": 81.99,
+   "type": "detail crop",
+   "asset": "fridge photo close: a moving summit",
+   "lines": "S3_11"
+  },
+  {
+   "shot": 18,
+   "start": 81.74,
+   "end": 88.93,
+   "type": "story still",
+   "asset": "D_alex_laptop + listings",
+   "lines": "S4_01–S4_02"
+  },
+  {
+   "shot": 19,
+   "start": 88.68,
+   "end": 93.01,
+   "type": "story still",
+   "asset": "D_alex_laptop close; Alex: tag",
+   "lines": "S4_03"
+  },
+  {
+   "shot": 20,
+   "start": 92.76,
+   "end": 95.99,
+   "type": "presenter",
+   "asset": "ren_count_fingers",
+   "lines": "S4_04–S4_05",
+   "clip": "ren_count_fingers",
+   "clip_plan": "starts 4.19s into the window (dissolve covers it); cut at neutral frame 8.17s (asked 8.17s)",
+   "pieces": [
+    {
+     "file": "ren_count_fingers.mp4",
+     "from_s": 4.96,
+     "len_s": 3.25,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    202,
+    54,
+    677,
+    1054
+   ],
+   "clip_notes": "Brief open mouth",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 21,
+   "start": 95.74,
+   "end": 99.29,
+   "type": "story still",
+   "asset": "D_alex_laptop, face; Alex: tag",
+   "lines": "S4_06"
+  },
+  {
+   "shot": 22,
+   "start": 99.04,
+   "end": 103.2,
+   "type": "presenter",
+   "asset": "ren_shrug",
+   "lines": "S4_07–S4_08",
+   "clip": "ren_shrug",
+   "clip_plan": "cut at neutral frame 5.50s (asked 5.29s); shot runs 0.25s longer than asked; ends 0.25s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_shrug.mp4",
+     "from_s": 1.12,
+     "len_s": 4.42,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    198,
+    66,
+    851,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 23,
+   "start": 102.95,
+   "end": 111.48,
+   "type": "presenter",
+   "asset": "ren_walk_in_left",
+   "lines": "S5_01–S5_02",
+   "clip": "ren_walk_in_left",
+   "clip_plan": "cut at neutral frame 8.54s (asked 8.54s); ends 0.04s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_walk_in_left.mp4",
+     "from_s": 0.0,
+     "len_s": 8.58,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    -440,
+    46,
+    680,
+    1062
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 24,
+   "start": 111.23,
+   "end": 115.88,
+   "type": "infographic",
+   "asset": "planned expense → emergency?",
+   "lines": "S5_03"
+  },
+  {
+   "shot": 25,
+   "start": 115.63,
+   "end": 121.16,
+   "type": "presenter",
+   "asset": "ren_open_arms",
+   "lines": "S5_04–S5_05",
+   "clip": "ren_open_arms",
+   "clip_plan": "cut at neutral frame 6.92s (asked 6.92s); ends 0.04s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_open_arms.mp4",
+     "from_s": 1.38,
+     "len_s": 5.58,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    138,
+    61,
+    912,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 26,
+   "start": 120.91,
+   "end": 130.01,
+   "type": "infographic",
+   "asset": "the cabin grows",
+   "lines": "S5_06–S5_08"
+  },
+  {
+   "shot": 27,
+   "start": 129.76,
+   "end": 135.47,
+   "type": "presenter",
+   "asset": "ren_confused",
+   "lines": "S5_09–S5_10",
+   "clip": "ren_confused",
+   "clip_plan": "clip window 5.38s used whole; ren_idle_calm fills 0.33s",
+   "pieces": [
+    {
+     "file": "ren_confused.mp4",
+     "from_s": 2.0,
+     "len_s": 5.38,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.33,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    139,
+    46,
+    686,
+    1057
+   ],
+   "clip_notes": "Stray arm wave before scratch; trimmed",
+   "text_over_ren": false
+  },
+  {
+   "shot": 28,
+   "start": 135.22,
+   "end": 139.0,
+   "type": "story still",
+   "asset": "D_alex_laptop + listings, slow push",
+   "lines": "S5_11"
+  },
+  {
+   "shot": 29,
+   "start": 138.75,
+   "end": 146.71,
+   "type": "story still",
+   "asset": "F_phone_in_hand + friend's message",
+   "lines": "S6_01–S6_03"
+  },
+  {
+   "shot": 30,
+   "start": 146.46,
+   "end": 154.3,
+   "type": "presenter",
+   "asset": "ren_idle_listen",
+   "lines": "S6_04–S6_05",
+   "clip": "ren_idle_listen",
+   "clip_plan": "cut at neutral frame 8.25s (asked 7.83s); shot runs 0.46s longer than asked; ends 0.42s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_idle_listen.mp4",
+     "from_s": 0.0,
+     "len_s": 8.29,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    335,
+    64,
+    686,
+    1050
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 31,
+   "start": 154.05,
+   "end": 162.71,
+   "type": "infographic",
+   "asset": "what he actually wants",
+   "lines": "S6_06"
+  },
+  {
+   "shot": 32,
+   "start": 162.46,
+   "end": 168.43,
+   "type": "presenter",
+   "asset": "ren_present_palm_left (mirrored)",
+   "lines": "S6_07–S6_08",
+   "clip": "ren_present_palm_left",
+   "clip_plan": "cut at neutral frame 6.75s (asked 7.08s); ren_idle_calm fills 0.29s; held 0.04s on ren_idle_calm",
+   "pieces": [
+    {
+     "file": "ren_present_palm_left.mp4",
+     "from_s": 1.12,
+     "len_s": 5.67,
+     "mirror": true
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.29,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.04,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    355,
+    48,
+    854,
+    1056
+   ],
+   "clip_notes": "Actually presents to screen left; mirror for right",
+   "text_over_ren": false
+  },
+  {
+   "shot": 33,
+   "start": 168.18,
+   "end": 175.23,
+   "type": "story still",
+   "asset": "D_alex_laptop + budget sheet",
+   "lines": "S7_01–S7_02"
+  },
+  {
+   "shot": 34,
+   "start": 174.98,
+   "end": 178.22,
+   "type": "presenter",
+   "asset": "ren_rub_hands",
+   "lines": "S7_03–S7_04",
+   "clip": "ren_rub_hands",
+   "clip_plan": "starts 4.64s into the window (dissolve covers it); clip window 3.25s used whole",
+   "pieces": [
+    {
+     "file": "ren_rub_hands.mp4",
+     "from_s": 4.62,
+     "len_s": 3.25,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    332,
+    48,
+    716,
+    1053
+   ],
+   "clip_notes": "Toothy grin ~3s",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 35,
+   "start": 177.97,
+   "end": 184.78,
+   "type": "infographic",
+   "asset": "checks before spending",
+   "lines": "S7_05"
+  },
+  {
+   "shot": 36,
+   "start": 184.53,
+   "end": 196.37,
+   "type": "infographic",
+   "asset": "weekend budget categories (no $)",
+   "lines": "S7_06–S7_07"
+  },
+  {
+   "shot": 37,
+   "start": 196.12,
+   "end": 203.16,
+   "type": "presenter",
+   "asset": "ren_point_down_right",
+   "lines": "S7_08–S7_09",
+   "clip": "ren_point_down_right",
+   "clip_plan": "clip window 6.00s used whole; ren_idle_calm fills 1.04s",
+   "pieces": [
+    {
+     "file": "ren_point_down_right.mp4",
+     "from_s": 1.0,
+     "len_s": 6.0,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 1.04,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    352,
+    51,
+    847,
+    1053
+   ],
+   "clip_notes": "Regenerated; points clearly to bottom-right corner, mouth closed",
+   "text_over_ren": false
+  },
+  {
+   "shot": 38,
+   "start": 202.91,
+   "end": 206.35,
+   "type": "infographic",
+   "asset": "the Book button",
+   "lines": "S8_01–S8_02"
+  },
+  {
+   "shot": 39,
+   "start": 206.1,
+   "end": 211.11,
+   "type": "presenter",
+   "asset": "ren_celebrate_fist_pump",
+   "lines": "S8_03–S8_04",
+   "clip": "ren_celebrate_fist_pump",
+   "clip_plan": "cut at neutral frame 7.00s (asked 6.25s); shot runs 0.79s longer than asked; ends 0.75s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_celebrate_fist_pump.mp4",
+     "from_s": 1.25,
+     "len_s": 5.79,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    311,
+    0,
+    731,
+    1057
+   ],
+   "clip_notes": "Open grin ~2s",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 40,
+   "start": 210.86,
+   "end": 215.43,
+   "type": "story still",
+   "asset": "D_alex_laptop + budget sheet, closer",
+   "lines": "S8_05"
+  },
+  {
+   "shot": 41,
+   "start": 215.18,
+   "end": 219.91,
+   "type": "infographic",
+   "asset": "the plan, checked again",
+   "lines": "S8_06"
+  },
+  {
+   "shot": 42,
+   "start": 219.66,
+   "end": 224.98,
+   "type": "presenter",
+   "asset": "ren_point_camera",
+   "lines": "S8_07–S8_08",
+   "clip": "ren_point_camera",
+   "clip_plan": "clip window 4.75s used whole; ren_idle_calm fills 0.58s",
+   "pieces": [
+    {
+     "file": "ren_point_camera.mp4",
+     "from_s": 1.12,
+     "len_s": 4.75,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.58,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    358,
+    52,
+    700,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 43,
+   "start": 224.73,
+   "end": 230.39,
+   "type": "presenter",
+   "asset": "ren_point_right",
+   "lines": "S9_01",
+   "clip": "ren_point_right",
+   "clip_plan": "clip window 5.38s used whole; ren_idle_calm fills 0.29s",
+   "pieces": [
+    {
+     "file": "ren_point_right.mp4",
+     "from_s": 1.0,
+     "len_s": 5.38,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 0.29,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    299,
+    49,
+    875,
+    1051
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 44,
+   "start": 230.14,
+   "end": 234.84,
+   "type": "presenter",
+   "asset": "ren_open_arms",
+   "lines": "S9_02–S9_03",
+   "clip": "ren_open_arms",
+   "clip_plan": "cut at neutral frame 6.62s (asked 6.08s); shot runs 0.58s longer than asked; ends 0.58s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_open_arms.mp4",
+     "from_s": 1.38,
+     "len_s": 5.29,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    138,
+    61,
+    912,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 45,
+   "start": 234.59,
+   "end": 241.57,
+   "type": "infographic",
+   "asset": "free things to look forward to",
+   "lines": "S9_04"
+  },
+  {
+   "shot": 46,
+   "start": 241.32,
+   "end": 246.0,
+   "type": "story still",
+   "asset": "G_empty_mug (cropped clear of the French press)",
+   "lines": "S10_01–S10_02"
+  },
+  {
+   "shot": 47,
+   "start": 245.75,
+   "end": 253.46,
+   "type": "story still",
+   "asset": "G_empty_mug, close on Alex and the mug",
+   "lines": "S10_03–S10_04"
+  },
+  {
+   "shot": 48,
+   "start": 253.21,
+   "end": 258.65,
+   "type": "story still",
+   "asset": "H_trail, wide",
+   "lines": "S10_05"
+  },
+  {
+   "shot": 49,
+   "start": 258.4,
+   "end": 263.9,
+   "type": "story still",
+   "asset": "H_trail, closer on Alex",
+   "lines": "S10_06"
+  },
+  {
+   "shot": 50,
+   "start": 263.65,
+   "end": 269.1,
+   "type": "story still",
+   "asset": "fridge, mountain photo",
+   "lines": "S11_01"
+  },
+  {
+   "shot": 51,
+   "start": 268.85,
+   "end": 272.13,
+   "type": "story still",
+   "asset": "fridge: the weekend photo goes up (anchor)",
+   "lines": "S11_02"
+  },
+  {
+   "shot": 52,
+   "start": 271.88,
+   "end": 277.3,
+   "type": "detail crop",
+   "asset": "C_weekend_selfie",
+   "lines": "S11_03–S11_04"
+  },
+  {
+   "shot": 53,
+   "start": 277.05,
+   "end": 285.31,
+   "type": "story still",
+   "asset": "D_alex_laptop + accounts screen, a month later",
+   "lines": "S11_05–S11_06"
+  },
+  {
+   "shot": 54,
+   "start": 285.06,
+   "end": 292.18,
+   "type": "presenter",
+   "asset": "ren_thumbs_up",
+   "lines": "S11_07",
+   "clip": "ren_thumbs_up",
+   "clip_plan": "clip window 5.25s used whole; ren_idle_calm fills 1.88s",
+   "pieces": [
+    {
+     "file": "ren_thumbs_up.mp4",
+     "from_s": 2.75,
+     "len_s": 5.25,
+     "mirror": false
+    },
+    {
+     "file": "ren_idle_calm.mp4",
+     "from_s": 0.0,
+     "len_s": 1.88,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    310,
+    66,
+    741,
+    1054
+   ],
+   "clip_notes": "Regenerated; white background fixed; toothy grin ~1s at peak; starts after small wave",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 55,
+   "start": 291.93,
+   "end": 296.29,
+   "type": "presenter",
+   "asset": "ren_point_camera",
+   "lines": "S12_01–S12_02",
+   "clip": "ren_point_camera",
+   "clip_plan": "cut at neutral frame 5.50s (asked 5.50s); ends 0.04s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_point_camera.mp4",
+     "from_s": 1.12,
+     "len_s": 4.42,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    358,
+    52,
+    682,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 56,
+   "start": 296.04,
+   "end": 303.72,
+   "type": "infographic",
+   "asset": "challenge steps",
+   "lines": "S12_03–S12_04"
+  },
+  {
+   "shot": 57,
+   "start": 303.47,
+   "end": 309.78,
+   "type": "presenter",
+   "asset": "ren_count_fingers",
+   "lines": "S12_05",
+   "clip": "ren_count_fingers",
+   "clip_plan": "cut at neutral frame 8.17s (asked 7.04s); shot runs 1.17s longer than asked; ends 1.12s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_count_fingers.mp4",
+     "from_s": 0.75,
+     "len_s": 7.46,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    199,
+    52,
+    677,
+    1054
+   ],
+   "clip_notes": "Brief open mouth",
+   "text_over_ren": false,
+   "open_mouth_note_during_voice": true
+  },
+  {
+   "shot": 58,
+   "start": 309.53,
+   "end": 311.91,
+   "type": "presenter",
+   "asset": "ren_nod_yes",
+   "lines": "S12_06",
+   "clip": "ren_nod_yes",
+   "clip_plan": "starts 4.49s into the window (dissolve covers it); cut at neutral frame 8.00s (asked 8.00s)",
+   "pieces": [
+    {
+     "file": "ren_nod_yes.mp4",
+     "from_s": 5.62,
+     "len_s": 2.42,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    349,
+    57,
+    670,
+    1053
+   ],
+   "clip_notes": "Ends slightly off neutral; trimmed last second",
+   "text_over_ren": false
+  },
+  {
+   "shot": 59,
+   "start": 311.66,
+   "end": 317.73,
+   "type": "story still",
+   "asset": "fridge: both photos",
+   "lines": "S12_07–S12_08"
+  },
+  {
+   "shot": 60,
+   "start": 317.48,
+   "end": 321.34,
+   "type": "presenter",
+   "asset": "ren_hold_phone",
+   "lines": "S12_09",
+   "clip": "ren_hold_phone",
+   "clip_plan": "cut at neutral frame 8.50s (asked 5.12s); shot runs 3.42s longer than asked; ends 3.42s before its neutral frame (dissolve covers it)",
+   "pieces": [
+    {
+     "file": "ren_hold_phone.mp4",
+     "from_s": 1.25,
+     "len_s": 7.29,
+     "mirror": false
+    }
+   ],
+   "ren_bbox": [
+    270,
+    48,
+    677,
+    1053
+   ],
+   "clip_notes": "",
+   "text_over_ren": false
+  },
+  {
+   "shot": 61,
+   "start": 321.09,
+   "end": 327.9,
+   "type": "story still",
+   "asset": "fridge: both photos (final shot)",
+   "lines": "S12_10"
+  }
+ ]
+}
