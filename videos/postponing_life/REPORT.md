@@ -154,7 +154,7 @@ sleeves over a cream T-shirt, dark trousers".
 ## Gate 2 — 60-second pilot (S1 + S2)
 
 Status: **revision 2 rendered (Ren in the office); waiting for Jon's review.** Files: `pilot/pilot_S1-S2.mp4`, voice only
-`pilot/pilot_S1-S2_voice.wav`, checks `pilot/pilot_report.json`. Built by `build_pilot.py`.
+`pilot/pilot_S1-S2_voice.wav`, checks `pilot/pilot_report.json`. Built by `build_pilot.py`. Rendered videos and voice-only mixes are not stored in git (Jon, 30 Oct); rebuild with `build_pilot.py` / `build_video.py`, or ask for them to be sent.
 
 - **Duration:** 50.1s. Ren's natural pace is quicker than the 150 wpm estimate, so it's under the 60 seconds aimed for.
 - **Format:** 1920×1080, 24 fps, H.264 + AAC 192k.
@@ -197,7 +197,7 @@ Cuts sit midway through the pauses between lines, with 0.25s dissolves.
 Status: **rendered; waiting for Jon's review.** Approved by Jon ("approved for full production").
 Files: `final/postponing_life.mp4`, voice only `final/postponing_life_voice.wav`, checks
 `final/postponing_life_report.json`, YouTube description `description.txt`. Built by `build_video.py`,
-which reuses the approved pilot's shots for S1–S2.
+which reuses the approved pilot's shots for S1–S2. Rendered videos and voice-only mixes are not stored in git (Jon, 30 Oct); rebuild with `build_pilot.py` / `build_video.py`, or ask for them to be sent.
 
 - **Duration:** 327.9s (5:28) at 1920×1080, 24 fps. The script's estimate was 6½–7 minutes; Ren's natural pace is quicker.
 - **Narration:** -16.3 LUFS integrated, true peak -1.0 dBTP. All 97 lines are in Ren's cloned voice (Qwen3-TTS 1.7B Base, run locally), checked by speech-to-text (`voice/voice_check.json`).

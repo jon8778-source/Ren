@@ -1,2 +1,8 @@
 renders/
 __pycache__/
+# Rendered videos and their mixed voice tracks are not stored in git (rebuild with build_video.py)
+*.mp4
+*.mov
+*.webm
+final/*_voice.wav
+pilot/*_voice.wav
