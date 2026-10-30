@@ -66,3 +66,5 @@ verification remains a review item. No YouTube upload or merge into main.
 
 Generated MP4 remains outside Git; owner-authorized temporary HTTPS download
 verified by downloading the full file and matching its SHA-256.
+
+Short source checkpoint remotely verified: [ca53b64](https://github.com/jon8778-source/Ren/commit/ca53b6465de701035b4fe733a584881231144ef8).
