@@ -1,0 +1,86 @@
+{
+  "reused": [
+    "Approved v3 office/reference",
+    "Native 1280\u00d7720 nod_yes animation",
+    "Fredoka / navy / sage / cream typography and palette",
+    "Actual approved v3 rendering/matte methods"
+  ],
+  "generated": [
+    "One reference-based seated Ren office pose (pending prototype approval)",
+    "Eight code-generated reusable SVG interface assets",
+    "Original sample-free lo-fi and UI effects",
+    "New locally generated US narration"
+  ],
+  "assets": [
+    {
+      "file": "assets/ren-approved-reference.png",
+      "sha256": "de305611b5964226191998c3e961dab90c59f1f85afc831d603f276ec7432459",
+      "status": "Extracted native approved Ren source frame, not new artwork"
+    },
+    {
+      "file": "assets/ren-gesture-reference.png",
+      "sha256": "6008d587eb3bdbed02778bbc8423c9cab214589edf02c3568dc59a9be6bc6b52",
+      "status": "Extracted native approved Ren source frame, not new artwork"
+    },
+    {
+      "file": "assets/ren-seated-office.png",
+      "sha256": "9c3e6391f2e1082b56f76c4c93d4d297ca318900bb2c12611303500eaf4514d5",
+      "status": "New reference-based seated pose; pending owner prototype approval"
+    },
+    {
+      "file": "assets/ui/comparison.svg",
+      "sha256": "24a5adfeaa4bfe2d75826cd5c2cd369c4c0755ffc92d677ef78c12697a8c4906",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/disclaimer.svg",
+      "sha256": "91f2e5bf3d070f9a69add59e3ebaf5d9f9c487beddaf08ca08ee227168851f37",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/email.svg",
+      "sha256": "d746fa2b3d2205e47707c927dbf9755669bf9070785f710c2bd0a85f485569bc",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/question-1.svg",
+      "sha256": "9151ef5548a13e263412b66dbbc733f0a3724e6033d93cd8d10842bbba027245",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/question-2.svg",
+      "sha256": "6362fa6743d116b0370449b912fc8311d069b650ffc29f77d382a2206cf8078a",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/question-3.svg",
+      "sha256": "85a8dee8bf17affd8cdfe357675813c82a6fc81f59986dcb36ea2032485e2d32",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/stopwatch.svg",
+      "sha256": "788f666c9861e445c9b604dff18ad96c12b8aabd06cbb58a20ea25aaafad521b",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "assets/ui/tuesday.svg",
+      "sha256": "726b082b82ae19114ed11ab48e807596979ea9642aacf8d68655e83e4b256e53",
+      "status": "New reusable episode asset"
+    },
+    {
+      "file": "project/prototypes/coffee-minute-v3/assets/office.png",
+      "sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36",
+      "status": "Reused approved source, unchanged"
+    },
+    {
+      "file": "assets/ren_library/ren_nod_yes.mp4",
+      "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
+      "status": "Reused approved source, unchanged"
+    },
+    {
+      "file": "project/remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "sha256": "7046069756572f2d090fd5ac943b24d1958f2fbb259cd6b99872758d24dbe369",
+      "status": "Reused approved source, unchanged"
+    }
+  ]
+}

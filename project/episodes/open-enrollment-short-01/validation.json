@@ -1,0 +1,84 @@
+{
+  "file": "Ren_Short_01_Open_Enrollment_Prototype.mp4",
+  "sha256": "192f6732da0c563ee5272a2f43f87161dee2db2798d9bcc2792ff87e7aa38d67",
+  "bytes": 1190884,
+  "prototype_only": true,
+  "approval": "Explicit owner approval still required; no final production render exists",
+  "duration": 15.0,
+  "frames": 360,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "fatal_full_decode": "pass",
+  "blank_black_screening_frames": 360,
+  "scene_frame_coverage": [
+    {
+      "id": "email-click",
+      "start": 0,
+      "end": 2.8,
+      "start_frame": 0,
+      "end_frame": 68,
+      "frames": 68
+    },
+    {
+      "id": "three-questions",
+      "start": 2.8,
+      "end": 7.1,
+      "start_frame": 68,
+      "end_frame": 171,
+      "frames": 103
+    },
+    {
+      "id": "comparison",
+      "start": 7.1,
+      "end": 10.3,
+      "start_frame": 171,
+      "end_frame": 248,
+      "frames": 77
+    },
+    {
+      "id": "tuesday",
+      "start": 10.3,
+      "end": 15,
+      "start_frame": 248,
+      "end_frame": 360,
+      "frames": 112
+    }
+  ],
+  "audio_correlation": 0.9999873823776381,
+  "loudness_lufs": -16.34,
+  "true_peak_dbfs": -1.37,
+  "financial_calculation": "2670 - 690 = 1980",
+  "figures_illustrative": true,
+  "guaranteed_savings_claim": false,
+  "disclaimer": "Educational content only, not financial advice.",
+  "disclaimer_visible_seconds": 4.699999999999999,
+  "financial_and_disclaimer_encoded_pixels": "stable",
+  "narration_original_duration": 11.626666666666667,
+  "US_voice": "Kokoro-82M am_michael, en-us, native rate 1.0; intentional change from British Qwen",
+  "music": "Original procedural composition, no external samples",
+  "new_hf_generation_requests": 0,
+  "paid_compute": false,
+  "visual_review": {
+    "encoded_samples_inspected": 30,
+    "native_question_layout_inspected": 3.7,
+    "reference_gesture_frames_inspected": [
+      1.5,
+      2.5,
+      4.5,
+      5.5
+    ],
+    "findings": "Corrected native matte keeps white clothing; face/glasses/hair intact. Seated reference-based art remains pending owner review. Right-side cards and text are clear of Ren, hands and desk. Fixed comparison and exact end disclaimer are readable in inspected samples. All four scenes represented; no black frame or clipped critical element seen.",
+    "listening_and_full_playback": false
+  },
+  "listening_full_playback": false,
+  "physical_android_test": false,
+  "main_modified": false,
+  "youtube_publication": false
+}

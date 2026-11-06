@@ -1,0 +1,18 @@
+{
+  "base_branch": "codex/ren-approved-v3",
+  "base_commit": "c6bb363baf13666cce15ece777fde39190ffe8a7",
+  "feature_branch": "codex/open-enrollment-short-01",
+  "approved_sources": ["project/prototypes/coffee-minute-v3/render.py", "project/prototypes/coffee-minute-v3/artwork/manifest.json", "assets/ren_library/ren_library.json"],
+  "existing_office": "project/prototypes/coffee-minute-v3/assets/office.png",
+  "approved_reference": "assets/ren_library/ren_nod_yes.mp4, native 1280x720, 24 fps, 10.005 seconds",
+  "native_reference_frame_time": 2.5,
+  "missing_seated_asset": "No approved seated Ren/laptop animation in the v3 library. One reference-based seated office illustration created for prototype review; originals untouched.",
+  "wardrobe": "Retain actual v3 navy overshirt/white shirt; no redesign into a different sweater.",
+  "lip_sync": "No approved seated lip-sync rig. Closed-mouth narrator format retained; no random mouth motion.",
+  "voice": "Local Kokoro-82M q8 am_michael, en-us, speed=1.0. US voice explicitly requested for this Short; differs from prior British Qwen Ren voice.",
+  "music": "New original procedural lo-fi composition, no samples or external copyrighted music.",
+  "graphics": "Reusable code-drawn email, button, stopwatch, three question cards, comparison, end card, exact disclaimer.",
+  "physical_android_testing": "Unavailable here; remains owner-device review at prototype approval.",
+  "historical_coffee_reference_mp4": "Original owner MP4 not present on approved branch; approved artwork, renderer and historical validation are present and inspected.",
+  "publication": "Prototype only. Stop for explicit approval. No YouTube publication, merge or main changes; MP4 excluded from Git."
+}

@@ -1,0 +1,43 @@
+{
+  "title": "I Clicked \"Keep My Plan\" in 4 Seconds",
+  "prototype": true,
+  "approval_status": "Awaiting explicit owner approval; no final render authorized",
+  "frames": 360,
+  "fps": 24,
+  "duration": 15,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "scenes": [
+    {
+      "id": "email-click",
+      "start": 0,
+      "end": 2.8
+    },
+    {
+      "id": "three-questions",
+      "start": 2.8,
+      "end": 7.1
+    },
+    {
+      "id": "comparison",
+      "start": 7.1,
+      "end": 10.3
+    },
+    {
+      "id": "tuesday",
+      "start": 10.3,
+      "end": 15
+    }
+  ],
+  "calculations": {
+    "equation": "2670 - 690 = 1980",
+    "difference": 1980
+  },
+  "disclaimer": "Educational content only, not financial advice.",
+  "disclaimer_start": 10.3,
+  "voice": "am_michael / Kokoro US English, speed=1.0",
+  "voice_file": "audio/narration-original.wav",
+  "new_qwen_requests": 0
+}

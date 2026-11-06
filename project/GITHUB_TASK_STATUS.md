@@ -1,5 +1,34 @@
 # Ren GitHub task status
 
+## Open enrollment Short 01 — prototype approval pending, 6 November 2026
+
+Local feature branch `codex/open-enrollment-short-01`, based on approved v3
+commit `c6bb363baf13666cce15ece777fde39190ffe8a7`. Main/source branch unchanged.
+No source push, merge, GitHub MP4 upload or YouTube publication.
+
+Complete prototype: `episodes/open-enrollment-short-01/`, 15.00s, 1080×1920,
+24 fps H.264/AAC, 360 frames. Full original/adapted scripts, audit, reusable
+assets, voice original/settings/hashes, original music/SFX source, four-scene
+manifest, assumptions, QA and reproduction instructions saved. Selected local
+US am_michael voice intentionally differs from British Qwen Ren, as requested.
+Original source read measured 17.130667s; concise adaptation is 11.626667s at
+native rate, leaving time for the animated end card and disclaimer.
+
+Checks pass: fatal full decode, all-frame black/blank screening, continuous
+scene frames, fixed $2,670 − $690 = $1,980, disclaimer pixel stability, encoded
+audio correlation 0.999987, −16.34 LUFS / −1.37 dBTP. Thirty encoded samples and
+native question layout inspected. Exact disclaimer visible for final 4.7s.
+
+**STOP: await explicit owner prototype approval before final production.**
+New reference-based seated pose awaits visual approval. No approved seated
+lip-sync rig; seated pose is still, native approved nod provides end movement.
+Closed-mouth narration retained. Listening/full playback and physical Android
+testing are unverified; rough ASR is not a word certificate. See QA.md.
+
+Historical approved-branch record follows unchanged below.
+
+# Ren GitHub task status
+
 Saved GitHub checkpoint, not the Android app's live progress indicator.
 Last reviewed: 29 October 2026.
 

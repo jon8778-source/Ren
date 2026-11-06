@@ -1,0 +1,11 @@
+{
+  "original_script_sha256": "cac1fe1ddc61b879c82b66647c6b159d7509bc8dc23cbc9e13d3805ef37ba482",
+  "original_words": 42,
+  "original_natural_duration": 17.130666666666666,
+  "adapted_words": 29,
+  "adapted_natural_duration": 11.626666666666667,
+  "reason_for_adaptation": "Full exact source read exceeds 15-second target; adapted script preserves all three questions, four seconds, forty minutes, almost two thousand dollars and Tuesday.",
+  "speed": 1.0,
+  "engine": "Same local US am_michael voice; no HF or paid request",
+  "additional_full_source_audio": "build/full-source-duration-check.wav, not used in prototype"
+}

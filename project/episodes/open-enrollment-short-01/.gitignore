@@ -1,0 +1,6 @@
+build/
+deliverables/
+__pycache__/
+hosting.json
+audio/*.wav
+!audio/narration-original.wav

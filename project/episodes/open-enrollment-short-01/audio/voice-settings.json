@@ -1,0 +1,13 @@
+{
+  "engine": "Kokoro-82M ONNX q8, local CPU",
+  "voice": "am_michael",
+  "language": "en-us",
+  "speed": 1.0,
+  "model_sha256": "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478",
+  "voice_sha256": "1d1f21dd8da39c30705cd4c75d039d265e9bc4a2a93ed09bc9e1b1225eb95ba1",
+  "script": "I clicked keep my plan in four seconds. Then: worst-year cost? What did I use? Where does the difference go? Forty minutes. Almost two thousand dollars. Full story Tuesday.",
+  "script_sha256": "d18258bed621b3c32167f467af3a6aba20d4f9e841175da5e42e750dd5c21176",
+  "channel_voice_change": "US American male; deliberately differs from British Qwen Ren cloning per latest user request",
+  "paid_compute": false,
+  "huggingface_generation_requests": 0
+}
