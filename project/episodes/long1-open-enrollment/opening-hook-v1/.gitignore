@@ -1,0 +1,7 @@
+audio/
+build/
+processed/
+deliverables/
+__pycache__/
+.workflow.lock
+hosting.json

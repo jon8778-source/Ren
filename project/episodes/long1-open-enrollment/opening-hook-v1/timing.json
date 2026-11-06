@@ -1,0 +1,312 @@
+{
+  "hook_audio_seconds": 18.376875,
+  "hook_video_seconds": 18.375,
+  "hook_frames": 441,
+  "words": [
+    {
+      "word": "for",
+      "start": 0.08,
+      "end": 0.27
+    },
+    {
+      "word": "four",
+      "start": 0.27,
+      "end": 0.57
+    },
+    {
+      "word": "years",
+      "start": 0.57,
+      "end": 1.13
+    },
+    {
+      "word": "i",
+      "start": 1.13,
+      "end": 1.27
+    },
+    {
+      "word": "renewed",
+      "start": 1.27,
+      "end": 1.69
+    },
+    {
+      "word": "the",
+      "start": 1.69,
+      "end": 1.75
+    },
+    {
+      "word": "same",
+      "start": 1.75,
+      "end": 2.09
+    },
+    {
+      "word": "health",
+      "start": 2.09,
+      "end": 2.35
+    },
+    {
+      "word": "plan",
+      "start": 2.35,
+      "end": 2.74
+    },
+    {
+      "word": "one",
+      "start": 3.06,
+      "end": 3.26
+    },
+    {
+      "word": "click",
+      "start": 3.26,
+      "end": 3.66
+    },
+    {
+      "word": "same",
+      "start": 4.01,
+      "end": 4.34
+    },
+    {
+      "word": "plan",
+      "start": 4.34,
+      "end": 4.75
+    },
+    {
+      "word": "done",
+      "start": 5.04,
+      "end": 5.45
+    },
+    {
+      "word": "then",
+      "start": 5.95,
+      "end": 6.12
+    },
+    {
+      "word": "i",
+      "start": 6.12,
+      "end": 6.21
+    },
+    {
+      "word": "compared",
+      "start": 6.21,
+      "end": 6.63
+    },
+    {
+      "word": "my",
+      "start": 6.63,
+      "end": 6.81
+    },
+    {
+      "word": "options",
+      "start": 6.81,
+      "end": 7.36
+    },
+    {
+      "word": "one",
+      "start": 7.79,
+      "end": 8.09
+    },
+    {
+      "word": "plan",
+      "start": 8.09,
+      "end": 8.54
+    },
+    {
+      "word": "two",
+      "start": 8.75,
+      "end": 8.93
+    },
+    {
+      "word": "thousand",
+      "start": 8.93,
+      "end": 9.35
+    },
+    {
+      "word": "five",
+      "start": 9.35,
+      "end": 9.61
+    },
+    {
+      "word": "hundred",
+      "start": 9.61,
+      "end": 9.91
+    },
+    {
+      "word": "and",
+      "start": 9.91,
+      "end": 10.03
+    },
+    {
+      "word": "twenty",
+      "start": 10.03,
+      "end": 10.29
+    },
+    {
+      "word": "dollars",
+      "start": 10.29,
+      "end": 10.65
+    },
+    {
+      "word": "a",
+      "start": 10.65,
+      "end": 10.69
+    },
+    {
+      "word": "year",
+      "start": 10.69,
+      "end": 11.01
+    },
+    {
+      "word": "in",
+      "start": 11.01,
+      "end": 11.11
+    },
+    {
+      "word": "premiums",
+      "start": 11.11,
+      "end": 11.69
+    },
+    {
+      "word": "another",
+      "start": 11.69,
+      "end": 12.18
+    },
+    {
+      "word": "just",
+      "start": 12.49,
+      "end": 12.76
+    },
+    {
+      "word": "eight",
+      "start": 12.76,
+      "end": 12.96
+    },
+    {
+      "word": "hundred",
+      "start": 12.96,
+      "end": 13.21
+    },
+    {
+      "word": "and",
+      "start": 13.21,
+      "end": 13.32
+    },
+    {
+      "word": "forty",
+      "start": 13.32,
+      "end": 13.77
+    },
+    {
+      "word": "but",
+      "start": 14.13,
+      "end": 14.27
+    },
+    {
+      "word": "here's",
+      "start": 14.27,
+      "end": 14.51
+    },
+    {
+      "word": "the",
+      "start": 14.51,
+      "end": 14.59
+    },
+    {
+      "word": "catch",
+      "start": 14.59,
+      "end": 15.09
+    },
+    {
+      "word": "cheaper",
+      "start": 15.4,
+      "end": 15.75
+    },
+    {
+      "word": "premiums",
+      "start": 15.75,
+      "end": 16.24
+    },
+    {
+      "word": "didn't",
+      "start": 16.24,
+      "end": 16.52
+    },
+    {
+      "word": "automatically",
+      "start": 16.52,
+      "end": 17.17
+    },
+    {
+      "word": "mean",
+      "start": 17.17,
+      "end": 17.38
+    },
+    {
+      "word": "a",
+      "start": 17.38,
+      "end": 17.43
+    },
+    {
+      "word": "better",
+      "start": 17.43,
+      "end": 17.7
+    },
+    {
+      "word": "deal",
+      "start": 17.7,
+      "end": 18.12
+    }
+  ],
+  "shots": [
+    {
+      "id": "hook_01",
+      "motif": "auto",
+      "start_frame": 0,
+      "frames": 72,
+      "end_frame": 72,
+      "clip": "thinking",
+      "phase_start": 0.0,
+      "phase_end": 5.958333333333333
+    },
+    {
+      "id": "hook_02",
+      "motif": "auto",
+      "start_frame": 72,
+      "frames": 71,
+      "end_frame": 143,
+      "clip": "nod_yes",
+      "phase_start": 0.0,
+      "phase_end": 5.958333333333333
+    },
+    {
+      "id": "hook_03",
+      "motif": "prices",
+      "start_frame": 143,
+      "frames": 98,
+      "end_frame": 241,
+      "clip": "thinking",
+      "phase_start": 5.958333333333333,
+      "phase_end": 14.125
+    },
+    {
+      "id": "hook_04",
+      "motif": "prices",
+      "start_frame": 241,
+      "frames": 98,
+      "end_frame": 339,
+      "clip": "nod_yes",
+      "phase_start": 5.958333333333333,
+      "phase_end": 14.125
+    },
+    {
+      "id": "hook_05",
+      "motif": "twist",
+      "start_frame": 339,
+      "frames": 102,
+      "end_frame": 441,
+      "clip": "thinking",
+      "phase_start": 14.125,
+      "phase_end": 18.375
+    }
+  ],
+  "source_cut_seconds": 20.666666666666668,
+  "preview_source_tail_frames": 130,
+  "forced_alignment": "Local analysis only; not independent transcription. Decoder context does not enter exported audio."
+}

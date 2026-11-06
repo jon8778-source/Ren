@@ -1,0 +1,8 @@
+{
+  "approved": false,
+  "stage": "Opening preview only; stop after delivery",
+  "required": "Explicit approval of this hook preview before assembling Ren_Health_Plan_Revised_Opening.mp4",
+  "preview_file": "Ren_Health_Plan_Opening_Preview.mp4",
+  "preview_sha256": "cbbb44421b9bcf16185060a5b8bf68eb2a0ada514fd62a1f19b1d390d1b0e1a8",
+  "preview_seconds": 23.793
+}

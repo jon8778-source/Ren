@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "title": "Ren health-plan opening hook \u2014 preview only",
+  "created_at": "2026-11-06T19:13:16.894437+00:00",
+  "script_sha256": "067025f9d609a78df6f266e51dc74801f973729fc9431ce5b4fd5fc381279e9d",
+  "settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "target_duration_s": [
+    15,
+    20
+  ],
+  "segments": [
+    {
+      "id": "hook001",
+      "title": "Replacement opening only",
+      "text": "For four years, I renewed the same health plan. One click. Same plan. Done. Then I compared my options. One plan: two thousand five hundred and twenty dollars a year in premiums. Another: just eight hundred and forty. But here's the catch. Cheaper premiums didn't automatically mean a better deal.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "59f649280d679b7acb0e7c0503eb89f1a34f40fc5752e2f0c5f613be866d4a19",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T19:13:24.432588+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T19:13:21.125450+00:00",
+            "remaining_gpu_seconds": 1932.5576520000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.883000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "80438484c55f4ed1a2ab5ee536796897",
+          "session_hash": "d91bfe1c-12d8-4bba-8549-a403469f453d",
+          "elapsed_seconds": 27.683958463996532,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T19:13:53.198447+00:00",
+            "remaining_gpu_seconds": 1908.8879550000001,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.008000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 23.669697000000042
+        }
+      ],
+      "file": "audio/hook001-59f649280d67-a1.wav",
+      "sha256": "246e6fdae8385dab1112bf84e48e339f8ff12cef61dcd72a83916761a35b7217",
+      "validation": {
+        "duration_s": 18.376875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 50,
+        "duration_bounds_s": [
+          11.11111111111111,
+          30.77777777777778
+        ],
+        "active_fraction": 0.7616974972796517,
+        "max_internal_silence_s": 0.52,
+        "trim_start_s": 0,
+        "trim_end_s": 18.376875,
+        "processed_duration_s": 18.376875,
+        "median_pitch_hz": 117.93682990437554,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
+    }
+  ],
+  "quota_events": [
+    {
+      "segment": "hook001",
+      "phase": "before",
+      "at": "2026-11-06T19:13:21.125450+00:00",
+      "remaining_gpu_seconds": 1932.5576520000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.883000+00:00"
+    },
+    {
+      "segment": "hook001",
+      "phase": "after",
+      "at": "2026-11-06T19:13:53.198447+00:00",
+      "remaining_gpu_seconds": 1908.8879550000001,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.008000+00:00"
+    }
+  ],
+  "hardware_policy": "Free ZeroGPU only; no paid fallback or automatic retry",
+  "free_reserve_gpu_seconds": 120,
+  "overall_status": "narration_generated_review_pending",
+  "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
+  "scope": "One replacement opening and 20\u201325-second preview only. Final full-video assembly awaits explicit owner approval.",
+  "quota": {
+    "at": "2026-11-06T19:13:53.198447+00:00",
+    "remaining_gpu_seconds": 1908.8879550000001,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:06.008000+00:00"
+  },
+  "updated_at": "2026-11-06T19:13:53.199826+00:00"
+}

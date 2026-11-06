@@ -1,0 +1,14 @@
+{
+  "requested_filename": "ren_long_01_auto_renewed_my_health_plan.mp4",
+  "actual_path": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/deliverables/Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4",
+  "sha256": "dd6462a05218fd2528adeda983b7bf99bf46fc6e2c748a572f3d5df1a24e4877",
+  "original_seconds": 329.0,
+  "original_frame_count": 7896,
+  "cut_frame": 496,
+  "cut_seconds": 20.666666666666668,
+  "cut_audio_sample_48k": 992000,
+  "original_resume_words": "At twenty-five, I leased a shiny car\u2026",
+  "preview_source_end_frame": 626,
+  "preview_source_end_seconds": 26.083333333333332,
+  "note": "Cut on an existing IDR. Original I\u2019m Ren is within replaced opening. Source MP4 remains unmodified; unchanged remainder begins at frame496. No full assembly before approval."
+}

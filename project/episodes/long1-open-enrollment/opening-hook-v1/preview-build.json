@@ -1,0 +1,18 @@
+{
+  "file": "Ren_Health_Plan_Opening_Preview.mp4",
+  "sha256": "cbbb44421b9bcf16185060a5b8bf68eb2a0ada514fd62a1f19b1d390d1b0e1a8",
+  "hook_frames": 441,
+  "original_tail_frames": 130,
+  "preview_frames": 571,
+  "source_cut_seconds": 20.666666666666668,
+  "source_audio_samples_used": [
+    992000,
+    1252000
+  ],
+  "source_tail_audio_before_preview_encode": "Exact decoded source samples; no gain, tempo, trimming within selection or substitution",
+  "preview_audio_encoding": "Only this short review preview AAC encoded; original source untouched. Final splice/audio preservation will be verified after approval.",
+  "preview_video_encoding": "New hook rendered only. Original tail video stream-copied; no unchanged source scene regenerated.",
+  "full_video_assembled": false,
+  "gate": "Await explicit owner approval of this preview",
+  "original_source_sha256": "dd6462a05218fd2528adeda983b7bf99bf46fc6e2c748a572f3d5df1a24e4877"
+}

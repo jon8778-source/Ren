@@ -1,3 +1,26 @@
+# Current task — opening-hook approval preview, 6 November 2026
+
+Branch codex/long1-opening-hook, based on local completed-film checkpoint983888a.
+New directory episodes/long1-open-enrollment/opening-hook-v1/.23.793s preview,
+18.376875s new voice,1280×720/24fps/H.264/AAC,571 frames. One Qwen request only,
+23.669697GPU-seconds,27.683958s elapsed; no retries/paid use/art generation.
+
+Original source locked dd6462a05218fd2528adeda983b7bf99bf46fc6e2c748a572f3d5df1a24e4877,
+unchanged. Replace original0–20.666667s; resume original at frame496,“At twenty-five…”.
+Preview includes130 source video frames copied byte-identically (packet hashes)
+and decoded pixel-identically. Preview alone AAC encoded from existing source-tail
+PCM + new hook, with no source-tail gain/tempo change. No remaining scene render.
+All571 frames/fatal decode, prices, source hash, audio/transition checks pass;
+contact/native visual samples inspected. No listening/physical Android claim.
+
+**STOP for explicit owner approval. Full revised MP4 NOT assembled.**
+After approval only, assemble Ren_Health_Plan_Revised_Opening.mp4, preserving
+source video from496 onward and reporting any audio-boundary encoding needed.
+No merge, main/approved branch changes, GitHub media upload, push or publication.
+Historical completed-film record below remains the unchanged source baseline.
+
+---
+
 # Current task — Long 1 complete review export, 6 November 2026
 
 Branch `codex/long1-open-enrollment-pilot`; local source checkpoint, no remote push.
