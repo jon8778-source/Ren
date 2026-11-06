@@ -1,29 +1,21 @@
 {
-  "complete_segments": 17,
+  "complete_segments": 20,
   "total_segments": 20,
-  "remaining_segments": [
-    "s005",
-    "s014",
-    "s017"
-  ],
-  "source_gated": [
-    "s005",
-    "s014",
-    "s017"
-  ],
-  "original_seconds_saved": 303.388125,
-  "new_generation_calls": 14,
-  "new_allowance_gpu_seconds": 331.23740399999974,
-  "new_request_elapsed_seconds": 382.13143182099884,
+  "remaining_segments": [],
+  "source_gated": [],
+  "original_seconds_saved": 330.67875,
+  "new_generation_calls": 17,
+  "new_allowance_gpu_seconds": 370.13634499999966,
+  "new_request_elapsed_seconds": 430.7990386750098,
   "quota_snapshot": {
-    "at": "2026-11-06T14:13:54.222410+00:00",
-    "remaining_gpu_seconds": 1971.456593,
+    "at": "2026-11-06T15:23:47.762659+00:00",
+    "remaining_gpu_seconds": 1932.5576520000002,
     "base_gpu_seconds": 2400,
     "overquota_used": 0,
-    "reset_at": "2026-11-07T11:23:06.013000+00:00"
+    "reset_at": "2026-11-07T11:23:05.527000+00:00"
   },
   "resume_command": "bash project/episodes/long1-open-enrollment/full/resume.sh",
-  "full_video_finished": false,
+  "full_video_finished": true,
   "listening_review": "Pilot approved; new segments require review",
   "source_check_file": "source-checks.json"
 }

@@ -28,7 +28,7 @@ def office(lines,clip,n):
  return im
 MOTIFS={
  'annual':('ren','Before the first doctor’s bill'),
- 'forecast':('graphic','Employer costs, not your premium'),
+ 'own_options':('ren','Compare the plans available to you'),
  'group':('graphic','Three opinions. Zero calculations.'),
  'neighbor':('graphic','Next door: three better questions'),
  'questions':('graphic','Start with three questions'),
@@ -72,6 +72,7 @@ def picture(motif,n=36,frames=84,clip='thinking',progress=None):
  q=(n/max(1,frames-1)) if progress is None else progress;kind,title=MOTIFS[motif]
  if kind=='ren':
   lines={
+   'own_options':[((710,100),'Your employer’s notice',36),((710,265),'Compare your actual options',34)],
    'annual':[((710,100),'Before the first doctor’s bill',35),((770,265),DOLLAR(C['ppo_annual_premium'])+' / year',58)],
    'illustrative':[((710,100),'Example numbers',42),((710,265),'Check your own plan',34)],
    'cashflow':[((710,100),'Higher deductible',40),((710,275),'Enough cash when care happens?',34)],
@@ -86,9 +87,7 @@ def picture(motif,n=36,frames=84,clip='thinking',progress=None):
    'close':[((710,100),'Thanks for watching',40),((710,265),'Make money matter',38)]}[motif]
   return office(lines,clip,min(n,131))
  im=Image.new('RGB',(W,H),CREAM);d=ImageDraw.Draw(im);heading(d,title)
- if motif=='forecast':
-  center(d,245,'2027 employer-cost forecast',42,GREEN);center(d,330,'Source check required',52);center(d,510,'Never label this as everyone’s premium increase',29)
- elif motif=='group':
+ if motif=='group':
   im=Image.new('RGB',(W,H),INK);d=ImageDraw.Draw(im);center(d,45,title,44,CREAM)
   for j,(name,msg) in enumerate([('Alex','“Pick the best.”'),('Danny','“Pick the cheapest.”'),('Uncle Gary','“I never look.”')]):
    y=150+j*150

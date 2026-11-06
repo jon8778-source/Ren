@@ -31,8 +31,8 @@
     "id": "s005",
     "title": "Scene 3 continuation",
     "scene": 3,
-    "text": "And the pressure is wider than my office: Marsh projects that employers' average health-benefit costs per worker will rise eight point two percent in 2027. That's an employer-cost forecast, not an eight-point-two-percent increase to every person's premium.",
-    "source_gate": "employer_forecast"
+    "text": "That was my company's notice, not a forecast for everyone else's premium. I needed to compare the plans actually available to me.",
+    "source_gate": null
   },
   {
     "id": "s006",
@@ -94,8 +94,8 @@
     "id": "s014",
     "title": "Scene 6 continuation",
     "scene": 6,
-    "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. For 2027, the self-only contribution limit is four thousand five hundred dollars, including employer money.",
-    "source_gate": "hsa_rules"
+    "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. Check the current IRS contribution limit, and remember that employer money counts toward it.",
+    "source_gate": null
   },
   {
     "id": "s015",
@@ -115,8 +115,8 @@
     "id": "s017",
     "title": "Scene 7 continuation",
     "scene": 7,
-    "text": "For 2027, HealthCare.gov shows a December fifteenth deadline for January-first coverage and January fifteenth as the final open-enrollment date. State rules can differ.",
-    "source_gate": "marketplace_dates"
+    "text": "Check HealthCare.gov and your state's Marketplace for this year's enrollment deadline and when coverage starts. Don't assume every exchange uses the same dates.",
+    "source_gate": null
   },
   {
     "id": "s018",

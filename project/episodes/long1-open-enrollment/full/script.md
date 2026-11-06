@@ -11,7 +11,7 @@ Then this year's email added a sentence: “Your premium contribution will incre
 That's two thousand five hundred and twenty dollars a year, before a single doctor's bill.
 
 ## s005 — Scene 3 continuation
-And the pressure is wider than my office: Marsh projects that employers' average health-benefit costs per worker will rise eight point two percent in 2027. That's an employer-cost forecast, not an eight-point-two-percent increase to every person's premium.
+That was my company's notice, not a forecast for everyone else's premium. I needed to compare the plans actually available to me.
 
 ## s006 — Scene 3 continuation
 I asked the group chat. Alex said, “Pick the best.” Danny said, “Pick the cheapest.” Uncle Gary said, “I never look,” and sent a picture of his boat. Three opinions. Zero calculations. So I went next door.
@@ -38,7 +38,7 @@ The third question was the one I hadn't considered: where does the difference go
 Add the employer's seven hundred and fifty, and that's two thousand four hundred and thirty dollars contributed before spending or growth. If I used six hundred of the HSA to pay medical bills, eighteen hundred and thirty would remain. If I paid those bills from other cash, the full two thousand four hundred and thirty could stay invested or saved.
 
 ## s014 — Scene 6 continuation
-An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. For 2027, the self-only contribution limit is four thousand five hundred dollars, including employer money.
+An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. Check the current IRS contribution limit, and remember that employer money counts toward it.
 
 ## s015 — Scene 6 continuation
 State treatment and eligibility rules matter. The point wasn't to make medical costs disappear. It was to give the money a job.
@@ -47,7 +47,7 @@ State treatment and eligibility rules matter. The point wasn't to make medical c
 And this is where the story needs a warning label. The high-deductible plan doesn't always win. If you're expecting a baby, planning surgery, seeing specialists regularly or taking expensive medication, the PPO could be much better. Check both networks, your drug coverage, the exact deductible and the out-of-pocket limits. Remember that high expenses can arrive before your HSA has much money in it. If you shop through the health-insurance Marketplace rather than work, that's a separate enrollment process.
 
 ## s017 — Scene 7 continuation
-For 2027, HealthCare.gov shows a December fifteenth deadline for January-first coverage and January fifteenth as the final open-enrollment date. State rules can differ.
+Check HealthCare.gov and your state's Marketplace for this year's enrollment deadline and when coverage starts. Don't assume every exchange uses the same dates.
 
 ## s018 — Scene 7 continuation
 Your employer's deadline might be much sooner.

@@ -1,9 +1,7 @@
-# Proposed replacements — awaiting Jon's answer
+# Replacements approved and applied — 6 November 2026
 
-These are concrete alternatives only. They have NOT replaced the approved
-candidate and have NOT been generated. The supplied exact passages remain in
-segments.json, source-gated. An asynchronous question asks whether to use these
-alternatives or retain the existing wording and wait for primary-site access.
+Jon approved these exact replacements: “Yes ok with that.” They are applied in
+script.md, segments.json and the generated final narration. See wording-approval.json.
 
 ## s005 — replace unverified 8.2% forecast
 

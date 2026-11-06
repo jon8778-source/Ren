@@ -2,7 +2,7 @@
   "schema": 1,
   "title": "I Auto-Renewed My Health Plan for 4 Years. Then I Did the Math. \u2014 full episode",
   "created_at": "2026-11-06T12:11:15.871758+00:00",
-  "script_sha256": "0abbe1a4e22687dbd4d18864dbbd51d5eda9fc0b3286b6e8d2dc1259088fd7ef",
+  "script_sha256": "9493fecaab2854f0894ce961504d1cbb173be0db6491cb3ba559ab9ff95808b3",
   "settings": {
     "space": "Qwen/Qwen3-TTS",
     "endpoint": "/generate_voice_clone",
@@ -376,8 +376,8 @@
       "id": "s005",
       "title": "Scene 3 continuation",
       "scene": 3,
-      "text": "And the pressure is wider than my office: Marsh projects that employers' average health-benefit costs per worker will rise eight point two percent in 2027. That's an employer-cost forecast, not an eight-point-two-percent increase to every person's premium.",
-      "source_gate": "employer_forecast",
+      "text": "That was my company's notice, not a forecast for everyone else's premium. I needed to compare the plans actually available to me.",
+      "source_gate": null,
       "settings": {
         "space": "Qwen/Qwen3-TTS",
         "endpoint": "/generate_voice_clone",
@@ -391,9 +391,82 @@
         "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
-      "fingerprint": "6cc96bcd2a40244ecf978132c233c7ccd64c5adce4f271938b6d185104a47f54",
-      "status": "source_review",
-      "attempts": []
+      "fingerprint": "5c2d91031cd87555c9e565e400df141ce9e4e4b55609e18575c59567bb516bef",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T15:22:52.708373+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T15:22:49.349344+00:00",
+            "remaining_gpu_seconds": 1971.456593,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.146000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "1c09e5f7df4c4b279f9ddbf46f7b2c6d",
+          "session_hash": "ce22a349-4b29-4cce-9ac5-44127b6d3259",
+          "elapsed_seconds": 17.178827521005587,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T15:23:11.430301+00:00",
+            "remaining_gpu_seconds": 1958.6066110000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.194000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 12.849981999999954
+        }
+      ],
+      "history": [
+        {
+          "text": "And the pressure is wider than my office: Marsh projects that employers' average health-benefit costs per worker will rise eight point two percent in 2027. That's an employer-cost forecast, not an eight-point-two-percent increase to every person's premium.",
+          "fingerprint": "6cc96bcd2a40244ecf978132c233c7ccd64c5adce4f271938b6d185104a47f54",
+          "source_gate": "employer_forecast",
+          "status": "replaced_with_owner_approval_before_generation"
+        }
+      ],
+      "editorial_approval": "Jon: Yes ok with that, 6 November 2026",
+      "file": "audio/s005-5c2d91031cd8-a1.wav",
+      "sha256": "b67a763fbcbfb63b1318e534e1c7984b4de09068742c66e0d56577bd2420d622",
+      "validation": {
+        "duration_s": 7.416875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 22,
+        "duration_bounds_s": [
+          4.888888888888889,
+          15.222222222222221
+        ],
+        "active_fraction": 0.8086253369272237,
+        "max_internal_silence_s": 0.5,
+        "trim_start_s": 0.36,
+        "trim_end_s": 7.416875,
+        "processed_duration_s": 7.056875,
+        "median_pitch_hz": 131.8840579710145,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -1.590971770092798,
+        "boundary_voice_review_flag": false
+      }
     },
     {
       "id": "s006",
@@ -478,7 +551,7 @@
         "voice_identity": "same cloning settings; listening review required",
         "reference_pitch_hz": 124.35567010309279,
         "pitch_review_flag": false,
-        "boundary_pitch_shift_semitones": null,
+        "boundary_pitch_shift_semitones": 0.6769116042679504,
         "boundary_voice_review_flag": false
       }
     },
@@ -1095,8 +1168,8 @@
       "id": "s014",
       "title": "Scene 6 continuation",
       "scene": 6,
-      "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. For 2027, the self-only contribution limit is four thousand five hundred dollars, including employer money.",
-      "source_gate": "hsa_rules",
+      "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. Check the current IRS contribution limit, and remember that employer money counts toward it.",
+      "source_gate": null,
       "settings": {
         "space": "Qwen/Qwen3-TTS",
         "endpoint": "/generate_voice_clone",
@@ -1110,9 +1183,82 @@
         "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
-      "fingerprint": "3aaa66c379f16873dc6de4295aec2a37991eb08fd34c4db1bfa0b48a38fff92f",
-      "status": "source_review",
-      "attempts": []
+      "fingerprint": "1cf9ea5fa655a7b83f605e311a53404a3afdf8ce4de74c452a13022b5413e2d1",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T15:23:12.547854+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T15:23:12.547830+00:00",
+            "remaining_gpu_seconds": 1958.6066110000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.329000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "ce671e684d2c4db6a92355bf995607f8",
+          "session_hash": "ce22a349-4b29-4cce-9ac5-44127b6d3259",
+          "elapsed_seconds": 16.300711535004666,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T15:23:29.986426+00:00",
+            "remaining_gpu_seconds": 1945.2220180000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.787000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 13.384592999999995
+        }
+      ],
+      "history": [
+        {
+          "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. For 2027, the self-only contribution limit is four thousand five hundred dollars, including employer money.",
+          "fingerprint": "3aaa66c379f16873dc6de4295aec2a37991eb08fd34c4db1bfa0b48a38fff92f",
+          "source_gate": "hsa_rules",
+          "status": "replaced_with_owner_approval_before_generation"
+        }
+      ],
+      "editorial_approval": "Jon: Yes ok with that, 6 November 2026",
+      "file": "audio/s014-1cf9ea5fa655-a1.wav",
+      "sha256": "3f23d2be5f181a78f0740d3293fd558b84263f71e573b4976089a2c6516e08d2",
+      "validation": {
+        "duration_s": 10.456875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 31,
+        "duration_bounds_s": [
+          6.888888888888889,
+          20.22222222222222
+        ],
+        "active_fraction": 0.8814531548757171,
+        "max_internal_silence_s": 0.46,
+        "trim_start_s": 0,
+        "trim_end_s": 10.456875,
+        "processed_duration_s": 10.456875,
+        "median_pitch_hz": 113.75429611159782,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -2.416128265220317,
+        "boundary_voice_review_flag": false
+      }
     },
     {
       "id": "s015",
@@ -1197,7 +1343,7 @@
         "voice_identity": "same cloning settings; listening review required",
         "reference_pitch_hz": 124.35567010309279,
         "pitch_review_flag": false,
-        "boundary_pitch_shift_semitones": null,
+        "boundary_pitch_shift_semitones": 3.290189820289113,
         "boundary_voice_review_flag": false
       }
     },
@@ -1292,8 +1438,8 @@
       "id": "s017",
       "title": "Scene 7 continuation",
       "scene": 7,
-      "text": "For 2027, HealthCare.gov shows a December fifteenth deadline for January-first coverage and January fifteenth as the final open-enrollment date. State rules can differ.",
-      "source_gate": "marketplace_dates",
+      "text": "Check HealthCare.gov and your state's Marketplace for this year's enrollment deadline and when coverage starts. Don't assume every exchange uses the same dates.",
+      "source_gate": null,
       "settings": {
         "space": "Qwen/Qwen3-TTS",
         "endpoint": "/generate_voice_clone",
@@ -1307,9 +1453,82 @@
         "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
         "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
       },
-      "fingerprint": "b3d188c6d0b419c33db71b89287063a91ca5b9b134aeb6735d7d5d1f42b4dc14",
-      "status": "source_review",
-      "attempts": []
+      "fingerprint": "0dd70795c101aac53413c2384862e3d5de576060d75600acc1c30e335fb963dc",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T15:23:31.244589+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T15:23:31.244566+00:00",
+            "remaining_gpu_seconds": 1945.2220180000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.004000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "5f9a179247cc480dac5a783f3147a7d2",
+          "session_hash": "ce22a349-4b29-4cce-9ac5-44127b6d3259",
+          "elapsed_seconds": 15.188067798000702,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T15:23:47.762659+00:00",
+            "remaining_gpu_seconds": 1932.5576520000002,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.527000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 12.664365999999973
+        }
+      ],
+      "history": [
+        {
+          "text": "For 2027, HealthCare.gov shows a December fifteenth deadline for January-first coverage and January fifteenth as the final open-enrollment date. State rules can differ.",
+          "fingerprint": "b3d188c6d0b419c33db71b89287063a91ca5b9b134aeb6735d7d5d1f42b4dc14",
+          "source_gate": "marketplace_dates",
+          "status": "replaced_with_owner_approval_before_generation"
+        }
+      ],
+      "editorial_approval": "Jon: Yes ok with that, 6 November 2026",
+      "file": "audio/s017-0dd70795c101-a1.wav",
+      "sha256": "2d36929aec7906400fba04307873c254f65f267593f1bddf949ac05f4040c900",
+      "validation": {
+        "duration_s": 9.416875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 24,
+        "duration_bounds_s": [
+          5.333333333333333,
+          16.333333333333332
+        ],
+        "active_fraction": 0.8259023354564756,
+        "max_internal_silence_s": 0.82,
+        "trim_start_s": 0,
+        "trim_end_s": 9.416875,
+        "processed_duration_s": 9.416875,
+        "median_pitch_hz": 122.45216712221789,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -2.318502247830023,
+        "boundary_voice_review_flag": false
+      }
     },
     {
       "id": "s018",
@@ -1394,7 +1613,7 @@
         "voice_identity": "same cloning settings; listening review required",
         "reference_pitch_hz": 124.35567010309279,
         "pitch_review_flag": false,
-        "boundary_pitch_shift_semitones": null,
+        "boundary_pitch_shift_semitones": -0.6467226019084593,
         "boundary_voice_review_flag": false
       }
     },
@@ -1879,22 +2098,81 @@
       "base_gpu_seconds": 2400,
       "overquota_used": 0,
       "reset_at": "2026-11-07T11:23:06.013000+00:00"
+    },
+    {
+      "segment": "s005",
+      "phase": "before",
+      "at": "2026-11-06T15:22:49.349344+00:00",
+      "remaining_gpu_seconds": 1971.456593,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.146000+00:00"
+    },
+    {
+      "segment": "s005",
+      "phase": "after",
+      "at": "2026-11-06T15:23:11.430301+00:00",
+      "remaining_gpu_seconds": 1958.6066110000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.194000+00:00"
+    },
+    {
+      "segment": "s014",
+      "phase": "before",
+      "at": "2026-11-06T15:23:12.547830+00:00",
+      "remaining_gpu_seconds": 1958.6066110000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.329000+00:00"
+    },
+    {
+      "segment": "s014",
+      "phase": "after",
+      "at": "2026-11-06T15:23:29.986426+00:00",
+      "remaining_gpu_seconds": 1945.2220180000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.787000+00:00"
+    },
+    {
+      "segment": "s017",
+      "phase": "before",
+      "at": "2026-11-06T15:23:31.244566+00:00",
+      "remaining_gpu_seconds": 1945.2220180000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.004000+00:00"
+    },
+    {
+      "segment": "s017",
+      "phase": "after",
+      "at": "2026-11-06T15:23:47.762659+00:00",
+      "remaining_gpu_seconds": 1932.5576520000002,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.527000+00:00"
     }
   ],
   "hardware_policy": "Free ZeroGPU only; no paid fallback or retries",
   "free_reserve_gpu_seconds": 120,
-  "overall_status": "source_checks_pending",
+  "overall_status": "full_episode_rendered_for_review",
   "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
-  "scope": "Full production authorised after explicit pilot approval, 6 November 2026. Three external claim categories remain source-gated.",
+  "scope": "Full production authorised; three date-sensitive claims replaced with owner-approved current-rules guidance, no numeric claim silently retained.",
   "quota": {
-    "at": "2026-11-06T14:13:54.222410+00:00",
-    "remaining_gpu_seconds": 1971.456593,
+    "at": "2026-11-06T15:23:47.762659+00:00",
+    "remaining_gpu_seconds": 1932.5576520000002,
     "base_gpu_seconds": 2400,
     "overquota_used": 0,
-    "reset_at": "2026-11-07T11:23:06.013000+00:00"
+    "reset_at": "2026-11-07T11:23:05.527000+00:00"
   },
-  "updated_at": "2026-11-06T14:15:51.102373+00:00",
+  "updated_at": "2026-11-06T15:30:02.948475+00:00",
   "pilot_approved": true,
   "pilot_commit": "77c4d3a",
-  "source_evidence": "source-checks.json"
+  "source_evidence": "source-checks.json",
+  "full_video_file": "deliverables/Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4",
+  "full_video_sha256": "dd6462a05218fd2528adeda983b7bf99bf46fc6e2c748a572f3d5df1a24e4877",
+  "validation_file": "validation.json",
+  "rendered_duration_seconds": 329.0,
+  "remaining_segments": []
 }

@@ -21,8 +21,19 @@ def main():
    if not d.lookup_word(w):
     if w not in lexicon:raise ValueError('Alignment lexicon needs review: '+w)
     d.add_word(w,lexicon[w],False)
-  d.set_align_text(target);d.start_utt();d.process_raw(raw,False,True);d.end_utt()
-  aligned=[{'word':re.sub(r'\(\d+\)$','',w.word),'start':start+w.start_frame/100,'end':min(start+len(a)/sr,start+(w.end_frame+1)/100),'segment':s['id']} for w in d.seg() if not w.word.startswith('<')];assert [w['word'] for w in aligned]==target.split();words.extend(aligned)
+  # 250ms decoder-only context flushes final phonemes; it never enters exported audio.
+  d.set_align_text(target);d.start_utt();d.process_raw(raw+bytes(8000),False,True);d.end_utt()
+  aligned=[{'word':re.sub(r'\(\d+\)$','',w.word),'start':start+w.start_frame/100,'end':min(start+len(a)/sr,start+(w.end_frame+1)/100),'segment':s['id']} for w in d.seg() if not w.word.startswith('<')];assert [w['word'] for w in aligned]==target.split()
+  assert all(w['start']<start+len(a)/sr and w['end']>w['start'] for w in aligned),s['id']+' word outside original waveform'
+  original_tokens=list(re.finditer(r"[a-z]+(?:['’][a-z]+)?",s['text'],re.I));assert len(original_tokens)==len(aligned)
+  boundaries=[]
+  for token in original_tokens:
+   offset=token.start()
+   while offset>0 and s['text'][offset-1] in ['“','‘','\"']:offset-=1
+   boundaries.append(offset)
+  for i,w in enumerate(aligned):
+   end=boundaries[i+1] if i+1<len(boundaries) else len(s['text']);w['display']=s['text'][boundaries[i]:end]
+  words.extend(aligned)
   times.append({'id':s['id'],'scene':s['scene'],'start':start,'end':start+len(a)/sr,'file':s['file'],'original_sha256':s['sha256'],'processed':str(path.relative_to(F)),'text':s['text'],'validation':check});chunks.append(a);cursor+=len(a)
  total=cursor/48000
  if available:
@@ -34,13 +45,18 @@ def main():
  (F/'narration.txt').write_text('\n\n'.join(s['text'] for s in m['segments'])+'\n')
  def stamp(t):
   ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
- captions=[];line=[]
+ units=[]
  for w in words:
-  if line and (len(' '.join(x['word'] for x in line+[w]))>45 or w['end']-line[0]['start']>3.5):
+  if units and w['segment']==units[-1][-1]['segment'] and not units[-1][-1]['display'][-1:].isspace():units[-1].append(w)
+  else:units.append([w])
+ captions=[];line=[]
+ for unit in units:
+  if line and (unit[0]['segment']!=line[-1]['segment'] or len(''.join(x['display'] for x in line+unit).strip())>44 or unit[-1]['end']-line[0]['start']>3.5):
    captions.append(line);line=[]
-  line.append(w)
+  line.extend(unit)
  if line:captions.append(line)
- (F/'deliverables/captions.srt').write_text('\n\n'.join(f"{i+1}\n{stamp(c[0]['start'])} --> {stamp(c[-1]['end'])}\n"+' '.join(x['word'] for x in c) for i,c in enumerate(captions))+'\n')
+ assert ' '.join(''.join(x['display'] for x in c).strip() for c in captions)==' '.join(s['text'] for s in m['segments'])
+ (F/'deliverables/captions.srt').write_text('\n\n'.join(f"{i+1}\n{stamp(c[0]['start'])} --> {stamp(c[-1]['end'])}\n"+''.join(x['display'] for x in c).strip() for i,c in enumerate(captions))+'\n')
  print(json.dumps({'narration_seconds':total,'frames':math.ceil(total*24),'segments':len(times),'captions':'forced-aligned, review punctuation/accuracy'}))
 if __name__=='__main__':
  try:main()

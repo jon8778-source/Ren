@@ -1,0 +1,57 @@
+{
+  "file": "Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4",
+  "sha256": "dd6462a05218fd2528adeda983b7bf99bf46fc6e2c748a572f3d5df1a24e4877",
+  "bytes": 23284907,
+  "full_episode": true,
+  "duration_seconds": 329.0,
+  "narration_seconds": 328.97875,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frames": 7896,
+  "shots": 107,
+  "all_shot_frame_counts": "pass",
+  "shot_caps": "Ren<=5.5, graphics<=3.5",
+  "fatal_full_decode": "pass",
+  "all_frame_black_blank_screen": 7896,
+  "narration_originals": 20,
+  "exact_sample_sequence": "pass",
+  "source_animation_audio": "discarded",
+  "music": false,
+  "audio_correlation": 0.999974359819438,
+  "loudness_lufs": -18.04,
+  "true_peak_dbfs": -1.93,
+  "fixed_financial_frames": 2075,
+  "calculations": "MATHS OK",
+  "source_checks": "source-checks.json",
+  "closed_mouth": "Approved narrator-led source clips; inspect evidence",
+  "visual_review": {
+    "shot_midpoints": 107,
+    "transition_samples": 530,
+    "all_cut_boundaries": 106,
+    "native_1280x720_frames": [
+      "native-01.png",
+      "native-02.png",
+      "native-03.png"
+    ],
+    "findings": "Steady left Ren framing, no automatic zoom/mirroring; opaque white clothing/trainers; no visible clipping, furniture obstruction or edge halo in samples. Mouth stays closed. Numeric labels and text readable; disclaimer visible at beginning/end.",
+    "limit": "Encoded frame/sample inspection, not full audiovisual playback/listening."
+  },
+  "listening_and_physical_android_test": false,
+  "publication": false,
+  "github_video_upload": false,
+  "captions": {
+    "count": 150,
+    "source": "Exact production text with original case/punctuation; locally forced-aligned",
+    "exact_text_coverage": true,
+    "independent_audio_transcription": false
+  },
+  "approved_wording_changes": "wording-approval.json",
+  "previous_17_originals_reused_byte_identically": true,
+  "voice_boundary_listening_flags": [
+    "s020"
+  ],
+  "primary_sources": "Date-sensitive claims removed with owner approval; no live primary-source verification claimed for general HSA context."
+}

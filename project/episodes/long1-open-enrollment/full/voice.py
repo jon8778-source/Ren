@@ -1,12 +1,16 @@
 """Resumable full narration; approved pilot originals reused, source gates retained."""
 from pathlib import Path
-import sys,json,os,fcntl,copy
+import sys,json,os,fcntl,copy,hashlib
 F=Path(__file__).resolve().parent;ROOT=F.parents[3]
 sys.path.insert(0,str(ROOT/'project/cliplib'));import pilot
 pilot.script_segments=lambda folder:json.loads((folder/'segments.json').read_text())
 def report():
  m=pilot.load(F);pending=[s['id'] for s in m['segments'] if s['status']!='complete'];complete=[s for s in m['segments'] if s['status']=='complete'];attempts=[a for s in m['segments'][3:] for a in s['attempts']]
- r={'complete_segments':len(complete),'total_segments':len(m['segments']),'remaining_segments':pending,'source_gated':[s['id'] for s in m['segments'] if s['status']=='source_review'],'original_seconds_saved':sum(s.get('validation',{}).get('duration_s',0) for s in complete),'new_generation_calls':len(attempts),'new_allowance_gpu_seconds':sum(a.get('observed_quota_decrease_gpu_seconds') or 0 for a in attempts),'new_request_elapsed_seconds':sum(a.get('elapsed_seconds',0) for a in attempts),'quota_snapshot':m.get('quota'),'resume_command':'bash project/episodes/long1-open-enrollment/full/resume.sh','full_video_finished':False,'listening_review':'Pilot approved; new segments require review','source_check_file':'source-checks.json'}
+ finished=False
+ if (F/'validation.json').exists():
+  validated=json.loads((F/'validation.json').read_text());movie=F/'deliverables'/validated['file']
+  finished=len(complete)==len(m['segments']) and movie.is_file() and hashlib.sha256(movie.read_bytes()).hexdigest()==validated['sha256']
+ r={'complete_segments':len(complete),'total_segments':len(m['segments']),'remaining_segments':pending,'source_gated':[s['id'] for s in m['segments'] if s['status']=='source_review'],'original_seconds_saved':sum(s.get('validation',{}).get('duration_s',0) for s in complete),'new_generation_calls':len(attempts),'new_allowance_gpu_seconds':sum(a.get('observed_quota_decrease_gpu_seconds') or 0 for a in attempts),'new_request_elapsed_seconds':sum(a.get('elapsed_seconds',0) for a in attempts),'quota_snapshot':m.get('quota'),'resume_command':'bash project/episodes/long1-open-enrollment/full/resume.sh','full_video_finished':finished,'listening_review':'Pilot approved; new segments require review','source_check_file':'source-checks.json'}
  pilot.save(F/'checkpoint-report.json',r);print(json.dumps(r,indent=2))
 def resume():
  m=pilot.load(F);checks=json.loads((F/'source-checks.json').read_text())

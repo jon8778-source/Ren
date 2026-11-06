@@ -6,7 +6,7 @@ import visuals as V
 F=Path(__file__).resolve().parent;B=F.parent;p=V.p
 OUT=F/'deliverables/Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4';FPS=24
 SPECS={
- 's004':[(None,'annual')],'s005':[(None,'forecast')],'s006':[(None,'group')],
+ 's004':[(None,'annual')],'s005':[(None,'own_options')],'s006':[(None,'group')],
  's007':[(None,'neighbor'),('He asks questions','questions'),('We opened the plan summaries','illustrative'),('Plan A','ppo_premium')],
  's008':[(None,'ppo_bad'),('Plan B','hdhp_premium'),('Its in-network out-of-pocket maximum','hdhp_bad'),('My employer would also','employer')],
  's009':[(None,'bad_compare'),("But I'd need enough cash",'cashflow'),('and neither figure','limits')],

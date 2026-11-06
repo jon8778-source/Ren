@@ -1,0 +1,30 @@
+{
+  "owner": "Jon",
+  "message": "Yes ok with that",
+  "approved_changes": {
+    "s005": "That was my company's notice, not a forecast for everyone else's premium. I needed to compare the plans actually available to me.",
+    "s014": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. Check the current IRS contribution limit, and remember that employer money counts toward it.",
+    "s017": "Check HealthCare.gov and your state's Marketplace for this year's enrollment deadline and when coverage starts. Don't assume every exchange uses the same dates."
+  },
+  "date": "2026-11-06",
+  "previous_checkpoint": "3d71057db262b6dd4ba34079ef5260938a6eecfc",
+  "completed_audio_reused": {
+    "s001": "009b1a6cb93efbb969dba5090d683279c81fc8c6a687ac92e302330b89eeac40",
+    "s002": "ba0a0b2595845a283def38ed836c9f7750f064fbd0e0576f10e63220880e939a",
+    "s003": "ede057ce08a22a1db28f1fb104e1a7b0f4788e7600c2bfd247bd46bd889cf03f",
+    "s004": "74cefadae823826507bd894a000b20d7c16dcc5a922d93ab1922c77ea967a87c",
+    "s006": "8dae8dbf7f681669a8b17bedbef70823ca26b06f3ceb5dc9573d488d1b7850da",
+    "s007": "a518b12ea116e3505e2c704e9abaa0f787e622f951d82191f0996ffddd8ab9eb",
+    "s008": "2ccc09a24f5be4b53048638c01df252d38fc85f3cb14797ee22f77edc3d08788",
+    "s009": "5e1a259f6150bbdd1da58499f929c69e71c05e8f82709982830b4f8b50a711e0",
+    "s010": "e598fced54787d510529650b702d662ed067a3894372e3d580f82618862f5dd7",
+    "s011": "c75a170d4312438df4c2ee99116b6eedc50355ef69ddc67f28f7ea58595a63c5",
+    "s012": "b66548e80915efac90c169b1c712ad288280cde840b5aa3e3befdfbe238f9c7c",
+    "s013": "c30ed9b819f8bb4bf1c69fb8be9474df1a441a3afad3e08f2102bfb0038a8ec8",
+    "s015": "d340b428142c735784694a268097a46481cc8f47bded862fa939d7c2a2565bb6",
+    "s016": "16311ef71263545ececbf5c4814fa30da7d698af3d5a50d5db6d15eca5b494ca",
+    "s018": "844723d8cca512b019d229b9c9a271a6b2e34d1080c6635cf5aaeeed8ab8db3b",
+    "s019": "41201670c36c239f5de8f930d112efe455498e2786007249b1b92f3f51358715",
+    "s020": "e8f34abd1003eae10073e94889717fe37ed1788ee2dbb8f7b313ba045a2ffd1a"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "reused": [
+    {
+      "path": "project/prototypes/coffee-minute-v3/artwork/",
+      "purpose": "Lossless approved office, restored with original checksum verification"
+    },
+    {
+      "path": "assets/ren_library/ren_thinking.mp4",
+      "purpose": "Native actor source; closed-mouth, no source audio"
+    },
+    {
+      "path": "assets/ren_library/ren_nod_yes.mp4",
+      "purpose": "Native actor source; closed-mouth, no source audio"
+    },
+    {
+      "path": "project/remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "purpose": "Approved typography"
+    },
+    {
+      "path": "Audio/ren_reference.wav",
+      "purpose": "Existing approved Qwen cloning reference, unchanged; not re-created"
+    }
+  ],
+  "new_code_props": [
+    "Enrollment email/button/cursor",
+    "Four-second and forty-minute clocks",
+    "Potential $1,980 net-value card",
+    "Payment audit paper",
+    "Illustrative pay stub",
+    "Premium-change card",
+    "Driveway/garage setting, lease card and all phone UI/text"
+  ],
+  "new_audio": "3 original Qwen narration segments; manifest.json",
+  "supplied_pack": "Scene/thumbnail PNGs and alternative character JPGs audited as concepts, not substituted for approved v3 artwork",
+  "deferred": "Full-film Dev/Priya/group chat: approved assets or offscreen messages only; no new character portraits required for pilot",
+  "music": false,
+  "source_clip_audio": false,
+  "revision": 2,
+  "new_illustration": {
+    "file": "assets/illustrated-props-v2.png",
+    "objects": [
+      "Navy leased car",
+      "Sage older car",
+      "Blank phone",
+      "Car keys"
+    ],
+    "reference": "Existing approved Ren/office frame, for compatible palette/linework only",
+    "status": "New props for review, not newly approved character artwork",
+    "generation_record": "assets/generation-record.json"
+  },
+  "full_episode_additions": {
+    "medical_assets": "assets/medical-props.png",
+    "generation_record": "assets/generation-record.json",
+    "objects": [
+      "Blank-label HSA jar",
+      "Medical clipboard",
+      "Blank-label medicine bottle",
+      "Baby bottle"
+    ],
+    "code_graphics": [
+      "Enrollment/UI messages",
+      "Plan-premium/covered-in-network comparisons",
+      "Cash vs HSA value tables",
+      "Contributions vs remaining balance",
+      "Current-rules checklist",
+      "Review/timer/ending cards"
+    ],
+    "supporting_characters": "Named offscreen dialogue/messages only; no invented character portrait or unrelated stock",
+    "audio": "20 original Qwen WAVs; 17 existing WAVs reused after wording approval; no music/source sound"
+  }
+}

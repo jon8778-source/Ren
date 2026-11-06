@@ -8,6 +8,7 @@ V=F/'deliverables/Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4'
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def main():
  calculate();M=json.loads((F/'manifest.json').read_text());S=json.loads((F/'shot-manifest.json').read_text());T=json.loads((F/'audio-timing.json').read_text());checks=json.loads((F/'source-checks.json').read_text());assert all(s['status']=='complete' for s in M['segments']);assert all(checks[s['source_gate']]['status']=='verified' for s in M['segments'] if s.get('source_gate'))
+ approved=json.loads((F/'wording-approval.json').read_text());assert all(s['sha256']==approved['completed_audio_reused'][s['id']] for s in M['segments'] if s['id'] in approved['completed_audio_reused']);assert all(next(s for s in M['segments'] if s['id']==sid)['text']==text for sid,text in approved['approved_changes'].items())
  info=json.loads(sp.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(V)]));v=next(x for x in info['streams'] if x['codec_type']=='video');a=next(x for x in info['streams'] if x['codec_type']=='audio');assert (v['width'],v['height'],v['r_frame_rate'],v['codec_name'],a['codec_name'])==(1280,720,'24/1','h264','aac');assert int(v['nb_frames'])==S['frames'] and float(info['format']['duration'])<=480
  cursor=0
  for s in S['shots']:

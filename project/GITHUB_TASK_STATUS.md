@@ -1,3 +1,31 @@
+# Current task — Long 1 complete review export, 6 November 2026
+
+Branch `codex/long1-open-enrollment-pilot`; local source checkpoint, no remote push.
+Owner approved pilot v2 and three source-safe replacements. Full movie completed:
+`episodes/long1-open-enrollment/full/deliverables/Ren_Long_01_Auto_Renewed_My_Health_Plan.mp4`.
+5:29.000,1280×720,24fps,H.264/AAC;7,896 frames,107 shots. Approved opening/voice/
+art preserved. Final script/captions/shot manifest/math/source notes/assets/original
+WAV manifest/contact sheets/editable source/reproduction and QA all saved.
+
+Full fatal decode, all-frame black/blank screen, encoded shot coverage/caps, exact
+narration sample sequence and financial-region checks pass.107 shot midpoints,
+530 transition samples and3 native full-resolution frames inspected. No actual
+listening/full audiovisual/physical Android testing claim; s020 coarse pitch-boundary
+flag remains a listening item. No production blockers; complete review export.
+
+20 originals saved;17 previous WAVs unchanged after replacement approval.3 newly
+edited passages remove unchecked8.2%/$4,500/January15 claims. No live primary-source
+verification claimed. Shared illustrative math unchanged and checked. No source audio,
+music, retiming or padding. Natural narration328.978750s, shorter than loose6–7min
+brief; no filler added. Whole-episode measured448.285260GPU-seconds vs518.345204s
+request elapsed; no retries/paid/overquota. See full/quota-report.json.
+
+No merge, main/approved-branch modification, GitHub media upload, Shorts or publishing.
+Deliver media/source bundle separately. Final evidence:full/validation.json and QA.md.
+Historical approval-pending/source-blocked records below are superseded.
+
+---
+
 # Current task — Long 1 full production, 6 November 2026
 
 Owner approved illustrated-prop pilot revision 2 (`77c4d3a`) and instructed continue.

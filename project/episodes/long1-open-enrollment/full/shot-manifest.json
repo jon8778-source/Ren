@@ -1,0 +1,1936 @@
+{
+  "shots": [
+    {
+      "id": "shot_001",
+      "kind": "ren",
+      "motif": "email",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 0,
+      "frames": 122,
+      "end_frame": 122,
+      "motif_start": 0.0,
+      "motif_end": 5.083333333333333,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_001.mp4",
+      "narration_segments": [
+        "s001"
+      ]
+    },
+    {
+      "id": "shot_002",
+      "kind": "ren",
+      "motif": "click",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 122,
+      "frames": 106,
+      "end_frame": 228,
+      "motif_start": 5.083333333333333,
+      "motif_end": 9.5,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_002.mp4",
+      "narration_segments": [
+        "s001"
+      ]
+    },
+    {
+      "id": "shot_003",
+      "kind": "graphic",
+      "motif": "clocks",
+      "clip": null,
+      "part": 0,
+      "start_frame": 228,
+      "frames": 76,
+      "end_frame": 304,
+      "motif_start": 9.5,
+      "motif_end": 12.666666666666666,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_003.mp4",
+      "narration_segments": [
+        "s001"
+      ]
+    },
+    {
+      "id": "shot_004",
+      "kind": "ren",
+      "motif": "potential",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 304,
+      "frames": 124,
+      "end_frame": 428,
+      "motif_start": 12.666666666666666,
+      "motif_end": 17.833333333333332,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_004.mp4",
+      "narration_segments": [
+        "s001"
+      ]
+    },
+    {
+      "id": "shot_005",
+      "kind": "ren",
+      "motif": "potential",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 428,
+      "frames": 68,
+      "end_frame": 496,
+      "motif_start": 17.833333333333332,
+      "motif_end": 20.666666666666668,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_005.mp4",
+      "narration_segments": [
+        "s001",
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_006",
+      "kind": "graphic",
+      "motif": "lease",
+      "clip": null,
+      "part": 0,
+      "start_frame": 496,
+      "frames": 65,
+      "end_frame": 561,
+      "motif_start": 20.666666666666668,
+      "motif_end": 26.083333333333332,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_006.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_007",
+      "kind": "graphic",
+      "motif": "lease",
+      "clip": null,
+      "part": 1,
+      "start_frame": 561,
+      "frames": 65,
+      "end_frame": 626,
+      "motif_start": 20.666666666666668,
+      "motif_end": 26.083333333333332,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_007.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_008",
+      "kind": "graphic",
+      "motif": "used",
+      "clip": null,
+      "part": 0,
+      "start_frame": 626,
+      "frames": 48,
+      "end_frame": 674,
+      "motif_start": 26.083333333333332,
+      "motif_end": 30.125,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_008.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_009",
+      "kind": "graphic",
+      "motif": "used",
+      "clip": null,
+      "part": 1,
+      "start_frame": 674,
+      "frames": 49,
+      "end_frame": 723,
+      "motif_start": 26.083333333333332,
+      "motif_end": 30.125,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_009.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_010",
+      "kind": "graphic",
+      "motif": "bank",
+      "clip": null,
+      "part": 0,
+      "start_frame": 723,
+      "frames": 82,
+      "end_frame": 805,
+      "motif_start": 30.125,
+      "motif_end": 33.541666666666664,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_010.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_011",
+      "kind": "graphic",
+      "motif": "audit",
+      "clip": null,
+      "part": 0,
+      "start_frame": 805,
+      "frames": 82,
+      "end_frame": 887,
+      "motif_start": 33.541666666666664,
+      "motif_end": 40.375,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_011.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_012",
+      "kind": "graphic",
+      "motif": "audit",
+      "clip": null,
+      "part": 1,
+      "start_frame": 887,
+      "frames": 82,
+      "end_frame": 969,
+      "motif_start": 33.541666666666664,
+      "motif_end": 40.375,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_012.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_013",
+      "kind": "ren",
+      "motif": "samecar",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 969,
+      "frames": 86,
+      "end_frame": 1055,
+      "motif_start": 40.375,
+      "motif_end": 43.958333333333336,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_013.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_014",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 0,
+      "start_frame": 1055,
+      "frames": 61,
+      "end_frame": 1116,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_014.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_015",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 1,
+      "start_frame": 1116,
+      "frames": 60,
+      "end_frame": 1176,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_015.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_016",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 2,
+      "start_frame": 1176,
+      "frames": 61,
+      "end_frame": 1237,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_016.mp4",
+      "narration_segments": [
+        "s002"
+      ]
+    },
+    {
+      "id": "shot_017",
+      "kind": "ren",
+      "motif": "increase",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 1237,
+      "frames": 131,
+      "end_frame": 1368,
+      "motif_start": 51.541666666666664,
+      "motif_end": 57.0,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_017.mp4",
+      "narration_segments": [
+        "s003"
+      ]
+    },
+    {
+      "id": "shot_018",
+      "kind": "ren",
+      "motif": "premium",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 1368,
+      "frames": 97,
+      "end_frame": 1465,
+      "motif_start": 57.0,
+      "motif_end": 61.041666666666664,
+      "approved_opening": true,
+      "source_file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_018.mp4",
+      "narration_segments": [
+        "s003"
+      ]
+    },
+    {
+      "id": "shot_019",
+      "kind": "ren",
+      "motif": "annual",
+      "segment": "s004",
+      "part": 0,
+      "start_frame": 1465,
+      "end_frame": 1592,
+      "frames": 127,
+      "clip": "nod_yes",
+      "motif_start": 61.041666666666664,
+      "motif_end": 66.33333333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s004-annual-0.mp4",
+      "narration_segments": [
+        "s004"
+      ]
+    },
+    {
+      "id": "shot_020",
+      "kind": "ren",
+      "motif": "own_options",
+      "segment": "s005",
+      "part": 0,
+      "start_frame": 1592,
+      "end_frame": 1677,
+      "frames": 85,
+      "clip": "thinking",
+      "motif_start": 66.33333333333333,
+      "motif_end": 73.41666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s005-own_options-0.mp4",
+      "narration_segments": [
+        "s005"
+      ]
+    },
+    {
+      "id": "shot_021",
+      "kind": "ren",
+      "motif": "own_options",
+      "segment": "s005",
+      "part": 1,
+      "start_frame": 1677,
+      "end_frame": 1762,
+      "frames": 85,
+      "clip": "nod_yes",
+      "motif_start": 66.33333333333333,
+      "motif_end": 73.41666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s005-own_options-1.mp4",
+      "narration_segments": [
+        "s005"
+      ]
+    },
+    {
+      "id": "shot_022",
+      "kind": "graphic",
+      "motif": "group",
+      "segment": "s006",
+      "part": 0,
+      "start_frame": 1762,
+      "end_frame": 1845,
+      "frames": 83,
+      "clip": null,
+      "motif_start": 73.41666666666667,
+      "motif_end": 87.29166666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s006-group-0.mp4",
+      "narration_segments": [
+        "s006"
+      ]
+    },
+    {
+      "id": "shot_023",
+      "kind": "graphic",
+      "motif": "group",
+      "segment": "s006",
+      "part": 1,
+      "start_frame": 1845,
+      "end_frame": 1928,
+      "frames": 83,
+      "clip": null,
+      "motif_start": 73.41666666666667,
+      "motif_end": 87.29166666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s006-group-1.mp4",
+      "narration_segments": [
+        "s006"
+      ]
+    },
+    {
+      "id": "shot_024",
+      "kind": "graphic",
+      "motif": "group",
+      "segment": "s006",
+      "part": 2,
+      "start_frame": 1928,
+      "end_frame": 2012,
+      "frames": 84,
+      "clip": null,
+      "motif_start": 73.41666666666667,
+      "motif_end": 87.29166666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s006-group-2.mp4",
+      "narration_segments": [
+        "s006"
+      ]
+    },
+    {
+      "id": "shot_025",
+      "kind": "graphic",
+      "motif": "group",
+      "segment": "s006",
+      "part": 3,
+      "start_frame": 2012,
+      "end_frame": 2095,
+      "frames": 83,
+      "clip": null,
+      "motif_start": 73.41666666666667,
+      "motif_end": 87.29166666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s006-group-3.mp4",
+      "narration_segments": [
+        "s006"
+      ]
+    },
+    {
+      "id": "shot_026",
+      "kind": "graphic",
+      "motif": "neighbor",
+      "segment": "s007",
+      "part": 0,
+      "start_frame": 2095,
+      "end_frame": 2151,
+      "frames": 56,
+      "clip": null,
+      "motif_start": 87.29166666666667,
+      "motif_end": 92.0,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-neighbor-0.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_027",
+      "kind": "graphic",
+      "motif": "neighbor",
+      "segment": "s007",
+      "part": 1,
+      "start_frame": 2151,
+      "end_frame": 2208,
+      "frames": 57,
+      "clip": null,
+      "motif_start": 87.29166666666667,
+      "motif_end": 92.0,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-neighbor-1.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_028",
+      "kind": "graphic",
+      "motif": "questions",
+      "segment": "s007",
+      "part": 0,
+      "start_frame": 2208,
+      "end_frame": 2290,
+      "frames": 82,
+      "clip": null,
+      "motif_start": 92.0,
+      "motif_end": 102.20833333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-questions-0.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_029",
+      "kind": "graphic",
+      "motif": "questions",
+      "segment": "s007",
+      "part": 1,
+      "start_frame": 2290,
+      "end_frame": 2371,
+      "frames": 81,
+      "clip": null,
+      "motif_start": 92.0,
+      "motif_end": 102.20833333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-questions-1.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_030",
+      "kind": "graphic",
+      "motif": "questions",
+      "segment": "s007",
+      "part": 2,
+      "start_frame": 2371,
+      "end_frame": 2453,
+      "frames": 82,
+      "clip": null,
+      "motif_start": 92.0,
+      "motif_end": 102.20833333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-questions-2.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_031",
+      "kind": "ren",
+      "motif": "illustrative",
+      "segment": "s007",
+      "part": 0,
+      "start_frame": 2453,
+      "end_frame": 2574,
+      "frames": 121,
+      "clip": "thinking",
+      "motif_start": 102.20833333333333,
+      "motif_end": 107.25,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-illustrative-0.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_032",
+      "kind": "graphic",
+      "motif": "ppo_premium",
+      "segment": "s007",
+      "part": 0,
+      "start_frame": 2574,
+      "end_frame": 2648,
+      "frames": 74,
+      "clip": null,
+      "motif_start": 107.25,
+      "motif_end": 113.41666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-ppo_premium-0.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_033",
+      "kind": "graphic",
+      "motif": "ppo_premium",
+      "segment": "s007",
+      "part": 1,
+      "start_frame": 2648,
+      "end_frame": 2722,
+      "frames": 74,
+      "clip": null,
+      "motif_start": 107.25,
+      "motif_end": 113.41666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s007-ppo_premium-1.mp4",
+      "narration_segments": [
+        "s007"
+      ]
+    },
+    {
+      "id": "shot_034",
+      "kind": "graphic",
+      "motif": "ppo_bad",
+      "segment": "s008",
+      "part": 0,
+      "start_frame": 2722,
+      "end_frame": 2790,
+      "frames": 68,
+      "clip": null,
+      "motif_start": 113.41666666666667,
+      "motif_end": 121.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-ppo_bad-0.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_035",
+      "kind": "graphic",
+      "motif": "ppo_bad",
+      "segment": "s008",
+      "part": 1,
+      "start_frame": 2790,
+      "end_frame": 2857,
+      "frames": 67,
+      "clip": null,
+      "motif_start": 113.41666666666667,
+      "motif_end": 121.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-ppo_bad-1.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_036",
+      "kind": "graphic",
+      "motif": "ppo_bad",
+      "segment": "s008",
+      "part": 2,
+      "start_frame": 2857,
+      "end_frame": 2925,
+      "frames": 68,
+      "clip": null,
+      "motif_start": 113.41666666666667,
+      "motif_end": 121.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-ppo_bad-2.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_037",
+      "kind": "graphic",
+      "motif": "hdhp_premium",
+      "segment": "s008",
+      "part": 0,
+      "start_frame": 2925,
+      "end_frame": 3002,
+      "frames": 77,
+      "clip": null,
+      "motif_start": 121.875,
+      "motif_end": 128.29166666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-hdhp_premium-0.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_038",
+      "kind": "graphic",
+      "motif": "hdhp_premium",
+      "segment": "s008",
+      "part": 1,
+      "start_frame": 3002,
+      "end_frame": 3079,
+      "frames": 77,
+      "clip": null,
+      "motif_start": 121.875,
+      "motif_end": 128.29166666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-hdhp_premium-1.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_039",
+      "kind": "graphic",
+      "motif": "hdhp_bad",
+      "segment": "s008",
+      "part": 0,
+      "start_frame": 3079,
+      "end_frame": 3148,
+      "frames": 69,
+      "clip": null,
+      "motif_start": 128.29166666666666,
+      "motif_end": 136.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-hdhp_bad-0.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_040",
+      "kind": "graphic",
+      "motif": "hdhp_bad",
+      "segment": "s008",
+      "part": 1,
+      "start_frame": 3148,
+      "end_frame": 3216,
+      "frames": 68,
+      "clip": null,
+      "motif_start": 128.29166666666666,
+      "motif_end": 136.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-hdhp_bad-1.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_041",
+      "kind": "graphic",
+      "motif": "hdhp_bad",
+      "segment": "s008",
+      "part": 2,
+      "start_frame": 3216,
+      "end_frame": 3285,
+      "frames": 69,
+      "clip": null,
+      "motif_start": 128.29166666666666,
+      "motif_end": 136.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-hdhp_bad-2.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_042",
+      "kind": "graphic",
+      "motif": "employer",
+      "segment": "s008",
+      "part": 0,
+      "start_frame": 3285,
+      "end_frame": 3360,
+      "frames": 75,
+      "clip": null,
+      "motif_start": 136.875,
+      "motif_end": 140.0,
+      "approved_opening": false,
+      "cache_file": "build/clips/s008-employer-0.mp4",
+      "narration_segments": [
+        "s008"
+      ]
+    },
+    {
+      "id": "shot_043",
+      "kind": "graphic",
+      "motif": "bad_compare",
+      "segment": "s009",
+      "part": 0,
+      "start_frame": 3360,
+      "end_frame": 3428,
+      "frames": 68,
+      "clip": null,
+      "motif_start": 140.0,
+      "motif_end": 148.54166666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-bad_compare-0.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_044",
+      "kind": "graphic",
+      "motif": "bad_compare",
+      "segment": "s009",
+      "part": 1,
+      "start_frame": 3428,
+      "end_frame": 3497,
+      "frames": 69,
+      "clip": null,
+      "motif_start": 140.0,
+      "motif_end": 148.54166666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-bad_compare-1.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_045",
+      "kind": "graphic",
+      "motif": "bad_compare",
+      "segment": "s009",
+      "part": 2,
+      "start_frame": 3497,
+      "end_frame": 3565,
+      "frames": 68,
+      "clip": null,
+      "motif_start": 140.0,
+      "motif_end": 148.54166666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-bad_compare-2.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_046",
+      "kind": "ren",
+      "motif": "cashflow",
+      "segment": "s009",
+      "part": 0,
+      "start_frame": 3565,
+      "end_frame": 3635,
+      "frames": 70,
+      "clip": "nod_yes",
+      "motif_start": 148.54166666666666,
+      "motif_end": 151.45833333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-cashflow-0.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_047",
+      "kind": "graphic",
+      "motif": "limits",
+      "segment": "s009",
+      "part": 0,
+      "start_frame": 3635,
+      "end_frame": 3683,
+      "frames": 48,
+      "clip": null,
+      "motif_start": 151.45833333333334,
+      "motif_end": 155.41666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-limits-0.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_048",
+      "kind": "graphic",
+      "motif": "limits",
+      "segment": "s009",
+      "part": 1,
+      "start_frame": 3683,
+      "end_frame": 3730,
+      "frames": 47,
+      "clip": null,
+      "motif_start": 151.45833333333334,
+      "motif_end": 155.41666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s009-limits-1.mp4",
+      "narration_segments": [
+        "s009"
+      ]
+    },
+    {
+      "id": "shot_049",
+      "kind": "graphic",
+      "motif": "used_care",
+      "segment": "s010",
+      "part": 0,
+      "start_frame": 3730,
+      "end_frame": 3796,
+      "frames": 66,
+      "clip": null,
+      "motif_start": 155.41666666666666,
+      "motif_end": 166.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-used_care-0.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_050",
+      "kind": "graphic",
+      "motif": "used_care",
+      "segment": "s010",
+      "part": 1,
+      "start_frame": 3796,
+      "end_frame": 3861,
+      "frames": 65,
+      "clip": null,
+      "motif_start": 155.41666666666666,
+      "motif_end": 166.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-used_care-1.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_051",
+      "kind": "graphic",
+      "motif": "used_care",
+      "segment": "s010",
+      "part": 2,
+      "start_frame": 3861,
+      "end_frame": 3926,
+      "frames": 65,
+      "clip": null,
+      "motif_start": 155.41666666666666,
+      "motif_end": 166.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-used_care-2.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_052",
+      "kind": "graphic",
+      "motif": "used_care",
+      "segment": "s010",
+      "part": 3,
+      "start_frame": 3926,
+      "end_frame": 3992,
+      "frames": 66,
+      "clip": null,
+      "motif_start": 155.41666666666666,
+      "motif_end": 166.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-used_care-3.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_053",
+      "kind": "graphic",
+      "motif": "ppo_normal",
+      "segment": "s010",
+      "part": 0,
+      "start_frame": 3992,
+      "end_frame": 4058,
+      "frames": 66,
+      "clip": null,
+      "motif_start": 166.33333333333334,
+      "motif_end": 171.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-ppo_normal-0.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_054",
+      "kind": "graphic",
+      "motif": "ppo_normal",
+      "segment": "s010",
+      "part": 1,
+      "start_frame": 4058,
+      "end_frame": 4125,
+      "frames": 67,
+      "clip": null,
+      "motif_start": 166.33333333333334,
+      "motif_end": 171.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-ppo_normal-1.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_055",
+      "kind": "graphic",
+      "motif": "hdhp_cash",
+      "segment": "s010",
+      "part": 0,
+      "start_frame": 4125,
+      "end_frame": 4183,
+      "frames": 58,
+      "clip": null,
+      "motif_start": 171.875,
+      "motif_end": 179.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-hdhp_cash-0.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_056",
+      "kind": "graphic",
+      "motif": "hdhp_cash",
+      "segment": "s010",
+      "part": 1,
+      "start_frame": 4183,
+      "end_frame": 4240,
+      "frames": 57,
+      "clip": null,
+      "motif_start": 171.875,
+      "motif_end": 179.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-hdhp_cash-1.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_057",
+      "kind": "graphic",
+      "motif": "hdhp_cash",
+      "segment": "s010",
+      "part": 2,
+      "start_frame": 4240,
+      "end_frame": 4298,
+      "frames": 58,
+      "clip": null,
+      "motif_start": 171.875,
+      "motif_end": 179.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s010-hdhp_cash-2.mp4",
+      "narration_segments": [
+        "s010"
+      ]
+    },
+    {
+      "id": "shot_058",
+      "kind": "graphic",
+      "motif": "hdhp_net",
+      "segment": "s011",
+      "part": 0,
+      "start_frame": 4298,
+      "end_frame": 4371,
+      "frames": 73,
+      "clip": null,
+      "motif_start": 179.08333333333334,
+      "motif_end": 188.25,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-hdhp_net-0.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_059",
+      "kind": "graphic",
+      "motif": "hdhp_net",
+      "segment": "s011",
+      "part": 1,
+      "start_frame": 4371,
+      "end_frame": 4445,
+      "frames": 74,
+      "clip": null,
+      "motif_start": 179.08333333333334,
+      "motif_end": 188.25,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-hdhp_net-1.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_060",
+      "kind": "graphic",
+      "motif": "hdhp_net",
+      "segment": "s011",
+      "part": 2,
+      "start_frame": 4445,
+      "end_frame": 4518,
+      "frames": 73,
+      "clip": null,
+      "motif_start": 179.08333333333334,
+      "motif_end": 188.25,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-hdhp_net-2.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_061",
+      "kind": "graphic",
+      "motif": "normal_compare",
+      "segment": "s011",
+      "part": 0,
+      "start_frame": 4518,
+      "end_frame": 4587,
+      "frames": 69,
+      "clip": null,
+      "motif_start": 188.25,
+      "motif_end": 191.125,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-normal_compare-0.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_062",
+      "kind": "ren",
+      "motif": "not_rebate",
+      "segment": "s011",
+      "part": 0,
+      "start_frame": 4587,
+      "end_frame": 4665,
+      "frames": 78,
+      "clip": "thinking",
+      "motif_start": 191.125,
+      "motif_end": 194.375,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-not_rebate-0.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_063",
+      "kind": "graphic",
+      "motif": "check_services",
+      "segment": "s011",
+      "part": 0,
+      "start_frame": 4665,
+      "end_frame": 4719,
+      "frames": 54,
+      "clip": null,
+      "motif_start": 194.375,
+      "motif_end": 198.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-check_services-0.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_064",
+      "kind": "graphic",
+      "motif": "check_services",
+      "segment": "s011",
+      "part": 1,
+      "start_frame": 4719,
+      "end_frame": 4773,
+      "frames": 54,
+      "clip": null,
+      "motif_start": 194.375,
+      "motif_end": 198.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-check_services-1.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_065",
+      "kind": "ren",
+      "motif": "illustrative",
+      "segment": "s011",
+      "part": 0,
+      "start_frame": 4773,
+      "end_frame": 4881,
+      "frames": 108,
+      "clip": "nod_yes",
+      "motif_start": 198.875,
+      "motif_end": 203.375,
+      "approved_opening": false,
+      "cache_file": "build/clips/s011-illustrative-0.mp4",
+      "narration_segments": [
+        "s011"
+      ]
+    },
+    {
+      "id": "shot_066",
+      "kind": "graphic",
+      "motif": "priya",
+      "segment": "s012",
+      "part": 0,
+      "start_frame": 4881,
+      "end_frame": 4961,
+      "frames": 80,
+      "clip": null,
+      "motif_start": 203.375,
+      "motif_end": 216.70833333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-priya-0.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_067",
+      "kind": "graphic",
+      "motif": "priya",
+      "segment": "s012",
+      "part": 1,
+      "start_frame": 4961,
+      "end_frame": 5041,
+      "frames": 80,
+      "clip": null,
+      "motif_start": 203.375,
+      "motif_end": 216.70833333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-priya-1.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_068",
+      "kind": "graphic",
+      "motif": "priya",
+      "segment": "s012",
+      "part": 2,
+      "start_frame": 5041,
+      "end_frame": 5121,
+      "frames": 80,
+      "clip": null,
+      "motif_start": 203.375,
+      "motif_end": 216.70833333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-priya-2.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_069",
+      "kind": "graphic",
+      "motif": "priya",
+      "segment": "s012",
+      "part": 3,
+      "start_frame": 5121,
+      "end_frame": 5201,
+      "frames": 80,
+      "clip": null,
+      "motif_start": 203.375,
+      "motif_end": 216.70833333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-priya-3.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_070",
+      "kind": "graphic",
+      "motif": "redirect",
+      "segment": "s012",
+      "part": 0,
+      "start_frame": 5201,
+      "end_frame": 5273,
+      "frames": 72,
+      "clip": null,
+      "motif_start": 216.70833333333334,
+      "motif_end": 225.66666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-redirect-0.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_071",
+      "kind": "graphic",
+      "motif": "redirect",
+      "segment": "s012",
+      "part": 1,
+      "start_frame": 5273,
+      "end_frame": 5344,
+      "frames": 71,
+      "clip": null,
+      "motif_start": 216.70833333333334,
+      "motif_end": 225.66666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-redirect-1.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_072",
+      "kind": "graphic",
+      "motif": "redirect",
+      "segment": "s012",
+      "part": 2,
+      "start_frame": 5344,
+      "end_frame": 5416,
+      "frames": 72,
+      "clip": null,
+      "motif_start": 216.70833333333334,
+      "motif_end": 225.66666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s012-redirect-2.mp4",
+      "narration_segments": [
+        "s012"
+      ]
+    },
+    {
+      "id": "shot_073",
+      "kind": "graphic",
+      "motif": "contributions",
+      "segment": "s013",
+      "part": 0,
+      "start_frame": 5416,
+      "end_frame": 5475,
+      "frames": 59,
+      "clip": null,
+      "motif_start": 225.66666666666666,
+      "motif_end": 233.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-contributions-0.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_074",
+      "kind": "graphic",
+      "motif": "contributions",
+      "segment": "s013",
+      "part": 1,
+      "start_frame": 5475,
+      "end_frame": 5535,
+      "frames": 60,
+      "clip": null,
+      "motif_start": 225.66666666666666,
+      "motif_end": 233.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-contributions-1.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_075",
+      "kind": "graphic",
+      "motif": "contributions",
+      "segment": "s013",
+      "part": 2,
+      "start_frame": 5535,
+      "end_frame": 5594,
+      "frames": 59,
+      "clip": null,
+      "motif_start": 225.66666666666666,
+      "motif_end": 233.08333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-contributions-2.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_076",
+      "kind": "graphic",
+      "motif": "withdrawal",
+      "segment": "s013",
+      "part": 0,
+      "start_frame": 5594,
+      "end_frame": 5658,
+      "frames": 64,
+      "clip": null,
+      "motif_start": 233.08333333333334,
+      "motif_end": 238.41666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-withdrawal-0.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_077",
+      "kind": "graphic",
+      "motif": "withdrawal",
+      "segment": "s013",
+      "part": 1,
+      "start_frame": 5658,
+      "end_frame": 5722,
+      "frames": 64,
+      "clip": null,
+      "motif_start": 233.08333333333334,
+      "motif_end": 238.41666666666666,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-withdrawal-1.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_078",
+      "kind": "graphic",
+      "motif": "outside_cash",
+      "segment": "s013",
+      "part": 0,
+      "start_frame": 5722,
+      "end_frame": 5788,
+      "frames": 66,
+      "clip": null,
+      "motif_start": 238.41666666666666,
+      "motif_end": 243.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-outside_cash-0.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_079",
+      "kind": "graphic",
+      "motif": "outside_cash",
+      "segment": "s013",
+      "part": 1,
+      "start_frame": 5788,
+      "end_frame": 5853,
+      "frames": 65,
+      "clip": null,
+      "motif_start": 238.41666666666666,
+      "motif_end": 243.875,
+      "approved_opening": false,
+      "cache_file": "build/clips/s013-outside_cash-1.mp4",
+      "narration_segments": [
+        "s013"
+      ]
+    },
+    {
+      "id": "shot_080",
+      "kind": "graphic",
+      "motif": "hsa_rules",
+      "segment": "s014",
+      "part": 0,
+      "start_frame": 5853,
+      "end_frame": 5937,
+      "frames": 84,
+      "clip": null,
+      "motif_start": 243.875,
+      "motif_end": 254.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s014-hsa_rules-0.mp4",
+      "narration_segments": [
+        "s014"
+      ]
+    },
+    {
+      "id": "shot_081",
+      "kind": "graphic",
+      "motif": "hsa_rules",
+      "segment": "s014",
+      "part": 1,
+      "start_frame": 5937,
+      "end_frame": 6020,
+      "frames": 83,
+      "clip": null,
+      "motif_start": 243.875,
+      "motif_end": 254.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s014-hsa_rules-1.mp4",
+      "narration_segments": [
+        "s014"
+      ]
+    },
+    {
+      "id": "shot_082",
+      "kind": "graphic",
+      "motif": "hsa_rules",
+      "segment": "s014",
+      "part": 2,
+      "start_frame": 6020,
+      "end_frame": 6104,
+      "frames": 84,
+      "clip": null,
+      "motif_start": 243.875,
+      "motif_end": 254.33333333333334,
+      "approved_opening": false,
+      "cache_file": "build/clips/s014-hsa_rules-2.mp4",
+      "narration_segments": [
+        "s014"
+      ]
+    },
+    {
+      "id": "shot_083",
+      "kind": "ren",
+      "motif": "money_job",
+      "segment": "s015",
+      "part": 0,
+      "start_frame": 6104,
+      "end_frame": 6193,
+      "frames": 89,
+      "clip": "thinking",
+      "motif_start": 254.33333333333334,
+      "motif_end": 261.75,
+      "approved_opening": false,
+      "cache_file": "build/clips/s015-money_job-0.mp4",
+      "narration_segments": [
+        "s015"
+      ]
+    },
+    {
+      "id": "shot_084",
+      "kind": "ren",
+      "motif": "money_job",
+      "segment": "s015",
+      "part": 1,
+      "start_frame": 6193,
+      "end_frame": 6282,
+      "frames": 89,
+      "clip": "nod_yes",
+      "motif_start": 254.33333333333334,
+      "motif_end": 261.75,
+      "approved_opening": false,
+      "cache_file": "build/clips/s015-money_job-1.mp4",
+      "narration_segments": [
+        "s015"
+      ]
+    },
+    {
+      "id": "shot_085",
+      "kind": "ren",
+      "motif": "warning",
+      "segment": "s016",
+      "part": 0,
+      "start_frame": 6282,
+      "end_frame": 6352,
+      "frames": 70,
+      "clip": "thinking",
+      "motif_start": 261.75,
+      "motif_end": 267.625,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-warning-0.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_086",
+      "kind": "ren",
+      "motif": "warning",
+      "segment": "s016",
+      "part": 1,
+      "start_frame": 6352,
+      "end_frame": 6423,
+      "frames": 71,
+      "clip": "nod_yes",
+      "motif_start": 261.75,
+      "motif_end": 267.625,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-warning-1.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_087",
+      "kind": "graphic",
+      "motif": "needs",
+      "segment": "s016",
+      "part": 0,
+      "start_frame": 6423,
+      "end_frame": 6485,
+      "frames": 62,
+      "clip": null,
+      "motif_start": 267.625,
+      "motif_end": 275.3333333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-needs-0.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_088",
+      "kind": "graphic",
+      "motif": "needs",
+      "segment": "s016",
+      "part": 1,
+      "start_frame": 6485,
+      "end_frame": 6546,
+      "frames": 61,
+      "clip": null,
+      "motif_start": 267.625,
+      "motif_end": 275.3333333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-needs-1.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_089",
+      "kind": "graphic",
+      "motif": "needs",
+      "segment": "s016",
+      "part": 2,
+      "start_frame": 6546,
+      "end_frame": 6608,
+      "frames": 62,
+      "clip": null,
+      "motif_start": 267.625,
+      "motif_end": 275.3333333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-needs-2.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_090",
+      "kind": "graphic",
+      "motif": "network",
+      "segment": "s016",
+      "part": 0,
+      "start_frame": 6608,
+      "end_frame": 6670,
+      "frames": 62,
+      "clip": null,
+      "motif_start": 275.3333333333333,
+      "motif_end": 280.5416666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-network-0.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_091",
+      "kind": "graphic",
+      "motif": "network",
+      "segment": "s016",
+      "part": 1,
+      "start_frame": 6670,
+      "end_frame": 6733,
+      "frames": 63,
+      "clip": null,
+      "motif_start": 275.3333333333333,
+      "motif_end": 280.5416666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-network-1.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_092",
+      "kind": "ren",
+      "motif": "early_bills",
+      "segment": "s016",
+      "part": 0,
+      "start_frame": 6733,
+      "end_frame": 6833,
+      "frames": 100,
+      "clip": "thinking",
+      "motif_start": 280.5416666666667,
+      "motif_end": 284.7083333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-early_bills-0.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_093",
+      "kind": "graphic",
+      "motif": "marketplace",
+      "segment": "s016",
+      "part": 0,
+      "start_frame": 6833,
+      "end_frame": 6896,
+      "frames": 63,
+      "clip": null,
+      "motif_start": 284.7083333333333,
+      "motif_end": 289.9583333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-marketplace-0.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_094",
+      "kind": "graphic",
+      "motif": "marketplace",
+      "segment": "s016",
+      "part": 1,
+      "start_frame": 6896,
+      "end_frame": 6959,
+      "frames": 63,
+      "clip": null,
+      "motif_start": 284.7083333333333,
+      "motif_end": 289.9583333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s016-marketplace-1.mp4",
+      "narration_segments": [
+        "s016"
+      ]
+    },
+    {
+      "id": "shot_095",
+      "kind": "graphic",
+      "motif": "deadline",
+      "segment": "s017",
+      "part": 0,
+      "start_frame": 6959,
+      "end_frame": 7034,
+      "frames": 75,
+      "clip": null,
+      "motif_start": 289.9583333333333,
+      "motif_end": 299.375,
+      "approved_opening": false,
+      "cache_file": "build/clips/s017-deadline-0.mp4",
+      "narration_segments": [
+        "s017"
+      ]
+    },
+    {
+      "id": "shot_096",
+      "kind": "graphic",
+      "motif": "deadline",
+      "segment": "s017",
+      "part": 1,
+      "start_frame": 7034,
+      "end_frame": 7110,
+      "frames": 76,
+      "clip": null,
+      "motif_start": 289.9583333333333,
+      "motif_end": 299.375,
+      "approved_opening": false,
+      "cache_file": "build/clips/s017-deadline-1.mp4",
+      "narration_segments": [
+        "s017"
+      ]
+    },
+    {
+      "id": "shot_097",
+      "kind": "graphic",
+      "motif": "deadline",
+      "segment": "s017",
+      "part": 2,
+      "start_frame": 7110,
+      "end_frame": 7185,
+      "frames": 75,
+      "clip": null,
+      "motif_start": 289.9583333333333,
+      "motif_end": 299.375,
+      "approved_opening": false,
+      "cache_file": "build/clips/s017-deadline-2.mp4",
+      "narration_segments": [
+        "s017"
+      ]
+    },
+    {
+      "id": "shot_098",
+      "kind": "ren",
+      "motif": "employer_deadline",
+      "segment": "s018",
+      "part": 0,
+      "start_frame": 7185,
+      "end_frame": 7244,
+      "frames": 59,
+      "clip": "nod_yes",
+      "motif_start": 299.375,
+      "motif_end": 301.8333333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s018-employer_deadline-0.mp4",
+      "narration_segments": [
+        "s018"
+      ]
+    },
+    {
+      "id": "shot_099",
+      "kind": "ren",
+      "motif": "choice",
+      "segment": "s019",
+      "part": 0,
+      "start_frame": 7244,
+      "end_frame": 7320,
+      "frames": 76,
+      "clip": "thinking",
+      "motif_start": 301.8333333333333,
+      "motif_end": 308.2083333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-choice-0.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_100",
+      "kind": "ren",
+      "motif": "choice",
+      "segment": "s019",
+      "part": 1,
+      "start_frame": 7320,
+      "end_frame": 7397,
+      "frames": 77,
+      "clip": "nod_yes",
+      "motif_start": 301.8333333333333,
+      "motif_end": 308.2083333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-choice-1.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_101",
+      "kind": "ren",
+      "motif": "cheaper",
+      "segment": "s019",
+      "part": 0,
+      "start_frame": 7397,
+      "end_frame": 7489,
+      "frames": 92,
+      "clip": "thinking",
+      "motif_start": 308.2083333333333,
+      "motif_end": 312.0416666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-cheaper-0.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_102",
+      "kind": "graphic",
+      "motif": "recap",
+      "segment": "s019",
+      "part": 0,
+      "start_frame": 7489,
+      "end_frame": 7544,
+      "frames": 55,
+      "clip": null,
+      "motif_start": 312.0416666666667,
+      "motif_end": 316.625,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-recap-0.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_103",
+      "kind": "graphic",
+      "motif": "recap",
+      "segment": "s019",
+      "part": 1,
+      "start_frame": 7544,
+      "end_frame": 7599,
+      "frames": 55,
+      "clip": null,
+      "motif_start": 312.0416666666667,
+      "motif_end": 316.625,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-recap-1.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_104",
+      "kind": "graphic",
+      "motif": "forty",
+      "segment": "s019",
+      "part": 0,
+      "start_frame": 7599,
+      "end_frame": 7647,
+      "frames": 48,
+      "clip": null,
+      "motif_start": 316.625,
+      "motif_end": 320.6666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-forty-0.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_105",
+      "kind": "graphic",
+      "motif": "forty",
+      "segment": "s019",
+      "part": 1,
+      "start_frame": 7647,
+      "end_frame": 7696,
+      "frames": 49,
+      "clip": null,
+      "motif_start": 316.625,
+      "motif_end": 320.6666666666667,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-forty-1.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_106",
+      "kind": "ren",
+      "motif": "next",
+      "segment": "s019",
+      "part": 0,
+      "start_frame": 7696,
+      "end_frame": 7781,
+      "frames": 85,
+      "clip": "nod_yes",
+      "motif_start": 320.6666666666667,
+      "motif_end": 324.2083333333333,
+      "approved_opening": false,
+      "cache_file": "build/clips/s019-next-0.mp4",
+      "narration_segments": [
+        "s019"
+      ]
+    },
+    {
+      "id": "shot_107",
+      "kind": "ren",
+      "motif": "close",
+      "segment": "s020",
+      "part": 0,
+      "start_frame": 7781,
+      "end_frame": 7896,
+      "frames": 115,
+      "clip": "thinking",
+      "motif_start": 324.2083333333333,
+      "motif_end": 329.0,
+      "approved_opening": false,
+      "cache_file": "build/clips/s020-close-0.mp4",
+      "narration_segments": [
+        "s020"
+      ]
+    }
+  ],
+  "frames": 7896,
+  "fps": 24,
+  "narration_duration": 328.97875,
+  "full_episode": true,
+  "title": "I Auto-Renewed My Health Plan for 4 Years. Then I Did the Math.",
+  "resolution": [
+    1280,
+    720
+  ],
+  "duration_seconds": 329.0,
+  "codecs": [
+    "H.264",
+    "AAC"
+  ],
+  "native_actor_decode": [
+    1280,
+    720
+  ],
+  "framing": "Steady left presenter with fitted translucent right boxes; no mirroring or zoom changes",
+  "source_manifest": "manifest.json",
+  "assumptions": "../assumptions.json",
+  "no_music": true,
+  "no_source_clip_audio": true
+}

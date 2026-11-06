@@ -1,0 +1,27 @@
+{
+  "whole_episode_including_reused_pilot": {
+    "calls": 20,
+    "observed_gpu_seconds": 448.2852599999999,
+    "request_elapsed_seconds": 518.3452038540127
+  },
+  "full_production_after_pilot": {
+    "new_calls": 17,
+    "observed_gpu_seconds": 370.13634499999966,
+    "request_elapsed_seconds": 430.7990386750098
+  },
+  "latest_approved_replacements": {
+    "new_calls": 3,
+    "observed_gpu_seconds": 38.89894099999992,
+    "request_elapsed_seconds": 48.667606854010955
+  },
+  "retries": 0,
+  "paid_or_overquota_used": 0,
+  "last_historical_snapshot": {
+    "at": "2026-11-06T15:23:47.762659+00:00",
+    "remaining_gpu_seconds": 1932.5576520000002,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:05.527000+00:00"
+  },
+  "measurement_note": "Allowance decreases, not elapsed wall time, estimate GPU usage. Other tasks/reset windows may affect observations; this snapshot is not a live quota guarantee."
+}
