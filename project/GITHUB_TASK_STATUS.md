@@ -11,7 +11,10 @@ Original Short/long video/reference unchanged. Production preflight and technica
 QA pass; source/PCM/financial figures verified. QA.md states inspection limits.
 No full Short rendered. STOP: explicit Jon prototype approval pending. Future
 medical environment artwork approval also required before full-film use.
-Source checkpoint publication pending. Media/caches stay excluded from Git.
+Source checkpoint `51051f8` pushed and fetched back; production/renderer/voice/
+asset/QA files verified byte-identical remotely. Technical QA JSON retained
+in source as well as delivery pack. Status/report follow-up records verification.
+Media/caches stay excluded from Git. No main changes, merge or publication.
 
 ---
 
