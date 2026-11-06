@@ -1,0 +1,199 @@
+{
+ "L1": [
+  {
+   "word": "At",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "word": "25,",
+   "start": 0.18,
+   "end": 0.74
+  },
+  {
+   "word": "my",
+   "start": 1.16,
+   "end": 1.28
+  },
+  {
+   "word": "job",
+   "start": 1.28,
+   "end": 1.58
+  },
+  {
+   "word": "matched",
+   "start": 1.58,
+   "end": 1.94
+  },
+  {
+   "word": "up",
+   "start": 1.94,
+   "end": 2.1
+  },
+  {
+   "word": "to",
+   "start": 2.1,
+   "end": 2.26
+  },
+  {
+   "word": "4%.",
+   "start": 2.26,
+   "end": 2.74
+  }
+ ],
+ "L2": [
+  {
+   "word": "I",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "put",
+   "start": 0.12,
+   "end": 0.3
+  },
+  {
+   "word": "in",
+   "start": 0.3,
+   "end": 0.42
+  },
+  {
+   "word": "two,",
+   "start": 0.42,
+   "end": 0.76
+  },
+  {
+   "word": "because",
+   "start": 1.1,
+   "end": 1.32
+  },
+  {
+   "word": "my",
+   "start": 1.32,
+   "end": 1.54
+  },
+  {
+   "word": "car",
+   "start": 1.54,
+   "end": 1.78
+  },
+  {
+   "word": "lease",
+   "start": 1.78,
+   "end": 2.02
+  },
+  {
+   "word": "felt",
+   "start": 2.02,
+   "end": 2.28
+  },
+  {
+   "word": "urgent.",
+   "start": 2.28,
+   "end": 2.64
+  }
+ ],
+ "L3": [
+  {
+   "word": "That's",
+   "start": 0.0,
+   "end": 0.3
+  },
+  {
+   "word": "about",
+   "start": 0.3,
+   "end": 0.52
+  },
+  {
+   "word": "$880",
+   "start": 0.52,
+   "end": 1.36
+  },
+  {
+   "word": "a",
+   "start": 1.36,
+   "end": 1.98
+  },
+  {
+   "word": "year",
+   "start": 1.98,
+   "end": 2.28
+  },
+  {
+   "word": "of",
+   "start": 2.28,
+   "end": 2.48
+  },
+  {
+   "word": "free",
+   "start": 2.48,
+   "end": 2.72
+  },
+  {
+   "word": "money.",
+   "start": 2.72,
+   "end": 3.06
+  },
+  {
+   "word": "Gone.",
+   "start": 3.48,
+   "end": 3.66
+  }
+ ],
+ "L4": [
+  {
+   "word": "Check",
+   "start": 0.0,
+   "end": 0.2
+  },
+  {
+   "word": "your",
+   "start": 0.2,
+   "end": 0.36
+  },
+  {
+   "word": "match",
+   "start": 0.36,
+   "end": 0.6
+  },
+  {
+   "word": "tonight!",
+   "start": 0.6,
+   "end": 0.86
+  }
+ ],
+ "L5": [
+  {
+   "word": "It",
+   "start": 0.0,
+   "end": 0.12
+  },
+  {
+   "word": "takes",
+   "start": 0.12,
+   "end": 0.42
+  },
+  {
+   "word": "90",
+   "start": 0.42,
+   "end": 0.9
+  },
+  {
+   "word": "seconds.",
+   "start": 0.9,
+   "end": 1.24
+  }
+ ],
+ "L6": [
+  {
+   "word": "Story",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "word": "Friday",
+   "start": 0.36,
+   "end": 0.8
+  }
+ ]
+}

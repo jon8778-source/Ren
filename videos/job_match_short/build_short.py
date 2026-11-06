@@ -339,7 +339,7 @@ def caption_tokens(L, words):
         "L6": ["Story", "Friday."],
     }
     # how many spoken words each display token covers (so whisper's word list maps onto it)
-    span = {"L1": [1, 1, 1, 1, 1, 1, 1, 2], "L3": [1, 1, 3, 1, 1, 1, 1, 1, 1], "L5": [1, 1, 1, 1]}
+    span = {}   # whisper writes numerals, so every display token is exactly one whisper word
     out = []
     for lid, toks in disp.items():
         ws = words[lid]
@@ -429,12 +429,12 @@ class Short:
             Ren(lib, "ren_wave_hello", spans[4]),
         ]
         T = lambda lid, w, n=0: word_time(L, words, lid, w, n)
-        self.t_four = T("L1", "four")
+        self.t_four = T("L1", "4")
         self.t_two = T("L2", "two") if any(x["word"].lower().startswith("two") for x in words["L2"]) else L["L2"]["start"] + 0.5
-        self.t_880 = T("L3", "eight")
+        self.t_880 = T("L3", "$880")
         self.t_gone = T("L3", "gone")
         self.t_match = T("L4", "match")
-        self.t_ninety = T("L5", "ninety")
+        self.t_ninety = T("L5", "90")
         self.disc = disclaimer_layer()
         self.hand_cache = {}
 
