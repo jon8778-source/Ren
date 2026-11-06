@@ -9,7 +9,9 @@ packets and decoded PCM identical; no new TTS or audio edits. Technical QA passe
 Only15s prototype encoded; no full Short. Explicit revised-prototype approval
 pending. Future major medical artwork approval still required. Media/caches kept
 out of Git; generated laptop PNG is a reusable source asset, not video upload.
-Source checkpoint publication pending.
+Revision02 checkpoint `06de8fe` pushed/fetched; renderer, manifest, generated
+laptop PNG and technical QA verified byte-identical remotely. No video in Git.
+Status-only follow-up records verification.
 
 ---
 
