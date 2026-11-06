@@ -1,5 +1,29 @@
 # Ren GitHub task status
 
+## Current: Open Enrollment Short 01 — Qwen/pacing/animation revision 2
+
+Latest owner feedback: stock voice and scene pace felt rushed; white background
+looked basic. Revised prototype lives under `open-enrollment-short-01/revision-02/`.
+V1 stock-US draft remains as history. Current revision uses the actual existing
+British-reference Ren clone via Qwen 1.7B Base, English, xvector-only=True.
+One free ZeroGPU request; original WAV/settings/hashes preserved. Measured
+allowance 19.157088 GPU-seconds; request elapsed 22.823741 seconds. No paid fallback.
+
+18.00s, 1080×1920, 24fps, H.264/AAC, 432 frames. Shorter script, four sustained
+scenes and disclosed 1.47/1.39/1.64-second editorial reading pauses; all normalized
+spoken samples retained in order, no speech retiming. Navy/sage code animation,
+illustrated question cards, native Ren thinking/nod, comparison bars and calendar.
+Original seated pose reused. $2,670 − $690 = $1,980 stays correct and illustrative;
+exact disclaimer in final 4s. Full fatal decode, all-frame black/blank screen,
+scene frame coverage, audio/source correlation, no-retiming sample equality,
+fixed figure/disclaimer pixels and loudness pass. 36 encoded samples and native
+end/character crops inspected. No listening/physical Android claim.
+
+**Stop for explicit revised-prototype approval. No final production render.**
+Feature branch `codex/open-enrollment-short-01`; local source checkpoint only.
+No merge, main/approved asset modification, GitHub video upload or YouTube post.
+Earlier v1 status below is superseded by this current revision.
+
 ## Open enrollment Short 01 — prototype approval pending, 6 November 2026
 
 Local feature branch `codex/open-enrollment-short-01`, based on approved v3

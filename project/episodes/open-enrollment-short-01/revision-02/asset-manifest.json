@@ -1,0 +1,34 @@
+{
+  "reused": [
+    {
+      "file": "assets/ren_library/ren_thinking.mp4",
+      "sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354",
+      "status": "Existing approved source"
+    },
+    {
+      "file": "assets/ren_library/ren_nod_yes.mp4",
+      "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
+      "status": "Existing approved source"
+    },
+    {
+      "file": "project/episodes/open-enrollment-short-01/assets/ren-seated-office.png",
+      "sha256": "9c3e6391f2e1082b56f76c4c93d4d297ca318900bb2c12611303500eaf4514d5",
+      "status": "Existing reference-based seated draft from v1; not regenerated"
+    },
+    {
+      "file": "project/remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "sha256": "7046069756572f2d090fd5ac943b24d1958f2fbb259cd6b99872758d24dbe369",
+      "status": "Existing approved source"
+    }
+  ],
+  "new_code_animation": [
+    "Navy-to-sage background",
+    "Animated email, pointer click and four-second stopwatch",
+    "Shield/usage/branch icons and persistent question cards",
+    "Proportional comparison bars with fixed true values",
+    "Calendar end card with exact disclaimer"
+  ],
+  "new_image_generation_calls": 0,
+  "narration": "New Qwen clone of existing Ren reference, one request; original saved in audio/",
+  "music": "Original procedural lo-fi, 84 BPM; no external samples"
+}

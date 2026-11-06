@@ -1,0 +1,94 @@
+{
+  "file": "Ren_Short_01_Open_Enrollment_Prototype_v2_Qwen.mp4",
+  "bytes": 1782288,
+  "sha256": "3b43e11c9d45464ca089e663600d64b5a4fc5d198ba6d50b021a97de118144c6",
+  "prototype_only": true,
+  "approval": "Stop for explicit owner approval; no final render/publication",
+  "duration": 18.0,
+  "frames": 432,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "full_fatal_decode": "pass",
+  "black_blank_screening_frames": 432,
+  "scenes": [
+    {
+      "id": "email",
+      "start": 0,
+      "end": 4,
+      "start_frame": 0,
+      "end_frame": 96,
+      "frames": 96
+    },
+    {
+      "id": "questions",
+      "start": 4,
+      "end": 9.5,
+      "start_frame": 96,
+      "end_frame": 228,
+      "frames": 132
+    },
+    {
+      "id": "comparison",
+      "start": 9.5,
+      "end": 14,
+      "start_frame": 228,
+      "end_frame": 336,
+      "frames": 108
+    },
+    {
+      "id": "ending",
+      "start": 14,
+      "end": 18,
+      "start_frame": 336,
+      "end_frame": 432,
+      "frames": 96
+    }
+  ],
+  "audio_correlation": 0.999959008481818,
+  "all_normalized_source_spoken_samples_preserved": true,
+  "no_speech_speed_change": true,
+  "editorial_reading_pauses": [
+    1.4700000000000002,
+    1.3900000000000006,
+    1.6400000000000006
+  ],
+  "voice_model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+  "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+  "language": "English",
+  "use_xvector_only": true,
+  "stock_voice_used": false,
+  "generation_calls": 1,
+  "measured_quota_gpu_seconds": 19.15708799999993,
+  "request_elapsed_seconds": 22.823740747000556,
+  "last_quota": {
+    "at": "2026-11-06T11:23:27.872847+00:00",
+    "remaining_gpu_seconds": 2380.842912,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:05.635000+00:00"
+  },
+  "paid_compute": false,
+  "loudness_lufs": -16.38,
+  "true_peak_dbfs": -1.42,
+  "financial_calculation": "2670 - 690 = 1980",
+  "illustrative_not_guaranteed": true,
+  "fixed_encoded_financial_regions": "pass",
+  "disclaimer": "Educational content only, not financial advice.",
+  "disclaimer_duration": 4,
+  "visual_review": {
+    "encoded_samples_inspected": 36,
+    "native_end_frame_inspected": 16.5,
+    "findings": "All four sections and transitions represented. Navy/sage background replaces cream canvas. No critical face/hand/furniture overlay in sampled frames. Figures stay correct during bar animation. End character feet remain clear of the financial badge; glasses, hair, white shirt and trainers intact. Exact disclaimer remains readable.",
+    "listening_or_physical_android_test": false
+  },
+  "listening_or_physical_android_test": false,
+  "youtube_or_github_video_upload": false
+}

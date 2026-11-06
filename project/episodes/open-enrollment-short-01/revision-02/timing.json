@@ -1,0 +1,259 @@
+{
+  "prototype_revision": 2,
+  "duration": 18,
+  "fps": 24,
+  "frames": 432,
+  "voice": "Qwen/Qwen3-TTS-12Hz-1.7B-Base, approved Ren reference, English, use_xvector_only=True",
+  "original": "audio/s001-710eed2bd1ab-a1.wav",
+  "original_sha256": "bfde01eac03f61086bfe4be2d3a502e9792697c2078b4c12dd2b205cb7d63395",
+  "native_voice_seconds": 10.856875,
+  "speech_speed_change": false,
+  "all_spoken_samples_preserved": true,
+  "beats": [
+    {
+      "id": "email",
+      "source_start": 0.0,
+      "source_end": 2.58,
+      "output_start": 0.4,
+      "output_end": 2.98,
+      "source_samples": [
+        0,
+        123840
+      ]
+    },
+    {
+      "id": "questions",
+      "source_start": 2.58,
+      "source_end": 6.74,
+      "output_start": 4.45,
+      "output_end": 8.61,
+      "source_samples": [
+        123840,
+        323520
+      ]
+    },
+    {
+      "id": "comparison",
+      "source_start": 6.74,
+      "source_end": 9.6,
+      "output_start": 10.0,
+      "output_end": 12.86,
+      "source_samples": [
+        323520,
+        460800
+      ]
+    },
+    {
+      "id": "ending",
+      "source_start": 9.6,
+      "source_end": 10.856875,
+      "output_start": 14.5,
+      "output_end": 15.756875,
+      "source_samples": [
+        460800,
+        521130
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "email",
+      "start": 0,
+      "end": 4
+    },
+    {
+      "id": "questions",
+      "start": 4,
+      "end": 9.5
+    },
+    {
+      "id": "comparison",
+      "start": 9.5,
+      "end": 14
+    },
+    {
+      "id": "ending",
+      "start": 14,
+      "end": 18
+    }
+  ],
+  "editorial_reading_pauses": [
+    1.4700000000000002,
+    1.3900000000000006,
+    1.6400000000000006
+  ],
+  "pause_reason": "Latest owner feedback asks for slower reading between animation beats. Explicit editorial breathing room under active graphics, not silence used to hide a generation failure.",
+  "music_bpm": 84,
+  "music_original_procedural": true,
+  "word_timing": [
+    {
+      "word": "keep",
+      "start": 0.34,
+      "end": 0.63,
+      "output_start": 0.74,
+      "output_end": 1.03
+    },
+    {
+      "word": "my",
+      "start": 0.63,
+      "end": 0.8,
+      "output_start": 1.03,
+      "output_end": 1.2000000000000002
+    },
+    {
+      "word": "plan",
+      "start": 0.8,
+      "end": 1.37,
+      "output_start": 1.2000000000000002,
+      "output_end": 1.77
+    },
+    {
+      "word": "four",
+      "start": 1.62,
+      "end": 1.92,
+      "output_start": 2.02,
+      "output_end": 2.32
+    },
+    {
+      "word": "seconds",
+      "start": 1.92,
+      "end": 2.59,
+      "output_start": 2.32,
+      "output_end": 2.98
+    },
+    {
+      "word": "worst",
+      "start": 2.59,
+      "end": 3.06,
+      "output_start": 4.46,
+      "output_end": 4.93
+    },
+    {
+      "word": "year",
+      "start": 3.06,
+      "end": 3.23,
+      "output_start": 4.93,
+      "output_end": 5.1
+    },
+    {
+      "word": "cost(2)",
+      "start": 3.23,
+      "end": 3.73,
+      "output_start": 5.1,
+      "output_end": 5.6
+    },
+    {
+      "word": "actual",
+      "start": 4.02,
+      "end": 4.43,
+      "output_start": 5.89,
+      "output_end": 6.3
+    },
+    {
+      "word": "use(2)",
+      "start": 4.43,
+      "end": 4.93,
+      "output_start": 6.3,
+      "output_end": 6.8
+    },
+    {
+      "word": "where(2)",
+      "start": 5.23,
+      "end": 5.54,
+      "output_start": 7.1000000000000005,
+      "output_end": 7.41
+    },
+    {
+      "word": "does(2)",
+      "start": 5.54,
+      "end": 5.68,
+      "output_start": 7.41,
+      "output_end": 7.55
+    },
+    {
+      "word": "the",
+      "start": 5.68,
+      "end": 5.76,
+      "output_start": 7.55,
+      "output_end": 7.63
+    },
+    {
+      "word": "difference(2)",
+      "start": 5.76,
+      "end": 6.16,
+      "output_start": 7.63,
+      "output_end": 8.030000000000001
+    },
+    {
+      "word": "go",
+      "start": 6.16,
+      "end": 6.59,
+      "output_start": 8.030000000000001,
+      "output_end": 8.46
+    },
+    {
+      "word": "forty",
+      "start": 6.9,
+      "end": 7.21,
+      "output_start": 10.16,
+      "output_end": 10.469999999999999
+    },
+    {
+      "word": "minutes",
+      "start": 7.21,
+      "end": 7.71,
+      "output_start": 10.469999999999999,
+      "output_end": 10.969999999999999
+    },
+    {
+      "word": "almost",
+      "start": 7.99,
+      "end": 8.39,
+      "output_start": 11.25,
+      "output_end": 11.65
+    },
+    {
+      "word": "two",
+      "start": 8.39,
+      "end": 8.56,
+      "output_start": 11.65,
+      "output_end": 11.82
+    },
+    {
+      "word": "thousand(2)",
+      "start": 8.56,
+      "end": 8.94,
+      "output_start": 11.82,
+      "output_end": 12.2
+    },
+    {
+      "word": "dollars(2)",
+      "start": 8.94,
+      "end": 9.48,
+      "output_start": 12.2,
+      "output_end": 12.74
+    },
+    {
+      "word": "full",
+      "start": 9.69,
+      "end": 9.95,
+      "output_start": 14.59,
+      "output_end": 14.85
+    },
+    {
+      "word": "story",
+      "start": 9.95,
+      "end": 10.28,
+      "output_start": 14.85,
+      "output_end": 15.18
+    },
+    {
+      "word": "tuesday(2)",
+      "start": 10.28,
+      "end": 10.86,
+      "output_start": 15.18,
+      "output_end": 15.756875
+    }
+  ],
+  "approval": "Revised prototype; stop for owner approval"
+}

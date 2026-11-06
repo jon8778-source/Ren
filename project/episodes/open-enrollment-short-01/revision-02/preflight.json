@@ -1,0 +1,15 @@
+{
+  "token_available_and_valid": true,
+  "space": "Qwen/Qwen3-TTS",
+  "runtime_stage": "RUNNING",
+  "hardware": "zero-a10g",
+  "revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
+  "quota": {
+    "at": "2026-11-06T11:21:42.736314+00:00",
+    "remaining_gpu_seconds": 2400,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": null
+  },
+  "generation_calls": 0
+}

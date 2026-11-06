@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "title": "Ren Open Enrollment Short 01: pacing/identity revision",
+  "created_at": "2026-11-06T11:22:55.702978+00:00",
+  "script_sha256": "0e5a7b4d980666fd59769841cba0bba2cb390028dc93d99226c054e5df2880cd",
+  "settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "target_duration_s": [
+    15,
+    18
+  ],
+  "segments": [
+    {
+      "id": "s001",
+      "title": "Ren open enrollment teaser",
+      "text": "Keep my plan. Four seconds. Worst-year cost? Actual use? Where does the difference go? Forty minutes. Almost two thousand dollars. Full story Tuesday.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "710eed2bd1ab08269bef65db244ea246a98d922c4aeb55a1688581320d3f0ff7",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T11:23:03.643419+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T11:23:00.322762+00:00",
+            "remaining_gpu_seconds": 2400,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": null
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "b56cb478cee94cb4a6146c7020865307",
+          "session_hash": "e0136ff4-bd81-4c60-9575-c3f38fc79935",
+          "elapsed_seconds": 22.823740747000556,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T11:23:27.872847+00:00",
+            "remaining_gpu_seconds": 2380.842912,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.635000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 19.15708799999993
+        }
+      ],
+      "file": "audio/s001-710eed2bd1ab-a1.wav",
+      "sha256": "bfde01eac03f61086bfe4be2d3a502e9792697c2078b4c12dd2b205cb7d63395",
+      "validation": {
+        "duration_s": 10.856875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 24,
+        "duration_bounds_s": [
+          5.333333333333333,
+          16.333333333333332
+        ],
+        "active_fraction": 0.7255985267034991,
+        "max_internal_silence_s": 0.44,
+        "trim_start_s": 0,
+        "trim_end_s": 10.856875,
+        "processed_duration_s": 10.856875,
+        "median_pitch_hz": 134.50549450549448,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
+    }
+  ],
+  "quota_events": [
+    {
+      "segment": "s001",
+      "phase": "before",
+      "at": "2026-11-06T11:23:00.322762+00:00",
+      "remaining_gpu_seconds": 2400,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": null
+    },
+    {
+      "segment": "s001",
+      "phase": "after",
+      "at": "2026-11-06T11:23:27.872847+00:00",
+      "remaining_gpu_seconds": 2380.842912,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.635000+00:00"
+    }
+  ],
+  "hardware_policy": "Free ZeroGPU only. No paid fallback or blind retry.",
+  "free_reserve_gpu_seconds": 120,
+  "overall_status": "narration_generated_review_pending",
+  "owner_request": "Replace stock voice with actual Ren Qwen reference; calmer reading and richer animation. Prototype only.",
+  "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
+  "quota": {
+    "at": "2026-11-06T11:23:27.872847+00:00",
+    "remaining_gpu_seconds": 2380.842912,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:05.635000+00:00"
+  },
+  "updated_at": "2026-11-06T11:23:27.873972+00:00"
+}
