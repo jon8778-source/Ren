@@ -1,7 +1,7 @@
 # Current task — Shorts production standards implemented, 6 November 2026
 
 Feature branch: `codex/shorts-production-standards`, based on `effec66`.
-Source implementation complete locally: REN_SHORTS_RULES.md, AGENTS.md routing,
+Source implementation complete on the feature branch: REN_SHORTS_RULES.md, AGENTS.md routing,
 Shorts-only preflight/prototype approval gate, measured layout and media QA,
 verified scene cache, manifest contract, asset audit and proposed health-plan test.
 18 regression tests, Python compilation and whitespace checks passed.
@@ -11,7 +11,9 @@ artwork or audio generated. Long-form production and existing movies unchanged.
 Next production task: approved asset inventory → 15-second prototype → explicit
 Jon approval → full Short. No approval exists under this new gate yet.
 Implementation evidence: project/shorts/IMPLEMENTATION_QA.md and media audit.
-Source publication pending; no merge or YouTube/media publication requested.
+Source checkpoint `74db768` pushed and fetched back; five core files verified
+byte-identical remotely. Status-only follow-up records this verification.
+No merge, media upload or YouTube publication performed.
 
 ---
 
