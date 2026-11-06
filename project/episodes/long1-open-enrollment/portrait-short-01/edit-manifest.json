@@ -1,0 +1,1309 @@
+{
+  "title": "Cheaper Health Insurance Isn't Always Cheaper",
+  "source": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/opening-hook-v1/deliverables/Ren_Health_Plan_Revised_Opening.mp4",
+  "source_sha256": "f20e9ec98d919ad31d2c6368df3800a7a272d9766a7ad985b9789d4efb0cedb8",
+  "source_frames": 7841,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 1413,
+  "duration_seconds": 58.875,
+  "clips": [
+    {
+      "id": "hook",
+      "source_start_frame": 0,
+      "source_end_frame": 441,
+      "source_start_sample": 0,
+      "source_end_sample": 882000,
+      "frames": 441,
+      "start_frame": 0,
+      "end_frame": 441,
+      "text": "For four years, I renewed the same health plan. One click. Same plan. Done. Then I compared my options. One plan: two thousand five hundred and twenty dollars a year in premiums. Another: just eight hundred and forty. But here's the catch. Cheaper premiums didn't automatically mean a better deal.",
+      "words": [
+        {
+          "word": "for",
+          "start": 0.08,
+          "end": 0.27,
+          "display": "For ",
+          "segment": "hook"
+        },
+        {
+          "word": "four",
+          "start": 0.27,
+          "end": 0.57,
+          "display": "four ",
+          "segment": "hook"
+        },
+        {
+          "word": "years",
+          "start": 0.57,
+          "end": 1.13,
+          "display": "years, ",
+          "segment": "hook"
+        },
+        {
+          "word": "i",
+          "start": 1.13,
+          "end": 1.27,
+          "display": "I ",
+          "segment": "hook"
+        },
+        {
+          "word": "renewed",
+          "start": 1.27,
+          "end": 1.69,
+          "display": "renewed ",
+          "segment": "hook"
+        },
+        {
+          "word": "the",
+          "start": 1.69,
+          "end": 1.75,
+          "display": "the ",
+          "segment": "hook"
+        },
+        {
+          "word": "same",
+          "start": 1.75,
+          "end": 2.09,
+          "display": "same ",
+          "segment": "hook"
+        },
+        {
+          "word": "health",
+          "start": 2.09,
+          "end": 2.35,
+          "display": "health ",
+          "segment": "hook"
+        },
+        {
+          "word": "plan",
+          "start": 2.35,
+          "end": 2.74,
+          "display": "plan. ",
+          "segment": "hook"
+        },
+        {
+          "word": "one",
+          "start": 3.06,
+          "end": 3.26,
+          "display": "One ",
+          "segment": "hook"
+        },
+        {
+          "word": "click",
+          "start": 3.26,
+          "end": 3.66,
+          "display": "click. ",
+          "segment": "hook"
+        },
+        {
+          "word": "same",
+          "start": 4.01,
+          "end": 4.34,
+          "display": "Same ",
+          "segment": "hook"
+        },
+        {
+          "word": "plan",
+          "start": 4.34,
+          "end": 4.75,
+          "display": "plan. ",
+          "segment": "hook"
+        },
+        {
+          "word": "done",
+          "start": 5.04,
+          "end": 5.45,
+          "display": "Done. ",
+          "segment": "hook"
+        },
+        {
+          "word": "then",
+          "start": 5.95,
+          "end": 6.12,
+          "display": "Then ",
+          "segment": "hook"
+        },
+        {
+          "word": "i",
+          "start": 6.12,
+          "end": 6.21,
+          "display": "I ",
+          "segment": "hook"
+        },
+        {
+          "word": "compared",
+          "start": 6.21,
+          "end": 6.63,
+          "display": "compared ",
+          "segment": "hook"
+        },
+        {
+          "word": "my",
+          "start": 6.63,
+          "end": 6.81,
+          "display": "my ",
+          "segment": "hook"
+        },
+        {
+          "word": "options",
+          "start": 6.81,
+          "end": 7.36,
+          "display": "options. ",
+          "segment": "hook"
+        },
+        {
+          "word": "one",
+          "start": 7.79,
+          "end": 8.09,
+          "display": "One ",
+          "segment": "hook"
+        },
+        {
+          "word": "plan",
+          "start": 8.09,
+          "end": 8.54,
+          "display": "plan: ",
+          "segment": "hook"
+        },
+        {
+          "word": "two",
+          "start": 8.75,
+          "end": 8.93,
+          "display": "two ",
+          "segment": "hook"
+        },
+        {
+          "word": "thousand",
+          "start": 8.93,
+          "end": 9.35,
+          "display": "thousand ",
+          "segment": "hook"
+        },
+        {
+          "word": "five",
+          "start": 9.35,
+          "end": 9.61,
+          "display": "five ",
+          "segment": "hook"
+        },
+        {
+          "word": "hundred",
+          "start": 9.61,
+          "end": 9.91,
+          "display": "hundred ",
+          "segment": "hook"
+        },
+        {
+          "word": "and",
+          "start": 9.91,
+          "end": 10.03,
+          "display": "and ",
+          "segment": "hook"
+        },
+        {
+          "word": "twenty",
+          "start": 10.03,
+          "end": 10.29,
+          "display": "twenty ",
+          "segment": "hook"
+        },
+        {
+          "word": "dollars",
+          "start": 10.29,
+          "end": 10.65,
+          "display": "dollars ",
+          "segment": "hook"
+        },
+        {
+          "word": "a",
+          "start": 10.65,
+          "end": 10.69,
+          "display": "a ",
+          "segment": "hook"
+        },
+        {
+          "word": "year",
+          "start": 10.69,
+          "end": 11.01,
+          "display": "year ",
+          "segment": "hook"
+        },
+        {
+          "word": "in",
+          "start": 11.01,
+          "end": 11.11,
+          "display": "in ",
+          "segment": "hook"
+        },
+        {
+          "word": "premiums",
+          "start": 11.11,
+          "end": 11.69,
+          "display": "premiums. ",
+          "segment": "hook"
+        },
+        {
+          "word": "another",
+          "start": 11.69,
+          "end": 12.18,
+          "display": "Another: ",
+          "segment": "hook"
+        },
+        {
+          "word": "just",
+          "start": 12.49,
+          "end": 12.76,
+          "display": "just ",
+          "segment": "hook"
+        },
+        {
+          "word": "eight",
+          "start": 12.76,
+          "end": 12.96,
+          "display": "eight ",
+          "segment": "hook"
+        },
+        {
+          "word": "hundred",
+          "start": 12.96,
+          "end": 13.21,
+          "display": "hundred ",
+          "segment": "hook"
+        },
+        {
+          "word": "and",
+          "start": 13.21,
+          "end": 13.32,
+          "display": "and ",
+          "segment": "hook"
+        },
+        {
+          "word": "forty",
+          "start": 13.32,
+          "end": 13.77,
+          "display": "forty. ",
+          "segment": "hook"
+        },
+        {
+          "word": "but",
+          "start": 14.13,
+          "end": 14.27,
+          "display": "But ",
+          "segment": "hook"
+        },
+        {
+          "word": "here's",
+          "start": 14.27,
+          "end": 14.51,
+          "display": "here's ",
+          "segment": "hook"
+        },
+        {
+          "word": "the",
+          "start": 14.51,
+          "end": 14.59,
+          "display": "the ",
+          "segment": "hook"
+        },
+        {
+          "word": "catch",
+          "start": 14.59,
+          "end": 15.09,
+          "display": "catch. ",
+          "segment": "hook"
+        },
+        {
+          "word": "cheaper",
+          "start": 15.4,
+          "end": 15.75,
+          "display": "Cheaper ",
+          "segment": "hook"
+        },
+        {
+          "word": "premiums",
+          "start": 15.75,
+          "end": 16.24,
+          "display": "premiums ",
+          "segment": "hook"
+        },
+        {
+          "word": "didn't",
+          "start": 16.24,
+          "end": 16.52,
+          "display": "didn't ",
+          "segment": "hook"
+        },
+        {
+          "word": "automatically",
+          "start": 16.52,
+          "end": 17.17,
+          "display": "automatically ",
+          "segment": "hook"
+        },
+        {
+          "word": "mean",
+          "start": 17.17,
+          "end": 17.38,
+          "display": "mean ",
+          "segment": "hook"
+        },
+        {
+          "word": "a",
+          "start": 17.38,
+          "end": 17.43,
+          "display": "a ",
+          "segment": "hook"
+        },
+        {
+          "word": "better",
+          "start": 17.43,
+          "end": 17.7,
+          "display": "better ",
+          "segment": "hook"
+        },
+        {
+          "word": "deal",
+          "start": 17.7,
+          "end": 18.12,
+          "display": "deal.",
+          "segment": "hook"
+        }
+      ]
+    },
+    {
+      "id": "group_chat",
+      "source_start_frame": 1711,
+      "source_end_frame": 1856,
+      "source_start_sample": 3422000,
+      "source_end_sample": 3712000,
+      "frames": 145,
+      "start_frame": 441,
+      "end_frame": 586,
+      "text": "I asked the group chat. Alex said, \u201cPick the best.\u201d Danny said, \u201cPick the cheapest.\u201d",
+      "words": [
+        {
+          "word": "i",
+          "start": 18.58479166666666,
+          "end": 18.734791666666666,
+          "segment": "s006",
+          "display": "I "
+        },
+        {
+          "word": "asked",
+          "start": 18.734791666666666,
+          "end": 19.064791666666665,
+          "segment": "s006",
+          "display": "asked "
+        },
+        {
+          "word": "the",
+          "start": 19.064791666666665,
+          "end": 19.154791666666654,
+          "segment": "s006",
+          "display": "the "
+        },
+        {
+          "word": "group",
+          "start": 19.154791666666654,
+          "end": 19.41479166666666,
+          "segment": "s006",
+          "display": "group "
+        },
+        {
+          "word": "chat",
+          "start": 19.41479166666666,
+          "end": 19.824791666666655,
+          "segment": "s006",
+          "display": "chat. "
+        },
+        {
+          "word": "alex",
+          "start": 20.344791666666666,
+          "end": 20.704791666666665,
+          "segment": "s006",
+          "display": "Alex "
+        },
+        {
+          "word": "said",
+          "start": 20.704791666666665,
+          "end": 21.014791666666653,
+          "segment": "s006",
+          "display": "said, "
+        },
+        {
+          "word": "pick",
+          "start": 21.354791666666657,
+          "end": 21.624791666666667,
+          "segment": "s006",
+          "display": "\u201cPick "
+        },
+        {
+          "word": "the",
+          "start": 21.624791666666667,
+          "end": 21.734791666666666,
+          "segment": "s006",
+          "display": "the "
+        },
+        {
+          "word": "best",
+          "start": 21.734791666666666,
+          "end": 22.234791666666666,
+          "segment": "s006",
+          "display": "best.\u201d "
+        },
+        {
+          "word": "danny",
+          "start": 22.61479166666666,
+          "end": 22.934791666666655,
+          "segment": "s006",
+          "display": "Danny "
+        },
+        {
+          "word": "said",
+          "start": 22.934791666666655,
+          "end": 23.19479166666666,
+          "segment": "s006",
+          "display": "said, "
+        },
+        {
+          "word": "pick",
+          "start": 23.19479166666666,
+          "end": 23.454791666666665,
+          "segment": "s006",
+          "display": "\u201cPick "
+        },
+        {
+          "word": "the",
+          "start": 23.454791666666665,
+          "end": 23.564791666666665,
+          "segment": "s006",
+          "display": "the "
+        },
+        {
+          "word": "cheapest",
+          "start": 23.564791666666665,
+          "end": 24.19479166666666,
+          "segment": "s006",
+          "display": "cheapest.\u201d "
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "source_start_frame": 6366,
+      "source_end_frame": 6774,
+      "source_start_sample": 12732000,
+      "source_end_sample": 13548000,
+      "frames": 408,
+      "start_frame": 586,
+      "end_frame": 994,
+      "text": "If you're expecting a baby, planning surgery, seeing specialists regularly or taking expensive medication, the PPO could be much better. Check both networks, your drug coverage, the exact deductible and the out-of-pocket limits. Remember that high expenses can arrive before your HSA has much money in it.",
+      "words": [
+        {
+          "word": "if",
+          "start": 24.514375000000012,
+          "end": 24.634375000000016,
+          "segment": "s016",
+          "display": "If "
+        },
+        {
+          "word": "you're",
+          "start": 24.634375000000016,
+          "end": 24.79437500000004,
+          "segment": "s016",
+          "display": "you're "
+        },
+        {
+          "word": "expecting",
+          "start": 24.79437500000004,
+          "end": 25.23437500000004,
+          "segment": "s016",
+          "display": "expecting "
+        },
+        {
+          "word": "a",
+          "start": 25.23437500000004,
+          "end": 25.274375000000003,
+          "segment": "s016",
+          "display": "a "
+        },
+        {
+          "word": "baby",
+          "start": 25.274375000000003,
+          "end": 25.73437500000004,
+          "segment": "s016",
+          "display": "baby, "
+        },
+        {
+          "word": "planning",
+          "start": 25.91437499999999,
+          "end": 26.284374999999994,
+          "segment": "s016",
+          "display": "planning "
+        },
+        {
+          "word": "surgery",
+          "start": 26.284374999999994,
+          "end": 26.844374999999996,
+          "segment": "s016",
+          "display": "surgery, "
+        },
+        {
+          "word": "seeing",
+          "start": 26.964375,
+          "end": 27.214375,
+          "segment": "s016",
+          "display": "seeing "
+        },
+        {
+          "word": "specialists",
+          "start": 27.214375,
+          "end": 27.764375000000012,
+          "segment": "s016",
+          "display": "specialists "
+        },
+        {
+          "word": "regularly",
+          "start": 27.764375000000012,
+          "end": 28.314375000000023,
+          "segment": "s016",
+          "display": "regularly "
+        },
+        {
+          "word": "or",
+          "start": 28.314375000000023,
+          "end": 28.54437500000004,
+          "segment": "s016",
+          "display": "or "
+        },
+        {
+          "word": "taking",
+          "start": 28.54437500000004,
+          "end": 28.874375000000025,
+          "segment": "s016",
+          "display": "taking "
+        },
+        {
+          "word": "expensive",
+          "start": 28.874375000000025,
+          "end": 29.324375000000014,
+          "segment": "s016",
+          "display": "expensive "
+        },
+        {
+          "word": "medication",
+          "start": 29.324375000000014,
+          "end": 29.934375000000028,
+          "segment": "s016",
+          "display": "medication, "
+        },
+        {
+          "word": "the",
+          "start": 30.184375000000028,
+          "end": 30.264375000000012,
+          "segment": "s016",
+          "display": "the "
+        },
+        {
+          "word": "ppo",
+          "start": 30.264375000000012,
+          "end": 30.75437500000002,
+          "segment": "s016",
+          "display": "PPO "
+        },
+        {
+          "word": "could",
+          "start": 30.75437500000002,
+          "end": 30.924375000000037,
+          "segment": "s016",
+          "display": "could "
+        },
+        {
+          "word": "be",
+          "start": 30.924375000000037,
+          "end": 31.054375000000032,
+          "segment": "s016",
+          "display": "be "
+        },
+        {
+          "word": "much",
+          "start": 31.054375000000032,
+          "end": 31.374375000000025,
+          "segment": "s016",
+          "display": "much "
+        },
+        {
+          "word": "better",
+          "start": 31.374375000000025,
+          "end": 31.764375000000012,
+          "segment": "s016",
+          "display": "better. "
+        },
+        {
+          "word": "check",
+          "start": 32.19437500000002,
+          "end": 32.44437500000002,
+          "segment": "s016",
+          "display": "Check "
+        },
+        {
+          "word": "both",
+          "start": 32.44437500000002,
+          "end": 32.68437500000003,
+          "segment": "s016",
+          "display": "both "
+        },
+        {
+          "word": "networks",
+          "start": 32.68437500000003,
+          "end": 33.33437500000001,
+          "segment": "s016",
+          "display": "networks, "
+        },
+        {
+          "word": "your",
+          "start": 33.33437500000001,
+          "end": 33.464375000000004,
+          "segment": "s016",
+          "display": "your "
+        },
+        {
+          "word": "drug",
+          "start": 33.464375000000004,
+          "end": 33.774375000000006,
+          "segment": "s016",
+          "display": "drug "
+        },
+        {
+          "word": "coverage",
+          "start": 33.774375000000006,
+          "end": 34.24437500000003,
+          "segment": "s016",
+          "display": "coverage, "
+        },
+        {
+          "word": "the",
+          "start": 34.24437500000003,
+          "end": 34.56437500000003,
+          "segment": "s016",
+          "display": "the "
+        },
+        {
+          "word": "exact",
+          "start": 34.56437500000003,
+          "end": 34.93437500000003,
+          "segment": "s016",
+          "display": "exact "
+        },
+        {
+          "word": "deductible",
+          "start": 34.93437500000003,
+          "end": 35.58437500000001,
+          "segment": "s016",
+          "display": "deductible "
+        },
+        {
+          "word": "and",
+          "start": 35.58437500000001,
+          "end": 35.764375000000015,
+          "segment": "s016",
+          "display": "and "
+        },
+        {
+          "word": "the",
+          "start": 35.764375000000015,
+          "end": 35.89437500000001,
+          "segment": "s016",
+          "display": "the "
+        },
+        {
+          "word": "out",
+          "start": 35.89437500000001,
+          "end": 36.044375000000045,
+          "segment": "s016",
+          "display": "out-"
+        },
+        {
+          "word": "of",
+          "start": 36.044375000000045,
+          "end": 36.11437500000004,
+          "segment": "s016",
+          "display": "of-"
+        },
+        {
+          "word": "pocket",
+          "start": 36.11437500000004,
+          "end": 36.464375000000004,
+          "segment": "s016",
+          "display": "pocket "
+        },
+        {
+          "word": "limits",
+          "start": 36.464375000000004,
+          "end": 36.94437500000002,
+          "segment": "s016",
+          "display": "limits. "
+        },
+        {
+          "word": "remember",
+          "start": 37.43437500000003,
+          "end": 37.74437500000003,
+          "segment": "s016",
+          "display": "Remember "
+        },
+        {
+          "word": "that",
+          "start": 37.74437500000003,
+          "end": 37.904375,
+          "segment": "s016",
+          "display": "that "
+        },
+        {
+          "word": "high",
+          "start": 37.904375,
+          "end": 38.14437500000001,
+          "segment": "s016",
+          "display": "high "
+        },
+        {
+          "word": "expenses",
+          "start": 38.14437500000001,
+          "end": 38.654375,
+          "segment": "s016",
+          "display": "expenses "
+        },
+        {
+          "word": "can",
+          "start": 38.654375,
+          "end": 38.794375000000045,
+          "segment": "s016",
+          "display": "can "
+        },
+        {
+          "word": "arrive",
+          "start": 38.794375000000045,
+          "end": 39.17437500000004,
+          "segment": "s016",
+          "display": "arrive "
+        },
+        {
+          "word": "before",
+          "start": 39.17437500000004,
+          "end": 39.49437500000003,
+          "segment": "s016",
+          "display": "before "
+        },
+        {
+          "word": "your",
+          "start": 39.49437500000003,
+          "end": 39.63437500000002,
+          "segment": "s016",
+          "display": "your "
+        },
+        {
+          "word": "hsa",
+          "start": 39.63437500000002,
+          "end": 40.14437500000001,
+          "segment": "s016",
+          "display": "HSA "
+        },
+        {
+          "word": "has",
+          "start": 40.14437500000001,
+          "end": 40.32437500000002,
+          "segment": "s016",
+          "display": "has "
+        },
+        {
+          "word": "much",
+          "start": 40.32437500000002,
+          "end": 40.554375000000036,
+          "segment": "s016",
+          "display": "much "
+        },
+        {
+          "word": "money",
+          "start": 40.554375000000036,
+          "end": 40.81437500000003,
+          "segment": "s016",
+          "display": "money "
+        },
+        {
+          "word": "in",
+          "start": 40.81437500000003,
+          "end": 40.91437500000005,
+          "segment": "s016",
+          "display": "in "
+        },
+        {
+          "word": "it",
+          "start": 40.91437500000005,
+          "end": 41.10437499999999,
+          "segment": "s016",
+          "display": "it. "
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "source_start_frame": 7185,
+      "source_end_frame": 7341,
+      "source_start_sample": 14370000,
+      "source_end_sample": 14682000,
+      "frames": 156,
+      "start_frame": 994,
+      "end_frame": 1150,
+      "text": "Back at my laptop, I didn't click \u201cKeep my current plan.\u201d I checked my own numbers and made a deliberate choice.",
+      "words": [
+        {
+          "word": "back",
+          "start": 41.57687500000001,
+          "end": 41.966874999999995,
+          "segment": "s019",
+          "display": "Back "
+        },
+        {
+          "word": "at",
+          "start": 41.966874999999995,
+          "end": 42.046875000000036,
+          "segment": "s019",
+          "display": "at "
+        },
+        {
+          "word": "my",
+          "start": 42.046875000000036,
+          "end": 42.206875000000004,
+          "segment": "s019",
+          "display": "my "
+        },
+        {
+          "word": "laptop",
+          "start": 42.206875000000004,
+          "end": 42.82687500000001,
+          "segment": "s019",
+          "display": "laptop, "
+        },
+        {
+          "word": "i",
+          "start": 43.03687499999999,
+          "end": 43.146875,
+          "segment": "s019",
+          "display": "I "
+        },
+        {
+          "word": "didn't",
+          "start": 43.146875,
+          "end": 43.38687500000001,
+          "segment": "s019",
+          "display": "didn't "
+        },
+        {
+          "word": "click",
+          "start": 43.38687500000001,
+          "end": 43.66687499999998,
+          "segment": "s019",
+          "display": "click "
+        },
+        {
+          "word": "keep",
+          "start": 43.66687499999998,
+          "end": 43.90687499999999,
+          "segment": "s019",
+          "display": "\u201cKeep "
+        },
+        {
+          "word": "my",
+          "start": 43.90687499999999,
+          "end": 44.046875000000036,
+          "segment": "s019",
+          "display": "my "
+        },
+        {
+          "word": "current",
+          "start": 44.046875000000036,
+          "end": 44.38687500000001,
+          "segment": "s019",
+          "display": "current "
+        },
+        {
+          "word": "plan",
+          "start": 44.38687500000001,
+          "end": 44.806875000000026,
+          "segment": "s019",
+          "display": "plan.\u201d "
+        },
+        {
+          "word": "i",
+          "start": 45.256875000000015,
+          "end": 45.35687499999998,
+          "segment": "s019",
+          "display": "I "
+        },
+        {
+          "word": "checked",
+          "start": 45.35687499999998,
+          "end": 45.62687500000002,
+          "segment": "s019",
+          "display": "checked "
+        },
+        {
+          "word": "my",
+          "start": 45.62687500000002,
+          "end": 45.806875000000026,
+          "segment": "s019",
+          "display": "my "
+        },
+        {
+          "word": "own",
+          "start": 45.806875000000026,
+          "end": 46.03687499999999,
+          "segment": "s019",
+          "display": "own "
+        },
+        {
+          "word": "numbers",
+          "start": 46.03687499999999,
+          "end": 46.40687499999999,
+          "segment": "s019",
+          "display": "numbers "
+        },
+        {
+          "word": "and",
+          "start": 46.40687499999999,
+          "end": 46.496875000000024,
+          "segment": "s019",
+          "display": "and "
+        },
+        {
+          "word": "made",
+          "start": 46.496875000000024,
+          "end": 46.69687500000001,
+          "segment": "s019",
+          "display": "made "
+        },
+        {
+          "word": "a",
+          "start": 46.69687500000001,
+          "end": 46.746875000000024,
+          "segment": "s019",
+          "display": "a "
+        },
+        {
+          "word": "deliberate",
+          "start": 46.746875000000024,
+          "end": 47.23687500000003,
+          "segment": "s019",
+          "display": "deliberate "
+        },
+        {
+          "word": "choice",
+          "start": 47.23687500000003,
+          "end": 47.706875000000004,
+          "segment": "s019",
+          "display": "choice. "
+        }
+      ]
+    },
+    {
+      "id": "three_questions",
+      "source_start_frame": 7428,
+      "source_end_frame": 7638,
+      "source_start_sample": 14856000,
+      "source_end_sample": 15276000,
+      "frames": 210,
+      "start_frame": 1150,
+      "end_frame": 1360,
+      "text": "I learned to ask: what's the bad year, what's the real year, and where would the difference go? Forty minutes once a year. That's a better habit than four seconds of autopilot.",
+      "words": [
+        {
+          "word": "i",
+          "start": 48.151875,
+          "end": 48.23187499999998,
+          "segment": "s019",
+          "display": "I "
+        },
+        {
+          "word": "learned",
+          "start": 48.23187499999998,
+          "end": 48.49187500000003,
+          "segment": "s019",
+          "display": "learned "
+        },
+        {
+          "word": "to",
+          "start": 48.49187500000003,
+          "end": 48.56187500000002,
+          "segment": "s019",
+          "display": "to "
+        },
+        {
+          "word": "ask",
+          "start": 48.56187500000002,
+          "end": 49.03187499999999,
+          "segment": "s019",
+          "display": "ask: "
+        },
+        {
+          "word": "what's",
+          "start": 49.03187499999999,
+          "end": 49.421875000000036,
+          "segment": "s019",
+          "display": "what's "
+        },
+        {
+          "word": "the",
+          "start": 49.421875000000036,
+          "end": 49.51187500000001,
+          "segment": "s019",
+          "display": "the "
+        },
+        {
+          "word": "bad",
+          "start": 49.51187500000001,
+          "end": 49.76187500000001,
+          "segment": "s019",
+          "display": "bad "
+        },
+        {
+          "word": "year",
+          "start": 49.76187500000001,
+          "end": 50.091874999999995,
+          "segment": "s019",
+          "display": "year, "
+        },
+        {
+          "word": "what's",
+          "start": 50.211875,
+          "end": 50.421875000000036,
+          "segment": "s019",
+          "display": "what's "
+        },
+        {
+          "word": "the",
+          "start": 50.421875000000036,
+          "end": 50.50187500000002,
+          "segment": "s019",
+          "display": "the "
+        },
+        {
+          "word": "real",
+          "start": 50.50187500000002,
+          "end": 50.76187500000001,
+          "segment": "s019",
+          "display": "real "
+        },
+        {
+          "word": "year",
+          "start": 50.76187500000001,
+          "end": 51.11187500000003,
+          "segment": "s019",
+          "display": "year, "
+        },
+        {
+          "word": "and",
+          "start": 51.271875,
+          "end": 51.461875,
+          "segment": "s019",
+          "display": "and "
+        },
+        {
+          "word": "where",
+          "start": 51.461875,
+          "end": 51.66187499999999,
+          "segment": "s019",
+          "display": "where "
+        },
+        {
+          "word": "would",
+          "start": 51.66187499999999,
+          "end": 51.78187499999999,
+          "segment": "s019",
+          "display": "would "
+        },
+        {
+          "word": "the",
+          "start": 51.78187499999999,
+          "end": 51.841874999999995,
+          "segment": "s019",
+          "display": "the "
+        },
+        {
+          "word": "difference",
+          "start": 51.841874999999995,
+          "end": 52.181875000000026,
+          "segment": "s019",
+          "display": "difference "
+        },
+        {
+          "word": "go",
+          "start": 52.181875000000026,
+          "end": 52.48187499999998,
+          "segment": "s019",
+          "display": "go? "
+        },
+        {
+          "word": "forty",
+          "start": 52.76187500000001,
+          "end": 53.05187500000003,
+          "segment": "s019",
+          "display": "Forty "
+        },
+        {
+          "word": "minutes",
+          "start": 53.05187500000003,
+          "end": 53.341874999999995,
+          "segment": "s019",
+          "display": "minutes "
+        },
+        {
+          "word": "once",
+          "start": 53.341874999999995,
+          "end": 53.591874999999995,
+          "segment": "s019",
+          "display": "once "
+        },
+        {
+          "word": "a",
+          "start": 53.591874999999995,
+          "end": 53.631875000000015,
+          "segment": "s019",
+          "display": "a "
+        },
+        {
+          "word": "year",
+          "start": 53.631875000000015,
+          "end": 53.98187500000004,
+          "segment": "s019",
+          "display": "year. "
+        },
+        {
+          "word": "that's",
+          "start": 54.121875000000024,
+          "end": 54.331875000000004,
+          "segment": "s019",
+          "display": "That's "
+        },
+        {
+          "word": "a",
+          "start": 54.331875000000004,
+          "end": 54.371875000000024,
+          "segment": "s019",
+          "display": "a "
+        },
+        {
+          "word": "better",
+          "start": 54.371875000000024,
+          "end": 54.601874999999986,
+          "segment": "s019",
+          "display": "better "
+        },
+        {
+          "word": "habit",
+          "start": 54.601874999999986,
+          "end": 54.92187499999998,
+          "segment": "s019",
+          "display": "habit "
+        },
+        {
+          "word": "than",
+          "start": 54.92187499999998,
+          "end": 55.06187500000002,
+          "segment": "s019",
+          "display": "than "
+        },
+        {
+          "word": "four",
+          "start": 55.06187500000002,
+          "end": 55.31187500000002,
+          "segment": "s019",
+          "display": "four "
+        },
+        {
+          "word": "seconds",
+          "start": 55.31187500000002,
+          "end": 55.69187500000002,
+          "segment": "s019",
+          "display": "seconds "
+        },
+        {
+          "word": "of",
+          "start": 55.69187500000002,
+          "end": 55.771875,
+          "segment": "s019",
+          "display": "of "
+        },
+        {
+          "word": "autopilot",
+          "start": 55.771875,
+          "end": 56.41187499999999,
+          "segment": "s019",
+          "display": "autopilot. "
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "source_start_frame": 7788,
+      "source_end_frame": 7841,
+      "source_start_sample": 15576000,
+      "source_end_sample": 15682000,
+      "frames": 53,
+      "start_frame": 1360,
+      "end_frame": 1413,
+      "text": "If this was useful, stick around.",
+      "words": [
+        {
+          "word": "if",
+          "start": 56.74875000000001,
+          "end": 56.878750000000004,
+          "segment": "s020",
+          "display": "If "
+        },
+        {
+          "word": "this",
+          "start": 56.878750000000004,
+          "end": 57.06875,
+          "segment": "s020",
+          "display": "this "
+        },
+        {
+          "word": "was",
+          "start": 57.06875,
+          "end": 57.28874999999997,
+          "segment": "s020",
+          "display": "was "
+        },
+        {
+          "word": "useful",
+          "start": 57.28874999999997,
+          "end": 57.79875000000002,
+          "segment": "s020",
+          "display": "useful, "
+        },
+        {
+          "word": "stick",
+          "start": 57.928750000000015,
+          "end": 58.23875000000002,
+          "segment": "s020",
+          "display": "stick "
+        },
+        {
+          "word": "around",
+          "start": 58.23875000000002,
+          "end": 58.73875000000002,
+          "segment": "s020",
+          "display": "around."
+        }
+      ]
+    }
+  ],
+  "narration": "Exact selected decoded source samples, in this order; no new voice, speed changes or inserted gaps",
+  "graphics": "Existing v3 palette/font and approved medical props reformatted sharply for portrait. Native source Ren footage cropped, not enlarged or regenerated.",
+  "source_unmodified": true,
+  "voice_service_requests": 0,
+  "publication": false
+}

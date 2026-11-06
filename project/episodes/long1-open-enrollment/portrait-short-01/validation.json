@@ -1,0 +1,33 @@
+{
+  "runtime_seconds": 58.875,
+  "video_frames": 1413,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "clip_frames": {
+    "hook": 441,
+    "group_chat": 145,
+    "checklist": 408,
+    "decision": 156,
+    "three_questions": 210,
+    "close": 53
+  },
+  "source_sha256_unchanged": "f20e9ec98d919ad31d2c6368df3800a7a272d9766a7ad985b9789d4efb0cedb8",
+  "output_sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+  "source_pcm_selection_exact": true,
+  "master_audio_duration_seconds": 58.86533333333333,
+  "encoded_audio_correlation": 0.9999760590588537,
+  "encoded_audio_peak_dbfs": -1.9295573234558105,
+  "full_fatal_decode_passed": true,
+  "all_frames_nonblank": true,
+  "caption_count": 21,
+  "hf_generation_calls": 0,
+  "new_gpu_allowance_used": 0,
+  "speed_change": false,
+  "audio_listened": false,
+  "physical_android_test": false
+}

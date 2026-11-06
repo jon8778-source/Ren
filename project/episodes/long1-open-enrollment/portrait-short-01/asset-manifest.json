@@ -1,0 +1,11 @@
+{
+ "reused": [
+  {"path":"../opening-hook-v1/deliverables/Ren_Health_Plan_Revised_Opening.mp4","usage":"all narration and actual animated Ren/office pixels"},
+  {"path":"../full/assets/medical-props.png","usage":"baby, clipboard and medication illustrations"},
+  {"path":"../../../remotion/public/fonts/fredoka-latin-600-normal.woff2","usage":"approved Fredoka typography"},
+  {"path":"../calculations.py","usage":"annual premiums from shared assumptions"}
+ ],
+ "new_code_graphics":["premium cards","annual-renewal checks","group-chat quote cards","care checklist","three-question recap","final CTA/disclaimer"],
+ "new_generated_artwork":[],
+ "new_voice_requests":0
+}

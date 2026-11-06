@@ -1,3 +1,18 @@
+# Current task — portrait health-plan Short complete locally, 6 November 2026
+
+Branch `codex/health-plan-portrait-short`. User requested a one-minute portrait
+Short from the revised full MP4, superseding the earlier no-Shorts scope.
+New directory: `episodes/long1-open-enrollment/portrait-short-01/`.
+58.875 seconds, 1,413 frames, 1080×1920, 24fps H.264/AAC.
+Existing British Ren voice reused without speed changes; zero generation calls.
+Native presenter pixels, readable portrait cards and 21 burned-in/SRT captions.
+All-frame decode/blank/frame-count and exact selected-PCM checks pass.
+Original MP4 unchanged. QA.md records visual/audio/device-testing limits.
+Source committed only on the isolated local feature branch; no push/merge,
+GitHub video upload or YouTube publication. Media delivered separately.
+
+---
+
 # Current task — approved opening edit complete, 6 November2026
 
 Branch codex/long1-opening-hook. Jon approved the exact hook preview and requested
