@@ -1,3 +1,20 @@
+# Current task — Shorts production standards implemented, 6 November 2026
+
+Feature branch: `codex/shorts-production-standards`, based on `effec66`.
+Source implementation complete locally: REN_SHORTS_RULES.md, AGENTS.md routing,
+Shorts-only preflight/prototype approval gate, measured layout and media QA,
+verified scene cache, manifest contract, asset audit and proposed health-plan test.
+18 regression tests, Python compilation and whitespace checks passed.
+Existing health-plan Short decoded only: media passes; persistent navy surround
+flagged and confirmed noncompliant by source inspection. No Short/prototype,
+artwork or audio generated. Long-form production and existing movies unchanged.
+Next production task: approved asset inventory → 15-second prototype → explicit
+Jon approval → full Short. No approval exists under this new gate yet.
+Implementation evidence: project/shorts/IMPLEMENTATION_QA.md and media audit.
+Source publication pending; no merge or YouTube/media publication requested.
+
+---
+
 # Current task — portrait health-plan Short complete locally, 6 November 2026
 
 Branch `codex/health-plan-portrait-short`. User requested a one-minute portrait

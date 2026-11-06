@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "title": "Example only \u2014 NOT approved",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 360,
+  "full_bleed": true,
+  "permanent_border": false,
+  "asset_report": "ASSET_REQUIREMENTS.md",
+  "layout_evidence": "layout.json",
+  "prototype": "prototype.mp4",
+  "prototype_report": "prototype.qa.json",
+  "assets": [
+    {
+      "id": "script",
+      "kind": "script",
+      "path": "REPLACE_WITH_APPROVED_SCRIPT",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    },
+    {
+      "id": "audio",
+      "kind": "audio",
+      "path": "REPLACE_WITH_APPROVED_AUDIO",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    },
+    {
+      "id": "renderer",
+      "kind": "renderer",
+      "path": "REPLACE_WITH_APPROVED_RENDERER",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    },
+    {
+      "id": "configuration",
+      "kind": "configuration",
+      "path": "REPLACE_WITH_APPROVED_CONFIGURATION",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    },
+    {
+      "id": "character",
+      "kind": "character",
+      "path": "REPLACE_WITH_APPROVED_CHARACTER",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    },
+    {
+      "id": "environment",
+      "kind": "environment",
+      "path": "REPLACE_WITH_APPROVED_ENVIRONMENT",
+      "sha256": "REPLACE_WITH_SHA256",
+      "status": "missing",
+      "approval_evidence": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "email-arrives",
+      "start_frame": 0,
+      "end_frame": 72,
+      "kind": "action",
+      "composition": "environment-office",
+      "action": "Notification draws attention",
+      "motion_purpose": "Show renewal decision",
+      "assets": [
+        "character",
+        "environment"
+      ],
+      "animations": [
+        "email-arrives-motion"
+      ],
+      "environment_fullscreen": true
+    },
+    {
+      "id": "cursor-choice",
+      "start_frame": 72,
+      "end_frame": 144,
+      "kind": "action",
+      "composition": "laptop-closeup",
+      "action": "Cursor approaches keep-current-plan",
+      "motion_purpose": "Show autopilot choice",
+      "assets": [
+        "character",
+        "environment"
+      ],
+      "animations": [
+        "cursor-choice-motion"
+      ],
+      "environment_fullscreen": false
+    },
+    {
+      "id": "four-renewals",
+      "start_frame": 144,
+      "end_frame": 216,
+      "kind": "action",
+      "composition": "screen-and-calendar",
+      "action": "Four annual confirmations replace each other",
+      "motion_purpose": "Establish repetition",
+      "assets": [
+        "character",
+        "environment"
+      ],
+      "animations": [
+        "four-renewals-motion"
+      ],
+      "environment_fullscreen": false
+    },
+    {
+      "id": "two-plan-cards",
+      "start_frame": 216,
+      "end_frame": 288,
+      "kind": "action",
+      "composition": "desk-overhead",
+      "action": "Premium cards slide beside the laptop",
+      "motion_purpose": "Reveal comparison",
+      "assets": [
+        "character",
+        "environment"
+      ],
+      "animations": [
+        "two-plan-cards-motion"
+      ],
+      "environment_fullscreen": true
+    },
+    {
+      "id": "ren-reaction",
+      "start_frame": 288,
+      "end_frame": 360,
+      "kind": "action",
+      "composition": "office-reaction",
+      "action": "Ren notices deductible detail",
+      "motion_purpose": "Question the cheaper premium",
+      "assets": [
+        "character",
+        "environment"
+      ],
+      "animations": [
+        "ren-reaction-motion"
+      ],
+      "environment_fullscreen": true
+    }
+  ],
+  "audio_cues": [
+    {
+      "start": 0,
+      "end": 15,
+      "text": "Replace with measured approved narration cues"
+    }
+  ]
+}

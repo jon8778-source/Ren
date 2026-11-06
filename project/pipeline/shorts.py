@@ -18,6 +18,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+# CLI dispatch precedes legacy dependency imports. No audio preparation happens
+# before the mandatory v3 preflight and prototype gate.
+if __name__ == "__main__":
+    from shorts_standards import cli as standards_main
+    sys.exit(standards_main())
+
 import numpy as np
 import soundfile as sf
 
@@ -102,7 +108,3 @@ def main():
                                                      "scenes": scenes}, indent=1, ensure_ascii=False) + "\n")
         (out / "description.txt").write_text(sh["description"].strip() + "\n\n" + spec["description_footer"].strip() + "\n")
         print(f"{out.name}: {len(sh['lines'])} lines, {len(track) / sr:.1f}s")
-
-
-if __name__ == "__main__":
-    main()

@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "warnings": [
+    "Persistent uniform edge bands: review for borders/letterboxing; walls may trigger this heuristic"
+  ],
+  "frames": 1413,
+  "duration_seconds": 58.875,
+  "full_fatal_decode": true,
+  "av_start_difference": 0.0,
+  "av_duration_difference": 0.00999999999999801,
+  "longest_identical_frame_run": 11,
+  "persistent_uniform_edges": [
+    true,
+    true,
+    false,
+    true
+  ],
+  "status": "technical-pass-review-required",
+  "scope": "media only; asset/layout/approval checks not performed"
+}

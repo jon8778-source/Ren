@@ -23,3 +23,14 @@ For GitHub publishing, follow project/GITHUB_TASK_WORKFLOW.md and maintain
 project/GITHUB_TASK_STATUS.md with remotely verified checkpoints. These are
 publishing safeguards, not an Android client-sync fix. Resume from the remote
 branch after an interruption; do not regenerate approved art or narration.
+
+## Mandatory Shorts workflow
+
+Whenever planning, creating, adapting or revising a YouTube Short, read
+[project/REN_SHORTS_RULES.md](project/REN_SHORTS_RULES.md) before implementation.
+These Shorts-specific standards supersede historical Shorts layouts/helpers.
+Use the asset-first report and `project/pipeline/shorts_standards.py` workflow.
+Produce only the 15-second prototype first, deliver it and STOP for explicit
+owner approval before complete-Short rendering. Record real approval bound to
+its preview hash and production inputs; never treat a render as approval.
+Existing approved long-form production continues under REN_VIDEO_RULES.md.
