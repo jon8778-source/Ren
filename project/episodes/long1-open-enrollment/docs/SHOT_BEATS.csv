@@ -1,0 +1,9 @@
+scene,approx_time,story_beat,reference_art,full_video_only
+1,00:00-00:20,Four seconds vs 40 min + $1980 potential gap,01_open_enrollment.png;02_four_seconds_payoff.png,no
+2,00:20-01:00,Car/payment audit and missed payroll cost,03_payment_audit.png,no
+3,01:00-01:45,Premium rise group chat Marsh context,03_payment_audit.png,yes
+4,01:45-02:55,Dev three questions and bad-year comparison,04_three_questions.png;05_bad_year_comparison.png,yes
+5,02:55-03:50,Normal-year PPO vs HDHP comparison,06_real_year_comparison.png,yes
+6,03:50-04:50,Priya and HSA contributions vs year-end balance,07_hsa_contributions.png;08_hsa_balance.png,yes
+7,04:50-05:35,PPO can win; Marketplace rules,09_not_always_cheaper.png,yes
+8,05:35-06:10,Three-question close and teaser,10_three_question_close.png,yes

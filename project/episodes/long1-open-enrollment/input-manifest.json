@@ -1,0 +1,156 @@
+{
+  "zip_sha256": "91c3db0a3848a882dd798db5a983bbb29505ea4bb410b82099bae0e8e8beac7f",
+  "crc_check": "pass",
+  "entries": [
+    {
+      "path": "generate_graphics.py",
+      "bytes": 9509,
+      "sha256": "4bd0a247eecae3279008978b118d93d1c478bc3c90724f00720e0dfcbadadd34",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1108,
+      "sha256": "59aff294cfb7c8652306e8829f8385fd7e409fc83ef660d71ef88d5091c9a2fe",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "assets/storyboard_contact_sheet.png",
+      "bytes": 652255,
+      "sha256": "929bddf05b8f51c58be6fccceb38147ea537655e41fa3f8cf1ce27493fcd61f0",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/thumbnail_concept.png",
+      "bytes": 137819,
+      "sha256": "743e998308020957b5cf0e62f44a2c92ea558624302b0c36ee0334aa51dbc6e7",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "docs/FACT_CHECK_AND_ASSUMPTIONS.md",
+      "bytes": 3357,
+      "sha256": "a67f592b5d24959bef985828b132c8afb9262c2a63523dad7e1715b5c9c8122b",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "docs/REVISED_SCRIPT.md",
+      "bytes": 9279,
+      "sha256": "ce621dd03ac39cff7dc651bfc7eefaaa75fed3ce47df610c75793f0ec093c7a0",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "docs/ASSET_MANIFEST.md",
+      "bytes": 2544,
+      "sha256": "e23c4fcf82a1a70f6ddac34b607c7caa31e4776de02968eb4f04ed7131b5d251",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "docs/CLAUDE_CODE_PROMPT.md",
+      "bytes": 12782,
+      "sha256": "f223909f9a7f88e104cc9cc099f026f2d8c9c0b69da6344703437c6589f793df",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "docs/SHOT_BEATS.csv",
+      "bytes": 784,
+      "sha256": "5ef5d57cf632b12f522128e7b72b278af9087ea3107b633587e7eb3e3c1fc31c",
+      "use": "Supplied production reference"
+    },
+    {
+      "path": "assets/character_cutouts/ren_neutral_reference_cutout.png",
+      "bytes": 354747,
+      "sha256": "95e5ad3b980a9e3c9f74703f611cabf087ad8b5533d7530f8d0fbaa438d138b7",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/character_cutouts/ren_waving_reference_cutout.png",
+      "bytes": 458606,
+      "sha256": "d83a8a51b03201c576d699e2d6079c2802b4d15c0546025fff2358e90034d9ba",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/character_cutouts/ren_thinking_reference_cutout.png",
+      "bytes": 490618,
+      "sha256": "942ede336447bbb3c59a0c081d1a185ff8adbb980a89b30de2ffe9c72521ab6f",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/09_not_always_cheaper.png",
+      "bytes": 61495,
+      "sha256": "6fe0c93bb1bd797ae1ec65d6124756dd491f3ab8965304dd2fa042bf0ad36d98",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/04_three_questions.png",
+      "bytes": 58101,
+      "sha256": "5171ab33d368a78d8416cd41193c2615e1c304ed4ebaa9658672bad68fb76850",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/07_hsa_contributions.png",
+      "bytes": 71682,
+      "sha256": "fadcbff76ff7dff8254c8fd5a90578d7ac68c788966abf50671ebdfaffa97ec6",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/01_open_enrollment.png",
+      "bytes": 259151,
+      "sha256": "0129c76d6f2a8089be1696bc8e9436559c7a29df3c1af8e0914f4d938089d87d",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/02_four_seconds_payoff.png",
+      "bytes": 281658,
+      "sha256": "645b1a401b9274452e243ad6047daf57c0c658071dfb60840e2546878e20d797",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/08_hsa_balance.png",
+      "bytes": 56367,
+      "sha256": "7fbd1ea2747e9860e526ff93a91c6d772c8c3c96baa5a40adf52709aeb1e7486",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/10_three_question_close.png",
+      "bytes": 314022,
+      "sha256": "b37752fa76ccb335b7ff499b6c0ed8ca9815a6434adaf54099706301c5695d1a",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/05_bad_year_comparison.png",
+      "bytes": 70217,
+      "sha256": "5641a7cfa2d17d3bf44a6bca8a440876cb265840f9eb51dd62fbfe858a733d3a",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/06_real_year_comparison.png",
+      "bytes": 67824,
+      "sha256": "7ca8151729a46a7bb8265c8a834051287c6066e4efc6ac3f95194996bf4a399d",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/scenes/03_payment_audit.png",
+      "bytes": 233321,
+      "sha256": "a6e8988ff18135a8b79cc8a94294eb2fa125e0ef054a44b7042644a462f7569d",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/source_references/ren_neutral_source.jpg",
+      "bytes": 93778,
+      "sha256": "df714177501acc884331ea2d8191e4964d8ec4470af767c003e256cf6f832a2b",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/source_references/ren_thinking_source.jpg",
+      "bytes": 125904,
+      "sha256": "9c91703169236fc2720a893e85d0a6a4d20162114a3ed40563683611b4c62754",
+      "use": "Reference concept only; not production artwork"
+    },
+    {
+      "path": "assets/source_references/ren_waving_source.jpg",
+      "bytes": 111030,
+      "sha256": "70b5f97264204ab83d183cdf080f46c720574f00f9af8549e65563715acdf99f",
+      "use": "Reference concept only; not production artwork"
+    }
+  ]
+}

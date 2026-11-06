@@ -1,3 +1,25 @@
+# Current task — Long 1 Open Enrollment pilot, 6 November 2026
+
+Branch: `codex/long1-open-enrollment-pilot`; local source checkpoint only.
+Base `f7ae02c99bb9b608209a9e6ecbe7dea18c8958ca`, preserving recent voice/matte fixes.
+Approved remote source `c6bb363baf13666cce15ece777fde39190ffe8a7` inspected unchanged.
+
+Completed: supplied ZIP audited; original/revised scripts preserved; assumptions,
+math and source-status notes; 3 resumable original Qwen WAVs; 61.041667s landscape
+pilot; 18-shot manifest; validation and review evidence. See
+`episodes/long1-open-enrollment/README.md` and `QA.md`.
+
+**STOP for explicit owner pilot approval.** No full narration, full film or Shorts.
+Later 2027 claims await independent primary-source checks; none appears in pilot.
+Listening/full audiovisual and physical Android testing remain unverified.
+No push/remote publication, merge, main change, GitHub video upload or YouTube post.
+Downloadable source bundle provides current recovery checkpoint.
+
+The owner scrapped the previous Short. Its historical approval-pending records
+below are superseded and do not authorise continuing that Short.
+
+---
+
 # Ren GitHub task status
 
 ## Current: Open Enrollment Short 01 — Qwen/pacing/animation revision 2

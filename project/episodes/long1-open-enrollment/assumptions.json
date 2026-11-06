@@ -1,0 +1,14 @@
+{
+  "currency": "USD",
+  "fictional_illustrative_example": true,
+  "ppo": {"premium_monthly": 210, "in_network_oop_max": 4000, "normal_year_patient_share": 150},
+  "hdhp": {"premium_monthly": 70, "in_network_oop_max": 6500, "normal_year_patient_share": 600},
+  "employer_hsa": 750,
+  "hsa_illustrative_withdrawal": 600,
+  "previous_premium_monthly": 185,
+  "backstory": {"leased_car_age": 25, "returned_car_age": 28, "bank_balance": 85, "payments_before": 750, "payments_after": 445, "used_car_years_later": 8},
+  "auto_click_seconds": 4,
+  "review_minutes": 40,
+  "auto_renew_years": 4,
+  "disclaimer": "Educational content only, not financial advice."
+}

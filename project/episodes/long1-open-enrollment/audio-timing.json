@@ -1,0 +1,1192 @@
+{
+  "duration": 61.0275,
+  "frames": 1465,
+  "fps": 24,
+  "segments": [
+    {
+      "id": "s001",
+      "start": 0.0,
+      "end": 19.496875,
+      "file": "audio/s001-87ea1aa57bc6-a1.wav",
+      "original_sha256": "009b1a6cb93efbb969dba5090d683279c81fc8c6a687ac92e302330b89eeac40",
+      "text": "Every November, the same email arrives: \u201cOpen enrollment closes Friday.\u201d Four years running, I clicked \u201cKeep my current plan\u201d in about four seconds. This year, I spent forty minutes checking the numbers instead. My normal-year comparison revealed a potential difference of one thousand nine hundred and eighty dollars. And I nearly clicked straight past it.",
+      "processed": "processed/s001-009b1a6cb93e.wav",
+      "validation": {
+        "duration_s": 19.496875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 56,
+        "duration_bounds_s": [
+          12.444444444444445,
+          34.111111111111114
+        ],
+        "active_fraction": 0.8153846153846154,
+        "max_internal_silence_s": 0.5,
+        "trim_start_s": 0,
+        "trim_end_s": 19.496875,
+        "processed_duration_s": 19.496875,
+        "median_pitch_hz": 128.00819252432154,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
+    },
+    {
+      "id": "s002",
+      "start": 19.496875,
+      "end": 51.530625,
+      "file": "audio/s002-62cb23baf645-a1.wav",
+      "original_sha256": "ba0a0b2595845a283def38ed836c9f7750f064fbd0e0576f10e63220880e939a",
+      "text": "I'm Ren. At twenty-five, I leased a shiny car because I wanted people to think I was doing well. By twenty-eight, I'd handed back the keys, bought a used one and survived a Christmas that left me with eighty-five dollars in my bank account. That January, I audited my bills and cut monthly payments from seven hundred and fifty dollars to four hundred and forty-five. I'm still driving that used car, eight years later. But I missed one expense. It disappeared before my paycheck arrived: the health-insurance premium. I'd never questioned it.",
+      "processed": "processed/s002-ba0a0b259584.wav",
+      "validation": {
+        "duration_s": 32.03375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 97,
+        "duration_bounds_s": [
+          21.555555555555557,
+          56.888888888888886
+        ],
+        "active_fraction": 0.7677902621722846,
+        "max_internal_silence_s": 0.8,
+        "trim_start_s": 0,
+        "trim_end_s": 32.03375,
+        "processed_duration_s": 32.03375,
+        "median_pitch_hz": 130.43478260869566,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
+    },
+    {
+      "id": "s003",
+      "start": 51.530625,
+      "end": 61.0275,
+      "file": "audio/s003-9dfa76f366f3-a1.wav",
+      "original_sha256": "ede057ce08a22a1db28f1fb104e1a7b0f4788e7600c2bfd247bd46bd889cf03f",
+      "text": "Then this year's email added a sentence: \u201cYour premium contribution will increase.\u201d Mine was going from one hundred and eighty-five to two hundred and ten dollars a month.",
+      "processed": "processed/s003-ede057ce08a2.wav",
+      "validation": {
+        "duration_s": 9.496875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 29,
+        "duration_bounds_s": [
+          6.444444444444445,
+          19.11111111111111
+        ],
+        "active_fraction": 0.8315789473684211,
+        "max_internal_silence_s": 0.44,
+        "trim_start_s": 0,
+        "trim_end_s": 9.496875,
+        "processed_duration_s": 9.496875,
+        "median_pitch_hz": 125.32722513089004,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required"
+      }
+    }
+  ],
+  "words": [
+    {
+      "word": "every",
+      "start": 0.31,
+      "end": 0.59,
+      "segment": "s001"
+    },
+    {
+      "word": "november",
+      "start": 0.59,
+      "end": 1.17,
+      "segment": "s001"
+    },
+    {
+      "word": "the",
+      "start": 1.39,
+      "end": 1.48,
+      "segment": "s001"
+    },
+    {
+      "word": "same",
+      "start": 1.48,
+      "end": 1.84,
+      "segment": "s001"
+    },
+    {
+      "word": "email",
+      "start": 1.84,
+      "end": 2.25,
+      "segment": "s001"
+    },
+    {
+      "word": "arrives",
+      "start": 2.25,
+      "end": 2.8,
+      "segment": "s001"
+    },
+    {
+      "word": "open",
+      "start": 3.29,
+      "end": 3.59,
+      "segment": "s001"
+    },
+    {
+      "word": "enrollment",
+      "start": 3.59,
+      "end": 4.09,
+      "segment": "s001"
+    },
+    {
+      "word": "closes",
+      "start": 4.09,
+      "end": 4.56,
+      "segment": "s001"
+    },
+    {
+      "word": "friday",
+      "start": 4.56,
+      "end": 5.1,
+      "segment": "s001"
+    },
+    {
+      "word": "four",
+      "start": 5.1,
+      "end": 5.42,
+      "segment": "s001"
+    },
+    {
+      "word": "years",
+      "start": 5.42,
+      "end": 5.71,
+      "segment": "s001"
+    },
+    {
+      "word": "running",
+      "start": 5.71,
+      "end": 6.1,
+      "segment": "s001"
+    },
+    {
+      "word": "i",
+      "start": 6.39,
+      "end": 6.5,
+      "segment": "s001"
+    },
+    {
+      "word": "clicked",
+      "start": 6.5,
+      "end": 6.89,
+      "segment": "s001"
+    },
+    {
+      "word": "keep",
+      "start": 6.89,
+      "end": 7.13,
+      "segment": "s001"
+    },
+    {
+      "word": "my",
+      "start": 7.13,
+      "end": 7.28,
+      "segment": "s001"
+    },
+    {
+      "word": "current",
+      "start": 7.28,
+      "end": 7.61,
+      "segment": "s001"
+    },
+    {
+      "word": "plan",
+      "start": 7.61,
+      "end": 7.96,
+      "segment": "s001"
+    },
+    {
+      "word": "in",
+      "start": 7.96,
+      "end": 8.04,
+      "segment": "s001"
+    },
+    {
+      "word": "about",
+      "start": 8.04,
+      "end": 8.32,
+      "segment": "s001"
+    },
+    {
+      "word": "four",
+      "start": 8.32,
+      "end": 8.58,
+      "segment": "s001"
+    },
+    {
+      "word": "seconds",
+      "start": 8.58,
+      "end": 9.12,
+      "segment": "s001"
+    },
+    {
+      "word": "this",
+      "start": 9.51,
+      "end": 9.79,
+      "segment": "s001"
+    },
+    {
+      "word": "year",
+      "start": 9.79,
+      "end": 9.98,
+      "segment": "s001"
+    },
+    {
+      "word": "i",
+      "start": 9.98,
+      "end": 10.04,
+      "segment": "s001"
+    },
+    {
+      "word": "spent",
+      "start": 10.04,
+      "end": 10.34,
+      "segment": "s001"
+    },
+    {
+      "word": "forty",
+      "start": 10.34,
+      "end": 10.65,
+      "segment": "s001"
+    },
+    {
+      "word": "minutes",
+      "start": 10.65,
+      "end": 10.95,
+      "segment": "s001"
+    },
+    {
+      "word": "checking",
+      "start": 10.95,
+      "end": 11.28,
+      "segment": "s001"
+    },
+    {
+      "word": "the",
+      "start": 11.28,
+      "end": 11.34,
+      "segment": "s001"
+    },
+    {
+      "word": "numbers",
+      "start": 11.34,
+      "end": 11.71,
+      "segment": "s001"
+    },
+    {
+      "word": "instead",
+      "start": 11.71,
+      "end": 12.18,
+      "segment": "s001"
+    },
+    {
+      "word": "my",
+      "start": 12.66,
+      "end": 12.8,
+      "segment": "s001"
+    },
+    {
+      "word": "normal",
+      "start": 12.8,
+      "end": 13.14,
+      "segment": "s001"
+    },
+    {
+      "word": "year",
+      "start": 13.14,
+      "end": 13.35,
+      "segment": "s001"
+    },
+    {
+      "word": "comparison",
+      "start": 13.35,
+      "end": 13.95,
+      "segment": "s001"
+    },
+    {
+      "word": "revealed",
+      "start": 13.95,
+      "end": 14.36,
+      "segment": "s001"
+    },
+    {
+      "word": "a",
+      "start": 14.36,
+      "end": 14.41,
+      "segment": "s001"
+    },
+    {
+      "word": "potential",
+      "start": 14.41,
+      "end": 14.87,
+      "segment": "s001"
+    },
+    {
+      "word": "difference",
+      "start": 14.87,
+      "end": 15.32,
+      "segment": "s001"
+    },
+    {
+      "word": "of",
+      "start": 15.32,
+      "end": 15.48,
+      "segment": "s001"
+    },
+    {
+      "word": "one",
+      "start": 15.48,
+      "end": 15.74,
+      "segment": "s001"
+    },
+    {
+      "word": "thousand",
+      "start": 15.74,
+      "end": 16.19,
+      "segment": "s001"
+    },
+    {
+      "word": "nine",
+      "start": 16.19,
+      "end": 16.45,
+      "segment": "s001"
+    },
+    {
+      "word": "hundred",
+      "start": 16.45,
+      "end": 16.71,
+      "segment": "s001"
+    },
+    {
+      "word": "and",
+      "start": 16.71,
+      "end": 16.8,
+      "segment": "s001"
+    },
+    {
+      "word": "eighty",
+      "start": 16.8,
+      "end": 17.05,
+      "segment": "s001"
+    },
+    {
+      "word": "dollars",
+      "start": 17.05,
+      "end": 17.55,
+      "segment": "s001"
+    },
+    {
+      "word": "and",
+      "start": 17.85,
+      "end": 17.99,
+      "segment": "s001"
+    },
+    {
+      "word": "i",
+      "start": 17.99,
+      "end": 18.02,
+      "segment": "s001"
+    },
+    {
+      "word": "nearly",
+      "start": 18.02,
+      "end": 18.36,
+      "segment": "s001"
+    },
+    {
+      "word": "clicked",
+      "start": 18.36,
+      "end": 18.65,
+      "segment": "s001"
+    },
+    {
+      "word": "straight",
+      "start": 18.65,
+      "end": 18.97,
+      "segment": "s001"
+    },
+    {
+      "word": "past",
+      "start": 18.97,
+      "end": 19.32,
+      "segment": "s001"
+    },
+    {
+      "word": "it",
+      "start": 19.32,
+      "end": 19.496875,
+      "segment": "s001"
+    },
+    {
+      "word": "i'm",
+      "start": 19.586875,
+      "end": 19.836875,
+      "segment": "s002"
+    },
+    {
+      "word": "ren",
+      "start": 19.836875,
+      "end": 20.246875,
+      "segment": "s002"
+    },
+    {
+      "word": "at",
+      "start": 20.666874999999997,
+      "end": 20.786875,
+      "segment": "s002"
+    },
+    {
+      "word": "twenty",
+      "start": 20.786875,
+      "end": 21.086875,
+      "segment": "s002"
+    },
+    {
+      "word": "five",
+      "start": 21.086875,
+      "end": 21.586875,
+      "segment": "s002"
+    },
+    {
+      "word": "i",
+      "start": 21.976875,
+      "end": 22.086875,
+      "segment": "s002"
+    },
+    {
+      "word": "leased",
+      "start": 22.086875,
+      "end": 22.446875,
+      "segment": "s002"
+    },
+    {
+      "word": "a",
+      "start": 22.446875,
+      "end": 22.476875,
+      "segment": "s002"
+    },
+    {
+      "word": "shiny",
+      "start": 22.476875,
+      "end": 22.916874999999997,
+      "segment": "s002"
+    },
+    {
+      "word": "car",
+      "start": 22.916874999999997,
+      "end": 23.246875,
+      "segment": "s002"
+    },
+    {
+      "word": "because",
+      "start": 23.246875,
+      "end": 23.556874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "i",
+      "start": 23.556874999999998,
+      "end": 23.606875,
+      "segment": "s002"
+    },
+    {
+      "word": "wanted",
+      "start": 23.606875,
+      "end": 23.956875,
+      "segment": "s002"
+    },
+    {
+      "word": "people",
+      "start": 23.956875,
+      "end": 24.276875,
+      "segment": "s002"
+    },
+    {
+      "word": "to",
+      "start": 24.276875,
+      "end": 24.366875,
+      "segment": "s002"
+    },
+    {
+      "word": "think",
+      "start": 24.366875,
+      "end": 24.636875,
+      "segment": "s002"
+    },
+    {
+      "word": "i",
+      "start": 24.636875,
+      "end": 24.716874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "was",
+      "start": 24.716874999999998,
+      "end": 24.896875,
+      "segment": "s002"
+    },
+    {
+      "word": "doing",
+      "start": 24.896875,
+      "end": 25.196875,
+      "segment": "s002"
+    },
+    {
+      "word": "well",
+      "start": 25.196875,
+      "end": 25.566875,
+      "segment": "s002"
+    },
+    {
+      "word": "by",
+      "start": 26.086875,
+      "end": 26.226875,
+      "segment": "s002"
+    },
+    {
+      "word": "twenty",
+      "start": 26.226875,
+      "end": 26.576875,
+      "segment": "s002"
+    },
+    {
+      "word": "eight",
+      "start": 26.576875,
+      "end": 27.066875,
+      "segment": "s002"
+    },
+    {
+      "word": "i'd",
+      "start": 27.066875,
+      "end": 27.206875,
+      "segment": "s002"
+    },
+    {
+      "word": "handed",
+      "start": 27.206875,
+      "end": 27.556874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "back",
+      "start": 27.556874999999998,
+      "end": 27.776874999999997,
+      "segment": "s002"
+    },
+    {
+      "word": "the",
+      "start": 27.776874999999997,
+      "end": 27.856875,
+      "segment": "s002"
+    },
+    {
+      "word": "keys",
+      "start": 27.856875,
+      "end": 28.556874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "bought",
+      "start": 28.556874999999998,
+      "end": 28.826875,
+      "segment": "s002"
+    },
+    {
+      "word": "a",
+      "start": 28.826875,
+      "end": 28.856875,
+      "segment": "s002"
+    },
+    {
+      "word": "used",
+      "start": 28.856875,
+      "end": 29.206875,
+      "segment": "s002"
+    },
+    {
+      "word": "one",
+      "start": 29.206875,
+      "end": 29.496875,
+      "segment": "s002"
+    },
+    {
+      "word": "and",
+      "start": 29.496875,
+      "end": 29.656875,
+      "segment": "s002"
+    },
+    {
+      "word": "survived",
+      "start": 29.656875,
+      "end": 30.106875,
+      "segment": "s002"
+    },
+    {
+      "word": "a",
+      "start": 30.106875,
+      "end": 30.136875,
+      "segment": "s002"
+    },
+    {
+      "word": "christmas",
+      "start": 30.136875,
+      "end": 30.666874999999997,
+      "segment": "s002"
+    },
+    {
+      "word": "that",
+      "start": 30.666874999999997,
+      "end": 30.796875,
+      "segment": "s002"
+    },
+    {
+      "word": "left",
+      "start": 30.796875,
+      "end": 31.046875,
+      "segment": "s002"
+    },
+    {
+      "word": "me",
+      "start": 31.046875,
+      "end": 31.166874999999997,
+      "segment": "s002"
+    },
+    {
+      "word": "with",
+      "start": 31.166874999999997,
+      "end": 31.306874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "eighty",
+      "start": 31.306874999999998,
+      "end": 31.566875,
+      "segment": "s002"
+    },
+    {
+      "word": "five",
+      "start": 31.566875,
+      "end": 31.806874999999998,
+      "segment": "s002"
+    },
+    {
+      "word": "dollars",
+      "start": 31.806874999999998,
+      "end": 32.226875,
+      "segment": "s002"
+    },
+    {
+      "word": "in",
+      "start": 32.226875,
+      "end": 32.296875,
+      "segment": "s002"
+    },
+    {
+      "word": "my",
+      "start": 32.296875,
+      "end": 32.446875,
+      "segment": "s002"
+    },
+    {
+      "word": "bank",
+      "start": 32.446875,
+      "end": 32.706875,
+      "segment": "s002"
+    },
+    {
+      "word": "account",
+      "start": 32.706875,
+      "end": 33.146875,
+      "segment": "s002"
+    },
+    {
+      "word": "that",
+      "start": 33.536874999999995,
+      "end": 33.756875,
+      "segment": "s002"
+    },
+    {
+      "word": "january",
+      "start": 33.756875,
+      "end": 34.406875,
+      "segment": "s002"
+    },
+    {
+      "word": "i",
+      "start": 34.646875,
+      "end": 34.756875,
+      "segment": "s002"
+    },
+    {
+      "word": "audited",
+      "start": 34.756875,
+      "end": 35.186875,
+      "segment": "s002"
+    },
+    {
+      "word": "my",
+      "start": 35.186875,
+      "end": 35.346875,
+      "segment": "s002"
+    },
+    {
+      "word": "bills",
+      "start": 35.346875,
+      "end": 35.736875,
+      "segment": "s002"
+    },
+    {
+      "word": "and",
+      "start": 35.736875,
+      "end": 35.856875,
+      "segment": "s002"
+    },
+    {
+      "word": "cut",
+      "start": 35.856875,
+      "end": 36.036874999999995,
+      "segment": "s002"
+    },
+    {
+      "word": "monthly",
+      "start": 36.036874999999995,
+      "end": 36.406875,
+      "segment": "s002"
+    },
+    {
+      "word": "payments",
+      "start": 36.406875,
+      "end": 36.826875,
+      "segment": "s002"
+    },
+    {
+      "word": "from",
+      "start": 36.826875,
+      "end": 36.966875,
+      "segment": "s002"
+    },
+    {
+      "word": "seven",
+      "start": 36.966875,
+      "end": 37.276875000000004,
+      "segment": "s002"
+    },
+    {
+      "word": "hundred",
+      "start": 37.276875000000004,
+      "end": 37.546875,
+      "segment": "s002"
+    },
+    {
+      "word": "and",
+      "start": 37.546875,
+      "end": 37.646874999999994,
+      "segment": "s002"
+    },
+    {
+      "word": "fifty",
+      "start": 37.646874999999994,
+      "end": 37.926874999999995,
+      "segment": "s002"
+    },
+    {
+      "word": "dollars",
+      "start": 37.926874999999995,
+      "end": 38.336875,
+      "segment": "s002"
+    },
+    {
+      "word": "to",
+      "start": 38.336875,
+      "end": 38.416875000000005,
+      "segment": "s002"
+    },
+    {
+      "word": "four",
+      "start": 38.416875000000005,
+      "end": 38.696875,
+      "segment": "s002"
+    },
+    {
+      "word": "hundred",
+      "start": 38.696875,
+      "end": 38.966875,
+      "segment": "s002"
+    },
+    {
+      "word": "and",
+      "start": 38.966875,
+      "end": 39.086875,
+      "segment": "s002"
+    },
+    {
+      "word": "forty",
+      "start": 39.086875,
+      "end": 39.326875,
+      "segment": "s002"
+    },
+    {
+      "word": "five",
+      "start": 39.326875,
+      "end": 39.746875,
+      "segment": "s002"
+    },
+    {
+      "word": "i'm",
+      "start": 40.366875,
+      "end": 40.486875,
+      "segment": "s002"
+    },
+    {
+      "word": "still",
+      "start": 40.486875,
+      "end": 40.786874999999995,
+      "segment": "s002"
+    },
+    {
+      "word": "driving",
+      "start": 40.786874999999995,
+      "end": 41.206875,
+      "segment": "s002"
+    },
+    {
+      "word": "that",
+      "start": 41.206875,
+      "end": 41.366875,
+      "segment": "s002"
+    },
+    {
+      "word": "used",
+      "start": 41.366875,
+      "end": 41.616875,
+      "segment": "s002"
+    },
+    {
+      "word": "car",
+      "start": 41.616875,
+      "end": 42.056875,
+      "segment": "s002"
+    },
+    {
+      "word": "eight",
+      "start": 42.356875,
+      "end": 42.546875,
+      "segment": "s002"
+    },
+    {
+      "word": "years",
+      "start": 42.546875,
+      "end": 42.836875,
+      "segment": "s002"
+    },
+    {
+      "word": "later",
+      "start": 42.836875,
+      "end": 43.246875,
+      "segment": "s002"
+    },
+    {
+      "word": "but",
+      "start": 43.956875,
+      "end": 44.096875,
+      "segment": "s002"
+    },
+    {
+      "word": "i",
+      "start": 44.096875,
+      "end": 44.166875000000005,
+      "segment": "s002"
+    },
+    {
+      "word": "missed",
+      "start": 44.166875000000005,
+      "end": 44.426874999999995,
+      "segment": "s002"
+    },
+    {
+      "word": "one",
+      "start": 44.426874999999995,
+      "end": 44.656875,
+      "segment": "s002"
+    },
+    {
+      "word": "expense",
+      "start": 44.656875,
+      "end": 45.306875,
+      "segment": "s002"
+    },
+    {
+      "word": "it",
+      "start": 46.016875,
+      "end": 46.126875,
+      "segment": "s002"
+    },
+    {
+      "word": "disappeared",
+      "start": 46.126875,
+      "end": 46.686875,
+      "segment": "s002"
+    },
+    {
+      "word": "before",
+      "start": 46.686875,
+      "end": 46.946875,
+      "segment": "s002"
+    },
+    {
+      "word": "my",
+      "start": 46.946875,
+      "end": 47.086875,
+      "segment": "s002"
+    },
+    {
+      "word": "paycheck",
+      "start": 47.086875,
+      "end": 47.536874999999995,
+      "segment": "s002"
+    },
+    {
+      "word": "arrived",
+      "start": 47.536874999999995,
+      "end": 48.066874999999996,
+      "segment": "s002"
+    },
+    {
+      "word": "the",
+      "start": 48.316874999999996,
+      "end": 48.416875000000005,
+      "segment": "s002"
+    },
+    {
+      "word": "health",
+      "start": 48.416875000000005,
+      "end": 48.726875,
+      "segment": "s002"
+    },
+    {
+      "word": "insurance",
+      "start": 48.726875,
+      "end": 49.156875,
+      "segment": "s002"
+    },
+    {
+      "word": "premium",
+      "start": 49.156875,
+      "end": 49.696875,
+      "segment": "s002"
+    },
+    {
+      "word": "i'd",
+      "start": 50.406875,
+      "end": 50.556875,
+      "segment": "s002"
+    },
+    {
+      "word": "never",
+      "start": 50.556875,
+      "end": 50.836875,
+      "segment": "s002"
+    },
+    {
+      "word": "questioned",
+      "start": 50.836875,
+      "end": 51.306875,
+      "segment": "s002"
+    },
+    {
+      "word": "it",
+      "start": 51.306875,
+      "end": 51.526875000000004,
+      "segment": "s002"
+    },
+    {
+      "word": "then",
+      "start": 51.880625,
+      "end": 52.130625,
+      "segment": "s003"
+    },
+    {
+      "word": "this",
+      "start": 52.130625,
+      "end": 52.390625,
+      "segment": "s003"
+    },
+    {
+      "word": "year's",
+      "start": 52.390625,
+      "end": 52.650625,
+      "segment": "s003"
+    },
+    {
+      "word": "email",
+      "start": 52.650625,
+      "end": 53.070625,
+      "segment": "s003"
+    },
+    {
+      "word": "added",
+      "start": 53.070625,
+      "end": 53.350625,
+      "segment": "s003"
+    },
+    {
+      "word": "a",
+      "start": 53.350625,
+      "end": 53.380625,
+      "segment": "s003"
+    },
+    {
+      "word": "sentence",
+      "start": 53.380625,
+      "end": 54.040625,
+      "segment": "s003"
+    },
+    {
+      "word": "your",
+      "start": 54.350625,
+      "end": 54.510625,
+      "segment": "s003"
+    },
+    {
+      "word": "premium",
+      "start": 54.510625,
+      "end": 55.030625,
+      "segment": "s003"
+    },
+    {
+      "word": "contribution",
+      "start": 55.030625,
+      "end": 55.730625,
+      "segment": "s003"
+    },
+    {
+      "word": "will",
+      "start": 55.730625,
+      "end": 55.920625,
+      "segment": "s003"
+    },
+    {
+      "word": "increase",
+      "start": 55.920625,
+      "end": 56.580625,
+      "segment": "s003"
+    },
+    {
+      "word": "mine",
+      "start": 56.980625,
+      "end": 57.240625,
+      "segment": "s003"
+    },
+    {
+      "word": "was",
+      "start": 57.240625,
+      "end": 57.400625,
+      "segment": "s003"
+    },
+    {
+      "word": "going",
+      "start": 57.400625,
+      "end": 57.680625,
+      "segment": "s003"
+    },
+    {
+      "word": "from",
+      "start": 57.680625,
+      "end": 57.890625,
+      "segment": "s003"
+    },
+    {
+      "word": "one",
+      "start": 57.890625,
+      "end": 58.040625,
+      "segment": "s003"
+    },
+    {
+      "word": "hundred",
+      "start": 58.040625,
+      "end": 58.320625,
+      "segment": "s003"
+    },
+    {
+      "word": "and",
+      "start": 58.320625,
+      "end": 58.410625,
+      "segment": "s003"
+    },
+    {
+      "word": "eighty",
+      "start": 58.410625,
+      "end": 58.610625,
+      "segment": "s003"
+    },
+    {
+      "word": "five",
+      "start": 58.610625,
+      "end": 59.000625,
+      "segment": "s003"
+    },
+    {
+      "word": "to",
+      "start": 59.000625,
+      "end": 59.130625,
+      "segment": "s003"
+    },
+    {
+      "word": "two",
+      "start": 59.130625,
+      "end": 59.370625000000004,
+      "segment": "s003"
+    },
+    {
+      "word": "hundred",
+      "start": 59.370625000000004,
+      "end": 59.650625,
+      "segment": "s003"
+    },
+    {
+      "word": "and",
+      "start": 59.650625,
+      "end": 59.750625,
+      "segment": "s003"
+    },
+    {
+      "word": "ten",
+      "start": 59.750625,
+      "end": 59.970625,
+      "segment": "s003"
+    },
+    {
+      "word": "dollars",
+      "start": 59.970625,
+      "end": 60.340625,
+      "segment": "s003"
+    },
+    {
+      "word": "a",
+      "start": 60.340625,
+      "end": 60.370625000000004,
+      "segment": "s003"
+    },
+    {
+      "word": "month",
+      "start": 60.370625000000004,
+      "end": 60.820625,
+      "segment": "s003"
+    }
+  ],
+  "alignment": "Local CPU forced alignment, not independent listening/transcription",
+  "no_speed_changes": true,
+  "no_silence_padding": true,
+  "narration_sha256": "9b77f07fafb36dde17357806d8a85ebdacf2041e91afce4c617d070110e61ac1"
+}

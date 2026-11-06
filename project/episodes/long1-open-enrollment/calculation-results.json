@@ -1,0 +1,28 @@
+{
+  "status": "MATHS OK",
+  "assumptions": "assumptions.json",
+  "results": {
+    "ppo_annual_premium": 2520,
+    "hdhp_annual_premium": 840,
+    "ppo_bad_year_covered_in_network": 6520,
+    "hdhp_bad_year_before_hsa": 7340,
+    "ppo_normal_year": 2670,
+    "hdhp_normal_year_cash": 1440,
+    "hdhp_bad_year_net": 6590,
+    "bad_year_net_gap": 70,
+    "hdhp_normal_year_net": 690,
+    "potential_normal_year_net_gap": 1980,
+    "normal_year_cash_gap": 1230,
+    "premium_gap_monthly": 140,
+    "personal_hsa_annual": 1680,
+    "hsa_total_contributed": 2430,
+    "hsa_after_illustrative_withdrawal": 1830,
+    "backstory_payment_reduction": 305
+  },
+  "interpretation": [
+    "HSA employer value is a separate asset, not an instant premium discount",
+    "Bad-year totals cover hypothetical covered in-network claims, not every possible cost",
+    "Contributions are not balances after medical withdrawals",
+    "No independent real plan quotes; no guaranteed savings"
+  ]
+}

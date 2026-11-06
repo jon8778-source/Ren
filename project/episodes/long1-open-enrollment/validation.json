@@ -1,0 +1,79 @@
+{
+  "file": "Ren_Long_01_Open_Enrollment_60s_Pilot.mp4",
+  "bytes": 5285646,
+  "sha256": "19c062f43b4a7c8209d881a4b22ee2b4be2a0b177b22189e50e6dd71eb6bc0c4",
+  "pilot_only": true,
+  "duration_seconds": 61.041667,
+  "narration_seconds": 61.0275,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frames": 1465,
+  "shots": 18,
+  "all_encoded_shot_frame_counts": "pass",
+  "shot_caps": "Ren <=5.5s; animated graphics <=3.5s; no story stills",
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "full_fatal_decode": "pass",
+  "blank_black_screening_frames": 1465,
+  "original_wavs_verified": 3,
+  "all_processed_source_samples_in_sequence": true,
+  "continuous_script_prefix": true,
+  "forced_aligned_word_coverage": 182,
+  "source_clip_audio": "discarded; each shot video-only; final maps narration only",
+  "music": false,
+  "audio_correlation": 0.9999771305920502,
+  "loudness_lufs": -18.1,
+  "true_peak_dbfs": -1.93,
+  "fixed_financial_encoded_frames": 453,
+  "calculation_check": "MATHS OK; shared assumptions/calculation-results.json",
+  "generation_calls": 3,
+  "allowance_gpu_seconds": 78.14891500000022,
+  "request_elapsed_seconds": 87.54616517900286,
+  "overquota_used": 0,
+  "last_quota": {
+    "at": "2026-11-06T12:14:26.606447+00:00",
+    "remaining_gpu_seconds": 2302.693997,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:05.372000+00:00"
+  },
+  "voice_settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "native_actor_decode": [
+    1280,
+    720
+  ],
+  "single_composition_resize": 0.9,
+  "framing": "Ren left, steady full-body; fitted content right; no mirroring",
+  "visual_review": {
+    "encoded_shot_midpoints": 18,
+    "transition_samples": 85,
+    "native_1280x720_frames": [
+      "native-0.png",
+      "native-2.png"
+    ],
+    "findings": "Consistent left framing; opaque white shirt/trainers; fitted right content; no visible clipping or desk overlap; code-drawn arrows readable. Sample review, not full audiovisual playback.",
+    "evidence": "review/ in delivery source bundle; build/review/ locally"
+  },
+  "independent_primary_source_verification": "Not completed for later 2027 claims; none voiced in this pilot",
+  "listening_and_physical_android_playback": false,
+  "approval": "Stop for explicit pilot approval. No full episode or Shorts generated.",
+  "main_modified": false,
+  "github_video_upload": false
+}

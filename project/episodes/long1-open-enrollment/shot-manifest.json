@@ -1,0 +1,240 @@
+{
+  "title": "I Auto-Renewed My Health Plan for 4 Years. Then I Did the Math.",
+  "pilot_only": true,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frames": 1465,
+  "narration_duration": 61.0275,
+  "shots": [
+    {
+      "id": "shot_001",
+      "kind": "ren",
+      "motif": "email",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 0,
+      "frames": 122,
+      "end_frame": 122,
+      "motif_start": 0.0,
+      "motif_end": 5.083333333333333
+    },
+    {
+      "id": "shot_002",
+      "kind": "ren",
+      "motif": "click",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 122,
+      "frames": 106,
+      "end_frame": 228,
+      "motif_start": 5.083333333333333,
+      "motif_end": 9.5
+    },
+    {
+      "id": "shot_003",
+      "kind": "graphic",
+      "motif": "clocks",
+      "clip": null,
+      "part": 0,
+      "start_frame": 228,
+      "frames": 76,
+      "end_frame": 304,
+      "motif_start": 9.5,
+      "motif_end": 12.666666666666666
+    },
+    {
+      "id": "shot_004",
+      "kind": "ren",
+      "motif": "potential",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 304,
+      "frames": 124,
+      "end_frame": 428,
+      "motif_start": 12.666666666666666,
+      "motif_end": 17.833333333333332
+    },
+    {
+      "id": "shot_005",
+      "kind": "ren",
+      "motif": "potential",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 428,
+      "frames": 68,
+      "end_frame": 496,
+      "motif_start": 17.833333333333332,
+      "motif_end": 20.666666666666668
+    },
+    {
+      "id": "shot_006",
+      "kind": "graphic",
+      "motif": "lease",
+      "clip": null,
+      "part": 0,
+      "start_frame": 496,
+      "frames": 65,
+      "end_frame": 561,
+      "motif_start": 20.666666666666668,
+      "motif_end": 26.083333333333332
+    },
+    {
+      "id": "shot_007",
+      "kind": "graphic",
+      "motif": "lease",
+      "clip": null,
+      "part": 1,
+      "start_frame": 561,
+      "frames": 65,
+      "end_frame": 626,
+      "motif_start": 20.666666666666668,
+      "motif_end": 26.083333333333332
+    },
+    {
+      "id": "shot_008",
+      "kind": "graphic",
+      "motif": "used",
+      "clip": null,
+      "part": 0,
+      "start_frame": 626,
+      "frames": 48,
+      "end_frame": 674,
+      "motif_start": 26.083333333333332,
+      "motif_end": 30.125
+    },
+    {
+      "id": "shot_009",
+      "kind": "graphic",
+      "motif": "used",
+      "clip": null,
+      "part": 1,
+      "start_frame": 674,
+      "frames": 49,
+      "end_frame": 723,
+      "motif_start": 26.083333333333332,
+      "motif_end": 30.125
+    },
+    {
+      "id": "shot_010",
+      "kind": "graphic",
+      "motif": "bank",
+      "clip": null,
+      "part": 0,
+      "start_frame": 723,
+      "frames": 82,
+      "end_frame": 805,
+      "motif_start": 30.125,
+      "motif_end": 33.541666666666664
+    },
+    {
+      "id": "shot_011",
+      "kind": "graphic",
+      "motif": "audit",
+      "clip": null,
+      "part": 0,
+      "start_frame": 805,
+      "frames": 82,
+      "end_frame": 887,
+      "motif_start": 33.541666666666664,
+      "motif_end": 40.375
+    },
+    {
+      "id": "shot_012",
+      "kind": "graphic",
+      "motif": "audit",
+      "clip": null,
+      "part": 1,
+      "start_frame": 887,
+      "frames": 82,
+      "end_frame": 969,
+      "motif_start": 33.541666666666664,
+      "motif_end": 40.375
+    },
+    {
+      "id": "shot_013",
+      "kind": "ren",
+      "motif": "samecar",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 969,
+      "frames": 86,
+      "end_frame": 1055,
+      "motif_start": 40.375,
+      "motif_end": 43.958333333333336
+    },
+    {
+      "id": "shot_014",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 0,
+      "start_frame": 1055,
+      "frames": 61,
+      "end_frame": 1116,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664
+    },
+    {
+      "id": "shot_015",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 1,
+      "start_frame": 1116,
+      "frames": 60,
+      "end_frame": 1176,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664
+    },
+    {
+      "id": "shot_016",
+      "kind": "graphic",
+      "motif": "paystub",
+      "clip": null,
+      "part": 2,
+      "start_frame": 1176,
+      "frames": 61,
+      "end_frame": 1237,
+      "motif_start": 43.958333333333336,
+      "motif_end": 51.541666666666664
+    },
+    {
+      "id": "shot_017",
+      "kind": "ren",
+      "motif": "increase",
+      "clip": "nod_yes",
+      "part": 0,
+      "start_frame": 1237,
+      "frames": 131,
+      "end_frame": 1368,
+      "motif_start": 51.541666666666664,
+      "motif_end": 57.0
+    },
+    {
+      "id": "shot_018",
+      "kind": "ren",
+      "motif": "premium",
+      "clip": "thinking",
+      "part": 0,
+      "start_frame": 1368,
+      "frames": 97,
+      "end_frame": 1465,
+      "motif_start": 57.0,
+      "motif_end": 61.041666666666664
+    }
+  ],
+  "native_actor_decode": [
+    1280,
+    720
+  ],
+  "actor_composition_scale": 0.9,
+  "actor_position": [
+    -300,
+    33
+  ],
+  "framing": "Steady full-body Ren left; content right; no mirroring or zoom changes",
+  "no_music": true
+}
