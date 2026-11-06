@@ -1,0 +1,849 @@
+{
+  "full_movie_finished": false,
+  "not_final_episode_validation": true,
+  "originals_saved_and_hash_verified": [
+    "s001",
+    "s002",
+    "s003",
+    "s004",
+    "s006",
+    "s007",
+    "s008",
+    "s009",
+    "s010",
+    "s011",
+    "s012",
+    "s013",
+    "s015",
+    "s016",
+    "s018",
+    "s019",
+    "s020"
+  ],
+  "remaining": [
+    "s005",
+    "s014",
+    "s017"
+  ],
+  "source_status": "Three external claims unverified; none submitted for generation",
+  "independent_clips": 99,
+  "encoded_frames_screened": 7250,
+  "all_clip_caps_framecounts_fatal_decode_blackblank": "pass",
+  "source_clip_audio": "none: every cached clip video-only",
+  "calculation_check": "MATHS OK",
+  "processed_subset_seconds": 302.048125,
+  "subset_timestamps_are_not_final_episode_times": true,
+  "speech_retiming": false,
+  "silence_padding": false,
+  "local_alignment": "forced alignment only; not independent word verification",
+  "voice_boundary_listening_flags": [
+    "s020"
+  ],
+  "listening_and_physical_android_test": false,
+  "visual_review": {
+    "encoded_midpoints_inspected": 99,
+    "changed_clips_rechecked": [
+      "shot_020",
+      "shot_021",
+      "shot_064",
+      "shot_065"
+    ],
+    "unchanged_encoded_clip_hashes_compared": 95,
+    "motion_evidence": "build/available-review/message-motion.jpg",
+    "findings": "Readable fixed figures; no clipping/office furniture overlap; consistent generated props; staged message arrivals inspected. Subset is not final narration/transition QA."
+  },
+  "clips": [
+    {
+      "id": "shot_001",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_001.mp4",
+      "sha256": "9003cf421b088aa3cdba9ae7dc8a197260a25b082dc2e47be30337713e10e796",
+      "frames": 122,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_002",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_002.mp4",
+      "sha256": "3b2fa648a78e36f23d2c780d5eba452a4d359e3c594150684f54c64a17771f17",
+      "frames": 106,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_003",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_003.mp4",
+      "sha256": "10d4b7861cd566a753b68e2c234af3a72fcfb65ee4669c9bbcf1cd126d8d5d24",
+      "frames": 76,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_004",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_004.mp4",
+      "sha256": "11dfc79eef827f3ea3632739cf8dbb1df0e88eb9b6175a332cb8d717ae422283",
+      "frames": 124,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_005",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_005.mp4",
+      "sha256": "e6bf0ddbd0489f30bb9e35841aa97a99f5ecadfc3fcd491b815023a88fda2f8c",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_006",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_006.mp4",
+      "sha256": "2289c176f6e7a2e8f6238736157a1f47903ea77dc24f08736d69e19d20b0d22a",
+      "frames": 65,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_007",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_007.mp4",
+      "sha256": "49c1ef40f0c10139827100146a7701b12bddaa79c91d8bc41b5af3dce7f6f91d",
+      "frames": 65,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_008",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_008.mp4",
+      "sha256": "c9578360f12d719f8e9df17e1e4b58d42e89a1a46aa2261ac2b289be05c50ed2",
+      "frames": 48,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_009",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_009.mp4",
+      "sha256": "a462dda5d920fbe30e24d0f8823c8a296cb1ace5047db06d9d12190c64ba4cc7",
+      "frames": 49,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_010",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_010.mp4",
+      "sha256": "a57620f4857ca9582b6ad94e13633c8a892c00c044a20c91606f48499ac5713f",
+      "frames": 82,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_011",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_011.mp4",
+      "sha256": "fd473f30a44e6eb44d6e6cb85e6a1aec39ffc88c330362a39b37cf6e6fbe293a",
+      "frames": 82,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_012",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_012.mp4",
+      "sha256": "abfa0060e3f998ff000765db5f60a4442b2723002a0b56919d5b9fe5d1757f4b",
+      "frames": 82,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_013",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_013.mp4",
+      "sha256": "ddb573c6cc9917970ece82ac3f6c6888b21763bd15c069613fa1f3cffa3d7177",
+      "frames": 86,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_014",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_014.mp4",
+      "sha256": "6f2cb9eb2622dfb8397a554ff4c2d6ba93cc79364671ea75ee3d347c41282b2b",
+      "frames": 61,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_015",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_015.mp4",
+      "sha256": "2922c850235d6eec5c8093062de9b1527e6a16bc40b15373aedb6c807faf1701",
+      "frames": 60,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_016",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_016.mp4",
+      "sha256": "7dfd2974ac95ebdd87525c01918d7d1b6328fea79f0970447dac25dd3438e488",
+      "frames": 61,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_017",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_017.mp4",
+      "sha256": "28461e88957285c853f5552eaea2ba735e259638cdcacfc4fcc988f925508c5b",
+      "frames": 131,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_018",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/build/shot_018.mp4",
+      "sha256": "022084d33f32f517c3603943b27a096872562041e71fc5771de8088ee39dd310",
+      "frames": 97,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_019",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s004-annual-0.mp4",
+      "sha256": "587b758efa52afd99ce012c6eb1b2dde6570b7285cc67e65991c2caf089cb96c",
+      "frames": 127,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_020",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s006-group-0.mp4",
+      "sha256": "2bbd1204248342b9e3989f1e042c0e7efa0732d2b986e627fef3e96ba5ee5eed",
+      "frames": 84,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_021",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s006-group-1.mp4",
+      "sha256": "c5c5782426aa758e7a44f2cedf20d1151d481cb608cee814960ff9d313304e3a",
+      "frames": 83,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_022",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s006-group-2.mp4",
+      "sha256": "4563cca55171d98a451312289b410d3672b2a17eab530d406f558d6122c86cc3",
+      "frames": 83,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_023",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s006-group-3.mp4",
+      "sha256": "b4b3341b7db9f42cd8aeb899023141283127029b7e75f9f0ec19fc2b1ed5c18d",
+      "frames": 84,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_024",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-neighbor-0.mp4",
+      "sha256": "b75369bd56be604cf4a1963a9ea0d93377ea1f0c676365e798fa3379565b30fa",
+      "frames": 56,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_025",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-neighbor-1.mp4",
+      "sha256": "27068653db8f8862c3f9a4ed78e984615967ecb2079ac3e43bff50e1b25c42d7",
+      "frames": 57,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_026",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-questions-0.mp4",
+      "sha256": "c95efc611663e3dae7501d35087aea855d6e35ce0bf4f929b6d20d6a3299f646",
+      "frames": 82,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_027",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-questions-1.mp4",
+      "sha256": "3a6362f1d8095de0115859f52bbcdb2e3f5d8806b65de0d24880278edacba28f",
+      "frames": 81,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_028",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-questions-2.mp4",
+      "sha256": "f826639a2a9b557531d9846be1ce6c2e785d70dc22801db4a0c29de3e2739f31",
+      "frames": 82,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_029",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-illustrative-0.mp4",
+      "sha256": "7d0943089fd2d01f88d05cc842a5348620e0b471e06388fbabf321896e53d016",
+      "frames": 120,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_030",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-ppo_premium-0.mp4",
+      "sha256": "5f1f3e6ef74eebdb59123cd7bb46f69a9ef7f39cc2ab6fa62499f86cfdb92e6c",
+      "frames": 74,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_031",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s007-ppo_premium-1.mp4",
+      "sha256": "d468203959dbe1ea5a6d80fd1b70ff15101ada5e6c11feb831ba42f4c3aa17d6",
+      "frames": 75,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_032",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-ppo_bad-0.mp4",
+      "sha256": "bb6989d331efc5bd4a9fb2c97567dd45516096638291b855df4ab24c8c1c73dd",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_033",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-ppo_bad-1.mp4",
+      "sha256": "4206c1ea32897f3efc4de32712b4c2dbec5eb4c474fbddea5874e20af0ebf5b0",
+      "frames": 67,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_034",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-ppo_bad-2.mp4",
+      "sha256": "bb6989d331efc5bd4a9fb2c97567dd45516096638291b855df4ab24c8c1c73dd",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_035",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-hdhp_premium-0.mp4",
+      "sha256": "65bfb401fe9daa991a4e22a5ea2ec990bbd42f316b16ccab44f8f9a5dcf19f46",
+      "frames": 77,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_036",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-hdhp_premium-1.mp4",
+      "sha256": "65bfb401fe9daa991a4e22a5ea2ec990bbd42f316b16ccab44f8f9a5dcf19f46",
+      "frames": 77,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_037",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-hdhp_bad-0.mp4",
+      "sha256": "cb43fbf4308dd4e60b8008a884bf2bb7bf8c2f0dd07ea3b7d56d0f7734502ab5",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_038",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-hdhp_bad-1.mp4",
+      "sha256": "453353849313278e4ae470ef3c6af2f6292ec90fd807110fad22b49090ec5bd4",
+      "frames": 69,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_039",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-hdhp_bad-2.mp4",
+      "sha256": "cb43fbf4308dd4e60b8008a884bf2bb7bf8c2f0dd07ea3b7d56d0f7734502ab5",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_040",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s008-employer-0.mp4",
+      "sha256": "dca80fb171160c2d06a5d428a13ecb83066d86e40a21a03af3a48e1d9003082c",
+      "frames": 76,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_041",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-bad_compare-0.mp4",
+      "sha256": "cefa74c4fe75060c0fd87aca7a53862357e1aca5623b5ec37a7e1c40d1d4e4cc",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_042",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-bad_compare-1.mp4",
+      "sha256": "b0ca16639b89caa37d9aff963b3f6cf7c9f2876567598158826febedda724af1",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_043",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-bad_compare-2.mp4",
+      "sha256": "22c9e89287cbef4f4466f21b9701d9513fee9fa991840546697e5f482f1907e8",
+      "frames": 68,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_044",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-cashflow-0.mp4",
+      "sha256": "811ff1598d372852bf309e106a685b6259cbb91edabf2323e30d6a94bbf98dfb",
+      "frames": 70,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_045",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-limits-0.mp4",
+      "sha256": "d6c5a1b7f45b1b482f23809848ebfe6b3f7a1f17f86e2b8a0fb53e45f5bcc659",
+      "frames": 48,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_046",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s009-limits-1.mp4",
+      "sha256": "d6c5a1b7f45b1b482f23809848ebfe6b3f7a1f17f86e2b8a0fb53e45f5bcc659",
+      "frames": 48,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_047",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-used_care-0.mp4",
+      "sha256": "a9973e2a10d3e2efa2caa32a2192594a9da6d6028a3f957ca0c661b484f3678a",
+      "frames": 65,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_048",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-used_care-1.mp4",
+      "sha256": "a9973e2a10d3e2efa2caa32a2192594a9da6d6028a3f957ca0c661b484f3678a",
+      "frames": 65,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_049",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-used_care-2.mp4",
+      "sha256": "abb48eb003bd141ec347892b5d817fb7a3f0d983b75ce1c1d7b58024849cac20",
+      "frames": 66,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_050",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-used_care-3.mp4",
+      "sha256": "a9973e2a10d3e2efa2caa32a2192594a9da6d6028a3f957ca0c661b484f3678a",
+      "frames": 65,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_051",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-ppo_normal-0.mp4",
+      "sha256": "f8a9fef09cedd969fae4e522047e12051e85857ff169f94a7150cf406bdf0b36",
+      "frames": 66,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_052",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-ppo_normal-1.mp4",
+      "sha256": "4915414a5aac11643d34a9fc1b736d270dd168e5d93d03c8574eee105d3108a6",
+      "frames": 67,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_053",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-hdhp_cash-0.mp4",
+      "sha256": "0bbf2e12ad0d852aeb5aca533723fc7ec21690e7df64993338d29446555eaeed",
+      "frames": 58,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_054",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-hdhp_cash-1.mp4",
+      "sha256": "0bbf2e12ad0d852aeb5aca533723fc7ec21690e7df64993338d29446555eaeed",
+      "frames": 58,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_055",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s010-hdhp_cash-2.mp4",
+      "sha256": "0bbf2e12ad0d852aeb5aca533723fc7ec21690e7df64993338d29446555eaeed",
+      "frames": 58,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_056",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-hdhp_net-0.mp4",
+      "sha256": "b398784fbef489cf33797094ce747025d75599080d143c29b3ccd2116f735fe8",
+      "frames": 73,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_057",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-hdhp_net-1.mp4",
+      "sha256": "b398784fbef489cf33797094ce747025d75599080d143c29b3ccd2116f735fe8",
+      "frames": 73,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_058",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-hdhp_net-2.mp4",
+      "sha256": "b398784fbef489cf33797094ce747025d75599080d143c29b3ccd2116f735fe8",
+      "frames": 73,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_059",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-normal_compare-0.mp4",
+      "sha256": "400b19ffa8e24f9567f4394e3ac9b341eb9057bb617bd8316f7965709d4be145",
+      "frames": 69,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_060",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-not_rebate-0.mp4",
+      "sha256": "a9696b152746734d1ad7ee49516d9f6456966fe959952f483695e4002bdab9e0",
+      "frames": 79,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_061",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-check_services-0.mp4",
+      "sha256": "87ee331a5c1ee9cc7fb0b56bdf132d4e21dd5642cfe48e636f782b076cd82bf8",
+      "frames": 54,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_062",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-check_services-1.mp4",
+      "sha256": "c0c3ad9f937c0ea734604abc87885d03fe81b87dae07ac0f2850f1a09b2eb3fb",
+      "frames": 53,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_063",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s011-illustrative-0.mp4",
+      "sha256": "44c7aedba65e260ba85dba34e2189224a2e8a9442f73460df825ab8a646bebc8",
+      "frames": 109,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_064",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-priya-0.mp4",
+      "sha256": "d9692c431f5066fb133782a600943aa82fd0bb12960d1e39d7b5096756cc2759",
+      "frames": 80,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_065",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-priya-1.mp4",
+      "sha256": "f54e5e148e709c89809c26acb1b42eb327a5660c8765ef92144357f435d46bbd",
+      "frames": 80,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_066",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-priya-2.mp4",
+      "sha256": "1e0c6e2bf6ace7c06ae9fcac6554b47a9ffce7b6b113781de5f5ee97aebf682f",
+      "frames": 79,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_067",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-priya-3.mp4",
+      "sha256": "0104ab2b34dcaa6e7fd3c3eeb321e1f7c5f2689bfe4fd77b9439300764de31d9",
+      "frames": 80,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_068",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-redirect-0.mp4",
+      "sha256": "40f6c2ee82d9362a7693380a073013de39c3eaf2633165a36db5a79fb6f62df5",
+      "frames": 72,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_069",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-redirect-1.mp4",
+      "sha256": "f5a0b6f9721f2ca73bd92838d19e51d7209e0b28971be55e3f61eab7dbbe5f10",
+      "frames": 72,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_070",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s012-redirect-2.mp4",
+      "sha256": "78f72e12084a706e6f9229b25ce62cc6519c29b5787062ebedde8809f6f709f7",
+      "frames": 72,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_071",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-contributions-0.mp4",
+      "sha256": "70328658b3978a928b8a55aa5bfaa24caddeea5591717617b8ef6b46589eace1",
+      "frames": 59,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_072",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-contributions-1.mp4",
+      "sha256": "c2ba93a90a11c3bab7208531c07cf32e68f27d0f2112202e7d654fe7ecf90060",
+      "frames": 60,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_073",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-contributions-2.mp4",
+      "sha256": "70328658b3978a928b8a55aa5bfaa24caddeea5591717617b8ef6b46589eace1",
+      "frames": 59,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_074",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-withdrawal-0.mp4",
+      "sha256": "40a0888733a553b0bee6969c6aa996b4912a86f197bcd8b988a4d5245badb733",
+      "frames": 64,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_075",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-withdrawal-1.mp4",
+      "sha256": "87733ee672cae42ae6dc91fd81aa0c0edc3365099a424490533de80ef0468ee7",
+      "frames": 63,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_076",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-outside_cash-0.mp4",
+      "sha256": "fcaec9302be7d56496ec538d967121e65e7e46b41dc1da605313c705c5bf1440",
+      "frames": 66,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_077",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s013-outside_cash-1.mp4",
+      "sha256": "fcaec9302be7d56496ec538d967121e65e7e46b41dc1da605313c705c5bf1440",
+      "frames": 66,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_078",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s015-money_job-0.mp4",
+      "sha256": "32c2da91e17ac8166282cd67d5a3f05feb9813569decd9541ab9616f27bc28b0",
+      "frames": 89,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_079",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s015-money_job-1.mp4",
+      "sha256": "995024fc6aa3832f01306498520c3f68aed45ce109b7d327fd359212fc01a405",
+      "frames": 89,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_080",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-warning-0.mp4",
+      "sha256": "d03cf85e538bd22237732aeae7a45f0652e590a3dd1c4f9a1aad86e6d6b37e5d",
+      "frames": 70,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_081",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-warning-1.mp4",
+      "sha256": "ba70349979a177ed9782806e0b340d9b7676b9eb06b6d52c8dcbdedbb2dcf191",
+      "frames": 71,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_082",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-needs-0.mp4",
+      "sha256": "208668b2747d5de75bf46f05583e16eaefb75c8b13a69b785f0b902ab510c2df",
+      "frames": 61,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_083",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-needs-1.mp4",
+      "sha256": "3e25bc25665c3d1a315785e538814d919f964b722870fb604e5acb3d16673991",
+      "frames": 62,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_084",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-needs-2.mp4",
+      "sha256": "208668b2747d5de75bf46f05583e16eaefb75c8b13a69b785f0b902ab510c2df",
+      "frames": 61,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_085",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-network-0.mp4",
+      "sha256": "69439e199ca90ded8e32baeb09e855ea13c723bcadffa467ab25d5a48a0964b6",
+      "frames": 63,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_086",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-network-1.mp4",
+      "sha256": "69439e199ca90ded8e32baeb09e855ea13c723bcadffa467ab25d5a48a0964b6",
+      "frames": 63,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_087",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-early_bills-0.mp4",
+      "sha256": "4ea891e28fa39e1e0653ae285b0e34d6e1a72fb6702938e355e0483d233ee31f",
+      "frames": 100,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_088",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-marketplace-0.mp4",
+      "sha256": "53d42d797eaaa53a594c1987dc7f79cf8c2d5004f6dab04b81d0194d8c9c7c4c",
+      "frames": 62,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_089",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s016-marketplace-1.mp4",
+      "sha256": "ff480fb172003be0242b0f26c996bc7d9e3cf4d0a675983b9a593eac7d01c103",
+      "frames": 63,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_090",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s018-employer_deadline-0.mp4",
+      "sha256": "2ebd4629d652fab7f6b9bdcb8cfa25c5d8d724ce5f8ec02b095dba87b8f2e767",
+      "frames": 59,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_091",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-choice-0.mp4",
+      "sha256": "dc240b11ee5fe4e9113e98aa034ab1f1169ca0a83b971cb3b9f94c46601e1445",
+      "frames": 77,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_092",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-choice-1.mp4",
+      "sha256": "c39f2fd2d0c76a2aaeac3bd40deaf6d9fcb0b75eab9d89338e8fd5ff42a7efa5",
+      "frames": 77,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_093",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-cheaper-0.mp4",
+      "sha256": "8dd62dd0f28468c503bc1fb97af43cddde19b93f24b2a6aa96ac5cf5535b0edc",
+      "frames": 91,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_094",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-recap-0.mp4",
+      "sha256": "9590f06297e71ff6c7c125aeaa81f35cdc61fea774890f663a2f81693eba84d7",
+      "frames": 56,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_095",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-recap-1.mp4",
+      "sha256": "3de1097e4f855404c021e9efa9a8de4af74cd68c5df0bf5577ad478ab49f9000",
+      "frames": 55,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_096",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-forty-0.mp4",
+      "sha256": "69aa8355f262b8a33f6039e973441d0ce37a0bfea8452853a3e6fe2f71775bfe",
+      "frames": 48,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_097",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-forty-1.mp4",
+      "sha256": "8554dde0486821a43c50c9b9d779d76db8a81df63cb17dc6235fcc9fe0b6bf5b",
+      "frames": 49,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_098",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s019-next-0.mp4",
+      "sha256": "ec2fd90cfe341342c2feef2992edfb338a3a4f5d4382e7d6702dcb10bd7685a7",
+      "frames": 85,
+      "fatal_decode": "pass",
+      "video_only": true
+    },
+    {
+      "id": "shot_099",
+      "file": "/workspace/Ren-long1/project/episodes/long1-open-enrollment/full/build/clips/s020-close-0.mp4",
+      "sha256": "4f55a6c563348d8cd316e47073f7ac06a373600a455c8f3a34642d91d0812b35",
+      "frames": 115,
+      "fatal_decode": "pass",
+      "video_only": true
+    }
+  ]
+}

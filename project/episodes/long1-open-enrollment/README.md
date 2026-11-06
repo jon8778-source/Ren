@@ -3,7 +3,7 @@
 Title: I Auto-Renewed My Health Plan for 4 Years. Then I Did the Math.
 Planned publication date supplied by owner: 10 November 2026. Nothing published.
 
-**STOP for explicit owner pilot approval.** This is the continuous opening pilot,
+**Pilot revision 2 approved by Jon on 6 November 2026. Full production continues in full/.** This is the continuous opening pilot,
 not the full episode. The supplied ZIP's revised candidate is the voice source;
 the original pasted narration and supplied documents are preserved in docs/.
 Material cost/HSA corrections are recorded in SOURCE_VERIFICATION_STATUS.md.

@@ -1,0 +1,20 @@
+{
+  "employer_forecast": {
+    "status": "unverified_network_blocked",
+    "url": "https://www.mercer.com/en-us/about/newsroom/employers-expect-health-benefit-costs-to-jump-in-2027/",
+    "claim": "2027 average employer health-benefit cost forecast +8.2%, not individual premium increase"
+  },
+  "hsa_rules": {
+    "status": "unverified_network_blocked",
+    "urls": [
+      "https://www.irs.gov/publications/p969",
+      "https://www.irs.gov/pub/irs-irbs/irb26-25.pdf"
+    ],
+    "claim": "HSA federal advantages/eligibility; 2027 self-only annual limit4500 includes employer"
+  },
+  "marketplace_dates": {
+    "status": "unverified_network_blocked",
+    "url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+    "claim": "2027 final federal enrollment deadline; must check Jan15 against current plan-year rules"
+  }
+}

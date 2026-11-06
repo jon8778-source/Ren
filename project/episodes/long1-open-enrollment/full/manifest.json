@@ -1,0 +1,1900 @@
+{
+  "schema": 1,
+  "title": "I Auto-Renewed My Health Plan for 4 Years. Then I Did the Math. \u2014 full episode",
+  "created_at": "2026-11-06T12:11:15.871758+00:00",
+  "script_sha256": "0abbe1a4e22687dbd4d18864dbbd51d5eda9fc0b3286b6e8d2dc1259088fd7ef",
+  "settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "target_duration_s": [
+    360,
+    420
+  ],
+  "segments": [
+    {
+      "id": "s001",
+      "title": "## Scene 1 \u2014 Four seconds versus forty minutes (0:00\u20130:20)",
+      "text": "Every November, the same email arrives: \u201cOpen enrollment closes Friday.\u201d Four years running, I clicked \u201cKeep my current plan\u201d in about four seconds. This year, I spent forty minutes checking the numbers instead. My normal-year comparison revealed a potential difference of one thousand nine hundred and eighty dollars. And I nearly clicked straight past it.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "87ea1aa57bc654693937591d0d4b60f2425890b3e944d9089383addd98be34b9",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T12:11:24.080167+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T12:11:20.632848+00:00",
+            "remaining_gpu_seconds": 2380.842912,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.391000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "edf1bc42b7fa497994dd6f85d943c957",
+          "session_hash": "a8d178c8-72bd-4b5a-930a-c9801dbc1aed",
+          "elapsed_seconds": 27.84649892300513,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T12:11:53.294013+00:00",
+            "remaining_gpu_seconds": 2356.237505,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.056000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 24.605407000000014
+        }
+      ],
+      "file": "audio/s001-87ea1aa57bc6-a1.wav",
+      "sha256": "009b1a6cb93efbb969dba5090d683279c81fc8c6a687ac92e302330b89eeac40",
+      "validation": {
+        "duration_s": 19.496875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 56,
+        "duration_bounds_s": [
+          12.444444444444445,
+          34.111111111111114
+        ],
+        "active_fraction": 0.8153846153846154,
+        "max_internal_silence_s": 0.5,
+        "trim_start_s": 0,
+        "trim_end_s": 19.496875,
+        "processed_duration_s": 19.496875,
+        "median_pitch_hz": 128.00819252432154,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": null,
+        "boundary_voice_review_flag": false
+      },
+      "scene": 1,
+      "source_gate": null,
+      "owner_review": "Pilot approved by Jon, 6 November 2026"
+    },
+    {
+      "id": "s002",
+      "title": "## Scene 2 \u2014 The bill I couldn't see (0:20\u20131:00)",
+      "text": "I'm Ren. At twenty-five, I leased a shiny car because I wanted people to think I was doing well. By twenty-eight, I'd handed back the keys, bought a used one and survived a Christmas that left me with eighty-five dollars in my bank account. That January, I audited my bills and cut monthly payments from seven hundred and fifty dollars to four hundred and forty-five. I'm still driving that used car, eight years later. But I missed one expense. It disappeared before my paycheck arrived: the health-insurance premium. I'd never questioned it.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "62cb23baf645063b031bf0710edc9ebd476f8b047064e72a4e382a752b5731c4",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T12:11:54.638206+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T12:11:54.638183+00:00",
+            "remaining_gpu_seconds": 2356.237505,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.377000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "7c50931e078440ce916df1daa8778096",
+          "session_hash": "a8d178c8-72bd-4b5a-930a-c9801dbc1aed",
+          "elapsed_seconds": 44.636390740000934,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T12:12:40.549136+00:00",
+            "remaining_gpu_seconds": 2314.898965,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.340000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 41.338540000000194
+        }
+      ],
+      "file": "audio/s002-62cb23baf645-a1.wav",
+      "sha256": "ba0a0b2595845a283def38ed836c9f7750f064fbd0e0576f10e63220880e939a",
+      "validation": {
+        "duration_s": 32.03375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 97,
+        "duration_bounds_s": [
+          21.555555555555557,
+          56.888888888888886
+        ],
+        "active_fraction": 0.7677902621722846,
+        "max_internal_silence_s": 0.8,
+        "trim_start_s": 0,
+        "trim_end_s": 32.03375,
+        "processed_duration_s": 32.03375,
+        "median_pitch_hz": 130.43478260869566,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.3251099266661771,
+        "boundary_voice_review_flag": false
+      },
+      "scene": 2,
+      "source_gate": null,
+      "owner_review": "Pilot approved by Jon, 6 November 2026"
+    },
+    {
+      "id": "s003",
+      "title": "Premium-increase email lead-in only",
+      "text": "Then this year's email added a sentence: \u201cYour premium contribution will increase.\u201d Mine was going from one hundred and eighty-five to two hundred and ten dollars a month.",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "9dfa76f366f33b82dba587123bf540490dfd8f2607e8f24d0521cdfd7df6bfb3",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T12:14:10.205842+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T12:14:05.455756+00:00",
+            "remaining_gpu_seconds": 2314.898965,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.224000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "b0554e6e335e4802b012b1f59cef5907",
+          "session_hash": "57178c4d-557d-4492-b2c8-47330928e62e",
+          "elapsed_seconds": 15.063275515996793,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T12:14:26.606447+00:00",
+            "remaining_gpu_seconds": 2302.693997,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.372000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 12.204968000000008
+        }
+      ],
+      "file": "audio/s003-9dfa76f366f3-a1.wav",
+      "sha256": "ede057ce08a22a1db28f1fb104e1a7b0f4788e7600c2bfd247bd46bd889cf03f",
+      "validation": {
+        "duration_s": 9.496875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 29,
+        "duration_bounds_s": [
+          6.444444444444445,
+          19.11111111111111
+        ],
+        "active_fraction": 0.8315789473684211,
+        "max_internal_silence_s": 0.44,
+        "trim_start_s": 0,
+        "trim_end_s": 9.496875,
+        "processed_duration_s": 9.496875,
+        "median_pitch_hz": 125.32722513089004,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -0.6915454892992204,
+        "boundary_voice_review_flag": false
+      },
+      "scene": 3,
+      "source_gate": null,
+      "owner_review": "Pilot approved by Jon, 6 November 2026"
+    },
+    {
+      "id": "s004",
+      "title": "Scene 3 continuation",
+      "scene": 3,
+      "text": "That's two thousand five hundred and twenty dollars a year, before a single doctor's bill.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "2e5590813c8c9c5d8c6549e92ad72a154288eeb8b7e7560b9d89d436a9344326",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:07:00.964141+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:06:57.990850+00:00",
+            "remaining_gpu_seconds": 2302.693997,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.751000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "b7d431ae8bfc40c7abf1f19ebb5fd78f",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 14.368570663995342,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:07:16.713950+00:00",
+            "remaining_gpu_seconds": 2291.883878,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.472000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 10.810118999999759
+        }
+      ],
+      "file": "audio/s004-2e5590813c8c-a1.wav",
+      "sha256": "74cefadae823826507bd894a000b20d7c16dcc5a922d93ab1922c77ea967a87c",
+      "validation": {
+        "duration_s": 5.656875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 15,
+        "duration_bounds_s": [
+          3.3333333333333335,
+          11.333333333333334
+        ],
+        "active_fraction": 0.8197879858657244,
+        "max_internal_silence_s": 0.32,
+        "trim_start_s": 0.34,
+        "trim_end_s": 5.656875,
+        "processed_duration_s": 5.3168750000000005,
+        "median_pitch_hz": 144.57831325301206,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 2.4738157858202774,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s005",
+      "title": "Scene 3 continuation",
+      "scene": 3,
+      "text": "And the pressure is wider than my office: Marsh projects that employers' average health-benefit costs per worker will rise eight point two percent in 2027. That's an employer-cost forecast, not an eight-point-two-percent increase to every person's premium.",
+      "source_gate": "employer_forecast",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "6cc96bcd2a40244ecf978132c233c7ccd64c5adce4f271938b6d185104a47f54",
+      "status": "source_review",
+      "attempts": []
+    },
+    {
+      "id": "s006",
+      "title": "Scene 3 continuation",
+      "scene": 3,
+      "text": "I asked the group chat. Alex said, \u201cPick the best.\u201d Danny said, \u201cPick the cheapest.\u201d Uncle Gary said, \u201cI never look,\u201d and sent a picture of his boat. Three opinions. Zero calculations. So I went next door.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "5901004ede4da48ad807249510618dd63c1642eef9a7283e128854d7fc7b5f3f",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:07:17.994529+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:07:17.994463+00:00",
+            "remaining_gpu_seconds": 2291.883878,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.752000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "e100e054c3254ea3b8f35a2f9e8b6405",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 21.444003443000838,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:07:40.991354+00:00",
+            "remaining_gpu_seconds": 2273.680241,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.755000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 18.20363700000007
+        }
+      ],
+      "file": "audio/s006-5901004ede4d-a1.wav",
+      "sha256": "8dae8dbf7f681669a8b17bedbef70823ca26b06f3ceb5dc9573d488d1b7850da",
+      "validation": {
+        "duration_s": 13.896875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 37,
+        "duration_bounds_s": [
+          8.222222222222221,
+          23.555555555555554
+        ],
+        "active_fraction": 0.6776978417266187,
+        "max_internal_silence_s": 0.58,
+        "trim_start_s": 0,
+        "trim_end_s": 13.896875,
+        "processed_duration_s": 13.896875,
+        "median_pitch_hz": 137.14285714285714,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": null,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s007",
+      "title": "Scene 4 continuation",
+      "scene": 4,
+      "text": "My neighbor Dev drives an old sedan and almost never gives advice. He asks questions. Three, this time: \u201cWhat's the most this could cost in a bad year? What would it have cost in your actual year? And where would the difference go?\u201d We opened the plan summaries. These are illustrative numbers, not a quote for your coverage. Plan A, a PPO: two hundred and ten dollars a month in premiums, or two thousand five hundred and twenty a year.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "8a5c11a786413a133a21d1371cd153499ae9ddcd7a057cbe487a4bcfb34d5412",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:07:42.066269+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:07:42.066246+00:00",
+            "remaining_gpu_seconds": 2273.680241,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.855000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "270d992f72ea4f218718b5518837758d",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 37.25035697199928,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:08:19.987940+00:00",
+            "remaining_gpu_seconds": 2239.666255,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.751000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 34.01398599999993
+        }
+      ],
+      "file": "audio/s007-8a5c11a78641-a1.wav",
+      "sha256": "a518b12ea116e3505e2c704e9abaa0f787e622f951d82191f0996ffddd8ab9eb",
+      "validation": {
+        "duration_s": 26.11375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 80,
+        "duration_bounds_s": [
+          17.77777777777778,
+          47.44444444444444
+        ],
+        "active_fraction": 0.7741194486983155,
+        "max_internal_silence_s": 0.74,
+        "trim_start_s": 0,
+        "trim_end_s": 26.11375,
+        "processed_duration_s": 26.11375,
+        "median_pitch_hz": 111.88871984351228,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -3.523378639904795,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s008",
+      "title": "Scene 4 continuation",
+      "scene": 4,
+      "text": "Add its four-thousand-dollar in-network out-of-pocket maximum. In a bad year of covered in-network care, that's six thousand five hundred and twenty. Plan B, an HSA-eligible high-deductible plan: seventy dollars a month, or eight hundred and forty a year. Its in-network out-of-pocket maximum was six thousand five hundred. So the total before the employer contribution would be seven thousand three hundred and forty. My employer would also add seven hundred and fifty to my HSA.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "3b9389d5f19f845b64c137cf846dd0c6b319c17348737c55e746db6f56afbac6",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:08:20.444394+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:08:20.444370+00:00",
+            "remaining_gpu_seconds": 2239.666255,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.231000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "d2c1accc8430463dab0502296d5b9aea",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 38.4919119949991,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:09:00.311130+00:00",
+            "remaining_gpu_seconds": 2205.281063,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.062000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 34.38519200000019
+        }
+      ],
+      "file": "audio/s008-3b9389d5f19f-a1.wav",
+      "sha256": "2ccc09a24f5be4b53048638c01df252d38fc85f3cb14797ee22f77edc3d08788",
+      "validation": {
+        "duration_s": 26.59375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 85,
+        "duration_bounds_s": [
+          18.88888888888889,
+          50.22222222222222
+        ],
+        "active_fraction": 0.8233082706766918,
+        "max_internal_silence_s": 0.5,
+        "trim_start_s": 0,
+        "trim_end_s": 26.59375,
+        "processed_duration_s": 26.59375,
+        "median_pitch_hz": 118.51924108667025,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.9966803559129351,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s009",
+      "title": "Scene 4 continuation",
+      "scene": 4,
+      "text": "After counting that contribution as value, the net comparison comes to six thousand five hundred and ninety. Just seventy dollars apart. But I'd need enough cash to manage the higher deductible, and neither figure protects me from every uncovered or out-of-network bill.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "086df330a7e25d6635b6e67c913bf788510559f7a4a0024f359785cacd7848f5",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:09:01.604961+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:09:01.604938+00:00",
+            "remaining_gpu_seconds": 2205.281063,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.367000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "89c2d6830c484c6c8fd3572ea2dc49d6",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 23.155813822995697,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:09:26.117954+00:00",
+            "remaining_gpu_seconds": 2185.002998,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.882000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 20.27806499999997
+        }
+      ],
+      "file": "audio/s009-086df330a7e2-a1.wav",
+      "sha256": "5e1a259f6150bbdd1da58499f929c69e71c05e8f82709982830b4f8b50a711e0",
+      "validation": {
+        "duration_s": 15.416875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 44,
+        "duration_bounds_s": [
+          9.777777777777779,
+          27.444444444444443
+        ],
+        "active_fraction": 0.8106355382619974,
+        "max_internal_silence_s": 0.64,
+        "trim_start_s": 0,
+        "trim_end_s": 15.416875,
+        "processed_duration_s": 15.416875,
+        "median_pitch_hz": 123.71134020618557,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.7422775197342724,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s010",
+      "title": "Scene 5 continuation",
+      "scene": 5,
+      "text": "Then Dev asked what I had actually used. Say my covered, in-network care was six hundred dollars, and under this example's rules I'd pay one hundred and fifty in PPO copays. That makes the PPO two thousand six hundred and seventy dollars for the year, including premiums. On the high-deductible plan, I'd pay eight hundred and forty in premiums plus six hundred for care: fourteen hundred and forty dollars out of pocket.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "0e639e6db893346f3420c0d1784e24aa090b7f8ebbe911f6ce0ad9c70717b496",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:09:27.119034+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:09:27.119011+00:00",
+            "remaining_gpu_seconds": 2185.002998,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.920000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "7e99b3877e6a4c58bc00084afaeb399f",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 35.41917324899987,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:10:03.730800+00:00",
+            "remaining_gpu_seconds": 2153.610994,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.538000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 31.392003999999815
+        }
+      ],
+      "file": "audio/s010-0e639e6db893-a1.wav",
+      "sha256": "e598fced54787d510529650b702d662ed067a3894372e3d580f82618862f5dd7",
+      "validation": {
+        "duration_s": 24.11375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 74,
+        "duration_bounds_s": [
+          16.444444444444443,
+          44.11111111111111
+        ],
+        "active_fraction": 0.818407960199005,
+        "max_internal_silence_s": 0.74,
+        "trim_start_s": 0.44000000000000006,
+        "trim_end_s": 24.11375,
+        "processed_duration_s": 23.67375,
+        "median_pitch_hz": 113.74407582938389,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -1.4542361582406884,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s011",
+      "title": "Scene 5 continuation",
+      "scene": 5,
+      "text": "The employer's seven-hundred-and-fifty-dollar HSA contribution is an additional benefit, bringing the illustrative net economic cost to six hundred and ninety. Difference: one thousand nine hundred and eighty dollars. It isn't an instant cash rebate or a guaranteed saving. It depends on the services, negotiated prices, prescriptions and network. But now I had an actual comparison, not a feeling about which name sounded safer.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "9180f4252f1e4b67466d65fbece04bc519b0f4f08c7f9b3c3e446b0d4b06d81f",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:10:05.224369+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:10:05.224346+00:00",
+            "remaining_gpu_seconds": 2153.610994,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.983000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "4abcf7ad46514aceae0ac34315f633de",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 37.528578427001776,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:10:43.974803+00:00",
+            "remaining_gpu_seconds": 2119.66212,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.787000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 33.94887400000016
+        }
+      ],
+      "file": "audio/s011-9180f4252f1e-a1.wav",
+      "sha256": "c75a170d4312438df4c2ee99116b6eedc50355ef69ddc67f28f7ea58595a63c5",
+      "validation": {
+        "duration_s": 24.27375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 67,
+        "duration_bounds_s": [
+          14.88888888888889,
+          40.22222222222222
+        ],
+        "active_fraction": 0.8303130148270181,
+        "max_internal_silence_s": 0.58,
+        "trim_start_s": 0,
+        "trim_end_s": 24.27375,
+        "processed_duration_s": 24.27375,
+        "median_pitch_hz": 126.3157894736842,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 1.814922964514846,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s012",
+      "title": "Scene 6 continuation",
+      "scene": 6,
+      "text": "The third question was the one I hadn't considered: where does the difference go? I texted my cousin Priya. She drives a little hatchback, wears the same fleece everywhere and replied, \u201cPay the difference to yourself.\u201d The premium gap was a hundred and forty dollars a month. If I could afford it, I could put that money into an HSA instead: sixteen hundred and eighty dollars over a year.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "6badcd69fe9042c1ae8f6ed01a199b40a8a57cbd978356aaf84e0d2e3ba30a55",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:10:45.307287+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:10:45.307264+00:00",
+            "remaining_gpu_seconds": 2119.66212,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.058000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "625916d7fefa423ba8652b66b4ce68e3",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 36.68511981300253,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:11:23.367964+00:00",
+            "remaining_gpu_seconds": 2086.62386,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.158000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 33.03825999999981
+        }
+      ],
+      "file": "audio/s012-6badcd69fe90-a1.wav",
+      "sha256": "b66548e80915efac90c169b1c712ad288280cde840b5aa3e3befdfbe238f9c7c",
+      "validation": {
+        "duration_s": 22.296875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 69,
+        "duration_bounds_s": [
+          15.333333333333334,
+          41.333333333333336
+        ],
+        "active_fraction": 0.7838565022421524,
+        "max_internal_silence_s": 0.64,
+        "trim_start_s": 0,
+        "trim_end_s": 22.296875,
+        "processed_duration_s": 22.296875,
+        "median_pitch_hz": 124.0318359062016,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -0.31589417975819933,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s013",
+      "title": "Scene 6 continuation",
+      "scene": 6,
+      "text": "Add the employer's seven hundred and fifty, and that's two thousand four hundred and thirty dollars contributed before spending or growth. If I used six hundred of the HSA to pay medical bills, eighteen hundred and thirty would remain. If I paid those bills from other cash, the full two thousand four hundred and thirty could stay invested or saved.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "e30e95c1883d88d21da4321f7e30122fef008262afc7ddfd8ed53106ddcb5550",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:11:24.378047+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:11:24.378024+00:00",
+            "remaining_gpu_seconds": 2086.62386,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.188000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "0e9e16f59d0b4c79b2dfc6588796b679",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 28.366971151001053,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:11:53.929477+00:00",
+            "remaining_gpu_seconds": 2061.939232,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.728000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 24.684627999999975
+        }
+      ],
+      "file": "audio/s013-e30e95c1883d-a1.wav",
+      "sha256": "c30ed9b819f8bb4bf1c69fb8be9474df1a441a3afad3e08f2102bfb0038a8ec8",
+      "validation": {
+        "duration_s": 18.216875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 60,
+        "duration_bounds_s": [
+          13.333333333333334,
+          36.333333333333336
+        ],
+        "active_fraction": 0.8265642151481888,
+        "max_internal_silence_s": 0.5,
+        "trim_start_s": 0,
+        "trim_end_s": 18.216875,
+        "processed_duration_s": 18.216875,
+        "median_pitch_hz": 130.7911617961511,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.9186549817554608,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s014",
+      "title": "Scene 6 continuation",
+      "scene": 6,
+      "text": "An HSA has federal tax advantages when you're eligible, and qualified medical withdrawals can be tax-free. For 2027, the self-only contribution limit is four thousand five hundred dollars, including employer money.",
+      "source_gate": "hsa_rules",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "3aaa66c379f16873dc6de4295aec2a37991eb08fd34c4db1bfa0b48a38fff92f",
+      "status": "source_review",
+      "attempts": []
+    },
+    {
+      "id": "s015",
+      "title": "Scene 6 continuation",
+      "scene": 6,
+      "text": "State treatment and eligibility rules matter. The point wasn't to make medical costs disappear. It was to give the money a job.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "86d29df4becd2f2bc6e57563a087ae6a375730fd24d10a2a324c40e8930d89bd",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:11:55.173926+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:11:55.173904+00:00",
+            "remaining_gpu_seconds": 2061.939232,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.933000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "ce15befa98c14f31a52202de95928124",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 12.224833346997912,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:12:08.779625+00:00",
+            "remaining_gpu_seconds": 2052.276238,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.541000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 9.662994000000253
+        }
+      ],
+      "file": "audio/s015-86d29df4becd-a1.wav",
+      "sha256": "d340b428142c735784694a268097a46481cc8f47bded862fa939d7c2a2565bb6",
+      "validation": {
+        "duration_s": 7.416875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 22,
+        "duration_bounds_s": [
+          4.888888888888889,
+          15.222222222222221
+        ],
+        "active_fraction": 0.816711590296496,
+        "max_internal_silence_s": 0.54,
+        "trim_start_s": 0,
+        "trim_end_s": 7.416875,
+        "processed_duration_s": 7.416875,
+        "median_pitch_hz": 137.56405202995666,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": null,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s016",
+      "title": "Scene 7 continuation",
+      "scene": 7,
+      "text": "And this is where the story needs a warning label. The high-deductible plan doesn't always win. If you're expecting a baby, planning surgery, seeing specialists regularly or taking expensive medication, the PPO could be much better. Check both networks, your drug coverage, the exact deductible and the out-of-pocket limits. Remember that high expenses can arrive before your HSA has much money in it. If you shop through the health-insurance Marketplace rather than work, that's a separate enrollment process.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "c6bf78af0a850b7f7e323f563a0603f2c77ac696c648dccb9925a80b0cff0c09",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:12:09.853730+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:12:09.853708+00:00",
+            "remaining_gpu_seconds": 2052.276238,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.641000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "4cbff39f7ea0404d89fe099185e88072",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 41.517687478997686,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:12:52.529661+00:00",
+            "remaining_gpu_seconds": 2015.240676,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.327000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 37.03556200000003
+        }
+      ],
+      "file": "audio/s016-c6bf78af0a85-a1.wav",
+      "sha256": "16311ef71263545ececbf5c4814fa30da7d698af3d5a50d5db6d15eca5b494ca",
+      "validation": {
+        "duration_s": 28.19375,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 82,
+        "duration_bounds_s": [
+          18.22222222222222,
+          48.55555555555556
+        ],
+        "active_fraction": 0.8141843971631205,
+        "max_internal_silence_s": 0.54,
+        "trim_start_s": 0,
+        "trim_end_s": 28.19375,
+        "processed_duration_s": 28.19375,
+        "median_pitch_hz": 140.0,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 0.30387972164599464,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s017",
+      "title": "Scene 7 continuation",
+      "scene": 7,
+      "text": "For 2027, HealthCare.gov shows a December fifteenth deadline for January-first coverage and January fifteenth as the final open-enrollment date. State rules can differ.",
+      "source_gate": "marketplace_dates",
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "b3d188c6d0b419c33db71b89287063a91ca5b9b134aeb6735d7d5d1f42b4dc14",
+      "status": "source_review",
+      "attempts": []
+    },
+    {
+      "id": "s018",
+      "title": "Scene 7 continuation",
+      "scene": 7,
+      "text": "Your employer's deadline might be much sooner.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "41c4a95c509c920b2e12855390476ccc84a8bc5a0726b4ade62b07af498fa295",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:12:53.606315+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:12:53.606292+00:00",
+            "remaining_gpu_seconds": 2015.240676,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.395000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "b15b119c40e344869e8c36212c6b2ed2",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 7.179019220006012,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:13:01.938469+00:00",
+            "remaining_gpu_seconds": 2011.090713,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.735000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 4.149962999999843
+        }
+      ],
+      "file": "audio/s018-41c4a95c509c-a1.wav",
+      "sha256": "844723d8cca512b019d229b9c9a271a6b2e34d1080c6635cf5aaeeed8ab8db3b",
+      "validation": {
+        "duration_s": 3.016875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 7,
+        "duration_bounds_s": [
+          1.5555555555555556,
+          6.888888888888889
+        ],
+        "active_fraction": 0.7218543046357616,
+        "max_internal_silence_s": 0.02,
+        "trim_start_s": 0.56,
+        "trim_end_s": 3.016875,
+        "processed_duration_s": 2.456875,
+        "median_pitch_hz": 117.96220999760823,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": null,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s019",
+      "title": "Scene 8 continuation",
+      "scene": 8,
+      "text": "Back at my laptop, I didn't click \u201cKeep my current plan.\u201d I checked my own numbers and made a deliberate choice. Not because cheaper premiums always mean cheaper healthcare. They don't. I learned to ask: what's the bad year, what's the real year, and where would the difference go? Forty minutes once a year. That's a better habit than four seconds of autopilot. Next time, there's another box on the benefits page I ignored for years.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "374cee06796c8366ffa05454bbf7299f62c2dbc130d14079a8c01c8e4855b9f1",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:13:02.985512+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:13:02.985462+00:00",
+            "remaining_gpu_seconds": 2011.090713,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.780000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "ea6c45a9bb0e4a45b8f4b3ce0d7a3773",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 38.24430494999979,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:13:42.354670+00:00",
+            "remaining_gpu_seconds": 1977.711068,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.165000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 33.37964499999998
+        }
+      ],
+      "file": "audio/s019-374cee06796c-a1.wav",
+      "sha256": "41201670c36c239f5de8f930d112efe455498e2786007249b1b92f3f51358715",
+      "validation": {
+        "duration_s": 22.376875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 76,
+        "duration_bounds_s": [
+          16.88888888888889,
+          45.22222222222222
+        ],
+        "active_fraction": 0.803395889186774,
+        "max_internal_silence_s": 0.52,
+        "trim_start_s": 0,
+        "trim_end_s": 22.376875,
+        "processed_duration_s": 22.376875,
+        "median_pitch_hz": 109.0909090909091,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": -1.3535264912981106,
+        "boundary_voice_review_flag": false
+      }
+    },
+    {
+      "id": "s020",
+      "title": "Scene 8 continuation",
+      "scene": 8,
+      "text": "And the money I missed can't be recovered. If this was useful, stick around.",
+      "source_gate": null,
+      "settings": {
+        "space": "Qwen/Qwen3-TTS",
+        "endpoint": "/generate_voice_clone",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "model_size": "1.7B",
+        "language": "English",
+        "use_xvector_only": true,
+        "reference": "Audio/ren_reference.wav",
+        "transcript": "Audio/ren_reference.txt",
+        "other_generation_parameters": "unchanged public Space defaults",
+        "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+        "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+      },
+      "fingerprint": "76d0bdacaf0731d10b63da8922356242e25ffb9f010175ae7b97aff78210602a",
+      "status": "complete",
+      "attempts": [
+        {
+          "started_at": "2026-11-06T14:13:42.804950+00:00",
+          "settings": {
+            "space": "Qwen/Qwen3-TTS",
+            "endpoint": "/generate_voice_clone",
+            "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+            "model_size": "1.7B",
+            "language": "English",
+            "use_xvector_only": true,
+            "reference": "Audio/ren_reference.wav",
+            "transcript": "Audio/ren_reference.txt",
+            "other_generation_parameters": "unchanged public Space defaults",
+            "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+            "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+          },
+          "before": {
+            "at": "2026-11-06T14:13:42.804926+00:00",
+            "remaining_gpu_seconds": 1977.711068,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:05.612000+00:00"
+          },
+          "phase": "returned",
+          "network_read_timeout_seconds": 120,
+          "event_id": "39c2ce8fc75543eeb092d0c756347ed4",
+          "session_hash": "1e5b3050-006a-40ef-a7df-381a47f55e48",
+          "elapsed_seconds": 10.25508728800196,
+          "space_status": "Voice clone generation completed successfully!",
+          "after": {
+            "at": "2026-11-06T14:13:54.222410+00:00",
+            "remaining_gpu_seconds": 1971.456593,
+            "base_gpu_seconds": 2400,
+            "overquota_used": 0,
+            "reset_at": "2026-11-07T11:23:06.013000+00:00"
+          },
+          "observed_quota_decrease_gpu_seconds": 6.254474999999957
+        }
+      ],
+      "file": "audio/s020-76d0bdacaf07-a1.wav",
+      "sha256": "e8f34abd1003eae10073e94889717fe37ed1788ee2dbb8f7b313ba045a2ffd1a",
+      "validation": {
+        "duration_s": 4.776875,
+        "sample_rate": 24000,
+        "channels": 1,
+        "word_count": 14,
+        "duration_bounds_s": [
+          3.111111111111111,
+          10.777777777777779
+        ],
+        "active_fraction": 0.7405857740585774,
+        "max_internal_silence_s": 0.46,
+        "trim_start_s": 0,
+        "trim_end_s": 4.776875,
+        "processed_duration_s": 4.776875,
+        "median_pitch_hz": 160.62315337093742,
+        "technical": "pass",
+        "transcription": "unavailable; listening review required",
+        "listening": "pending",
+        "voice_identity": "same cloning settings; listening review required",
+        "reference_pitch_hz": 124.35567010309279,
+        "pitch_review_flag": false,
+        "boundary_pitch_shift_semitones": 6.697787833801148,
+        "boundary_voice_review_flag": true
+      }
+    }
+  ],
+  "quota_events": [
+    {
+      "segment": "s001",
+      "phase": "before",
+      "at": "2026-11-06T12:11:20.632848+00:00",
+      "remaining_gpu_seconds": 2380.842912,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.391000+00:00"
+    },
+    {
+      "segment": "s001",
+      "phase": "after",
+      "at": "2026-11-06T12:11:53.294013+00:00",
+      "remaining_gpu_seconds": 2356.237505,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.056000+00:00"
+    },
+    {
+      "segment": "s002",
+      "phase": "before",
+      "at": "2026-11-06T12:11:54.638183+00:00",
+      "remaining_gpu_seconds": 2356.237505,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.377000+00:00"
+    },
+    {
+      "segment": "s002",
+      "phase": "after",
+      "at": "2026-11-06T12:12:40.549136+00:00",
+      "remaining_gpu_seconds": 2314.898965,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.340000+00:00"
+    },
+    {
+      "segment": "s003",
+      "phase": "before",
+      "at": "2026-11-06T12:14:05.455756+00:00",
+      "remaining_gpu_seconds": 2314.898965,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.224000+00:00"
+    },
+    {
+      "segment": "s003",
+      "phase": "after",
+      "at": "2026-11-06T12:14:26.606447+00:00",
+      "remaining_gpu_seconds": 2302.693997,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.372000+00:00"
+    },
+    {
+      "segment": "s004",
+      "phase": "before",
+      "at": "2026-11-06T14:06:57.990850+00:00",
+      "remaining_gpu_seconds": 2302.693997,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.751000+00:00"
+    },
+    {
+      "segment": "s004",
+      "phase": "after",
+      "at": "2026-11-06T14:07:16.713950+00:00",
+      "remaining_gpu_seconds": 2291.883878,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.472000+00:00"
+    },
+    {
+      "segment": "s006",
+      "phase": "before",
+      "at": "2026-11-06T14:07:17.994463+00:00",
+      "remaining_gpu_seconds": 2291.883878,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.752000+00:00"
+    },
+    {
+      "segment": "s006",
+      "phase": "after",
+      "at": "2026-11-06T14:07:40.991354+00:00",
+      "remaining_gpu_seconds": 2273.680241,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.755000+00:00"
+    },
+    {
+      "segment": "s007",
+      "phase": "before",
+      "at": "2026-11-06T14:07:42.066246+00:00",
+      "remaining_gpu_seconds": 2273.680241,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.855000+00:00"
+    },
+    {
+      "segment": "s007",
+      "phase": "after",
+      "at": "2026-11-06T14:08:19.987940+00:00",
+      "remaining_gpu_seconds": 2239.666255,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.751000+00:00"
+    },
+    {
+      "segment": "s008",
+      "phase": "before",
+      "at": "2026-11-06T14:08:20.444370+00:00",
+      "remaining_gpu_seconds": 2239.666255,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.231000+00:00"
+    },
+    {
+      "segment": "s008",
+      "phase": "after",
+      "at": "2026-11-06T14:09:00.311130+00:00",
+      "remaining_gpu_seconds": 2205.281063,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.062000+00:00"
+    },
+    {
+      "segment": "s009",
+      "phase": "before",
+      "at": "2026-11-06T14:09:01.604938+00:00",
+      "remaining_gpu_seconds": 2205.281063,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.367000+00:00"
+    },
+    {
+      "segment": "s009",
+      "phase": "after",
+      "at": "2026-11-06T14:09:26.117954+00:00",
+      "remaining_gpu_seconds": 2185.002998,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.882000+00:00"
+    },
+    {
+      "segment": "s010",
+      "phase": "before",
+      "at": "2026-11-06T14:09:27.119011+00:00",
+      "remaining_gpu_seconds": 2185.002998,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.920000+00:00"
+    },
+    {
+      "segment": "s010",
+      "phase": "after",
+      "at": "2026-11-06T14:10:03.730800+00:00",
+      "remaining_gpu_seconds": 2153.610994,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.538000+00:00"
+    },
+    {
+      "segment": "s011",
+      "phase": "before",
+      "at": "2026-11-06T14:10:05.224346+00:00",
+      "remaining_gpu_seconds": 2153.610994,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.983000+00:00"
+    },
+    {
+      "segment": "s011",
+      "phase": "after",
+      "at": "2026-11-06T14:10:43.974803+00:00",
+      "remaining_gpu_seconds": 2119.66212,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.787000+00:00"
+    },
+    {
+      "segment": "s012",
+      "phase": "before",
+      "at": "2026-11-06T14:10:45.307264+00:00",
+      "remaining_gpu_seconds": 2119.66212,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.058000+00:00"
+    },
+    {
+      "segment": "s012",
+      "phase": "after",
+      "at": "2026-11-06T14:11:23.367964+00:00",
+      "remaining_gpu_seconds": 2086.62386,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.158000+00:00"
+    },
+    {
+      "segment": "s013",
+      "phase": "before",
+      "at": "2026-11-06T14:11:24.378024+00:00",
+      "remaining_gpu_seconds": 2086.62386,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.188000+00:00"
+    },
+    {
+      "segment": "s013",
+      "phase": "after",
+      "at": "2026-11-06T14:11:53.929477+00:00",
+      "remaining_gpu_seconds": 2061.939232,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.728000+00:00"
+    },
+    {
+      "segment": "s015",
+      "phase": "before",
+      "at": "2026-11-06T14:11:55.173904+00:00",
+      "remaining_gpu_seconds": 2061.939232,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.933000+00:00"
+    },
+    {
+      "segment": "s015",
+      "phase": "after",
+      "at": "2026-11-06T14:12:08.779625+00:00",
+      "remaining_gpu_seconds": 2052.276238,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.541000+00:00"
+    },
+    {
+      "segment": "s016",
+      "phase": "before",
+      "at": "2026-11-06T14:12:09.853708+00:00",
+      "remaining_gpu_seconds": 2052.276238,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.641000+00:00"
+    },
+    {
+      "segment": "s016",
+      "phase": "after",
+      "at": "2026-11-06T14:12:52.529661+00:00",
+      "remaining_gpu_seconds": 2015.240676,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.327000+00:00"
+    },
+    {
+      "segment": "s018",
+      "phase": "before",
+      "at": "2026-11-06T14:12:53.606292+00:00",
+      "remaining_gpu_seconds": 2015.240676,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.395000+00:00"
+    },
+    {
+      "segment": "s018",
+      "phase": "after",
+      "at": "2026-11-06T14:13:01.938469+00:00",
+      "remaining_gpu_seconds": 2011.090713,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.735000+00:00"
+    },
+    {
+      "segment": "s019",
+      "phase": "before",
+      "at": "2026-11-06T14:13:02.985462+00:00",
+      "remaining_gpu_seconds": 2011.090713,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.780000+00:00"
+    },
+    {
+      "segment": "s019",
+      "phase": "after",
+      "at": "2026-11-06T14:13:42.354670+00:00",
+      "remaining_gpu_seconds": 1977.711068,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.165000+00:00"
+    },
+    {
+      "segment": "s020",
+      "phase": "before",
+      "at": "2026-11-06T14:13:42.804926+00:00",
+      "remaining_gpu_seconds": 1977.711068,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:05.612000+00:00"
+    },
+    {
+      "segment": "s020",
+      "phase": "after",
+      "at": "2026-11-06T14:13:54.222410+00:00",
+      "remaining_gpu_seconds": 1971.456593,
+      "base_gpu_seconds": 2400,
+      "overquota_used": 0,
+      "reset_at": "2026-11-07T11:23:06.013000+00:00"
+    }
+  ],
+  "hardware_policy": "Free ZeroGPU only; no paid fallback or retries",
+  "free_reserve_gpu_seconds": 120,
+  "overall_status": "source_checks_pending",
+  "space_revision": "6ae5dfa536c7109b33606b2332b8f0545d45f228",
+  "scope": "Full production authorised after explicit pilot approval, 6 November 2026. Three external claim categories remain source-gated.",
+  "quota": {
+    "at": "2026-11-06T14:13:54.222410+00:00",
+    "remaining_gpu_seconds": 1971.456593,
+    "base_gpu_seconds": 2400,
+    "overquota_used": 0,
+    "reset_at": "2026-11-07T11:23:06.013000+00:00"
+  },
+  "updated_at": "2026-11-06T14:15:51.102373+00:00",
+  "pilot_approved": true,
+  "pilot_commit": "77c4d3a",
+  "source_evidence": "source-checks.json"
+}

@@ -1,0 +1,9 @@
+{
+  "owner": "Jon",
+  "date": "2026-11-06",
+  "message": "Approved",
+  "approved_pilot": "Ren_Long_01_Open_Enrollment_Pilot_v2.mp4",
+  "pilot_sha256": "a145ec616a9ae4a7c9bfa3ea57d142e721e1422202ac2ce7c6bb7ef418efa1f9",
+  "approved_source_commit": "77c4d3a",
+  "meaning": "Continue full long episode using reviewed pilot style and revised script. No Shorts, publication or merge authorised."
+}

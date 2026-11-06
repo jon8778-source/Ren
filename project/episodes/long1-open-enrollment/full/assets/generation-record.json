@@ -1,0 +1,14 @@
+{
+  "generator": "OpenAI image generation",
+  "reference": "../assets/illustrated-props-v2.png",
+  "objects": [
+    "Blank-label HSA jar",
+    "Medical checklist",
+    "Blank-label prescription bottle",
+    "Baby bottle"
+  ],
+  "sha256": "303b314c1d85858237bea0760ed061438cd3da52c8e58356aa41e4a2b7c3e48e",
+  "style": "Same navy/sage/cream restrained illustrated props; no characters",
+  "financial_text": "Generated labels blank; all amounts/financial text drawn in code",
+  "use": "Reusable props supporting HSA and potential PPO needs; not specific medical advice"
+}

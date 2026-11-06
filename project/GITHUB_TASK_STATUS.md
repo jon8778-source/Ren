@@ -1,3 +1,36 @@
+# Current task — Long 1 full production, 6 November 2026
+
+Owner approved illustrated-prop pilot revision 2 (`77c4d3a`) and instructed continue.
+Branch `codex/long1-open-enrollment-pilot`; local source checkpoint, no remote push.
+Full production is isolated under `episodes/long1-open-enrollment/full/`.
+
+17/20 original narration segments saved (3 approved originals reused, 14 new).
+303.388125s raw originals; 302.048125s after excessive-edge-only trimming.
+Remaining s005/s014/s017 are source-gated (2027 forecast/HSA limit/Marketplace dates),
+not quota blocked. No request was made for them. Narrow primary-domain network
+configuration draft saved but not active. Owner answer to neutral wording vs source
+access is pending. No silent script edits or inferred source verification.
+
+41 full-film visual boards, actual v3 compositor, approved illustrated props,
+new matching medical props, shared calculation source, full resumable launcher,
+original WAV/settings/hash manifest and independent clip rendering prepared.
+Final movie/narration/captions/encoded full QA await the three missing passages.
+Do not present independent clips or subset timings as a complete video.
+
+New calls14, no retries or paid usage; observed331.237404 GPU-seconds, elapsed
+382.131432s. Last quota snapshot1971.456593 free GPU-seconds, 6 Nov14:13:54 UTC;
+reset7 Nov11:23:06 UTC. These are historical measurements, not current guarantees.
+Acoustic screen flags s019→s020 for listening attention; no automatic regeneration.
+
+Resume: `bash project/episodes/long1-open-enrollment/full/resume.sh`.
+See full/README.md, checkpoint-report.json and source-checks.json. Original WAVs
+are excluded from Git; recovery bundle contains them. No merge, main/approved
+branch changes, GitHub media upload, Shorts or publication.
+
+Historical pilot/Short records below are superseded where marked pending approval.
+
+---
+
 # Current task — Long 1 Open Enrollment pilot, 6 November 2026
 
 Branch: `codex/long1-open-enrollment-pilot`; local source checkpoint only.
