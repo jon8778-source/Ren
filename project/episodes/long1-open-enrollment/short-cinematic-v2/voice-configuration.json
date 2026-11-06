@@ -1,0 +1,24 @@
+{
+  "space": "Qwen/Qwen3-TTS",
+  "endpoint": "/generate_voice_clone",
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "model_size": "1.7B",
+  "language": "English",
+  "use_xvector_only": true,
+  "reference": "Audio/ren_reference.wav",
+  "transcript": "Audio/ren_reference.txt",
+  "other_generation_parameters": "unchanged public Space defaults",
+  "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+  "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+  "reuse_audio": "project/episodes/long1-open-enrollment/portrait-short-01/deliverables/Ren_Health_Plan_Portrait_1min.mp4",
+  "new_generation_calls": 0,
+  "new_quota_consumption_gpu_seconds": 0,
+  "source_sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+  "pause_edit": {
+    "remove_source_seconds": [
+      13.84,
+      14.006666666666668
+    ],
+    "reason": "Finish complete \u201ccatch\u201d phrase inside 15 seconds, removing only quiet inter-sentence pause; no speed change, padding or speech removed"
+  }
+}

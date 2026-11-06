@@ -1,0 +1,24 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 360,
+  "text_safe": [
+    72,
+    180,
+    900,
+    1560
+  ],
+  "audio_ranges_samples": [
+    [
+      0,
+      664320
+    ],
+    [
+      672320,
+      728000
+    ]
+  ],
+  "audio_sample_rate": 48000,
+  "approval_gate": "prototype only; no full rendering implemented"
+}

@@ -1,3 +1,20 @@
+# Current task — cinematic health Short v2 prototype, 6 November 2026
+
+Branch: `codex/health-short-cinematic-v2`, based on verified standards991fc75.
+Directory: episodes/long1-open-enrollment/short-cinematic-v2/.
+15.000s prototype only,1080×1920/24fps,H.264/AAC,360frames,five compositions.
+Approved office and two actual Ren clips reused; new interface/document props
+are code-drawn. No major generated artwork. Ren6.25s(41.7%).
+Approved British Qwen settings/reference confirmed; existing Short audio reused.
+Zero new TTS requests/quota. Quiet0.166667s pause removed, no words/speed changed.
+Original Short/long video/reference unchanged. Production preflight and technical
+QA pass; source/PCM/financial figures verified. QA.md states inspection limits.
+No full Short rendered. STOP: explicit Jon prototype approval pending. Future
+medical environment artwork approval also required before full-film use.
+Source checkpoint publication pending. Media/caches stay excluded from Git.
+
+---
+
 # Current task — Shorts production standards implemented, 6 November 2026
 
 Feature branch: `codex/shorts-production-standards`, based on `effec66`.
