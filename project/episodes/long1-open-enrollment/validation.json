@@ -1,7 +1,7 @@
 {
-  "file": "Ren_Long_01_Open_Enrollment_60s_Pilot.mp4",
-  "bytes": 5285646,
-  "sha256": "19c062f43b4a7c8209d881a4b22ee2b4be2a0b177b22189e50e6dd71eb6bc0c4",
+  "file": "Ren_Long_01_Open_Enrollment_Pilot_v2.mp4",
+  "bytes": 5454576,
+  "sha256": "a145ec616a9ae4a7c9bfa3ea57d142e721e1422202ac2ce7c6bb7ef418efa1f9",
   "pilot_only": true,
   "duration_seconds": 61.041667,
   "narration_seconds": 61.0275,
@@ -64,16 +64,19 @@
   "visual_review": {
     "encoded_shot_midpoints": 18,
     "transition_samples": 85,
-    "native_1280x720_frames": [
-      "native-0.png",
+    "native_frames": [
+      "native-phone-v2.png",
       "native-2.png"
     ],
-    "findings": "Consistent left framing; opaque white shirt/trainers; fitted right content; no visible clipping or desk overlap; code-drawn arrows readable. Sample review, not full audiovisual playback.",
-    "evidence": "review/ in delivery source bundle; build/review/ locally"
+    "result": "No visible clipping or overlap; generated cars/keys and phone consistent; all screen figures sharp/code-rendered; steady Ren framing and intact white clothing in samples",
+    "limit": "Sampled visual inspection, not full audiovisual listening/playback"
   },
   "independent_primary_source_verification": "Not completed for later 2027 claims; none voiced in this pilot",
   "listening_and_physical_android_playback": false,
   "approval": "Stop for explicit pilot approval. No full episode or Shorts generated.",
   "main_modified": false,
-  "github_video_upload": false
+  "github_video_upload": false,
+  "revision": 2,
+  "revision_voice_requests": 0,
+  "revision_narration_sha256": "9b77f07fafb36dde17357806d8a85ebdacf2041e91afce4c617d070110e61ac1"
 }

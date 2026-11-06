@@ -25,15 +25,27 @@
     "Enrollment email/button/cursor",
     "Four-second and forty-minute clocks",
     "Potential $1,980 net-value card",
-    "Car/lease/keys",
-    "Bank balance phone",
     "Payment audit paper",
     "Illustrative pay stub",
-    "Premium-change card"
+    "Premium-change card",
+    "Driveway/garage setting, lease card and all phone UI/text"
   ],
   "new_audio": "3 original Qwen narration segments; manifest.json",
   "supplied_pack": "Scene/thumbnail PNGs and alternative character JPGs audited as concepts, not substituted for approved v3 artwork",
   "deferred": "Full-film Dev/Priya/group chat: approved assets or offscreen messages only; no new character portraits required for pilot",
   "music": false,
-  "source_clip_audio": false
+  "source_clip_audio": false,
+  "revision": 2,
+  "new_illustration": {
+    "file": "assets/illustrated-props-v2.png",
+    "objects": [
+      "Navy leased car",
+      "Sage older car",
+      "Blank phone",
+      "Car keys"
+    ],
+    "reference": "Existing approved Ren/office frame, for compatible palette/linework only",
+    "status": "New props for review, not newly approved character artwork",
+    "generation_record": "assets/generation-record.json"
+  }
 }

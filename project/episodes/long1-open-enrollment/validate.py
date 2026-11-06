@@ -3,7 +3,7 @@ from pathlib import Path
 import json,subprocess as sp,hashlib,math
 import numpy as np,soundfile as sf
 from PIL import Image,ImageDraw
-B=Path(__file__).resolve().parent;F=B/'deliverables/Ren_Long_01_Open_Enrollment_60s_Pilot.mp4';T=json.loads((B/'audio-timing.json').read_text());M=json.loads((B/'manifest.json').read_text());P=json.loads((B/'shot-manifest.json').read_text());S=P['shots'];sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+B=Path(__file__).resolve().parent;F=B/'deliverables/Ren_Long_01_Open_Enrollment_Pilot_v2.mp4';T=json.loads((B/'audio-timing.json').read_text());M=json.loads((B/'manifest.json').read_text());P=json.loads((B/'shot-manifest.json').read_text());S=P['shots'];sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 info=json.loads(sp.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(F)]));v=next(x for x in info['streams'] if x['codec_type']=='video');a=next(x for x in info['streams'] if x['codec_type']=='audio')
 assert (v['width'],v['height'],v['r_frame_rate'],v['codec_name'],a['codec_name'])==(1280,720,'24/1','h264','aac');assert int(v['nb_frames'])==T['frames'];assert abs(float(info['format']['duration'])-T['frames']/24)<.01
 cursor=0

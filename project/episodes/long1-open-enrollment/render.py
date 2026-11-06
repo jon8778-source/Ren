@@ -64,18 +64,27 @@ def changebox(im,pos,a,b,size):
  d=ImageDraw.Draw(im);w1=d.textlength(f'${a}',font=font(size));w2=d.textlength(f'${b}',font=font(size));w=w1+w2+round(size*.95)+2*round(size*.3);bb=d.textbbox(pos,f'${a}',font=font(size));box=(pos[0]-22,bb[1]-18,pos[0]+w+22,bb[3]+18);assert box[0]>=650 and box[2]<=1245 and box[3]<=505
  layer=Image.new('RGBA',(W,H));ImageDraw.Draw(layer).rounded_rectangle(box,16,fill=(255,255,255,170),outline=(0,0,0,255),width=2);im=Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB');change(ImageDraw.Draw(im),pos,a,b,size);return im
 
-def car(d,x,y,used=False,scale=1,travel=0):
- def b(t):return tuple(round((x if i%2==0 else y)+v*scale) for i,v in enumerate(t))
- fill=GREEN if used else '#496B83'
- d.rounded_rectangle(b((0,72,430,175)),26*scale,fill=fill,outline=INK,width=max(2,round(3*scale)))
- d.polygon([(x+76*scale,y+78*scale),(x+135*scale,y+13*scale),(x+294*scale,y+13*scale),(x+360*scale,y+78*scale)],fill=fill,outline=INK,width=max(2,round(3*scale)))
- d.polygon([(x+104*scale,y+70*scale),(x+144*scale,y+26*scale),(x+215*scale,y+26*scale),(x+215*scale,y+70*scale)],fill='#C9DCDD')
- d.polygon([(x+230*scale,y+26*scale),(x+286*scale,y+26*scale),(x+332*scale,y+70*scale),(x+230*scale,y+70*scale)],fill='#C9DCDD')
- for cx in [96,342]:
-  cy=y+171*scale;r=42*scale;d.ellipse((x+cx*scale-r,cy-r,x+cx*scale+r,cy+r),fill=INK);r2=24*scale;d.ellipse((x+cx*scale-r2,cy-r2,x+cx*scale+r2,cy+r2),fill='#D5D8D1');angle=travel*.06;d.line((x+cx*scale-r2*math.cos(angle),cy-r2*math.sin(angle),x+cx*scale+r2*math.cos(angle),cy+r2*math.sin(angle)),fill=MUTED,width=max(2,round(3*scale)))
- d.line(b((20,137,409,137)),fill='#DCE8DE',width=max(2,round(2*scale)))
-def keys(d,x,y,p):
- d.ellipse((x,y,x+48,y+48),outline=GREEN,width=6);d.line((x+42,y+40,x+110,y+108),fill=INK,width=9);d.line((x+80,y+79,x+67,y+92),fill=INK,width=7);d.line((x+98,y+97,x+85,y+110),fill=INK,width=7)
+# Original image-generation sheet retained unmodified. Crops are composition regions.
+PROP_SHEET=Image.open(B/'assets/illustrated-props-v2.png').convert('RGBA')
+PROPS={name:PROP_SHEET.crop(box) for name,box in {
+ 'new_car':(18,65,760,450),'used_car':(785,70,1525,450),
+ 'phone':(245,515,525,1000),'keys':(875,535,1430,990)}.items()}
+@functools.lru_cache(maxsize=32)
+def prop_size(name,width):
+ a=PROPS[name];return a.resize((width,round(a.height*width/a.width)),Image.Resampling.LANCZOS)
+def prop(im,name,x,y,width):
+ a=prop_size(name,width);im.paste(a,(round(x),round(y)),a)
+def driveway(im):
+ d=ImageDraw.Draw(im)
+ # Restrained environmental depth: house frontage, planting and driveway.
+ d.rounded_rectangle((95,165,1185,540),26,fill='#E5EADF')
+ d.rectangle((130,205,525,455),fill='#D3DED0');d.rectangle((158,230,492,455),fill='#F0F1E9')
+ for yy in [280,330,380]:d.line((158,yy,492,yy),fill='#CAD4C5',width=3)
+ d.rectangle((1050,220,1125,485),fill='#C5D3C0')
+ for xx,yy,rr in [(1050,415,48),(1110,430,55),(165,440,43)]:d.ellipse((xx-rr,yy-rr,xx+rr,yy+rr),fill='#9FB39D')
+ d.polygon([(95,495),(1185,495),(1250,625),(30,625)],fill='#D5D7D0')
+ d.line((30,625,1250,625),fill='#AEB7AA',width=3)
+
 def clock(d,cx,cy,r,phase):
  d.ellipse((cx-r,cy-r,cx+r,cy+r),fill=CREAM,outline=GREEN,width=6)
  for i in range(12):
@@ -98,7 +107,7 @@ def picture(s,n):
   elif k=='potential':
    im=textbox(im,(710,105),'Potential normal-year\nnet difference',34);im=textbox(im,(790,265),f"${C['potential_normal_year_net_gap']:,}",78);txt(ImageDraw.Draw(im),(710,430),'Illustrative example • not a cash rebate',24,GREEN)
   elif k=='samecar':
-   im=textbox(im,(710,105),f"Same used car.\n{A['backstory']['used_car_years_later']} years later.",38);layer=Image.new('RGBA',(W,H));ImageDraw.Draw(layer).rounded_rectangle((710,285,1090,475),16,fill=(255,255,255,170),outline=(0,0,0,255),width=2);im=Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB');d=ImageDraw.Draw(im);car(d,730,300,True,.75,0)
+   im=textbox(im,(710,105),f"Same used car.\n{A['backstory']['used_car_years_later']} years later.",38);layer=Image.new('RGBA',(W,H));ImageDraw.Draw(layer).rounded_rectangle((710,285,1090,475),16,fill=(255,255,255,170),outline=(0,0,0,255),width=2);im=Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB');prop(im,'used_car',730,295,340)
   elif k=='premium':
    im=textbox(im,(710,100),'Monthly premium',36);im=changebox(im,(700,240),A['previous_premium_monthly'],A['ppo']['premium_monthly'],60);txt(ImageDraw.Draw(im),(710,390),'Per month • illustrative plan',27,GREEN)
  else:
@@ -109,16 +118,17 @@ def picture(s,n):
    txt(d,(265,495),f"0:{A['auto_click_seconds']:02d}",66);txt(d,(800,495),f"{A['review_minutes']}:00",66,GREEN);d.line((560,320,695,320),fill=GREEN,width=6);d.polygon([(695,320),(672,305),(672,335)],fill=GREEN)
   elif k in ('lease','used'):
    center(d,55,f"Age {A['backstory']['leased_car_age']}: a shiny leased car" if k=='lease' else f"Age {A['backstory']['returned_car_age']}: return the keys. Buy used.",45)
-   offset=round(120*(1-ease(p/.35)));car(d,400-offset,295,k=='used',1.1,p*120)
-   d.line((150,550,1140,550),fill=MUTED,width=3)
+   driveway(im);d=ImageDraw.Draw(im)
+   offset=round(120*(1-ease(p/.35)));prop(im,'used_car' if k=='used' else 'new_car',330-offset,270,650)
    if k=='lease':
-    d.rounded_rectangle((930,210,1125,455),16,fill='#FFFFFF',outline=GREEN,width=3);txt(d,(963,244),'LEASE',29,GREEN)
-    for j in range(4):d.line((955,310+j*28,1100,310+j*28),fill='#C3CCC1',width=3)
-   else:keys(d,195+round(75*ease(p/.5)),215,0)
+    d.rounded_rectangle((995,200,1160,410),16,fill='#FFFFFF',outline=GREEN,width=3);txt(d,(1012,228),'LEASE',29,GREEN)
+    for j in range(4):d.line((1012,285+j*25,1140,285+j*25),fill='#C3CCC1',width=3)
+   else:prop(im,'keys',120+round(40*ease(p/.5)),235,175)
   elif k=='bank':
    im=Image.new('RGB',(W,H),INK);d=ImageDraw.Draw(im);txt(d,(100,115),'After Christmas',48,CREAM)
-   d.rounded_rectangle((725,70,1105,640),32,fill='#E4EBDD',outline=GREEN,width=5);d.rounded_rectangle((850,89,980,104),6,fill=INK)
-   txt(d,(765,195),'Available balance',27,GREEN);txt(d,(780,295),f"${A['backstory']['bank_balance']}",108);txt(d,(100,265),'A very small\nfinancial cushion.',42,CREAM)
+   prop(im,'phone',765,65,330);d=ImageDraw.Draw(im)
+   txt(d,(810,205),'Available balance',25,GREEN);txt(d,(820,285),f"${A['backstory']['bank_balance']}",100);txt(d,(100,265),'A very small\nfinancial cushion.',42,CREAM)
+   d.line((810,420,1050,420),fill='#D3DAD0',width=3);txt(d,(810,445),'Illustrative account',22,MUTED)
   elif k=='audit':
    im=Image.new('RGB',(W,H),INK);d=ImageDraw.Draw(im);center(d,55,'The January payment audit',48,CREAM)
    d.rounded_rectangle((190,175,1090,595),26,fill=CREAM,outline=GREEN,width=4)
@@ -146,7 +156,7 @@ def main():
   for s in SHOTS:picture(s,s['frames']//2).save(BUILD/(s['id']+'.jpg'))
   return
  files=[]
- signature=sha(Path(__file__))
+ signature=sha(Path(__file__))+sha(B/'assets/illustrated-props-v2.png')
  for s in SHOTS:
   path=BUILD/(s['id']+'.mp4');mark=path.with_suffix('.json');key=hashlib.sha256((signature+json.dumps(s,sort_keys=True)).encode()).hexdigest()
   if not(path.exists() and mark.exists() and json.loads(mark.read_text()).get('key')==key):
@@ -156,6 +166,6 @@ def main():
     if n==s['frames']//2:im.save(BUILD/(s['id']+'.jpg'))
    enc.stdin.close();assert enc.wait()==0;v3.check_video(path,s['frames']);mark.write_text(json.dumps({'key':key,'sha256':sha(path),'frames':s['frames']}))
   v3.check_video(path,s['frames']);files.append(path);print('Rendered/reused',s['id'],flush=True)
- concat=BUILD/'concat.txt';concat.write_text('\n'.join("file '%s'"%p.name for p in files)+'\n');final=OUT/'Ren_Long_01_Open_Enrollment_60s_Pilot.mp4'
+ concat=BUILD/'concat.txt';concat.write_text('\n'.join("file '%s'"%p.name for p in files)+'\n');final=OUT/'Ren_Long_01_Open_Enrollment_Pilot_v2.mp4'
  sp.run(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(OUT/'narration.wav'),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-movflags','+faststart',str(final)],check=True);v3.check_video(final,T['frames']);print(final,flush=True)
 if __name__=='__main__':main()

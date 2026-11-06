@@ -1,4 +1,4 @@
-# Pilot QA — 6 November 2026
+# Pilot QA — illustrated-prop revision 2, 6 November 2026
 
 Scope: continuous opening 61.041667-second review pilot, ending at the fictional
 premium change from $185 to $210/month. Uses supplied revised candidate, not
@@ -11,7 +11,7 @@ uncorrected full original. Stop for explicit approval before full production.
   animated graphics <=3.5s. Longer readable content persists across connected cuts.
 - Complete fatal-error video decode passes; all 1,465 frames screened for black/blank.
 - Reviewed all 18 encoded shot midpoints, 85 frames around all 17 transitions,
-  and two 100% output frames for Ren's face, glasses, clothing and edges.
+  and 100% output frames for Ren's face, glasses, clothing/edges and the phone UI.
 - Native 1280×720 actor decode/matte, single 0.9 composition resize. Steady left
   framing; no zoom switches/mirroring. White shirt/trainers intact in samples.
   Text is on the right in fitted translucent boxes, with no furniture overlap.
@@ -48,3 +48,17 @@ before remaining narration. Supporting character scenes require approved artwork
 or offscreen prop staging; no new supporting portraits were created here.
 The full film is deliberately ungenerated pending explicit pilot approval.
 No merge, push, main/approved-art changes, GitHub MP4 upload or YouTube publication.
+
+## Revision 2 scope
+
+Owner requested more professional car/mobile imagery. One original generated
+transparent prop sheet replaces geometric car, key and phone drawings. New props
+are matched to the existing palette and used consistently. Ren/office/reference
+remain unchanged. The generated screen is blank: $85, account label and all other
+financial content are drawn in code. No readable numbers are baked into artwork.
+The car arrival and key handover use restrained translation; framing/timing stay
+unchanged. Same narration.wav SHA-256:
+`9b77f07fafb36dde17357806d8a85ebdacf2041e91afce4c617d070110e61ac1`.
+Zero additional voice requests or HF GPU usage for this revision. Historical
+voice/quota figures above describe the original pilot generation only.
+V1 MP4 is retained locally as a separate file; no media uploaded to GitHub.

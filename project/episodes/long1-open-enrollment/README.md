@@ -11,12 +11,15 @@ No later narration, thumbnail production or Shorts have been generated.
 
 ## Output
 
-Ren_Long_01_Open_Enrollment_60s_Pilot.mp4: 61.041667s, landscape 1280×720,
+Ren_Long_01_Open_Enrollment_Pilot_v2.mp4: 61.041667s, landscape 1280×720,
 24fps, H.264/AAC. Narration: 61.0275s. No speech retiming, music, source audio
 or silence padding. The final 14ms is video-frame quantisation only.
 Three raw Qwen originals are saved in audio/ with settings/hashes in manifest.json.
 The episode reuses the actual v3 office, Fredoka and native-resolution Ren clips.
-All scene/interface props are code-drawn. Supplied scene PNGs are concepts only.
+Revision 2 adds generated illustrated cars, keys and a blank phone from an
+original transparent asset sheet. The renderer crops/composites those props;
+all monetary figures and screen/UI text remain code-rendered. The driveway is
+code-drawn. Supplied scene PNGs remain concepts only. New props await review.
 
 ## Reproduce from this repository
 

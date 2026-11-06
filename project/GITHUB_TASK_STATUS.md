@@ -4,6 +4,10 @@ Branch: `codex/long1-open-enrollment-pilot`; local source checkpoint only.
 Base `f7ae02c99bb9b608209a9e6ecbe7dea18c8958ca`, preserving recent voice/matte fixes.
 Approved remote source `c6bb363baf13666cce15ece777fde39190ffe8a7` inspected unchanged.
 
+Current visual revision 2: generated reusable cars, phone and keys, native Ren
+and original narration unchanged. All screen text/figures remain code-rendered.
+New prop artwork awaits pilot review; no additional voice requests.
+
 Completed: supplied ZIP audited; original/revised scripts preserved; assumptions,
 math and source-status notes; 3 resumable original Qwen WAVs; 61.041667s landscape
 pilot; 18-shot manifest; validation and review evidence. See

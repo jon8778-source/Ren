@@ -1,0 +1,16 @@
+{
+  "generator": "OpenAI image generation via image_gen",
+  "reference": "build/review/native-0.png, existing approved character/office used for style only",
+  "asset": "assets/illustrated-props-v2.png",
+  "sha256": "3b8c5b0f21cb828a73a0d8addc76760578c64f4b225d9277a5d09a0132d57d06",
+  "new_objects": [
+    "navy contemporary leased car",
+    "sage older used car",
+    "blank smartphone",
+    "car keys"
+  ],
+  "financial_text": "No generated figures; labels and dollar amounts remain code-rendered",
+  "status": "New prop artwork awaiting owner pilot review; approved Ren unchanged",
+  "background": "Transparent; original unmodified image retained",
+  "usage": "Renderer crops sheet into independently composited props; no model or reference changes"
+}
