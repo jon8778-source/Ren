@@ -76,6 +76,7 @@ class Ren:
 
     def __init__(self, lib, clip, seconds, mirror=False, end_on=None, hand_region=None):
         self.shot = bp.RenShot(lib, clip, seconds, mirror=mirror, end_on=end_on)
+        print(clip, self.shot.note, flush=True)
         self.n = len(self.shot.frames)
         self.hand_region = hand_region
         self.hands = [self._hand(i) for i in range(self.n)] if hand_region else None
@@ -94,7 +95,7 @@ class Ren:
         i = min(max(int(t * SRC_FPS), 0), self.n - 1)
         big = Image.fromarray(self.shot.frames[i], "RGBA").resize((round(1280 * REN_SCALE), round(720 * REN_SCALE)), Image.LANCZOS)
         shift = self.shot.shifts[i] / 1.5          # RenShot's per-clip x offset, in 1280-wide clip pixels
-        ox = round(REN_CX - SRC_BODY_X * REN_SCALE + shift * REN_SCALE)
+        ox = round(REN_CX - SRC_BODY_X * REN_SCALE + (shift + 293) * REN_SCALE)   # shift = -293 + library x_offset
         oy = round(FEET_Y - SRC_FEET * REN_SCALE)
         out = layer()
         cx0, cy0 = max(0, -ox), max(0, -oy)
@@ -110,7 +111,7 @@ class Ren:
         if h is None:
             return None
         shift = self.shot.shifts[i] / 1.5
-        return (REN_CX - SRC_BODY_X * REN_SCALE + (h[0] + shift) * REN_SCALE, FEET_Y - (SRC_FEET - h[1]) * REN_SCALE)
+        return (REN_CX - SRC_BODY_X * REN_SCALE + (h[0] + shift + 293) * REN_SCALE, FEET_Y - (SRC_FEET - h[1]) * REN_SCALE)
 
 
 # --------------------------------------------------------------------------- coded graphics
@@ -244,7 +245,7 @@ def jar_layer(cx, cy, fill, pulse_s, ink_a=1.0):
         coins.putalpha(Image.fromarray(np.minimum(np.array(coins.getchannel("A")), np.array(m))))
         img.alpha_composite(coins)
     d = ImageDraw.Draw(img)
-    f = font(int(86 * pulse_s), 700)
+    f = font(int(66 * pulse_s), 700)
     t = "-$880/yr"
     b = d.textbbox((0, 0), t, font=f)
     tw = b[2] - b[0]
@@ -304,15 +305,15 @@ def story_card(x0, y0):
     """Bold 'Story / Friday' headline card (top-left at x0, y0) with a 'Part 2' teaser tag on its corner."""
     img = layer()
     d = ImageDraw.Draw(img)
-    f = font(124, 700)
+    f = font(106, 700)
     wmax = max(d.textlength("Story", font=f), d.textlength("Friday", font=f))
     pad = 40
-    box = (x0, y0, x0 + wmax + 2 * pad, y0 + 2 * 150 + 2 * pad - 30)
+    box = (x0, y0, x0 + wmax + 2 * pad, y0 + 2 * 128 + 2 * pad - 24)
     shadow(img, box, 40)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle(box, 40, fill=NAVY)
-    d.text((box[0] + pad, box[1] + pad - 18), "Story", font=f, fill=(255, 255, 255))
-    d.text((box[0] + pad, box[1] + pad + 130), "Friday", font=f, fill=(255, 255, 255))
+    d.text((box[0] + pad, box[1] + pad - 14), "Story", font=f, fill=(255, 255, 255))
+    d.text((box[0] + pad, box[1] + pad + 112), "Friday", font=f, fill=(255, 255, 255))
     tag = (box[0] + 18, box[1] - 62, box[0] + 18 + 180, box[1] + 6)
     d.rounded_rectangle(tag, 34, fill=GREEN)
     d.text(((tag[0] + tag[2]) / 2, (tag[1] + tag[3]) / 2), "Part 2", font=font(42, 700), fill=(255, 255, 255), anchor="mm")
@@ -373,15 +374,16 @@ def caption_layer(t, toks):
     gstart = same[(pos // 3) * 3]
     group = [i for i in same if gstart <= i < gstart + 3 and i <= live]
     d = ImageDraw.Draw(img)
-    f = font(104, 700)
-    spc = 26
-    ws = [d.textlength(toks[i][0], font=f) for i in group]
-    total = sum(ws) + spc * (len(ws) - 1)
-    # centre the full group (including words not yet spoken) so words don't jump
     full = [i for i in same if gstart <= i < gstart + 3]
+    px, spc = 104, 26
+    while True:   # shrink the phrase until it fits inside the safe width (right 130px kept clear)
+        f = font(px, 700)
+        if sum(d.textlength(toks[i][0], font=f) for i in full) + spc * (len(full) - 1) <= W - 60 - RIGHT_CLEAR - 60:
+            break
+        px -= 4
     fw = [d.textlength(toks[i][0], font=f) for i in full]
     ftotal = sum(fw) + spc * (len(fw) - 1)
-    x = (W - RIGHT_CLEAR * 0 - ftotal) / 2
+    x = (W - RIGHT_CLEAR - ftotal) / 2 + 0
     y = 1330
     for i, w_ in zip(full, fw):
         if i <= live:
@@ -426,7 +428,7 @@ class Short:
             Ren(lib, "ren_idle_calm", spans[1], hand_region=hand),
             Ren(lib, "ren_point_down_right", spans[2], hand_region=hand),
             Ren(lib, "ren_point_right", spans[3]),
-            Ren(lib, "ren_wave_hello", spans[4]),
+            Ren(lib, "ren_wave_hello", spans[4], end_on=1.55 + spans[4]),   # start with the hand already rising
         ]
         T = lambda lid, w, n=0: word_time(L, words, lid, w, n)
         self.t_four = T("L1", "4")
@@ -453,37 +455,38 @@ class Short:
                     swing = 9 * math.sin((t - a) * 14)            # rushed: keys jiggle faster
                 else:
                     swing = 3.5 * math.sin((t - a) * 3.2)
-                base.alpha_composite(keys_layer(h[0], h[1] - 22, swing))
+                base.alpha_composite(scaled(keys_layer(h[0], h[1] - 22, swing), (h[0], h[1] - 22), 1.5))
                 tw = t * 5.5
                 for dx, dy, ph, r in ((34, 66, 0.0, 26), (-2, 120, 2.1, 20), (58, 100, 4.0, 16)):
                     a_ = max(0.0, math.sin(tw + ph)) ** 2
                     if a_ > 0.02:
-                        base.alpha_composite(sparkle(h[0] + dx, h[1] - 22 + dy, r * (0.5 + 0.5 * a_), a_))
+                        base.alpha_composite(sparkle(h[0] + dx * 1.5, h[1] - 22 + dy * 1.5, r * 1.3 * (0.5 + 0.5 * a_), a_))
         if k == 0:
             base.alpha_composite(scaled(age_tag(500, 330), (610, 376), pop(lt, 0.1)))
         elif k == 1:
-            x = 500 + 520 * (1 - ease(lt / 0.32))
+            x = 505 + 520 * (1 - ease(lt / 0.32))
             hl = ease((t - self.t_four) / 0.25)
-            base.alpha_composite(scaled(folder_layer(int(x), 660, hl), (int(x) + 225, 840), 1 + 0.06 * math.sin(math.pi * min(1, max(0, (t - self.t_four) / 0.4))) if t > self.t_four else 1))
+            fs = 0.85 * (1 + 0.06 * math.sin(math.pi * min(1, max(0, (t - self.t_four) / 0.4))) if t > self.t_four else 1)
+            base.alpha_composite(scaled(folder_layer(int(x), 660, hl), (int(x) + 235, 840), fs))
         elif k == 2:
             base.alpha_composite(scaled(chip_layer(690, 880), (810, 964), pop(t, self.t_two - 0.05)))
             if t > self.L["L3"]["start"] - 0.05:
                 fade_in = ease((t - self.L["L3"]["start"] + 0.05) / 0.35)
                 drain = ease((t - self.t_gone) / (self.b[3] - self.t_gone))
                 ps = pulse(t, self.t_880, 0.55, 0.28)
-                jar = jar_layer(700, 430, 1 - drain, ps, 1 - 0.8 * drain)
-                base.alpha_composite(scaled(jar, (700, 430), 1.0, fade_in * (1 - 0.85 * drain), rot=0))
+                jar = jar_layer(775, 430, 1 - drain, ps, 1 - 0.8 * drain)
+                base.alpha_composite(scaled(jar, (775, 430), 1.0, fade_in * (1 - 0.85 * drain), rot=0))
         elif k == 3:
             tog = ease((t - self.t_match) / 0.45)
-            ph = scaled(phone_layer(560, 380, tog, 0), (770, 760), 0.88)
+            ph = scaled(phone_layer(560, 500, tog, 0), (770, 870), 0.88)
             base.alpha_composite(ph)
             base.alpha_composite(ren.frame(lt))
             bs = pop(t, self.t_ninety - 0.05, 0.3)
             if bs > 0:
-                base.alpha_composite(badge_layer(800, 330, bs))
+                base.alpha_composite(badge_layer(815, 385, bs * 0.9))
         elif k == 4:
             base.alpha_composite(ren.frame(lt))
-            base.alpha_composite(scaled(story_card(530, 560), (735, 700), pop(lt, 0.08, 0.3)))
+            base.alpha_composite(scaled(story_card(550, 580), (740, 700), pop(lt, 0.08, 0.3)))
         return base
 
     def frame(self, t):
@@ -554,15 +557,19 @@ def main():
         mids = [(sh.b[i] + sh.b[i + 1]) / 2 for i in range(5)]
         mids[2] = sh.t_880 + 0.3          # jar and red label visible
         mids[3] = sh.t_ninety + 0.5
-        mids[4] = sh.total - 0.3
+        mids[4] = sh.b[4] + 0.9
         for i, t in enumerate(mids):
             sh.frame(t).save(out / f"still_{i + 1}.png")
+        sh.frame(sh.t_two + 0.5).save(out / "still_3b.png")
+        sh.frame(sh.t_match + 0.15).save(out / "still_4b.png")
         return
     raw_wav = out / "voice_raw.wav"
     build_audio(sh, raw_wav)
     wav = out / "voice_norm.wav"
+    I0, _ = lufs(raw_wav)                      # measure, then apply an exact gain to -16 LUFS (loudnorm is unreliable on 14 s)
+    gain = -16.0 - I0
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw_wav), "-af",
-                    "highpass=f=70,loudnorm=I=-16:TP=-1.5:LRA=7,alimiter=limit=0.89,aresample=48000", str(wav)], check=True)
+                    f"highpass=f=70,volume={gain:.2f}dB,alimiter=limit=0.7:level=false,aresample=48000", str(wav)], check=True)
     video = out / f"{args.name}_video.mp4"
     n = int(round(sh.total * FPS))
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
