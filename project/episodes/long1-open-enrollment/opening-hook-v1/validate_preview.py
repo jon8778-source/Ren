@@ -4,7 +4,7 @@ import json,subprocess as sp,hashlib,math
 import numpy as np,soundfile as sf
 from PIL import Image,ImageDraw
 H=Path(__file__).resolve().parent;src=json.loads((H/'source.json').read_text());timing=json.loads((H/'timing.json').read_text());V=H/'deliverables/Ren_Health_Plan_Opening_Preview.mp4';source=Path(src['actual_path']);sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
-assert sha(source)==src['sha256'];assert json.loads((H/'review-gate.json').read_text())['approved'] is False
+assert sha(source)==src['sha256'];gate=json.loads((H/'review-gate.json').read_text());assert not gate['approved'] or gate['preview_sha256']==sha(V)
 info=json.loads(sp.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(V)]));v=next(s for s in info['streams'] if s['codec_type']=='video');a=next(s for s in info['streams'] if s['codec_type']=='audio');N=timing['hook_frames'];total=N+timing['preview_source_tail_frames'];assert (v['width'],v['height'],v['r_frame_rate'],v['codec_name'],a['codec_name'])==(1280,720,'24/1','h264','aac');assert int(v['nb_frames'])==total and 20<=float(info['format']['duration'])<=25
 sp.run(['ffmpeg','-v','error','-xerror','-err_detect','explode','-i',str(V),'-f','null','-'],check=True)
 raw=sp.check_output(['ffmpeg','-v','error','-xerror','-i',str(V),'-vf','scale=320:180','-pix_fmt','rgb24','-f','rawvideo','-']);frames=np.frombuffer(raw,np.uint8).reshape(-1,180,320,3);assert len(frames)==total and (frames.mean((1,2,3))>10).all() and (frames.std((1,2,3))>5).all()

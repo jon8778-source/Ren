@@ -1,3 +1,37 @@
+# Ren health-plan opening — complete approved edit
+
+Jon approved the23.793-second preview: “Approved, good work”. review-gate.json records
+that approval and exact preview hash. Final file is now assembled separately:
+**deliverables/Ren_Health_Plan_Revised_Opening.mp4**,5:26.708,1280×720/24fps,H.264/AAC.
+The original completed329-second source MP4 remains untouched.
+
+Current evidence:FINAL_CHANGELOG.md, FINAL_QA.md, final-build.json and
+final-validation.json. The original preview/preview QA below is historical.
+All441 approved hook +7,400 body video frames/packets are copied exactly. Full
+AAC track was encoded once because the copy-splice trial had overlapping timestamps;
+source body PCM/content/speed/level retained, with no byte-exact AAC claim.
+
+## Reproduce final assembly, without any voice or scene regeneration
+
+```sh
+python project/episodes/long1-open-enrollment/opening-hook-v1/assemble_final.py
+python project/episodes/long1-open-enrollment/opening-hook-v1/validate_final.py
+```
+
+Requires Python numpy/soundfile/Pillow and ffmpeg/ffprobe, completed cached hook
+clips/processed WAV/preview waveform plus the original MP4. No HF call, token,
+voice reference, image generation or source-scene renderer is used by these commands.
+In a recovery checkout, point source.json actual_path to the bundle's restored
+source MP4 (same locked hash). The final source bundle preserves these cached inputs.
+Optional caption retiming uses retime_captions.py plus original full/audio-timing.json
+and full/deliverables/captions.srt; completed revised SRT is included for direct use.
+
+No main/approved asset changes, GitHub media upload, push, merge or publication.
+
+---
+Historical preview-production record follows; its “stop” gate is superseded by
+Jon's recorded approval above.
+
 # Ren health-plan opening improvement — approval preview
 
 Scope is only the completed film's opening. The source329-second MP4 is locked by

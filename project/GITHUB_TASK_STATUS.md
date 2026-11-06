@@ -1,3 +1,29 @@
+# Current task — approved opening edit complete, 6 November2026
+
+Branch codex/long1-opening-hook. Jon approved the exact hook preview and requested
+final assembly. New output:opening-hook-v1/deliverables/Ren_Health_Plan_Revised_Opening.mp4.
+5:26.708,1280×720 landscape,24fps,H.264/AAC;7,841 frames. Original source unchanged.
+
+Original0–20.666667s replaced with approved18.375s hook video.441 approved opening
+frames +7,400 original body frames copied packet-exact and pixel-exact. Original
+ending/figures preserved. No voice requests, artwork or scene rendering in final step.
+
+AAC stream-copy trial failed with non-monotonic DTS. Only the joined AAC audio
+track was encoded once at source settings. Source body PCM/dialogue/level/speed
+unchanged before codec encode; AAC bytes not claimed identical. First1,000 AAC
+packets match approved preview through join. Body correlation0.99997193.
+
+Full fatal audio/video decode, continuous PTS and all-frame black/blank screen pass.
+15 opening/join/ending samples inspected; shared figures checked.149 revised captions,
+body text unchanged. FINAL_CHANGELOG.md / FINAL_QA.md / final-validation.json record
+exact scope and limits. No new listening/physical Android claim.
+
+Deliver full MP4 and approved preview via separate download hosting, not GitHub.
+No main changes, push, merge, Shorts or publication. Historical pending-approval
+records below are superseded by the recorded approval/current completed export.
+
+---
+
 # Current task — opening-hook approval preview, 6 November 2026
 
 Branch codex/long1-opening-hook, based on local completed-film checkpoint983888a.

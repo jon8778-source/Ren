@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "stage": "AAC stream-copy concatenation probe",
+  "failure": "Non-monotonic DTS; previous882688,current878256. FFmpeg stopped with Error submitting a packet to muxer: Invalid argument.",
+  "action": "No errors suppressed. Video remains stream-copy; audio assembled at PCM sample precision then encoded once to matching AAC-LC192k/48k/mono.",
+  "new_voice_generation": false
+}
