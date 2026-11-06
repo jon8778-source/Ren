@@ -16,7 +16,7 @@
   "ren_screen_time_percent": 41.66666666666667,
   "actual_audio_listening_performed": false,
   "physical_android_playback_test": false,
-  "prototype_approval": "pending",
+  "prototype_approval": "pending revised-prototype approval",
   "full_short_rendered": false,
   "encoded_scene_frame_counts": {
     "renewal-office": 66,
@@ -26,5 +26,35 @@
     "reaction-office": 84
   },
   "visual_review_samples": 60,
-  "review_scope": "Quarter-second motion samples across full 15s, scene boundaries and native detail crops; no listening/physical-device claim"
+  "review_scope": "Quarter-second motion samples across full 15s, scene boundaries and native detail crops; no listening/physical-device claim",
+  "revision": 2,
+  "narration_AAC_packets_identical_to_previous_prototype": true,
+  "narration_decoded_PCM_identical_to_previous_prototype": true,
+  "audio_packet_count": 705,
+  "unchanged_paper_scene_decoded_pixels_identical": true,
+  "video_reencoded": "15-second prototype only; prior cached scene packet check failed safely, so five video chunks encoded; no full film render",
+  "actor_composition_size": [
+    540,
+    1080
+  ],
+  "previous_actor_composition_size": [
+    400,
+    800
+  ],
+  "actor_linear_increase_percent": 35,
+  "actor_position": [
+    5,
+    400
+  ],
+  "character_source_decode": [
+    1280,
+    720
+  ],
+  "character_crop_resize_once": true,
+  "laptop_generated_images": 1,
+  "laptop_asset": "assets/laptop-generated.png",
+  "output_sha256": "4d0c7b806a329d6d002b2d7d978b052acb3e0f4061836bdddbea65dbb12a1a25",
+  "previous_prototype_sha256_unchanged": "6018ae46c6f80623f13ad0f946fc7f674c9eec8b7683da707562ae221663fb6c",
+  "audio_edit_this_revision": false,
+  "pause_edit_scope": "Inherited from Revision01; no new timing edit in Revision02"
 }

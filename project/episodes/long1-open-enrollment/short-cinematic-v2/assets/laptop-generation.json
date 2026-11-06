@@ -1,0 +1,18 @@
+{
+  "provider": "image_gen.imagegen",
+  "generated_images": 1,
+  "asset": "laptop-generated.png",
+  "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8",
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "mode": "RGBA",
+  "style_reference": "project/prototypes/coffee-minute-v3/assets/office.png",
+  "style_reference_sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36",
+  "purpose": "Illustrated physical laptop for two shots; keyboard, trackpad, hinge and bezel replace primitive code chassis; screen/UI composed separately",
+  "user_authorization": "The laptop comes across low quality can we generate an actual laptop to use in the clip",
+  "design_approval": "Requested prototype asset; revised prototype still awaits explicit approval",
+  "ren_regenerated": false,
+  "original_generation_path": "/workspace/generated_images/exec-2612997f-77d3-4047-bd00-57429b4d1b1e.png"
+}

@@ -35,3 +35,8 @@ on-screen lesson “Compare total cost. Not just the premium.” with disclaimer
 The original 58.875s narration can supply this continuation without new TTS.
 Exact boundaries/layout/art approvals will be locked after prototype feedback.
 No unsupported deductible amount, saving guarantee or invented plan quote.
+
+Revision02 retains all shot/audio timings. Both office shots enlarge Ren35%
+with consistent framing; laptop shots use the generated physical laptop prop.
+The two paper-only shots retain their original layouts/timings; narration AAC
+packets are preserved unchanged.

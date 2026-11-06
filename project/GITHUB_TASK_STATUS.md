@@ -1,3 +1,18 @@
+# Current task — cinematic Short prototype Revision02, 6 November 2026
+
+Branch `codex/health-short-cinematic-v2`. Jon requested larger Ren and a generated
+physical laptop. Revised15s/1080×1920/24fps/H.264/AAC prototype complete locally.
+Ren35% larger with consistent office framing. One generated laptop prop, no new
+Ren art. Previous prototype/Short/long movie/reference preserved. Narration AAC
+packets and decoded PCM identical; no new TTS or audio edits. Technical QA passes;
+60 motion samples/native crops inspected, with listening/device limits in QA.md.
+Only15s prototype encoded; no full Short. Explicit revised-prototype approval
+pending. Future major medical artwork approval still required. Media/caches kept
+out of Git; generated laptop PNG is a reusable source asset, not video upload.
+Source checkpoint publication pending.
+
+---
+
 # Current task — cinematic health Short v2 prototype, 6 November 2026
 
 Branch: `codex/health-short-cinematic-v2`, based on verified standards991fc75.

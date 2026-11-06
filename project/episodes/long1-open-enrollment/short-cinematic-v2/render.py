@@ -22,6 +22,7 @@ INK='#172A3A';GREEN='#3F665B';CREAM='#FAF6EE';SAGE='#B8CCB1'
 BUILD=D/'build';OUT=D/'deliverables';BUILD.mkdir(exist_ok=True);OUT.mkdir(exist_ok=True)
 M=json.loads((D/'production.json').read_text())
 OFFICE=Image.open(ROOT/'project/prototypes/coffee-minute-v3/assets/office.png').convert('RGB')
+LAPTOP=Image.open(D/'assets/laptop-generated.png').convert('RGBA')
 REC=standards.LayoutRecorder()
 @functools.lru_cache(maxsize=50)
 def font(size):return ImageFont.truetype(str(ROOT/'project/remotion/public/fonts/fredoka-latin-600-normal.woff2'),size)
@@ -69,14 +70,14 @@ def prepare_actors():
     for clip,start,count in configs:
         source=ROOT/'assets/ren_library'/f'ren_{clip}.mp4';folder=BUILD/f'actor-{clip}';folder.mkdir(exist_ok=True)
         signature=standards.digest({'source':standards.sha(source),'matte':standards.sha(B/'render.py'),
-                                   'start':start,'frames':count,'crop':[465,0,825,720],'size':[400,800]})
+                                   'start':start,'frames':count,'crop':[465,0,825,720],'size':[540,1080]})
         mark=folder/'cache.json'
         if mark.exists() and json.loads(mark.read_text())['key']==signature and all((folder/f'{i:03}.png').exists() for i in range(count)):continue
         dec=sp.Popen(['ffmpeg','-v','error','-xerror','-ss',str(start),'-i',str(source),'-an','-frames:v',str(count),'-pix_fmt','rgb24','-f','rawvideo','-'],stdout=sp.PIPE)
         for i in range(count):
             raw=dec.stdout.read(1280*720*3);assert len(raw)==1280*720*3
             rgba=parent.matte(Image.frombytes('RGB',(1280,720),raw))
-            rgba=rgba.crop((465,0,825,720)).resize((400,800),Image.Resampling.LANCZOS)
+            rgba=rgba.crop((465,0,825,720)).resize((540,1080),Image.Resampling.LANCZOS)
             rgba.save(folder/f'{i:03}.png')
         dec.stdout.close();assert dec.wait()==0
         mark.write_text(json.dumps({'key':signature}))
@@ -87,45 +88,37 @@ def desk_front(im):
     for y in [1230,1300,1370]:d.line((0,y,1080,y-50),fill='#BA8A5D',width=3)
     d.polygon([(0,1510),(1080,1430),(1080,1480),(0,1555)],fill='#A87950',outline='#76583F',width=4)
 
+@functools.lru_cache(maxsize=4)
+def laptop_image(width):
+    return LAPTOP.resize((width,round(width*LAPTOP.height/LAPTOP.width)),Image.Resampling.LANCZOS)
+
 def laptop(im,s,n,close=False):
     t=(s['start_frame']+n)/24
-    draw=ImageDraw.Draw(im)
+    x,y,width=(-20,480,1100) if close else (485,850,590)
+    prop=laptop_image(width);k=width/LAPTOP.width
+    # Generated physical chassis; code supplies a clean opaque screen and UI.
+    im.paste(prop,(x,y),prop)
+    screen=tuple(round(v) for v in (x+193*k,y+81*k,x+1253*k,y+678*k))
+    draw=ImageDraw.Draw(im);draw.rectangle(screen,fill=CREAM)
     if close:
-        box=(90,395,955,1195);screen=(125,435,920,1105)
-    else:
-        box=(450,780,960,1190);screen=(478,808,930,1135)
-    shadow(im,(box[0]+10,box[1]+20,box[2]+15,box[3]+30));draw=ImageDraw.Draw(im)
-    draw.rounded_rectangle(box,24,fill='#3E4545',outline=INK,width=5)
-    draw.rounded_rectangle(screen,14,fill=CREAM)
-    if close:
-        # Portrait computer view: visible keyboard belongs to the action.
-        draw.polygon([(90,1190),(955,1190),(1070,1510),(0,1510)],fill='#BCC1BC',outline=INK,width=5)
-        for row in range(3):
-            for col in range(11):
-                x=95+col*70-row*8;y=1225+row*54
-                draw.rounded_rectangle((x,y,x+53,y+35),5,fill='#8C9692',outline='#707B76',width=2)
-        draw.rounded_rectangle((400,1410,645,1480),12,outline='#6D7B73',width=3)
-        txt(im,s,n,(165,475),'HEALTH PLAN',44,GREEN)
-        txt(im,s,n,(165,560),'Annual renewal',61)
-        txt(im,s,n,(165,650),'Same plan. Again.',48)
-        draw=ImageDraw.Draw(im);draw.rounded_rectangle((160,770,880,885),18,fill=GREEN)
-        txt(im,s,n,(190,795),'Keep current plan',53,CREAM)
-        # Click is synced to “click”, not arbitrary decorative motion.
-        u=ease((t-2.9)/.38);x=935-185*u;y=970-130*u
-        draw=ImageDraw.Draw(im);draw.polygon([(x,y),(x+10,y+62),(x+28,y+43),(x+52,y+44)],fill=CREAM,outline=INK,width=3)
+        txt(im,s,n,(165,565),'HEALTH PLAN',44,GREEN)
+        txt(im,s,n,(165,628),'Annual renewal',55)
+        txt(im,s,n,(165,703),'Same plan. Again.',44)
+        draw=ImageDraw.Draw(im);draw.rounded_rectangle((160,780,880,855),14,fill=GREEN)
+        txt(im,s,n,(190,792),'Keep current plan',44,CREAM)
+        u=ease((t-2.9)/.38);cx=935-185*u;cy=970-145*u
+        draw=ImageDraw.Draw(im);draw.polygon([(cx,cy),(cx+10,cy+54),(cx+25,cy+38),(cx+46,cy+39)],fill=CREAM,outline=INK,width=3)
         if 3.26<=t<3.66:
-            r=round(24+75*(t-3.26));draw.ellipse((x-r,y-r,x+r,y+r),outline=SAGE,width=5)
+            r=round(24+75*(t-3.26));draw.ellipse((cx-r,cy-r,cx+r,cy+r),outline=SAGE,width=5)
         if t>=3.66:
             step=min(4,1+int((t-3.66)/.35))
-            txt(im,s,n,(165,950),f'RENEWED  {step}/4',49,GREEN)
+            txt(im,s,n,(165,890),f'RENEWED  {step}/4',44,GREEN)
             for j in range(4):
-                x=190+j*170;y=1050;draw.ellipse((x,y,x+33,y+33),fill=GREEN if j<step else '#C7D1C0')
+                xx=190+j*170;yy=965;draw.ellipse((xx,yy,xx+22,yy+22),fill=GREEN if j<step else '#C7D1C0')
     else:
-        txt(im,s,n,(500,835),'HEALTH PLAN',43,GREEN)
-        txt(im,s,n,(500,910),'Same plan',55)
-        if t>.5:
-            # Notification arrives in-world on the laptop screen.
-            txt(im,s,n,(500,1000),'Fourth year',44)
+        txt(im,s,n,(580,915),'HEALTH PLAN',42,GREEN)
+        txt(im,s,n,(580,975),'Same plan',44)
+        if t>.5:txt(im,s,n,(580,1040),'Fourth year',42)
 
 def paper(im,s,n,x,y,width,label,amount,detail=False,scale=1):
     height=round(width*1.22);draw=ImageDraw.Draw(im)
@@ -143,7 +136,7 @@ def paper(im,s,n,x,y,width,label,amount,detail=False,scale=1):
 def picture(s,n):
     sid=s['id'];t=(s['start_frame']+n)/24
     if sid=='renewal-office':
-        im=room(0).copy();a=actor('nod_yes',n);im.paste(a,(65,600),a);desk_front(im);laptop(im,s,n)
+        im=room(0).copy();a=actor('nod_yes',n);im.paste(a,(5,400),a);desk_front(im);laptop(im,s,n)
     elif sid=='renewal-close':
         im=tabletop().copy();laptop(im,s,n,True)
     elif sid=='documents-arrive':
@@ -159,12 +152,12 @@ def picture(s,n):
         draw.line((155,685,155+round(470*u),685),fill='#719878',width=8)
         txt(im,s,n,(155,1100),'Illustrative premiums',42,GREEN)
     else:
-        im=room(1).copy();a=actor('thinking',n);im.paste(a,(35,520),a);desk_front(im)
+        im=room(1).copy();a=actor('thinking',n);im.paste(a,(5,400),a);desk_front(im)
         # Both documents on a desk, Ren left; no floating frame or presenter panel.
-        paper(im,s,n,455,735,415,'PLAN B',parent.C['hdhp_annual_premium'],detail=False)
+        paper(im,s,n,505,800,365,'PLAN B',parent.C['hdhp_annual_premium'],detail=False)
         if t>=13.84:
-            draw=ImageDraw.Draw(im);draw.polygon([(445,1245),(865,1210),(865,1310),(445,1345)],fill='#DBE5D2',outline=GREEN,width=3)
-            txt(im,s,n,(475,1248),'Total cost?',48,GREEN)
+            draw=ImageDraw.Draw(im);draw.polygon([(505,1245),(875,1210),(875,1310),(505,1345)],fill='#DBE5D2',outline=GREEN,width=3)
+            txt(im,s,n,(535,1248),'Total cost?',48,GREEN)
     # Captions are on a fitted translucent strip only when speech is present.
     cue=next((c for c in M['captions'] if c['start']<=t<c['end']),None)
     if cue:
@@ -192,6 +185,27 @@ def collapse_layout():
         output[sid]=list(grouped.values())
     (D/'layout.json').write_text(json.dumps({'scenes':output},indent=2)+'\n')
 
+@functools.lru_cache(maxsize=8)
+def packet_hashes(path):
+    data=json.loads(sp.check_output(['ffprobe','-v','error','-select_streams','v:0',
+        '-show_packets','-show_data_hash','sha256','-show_entries','packet=data_hash',
+        '-of','json',str(path)]))
+    return [p['data_hash'] for p in data['packets']]
+
+def reuse_unchanged_scene(scene):
+    # Only the two unchanged paper scenes qualify. Audio, timings, code-drawn
+    # figures and captions are unchanged; prove cached video belongs to v1.
+    if scene['id'] not in ['documents-arrive','premium-close']:return None
+    path=BUILD/(scene['id']+'.mp4')
+    if not path.exists():return None
+    previous=json.loads((D/'revision-01/production.json').read_text())
+    if previous['captions']!=M['captions']:return None
+    original=OUT/'Ren_Health_Short_v2_15s_Prototype.mp4'
+    if packet_hashes(path)!=packet_hashes(original)[scene['start_frame']:scene['end_frame']]:return None
+    parent.v3.check_video(path,scene['end_frame']-scene['start_frame'])
+    REC.scenes[scene['id']]=json.loads((D/'revision-01/layout.json').read_text())['scenes'][scene['id']]
+    return path
+
 def main():
     if '--stills' not in sys.argv:
         assert os.environ.get('REN_SHORTS_STAGE')=='prototype' and os.environ.get('REN_SHORTS_MAX_FRAMES')=='360','Only the gated 15-second prototype is implemented/authorized'
@@ -204,6 +218,9 @@ def main():
             for n in range(count):
                 if n in [0,count//2,count-1]:picture(scene,n).save(BUILD/(scene['id']+f'-{n:03}.png'))
             continue
+        preserved=reuse_unchanged_scene(scene)
+        if preserved:
+            files.append(preserved);print('Preserved source video packets',scene['id'],flush=True);continue
         if cached:
             layout_cache=cached.with_suffix('.layout.json')
             if layout_cache.exists():REC.scenes[scene['id']]=json.loads(layout_cache.read_text());files.append(cached);print('Reused',scene['id'],flush=True);continue
@@ -219,12 +236,13 @@ def main():
     if '--stills' in sys.argv:return
     source=standards.resolve(D/'production.json',next(a['path'] for a in M['assets'] if a['id']=='source-short'))
     assert standards.sha(source)==json.loads((D/'voice-configuration.json').read_text())['source_sha256']
-    raw=np.frombuffer(sp.check_output(['ffmpeg','-v','error','-xerror','-i',str(source),'-map','0:a:0','-f','f32le','-']),dtype='float32')
-    pcm=np.concatenate([raw[:664320],raw[672320:728000]]) # 13.84 + (15.1666667-14.0066667) = 15.0s
-    assert len(pcm)==720000
-    sf.write(BUILD/'prototype-narration.wav',pcm,48000,subtype='FLOAT')
+    # Visual-only revision: reuse the previous approved-source preview AAC take
+    # packet-for-packet. No decode/re-encode, generation or pause edits this turn.
+    audio_source=D/'deliverables/Ren_Health_Short_v2_15s_Prototype.mp4'
+    prior=next(a for a in M['assets'] if a['id']=='previous-prototype-audio')
+    assert standards.sha(audio_source)==prior['sha256']
     concat=BUILD/'concat.txt';concat.write_text('\n'.join("file '%s'"%p for p in files)+'\n')
-    sp.run(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(BUILD/'prototype-narration.wav'),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','aac','-b:a','192k','-ar','48000','-movflags','+faststart',str(OUT/'Ren_Health_Short_v2_15s_Prototype.mp4')],check=True)
+    sp.run(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(audio_source),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','copy','-movflags','+faststart',str(OUT/'Ren_Health_Short_v2_15s_Prototype_Rev02.mp4')],check=True)
     assert standards.sha(source)==json.loads((D/'voice-configuration.json').read_text())['source_sha256']
 
 if __name__=='__main__':main()

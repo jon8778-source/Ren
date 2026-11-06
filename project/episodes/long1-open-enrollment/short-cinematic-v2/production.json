@@ -9,8 +9,8 @@
   "permanent_border": false,
   "asset_report": "ASSET_REQUIREMENTS.md",
   "layout_evidence": "layout.json",
-  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype.mp4",
-  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype.qa.json",
+  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev02.mp4",
+  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev02.qa.json",
   "assets": [
     {
       "id": "script",
@@ -37,6 +37,22 @@
       "approval_evidence": "Approved coffee v3 original; exact hash in artwork/manifest.json"
     },
     {
+      "id": "laptop",
+      "path": "assets/laptop-generated.png",
+      "kind": "prop",
+      "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8",
+      "status": "approved",
+      "approval_evidence": "Jon explicitly requested a generated laptop in the revised prototype; artwork is for prototype review, not full-film design approval"
+    },
+    {
+      "id": "previous-prototype-audio",
+      "path": "deliverables/Ren_Health_Short_v2_15s_Prototype.mp4",
+      "kind": "audio",
+      "sha256": "6018ae46c6f80623f13ad0f946fc7f674c9eec8b7683da707562ae221663fb6c",
+      "status": "approved",
+      "approval_evidence": "Reuse original prototype AAC narration unchanged in this visual-only revision"
+    },
+    {
       "id": "nod",
       "path": "../../../../assets/ren_library/ren_nod_yes.mp4",
       "kind": "character",
@@ -56,7 +72,7 @@
       "id": "render",
       "path": "render.py",
       "kind": "renderer",
-      "sha256": "1c3f41e4f27997aaf16e1139f65cf3ea0b2184d4824e89934a8d648ffe4942cb",
+      "sha256": "10ceeffc1cc4874e190d023c9ca4e274ef0f3f84ef6d820377fad56903b65f3e",
       "status": "approved",
       "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
@@ -64,7 +80,7 @@
       "id": "prepare",
       "path": "prepare.py",
       "kind": "configuration",
-      "sha256": "ef8d40efdf30c4c382453923857b2e034d6a22b1e472ecb1cbdc34998e34fead",
+      "sha256": "3732861ee5ce01b65cb107230a4913942884528933240aa9e29f96943b6da937",
       "status": "approved",
       "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
@@ -72,7 +88,7 @@
       "id": "config",
       "path": "composition-config.json",
       "kind": "configuration",
-      "sha256": "4bf71e9a2d8274931efb0abd4e4b129b02d91bef68e8e212237b8091e629443c",
+      "sha256": "3189cee9d898403daeee233c32f28888e14b96232094cafa7734bb8bcd0be754",
       "status": "approved",
       "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
@@ -121,6 +137,22 @@
       "path": "../opening-hook-v1/manifest.json",
       "kind": "configuration",
       "sha256": "f7a85240dcf2e0c9a891ef89f434097995a3637a0bb058964dfabff1fef6d8e2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "previous-layout",
+      "path": "revision-01/layout.json",
+      "kind": "configuration",
+      "sha256": "ac8864ba801d22575e5b0165e32e6af2ce46105535d4f4e7248e340d39134153",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "previous-production",
+      "path": "revision-01/production.json",
+      "kind": "configuration",
+      "sha256": "6a537072f87ef60f4a901d78fbb33cb3019f760167ec2f4aba84d893bf74c084",
       "status": "approved",
       "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
@@ -190,7 +222,8 @@
         "office",
         "nod",
         "render",
-        "font"
+        "font",
+        "laptop"
       ]
     },
     {
@@ -209,7 +242,8 @@
         "office",
         "nod",
         "render",
-        "font"
+        "font",
+        "laptop"
       ]
     },
     {

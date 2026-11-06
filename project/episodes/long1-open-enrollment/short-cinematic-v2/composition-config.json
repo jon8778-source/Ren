@@ -20,5 +20,14 @@
     ]
   ],
   "audio_sample_rate": 48000,
-  "approval_gate": "prototype only; no full rendering implemented"
+  "approval_gate": "prototype only; no full rendering implemented",
+  "actor_size": [
+    540,
+    1080
+  ],
+  "actor_position": [
+    5,
+    400
+  ],
+  "revision": 2
 }

@@ -1,0 +1,30 @@
+{
+  "duration_seconds": 15,
+  "voice": "Existing approved British Qwen Ren, no new synthesis",
+  "new_generation_calls": 0,
+  "new_gpu_allowance_consumption_seconds": 0,
+  "exact_pcm_excerpts_preserved": true,
+  "audio_samples": 720000,
+  "audio_sample_rate": 48000,
+  "encoded_audio_correlation": 0.9999901035264963,
+  "encoded_audio_peak_dbfs": -2.0049335956573486,
+  "removed_quiet_pause_seconds": 0.16666666666666666,
+  "removed_pause_rms_dbfs": -69.327880859375,
+  "source_mp4_sha256_unchanged": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+  "voice_reference_hashes_unchanged": true,
+  "ren_screen_time_seconds": 6.25,
+  "ren_screen_time_percent": 41.66666666666667,
+  "actual_audio_listening_performed": false,
+  "physical_android_playback_test": false,
+  "prototype_approval": "pending",
+  "full_short_rendered": false,
+  "encoded_scene_frame_counts": {
+    "renewal-office": 66,
+    "renewal-close": 72,
+    "documents-arrive": 66,
+    "premium-close": 72,
+    "reaction-office": 84
+  },
+  "visual_review_samples": 60,
+  "review_scope": "Quarter-second motion samples across full 15s, scene boundaries and native detail crops; no listening/physical-device claim"
+}
