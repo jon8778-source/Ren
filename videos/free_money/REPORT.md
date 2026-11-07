@@ -84,4 +84,14 @@ Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_
 
 **Still needs your decision:** whether to keep the 2.5 s story-still cap for the porch, folder and car shots, or allow longer holds on those specific shots.
 
-**STOP. Waiting for: `style lock approved`.**
+**(Gate 0 stop line: satisfied. `style lock approved` received.)**
+## 9. Gate 1: plan and outline (added 7 November 2026)
+**Waiting for: `plan approved`.** Files: `shot_plan.csv`, `PLAN_TABLE.md` (the same plan as a readable table), `outline.md`, `plan_data.py` (the plan as data, with the checks below).
+- **Defaults I took from "style lock approved":** style option (b), the folder text accepted for this video with a code overlay for the match line, and local voice generation with `use_xvector_only=True`. The 8-year-old car grade is in the plan **only as a pending item** and is built only if you approve it at this gate. Otherwise S6 shot 1 uses the plain plate with the same tag.
+- **Plan checks, all passed:** the 130 phrases tile the script exactly, in order, with nothing added and nothing dropped. Every shot is within the v3 caps (Ren 5.5 s, story still 2.5 s, graphic 3.5 s) with a 0.1-0.3 s margin for estimate error, which is why there are 130 shots (48 Ren, 28 story, 54 graphic). No Ren pose repeats in adjacent shots, and the longest stretch without Ren on screen is 8 shots.
+- **Estimated length** is 4.8 min, from word counts. Real timings come from the Whisper-checked narration. It is generating now (about 45 min; chunks are saved as they finish), and I will re-time the whole plan from it before Gate 2.
+- **Repeated gestures:** with 4 busts and 4 full-body poses against about 4.8 minutes, Ren stills are used 49 times (R1 8, R3 8, R4 7, R2 6, FS 6, FP 5, FT 1, FW 1) plus 12 clips (shake_no 4, nod_yes 4, present_palm_left 3, thinking 1). How I'm avoiding visible repetition: no pose in adjacent shots, at least one cutaway between reuses, a different push direction each time, wide and close alternating, and the clips used for gestures that need real motion ("no", "yes", "present"). The weakest spots are S3 (R1 and R3 recur within about 7 shots) and S6 (4 busts in 12 shots).
+- **Needs your call:** 130 shots in about 4.8 minutes is fast cutting (about 2.2 s average). It follows from the v3 caps (story stills can't exceed 2.5 s) and I think it is right, but if you want slower pacing the only lever is to allow longer holds, which means a cap exception.
+- **Notes:** (1) the porch and parking-lot plates have no Ren-friendly floor space on the car side, so Ren stands on the left. (2) FS and the two-shot on the porch use Dev's single pose, since he has no other.
+
+**STOP. Waiting for: `plan approved`.**
