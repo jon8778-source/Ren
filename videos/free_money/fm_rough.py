@@ -112,6 +112,61 @@ def jar(f, cx, base, w, h, pct, col, label, ghost_to=None, sub=None, a=1.0, big=
 
 
 # ---------------------------------------------------------------------------------------------
+# Smooth (sub-pixel) placement. The earlier code resized each figure to whole-pixel dimensions and pasted it at a whole-pixel
+# position every frame; with a continuous camera push the rounding made characters jump by up to ~1 px (visible as shaking).
+# Here the figure is pre-scaled once per size bucket (sharp LANCZOS) and then mapped to its exact float rectangle with a
+# bicubic affine transform, so position and size change smoothly from frame to frame.
+_MIP = {}
+
+
+def _mip(img, h):
+    key = (id(img), int(h // 12))
+    m = _MIP.get(key)
+    if m is None:
+        th = int(h // 12) * 12 + 12
+        tw = max(1, round(img.width * th / img.height))
+        m = img.resize((tw, th), Image.LANCZOS)
+        _MIP[key] = m
+    return m
+
+
+def paste_smooth(frame, img, x, y, w, h):
+    """Composite `img` onto `frame` (RGBA) filling the float rectangle (x, y, w, h)."""
+    m = _mip(img, h)
+    sx, sy = m.width / w, m.height / h
+    x0, y0 = max(0, int(math.floor(x)) - 2), max(0, int(math.floor(y)) - 2)
+    x1, y1 = min(W, int(math.ceil(x + w)) + 2), min(H, int(math.ceil(y + h)) + 2)
+    if x1 <= x0 or y1 <= y0:
+        return
+    out = m.transform((x1 - x0, y1 - y0), Image.AFFINE, (sx, 0, (x0 - x) * sx, 0, sy, (y0 - y) * sy), Image.BICUBIC)
+    frame.alpha_composite(out, (x0, y0))
+
+
+def _cam_place_smooth(self, frame, im, x, bottom, h_plate):
+    h = h_plate * self.k
+    w = im.width * h / im.height
+    sx, sy = self.pt(x, bottom)
+    paste_smooth(frame, im, sx - w / 2, sy - h, w, h)
+    return (sx - w / 2, sy - h, sx + w / 2, sy)
+
+
+def _ren_still_smooth(frame, A, key, cx, bottom, h, boxes, push=0.0):
+    im = A.ren[key]
+    h = h * (1 + 0.07 * push)
+    w = im.width * h / im.height
+    x, y = cx - w / 2, bottom - h
+    paste_smooth(frame, im, x, y, w, h)
+    boxes.ren = (x, y, x + w, y + h)
+    boxes.face = (x + w * 0.22, y, x + w * 0.78, y + h * (0.42 if key in ("R1", "R2", "R3", "R4") else 0.18))
+    return boxes.ren
+
+
+if not os.environ.get("FM_NOSMOOTH"):
+    Cam.place = _cam_place_smooth
+    fp.ren_still = _ren_still_smooth
+
+
+# ---------------------------------------------------------------------------------------------
 # Standing figures: scale from the plate's own perspective, grounded with a contact shadow.
 # Calibrated from objects of known size in each plate (office: chair 105 cm, desk 75 cm, pedestal, bookshelf, file cabinet;
 # porch: door 2.0 m, bench seat 45 cm; lot: car tyre 63 cm, car roof 1.45 m). Each plate is a pinhole view from about
@@ -126,15 +181,30 @@ def height_px(plate, y_feet, cm=REN_CM):
     return cm * (y_feet - hor) / cam_cm
 
 
+_SHADOW = None
+
+
+def _shadow_patch():
+    """One soft, tight contact-shadow patch (an outer and a darker inner ellipse), drawn once and placed with sub-pixel accuracy."""
+    global _SHADOW
+    if _SHADOW is None:
+        pw, ph = 600, 120
+        lay = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        rx, ry = 270, 46
+        d.ellipse((pw / 2 - rx, ph / 2 - ry, pw / 2 + rx, ph / 2 + ry), fill=(19, 35, 63, 105))
+        d.ellipse((pw / 2 - rx * 0.62, ph / 2 - ry * 0.58, pw / 2 + rx * 0.62, ph / 2 + ry * 0.58), fill=(19, 35, 63, 90))
+        _SHADOW = lay.filter(ImageFilter.GaussianBlur(7))
+    return _SHADOW
+
+
 def contact_shadow(f, cam, x, y, width_plate):
     """A tight shadow under the feet (not a soft cloud), so the figure reads as standing on the floor."""
     sx, sy = cam.pt(x, y)
     rx = width_plate * cam.k * 0.5
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(lay)
-    d.ellipse((sx - rx, sy - rx * 0.17, sx + rx, sy + rx * 0.17), fill=(19, 35, 63, 105))
-    d.ellipse((sx - rx * 0.62, sy - rx * 0.1, sx + rx * 0.62, sy + rx * 0.1), fill=(19, 35, 63, 90))
-    f.alpha_composite(lay.filter(ImageFilter.GaussianBlur(3.5)))
+    w = rx * 2 * 600 / 540
+    h = w * 120 / 600
+    paste_smooth(f, _shadow_patch(), sx - w / 2, sy - h / 2, w, h)
 
 
 def stand(f, cam, plate, img, x, y_feet, boxes=None, cm=REN_CM, shadow_w=None, is_ren=True):
