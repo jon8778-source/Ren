@@ -52,3 +52,18 @@ Re-check the IRS 2027 limit and flag it; render final quality at 1280×720 (or 1
 - Cards and pills moved right so they don't touch the larger standing figure, and the card width narrows when a standing figure is on screen. The porch camera push is now smaller so the taller figures keep their heads in frame.
 **Checked on the re-rendered file:** the timeline checks pass 17 of 17, the validator passes, nothing over the shot caps, no layout overlaps. Visual: before/after of the shots you flagged (`sheets/rough/ren_scale_before_after.png`), a 100% crop of the feet and shadow (`ren_feet_crop.png`), and all 14 standing shots on the final file (`ren_standing_shots_final.png`).
 **Limits:** the scale is calibrated from the plates, not from the characters. Dev, Priya and Gary were drawn by a different process than Ren, so their heights relative to him are an assumption (170-178 cm). Ren is still not seated, because no seated pose exists.
+
+
+## Update: Ren shaking fix (7 November 2026)
+**Owner feedback:** Ren appears to shake.
+**Root cause:** every figure was resized to whole-pixel dimensions and pasted at a whole-pixel position in every frame, while the camera pushes slowly. As the numbers rounded, Ren stepped by up to a pixel from frame to frame, which reads as a tremor. Measured: about 0.33 px of placement noise per frame in a controlled test, and about 0.28-0.31 px of vertical noise on the real video. The contact shadow had the same rounding.
+**Fix (`fm_rough.py`, `paste_smooth()`):** the figure is pre-scaled once (sharp LANCZOS, 12 px size steps) and then mapped to its exact fractional position and size with a bicubic affine transform, so position and scale change smoothly. The shadow is one pre-drawn patch placed the same way. Applies to all standing Ren, Dev, Priya and Gary placements and the busts.
+**Measured:**
+- Controlled test (`jitter_check.py`, Ren's own alpha channel moved and scaled smoothly): worst placement noise **0.36 px before, 0.06 px after** (x 0.33 to 0.015). The test fails the build above 0.12 px.
+- Real video, hair-top position per frame, before against after: bust 0.28 to 0.07, desk 0.28 to 0.05, parking lot 0.30 to 0.08, wave 0.29 to 0.12, "everyone" bust 0.28 to 0.06 px.
+- `s5_cost` is inconclusive: the edge was not found in 16 of 66 frames, and the valid frames show about 0.2 px, which is the size of the video compression noise.
+- Sharpness unchanged (100% crops, `sheets/rough/sharpness_before_after.png`).
+- `qa_timeline.py` 17 of 17 and `validate.py` pass on the re-rendered file.
+**Not addressed:**
+- The library clips (`ren_hold_phone`) carry their own source movement; the phone-in-hand shot plays the clip as supplied and is not smoothed.
+- Draft quality (CRF 23) adds a little compression noise of its own, so a tiny residual shimmer on thin lines may remain and should be re-judged on the CRF 18 final.
