@@ -10,8 +10,8 @@ Both assets await explicit artwork approval. Actual reaction size is 941×1672,
 not the requested 2160×3840; no upscale performed. Hand is 1568×1003. Inspected
 framing, closed mouth and hand orientation; final composition/animation remains
 unverified. No TTS, video render or full-Short production. Revision 5 originals,
-audio, renderer, main and long-form preserved. Source/art checkpoint prepared;
-remote verification pending. Generated videos/caches remain outside Git.
+audio, renderer, main and long-form preserved. Source/art checkpoint `6ed59ff` pushed/fetched; all four artwork/review files
+verified byte-identical remotely. Generated videos/caches remain outside Git.
 
 ---
 
