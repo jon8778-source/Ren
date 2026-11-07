@@ -1,0 +1,176 @@
+{
+ "fps": 24,
+ "frames": 1380,
+ "disclaimer": "Educational content only, not financial advice.",
+ "narration_s": 56.66,
+ "beats": [
+  {
+   "id": "stub-hook",
+   "start_frame": 0,
+   "end_frame": 94,
+   "kind": "action",
+   "composition": "stub-closeup-plan-panel",
+   "narration": "I was 28 when Dev held up my pay stub and asked me one question."
+  },
+  {
+   "id": "porch-question",
+   "start_frame": 94,
+   "end_frame": 162,
+   "kind": "action",
+   "composition": "porch-two-shot",
+   "narration": "\"Who's keeping the difference?\" Then he pointed at one line,"
+  },
+  {
+   "id": "stub-line",
+   "start_frame": 162,
+   "end_frame": 233,
+   "kind": "action",
+   "composition": "stub-line-closeup",
+   "narration": "and my stomach dropped. For three years,"
+  },
+  {
+   "id": "three-years",
+   "start_frame": 233,
+   "end_frame": 273,
+   "kind": "presenter",
+   "composition": "bust-with-three-stubs",
+   "narration": "I'd been turning down free money."
+  },
+  {
+   "id": "office-age25",
+   "start_frame": 273,
+   "end_frame": 333,
+   "kind": "action",
+   "composition": "office-standing-age25",
+   "narration": "Twenty-five. First real job."
+  },
+  {
+   "id": "salary-card",
+   "start_frame": 333,
+   "end_frame": 403,
+   "kind": "presenter",
+   "composition": "bust-salary-card",
+   "narration": "Forty-four thousand a year, and I felt like I'd made it."
+  },
+  {
+   "id": "lot-lease",
+   "start_frame": 403,
+   "end_frame": 469,
+   "kind": "action",
+   "composition": "parking-lot-standing",
+   "narration": "So I did what felt right and leased a brand-new car,"
+  },
+  {
+   "id": "phone-489",
+   "start_frame": 469,
+   "end_frame": 526,
+   "kind": "graphic",
+   "composition": "phone-lease-closeup",
+   "narration": "four hundred and eighty-nine dollars a month."
+  },
+  {
+   "id": "folder-page6",
+   "start_frame": 526,
+   "end_frame": 588,
+   "kind": "action",
+   "composition": "folder-page6-closeup",
+   "narration": "Somewhere on page six it said the company would match every dollar I put into my retirement plan,"
+  },
+  {
+   "id": "match-coins",
+   "start_frame": 588,
+   "end_frame": 652,
+   "kind": "graphic",
+   "composition": "you-and-employer-coins",
+   "narration": "match every dollar I put into my retirement plan,"
+  },
+  {
+   "id": "match-strip",
+   "start_frame": 652,
+   "end_frame": 691,
+   "kind": "graphic",
+   "composition": "folder-match-strip",
+   "narration": "up to four percent of my salary."
+  },
+  {
+   "id": "picked-two",
+   "start_frame": 691,
+   "end_frame": 765,
+   "kind": "graphic",
+   "composition": "benefits-screen-two-percent",
+   "narration": "I picked two percent, because two sounded responsible,"
+  },
+  {
+   "id": "lease-urgent",
+   "start_frame": 765,
+   "end_frame": 826,
+   "kind": "graphic",
+   "composition": "phone-lease-urgent",
+   "narration": "and the lease sounded urgent."
+  },
+  {
+   "id": "jars-two",
+   "start_frame": 826,
+   "end_frame": 884,
+   "kind": "graphic",
+   "composition": "two-jars",
+   "narration": "I put in two, so they put in two. The other two percent?"
+  },
+  {
+   "id": "never-paid",
+   "start_frame": 884,
+   "end_frame": 964,
+   "kind": "graphic",
+   "composition": "ghost-jar-never-paid",
+   "narration": "It wasn't saved for later. It just never got paid."
+  },
+  {
+   "id": "missed-880",
+   "start_frame": 964,
+   "end_frame": 1034,
+   "kind": "graphic",
+   "composition": "ledger-880",
+   "narration": "That was eight hundred and eighty dollars the first year."
+  },
+  {
+   "id": "toggle-app",
+   "start_frame": 1034,
+   "end_frame": 1125,
+   "kind": "action",
+   "composition": "phone-app-toggle",
+   "narration": "I went home, opened the app on my phone, and changed two to four."
+  },
+  {
+   "id": "ninety-seconds",
+   "start_frame": 1125,
+   "end_frame": 1177,
+   "kind": "graphic",
+   "composition": "ninety-seconds-badge",
+   "narration": "It took ninety seconds. Ninety seconds,"
+  },
+  {
+   "id": "three-years-late",
+   "start_frame": 1177,
+   "end_frame": 1240,
+   "kind": "presenter",
+   "composition": "bust-three-years-late",
+   "narration": "three years late. You don't have to max it out."
+  },
+  {
+   "id": "free-part",
+   "start_frame": 1240,
+   "end_frame": 1288,
+   "kind": "presenter",
+   "composition": "bust-free-part",
+   "narration": "You just don't want to skip the free part."
+  },
+  {
+   "id": "collect-owed",
+   "start_frame": 1288,
+   "end_frame": 1380,
+   "kind": "presenter",
+   "composition": "office-standing-collect",
+   "narration": "Before you cut a single thing, collect what you're already owed."
+  }
+ ]
+}

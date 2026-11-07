@@ -1,0 +1,596 @@
+{
+ "schema_version": 1,
+ "title": "I Said No to Free Money for 3 Years: 1-minute Short (derived from the long video)",
+ "width": 1080,
+ "height": 1920,
+ "fps": 24,
+ "frames": 1380,
+ "full_bleed": true,
+ "permanent_border": false,
+ "asset_report": "ASSET_REQUIREMENTS.md",
+ "layout_evidence": "layout.json",
+ "prototype": "prototype.mp4",
+ "prototype_report": "prototype.qa.json",
+ "assets": [
+  {
+   "id": "script",
+   "kind": "script",
+   "path": "../../../scripts/Ren_Free_Money_Script.md",
+   "sha256": "48be8a065cd34b74feb2ba0b1832f15a8ac124a8d6c9919d5e93d535e61e23f5",
+   "status": "approved",
+   "approval_evidence": "Owner supplied the script 7 Nov 2026; narration used word for word; Gate 3 'rough cut approved'"
+  },
+  {
+   "id": "audio",
+   "kind": "audio",
+   "path": "../../../videos/free_money/short/short_audio_raw.wav",
+   "sha256": "6656d8c4c67f4cdd1e7ffd80ef5c10efaf34466953b2a0401181db8aa9553f43",
+   "status": "approved",
+   "approval_evidence": "Cut from the approved long-form narration (voice/S1-S7.wav), no resynthesis; owner approved the long video narration at Gate 3 ('rough cut approved') and 'Approved, great' on the final"
+  },
+  {
+   "id": "renderer",
+   "kind": "renderer",
+   "path": "../../../videos/free_money/short/fm_short.py",
+   "sha256": "4810d1debaf973b347dd33b6202a82b2fc0baf06ea4ad86c9776095c6d69abed",
+   "status": "approved",
+   "approval_evidence": "Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026)"
+  },
+  {
+   "id": "configuration",
+   "kind": "configuration",
+   "path": "../../../videos/free_money/short/short_spec.json",
+   "sha256": "daed2cf392d0b0b37f263a012a3cf6bf395ce2384a4d641451ab8608ed5a8128",
+   "status": "approved",
+   "approval_evidence": "Generated from short_spec.py: beats and timings tied to short_cues.json"
+  },
+  {
+   "id": "ren_r1",
+   "kind": "character",
+   "path": "../../../videos/free_money/matted/Ren_1_neutral.png",
+   "sha256": "b2ae0b7e51b5ba8c798e74faa62dc378407ecd0152c6da46c2705c8fd8af7488",
+   "status": "approved",
+   "approval_evidence": "Approved Ren still (library/ren_approved/Ren_1_neutral.jpg), matted; owner 'style lock approved' 7 Nov 2026"
+  },
+  {
+   "id": "ren_r2",
+   "kind": "character",
+   "path": "../../../videos/free_money/matted/Ren_2_hand_on_chest_talking.png",
+   "sha256": "04b66658e4d11d14e6f7aa1397ba9a9a056c4d0db64a0adb7f4bdfb6ba0e3ab3",
+   "status": "approved",
+   "approval_evidence": "Approved Ren still, matted; 'style lock approved'"
+  },
+  {
+   "id": "ren_r3",
+   "kind": "character",
+   "path": "../../../videos/free_money/matted/Ren_3_thinking_bust.png",
+   "sha256": "af33fbdcfa112017b9b2703c74daf975f0b8f33e97dc4606ca3daf2e6710dde7",
+   "status": "approved",
+   "approval_evidence": "Approved Ren still, matted; 'style lock approved'"
+  },
+  {
+   "id": "ren_fs",
+   "kind": "character",
+   "path": "../../../videos/free_money/matted/Ren_full_body_standing.png",
+   "sha256": "294bc1cd9187620570c7d0d9f18813bcebb1fb98aaac38d49a2ac957baa13a99",
+   "status": "approved",
+   "approval_evidence": "Approved Ren still, matted; 'style lock approved'"
+  },
+  {
+   "id": "ren_fp",
+   "kind": "character",
+   "path": "../../../videos/free_money/matted/Ren_full_body_presenting.png",
+   "sha256": "26547449bf87cc093dc029d0641293cb5aac202769f6c90d4c3246430511ebeb",
+   "status": "approved",
+   "approval_evidence": "Approved Ren still, matted; 'style lock approved'"
+  },
+  {
+   "id": "dev",
+   "kind": "character",
+   "path": "../../../library/supporting_assets/characters/Dev_pay_stub.png",
+   "sha256": "d92a7e3abcb0b59f7c43ea9a64d022d745e5cb03be14f6ddd813071bde16d6ac",
+   "status": "approved",
+   "approval_evidence": "Supporting character from the owner's asset pack; style option (b) accepted at 'style lock approved'"
+  },
+  {
+   "id": "porch",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Porch_background_16x9.png",
+   "sha256": "b6732b5526d5bbc8032a36ab4e7d50719efa202918488bb35401e5e8025f4c3b",
+   "status": "approved",
+   "approval_evidence": "Owner's asset pack plate; 'style lock approved'"
+  },
+  {
+   "id": "office",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Office_background_16x9.png",
+   "sha256": "bfc7066bc8253ac38bba9b987280ad8575afd86458762d4e0054b98b1b1b3945",
+   "status": "approved",
+   "approval_evidence": "Owner's asset pack plate; 'style lock approved'"
+  },
+  {
+   "id": "lot",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Office_parking_lot_car_16x9.png",
+   "sha256": "0dc0b4d6e623f57162de0b9cfdf4b78f6b352d1372b3a8d905dcc6152acfdab2",
+   "status": "approved",
+   "approval_evidence": "Owner's asset pack plate; 'style lock approved'"
+  },
+  {
+   "id": "folder",
+   "kind": "prop",
+   "path": "../../../library/supporting_assets/props/HR_folder_page6_prop.png",
+   "sha256": "53c8b225ffd8ecdc42e69e357ba1dd911a7fc7fb1379248a3b854a20a8f327ee",
+   "status": "approved",
+   "approval_evidence": "Owner's asset pack prop; baked-in text accepted for this video at 'style lock approved'"
+  },
+  {
+   "id": "typography",
+   "kind": "font",
+   "path": "../../../project/remotion/public/fonts/fredoka-latin-700-normal.woff2",
+   "sha256": "c28f2b70e6e1bf0d9b6653022c613e7923218c6a0ff83f47c6ff080603119190",
+   "status": "approved",
+   "approval_evidence": "Fredoka, the established house typeface"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "stub-hook",
+   "start_frame": 0,
+   "end_frame": 94,
+   "kind": "action",
+   "composition": "stub-closeup-plan-panel",
+   "action": "Dev's pay stub fills the frame; the match line glows and a panel shows one employer's example plan: You 2%, Employer 2%, the limit ghosted at 4%",
+   "motion_purpose": "Show the overlooked employer benefit in the first seconds, without sound",
+   "assets": [
+    "dev",
+    "porch"
+   ],
+   "animations": [
+    "stub-hook-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "porch-question",
+   "start_frame": 94,
+   "end_frame": 162,
+   "kind": "action",
+   "composition": "porch-two-shot",
+   "action": "Ren and Dev stand on the porch; the question appears; slow push toward Dev and the stub",
+   "motion_purpose": "Establish the conflict between the two people",
+   "assets": [
+    "ren_fs",
+    "dev",
+    "porch"
+   ],
+   "animations": [
+    "porch-question-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "stub-line",
+   "start_frame": 162,
+   "end_frame": 233,
+   "kind": "action",
+   "composition": "stub-line-closeup",
+   "action": "The glowing 'Employer match: 2%' line pulses, then darkens and sinks",
+   "motion_purpose": "Show the consequence of the moment of discovery",
+   "assets": [
+    "dev",
+    "porch"
+   ],
+   "animations": [
+    "stub-line-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "three-years",
+   "start_frame": 233,
+   "end_frame": 273,
+   "kind": "presenter",
+   "composition": "bust-with-three-stubs",
+   "action": "Ren thinks while three pay stubs, each with the same 2% match, stack in above him",
+   "motion_purpose": "Show the same decision repeated each year",
+   "assets": [
+    "ren_r3",
+    "office"
+   ],
+   "animations": [
+    "three-years-motion"
+   ],
+   "environment_fullscreen": false,
+   "timing_justification": "Ends exactly on the sentence boundary where the page peels into age 25; three stubs need about 1.6 s"
+  },
+  {
+   "id": "office-age25",
+   "start_frame": 273,
+   "end_frame": 333,
+   "kind": "action",
+   "composition": "office-standing-age25",
+   "action": "Ren stands by the desk and laptop; a single 'Age 25' label appears",
+   "motion_purpose": "Establish the change in time and place",
+   "assets": [
+    "ren_fs",
+    "office"
+   ],
+   "animations": [
+    "office-age25-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "salary-card",
+   "start_frame": 333,
+   "end_frame": 403,
+   "kind": "presenter",
+   "composition": "bust-salary-card",
+   "action": "Ren, hand on chest; one salary card '$44,000 salary' appears on the word",
+   "motion_purpose": "Introduce the one salary figure at the moment it is spoken",
+   "assets": [
+    "ren_r2",
+    "office"
+   ],
+   "animations": [
+    "salary-card-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "lot-lease",
+   "start_frame": 403,
+   "end_frame": 469,
+   "kind": "action",
+   "composition": "parking-lot-standing",
+   "action": "Ren stands in the parking lot beside the car; slow push",
+   "motion_purpose": "Change of location: the lease",
+   "assets": [
+    "ren_fs",
+    "lot"
+   ],
+   "animations": [
+    "lot-lease-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "phone-489",
+   "start_frame": 469,
+   "end_frame": 526,
+   "kind": "graphic",
+   "composition": "phone-lease-closeup",
+   "action": "A phone slides up showing 'Car lease' and $489 per month",
+   "motion_purpose": "Show the figure at the moment it is spoken, on the story's own phone",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "phone-489-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "folder-page6",
+   "start_frame": 526,
+   "end_frame": 588,
+   "kind": "action",
+   "composition": "folder-page6-closeup",
+   "action": "The HR folder slides in; the camera pushes to the PAGE 6 tab",
+   "motion_purpose": "Reveal where the match was written",
+   "assets": [
+    "folder",
+    "office"
+   ],
+   "animations": [
+    "folder-page6-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "match-coins",
+   "start_frame": 588,
+   "end_frame": 652,
+   "kind": "graphic",
+   "composition": "you-and-employer-coins",
+   "action": "One employee coin is matched by one employer coin, then stacks grow equally",
+   "motion_purpose": "Explain dollar-for-dollar matching",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "match-coins-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "match-strip",
+   "start_frame": 652,
+   "end_frame": 691,
+   "kind": "graphic",
+   "composition": "folder-match-strip",
+   "action": "The 'We match 100%' strip lights up on the folder page; 'up to 4%' appears",
+   "motion_purpose": "Show the limit of this one employer's match",
+   "assets": [
+    "folder"
+   ],
+   "animations": [
+    "match-strip-motion"
+   ],
+   "environment_fullscreen": false,
+   "timing_justification": "Single clause of narration (1.6 s); the strip needs to be readable and the next beat starts on the next clause"
+  },
+  {
+   "id": "picked-two",
+   "start_frame": 691,
+   "end_frame": 765,
+   "kind": "graphic",
+   "composition": "benefits-screen-two-percent",
+   "action": "The contribution slider moves to 2%; the dashed 'up to 4%' appears",
+   "motion_purpose": "Show the decision against the limit",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "picked-two-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "lease-urgent",
+   "start_frame": 765,
+   "end_frame": 826,
+   "kind": "graphic",
+   "composition": "phone-lease-urgent",
+   "action": "A 'Payment due' banner drops onto the lease phone",
+   "motion_purpose": "Show why the lease won",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "lease-urgent-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "jars-two",
+   "start_frame": 826,
+   "end_frame": 884,
+   "kind": "graphic",
+   "composition": "two-jars",
+   "action": "You and Employer jars fill to 2%; a dashed ghost level rises above the employer's",
+   "motion_purpose": "Show the unpaid half of the match",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "jars-two-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "never-paid",
+   "start_frame": 884,
+   "end_frame": 964,
+   "kind": "graphic",
+   "composition": "ghost-jar-never-paid",
+   "action": "The ghost level is labelled 'Never paid'",
+   "motion_purpose": "Say what happened to the other 2%",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "never-paid-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "missed-880",
+   "start_frame": 964,
+   "end_frame": 1034,
+   "kind": "graphic",
+   "composition": "ledger-880",
+   "action": "A ledger shows Age 25, $44,000 and 'Missed match: $880'",
+   "motion_purpose": "Show the first year's cost",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "missed-880-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "toggle-app",
+   "start_frame": 1034,
+   "end_frame": 1125,
+   "kind": "action",
+   "composition": "phone-app-toggle",
+   "action": "The retirement app slides in at 2% and the toggle moves to 4%",
+   "motion_purpose": "Show the fix and how simple it is",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "toggle-app-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "ninety-seconds",
+   "start_frame": 1125,
+   "end_frame": 1177,
+   "kind": "graphic",
+   "composition": "ninety-seconds-badge",
+   "action": "A '90 seconds' badge pops on the phone",
+   "motion_purpose": "Show how little time it took",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "ninety-seconds-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "three-years-late",
+   "start_frame": 1177,
+   "end_frame": 1240,
+   "kind": "presenter",
+   "composition": "bust-three-years-late",
+   "action": "Ren, rueful, with a '3 years late' tag",
+   "motion_purpose": "Land the regret, then the reassurance",
+   "assets": [
+    "ren_r1",
+    "office"
+   ],
+   "animations": [
+    "three-years-late-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "free-part",
+   "start_frame": 1240,
+   "end_frame": 1288,
+   "kind": "presenter",
+   "composition": "bust-free-part",
+   "action": "Ren, hand on chest, with the line as a card",
+   "motion_purpose": "State the takeaway",
+   "assets": [
+    "ren_r2",
+    "office"
+   ],
+   "animations": [
+    "free-part-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "collect-owed",
+   "start_frame": 1288,
+   "end_frame": 1380,
+   "kind": "presenter",
+   "composition": "office-standing-collect",
+   "action": "Ren presents toward the desk; 'Collect what you're owed' card; the disclaimer holds for the last two seconds",
+   "motion_purpose": "Close with the call to action and the disclaimer",
+   "assets": [
+    "ren_fp",
+    "office"
+   ],
+   "animations": [
+    "collect-owed-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Holds 0.84 s past the last word so the exact end disclaimer is readable for 2 s"
+  }
+ ],
+ "audio_cues": [
+  {
+   "start": 0.0,
+   "end": 3.64,
+   "text": "I was 28 when Dev held up my pay stub and asked me one question."
+  },
+  {
+   "start": 4.14,
+   "end": 5.16,
+   "text": "\"Who's keeping the difference?\""
+  },
+  {
+   "start": 5.43,
+   "end": 7.99,
+   "text": "Then he pointed at one line, and my stomach dropped."
+  },
+  {
+   "start": 8.55,
+   "end": 11.15,
+   "text": "For three years, I'd been turning down free money."
+  },
+  {
+   "start": 11.37,
+   "end": 12.43,
+   "text": "Twenty-five."
+  },
+  {
+   "start": 12.83,
+   "end": 13.71,
+   "text": "First real job."
+  },
+  {
+   "start": 13.883,
+   "end": 16.67,
+   "text": "Forty-four thousand a year, and I felt like I'd made it."
+  },
+  {
+   "start": 16.79,
+   "end": 21.63,
+   "text": "So I did what felt right and leased a brand-new car, four hundred and eighty-nine dollars a month."
+  },
+  {
+   "start": 21.9,
+   "end": 28.76,
+   "text": "Somewhere on page six it said the company would match every dollar I put into my retirement plan, up to four percent of my salary."
+  },
+  {
+   "start": 28.78,
+   "end": 33.06,
+   "text": "I picked two percent, because two sounded responsible, and the lease sounded urgent."
+  },
+  {
+   "start": 33.33,
+   "end": 35.38,
+   "text": "I put in two, so they put in two."
+  },
+  {
+   "start": 35.77,
+   "end": 36.603,
+   "text": "The other two percent?"
+  },
+  {
+   "start": 36.83,
+   "end": 38.35,
+   "text": "It wasn't saved for later."
+  },
+  {
+   "start": 38.71,
+   "end": 39.87,
+   "text": "It just never got paid."
+  },
+  {
+   "start": 40.17,
+   "end": 42.81,
+   "text": "That was eight hundred and eighty dollars the first year."
+  },
+  {
+   "start": 43.08,
+   "end": 46.53,
+   "text": "I went home, opened the app on my phone, and changed two to four."
+  },
+  {
+   "start": 46.86,
+   "end": 47.96,
+   "text": "It took ninety seconds."
+  },
+  {
+   "start": 48.12,
+   "end": 49.76,
+   "text": "Ninety seconds, three years late."
+  },
+  {
+   "start": 50.03,
+   "end": 51.33,
+   "text": "You don't have to max it out."
+  },
+  {
+   "start": 51.65,
+   "end": 53.39,
+   "text": "You just don't want to skip the free part."
+  },
+  {
+   "start": 53.66,
+   "end": 56.44,
+   "text": "Before you cut a single thing, collect what you're already owed."
+  }
+ ]
+}

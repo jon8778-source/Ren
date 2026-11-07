@@ -1,0 +1,6 @@
+prototype.mp4
+prototype*.wav
+prototype_seg*
+segments.txt
+*.mp4
+still_*.png
