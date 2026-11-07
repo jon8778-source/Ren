@@ -45,5 +45,52 @@
     "gen_s": 64.0
    }
   ]
+ },
+ "S3": {
+  "duration": 35.863,
+  "sample_rate": 24000,
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Here's the thing about a match. If I put in four percent, they put in four percent, dollar for dollar. I put in two, so they put in two. The other two percent? It wasn't saved for later. It just never got paid.",
+    "start": 0.0,
+    "end": 12.376,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "That was eight hundred and eighty dollars the first year. Then I got small raises, forty-six thousand, forty-eight, and every year I left the same two percent, and every year the ghost money got bigger.",
+    "start": 12.376,
+    "end": 24.629,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 3,
+    "text": "Meanwhile, I made that lease payment on time, every month, with pride. Four hundred eighty-nine dollars to look successful, while skipping about seventy-seven a month that would have actually made me successful.",
+    "start": 24.629,
+    "end": 35.863,
+    "gen_s": 67.7
+   }
+  ]
+ },
+ "S4": {
+  "duration": 27.042,
+  "sample_rate": 24000,
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Back on that porch, Dev asked me three questions. \"What does this line mean? What would it say if you'd read the folder? And who's keeping the difference?\" The line said two percent. It should have said four. And the difference? The company keeps it.",
+    "start": 0.0,
+    "end": 14.176,
+    "gen_s": 77.0
+   },
+   {
+    "chunk": 2,
+    "text": "Not because they're evil. That's just how matches work. If you don't claim it, it stays with them. I went home, opened the app on my phone, and changed two to four. It took ninety seconds. Ninety seconds, three years late.",
+    "start": 14.176,
+    "end": 27.042,
+    "gen_s": 66.4
+   }
+  ]
  }
 }
