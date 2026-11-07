@@ -119,5 +119,66 @@
     "gen_s": 72.4
    }
   ]
+ },
+ "S6": {
+  "duration": 59.471,
+  "sample_rate": 24000,
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Today, same car, eight years older. I earn around a hundred thousand a year, and I always take the full match, plus more on top.",
+    "start": 0.0,
+    "end": 9.022,
+    "gen_s": 44.9
+   },
+   {
+    "chunk": 2,
+    "text": "My cousin Priya, the one who earns two hundred thousand and dresses like she's off to hike a mountain, maxes hers out every year. Uncle Gary told me his retirement plan is \"sell the boat.\" Everyone's different.",
+    "start": 9.022,
+    "end": 21.213,
+    "gen_s": 60.3
+   },
+   {
+    "chunk": 3,
+    "text": "But the match works the same for everyone who's offered one. It's the first money you're owed. So here's what I check now, and what I wish I'd checked at 25. One, your match formula. It's in the plan documents, not the vibes.",
+    "start": 21.213,
+    "end": 34.957,
+    "gen_s": 63.2
+   },
+   {
+    "chunk": 4,
+    "text": "Two, your vesting schedule, because some companies make you stay a few years before the match is fully yours. Three, next year's limit. For 2027, the actuarial firm Milliman projects twenty-five thousand five hundred dollars, up from twenty-four thousand five hundred.",
+    "start": 34.957,
+    "end": 51.139,
+    "gen_s": 78.7
+   },
+   {
+    "chunk": 5,
+    "text": "The IRS hadn't confirmed it at the end of October, so check the official number. You don't have to max it out. You just don't want to skip the free part.",
+    "start": 51.139,
+    "end": 59.471,
+    "gen_s": 38.3
+   }
+  ]
+ },
+ "S7": {
+  "duration": 27.878,
+  "sample_rate": 24000,
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "If I could go back, I wouldn't lecture him about coffee. I'd just hand him that folder, open to page six. Before you cut a single thing, collect what you're already owed. The match. The HSA money. The stuff in the folder.",
+    "start": 0.0,
+    "end": 13.203,
+    "gen_s": 59.1
+   },
+   {
+    "chunk": 2,
+    "text": "Twenty-five-year-old me wanted to look rich. Twenty-eight-year-old me just wanted to stop missing free money. Honestly? The second guy was richer. Next week: the month three bills hit me at once, and why, for the first time, I didn't panic.",
+    "start": 13.203,
+    "end": 27.878,
+    "gen_s": 64.5
+   }
+  ]
  }
 }
