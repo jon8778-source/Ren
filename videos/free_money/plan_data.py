@@ -129,7 +129,8 @@ S["S5"] = [
  ("I didn't even own.", "story", "LOT", "", "", "close on the car"),
 ]
 S["S6"] = [
- ("Today, same car, eight years older.", "story", "LOT (grade pending approval)", "", 'tag: "8 years later"', "desaturated grade, slow push (only if approved; otherwise plain plate)"),
+ ("Today, same car,", "story", "LOT", "", 'tag: "8 years later"', "plain plate (grade not approved), slow push"),
+ ("eight years older.", "story", "LOT", "", "", "closer push on the car"),
  ("I earn around a hundred thousand a year,", "graphic", "none", "", 'card: "Today: about $100,000/yr"', "card appears"),
  ("and I always take the full match,", "ren", "R2", "R2", "", "hand-on-chest still"),
  ("plus more on top.", "graphic", "none", "", '"full match + more"', "bar extends"),

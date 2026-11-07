@@ -1,0 +1,427 @@
+[
+ {
+  "word": "I",
+  "start": 0.0,
+  "end": 0.24
+ },
+ {
+  "word": "could",
+  "start": 0.24,
+  "end": 0.38
+ },
+ {
+  "word": "go",
+  "start": 0.38,
+  "end": 0.58
+ },
+ {
+  "word": "back,",
+  "start": 0.58,
+  "end": 0.88
+ },
+ {
+  "word": "I",
+  "start": 1.2,
+  "end": 1.34
+ },
+ {
+  "word": "wouldn't",
+  "start": 1.34,
+  "end": 1.58
+ },
+ {
+  "word": "lecture",
+  "start": 1.58,
+  "end": 1.88
+ },
+ {
+  "word": "him",
+  "start": 1.88,
+  "end": 2.04
+ },
+ {
+  "word": "about",
+  "start": 2.04,
+  "end": 2.3
+ },
+ {
+  "word": "coffee.",
+  "start": 2.3,
+  "end": 2.7
+ },
+ {
+  "word": "I'd",
+  "start": 3.3,
+  "end": 3.62
+ },
+ {
+  "word": "just",
+  "start": 3.62,
+  "end": 3.78
+ },
+ {
+  "word": "hand",
+  "start": 3.78,
+  "end": 4.06
+ },
+ {
+  "word": "him",
+  "start": 4.06,
+  "end": 4.22
+ },
+ {
+  "word": "that",
+  "start": 4.22,
+  "end": 4.42
+ },
+ {
+  "word": "folder",
+  "start": 4.42,
+  "end": 4.76
+ },
+ {
+  "word": "open",
+  "start": 4.76,
+  "end": 5.14
+ },
+ {
+  "word": "to",
+  "start": 5.14,
+  "end": 5.32
+ },
+ {
+  "word": "page",
+  "start": 5.32,
+  "end": 5.54
+ },
+ {
+  "word": "6,",
+  "start": 5.54,
+  "end": 5.9
+ },
+ {
+  "word": "before",
+  "start": 6.5,
+  "end": 6.7
+ },
+ {
+  "word": "you",
+  "start": 6.7,
+  "end": 6.88
+ },
+ {
+  "word": "cut",
+  "start": 6.88,
+  "end": 7.04
+ },
+ {
+  "word": "a",
+  "start": 7.04,
+  "end": 7.18
+ },
+ {
+  "word": "single",
+  "start": 7.18,
+  "end": 7.42
+ },
+ {
+  "word": "thing,",
+  "start": 7.42,
+  "end": 7.72
+ },
+ {
+  "word": "collect",
+  "start": 7.92,
+  "end": 8.12
+ },
+ {
+  "word": "what",
+  "start": 8.12,
+  "end": 8.32
+ },
+ {
+  "word": "you're",
+  "start": 8.32,
+  "end": 8.58
+ },
+ {
+  "word": "already",
+  "start": 8.58,
+  "end": 8.92
+ },
+ {
+  "word": "owed,",
+  "start": 8.92,
+  "end": 9.28
+ },
+ {
+  "word": "the",
+  "start": 9.66,
+  "end": 9.8
+ },
+ {
+  "word": "match,",
+  "start": 9.8,
+  "end": 10.16
+ },
+ {
+  "word": "the",
+  "start": 10.72,
+  "end": 10.92
+ },
+ {
+  "word": "HSA",
+  "start": 10.92,
+  "end": 11.4
+ },
+ {
+  "word": "money,",
+  "start": 11.4,
+  "end": 11.66
+ },
+ {
+  "word": "the",
+  "start": 12.16,
+  "end": 12.26
+ },
+ {
+  "word": "stuff",
+  "start": 12.26,
+  "end": 12.52
+ },
+ {
+  "word": "in",
+  "start": 12.52,
+  "end": 12.66
+ },
+ {
+  "word": "the",
+  "start": 12.66,
+  "end": 12.8
+ },
+ {
+  "word": "folder.",
+  "start": 12.8,
+  "end": 13.12
+ },
+ {
+  "word": "25",
+  "start": 13.24,
+  "end": 13.72
+ },
+ {
+  "word": "-year",
+  "start": 13.72,
+  "end": 14.0
+ },
+ {
+  "word": "-old",
+  "start": 14.0,
+  "end": 14.18
+ },
+ {
+  "word": "me",
+  "start": 14.18,
+  "end": 14.44
+ },
+ {
+  "word": "wanted",
+  "start": 14.44,
+  "end": 14.78
+ },
+ {
+  "word": "to",
+  "start": 14.78,
+  "end": 14.98
+ },
+ {
+  "word": "look",
+  "start": 14.98,
+  "end": 15.14
+ },
+ {
+  "word": "rich.",
+  "start": 15.14,
+  "end": 15.54
+ },
+ {
+  "word": "28",
+  "start": 16.34,
+  "end": 16.66
+ },
+ {
+  "word": "-year",
+  "start": 16.66,
+  "end": 16.88
+ },
+ {
+  "word": "-old",
+  "start": 16.88,
+  "end": 17.08
+ },
+ {
+  "word": "me",
+  "start": 17.08,
+  "end": 17.34
+ },
+ {
+  "word": "just",
+  "start": 17.34,
+  "end": 17.58
+ },
+ {
+  "word": "wanted",
+  "start": 17.58,
+  "end": 17.86
+ },
+ {
+  "word": "to",
+  "start": 17.86,
+  "end": 18.1
+ },
+ {
+  "word": "stop",
+  "start": 18.1,
+  "end": 18.3
+ },
+ {
+  "word": "missing",
+  "start": 18.3,
+  "end": 18.64
+ },
+ {
+  "word": "free",
+  "start": 18.64,
+  "end": 18.92
+ },
+ {
+  "word": "money.",
+  "start": 18.92,
+  "end": 19.24
+ },
+ {
+  "word": "Honestly,",
+  "start": 19.72,
+  "end": 20.16
+ },
+ {
+  "word": "the",
+  "start": 20.5,
+  "end": 20.62
+ },
+ {
+  "word": "second",
+  "start": 20.62,
+  "end": 20.92
+ },
+ {
+  "word": "guy",
+  "start": 20.92,
+  "end": 21.14
+ },
+ {
+  "word": "was",
+  "start": 21.14,
+  "end": 21.36
+ },
+ {
+  "word": "richer.",
+  "start": 21.36,
+  "end": 21.7
+ },
+ {
+  "word": "Next",
+  "start": 22.34,
+  "end": 22.58
+ },
+ {
+  "word": "week,",
+  "start": 22.58,
+  "end": 22.84
+ },
+ {
+  "word": "the",
+  "start": 23.2,
+  "end": 23.26
+ },
+ {
+  "word": "month",
+  "start": 23.26,
+  "end": 23.42
+ },
+ {
+  "word": "3",
+  "start": 23.42,
+  "end": 23.7
+ },
+ {
+  "word": "bills",
+  "start": 23.7,
+  "end": 24.02
+ },
+ {
+  "word": "hit",
+  "start": 24.02,
+  "end": 24.22
+ },
+ {
+  "word": "me",
+  "start": 24.22,
+  "end": 24.4
+ },
+ {
+  "word": "at",
+  "start": 24.4,
+  "end": 24.52
+ },
+ {
+  "word": "once,",
+  "start": 24.52,
+  "end": 24.84
+ },
+ {
+  "word": "and",
+  "start": 25.2,
+  "end": 25.42
+ },
+ {
+  "word": "why,",
+  "start": 25.42,
+  "end": 25.72
+ },
+ {
+  "word": "for",
+  "start": 25.92,
+  "end": 26.02
+ },
+ {
+  "word": "the",
+  "start": 26.02,
+  "end": 26.16
+ },
+ {
+  "word": "first",
+  "start": 26.16,
+  "end": 26.36
+ },
+ {
+  "word": "time,",
+  "start": 26.36,
+  "end": 26.76
+ },
+ {
+  "word": "I",
+  "start": 26.96,
+  "end": 27.14
+ },
+ {
+  "word": "didn't",
+  "start": 27.14,
+  "end": 27.4
+ },
+ {
+  "word": "panic.",
+  "start": 27.4,
+  "end": 27.68
+ }
+]

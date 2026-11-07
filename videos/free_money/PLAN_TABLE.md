@@ -87,46 +87,47 @@
 | 085 | S5 | 181-183 | Probably a car wash, | story | LOT |  |  | push-in on the car |
 | 086 | S5 | 183-184 | for a car | story | LOT |  |  | wide on the lot |
 | 087 | S5 | 184-186 | I didn't even own. | story | LOT |  |  | close on the car |
-| 088 | S6 | 186-188 | Today, same car, eight years older. | story | LOT (grade pending approval) |  | tag: "8 years later" | desaturated grade, slow push (only if approved; otherwise plain plate) |
-| 089 | S6 | 188-191 | I earn around a hundred thousand a year, | graphic | none |  | card: "Today: about $100,000/yr" | card appears |
-| 090 | S6 | 191-194 | and I always take the full match, | ren | R2 | R2 |  | hand-on-chest still |
-| 091 | S6 | 194-195 | plus more on top. | graphic | none |  | "full match + more" | bar extends |
-| 092 | S6 | 195-196 | My cousin Priya, | story | OFFICE+PRIYA |  |  | Priya slides in |
-| 093 | S6 | 196-199 | the one who earns two hundred thousand | graphic | OFFICE(blurred)+PRIYA |  | card: "Priya: about $200,000/yr" | card appears beside her |
-| 094 | S6 | 199-201 | and dresses like she's off | story | OFFICE+PRIYA |  |  | slow push |
-| 095 | S6 | 201-203 | to hike a mountain, | story | PRIYA(crop) |  |  | push-in on the backpack |
-| 096 | S6 | 203-205 | maxes hers out every year. | graphic | OFFICE(blurred)+PRIYA |  | "Priya maxes out every year" | bar fills |
-| 097 | S6 | 205-206 | Uncle Gary told me | story | OFFICE+GARY |  |  | Gary slides in |
-| 098 | S6 | 206-209 | his retirement plan is "sell the boat." | graphic | OFFICE(blurred)+GARY |  | quote: "sell the boat" | quote card |
-| 099 | S6 | 209-212 | Everyone's different. But the match works the same | ren | CLIP:PPL | PPL |  | present_palm_left clip |
-| 100 | S6 | 212-214 | for everyone who's offered one. | ren | R1 | R1 |  | slow push-in |
-| 101 | S6 | 214-216 | It's the first money you're owed. | ren | R4 | R4 |  | pointing bust |
-| 102 | S6 | 216-219 | So here's what I check now, | ren | FP | FP |  | wide presenting still |
-| 103 | S6 | 219-222 | and what I wish I'd checked at 25. | ren | R3 | R3 |  | thinking bust |
-| 104 | S6 | 222-224 | One, your match formula. | graphic | none |  | checklist item 1: Match formula | item draws in |
-| 105 | S6 | 224-227 | It's in the plan documents, not the vibes. | ren | R1 | R1 | tick next to "Match formula" in the checklist corner | slow push-in |
-| 106 | S6 | 227-228 | Two, your vesting schedule, | graphic | none |  | checklist item 2: Vesting schedule | item draws in |
-| 107 | S6 | 228-231 | because some companies make you stay | graphic | none |  | years bar | bar starts |
-| 108 | S6 | 231-232 | a few years before | graphic | none |  | years bar | bar fills |
-| 109 | S6 | 232-234 | the match is fully yours. | graphic | none |  | "Fully yours" lock opens | lock opens |
-| 110 | S6 | 234-236 | Three, next year's limit. | graphic | none |  | checklist item 3: 2027 limit | item draws in |
-| 111 | S6 | 236-238 | For 2027, the actuarial firm Milliman projects | graphic | none |  | card: "2027 limit: Milliman projection" | card appears |
-| 112 | S6 | 238-240 | twenty-five thousand five hundred dollars, | graphic | none |  | "$25,500" | number appears |
-| 113 | S6 | 240-243 | up from twenty-four thousand five hundred. | graphic | none |  | "up from $24,500" | number appears |
-| 114 | S6 | 243-247 | The IRS hadn't confirmed it at the end of October, | ren | FT | FT | tag: "IRS: not yet confirmed (end of October)" | extra thinking full-body still, slow push |
-| 115 | S6 | 247-249 | so check the official number. | ren | R4 | R4 |  | pointing bust |
-| 116 | S6 | 249-251 | You don't have to max it out. | ren | CLIP:SNO | SNO |  | shake_no clip |
-| 117 | S6 | 251-255 | You just don't want to skip the free part. | ren | R2 | R2 |  | hand-on-chest still |
-| 118 | S7 | 255-257 | If I could go back, | ren | R3 | R3 |  | thinking bust |
-| 119 | S7 | 257-259 | I wouldn't lecture him about coffee. | ren | R1 | R1 |  | slow push-in |
-| 120 | S7 | 259-262 | I'd just hand him that folder, | story | OFFICE+FS+FOLDER | FS |  | folder slides toward Ren |
-| 121 | S7 | 262-263 | open to page six. | story | FOLDER(crop) |  |  | push-in on page 6 |
-| 122 | S7 | 263-266 | Before you cut a single thing, | ren | R4 | R4 |  | pointing bust |
-| 123 | S7 | 266-268 | collect what you're already owed. | ren | CLIP:PPL | PPL |  | present_palm_left clip |
-| 124 | S7 | 268-269 | The match. The HSA money. | graphic | none |  | list: "The match", "The HSA money" | items tick in |
-| 125 | S7 | 269-271 | The stuff in the folder. | graphic | FOLDER(crop, blurred) |  | list: "The stuff in the folder" | item ticks in |
-| 126 | S7 | 271-274 | Twenty-five-year-old me wanted to look rich. | story | OFFICE+FS | FS | lower-third: "Age 25" | wide office |
-| 127 | S7 | 274-277 | Twenty-eight-year-old me just wanted to stop missing free money. | ren | R2 | R2 |  | hand-on-chest still |
-| 128 | S7 | 277-280 | Honestly? The second guy was richer. | ren | CLIP:NOD | NOD |  | nod_yes clip |
-| 129 | S7 | 280-284 | Next week: the month three bills hit me at once, | ren | FP | FP |  | teaser card: "Next week: the month three bills hit me at once" |
-| 130 | S7 | 284-287 | and why, for the first time, I didn't panic. | ren | FW | FW | small disclaimer: "Educational content only, not financial advice" | full-body wave sign-off; hold |
+| 088 | S6 | 186-187 | Today, same car, | story | LOT |  | tag: "8 years later" | plain plate (grade not approved), slow push |
+| 089 | S6 | 187-188 | eight years older. | story | LOT |  |  | closer push on the car |
+| 090 | S6 | 188-191 | I earn around a hundred thousand a year, | graphic | none |  | card: "Today: about $100,000/yr" | card appears |
+| 091 | S6 | 191-194 | and I always take the full match, | ren | R2 | R2 |  | hand-on-chest still |
+| 092 | S6 | 194-195 | plus more on top. | graphic | none |  | "full match + more" | bar extends |
+| 093 | S6 | 195-196 | My cousin Priya, | story | OFFICE+PRIYA |  |  | Priya slides in |
+| 094 | S6 | 196-199 | the one who earns two hundred thousand | graphic | OFFICE(blurred)+PRIYA |  | card: "Priya: about $200,000/yr" | card appears beside her |
+| 095 | S6 | 199-201 | and dresses like she's off | story | OFFICE+PRIYA |  |  | slow push |
+| 096 | S6 | 201-203 | to hike a mountain, | story | PRIYA(crop) |  |  | push-in on the backpack |
+| 097 | S6 | 203-205 | maxes hers out every year. | graphic | OFFICE(blurred)+PRIYA |  | "Priya maxes out every year" | bar fills |
+| 098 | S6 | 205-206 | Uncle Gary told me | story | OFFICE+GARY |  |  | Gary slides in |
+| 099 | S6 | 206-209 | his retirement plan is "sell the boat." | graphic | OFFICE(blurred)+GARY |  | quote: "sell the boat" | quote card |
+| 100 | S6 | 209-212 | Everyone's different. But the match works the same | ren | CLIP:PPL | PPL |  | present_palm_left clip |
+| 101 | S6 | 212-214 | for everyone who's offered one. | ren | R1 | R1 |  | slow push-in |
+| 102 | S6 | 214-216 | It's the first money you're owed. | ren | R4 | R4 |  | pointing bust |
+| 103 | S6 | 216-219 | So here's what I check now, | ren | FP | FP |  | wide presenting still |
+| 104 | S6 | 219-222 | and what I wish I'd checked at 25. | ren | R3 | R3 |  | thinking bust |
+| 105 | S6 | 222-224 | One, your match formula. | graphic | none |  | checklist item 1: Match formula | item draws in |
+| 106 | S6 | 224-227 | It's in the plan documents, not the vibes. | ren | R1 | R1 | tick next to "Match formula" in the checklist corner | slow push-in |
+| 107 | S6 | 227-228 | Two, your vesting schedule, | graphic | none |  | checklist item 2: Vesting schedule | item draws in |
+| 108 | S6 | 228-231 | because some companies make you stay | graphic | none |  | years bar | bar starts |
+| 109 | S6 | 231-232 | a few years before | graphic | none |  | years bar | bar fills |
+| 110 | S6 | 232-234 | the match is fully yours. | graphic | none |  | "Fully yours" lock opens | lock opens |
+| 111 | S6 | 234-236 | Three, next year's limit. | graphic | none |  | checklist item 3: 2027 limit | item draws in |
+| 112 | S6 | 236-238 | For 2027, the actuarial firm Milliman projects | graphic | none |  | card: "2027 limit: Milliman projection" | card appears |
+| 113 | S6 | 238-240 | twenty-five thousand five hundred dollars, | graphic | none |  | "$25,500" | number appears |
+| 114 | S6 | 240-243 | up from twenty-four thousand five hundred. | graphic | none |  | "up from $24,500" | number appears |
+| 115 | S6 | 243-247 | The IRS hadn't confirmed it at the end of October, | ren | FT | FT | tag: "IRS: not yet confirmed (end of October)" | extra thinking full-body still, slow push |
+| 116 | S6 | 247-249 | so check the official number. | ren | R4 | R4 |  | pointing bust |
+| 117 | S6 | 249-251 | You don't have to max it out. | ren | CLIP:SNO | SNO |  | shake_no clip |
+| 118 | S6 | 251-255 | You just don't want to skip the free part. | ren | R2 | R2 |  | hand-on-chest still |
+| 119 | S7 | 255-257 | If I could go back, | ren | R3 | R3 |  | thinking bust |
+| 120 | S7 | 257-259 | I wouldn't lecture him about coffee. | ren | R1 | R1 |  | slow push-in |
+| 121 | S7 | 259-262 | I'd just hand him that folder, | story | OFFICE+FS+FOLDER | FS |  | folder slides toward Ren |
+| 122 | S7 | 262-263 | open to page six. | story | FOLDER(crop) |  |  | push-in on page 6 |
+| 123 | S7 | 263-266 | Before you cut a single thing, | ren | R4 | R4 |  | pointing bust |
+| 124 | S7 | 266-268 | collect what you're already owed. | ren | CLIP:PPL | PPL |  | present_palm_left clip |
+| 125 | S7 | 268-269 | The match. The HSA money. | graphic | none |  | list: "The match", "The HSA money" | items tick in |
+| 126 | S7 | 269-271 | The stuff in the folder. | graphic | FOLDER(crop, blurred) |  | list: "The stuff in the folder" | item ticks in |
+| 127 | S7 | 271-274 | Twenty-five-year-old me wanted to look rich. | story | OFFICE+FS | FS | lower-third: "Age 25" | wide office |
+| 128 | S7 | 274-277 | Twenty-eight-year-old me just wanted to stop missing free money. | ren | R2 | R2 |  | hand-on-chest still |
+| 129 | S7 | 277-280 | Honestly? The second guy was richer. | ren | CLIP:NOD | NOD |  | nod_yes clip |
+| 130 | S7 | 280-284 | Next week: the month three bills hit me at once, | ren | FP | FP |  | teaser card: "Next week: the month three bills hit me at once" |
+| 131 | S7 | 284-287 | and why, for the first time, I didn't panic. | ren | FW | FW | small disclaimer: "Educational content only, not financial advice" | full-body wave sign-off; hold |

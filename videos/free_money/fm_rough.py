@@ -53,17 +53,17 @@ SPEC = [
     ("S5", 14, 15, "ren", "s5_never_missed"), ("S5", 16, 16, "graphic", "s5_32"), ("S5", 17, 17, "story", "s5_carwash_a"), ("S5", 18, 18, "story", "s5_carwash_b"),
     ("S5", 19, 19, "story", "s5_carwash_c"),
     # ---- S6: what I check now
-    ("S6", 0, 0, "story", "s6_today"), ("S6", 1, 2, "ren", "s6_100k"), ("S6", 3, 3, "graphic", "s6_more"), ("S6", 4, 4, "story", "s6_priya_in"),
-    ("S6", 5, 5, "graphic", "s6_priya_200"), ("S6", 6, 6, "story", "s6_priya_hike"), ("S6", 7, 7, "story", "s6_priya_pack"), ("S6", 8, 8, "graphic", "s6_priya_max"),
-    ("S6", 9, 9, "story", "s6_gary_in"), ("S6", 10, 10, "graphic", "s6_gary_boat"), ("S6", 11, 12, "ren", "s6_everyone"), ("S6", 13, 13, "ren", "s6_first_money"),
-    ("S6", 14, 15, "ren", "s6_check_now"), ("S6", 16, 16, "graphic", "s6_c1"), ("S6", 17, 17, "ren", "s6_plan_docs"), ("S6", 18, 18, "graphic", "s6_c2"),
-    ("S6", 19, 20, "graphic", "s6_vest_bar"), ("S6", 21, 21, "graphic", "s6_vest_open"), ("S6", 22, 22, "graphic", "s6_c3"), ("S6", 23, 23, "graphic", "s6_lim_a"),
-    ("S6", 24, 24, "graphic", "s6_lim_b"), ("S6", 25, 25, "graphic", "s6_lim_c"), ("S6", 26, 26, "ren", "s6_irs"), ("S6", 27, 27, "ren", "s6_check_official"),
-    ("S6", 28, 29, "ren", "s6_dont_max"),
+    ("S6", 0, 0, "story", "s6_today"), ("S6", 1, 1, "story", "s6_older"), ("S6", 2, 3, "ren", "s6_100k"), ("S6", 4, 4, "graphic", "s6_more"), ("S6", 5, 5, "story", "s6_priya_in"),
+    ("S6", 6, 6, "graphic", "s6_priya_200"), ("S6", 7, 7, "story", "s6_priya_hike"), ("S6", 8, 8, "story", "s6_priya_pack"), ("S6", 9, 9, "graphic", "s6_priya_max"),
+    ("S6", 10, 10, "story", "s6_gary_in"), ("S6", 11, 11, "graphic", "s6_gary_boat"), ("S6", 12, 13, "ren", "s6_everyone"), ("S6", 14, 14, "ren", "s6_first_money"),
+    ("S6", 15, 16, "ren", "s6_check_now"), ("S6", 17, 17, "graphic", "s6_c1"), ("S6", 18, 18, "ren", "s6_plan_docs"), ("S6", 19, 19, "graphic", "s6_c2"),
+    ("S6", 20, 21, "graphic", "s6_vest_bar"), ("S6", 22, 22, "graphic", "s6_vest_open"), ("S6", 23, 23, "graphic", "s6_c3"), ("S6", 24, 24, "graphic", "s6_lim_a"),
+    ("S6", 25, 25, "graphic", "s6_lim_b"), ("S6", 26, 26, "graphic", "s6_lim_c"), ("S6", 27, 27, "ren", "s6_irs"), ("S6", 28, 28, "ren", "s6_check_official"),
+    ("S6", 29, 30, "ren", "s6_dont_max"),
     # ---- S7: handoff and close
     ("S7", 0, 1, "ren", "s7_goback"), ("S7", 2, 2, "story", "s7_hand"), ("S7", 3, 3, "story", "s7_page6"), ("S7", 4, 4, "ren", "s7_before_cut"),
-    ("S7", 5, 5, "ren", "s7_owed"), ("S7", 6, 6, "graphic", "s7_list_a"), ("S7", 7, 7, "graphic", "s7_list_b"), ("S7", 8, 8, "story", "s7_25"),
-    ("S7", 9, 10, "ren", "s7_richer"), ("S7", 11, 11, "ren", "s7_next_week"), ("S7", 12, 12, "ren", "s7_wave"),
+    ("S7", 5, 5, "ren", "s7_owed"), ("S7", 6, 6, "graphic", "s7_list_a"), ("S7", 7, 7, "graphic", "s7_list_b"), ("S7", 8, 8, "ren", "s7_25"),
+    ("S7", 9, 9, "ren", "s7_richer_a"), ("S7", 10, 10, "ren", "s7_richer_b"), ("S7", 11, 11, "ren", "s7_next_week"), ("S7", 12, 12, "ren", "s7_wave"),
 ]
 SPEC = [x for x in SPEC if x[0] in SCENES]
 PEEL_AT = [n for n in ("desk_salary", "s6_today") if n in [x[4] for x in SPEC]]            # time changes: the page peel (age 25; eight years later)
@@ -446,7 +446,7 @@ class Rough(Rev):
         for yr in (0, 10, 20, 30):
             x = x0 + (x1 - x0) * yr / 30
             dr.line((x, y - 14, x, y + 14), fill=(*NAVY, 255), width=5)
-            dr.text((x, y + 44), "Now" if yr == 0 else f"Year {yr}", font=font(30, 600), fill=(*MUTED, 255), anchor="mm")
+            dr.text((x, y + 44), "Now" if yr == 0 else f"Year {yr}", font=font(30, 700), fill=(*NAVY, 255), anchor="mm")
         if years is not None:
             yy = lerp(years[0], years[1], e)
             xm = x0 + (x1 - x0) * yy / 30
@@ -461,9 +461,9 @@ class Rough(Rev):
         if tag:
             pill(f, tag, 620, 110, px=36, fill=CREAM, colour=NAVY, alpha=bp.fade(t, 0.15, 0.3), boxes=b, pad=(26, 10))
         if sticker:
-            card_bg(f, (140, 150, 1140, 330), bp.fade(t, 0.2, 0.3))
-            ImageDraw.Draw(f).multiline_text((640, 240), sticker, font=font(38, 700), fill=(*NAVY, 255), anchor="mm", align="center", spacing=10)
-            b.text.append((140, 150, 1140, 330, "sticker"))
+            card_bg(f, (140, 195, 1140, 305), bp.fade(t, 0.2, 0.3))
+            ImageDraw.Draw(f).multiline_text((640, 250), sticker, font=font(34, 700), fill=(*NAVY, 255), anchor="mm", align="center", spacing=8)
+            b.text.append((140, 195, 1140, 305, "sticker"))
         b.text.append((130, 80, 1150, 520, "timeline"))
         return f
 
@@ -569,6 +569,9 @@ class Rough(Rev):
         f = self.lot_cam(t, d, 1150, 540, 1.0, 1.12).render()
         pill(f, "8 years later", 60, 70, px=44, fill=NAVY, colour=(255, 255, 255), alpha=bp.fade(t, 0.15, 0.3), boxes=b, pad=(30, 12))
         return f
+
+    def s_s6_older(self, t, d, b):
+        return self.lot_cam(t, d, 1250, 560, 1.25, 1.4).render()
 
     def s_s6_100k(self, t, d, b):
         return self.pres("R2", t, d, b, card=[([("Today: about ", NAVY), ("$100,000/yr", GREEN)], 0.1), ([("Full match, every year", NAVY)], 0.9)], swap=(0.55, "R3"), cy=345, px=38)
@@ -744,7 +747,7 @@ class Rough(Rev):
 
     def s_s6_irs(self, t, d, b):
         f = self.presenter("FT", t, d, b)
-        pill(f, "IRS: not yet confirmed (end of October)", 560, 330, px=34, fill=CREAM, colour=NAVY, alpha=bp.fade(t, 0.2, 0.3), boxes=b, pad=(26, 12), outline=True)
+        card_fit(f, [([("IRS: not yet confirmed", NAVY)], 0.2), ([("(as of end of October)", MUTED)], 0.2)], t, b, 620, 330, max_w=540, base_px=38)
         return f
 
     def s_s6_check_official(self, t, d, b):
@@ -805,8 +808,11 @@ class Rough(Rev):
         pill(f, "Age 25", 800, 150, px=44, fill=NAVY, colour=(255, 255, 255), alpha=bp.fade(t, 0.1, 0.3), boxes=b, pad=(30, 12))
         return f
 
-    def s_s7_richer(self, t, d, b):
-        return self.pres("R2", t, d, b, swap=(0.55, "R1"))
+    def s_s7_richer_a(self, t, d, b):
+        return self.pres("R2", t, d, b)
+
+    def s_s7_richer_b(self, t, d, b):
+        return self.pres("R1", t, d, b)
 
     def s_s7_next_week(self, t, d, b):
         return self.pres("FP", t, d, b, card=[([("Next week:", NAVY)], 0.15), ([("the month three bills", GREEN)], 0.4), ([("hit me at once", GREEN)], 0.4)], cy=345, px=40)
@@ -844,6 +850,9 @@ def main():
     ap.add_argument("--stills", action="store_true")
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--draft", action="store_true", help="CRF 23 faster encode")
+    ap.add_argument("--jobs", type=int, default=1)
+    ap.add_argument("--range", type=int, nargs=2)
+    ap.add_argument("--seg", type=int, default=0)
     ap.add_argument("--name", default="free_money_S1_S7_rough_cut")
     args = ap.parse_args()
     out = Path(args.out)
@@ -869,33 +878,61 @@ def main():
                     probs += layout_problems(boxes, sh)
         print("layout problems:", probs or "none")
         return
-    sr = 24000
-    parts = []
-    for sid in SCENES:
-        a, r = sf.read(VOICE / f"{sid}.wav", dtype="float32")
-        assert r == sr
-        parts.append(a)
-    track = np.concatenate(parts + [np.zeros(int(0.6 * sr), np.float32)])
-    raw = out / "rough_voice_raw.wav"
-    sf.write(raw, track, sr)
-    i0, _ = lufs(raw)
     wav = out / "rough_voice.wav"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af", f"volume={-16 - i0:.2f}dB,alimiter=limit=0.8:level=false,aresample=48000", str(wav)], check=True)
+    if args.range is None:
+        sr = 24000
+        parts = []
+        for sid in SCENES:
+            a, r = sf.read(VOICE / f"{sid}.wav", dtype="float32")
+            assert r == sr
+            parts.append(a)
+        track = np.concatenate(parts + [np.zeros(int(0.6 * sr), np.float32)])
+        raw = out / "rough_voice_raw.wav"
+        sf.write(raw, track, sr)
+        i0, _ = lufs(raw)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af", f"volume={-16 - i0:.2f}dB,alimiter=limit=0.8:level=false,aresample=48000", str(wav)], check=True)
     video = out / f"{args.name}_video.mp4"
     n = int(round(R.total * FPS))
     crf = "23" if args.draft else "18"
-    enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                            "-c:v", "libx264", "-preset", "medium", "-crf", crf, "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(video)], stdin=subprocess.PIPE)
-    probs = []
-    for k in range(n):
-        f, boxes, sh = R.frame_at(k / FPS)
-        if k % 6 == 0:
-            probs += layout_problems(boxes, sh)
-        enc.stdin.write(np.asarray(f, np.uint8).tobytes())
-        if k % 240 == 0:
-            print(f"frame {k}/{n}", flush=True)
-    enc.stdin.close()
-    enc.wait()
+    jobs = max(1, args.jobs)
+    if jobs > 1 and args.range is None:                      # render in parallel segments, then stitch (frames are independent)
+        bounds = [round(n * k / jobs) for k in range(jobs + 1)]
+        procs = []
+        for k in range(jobs):
+            cmd = [sys.executable, str(Path(__file__)), "--out", str(out), "--name", args.name, "--range", str(bounds[k]), str(bounds[k + 1]), "--seg", str(k)]
+            if args.draft:
+                cmd.append("--draft")
+            procs.append(subprocess.Popen(cmd, env={**os.environ}))
+        for pr in procs:
+            if pr.wait() != 0:
+                raise SystemExit("a render segment failed")
+        lst = out / "segments.txt"
+        lst.write_text("".join(f"file '{out / f'{args.name}_seg{k}.mp4'}'\n" for k in range(jobs)))
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(video)], check=True)
+        probs = []
+        for k in range(jobs):
+            probs += json.loads((out / f"{args.name}_seg{k}.json").read_text())
+            (out / f"{args.name}_seg{k}.mp4").unlink()
+            (out / f"{args.name}_seg{k}.json").unlink()
+        lst.unlink()
+    else:
+        a0, a1 = (0, n) if args.range is None else args.range
+        target = video if args.range is None else out / f"{args.name}_seg{args.seg}.mp4"
+        enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+                                "-c:v", "libx264", "-preset", "medium", "-crf", crf, "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(target)], stdin=subprocess.PIPE)
+        probs = []
+        for k in range(a0, a1):
+            f, boxes, sh = R.frame_at(k / FPS)
+            if k % 6 == 0:
+                probs += layout_problems(boxes, sh)
+            enc.stdin.write(np.asarray(f, np.uint8).tobytes())
+            if (k - a0) % 240 == 0:
+                print(f"frame {k}/{a1}", flush=True)
+        enc.stdin.close()
+        enc.wait()
+        if args.range is not None:
+            (out / f"{args.name}_seg{args.seg}.json").write_text(json.dumps(probs))
+            return
     final = out / f"{args.name}.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-i", str(wav), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-ar", "48000", "-t", f"{R.total:.3f}", "-movflags", "+faststart", str(final)], check=True)

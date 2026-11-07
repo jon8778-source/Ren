@@ -86,46 +86,47 @@ shot,scene,est_start,est_end,est_dur,narration,type,assets,ren_pose,onscreen_tex
 085,S5,181.2,182.7,1.6,"Probably a car wash,",story,LOT,,,push-in on the car
 086,S5,182.7,183.9,1.2,for a car,story,LOT,,,wide on the lot
 087,S5,183.9,185.5,1.6,I didn't even own.,story,LOT,,,close on the car
-088,S6,185.5,187.8,2.4,"Today, same car, eight years older.",story,LOT (grade pending approval),,"tag: ""8 years later""","desaturated grade, slow push (only if approved; otherwise plain plate)"
-089,S6,187.8,191.0,3.1,"I earn around a hundred thousand a year,",graphic,none,,"card: ""Today: about $100,000/yr""",card appears
-090,S6,191.0,193.7,2.7,"and I always take the full match,",ren,R2,R2,,hand-on-chest still
-091,S6,193.7,195.3,1.6,plus more on top.,graphic,none,,"""full match + more""",bar extends
-092,S6,195.3,196.5,1.2,"My cousin Priya,",story,OFFICE+PRIYA,,,Priya slides in
-093,S6,196.5,199.2,2.7,the one who earns two hundred thousand,graphic,OFFICE(blurred)+PRIYA,,"card: ""Priya: about $200,000/yr""",card appears beside her
-094,S6,199.2,201.2,2.0,and dresses like she's off,story,OFFICE+PRIYA,,,slow push
-095,S6,201.2,202.7,1.6,"to hike a mountain,",story,PRIYA(crop),,,push-in on the backpack
-096,S6,202.7,204.7,2.0,maxes hers out every year.,graphic,OFFICE(blurred)+PRIYA,,"""Priya maxes out every year""",bar fills
-097,S6,204.7,206.3,1.6,Uncle Gary told me,story,OFFICE+GARY,,,Gary slides in
-098,S6,206.3,209.0,2.7,"his retirement plan is ""sell the boat.""",graphic,OFFICE(blurred)+GARY,,"quote: ""sell the boat""",quote card
-099,S6,209.0,212.2,3.1,Everyone's different. But the match works the same,ren,CLIP:PPL,PPL,,present_palm_left clip
-100,S6,212.2,214.1,2.0,for everyone who's offered one.,ren,R1,R1,,slow push-in
-101,S6,214.1,216.5,2.4,It's the first money you're owed.,ren,R4,R4,,pointing bust
-102,S6,216.5,218.8,2.4,"So here's what I check now,",ren,FP,FP,,wide presenting still
-103,S6,218.8,222.0,3.1,and what I wish I'd checked at 25.,ren,R3,R3,,thinking bust
-104,S6,222.0,223.5,1.6,"One, your match formula.",graphic,none,,checklist item 1: Match formula,item draws in
-105,S6,223.5,226.7,3.1,"It's in the plan documents, not the vibes.",ren,R1,R1,"tick next to ""Match formula"" in the checklist corner",slow push-in
-106,S6,226.7,228.2,1.6,"Two, your vesting schedule,",graphic,none,,checklist item 2: Vesting schedule,item draws in
-107,S6,228.2,230.6,2.4,because some companies make you stay,graphic,none,,years bar,bar starts
-108,S6,230.6,232.2,1.6,a few years before,graphic,none,,years bar,bar fills
-109,S6,232.2,234.1,2.0,the match is fully yours.,graphic,none,,"""Fully yours"" lock opens",lock opens
-110,S6,234.1,235.7,1.6,"Three, next year's limit.",graphic,none,,checklist item 3: 2027 limit,item draws in
-111,S6,235.7,238.4,2.7,"For 2027, the actuarial firm Milliman projects",graphic,none,,"card: ""2027 limit: Milliman projection""",card appears
-112,S6,238.4,240.4,2.0,"twenty-five thousand five hundred dollars,",graphic,none,,"""$25,500""",number appears
-113,S6,240.4,242.7,2.4,up from twenty-four thousand five hundred.,graphic,none,,"""up from $24,500""",number appears
-114,S6,242.7,246.7,3.9,"The IRS hadn't confirmed it at the end of October,",ren,FT,FT,"tag: ""IRS: not yet confirmed (end of October)""","extra thinking full-body still, slow push"
-115,S6,246.7,248.6,2.0,so check the official number.,ren,R4,R4,,pointing bust
-116,S6,248.6,251.4,2.7,You don't have to max it out.,ren,CLIP:SNO,SNO,,shake_no clip
-117,S6,251.4,254.9,3.5,You just don't want to skip the free part.,ren,R2,R2,,hand-on-chest still
-118,S7,254.9,256.9,2.0,"If I could go back,",ren,R3,R3,,thinking bust
-119,S7,256.9,259.2,2.4,I wouldn't lecture him about coffee.,ren,R1,R1,,slow push-in
-120,S7,259.2,261.6,2.4,"I'd just hand him that folder,",story,OFFICE+FS+FOLDER,FS,,folder slides toward Ren
-121,S7,261.6,263.1,1.6,open to page six.,story,FOLDER(crop),,,push-in on page 6
-122,S7,263.1,265.5,2.4,"Before you cut a single thing,",ren,R4,R4,,pointing bust
-123,S7,265.5,267.5,2.0,collect what you're already owed.,ren,CLIP:PPL,PPL,,present_palm_left clip
-124,S7,267.5,269.4,2.0,The match. The HSA money.,graphic,none,,"list: ""The match"", ""The HSA money""",items tick in
-125,S7,269.4,271.4,2.0,The stuff in the folder.,graphic,"FOLDER(crop, blurred)",,"list: ""The stuff in the folder""",item ticks in
-126,S7,271.4,273.7,2.4,Twenty-five-year-old me wanted to look rich.,story,OFFICE+FS,FS,"lower-third: ""Age 25""",wide office
-127,S7,273.7,277.3,3.5,Twenty-eight-year-old me just wanted to stop missing free money.,ren,R2,R2,,hand-on-chest still
-128,S7,277.3,279.6,2.4,Honestly? The second guy was richer.,ren,CLIP:NOD,NOD,,nod_yes clip
-129,S7,279.6,283.5,3.9,"Next week: the month three bills hit me at once,",ren,FP,FP,,"teaser card: ""Next week: the month three bills hit me at once"""
-130,S7,283.5,287.1,3.5,"and why, for the first time, I didn't panic.",ren,FW,FW,"small disclaimer: ""Educational content only, not financial advice""",full-body wave sign-off; hold
+088,S6,185.5,186.7,1.2,"Today, same car,",story,LOT,,"tag: ""8 years later""","plain plate (grade not approved), slow push"
+089,S6,186.7,187.8,1.2,eight years older.,story,LOT,,,closer push on the car
+090,S6,187.8,191.0,3.1,"I earn around a hundred thousand a year,",graphic,none,,"card: ""Today: about $100,000/yr""",card appears
+091,S6,191.0,193.7,2.7,"and I always take the full match,",ren,R2,R2,,hand-on-chest still
+092,S6,193.7,195.3,1.6,plus more on top.,graphic,none,,"""full match + more""",bar extends
+093,S6,195.3,196.5,1.2,"My cousin Priya,",story,OFFICE+PRIYA,,,Priya slides in
+094,S6,196.5,199.2,2.7,the one who earns two hundred thousand,graphic,OFFICE(blurred)+PRIYA,,"card: ""Priya: about $200,000/yr""",card appears beside her
+095,S6,199.2,201.2,2.0,and dresses like she's off,story,OFFICE+PRIYA,,,slow push
+096,S6,201.2,202.7,1.6,"to hike a mountain,",story,PRIYA(crop),,,push-in on the backpack
+097,S6,202.7,204.7,2.0,maxes hers out every year.,graphic,OFFICE(blurred)+PRIYA,,"""Priya maxes out every year""",bar fills
+098,S6,204.7,206.3,1.6,Uncle Gary told me,story,OFFICE+GARY,,,Gary slides in
+099,S6,206.3,209.0,2.7,"his retirement plan is ""sell the boat.""",graphic,OFFICE(blurred)+GARY,,"quote: ""sell the boat""",quote card
+100,S6,209.0,212.2,3.1,Everyone's different. But the match works the same,ren,CLIP:PPL,PPL,,present_palm_left clip
+101,S6,212.2,214.1,2.0,for everyone who's offered one.,ren,R1,R1,,slow push-in
+102,S6,214.1,216.5,2.4,It's the first money you're owed.,ren,R4,R4,,pointing bust
+103,S6,216.5,218.8,2.4,"So here's what I check now,",ren,FP,FP,,wide presenting still
+104,S6,218.8,222.0,3.1,and what I wish I'd checked at 25.,ren,R3,R3,,thinking bust
+105,S6,222.0,223.5,1.6,"One, your match formula.",graphic,none,,checklist item 1: Match formula,item draws in
+106,S6,223.5,226.7,3.1,"It's in the plan documents, not the vibes.",ren,R1,R1,"tick next to ""Match formula"" in the checklist corner",slow push-in
+107,S6,226.7,228.2,1.6,"Two, your vesting schedule,",graphic,none,,checklist item 2: Vesting schedule,item draws in
+108,S6,228.2,230.6,2.4,because some companies make you stay,graphic,none,,years bar,bar starts
+109,S6,230.6,232.2,1.6,a few years before,graphic,none,,years bar,bar fills
+110,S6,232.2,234.1,2.0,the match is fully yours.,graphic,none,,"""Fully yours"" lock opens",lock opens
+111,S6,234.1,235.7,1.6,"Three, next year's limit.",graphic,none,,checklist item 3: 2027 limit,item draws in
+112,S6,235.7,238.4,2.7,"For 2027, the actuarial firm Milliman projects",graphic,none,,"card: ""2027 limit: Milliman projection""",card appears
+113,S6,238.4,240.4,2.0,"twenty-five thousand five hundred dollars,",graphic,none,,"""$25,500""",number appears
+114,S6,240.4,242.7,2.4,up from twenty-four thousand five hundred.,graphic,none,,"""up from $24,500""",number appears
+115,S6,242.7,246.7,3.9,"The IRS hadn't confirmed it at the end of October,",ren,FT,FT,"tag: ""IRS: not yet confirmed (end of October)""","extra thinking full-body still, slow push"
+116,S6,246.7,248.6,2.0,so check the official number.,ren,R4,R4,,pointing bust
+117,S6,248.6,251.4,2.7,You don't have to max it out.,ren,CLIP:SNO,SNO,,shake_no clip
+118,S6,251.4,254.9,3.5,You just don't want to skip the free part.,ren,R2,R2,,hand-on-chest still
+119,S7,254.9,256.9,2.0,"If I could go back,",ren,R3,R3,,thinking bust
+120,S7,256.9,259.2,2.4,I wouldn't lecture him about coffee.,ren,R1,R1,,slow push-in
+121,S7,259.2,261.6,2.4,"I'd just hand him that folder,",story,OFFICE+FS+FOLDER,FS,,folder slides toward Ren
+122,S7,261.6,263.1,1.6,open to page six.,story,FOLDER(crop),,,push-in on page 6
+123,S7,263.1,265.5,2.4,"Before you cut a single thing,",ren,R4,R4,,pointing bust
+124,S7,265.5,267.5,2.0,collect what you're already owed.,ren,CLIP:PPL,PPL,,present_palm_left clip
+125,S7,267.5,269.4,2.0,The match. The HSA money.,graphic,none,,"list: ""The match"", ""The HSA money""",items tick in
+126,S7,269.4,271.4,2.0,The stuff in the folder.,graphic,"FOLDER(crop, blurred)",,"list: ""The stuff in the folder""",item ticks in
+127,S7,271.4,273.7,2.4,Twenty-five-year-old me wanted to look rich.,story,OFFICE+FS,FS,"lower-third: ""Age 25""",wide office
+128,S7,273.7,277.3,3.5,Twenty-eight-year-old me just wanted to stop missing free money.,ren,R2,R2,,hand-on-chest still
+129,S7,277.3,279.6,2.4,Honestly? The second guy was richer.,ren,CLIP:NOD,NOD,,nod_yes clip
+130,S7,279.6,283.5,3.9,"Next week: the month three bills hit me at once,",ren,FP,FP,,"teaser card: ""Next week: the month three bills hit me at once"""
+131,S7,283.5,287.1,3.5,"and why, for the first time, I didn't panic.",ren,FW,FW,"small disclaimer: ""Educational content only, not financial advice""",full-body wave sign-off; hold
