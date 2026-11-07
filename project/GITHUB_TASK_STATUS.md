@@ -7,7 +7,9 @@ Both removed. Only2 clips/156frames rendered; calendar and premium comparison
 15s/1080×1920/24fps/H.264/AAC,360frames. Technical QA passes; originals/main/
 long-form retained. Revision4 voice proof remains applicable; no new ear/device
 assessment claimed. Revised prototype approval still pending; no full Short.
-Source checkpoint publication pending; media/caches stay outside Git.
+Source checkpoint `8c61047` pushed/fetched; adapter, preparation, manifest,
+technical QA and identity checks verified byte-identical remotely. Status-only
+follow-up records verification. Media/caches stay outside Git; no merge/publication.
 
 ---
 
