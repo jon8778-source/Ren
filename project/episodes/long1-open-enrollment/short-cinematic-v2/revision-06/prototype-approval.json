@@ -1,0 +1,9 @@
+{
+  "by": "Jon",
+  "evidence": "Current user message: Revision 6 is APPROVED as the visual baseline. You are authorised to proceed with the complete approximately 60-second health insurance Short.",
+  "approved_at": "2026-11-07T11:29:12.956140+00:00",
+  "review_notes": "# Actual owner approval of Revision 6\n\nJon\u2019s current message: \u201cRevision 6 is APPROVED as the visual baseline.\u201d\n\u201cDo not redesign the approved opening or restart production from scratch.\u201d\n\u201cYou are authorised to proceed with the complete approximately 60-second health\ninsurance Short, subject to the production requirements below.\u201d\n\nThis binds the exact reviewed 15s MP4 SHA d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb.\nIts technical QA has no errors or warnings. Previous report\u2019s listening/Android\nlimitations remain disclosed; no agent listening claim is inferred from approval.\nThe remaining45s requirements are retained separately in full-production/.",
+  "fingerprint": "e02be1e24a4af6b6ac86140eaadead980f6f62c7d5f15b14f7a6de98745ae1b1",
+  "prototype_sha256": "d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb",
+  "report_sha256": "23201fb7f963b32be1b7e91a9459f95f531501cb525692c2e0476edd48af7447"
+}

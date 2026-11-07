@@ -1,3 +1,19 @@
+# Current task — full health Short authorized, 7 November 2026
+
+Existing branch `codex/health-short-revision6`. Jon explicitly approved the exact
+Revision 6 MP4 and authorized full production with the opening preserved. Approval
+is recorded against its media hash and production fingerprint. Full-production
+authorization, asset report and two matching empty medical environments prepared
+under `episodes/long1-open-enrollment/short-cinematic-v2/full-production/`.
+
+Existing complete Qwen narration available; no new TTS needed. No new major
+character artwork proposed. Remaining work: extend scenes, render remaining45s,
+join unchanged opening, complete full QA/playback and deliver downloadable MP4.
+Long-form, originals and main unchanged. Videos/caches stay outside Git.
+Source/asset checkpoint prepared; remote verification pending.
+
+---
+
 # Current task — Revision 6 prototype rendered, awaiting approval, 7 November 2026
 
 Branch `codex/health-short-revision6`. Jon approved the two artwork assets; approval
