@@ -40,3 +40,15 @@
 
 ## Next, only after `rough cut approved` (Gate 4)
 Re-check the IRS 2027 limit and flag it; render final quality at 1280×720 (or 1080p if you choose it); run validator, timeline checks and visual check; build `free_money_final_package.zip` locally (final video, narration, script, outline, shot plan, assets used, contact sheet, REPORT); stop for `approved to publish`. No upload, no merge.
+
+
+## Update: Ren scale and grounding fix (7 November 2026)
+**Owner feedback:** Ren was too small near the desk, and looked as if he was floating in other shots.
+**Root cause:** every full-body Ren was placed by eye at a fixed pixel height, with his feet at the frame edge and a faint, wide shadow. Nothing tied his size to the plate's perspective, so the desk shots had him about 20% too small (500 px where the chair's depth gives about 610 px) and the lot shot about 5% too large. With his feet on the bottom edge and no real contact shadow he read as floating.
+**Fix (`fm_rough.py`, `stand()` and `height_px()`):**
+- Measured each plate from objects of known size (office: chair 105 cm, desk 75 cm, pedestal, bookshelf, file cabinet; porch: door 2.0 m, bench seat 45 cm; lot: tyre 63 cm, car roof 1.45 m). Each is a view from about 1.0-1.1 m, so height = 175 cm x (floor row - horizon) / camera height.
+- Ren (175 cm), Dev, Priya (170 cm) and Gary (178 cm) now stand on the floor at that scale, with their feet well inside the frame and a tight contact shadow.
+- Fixed in 15 shots: the two desk shots, folder-on-desk, hand-over, "Age 25" at the desk, the wide presenter shots, the IRS and "Next week" shots, the wave sign-off, the porch two-shot, the parking lot, and Priya and Gary.
+- Cards and pills moved right so they don't touch the larger standing figure, and the card width narrows when a standing figure is on screen. The porch camera push is now smaller so the taller figures keep their heads in frame.
+**Checked on the re-rendered file:** the timeline checks pass 17 of 17, the validator passes, nothing over the shot caps, no layout overlaps. Visual: before/after of the shots you flagged (`sheets/rough/ren_scale_before_after.png`), a 100% crop of the feet and shadow (`ren_feet_crop.png`), and all 14 standing shots on the final file (`ren_standing_shots_final.png`).
+**Limits:** the scale is calibrated from the plates, not from the characters. Dev, Priya and Gary were drawn by a different process than Ren, so their heights relative to him are an assumption (170-178 cm). Ren is still not seated, because no seated pose exists.
