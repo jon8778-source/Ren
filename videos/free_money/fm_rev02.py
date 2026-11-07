@@ -57,6 +57,15 @@ class Cam:
         frame.paste(plate_crop, (0, 0), m)
 
 
+def zoom_frame(f, z):
+    """Slow push-in on a finished frame (camera move toward the screen)."""
+    if z <= 1.0005:
+        return f
+    cw, ch = W / z, H / z
+    x0, y0 = (W - cw) / 2, (H - ch) / 2
+    return f.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + cw, y0 + ch))
+
+
 def push(t, d, a, b):
     return lerp(a, b, min(max(t / d, 0), 1))
 
@@ -407,7 +416,7 @@ class Rev:
         return f
 
     def s_phone_489(self, t, d, b):
-        return self._phone_big(t, d, b, False)
+        return zoom_frame(self._phone_big(t, d, b, False), push(t, d, 1.0, 1.08))
 
     def s_not_needed(self, t, d, b):
         return self.presenter("R3", t, d, b)
@@ -489,7 +498,7 @@ class Rev:
         dr.text((880, 600), "Company", font=font(34, 700), fill=NAVY, anchor="mm")
         f.alpha_composite(lay)
         b.text.append((70, 40, 1210, 650, "laptop"))
-        return f
+        return zoom_frame(f, push(t, d, 1.0, 1.05))
 
     def s_reaction_card(self, t, d, b):
         f = self.presenter("R3" if t < d * 0.4 else "R2", t, d, b)
@@ -533,7 +542,7 @@ class Rev:
         return f
 
     def s_lease_urgent(self, t, d, b):
-        return self._phone_big(t, d, b, True)
+        return zoom_frame(self._phone_big(t, d, b, True), push(t, d, 1.0, 1.07))
 
     def edu(self, f, T, boxes):
         """Small disclaimer tag at the start and end, bottom-right so it never sits on Ren."""
