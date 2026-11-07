@@ -1,32 +1,67 @@
-# Free Money v2: Gate 2 pilot report
+# I Said No to Free Money for 3 Years: Gate 0 report (style lock and asset check)
 
-Status: PROVISIONAL. Await exact phrase "pilot approved". Do not advance, merge, upload or publish.
+**Status: waiting for your approval phrase: `style lock approved`.** Nothing has been built or rendered.
+This replaces the earlier report on this branch, which described a provisional Gate 2 pilot that was never approved. Nothing from that attempt is reused.
 
-## Output
-Local file: /mnt/data/free_money_gate2/free_money_S1_S2_PLACEHOLDER.mp4
-S1-S2, 73.1 seconds, 1920x1080, 24 fps, 1754 frames.
-Temporary offline British-accent TTS, clearly marked PLACEHOLDER VOICE. Not the approved Qwen3-TTS clone.
-Measured -16.88 LUFS; true peak -1.26 dBTP, LRA 2.8 LU.
+Branch: `video/free-money-v2`. Script saved unchanged at `scripts/Ren_Free_Money_Script.md` (the section markers are never spoken). Pack unzipped to `library/` with its folder names kept.
 
-## QC actually performed
-Viewed actual video frames at 12 cuts and 12 shot midpoints. Contact sheet created locally.
-Corrected two Ren/text layout overlaps and lease-label clipping; substituted approved neutral Ren in an emotional shot rather than an unrelated pointing pose. No regenerated Ren artwork. No clip source audio.
+## 1. Pack against your asset map: all 15 files present, none missing
+| Asset | Size | Notes |
+|---|---|---|
+| ren_approved/ ×8 (neutral, hand on chest, thinking bust, pointing, extra thinking FB, presenting FB, standing FB, waving FB) | 1147-1464 × 1536 JPG | white background, matted below |
+| characters/Dev_pay_stub, Priya_hiking_style, Uncle_Gary | 1086 × 1448 RGBA | one pose each |
+| props/HR_folder_page6_prop | 1448 × 1086 RGBA | has baked-in text (section 4) |
+| backgrounds/Porch, Office, Office_parking_lot_car | 1672 × 941 | **below 1920×1080, upscaled by 1.15×**. These are soft cartoon plates, so it should be fine, but it is a real softness cost |
 
-## Open issues: not passed
-- Qwen custom cloned voice unavailable; replacement and retiming needed.
-- Dev and approved porch/office art unavailable; code-built stub/graphic placeholders.
-- Worried Ren pose unavailable in local uploaded files, neutral still substituted.
-- S2 infographic is code-built but appears all at once, not sequentially synchronised.
-- Page-flip is a static code-built visual rather than animated flip.
-- Existing repo validator could not be executed; independent ffprobe/visual QC only.
-- Supplied S1-S2 text runs 73.1s in this temporary take, rather than the approximate 85s target.
-- Production font and palette match not independently verified.
-- MP4 and local contact sheet are NOT in the GitHub commit; only this report is committed.
+## 2. Ren matting (`videos/free_money/matting.py`, output in `matted/`)
+Method: background is near-white connected to the image edge only (flood fill from the border), plus enclosed pure-white pockets over 400 px. The white tee (about 230-245) is never keyed. Edges are softened by about 1 px, the white halo is removed (decontaminated), and a halo-shave pass removes the pale JPG ring around the outline.
+**What I looked at:** all 8 matted stills over dark `#12161e`, white and orange `#e0933a` (`sheets/matte_all_backgrounds.png`), plus 1:1 zooms of the hair and glasses, the pointing hand and sleeve, and the waving hand (`sheets/matte_zoom_head_dark.png`).
+**What I fixed:** the first pass produced an empty matte (my bug), and the second pass left a faint light fringe on the hair strands on dark. Both are fixed. **Remaining:** a thin dark dotted outline on the outermost hair (invisible on any mid or dark background) and a slightly shaved outer sleeve edge on the pointing bust. Nothing visible at video size.
+Hair, cowlick, glasses, navy shirt over a solid white tee, trousers and sneakers all match your design lock in every still.
+**Note:** the four bust stills end in a hard flat crop at the bottom edge. They must sit flush with the bottom of the frame or on a lower-third, never float.
 
-## Source stills used
-/mnt/data/Ren 1: 0:00-0:06, 0:15.6-0:19.7, 0:54.3-1:03.8
-/mnt/data/Ren 2: 0:19.7-0:25
-/mnt/data/1792490475338.jpg: 0:27.5-0:35.6, 0:43.2-0:50.7
-Other visuals are code-built graphic overlays and placeholders.
+## 3. Style match: Ren against Dev, Priya and Gary
+**What I looked at:** (A) all four at on-screen size (800 px tall) on the office plate (`style_A_office_onscreen.png`); (B) at thumbnail size, 180 px, on white and dark (`style_B_thumbnail.png`); (C) face close-ups at equal scale (`style_C_face_detail.png`); the supporting cutout edges on dark (no halos, no white boxes); and a measured texture check.
+- **Same family:** thin dark outlines, flat colour fills, similar skin and eye treatment. They read as the same show.
+- **Measurable difference:** the supporting characters carry more local texture and shading. Texture score (local std in flat areas) is Ren 3.7, Dev 5.0, Gary 5.8 and Priya 6.3. Flat-colour share is 78% for Ren against 64-70% for the others. The visible cause is fabric texture on Dev's overshirt and Priya's jacket, hair highlights, and Gary's stubble and wrinkles. Their eyes are a little larger and their heads a little bigger than Ren's.
+- **Thumbnail test: pass.** They are distinct by hair, colour and silhouette. One watch-point: Dev wears an open overshirt over a tee with dark trousers, the same construction as Ren, so keep them apart by colour (green against navy) in two-shots.
+- **Verdict: PASS, minor mismatch.**
+- **Recommended: (b) accept as is.**
+- **Option (a) tested on a Priya test frame** (`filter_test_priya_before_after.png`, a median filter that keeps the dark outlines): it flattens the fabric but also smears the eye shading and adds stray lines. It looks worse. Not recommended, and not applied anywhere.
+- **Option (c) is available** if you want to push further. Prompt for GPT: *"Match the attached Ren reference exactly: thin dark outlines, flat cel shading, no texture or gradients, no fabric detail, simple flat colour fills, natural adult proportions, same eye size and head size as Ren. Character: [Dev / Priya / Gary as in the current file], same pose and outfit. Plain white background."* Attach the standing Ren still.
 
-Gate 3 is forbidden without exact approval phrase "pilot approved".
+## 4. HR folder baked-in text
+**What I looked at:** the folder at 1500 px wide on the office plate at 1:1 (`folder_on_screen_1080p.png`, `folder_text_1to1_*.png`).
+- "HR ENROLLMENT", "PAGE 6", "EMPLOYEE BENEFITS & RETIREMENT PLAN" and "EMPLOYEE BENEFITS" are **sharp, correctly spelled and legible** at that size. The rest of the page is non-text bars and icons.
+- It will be small at normal two-shot size. Use it only as a detail crop (about 1300-1600 px wide), as the pilot plan does.
+- It breaks your no AI-generated text rule, and the text says "Employee Benefits & Retirement Plan" but nothing about a 4% match.
+- **Your decision:** (i) accept it for this video only, with "Page 6: We match 100% up to 4%" as a code overlay on the highlighted yellow row, or (ii) regenerate a blank folder and use code overlays for all the text. I recommend (i).
+
+## 5. Known gaps: proposed cover
+| Gap | Cover |
+|---|---|
+| Ren worried | Ren_1_neutral with a slow push-in and a code-built darkening. Alternative: Ren_3_thinking_bust. |
+| Ren thumbs up | Ren_4_pointing (the thumb-up hand reads as a thumbs-up at bust size). |
+| Ren wave (bust) | Ren_full_body_waving, only for the sign-off, as you said. |
+| Leased car cutout | The parking-lot plate, with a slow push-in on the car for S2. |
+| 8-year-old car (S6) | **Proposal only, not built:** the same parking-lot plate with a code-built grade (about 55% desaturation, a warm dull tint, a faint dusty overlay) and a code-built "8 years later" tag. I would show you one test frame before using it. |
+| Closed folder | Skip it. The open page-6 folder slides in on "HR gave me a folder", so no closed folder is needed. |
+| Hand with phone | A code-built phone overlay with a settings screen and a 2% to 4% toggle, shown beside Ren. No hand. |
+
+## 6. Voice generation: what works from here
+- **The hosted Space cannot be used from here.** It ran out of free quota, and the Hugging Face token you shared earlier is now invalid (401). I won't ask for a new token unless you want the Space.
+- **Local Qwen3-TTS works in this container** (`project/cliplib/qwen_local_voice.py`, `gen_voice.py`). It is the same Qwen3-TTS 1.7B Base model as the Space's Voice Clone tab, built from `Audio/ren_reference.wav` and its corrected transcript, with fixed seeds. The 4.3 GB model is cached here. The first load can take several minutes. I generated the six short-video lines this way yesterday.
+- **No placeholder voice needed.** I'd generate the real clone locally, one WAV per scene (S1.wav, S2.wav...), and check each line with Whisper.
+- **Limits:** I can't hear audio, so please check accent, pronunciation and tone. The clone copies the reference recording, not the written accent description. Your supplied S1.wav, S2.wav... would also work and would replace mine.
+- **Time:** about 732 spoken words is roughly 5 minutes of audio. On this CPU I'd allow 40-60 minutes in total, in the background.
+
+## 7. Things I noticed in the brief and script (for you to decide)
+1. **Pilot length:** S1 + S2 is 166 words (about 65 s), not the roughly 225 words / 85 s in the brief. The whole script is 732 words, about 4.8 minutes at this voice's pace. A pilot of about 65-70 s is what you will get unless you tell me otherwise.
+2. **Maths I checked in the script:** 2% of $44,000 is $880. The raises give $920 and $960, so the total is $2,760. $2,760 at 7% for 30 years is about $21,000, and about $77 a month is the average missed. These all hold. The about $32 per paycheck take-home drop is plausible, but it depends on pay frequency and tax bracket.
+3. **2027 limit:** the script says Milliman projects $25,500 and the IRS hadn't confirmed it by the end of October. I will re-check at Gate 4 and flag it, not edit it.
+4. **Single poses:** Dev, Priya and Gary each exist in one pose only, and Ren has 4 busts and 4 full-body poses for about 5 minutes. The Gate 1 plan will add cutaways (props, infographics, code-built cards) to cover that.
+
+## Files in this commit
+`library/` (the unzipped pack), `scripts/Ren_Free_Money_Script.md`, `videos/free_money/matting.py`, `matted/` (8 transparent Ren PNGs), `sheets/` (the contact sheets named above), this report.
+
+**STOP. Waiting for: `style lock approved`.**
