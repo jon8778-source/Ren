@@ -37,7 +37,17 @@ res["lufs"] = float(p[p.rindex("I:") + 2:].split()[0]); res["true_peak_dbtp"] = 
 # 4. audio continuity: no silence gap longer than 0.6 s inside the narration (the final hold is excluded)
 sd = run(["ffmpeg", "-nostats", "-i", str(mp4), "-af", "silencedetect=n=-45dB:d=0.6", "-f", "null", "-"]).stderr
 sil = [(float(s), float(e)) for s, e in zip(re.findall(r"silence_start: ([\d.]+)", sd), re.findall(r"silence_end: ([\d.]+)", sd))]
-res["silences_over_0.6s_inside_narration"] = [x for x in sil if x[1] < rep["narration_s"] - 0.1]
+# a pause is natural when it starts right after a word that ends a sentence (.?!) and is under 1 s; anything else is a defect
+V = Path(__file__).parent / "voice"
+ends, offv = [], 0.0
+for sid in ("S1", "S2"):
+    for w in json.loads((V / f"words_{sid}.json").read_text()):
+        if w["word"].rstrip()[-1:] in ".?!" and w["end"] > w["start"]:
+            ends.append(offv + w["end"])
+    offv = rep["shots"][[x["scene"] for x in rep["shots"]].index("S2")]["start"]
+inside = [x for x in sil if x[1] < rep["narration_s"] - 0.1]
+res["pauses_inside_narration"] = [{"from": a_, "to": b_, "len": round(b_ - a_, 2), "at_sentence_end": any(abs(a_ - e) < 0.2 for e in ends)} for a_, b_ in inside]
+res["silences_over_0.6s_inside_narration"] = [x for x, d in zip(inside, res["pauses_inside_narration"]) if not d["at_sentence_end"] or d["len"] > 1.0]
 # 5. shots: caps and frame counts
 caps = {"ren": 5.5, "story": 2.5, "graphic": 3.5}
 bad = []

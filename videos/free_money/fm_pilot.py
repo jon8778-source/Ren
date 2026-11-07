@@ -196,6 +196,9 @@ def info_card(frame, rows, t, boxes, cx=640, cy=330, appear=0.1):
     d = ImageDraw.Draw(lay)
     d.rounded_rectangle((x0 + 5, y0 + 10, x0 + cw + 5, y0 + ch + 10), 34, fill=(19, 35, 63, 55))
     d.rounded_rectangle((x0, y0, x0 + cw, y0 + ch), 34, fill=(*CREAM, 255), outline=(*SAGE, 255), width=5)
+    if len(rows) == 1:                              # a new card fades in together with its first row
+        ca = bp.fade(t, 0.0, 0.2)
+        lay.putalpha(lay.getchannel("A").point(lambda v: int(v * ca)))
     frame.alpha_composite(lay)
     boxes.text.append((x0, y0, x0 + cw, y0 + ch, "card"))
     for i, (seg, ts) in enumerate(rows):
@@ -263,19 +266,24 @@ def glow_line(frame, A, anchor, dst, scale, text, pulse, glow, boxes):
 
 
 def flip(out_img, in_img, p):
-    """Page-flip: the outgoing page folds away from the right edge, revealing the incoming scene underneath."""
+    """Page peel: the outgoing page is revealed less and less from the right (never squeezed, so Ren keeps his proportions);
+    a cream flap with a soft shadow curls over the fold and the incoming scene shows beneath."""
     p = min(max(p, 0), 1)
     base = in_img.copy()
-    wpage = max(2, int(W * (1 - ease(p))))
-    page = out_img.resize((wpage, H), Image.LANCZOS)
+    wpage = int(W * (1 - ease(p)))
+    flap = int(min(W - wpage, 0.2 * W * math.sin(math.pi * p) ** 0.7))
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(sh).rectangle((wpage, 0, min(W, wpage + 60), H), fill=(19, 35, 63, int(90 * math.sin(math.pi * p))))
-    base.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
-    base.alpha_composite(page, (0, 0))
-    edge = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(edge).rectangle((max(0, wpage - 26), 0, wpage, H), fill=(*CREAM, int(235 * math.sin(math.pi * p) ** 0.5)))
-    edge = edge.filter(ImageFilter.GaussianBlur(2))
-    base.alpha_composite(edge)
+    ImageDraw.Draw(sh).rectangle((wpage, 0, min(W, wpage + flap + 70), H), fill=(19, 35, 63, int(110 * math.sin(math.pi * p))))
+    base.alpha_composite(sh.filter(ImageFilter.GaussianBlur(18)))
+    if wpage > 0:
+        base.alpha_composite(out_img.crop((0, 0, wpage, H)), (0, 0))
+    if flap > 2:
+        fl = Image.new("RGBA", (flap, H), (0, 0, 0, 0))
+        fd = ImageDraw.Draw(fl)
+        for x in range(flap):                       # the back of the page, lighter toward the free edge
+            k = x / flap
+            fd.line((x, 0, x, H), fill=(int(lerp(236, 251, k)), int(lerp(228, 246, k)), int(lerp(208, 234, k)), 255))
+        base.alpha_composite(fl, (wpage, 0))
     return base
 
 
@@ -430,8 +438,8 @@ class Pilot:
                     glow_line(f, A, anchor, dst, sc, glow_text, pulse, glow * (0.6 + 0.4 * math.sin(t * 6)), b)
                 return f
             return fn
-        B[6] = stub_view(1.9, 2.05, (600, 205))
-        B[7] = stub_view(2.45, 2.6, (600, 245), "Employer match: 2%", 1.0, 0.25)
+        B[6] = stub_view(1.9, 2.05, (600, 170))
+        B[7] = stub_view(2.45, 2.6, (600, 205), "Employer match: 2%", 1.0, 0.25)
         B[8] = lambda t, d, b: self._clip(8, t, d, b)
         B[9] = lambda t, d, b: self.bust("R3", t, d, b)
         B[10] = lambda t, d, b: self.bust("R2", t, d, b)
@@ -497,7 +505,7 @@ class Pilot:
                 f.alpha_composite(view(A.folder, (ax, ay), (640, 360), W / w))
                 return f
             return fn
-        B[23] = folder_crop(1180, 210, 900, 640)           # PAGE 6 tab
+        B[23] = folder_crop(1180, 210, 760, 620)           # PAGE 6 tab
         B[24] = self._match_diagram
         B[25] = folder_crop(1000, 455, 580, 500)            # piggy-bank panel
         B[26] = card_shot(3, "OFFICE")
@@ -527,6 +535,8 @@ class Pilot:
         x0, y0 = 170, 210
         dr.rounded_rectangle((x0 + 5, y0 + 10, x0 + cw + 5, y0 + chh + 10), 34, fill=(19, 35, 63, 55))
         dr.rounded_rectangle((x0, y0, x0 + cw, y0 + chh), 34, fill=(*CREAM, 255), outline=(*SAGE, 255), width=5)
+        ca = bp.fade(t, 0.0, 0.2)
+        lay.putalpha(lay.getchannel("A").point(lambda v: int(v * ca)))
         f.alpha_composite(lay)
         b.text.append((x0, y0, x0 + cw, y0 + chh, "diagram"))
         for k, (label, cx, ts) in enumerate((("You  $1", 400, 0.05), ("Company  $1", 880, 0.7))):
@@ -569,7 +579,8 @@ class Pilot:
         cd.text((475, 355), "2%", font=font(140, 700), fill=(255, 255, 255), anchor="mm")
         cd.text((475, 230), "what I picked", font=font(34, 600), fill=(*NAVY, 255), anchor="mm")
         chip = chip.transform((W, H), Image.AFFINE, (1 / max(s, 0.01), 0, 475 - 475 / max(s, 0.01), 0, 1 / max(s, 0.01), 355 - 355 / max(s, 0.01)), Image.BICUBIC)
-        f.alpha_composite(chip)
+        if s > 0.06:
+            f.alpha_composite(chip)
         b.text.append((330, 230, 940, 455, "chip"))
         return f
 
