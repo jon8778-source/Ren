@@ -424,7 +424,7 @@ def main():
     stage = os.environ.get("REN_SHORTS_STAGE", "prototype")
     frames = int(os.environ.get("REN_SHORTS_MAX_FRAMES", 360 if stage == "prototype" else spec["frames"]))
     frames = min(frames, spec["frames"])
-    out = args.output
+    out = args.output.resolve()
     layout_path = out.parent / "layout.json"
     if args.stills is not None:
         rec = Recorder()

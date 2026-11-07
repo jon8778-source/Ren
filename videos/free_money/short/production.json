@@ -32,7 +32,7 @@
    "id": "renderer",
    "kind": "renderer",
    "path": "../../../videos/free_money/short/fm_short.py",
-   "sha256": "4810d1debaf973b347dd33b6202a82b2fc0baf06ea4ad86c9776095c6d69abed",
+   "sha256": "77016ef51646dfe4a5b3da6b6985d0a7a21ac930140ff7a3972562844138f889",
    "status": "approved",
    "approval_evidence": "Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026)"
   },
