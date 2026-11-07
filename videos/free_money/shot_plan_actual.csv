@@ -1,0 +1,113 @@
+shot,scene,name,type,start_s,end_s,dur_s,narration
+1,S1,stub_hook,graphic,0.0,2.33,2.33,I was 28 when Dev held up my pay stub
+2,S1,porch_two_shot,ren,2.33,4.12,1.79,and asked me one question.
+3,S1,quote,ren,4.12,5.79,1.67,"""Who's keeping the difference?"""
+4,S1,didnt_know,ren,5.79,7.46,1.67,I didn't know what he meant.
+5,S1,stub_line,graphic,7.46,10.54,3.08,"Then he pointed at one line, and my stomach dropped."
+6,S1,three_years,ren,10.54,13.5,2.96,"For three years, I'd been turning down free money."
+7,S1,impress,ren,13.5,17.83,4.33,And the worst part? I did it to impress people I barely knew.
+8,S1,take_you_back,ren,17.83,19.04,1.21,Let me take you back.
+9,S2,desk_salary,ren,19.04,23.0,3.96,"Twenty-five. First real job. Forty-four thousand a year,"
+10,S2,made_it,ren,23.0,24.42,1.42,and I felt like I'd made it.
+11,S2,phone_lease,ren,24.42,27.21,2.79,"So I did what felt right and leased a brand-new car,"
+12,S2,phone_489,graphic,27.21,29.54,2.33,four hundred and eighty-nine dollars a month.
+13,S2,not_needed,ren,29.54,30.62,1.08,Not because I needed it.
+14,S2,parking_lot,ren,30.62,34.5,3.88,Because I wanted everyone in that parking lot to think I was doing great.
+15,S2,folder_on_desk,ren,34.5,37.29,2.79,"On day one, HR gave me a folder."
+16,S2,page_six,story,37.29,38.79,1.5,Somewhere on page six
+17,S2,match_strip,graphic,38.79,40.62,1.83,it said the company would match every dollar
+18,S2,laptop_401k,graphic,40.62,42.54,1.92,"I put into my retirement plan,"
+19,S2,reaction_card,ren,42.54,44.12,1.58,up to four percent of my salary.
+20,S2,never_page_six,ren,44.12,46.46,2.33,I never got to page six.
+21,S2,picked_two,ren,46.46,49.54,3.08,"I picked two percent, because two sounded responsible,"
+22,S2,lease_urgent,graphic,49.54,50.96,1.42,and the lease sounded urgent.
+23,S3,s3_intro,ren,50.96,52.46,1.5,Here's the thing about a match.
+24,S3,s3_you4,graphic,52.46,53.83,1.38,"If I put in four percent,"
+25,S3,s3_comp4,graphic,53.83,55.46,1.62,"they put in four percent,"
+26,S3,s3_you2,graphic,55.46,57.58,2.12,"dollar for dollar. I put in two,"
+27,S3,s3_comp2,graphic,57.58,58.96,1.38,so they put in two.
+28,S3,s3_other2,graphic,58.96,60.04,1.08,The other two percent?
+29,S3,s3_notsaved,ren,60.04,61.92,1.88,It wasn't saved for later.
+30,S3,s3_neverpaid,graphic,61.92,63.38,1.46,It just never got paid.
+31,S3,s3_880,graphic,63.38,65.17,1.79,That was eight hundred and eighty dollars
+32,S3,s3_raises_a,graphic,65.17,68.42,3.25,"the first year. Then I got small raises,"
+33,S3,s3_raises_b,graphic,68.42,70.71,2.29,"forty-six thousand, forty-eight,"
+34,S3,s3_same2,ren,70.71,72.96,2.25,"and every year I left the same two percent,"
+35,S3,s3_ghosts,graphic,72.96,74.79,1.83,and every year the ghost money
+36,S3,s3_total,graphic,74.79,76.38,1.58,"got bigger. Meanwhile,"
+37,S3,s3_lease_pride,ren,76.38,80.08,3.71,"I made that lease payment on time, every month, with pride."
+38,S3,s3_489,graphic,80.08,83.38,3.29,"Four hundred eighty-nine dollars to look successful,"
+39,S3,s3_77,graphic,83.38,84.96,1.58,while skipping about seventy-seven a month
+40,S3,s3_successful,ren,84.96,86.83,1.88,that would have actually made me successful.
+41,S4,s4_porch,ren,86.83,88.29,1.46,"Back on that porch,"
+42,S4,s4_dev,story,88.29,90.46,2.17,Dev asked me three questions.
+43,S4,s4_q1,graphic,90.46,92.12,1.67,"""What does this line mean?"
+44,S4,s4_q2,graphic,92.12,92.75,0.62,What would it say
+45,S4,s4_folder,story,92.75,94.17,1.42,if you'd read the folder?
+46,S4,s4_q3,graphic,94.17,96.0,1.83,"And who's keeping the difference?"""
+47,S4,s4_line2,story,96.0,97.42,1.42,The line said two percent.
+48,S4,s4_line4,story,97.42,99.0,1.58,It should have said four.
+49,S4,s4_diff,ren,99.0,100.04,1.04,And the difference?
+50,S4,s4_keeps,graphic,100.04,101.04,1.0,The company keeps it.
+51,S4,s4_notevil,ren,101.04,104.21,3.17,Not because they're evil. That's just how matches work.
+52,S4,s4_unclaimed,graphic,104.21,106.92,2.71,"If you don't claim it, it stays with them."
+53,S4,s4_phone_in,graphic,106.92,108.33,1.42,"I went home, opened the app"
+54,S4,s4_toggle,graphic,108.33,110.67,2.33,"on my phone, and changed two to four."
+55,S4,s4_90s,graphic,110.67,111.96,1.29,It took ninety seconds.
+56,S4,s4_late,ren,111.96,113.88,1.92,"Ninety seconds, three years late."
+57,S5,s5_maths,ren,113.88,116.25,2.38,"That night, I did the painful maths."
+58,S5,s5_2760,graphic,116.25,117.62,1.38,If that two thousand seven hundred and sixty
+59,S5,s5_invested,graphic,117.62,119.71,2.08,"had been invested and grown at,"
+60,S5,s5_seven,graphic,119.71,121.46,1.75,"say, seven percent a year,"
+61,S5,s5_hypo,graphic,121.46,123.75,2.29,"which is a hypothetical, not a promise,"
+62,S5,s5_thirty,graphic,123.75,124.67,0.92,in thirty years
+63,S5,s5_21k,graphic,124.67,126.75,2.08,it could be roughly twenty-one thousand dollars.
+64,S5,s5_cost,ren,126.75,129.5,2.75,That's the real cost of a lease-shaped decision.
+65,S5,s5_twist,ren,129.5,133.25,3.75,Not the payment. The opportunity. But here's the twist.
+66,S5,s5_fixed,ren,133.25,134.5,1.25,"The day I fixed it,"
+67,S5,s5_takehome,graphic,134.5,137.58,3.08,"my take-home dropped by about thirty-two dollars a paycheck,"
+68,S5,s5_pretax,graphic,137.58,140.88,3.29,because those contributions come out before income tax.
+69,S5,s5_never_missed,ren,140.88,143.67,2.79,And I never missed it. I honestly couldn't tell you
+70,S5,s5_32,graphic,143.67,146.21,2.54,what that thirty-two dollars used to buy me.
+71,S5,s5_carwash_a,story,146.21,147.71,1.5,"Probably a car wash,"
+72,S5,s5_carwash_b,story,147.71,148.25,0.54,for a car
+73,S5,s5_carwash_c,story,148.25,149.38,1.12,I didn't even own.
+74,S6,s6_today,story,149.38,151.33,1.96,"Today, same car,"
+75,S6,s6_older,story,151.33,153.17,1.83,eight years older.
+76,S6,s6_100k,ren,153.17,157.33,4.17,"I earn around a hundred thousand a year, and I always take the full match,"
+77,S6,s6_more,graphic,157.33,158.46,1.12,plus more on top.
+78,S6,s6_priya_in,story,158.46,159.54,1.08,"My cousin Priya,"
+79,S6,s6_priya_200,graphic,159.54,161.17,1.62,the one who earns two hundred thousand
+80,S6,s6_priya_hike,story,161.17,162.33,1.17,and dresses like she's off
+81,S6,s6_priya_pack,story,162.33,163.62,1.29,"to hike a mountain,"
+82,S6,s6_priya_max,graphic,163.62,165.92,2.29,maxes hers out every year.
+83,S6,s6_gary_in,story,165.92,166.92,1.0,Uncle Gary told me
+84,S6,s6_gary_boat,graphic,166.92,169.62,2.71,"his retirement plan is ""sell the boat."""
+85,S6,s6_everyone_a,ren,169.62,172.21,2.58,Everyone's different. But the match works the same
+86,S6,s6_everyone_b,ren,172.21,174.17,1.96,for everyone who's offered one.
+87,S6,s6_first_money,ren,174.17,175.67,1.5,It's the first money you're owed.
+88,S6,s6_check_now,ren,175.67,179.75,4.08,"So here's what I check now, and what I wish I'd checked at 25."
+89,S6,s6_c1,graphic,179.75,182.04,2.29,"One, your match formula."
+90,S6,s6_plan_docs,ren,182.04,184.5,2.46,"It's in the plan documents, not the vibes."
+91,S6,s6_c2,graphic,184.5,186.5,2.0,"Two, your vesting schedule,"
+92,S6,s6_vest_bar,graphic,186.5,188.96,2.46,because some companies make you stay a few years before
+93,S6,s6_vest_open,graphic,188.96,190.54,1.58,the match is fully yours.
+94,S6,s6_c3,graphic,190.54,192.92,2.38,"Three, next year's limit."
+95,S6,s6_lim_a,graphic,192.92,196.42,3.5,"For 2027, the actuarial firm Milliman projects"
+96,S6,s6_lim_b,graphic,196.42,198.42,2.0,"twenty-five thousand five hundred dollars,"
+97,S6,s6_lim_c,graphic,198.42,200.58,2.17,up from twenty-four thousand five hundred.
+98,S6,s6_irs,ren,200.58,203.33,2.75,"The IRS hadn't confirmed it at the end of October,"
+99,S6,s6_check_official,ren,203.33,205.21,1.88,so check the official number.
+100,S6,s6_dont_max,ren,205.21,208.88,3.67,You don't have to max it out. You just don't want to skip the free part.
+101,S7,s7_goback,ren,208.88,212.17,3.29,"If I could go back, I wouldn't lecture him about coffee."
+102,S7,s7_hand,story,212.17,213.62,1.46,"I'd just hand him that folder,"
+103,S7,s7_page6,story,213.62,215.38,1.75,open to page six.
+104,S7,s7_before_cut,ren,215.38,216.79,1.42,"Before you cut a single thing,"
+105,S7,s7_owed,ren,216.79,218.5,1.71,collect what you're already owed.
+106,S7,s7_list_a,graphic,218.5,221.0,2.5,The match. The HSA money.
+107,S7,s7_list_b,graphic,221.0,222.58,1.58,The stuff in the folder.
+108,S7,s7_25,ren,222.58,225.5,2.92,Twenty-five-year-old me wanted to look rich.
+109,S7,s7_richer_a,ren,225.5,228.58,3.08,Twenty-eight-year-old me just wanted to stop missing free money.
+110,S7,s7_richer_b,ren,228.58,231.21,2.62,Honestly? The second guy was richer.
+111,S7,s7_next_week,ren,231.21,234.04,2.83,"Next week: the month three bills hit me at once,"
+112,S7,s7_wave,ren,234.04,237.33,3.29,"and why, for the first time, I didn't panic."

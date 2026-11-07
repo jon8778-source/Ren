@@ -127,3 +127,7 @@ Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_
 
 **STOP. Waiting for: `pilot approved`.**
 
+
+
+## 11. Gate 3: rough cut S1-S7 (added 7 November 2026)
+**Waiting for: `rough cut approved`.** Full report: `GATE3_REPORT.md`. The MP4 is local only at `/output/free_money_S1_S7_rough_cut.mp4` (237.3 s, 1280x720, 24 fps, draft CRF 23, -16.2 LUFS). Timeline checks: 17 of 17 pass; validator PASS; all 112 shots within the v3 caps. Open: ear check of the audio, pacing, and the choice of grade for the "8 years later" car.
