@@ -94,4 +94,34 @@ Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_
 - **Needs your call:** 130 shots in about 4.8 minutes is fast cutting (about 2.2 s average). It follows from the v3 caps (story stills can't exceed 2.5 s) and I think it is right, but if you want slower pacing the only lever is to allow longer holds, which means a cap exception.
 - **Notes:** (1) the porch and parking-lot plates have no Ren-friendly floor space on the car side, so Ren stands on the left. (2) FS and the two-shot on the porch use Dev's single pose, since he has no other.
 
-**STOP. Waiting for: `plan approved`.**
+**(Gate 1 stop line: satisfied. `plan approved` received.)**
+## 10. Gate 2: pilot S1 + S2 (added 7 November 2026)
+**Waiting for: `pilot approved`.** The MP4 is **local only** at `/output/free_money_S1_S2_pilot.mp4` and is not in git, as you asked. This branch holds only the code, the narration WAVs and the reports.
+
+| | |
+|---|---|
+| Format | H.264 + AAC (mono, 48 kHz), 1280x720, 24 fps, 1,238 frames |
+| Duration | **51.58 s** video, 51.56 s audio (S1 19.03 s + S2 31.93 s of narration + 0.6 s visual hold). **Shorter than the 85 s in your brief:** S1 + S2 is only 166 words, and this voice speaks at about 3.3 words per second. |
+| Loudness | **-16.2 LUFS**, true peak -1.6 dBTP (gain only; no speed change, stretching or padding) |
+| Shots | 30 (11 in S1, 19 in S2); none over the v3 caps. One cut was pulled in by about 1 frame to meet the 2.5 s cap. |
+| Validator (`validate.py`) | **PASS.** Full decode with errors fatal: clean. Format correct. Frame count equals duration. Shot frames add up to the video frames. No layout overlaps. One 0.63 s pause inside the narration, which falls right after "...of my salary." and is the model's own sentence-end pause. |
+| Assets used, with timestamps | `videos/free_money/GATE2_assets_used.md` (every shot, file by file) |
+
+**What I looked at (on the final MP4, not just on code output):** the first frame and the middle of all 30 shots on four contact sheets; the page-peel at four points; 100% crops of Ren's face in close busts (R1, R3), the wide full-body still, the shake_no clip and a library clip, and Dev's face; and a recheck of the shots I changed. All checked clean after fixes.
+**What I fixed after looking:** Dev's head cut off in the porch close-up; half of Dev's face showing in the stub close-ups; the library clips were mostly idle filler (the planner kept only 0.3 s of real motion), so they now play the real footage from 1.30 s and cut on the action; the page-flip squeezed Ren horizontally, so it is now a page peel that never distorts him; an empty card box visible on some cut frames; a stray dot where the 2% chip starts; stray "T" and HR-label bits in the folder crops; a Day-one/Age-25 tag sitting over a desk drawer; and Ren's full-body stills too small against the office.
+**Shots in the pilot:** present-day Ren as presenter on the office plate; the porch cold open with Dev and the pay stub; the code-built glowing "Employer match: 2%" line warped onto the stub; the page peel to age 25; the office and parking-lot plates with an "Age 25" tag; the HR folder as a detail crop with a slow push-in; and the code-built card where "Age 25: $44,000 salary", "Lease: $489/month" and "Page 6: We match 100% up to 4%" appear in sync with the words. The small "Educational content only, not financial advice" tag shows for the first 5 s and the last 4 s.
+
+**Uncertain or not verified (please check):**
+1. **Voice.** I can't hear audio. Whisper matches the script in both scenes. The differences it reports are only digits spelled as numerals, plus an invented "Thank you for watching…" at the tail of S1. That tail is not in the audio: all those words are stamped on the same instant at a near-silent tail.
+   - **"lease" vs "least":** Whisper heard "least" in the last S2 line ("and the lease sounded urgent"). Please listen to that word. If it is wrong I can regenerate that chunk and compare.
+   - **Accent and pace:** the voice is generated with the x-vector-only setting from the v3 rules, and it is faster than the earlier clone (about 3.3 against 2.55 words per second). Please check the accent and that the pace feels right.
+2. **Resolution.** Built at 1280x720 per the v3 rules, not 1920x1080 from your brief. A final render at 1080p is possible if you want it.
+3. **Library clip gestures.** The shake_no clip shows a raised open hand, not a head shake, and the clips are cut mid-gesture on hard cuts. The thinking and nod clips look right. Please confirm the gestures read well.
+4. **Present-day Ren and the flashback share the office plate;** only the "Age 25" tag and the page peel separate them. Say if you want a different present-day background.
+5. **Dev has one pose.** The stub close-ups crop his face out of frame.
+6. **Ren's stills are static with slow push-ins;** the mouth stays closed, with no talking motion, as the v3 rules say.
+7. **Validation limits:** this used my own `validate.py`, not the existing repo validator, and there is no approved reference MP4 to compare frames against.
+8. The 2.5 s story-still cap forced the folder and car shots to be short. No exceptions were needed in the pilot.
+
+**STOP. Waiting for: `pilot approved`.**
+
