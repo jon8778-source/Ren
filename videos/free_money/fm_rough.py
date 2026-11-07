@@ -20,6 +20,7 @@ import fm_pilot as fp  # noqa: E402
 import fm_rev031 as r3  # noqa: E402
 import plan_data as pd  # noqa: E402
 from fm_pilot import W, H, FPS, NAVY, SAGE, CREAM, GREEN, MUTED, ease, lerp, layer, paste, shadow, font, pill, flip, Boxes, layout_problems, lufs, bp, VOICE
+from PIL import ImageFilter  # noqa: E402
 from fm_rev031 import (Cam, push, zoom_frame, card_fit, card_bg, dashed_rect, car_icon, coin, stack, screen_small, PhoneClip, Rev, RED, CAPS, ROWS,
                        LAPTOP_SCREEN)
 
@@ -109,6 +110,45 @@ def jar(f, cx, base, w, h, pct, col, label, ghost_to=None, sub=None, a=1.0, big=
     f.alpha_composite(lay)
 
 
+
+# ---------------------------------------------------------------------------------------------
+# Standing figures: scale from the plate's own perspective, grounded with a contact shadow.
+# Calibrated from objects of known size in each plate (office: chair 105 cm, desk 75 cm, pedestal, bookshelf, file cabinet;
+# porch: door 2.0 m, bench seat 45 cm; lot: car tyre 63 cm, car roof 1.45 m). Each plate is a pinhole view from about
+# 1.0-1.1 m, so a person standing at floor row y is  height_px = cm * (y - horizon) / camera_height_cm.
+PLATE_GEOM = {"OFFICE": (507, 107), "PORCH": (384, 102), "LOT": (454, 110)}      # (horizon row, camera height cm)
+REN_CM = 175
+FULL_BODY = ("FP", "FT", "FS", "FW")
+
+
+def height_px(plate, y_feet, cm=REN_CM):
+    hor, cam_cm = PLATE_GEOM[plate]
+    return cm * (y_feet - hor) / cam_cm
+
+
+def contact_shadow(f, cam, x, y, width_plate):
+    """A tight shadow under the feet (not a soft cloud), so the figure reads as standing on the floor."""
+    sx, sy = cam.pt(x, y)
+    rx = width_plate * cam.k * 0.5
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.ellipse((sx - rx, sy - rx * 0.17, sx + rx, sy + rx * 0.17), fill=(19, 35, 63, 105))
+    d.ellipse((sx - rx * 0.62, sy - rx * 0.1, sx + rx * 0.62, sy + rx * 0.1), fill=(19, 35, 63, 90))
+    f.alpha_composite(lay.filter(ImageFilter.GaussianBlur(3.5)))
+
+
+def stand(f, cam, plate, img, x, y_feet, boxes=None, cm=REN_CM, shadow_w=None, is_ren=True):
+    """Place a standing figure with its feet at plate point (x, y_feet), at the correct perspective height."""
+    h = height_px(plate, y_feet, cm)
+    w = img.width * h / img.height
+    contact_shadow(f, cam, x, y_feet, shadow_w or w * 0.95)
+    r = cam.place(f, img, x, y_feet, h)
+    if boxes is not None and is_ren:
+        boxes.ren = r
+        boxes.face = (r[0] + 0.25 * (r[2] - r[0]), r[1], r[0] + 0.75 * (r[2] - r[0]), r[1] + 0.2 * (r[3] - r[1]))
+    return r
+
+
 class Rough(Rev):
     def __init__(self):
         self.A = fp.Assets()
@@ -158,11 +198,103 @@ class Rough(Rev):
                 raise AttributeError("no builder for " + s["name"])
             self.build[s["name"]] = fn
 
+
+    # ------------------------------------------------------------ Ren placed on the floor at the right scale (overrides the rev03.1 placements)
+    def office_cam(self, t, d, z0=1.2, z1=1.26, cx=700, cy=600):
+        return Cam(self.A.plate["OFFICE"], cx, cy, push(t, d, z0, z1))
+
+    def presenter(self, key, t, d, boxes, cx_ren=320, cam=None, h=580):
+        """Busts as before (Ren left, tight crop). Full-body stills stand on the office floor at their real scale."""
+        if key in FULL_BODY:
+            cam = self.office_cam(t, d)
+            f = cam.render()
+            stand(f, cam, "OFFICE", self.A.ren[key], 590, 905, boxes)
+            return f
+        return super().presenter(key, t, d, boxes, cx_ren=cx_ren, cam=cam, h=h)
+
+
+    def at_desk(self, key, t, d, boxes, z0=None, z1=None, x_ren=None):
+        """Ren standing on the floor beside the desk chair, full height for his depth (175 cm against a 75 cm desk)."""
+        cam = self.office_cam(t, d, 1.2, 1.26, cx=640, cy=600)
+        f = cam.render()
+        stand(f, cam, "OFFICE", self.A.ren[key], 790, 890, boxes)
+        return f, cam
+
+    def s_take_you_back(self, t, d, b):
+        cam = self.office(836, 470, push(t, d, 1.0, 1.05))
+        f = cam.render()
+        stand(f, cam, "OFFICE", self.A.ren["FP"], 920, 880, b)
+        return f
+
+    def s_porch_two_shot(self, t, d, b):
+        A = self.A
+        cam = Cam(A.plate["PORCH"], push(t, d, 836, 900), push(t, d, 500, 520), push(t, d, 1.0, 1.1))
+        f = cam.render()
+        stand(f, cam, "PORCH", A.dev, 1090, 760, b, is_ren=False)
+        stand(f, cam, "PORCH", A.ren["FS"], 560, 760, b)
+        return f
+
+    def s_parking_lot(self, t, d, b):
+        A = self.A
+        cam = Cam(A.plate["LOT"], push(t, d, 836, 990), push(t, d, 470, 520), push(t, d, 1.0, 1.18))
+        f = cam.render()
+        stand(f, cam, "LOT", A.ren["FS"], 330, 860, b)
+        return f
+
+    def s_desk_salary(self, t, d, b):
+        f, cam = self.at_desk("FT", t, d, b)
+        a = bp.fade(t, 0.5, 0.35)                              # the laptop lights up when "Forty-four thousand" is said
+        if a > 0:
+            ui = screen_small(200, 120, "doc")
+            ui.putalpha(ui.getchannel("A").point(lambda v: int(v * a)))
+            f.alpha_composite(fp.warp(ui, [cam.pt(*p) for p in LAPTOP_SCREEN]))
+        pill(f, "Age 25", 870, 140, px=44, fill=NAVY, colour=(255, 255, 255), alpha=bp.fade(t, 0.1, 0.3), boxes=b, pad=(30, 12))
+        card_fit(f, [([("$44,000 salary", GREEN)], 0.9)], t, b, 870, 290, max_w=370)
+        return f
+
+    def s_s7_25(self, t, d, b):
+        f, cam = self.at_desk("FS", t, d, b)
+        pill(f, "Age 25", 870, 140, px=44, fill=NAVY, colour=(255, 255, 255), alpha=bp.fade(t, 0.1, 0.3), boxes=b, pad=(30, 12))
+        return f
+
+    def s_s7_hand(self, t, d, b):
+        f, cam = self.at_desk("FP", t, d, b)
+        e = ease(t / (d * 0.8))
+        x = lerp(120, 380, e)
+        quad = [(x, 624), (x + 122, 614), (x + 140, 646), (x + 12, 660)]
+        f.alpha_composite(fp.warp(self.A.folder.resize((600, 450), Image.LANCZOS), [cam.pt(*p) for p in quad]))
+        return f
+
+    def s_folder_on_desk(self, t, d, b):
+        f, cam = self.at_desk("FP", t, d, b)
+        e = ease(t / 0.55)
+        dx = lerp(-260, 0, e)
+        quad_plate = [(66 + dx, 624), (188 + dx, 614), (206 + dx, 646), (78 + dx, 660)]
+        f.alpha_composite(fp.warp(self.A.folder.resize((600, 450), Image.LANCZOS), [cam.pt(*p) for p in quad_plate]))
+        return f
+
+    def s_s6_irs(self, t, d, b):
+        f = self.presenter("FT", t, d, b)
+        card_fit(f, [([("IRS: not yet confirmed", NAVY)], 0.2), ([("(as of end of October)", MUTED)], 0.2)], t, b, 760, 330, max_w=470, base_px=34)
+        return f
+
+    def person(self, who, t, d, b, x_plate=850, z=(1.0, 1.06), crop=None, card=None):
+        """Priya / Gary standing on the office floor at the same scale rules as Ren (about 170-178 cm)."""
+        A = self.A
+        img = self.priya if who == "priya" else self.gary
+        cam = Cam(A.plate["OFFICE"], 836, 470, push(t, d, *z))
+        f = cam.render()
+        r = stand(f, cam, "OFFICE", img, x_plate, 880, None, cm=170 if who == "priya" else 178)
+        b.ren, b.face = r, (r[0] + (r[2] - r[0]) * 0.25, r[1], r[0] + (r[2] - r[0]) * 0.75, r[1] + (r[3] - r[1]) * 0.2)
+        return f
+
     # ------------------------------------------------------------ shared S3+ helpers
     def pres(self, key, t, d, b, card=None, swap=None, x_card=620, w_card=540, cy=330, label=None, px=40):
         """Presenter (Ren left) with an optional card on the right. swap = (fraction, key2) switches pose part-way."""
         if swap and t >= d * swap[0]:
             key = swap[1]
+        if key in FULL_BODY:                               # a standing figure takes more width: the card moves right, narrower
+            x_card, w_card = max(x_card, 760), min(w_card, 470)
         f = self.presenter(key, t, d, b)
         if card:
             card_fit(f, card, t, b, x_card, cy, max_w=w_card, base_px=px)
@@ -598,19 +730,6 @@ class Rough(Rev):
         b.text.append((180, 150, 1100, 440, "bars"))
         return f
 
-    def person(self, who, t, d, b, x_plate=850, z=(1.0, 1.06), crop=None, card=None):
-        A = self.A
-        img = self.priya if who == "priya" else self.gary
-        cam = Cam(A.plate["OFFICE"], 836, 470, push(t, d, *z))
-        f = cam.render()
-        sx, sy = cam.pt(x_plate, 880)
-        shadow(f, sx, sy, 300 * cam.k)
-        if crop:
-            f = Cam(A.plate["OFFICE"], 836, 470, 1.0).render()
-        r = cam.place(f, img, x_plate, 880, 700)
-        b.ren, b.face = r, (r[0] + (r[2] - r[0]) * 0.25, r[1], r[0] + (r[2] - r[0]) * 0.75, r[1] + (r[3] - r[1]) * 0.2)
-        return f
-
     def s_s6_priya_in(self, t, d, b):
         return self.person("priya", t, d, b, x_plate=lerp(1250, 850, ease(t / 0.5)))
 
@@ -750,11 +869,6 @@ class Rough(Rev):
     def s_s6_lim_c(self, t, d, b):
         return self.limit_card(t, d, b, big=True, old=True)
 
-    def s_s6_irs(self, t, d, b):
-        f = self.presenter("FT", t, d, b)
-        card_fit(f, [([("IRS: not yet confirmed", NAVY)], 0.2), ([("(as of end of October)", MUTED)], 0.2)], t, b, 620, 330, max_w=540, base_px=38)
-        return f
-
     def s_s6_check_official(self, t, d, b):
         return self.pres("R4", t, d, b, card=[([("Check the official number", NAVY)], 0.15)], cy=345, px=40)
 
@@ -764,14 +878,6 @@ class Rough(Rev):
     # ------------------------------------------------------------ S7
     def s_s7_goback(self, t, d, b):
         return self.pres("R3", t, d, b, swap=(0.5, "R1"))
-
-    def s_s7_hand(self, t, d, b):
-        f, cam = self.at_desk("FP", t, d, b, z0=1.35, z1=1.4)
-        e = ease(t / (d * 0.8))
-        x = lerp(120, 380, e)
-        quad = [(x, 624), (x + 122, 614), (x + 140, 646), (x + 12, 660)]
-        f.alpha_composite(fp.warp(self.A.folder.resize((600, 450), Image.LANCZOS), [cam.pt(*p) for p in quad]))
-        return f
 
     def s_s7_page6(self, t, d, b):
         return self.s_s4_folder(t, d, b)
@@ -807,11 +913,6 @@ class Rough(Rev):
 
     def s_s7_list_b(self, t, d, b):
         return self.owed_list(t, d, b, 3)
-
-    def s_s7_25(self, t, d, b):
-        f, cam = self.at_desk("FS", t, d, b, z0=1.35, z1=1.4)
-        pill(f, "Age 25", 800, 150, px=44, fill=NAVY, colour=(255, 255, 255), alpha=bp.fade(t, 0.1, 0.3), boxes=b, pad=(30, 12))
-        return f
 
     def s_s7_richer_a(self, t, d, b):
         return self.pres("R2", t, d, b)
