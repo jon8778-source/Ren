@@ -216,7 +216,7 @@
       "id": "full-renderer",
       "path": "../render_full.py",
       "kind": "renderer",
-      "sha256": "6efeaf37061e5cc66100d374449b076e34384dee79d7ce941a0664851ca8605e",
+      "sha256": "2b53fea2413277fb7a3bb42a7e5229baa2ce310ad169c92dd3bce133e3919512",
       "status": "approved",
       "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
     },

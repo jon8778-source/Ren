@@ -1,0 +1,42 @@
+{
+  "video_sha256": "c1ccf3e809d2f55e0538781e6388bddeec397fd289c7ddaa1ebc232112928284",
+  "duration_seconds": 58.708333333333336,
+  "frames": 1409,
+  "approved_opening_first360_frames_pixel_identical": true,
+  "opening_video_reencoded": false,
+  "master_first15_seconds_pcm_identical": true,
+  "master_remaining_pcm_identical_to_existing_short": true,
+  "final_audio_encoded_once": "AAC 192k; voice samples unchanged before encoding",
+  "full_audio_correlation_to_master": 0.9999774057399209,
+  "audio_peak_dbfs": -1.9644428491592407,
+  "join_audio": {
+    "sample": 720000,
+    "master_step": 6.645772373303771e-06,
+    "encoded_peak_40ms_dbfs": -52.42271041870117
+  },
+  "source_originals_preserved": true,
+  "financial_figures_checked": [
+    2520,
+    840,
+    4000,
+    6500
+  ],
+  "unestablished_deductible_amount": "Not invented; field says Check your plan",
+  "hsa_timing": "No day-one balance or fabricated contribution schedule shown",
+  "qwen_model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "qwen_space": "Qwen/Qwen3-TTS",
+  "qwen_endpoint": "/generate_voice_clone",
+  "language": "English",
+  "use_xvector_only": true,
+  "reference_hashes_verified": true,
+  "new_tts_calls": 0,
+  "speech_speed_changes": false,
+  "new_environments": [
+    "clinic",
+    "pharmacy"
+  ],
+  "new_major_character_artwork": false,
+  "review_sheets": 8,
+  "audio_listening_performed": false,
+  "physical_android_test": false
+}

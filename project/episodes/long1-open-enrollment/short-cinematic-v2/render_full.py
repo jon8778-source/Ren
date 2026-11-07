@@ -1,6 +1,6 @@
 """Extend the approved v3 portrait opening; copy first 360 frames, render remainder."""
 from pathlib import Path
-import importlib.util,functools,json,os,subprocess as sp,sys
+import importlib.util,functools,inspect,json,os,subprocess as sp,sys
 import numpy as np
 from PIL import Image,ImageDraw
 D=Path(__file__).resolve().parent;F=D/'full-production';BUILD=D/'build/full-production'
@@ -204,10 +204,11 @@ def worksheet(s,n):
   txt(im,s,n,(205,y),label,70)
   if n/24>=t:check(im,(120,y+22),size=52)
  # Approved right hand follows the three marks, rather than floating cards.
- point=0 if n/24<2.1 else 1 if n/24<3.6 else 2
- u=ease((n/24-[0,2.1,3.6][point])/.22)
- yy=[610,865,1120][point]
- approved_hand(im,510,yy-110+round(4*u),width=500)
+ t=n/24
+ # Glide to each next question before its mark rather than teleporting the
+ # wrist between three unrelated positions on consecutive frames.
+ yy=610+255*ease((t-1.9)/.3)+255*ease((t-3.35)/.3)
+ approved_hand(im,510,round(yy-110),width=500)
  return im
 
 def annual(s,n):
@@ -249,6 +250,16 @@ FUNCTIONS=dict(zip(['care-catch','chat-alex','chat-danny','clinic-visit','pharma
  'three-questions','annual-review','total-cost-ending'],
  [catch,chat_alex,chat_danny,clinic_visit,pharmacy,ppo,network,limits,hsa,desk_review,choice,worksheet,annual,ending]))
 
+def scene_key(s,dependencies):
+ # Bind visual helpers and actual scene code independently of orchestration.
+ # A one-shot gesture fix can reuse other verified encoded chunks. All source
+ # files remain bound separately by the production/approval fingerprint.
+ shared=[txt,environment,prop,paper,desk,check,approved_hand,prepare_actors,actor,phone_body]
+ signature={'scene_function':inspect.getsource(FUNCTIONS[s['id']]),
+  'shared':[inspect.getsource(f) for f in shared],'canvas':[W,H,FPS],
+  'palette':[INK,GREEN,CREAM,SAGE],'encoder':['libx264','medium',18,'yuv420p']}
+ return S.scene_cache_key(s,{k:v for k,v in dependencies.items() if k!='full-renderer'},S.digest(signature))
+
 def save_layout():
  result=S.load(D/'revision-06/layout.json')['scenes']
  for sid,items in REC.scenes.items():
@@ -277,7 +288,7 @@ def main():
  dependencies={a['id']:S.sha(S.resolve(F/'production.json',a['path'])) for a in M['assets']}
  for s in M['scenes'][5:]:
   count=s['end_frame']-s['start_frame'];REC.begin_scene(s['id'])
-  key=S.scene_cache_key(s,dependencies,S.sha(__file__));cached=cache.get(key,count)
+  key=scene_key(s,dependencies);cached=cache.get(key,count)
   if stills:
    for n in [0,count//2,count-1]:FUNCTIONS[s['id']](s,n).save(BUILD/f"{s['id']}-{n:03}.png")
    continue

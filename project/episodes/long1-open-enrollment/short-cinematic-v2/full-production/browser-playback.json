@@ -1,0 +1,5658 @@
+{
+  "ended": true,
+  "duration": 58.708333,
+  "currentTime": 58.708333,
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "playbackRate": 1,
+  "mediaError": null,
+  "quality": {
+    "totalVideoFrames": 1409,
+    "droppedVideoFrames": 0
+  },
+  "stalls": [],
+  "frames": [
+    {
+      "mediaTime": 0,
+      "presented": 1
+    },
+    {
+      "mediaTime": 0.041667,
+      "presented": 2
+    },
+    {
+      "mediaTime": 0.083333,
+      "presented": 3
+    },
+    {
+      "mediaTime": 0.125,
+      "presented": 4
+    },
+    {
+      "mediaTime": 0.166667,
+      "presented": 5
+    },
+    {
+      "mediaTime": 0.208333,
+      "presented": 6
+    },
+    {
+      "mediaTime": 0.25,
+      "presented": 7
+    },
+    {
+      "mediaTime": 0.291667,
+      "presented": 8
+    },
+    {
+      "mediaTime": 0.333333,
+      "presented": 9
+    },
+    {
+      "mediaTime": 0.375,
+      "presented": 10
+    },
+    {
+      "mediaTime": 0.416667,
+      "presented": 11
+    },
+    {
+      "mediaTime": 0.458333,
+      "presented": 12
+    },
+    {
+      "mediaTime": 0.5,
+      "presented": 13
+    },
+    {
+      "mediaTime": 0.541667,
+      "presented": 14
+    },
+    {
+      "mediaTime": 0.583333,
+      "presented": 15
+    },
+    {
+      "mediaTime": 0.625,
+      "presented": 16
+    },
+    {
+      "mediaTime": 0.666667,
+      "presented": 17
+    },
+    {
+      "mediaTime": 0.708333,
+      "presented": 18
+    },
+    {
+      "mediaTime": 0.75,
+      "presented": 19
+    },
+    {
+      "mediaTime": 0.791667,
+      "presented": 20
+    },
+    {
+      "mediaTime": 0.833333,
+      "presented": 21
+    },
+    {
+      "mediaTime": 0.875,
+      "presented": 22
+    },
+    {
+      "mediaTime": 0.916667,
+      "presented": 23
+    },
+    {
+      "mediaTime": 0.958333,
+      "presented": 24
+    },
+    {
+      "mediaTime": 1,
+      "presented": 25
+    },
+    {
+      "mediaTime": 1.041667,
+      "presented": 26
+    },
+    {
+      "mediaTime": 1.083333,
+      "presented": 27
+    },
+    {
+      "mediaTime": 1.125,
+      "presented": 28
+    },
+    {
+      "mediaTime": 1.166667,
+      "presented": 29
+    },
+    {
+      "mediaTime": 1.208333,
+      "presented": 30
+    },
+    {
+      "mediaTime": 1.25,
+      "presented": 31
+    },
+    {
+      "mediaTime": 1.291667,
+      "presented": 32
+    },
+    {
+      "mediaTime": 1.333333,
+      "presented": 33
+    },
+    {
+      "mediaTime": 1.375,
+      "presented": 34
+    },
+    {
+      "mediaTime": 1.416667,
+      "presented": 35
+    },
+    {
+      "mediaTime": 1.458333,
+      "presented": 36
+    },
+    {
+      "mediaTime": 1.5,
+      "presented": 37
+    },
+    {
+      "mediaTime": 1.541667,
+      "presented": 38
+    },
+    {
+      "mediaTime": 1.583333,
+      "presented": 39
+    },
+    {
+      "mediaTime": 1.625,
+      "presented": 40
+    },
+    {
+      "mediaTime": 1.666667,
+      "presented": 41
+    },
+    {
+      "mediaTime": 1.708333,
+      "presented": 42
+    },
+    {
+      "mediaTime": 1.75,
+      "presented": 43
+    },
+    {
+      "mediaTime": 1.791667,
+      "presented": 44
+    },
+    {
+      "mediaTime": 1.833333,
+      "presented": 45
+    },
+    {
+      "mediaTime": 1.875,
+      "presented": 46
+    },
+    {
+      "mediaTime": 1.916667,
+      "presented": 47
+    },
+    {
+      "mediaTime": 1.958333,
+      "presented": 48
+    },
+    {
+      "mediaTime": 2,
+      "presented": 49
+    },
+    {
+      "mediaTime": 2.041667,
+      "presented": 50
+    },
+    {
+      "mediaTime": 2.083333,
+      "presented": 51
+    },
+    {
+      "mediaTime": 2.125,
+      "presented": 52
+    },
+    {
+      "mediaTime": 2.166667,
+      "presented": 53
+    },
+    {
+      "mediaTime": 2.208333,
+      "presented": 54
+    },
+    {
+      "mediaTime": 2.25,
+      "presented": 55
+    },
+    {
+      "mediaTime": 2.291667,
+      "presented": 56
+    },
+    {
+      "mediaTime": 2.333333,
+      "presented": 57
+    },
+    {
+      "mediaTime": 2.375,
+      "presented": 58
+    },
+    {
+      "mediaTime": 2.416667,
+      "presented": 59
+    },
+    {
+      "mediaTime": 2.458333,
+      "presented": 60
+    },
+    {
+      "mediaTime": 2.5,
+      "presented": 61
+    },
+    {
+      "mediaTime": 2.541667,
+      "presented": 62
+    },
+    {
+      "mediaTime": 2.583333,
+      "presented": 63
+    },
+    {
+      "mediaTime": 2.625,
+      "presented": 64
+    },
+    {
+      "mediaTime": 2.666667,
+      "presented": 65
+    },
+    {
+      "mediaTime": 2.708333,
+      "presented": 66
+    },
+    {
+      "mediaTime": 2.75,
+      "presented": 67
+    },
+    {
+      "mediaTime": 2.791667,
+      "presented": 68
+    },
+    {
+      "mediaTime": 2.833333,
+      "presented": 69
+    },
+    {
+      "mediaTime": 2.875,
+      "presented": 70
+    },
+    {
+      "mediaTime": 2.916667,
+      "presented": 71
+    },
+    {
+      "mediaTime": 2.958333,
+      "presented": 72
+    },
+    {
+      "mediaTime": 3,
+      "presented": 73
+    },
+    {
+      "mediaTime": 3.041667,
+      "presented": 74
+    },
+    {
+      "mediaTime": 3.083333,
+      "presented": 75
+    },
+    {
+      "mediaTime": 3.125,
+      "presented": 76
+    },
+    {
+      "mediaTime": 3.166667,
+      "presented": 77
+    },
+    {
+      "mediaTime": 3.208333,
+      "presented": 78
+    },
+    {
+      "mediaTime": 3.25,
+      "presented": 79
+    },
+    {
+      "mediaTime": 3.291667,
+      "presented": 80
+    },
+    {
+      "mediaTime": 3.333333,
+      "presented": 81
+    },
+    {
+      "mediaTime": 3.375,
+      "presented": 82
+    },
+    {
+      "mediaTime": 3.416667,
+      "presented": 83
+    },
+    {
+      "mediaTime": 3.458333,
+      "presented": 84
+    },
+    {
+      "mediaTime": 3.5,
+      "presented": 85
+    },
+    {
+      "mediaTime": 3.541667,
+      "presented": 86
+    },
+    {
+      "mediaTime": 3.583333,
+      "presented": 87
+    },
+    {
+      "mediaTime": 3.625,
+      "presented": 88
+    },
+    {
+      "mediaTime": 3.666667,
+      "presented": 89
+    },
+    {
+      "mediaTime": 3.708333,
+      "presented": 90
+    },
+    {
+      "mediaTime": 3.75,
+      "presented": 91
+    },
+    {
+      "mediaTime": 3.791667,
+      "presented": 92
+    },
+    {
+      "mediaTime": 3.833333,
+      "presented": 93
+    },
+    {
+      "mediaTime": 3.875,
+      "presented": 94
+    },
+    {
+      "mediaTime": 3.916667,
+      "presented": 95
+    },
+    {
+      "mediaTime": 3.958333,
+      "presented": 96
+    },
+    {
+      "mediaTime": 4,
+      "presented": 97
+    },
+    {
+      "mediaTime": 4.041667,
+      "presented": 98
+    },
+    {
+      "mediaTime": 4.083333,
+      "presented": 99
+    },
+    {
+      "mediaTime": 4.125,
+      "presented": 100
+    },
+    {
+      "mediaTime": 4.166667,
+      "presented": 101
+    },
+    {
+      "mediaTime": 4.208333,
+      "presented": 102
+    },
+    {
+      "mediaTime": 4.25,
+      "presented": 103
+    },
+    {
+      "mediaTime": 4.291667,
+      "presented": 104
+    },
+    {
+      "mediaTime": 4.333333,
+      "presented": 105
+    },
+    {
+      "mediaTime": 4.375,
+      "presented": 106
+    },
+    {
+      "mediaTime": 4.416667,
+      "presented": 107
+    },
+    {
+      "mediaTime": 4.458333,
+      "presented": 108
+    },
+    {
+      "mediaTime": 4.5,
+      "presented": 109
+    },
+    {
+      "mediaTime": 4.541667,
+      "presented": 110
+    },
+    {
+      "mediaTime": 4.583333,
+      "presented": 111
+    },
+    {
+      "mediaTime": 4.625,
+      "presented": 112
+    },
+    {
+      "mediaTime": 4.666667,
+      "presented": 113
+    },
+    {
+      "mediaTime": 4.708333,
+      "presented": 114
+    },
+    {
+      "mediaTime": 4.75,
+      "presented": 115
+    },
+    {
+      "mediaTime": 4.791667,
+      "presented": 116
+    },
+    {
+      "mediaTime": 4.833333,
+      "presented": 117
+    },
+    {
+      "mediaTime": 4.875,
+      "presented": 118
+    },
+    {
+      "mediaTime": 4.916667,
+      "presented": 119
+    },
+    {
+      "mediaTime": 4.958333,
+      "presented": 120
+    },
+    {
+      "mediaTime": 5,
+      "presented": 121
+    },
+    {
+      "mediaTime": 5.041667,
+      "presented": 122
+    },
+    {
+      "mediaTime": 5.083333,
+      "presented": 123
+    },
+    {
+      "mediaTime": 5.125,
+      "presented": 124
+    },
+    {
+      "mediaTime": 5.166667,
+      "presented": 125
+    },
+    {
+      "mediaTime": 5.208333,
+      "presented": 126
+    },
+    {
+      "mediaTime": 5.25,
+      "presented": 127
+    },
+    {
+      "mediaTime": 5.291667,
+      "presented": 128
+    },
+    {
+      "mediaTime": 5.333333,
+      "presented": 129
+    },
+    {
+      "mediaTime": 5.375,
+      "presented": 130
+    },
+    {
+      "mediaTime": 5.416667,
+      "presented": 131
+    },
+    {
+      "mediaTime": 5.458333,
+      "presented": 132
+    },
+    {
+      "mediaTime": 5.5,
+      "presented": 133
+    },
+    {
+      "mediaTime": 5.541667,
+      "presented": 134
+    },
+    {
+      "mediaTime": 5.583333,
+      "presented": 135
+    },
+    {
+      "mediaTime": 5.625,
+      "presented": 136
+    },
+    {
+      "mediaTime": 5.666667,
+      "presented": 137
+    },
+    {
+      "mediaTime": 5.708333,
+      "presented": 138
+    },
+    {
+      "mediaTime": 5.75,
+      "presented": 139
+    },
+    {
+      "mediaTime": 5.791667,
+      "presented": 140
+    },
+    {
+      "mediaTime": 5.833333,
+      "presented": 141
+    },
+    {
+      "mediaTime": 5.875,
+      "presented": 142
+    },
+    {
+      "mediaTime": 5.916667,
+      "presented": 143
+    },
+    {
+      "mediaTime": 5.958333,
+      "presented": 144
+    },
+    {
+      "mediaTime": 6,
+      "presented": 145
+    },
+    {
+      "mediaTime": 6.041667,
+      "presented": 146
+    },
+    {
+      "mediaTime": 6.083333,
+      "presented": 147
+    },
+    {
+      "mediaTime": 6.125,
+      "presented": 148
+    },
+    {
+      "mediaTime": 6.166667,
+      "presented": 149
+    },
+    {
+      "mediaTime": 6.208333,
+      "presented": 150
+    },
+    {
+      "mediaTime": 6.25,
+      "presented": 151
+    },
+    {
+      "mediaTime": 6.291667,
+      "presented": 152
+    },
+    {
+      "mediaTime": 6.333333,
+      "presented": 153
+    },
+    {
+      "mediaTime": 6.375,
+      "presented": 154
+    },
+    {
+      "mediaTime": 6.416667,
+      "presented": 155
+    },
+    {
+      "mediaTime": 6.458333,
+      "presented": 156
+    },
+    {
+      "mediaTime": 6.5,
+      "presented": 157
+    },
+    {
+      "mediaTime": 6.541667,
+      "presented": 158
+    },
+    {
+      "mediaTime": 6.583333,
+      "presented": 159
+    },
+    {
+      "mediaTime": 6.625,
+      "presented": 160
+    },
+    {
+      "mediaTime": 6.666667,
+      "presented": 161
+    },
+    {
+      "mediaTime": 6.708333,
+      "presented": 162
+    },
+    {
+      "mediaTime": 6.75,
+      "presented": 163
+    },
+    {
+      "mediaTime": 6.791667,
+      "presented": 164
+    },
+    {
+      "mediaTime": 6.833333,
+      "presented": 165
+    },
+    {
+      "mediaTime": 6.875,
+      "presented": 166
+    },
+    {
+      "mediaTime": 6.916667,
+      "presented": 167
+    },
+    {
+      "mediaTime": 6.958333,
+      "presented": 168
+    },
+    {
+      "mediaTime": 7,
+      "presented": 169
+    },
+    {
+      "mediaTime": 7.041667,
+      "presented": 170
+    },
+    {
+      "mediaTime": 7.083333,
+      "presented": 171
+    },
+    {
+      "mediaTime": 7.125,
+      "presented": 172
+    },
+    {
+      "mediaTime": 7.166667,
+      "presented": 173
+    },
+    {
+      "mediaTime": 7.208333,
+      "presented": 174
+    },
+    {
+      "mediaTime": 7.25,
+      "presented": 175
+    },
+    {
+      "mediaTime": 7.291667,
+      "presented": 176
+    },
+    {
+      "mediaTime": 7.333333,
+      "presented": 177
+    },
+    {
+      "mediaTime": 7.375,
+      "presented": 178
+    },
+    {
+      "mediaTime": 7.416667,
+      "presented": 179
+    },
+    {
+      "mediaTime": 7.458333,
+      "presented": 180
+    },
+    {
+      "mediaTime": 7.5,
+      "presented": 181
+    },
+    {
+      "mediaTime": 7.541667,
+      "presented": 182
+    },
+    {
+      "mediaTime": 7.583333,
+      "presented": 183
+    },
+    {
+      "mediaTime": 7.625,
+      "presented": 184
+    },
+    {
+      "mediaTime": 7.666667,
+      "presented": 185
+    },
+    {
+      "mediaTime": 7.708333,
+      "presented": 186
+    },
+    {
+      "mediaTime": 7.75,
+      "presented": 187
+    },
+    {
+      "mediaTime": 7.791667,
+      "presented": 188
+    },
+    {
+      "mediaTime": 7.833333,
+      "presented": 189
+    },
+    {
+      "mediaTime": 7.875,
+      "presented": 190
+    },
+    {
+      "mediaTime": 7.916667,
+      "presented": 191
+    },
+    {
+      "mediaTime": 7.958333,
+      "presented": 192
+    },
+    {
+      "mediaTime": 8,
+      "presented": 193
+    },
+    {
+      "mediaTime": 8.041667,
+      "presented": 194
+    },
+    {
+      "mediaTime": 8.083333,
+      "presented": 195
+    },
+    {
+      "mediaTime": 8.125,
+      "presented": 196
+    },
+    {
+      "mediaTime": 8.166667,
+      "presented": 197
+    },
+    {
+      "mediaTime": 8.208333,
+      "presented": 198
+    },
+    {
+      "mediaTime": 8.25,
+      "presented": 199
+    },
+    {
+      "mediaTime": 8.291667,
+      "presented": 200
+    },
+    {
+      "mediaTime": 8.333333,
+      "presented": 201
+    },
+    {
+      "mediaTime": 8.375,
+      "presented": 202
+    },
+    {
+      "mediaTime": 8.416667,
+      "presented": 203
+    },
+    {
+      "mediaTime": 8.458333,
+      "presented": 204
+    },
+    {
+      "mediaTime": 8.5,
+      "presented": 205
+    },
+    {
+      "mediaTime": 8.541667,
+      "presented": 206
+    },
+    {
+      "mediaTime": 8.583333,
+      "presented": 207
+    },
+    {
+      "mediaTime": 8.625,
+      "presented": 208
+    },
+    {
+      "mediaTime": 8.666667,
+      "presented": 209
+    },
+    {
+      "mediaTime": 8.708333,
+      "presented": 210
+    },
+    {
+      "mediaTime": 8.75,
+      "presented": 211
+    },
+    {
+      "mediaTime": 8.791667,
+      "presented": 212
+    },
+    {
+      "mediaTime": 8.833333,
+      "presented": 213
+    },
+    {
+      "mediaTime": 8.875,
+      "presented": 214
+    },
+    {
+      "mediaTime": 8.916667,
+      "presented": 215
+    },
+    {
+      "mediaTime": 8.958333,
+      "presented": 216
+    },
+    {
+      "mediaTime": 9,
+      "presented": 217
+    },
+    {
+      "mediaTime": 9.041667,
+      "presented": 218
+    },
+    {
+      "mediaTime": 9.083333,
+      "presented": 219
+    },
+    {
+      "mediaTime": 9.125,
+      "presented": 220
+    },
+    {
+      "mediaTime": 9.166667,
+      "presented": 221
+    },
+    {
+      "mediaTime": 9.208333,
+      "presented": 222
+    },
+    {
+      "mediaTime": 9.25,
+      "presented": 223
+    },
+    {
+      "mediaTime": 9.291667,
+      "presented": 224
+    },
+    {
+      "mediaTime": 9.333333,
+      "presented": 225
+    },
+    {
+      "mediaTime": 9.375,
+      "presented": 226
+    },
+    {
+      "mediaTime": 9.416667,
+      "presented": 227
+    },
+    {
+      "mediaTime": 9.458333,
+      "presented": 228
+    },
+    {
+      "mediaTime": 9.5,
+      "presented": 229
+    },
+    {
+      "mediaTime": 9.541667,
+      "presented": 230
+    },
+    {
+      "mediaTime": 9.583333,
+      "presented": 231
+    },
+    {
+      "mediaTime": 9.625,
+      "presented": 232
+    },
+    {
+      "mediaTime": 9.666667,
+      "presented": 233
+    },
+    {
+      "mediaTime": 9.708333,
+      "presented": 234
+    },
+    {
+      "mediaTime": 9.75,
+      "presented": 235
+    },
+    {
+      "mediaTime": 9.791667,
+      "presented": 236
+    },
+    {
+      "mediaTime": 9.833333,
+      "presented": 237
+    },
+    {
+      "mediaTime": 9.875,
+      "presented": 238
+    },
+    {
+      "mediaTime": 9.916667,
+      "presented": 239
+    },
+    {
+      "mediaTime": 9.958333,
+      "presented": 240
+    },
+    {
+      "mediaTime": 10,
+      "presented": 241
+    },
+    {
+      "mediaTime": 10.041667,
+      "presented": 242
+    },
+    {
+      "mediaTime": 10.083333,
+      "presented": 243
+    },
+    {
+      "mediaTime": 10.125,
+      "presented": 244
+    },
+    {
+      "mediaTime": 10.166667,
+      "presented": 245
+    },
+    {
+      "mediaTime": 10.208333,
+      "presented": 246
+    },
+    {
+      "mediaTime": 10.25,
+      "presented": 247
+    },
+    {
+      "mediaTime": 10.291667,
+      "presented": 248
+    },
+    {
+      "mediaTime": 10.333333,
+      "presented": 249
+    },
+    {
+      "mediaTime": 10.375,
+      "presented": 250
+    },
+    {
+      "mediaTime": 10.416667,
+      "presented": 251
+    },
+    {
+      "mediaTime": 10.458333,
+      "presented": 252
+    },
+    {
+      "mediaTime": 10.5,
+      "presented": 253
+    },
+    {
+      "mediaTime": 10.541667,
+      "presented": 254
+    },
+    {
+      "mediaTime": 10.583333,
+      "presented": 255
+    },
+    {
+      "mediaTime": 10.625,
+      "presented": 256
+    },
+    {
+      "mediaTime": 10.666667,
+      "presented": 257
+    },
+    {
+      "mediaTime": 10.708333,
+      "presented": 258
+    },
+    {
+      "mediaTime": 10.75,
+      "presented": 259
+    },
+    {
+      "mediaTime": 10.791667,
+      "presented": 260
+    },
+    {
+      "mediaTime": 10.833333,
+      "presented": 261
+    },
+    {
+      "mediaTime": 10.875,
+      "presented": 262
+    },
+    {
+      "mediaTime": 10.916667,
+      "presented": 263
+    },
+    {
+      "mediaTime": 10.958333,
+      "presented": 264
+    },
+    {
+      "mediaTime": 11,
+      "presented": 265
+    },
+    {
+      "mediaTime": 11.041667,
+      "presented": 266
+    },
+    {
+      "mediaTime": 11.083333,
+      "presented": 267
+    },
+    {
+      "mediaTime": 11.125,
+      "presented": 268
+    },
+    {
+      "mediaTime": 11.166667,
+      "presented": 269
+    },
+    {
+      "mediaTime": 11.208333,
+      "presented": 270
+    },
+    {
+      "mediaTime": 11.25,
+      "presented": 271
+    },
+    {
+      "mediaTime": 11.291667,
+      "presented": 272
+    },
+    {
+      "mediaTime": 11.333333,
+      "presented": 273
+    },
+    {
+      "mediaTime": 11.375,
+      "presented": 274
+    },
+    {
+      "mediaTime": 11.416667,
+      "presented": 275
+    },
+    {
+      "mediaTime": 11.458333,
+      "presented": 276
+    },
+    {
+      "mediaTime": 11.5,
+      "presented": 277
+    },
+    {
+      "mediaTime": 11.541667,
+      "presented": 278
+    },
+    {
+      "mediaTime": 11.583333,
+      "presented": 279
+    },
+    {
+      "mediaTime": 11.625,
+      "presented": 280
+    },
+    {
+      "mediaTime": 11.666667,
+      "presented": 281
+    },
+    {
+      "mediaTime": 11.708333,
+      "presented": 282
+    },
+    {
+      "mediaTime": 11.75,
+      "presented": 283
+    },
+    {
+      "mediaTime": 11.791667,
+      "presented": 284
+    },
+    {
+      "mediaTime": 11.833333,
+      "presented": 285
+    },
+    {
+      "mediaTime": 11.875,
+      "presented": 286
+    },
+    {
+      "mediaTime": 11.916667,
+      "presented": 287
+    },
+    {
+      "mediaTime": 11.958333,
+      "presented": 288
+    },
+    {
+      "mediaTime": 12,
+      "presented": 289
+    },
+    {
+      "mediaTime": 12.041667,
+      "presented": 290
+    },
+    {
+      "mediaTime": 12.083333,
+      "presented": 291
+    },
+    {
+      "mediaTime": 12.125,
+      "presented": 292
+    },
+    {
+      "mediaTime": 12.166667,
+      "presented": 293
+    },
+    {
+      "mediaTime": 12.208333,
+      "presented": 294
+    },
+    {
+      "mediaTime": 12.25,
+      "presented": 295
+    },
+    {
+      "mediaTime": 12.291667,
+      "presented": 296
+    },
+    {
+      "mediaTime": 12.333333,
+      "presented": 297
+    },
+    {
+      "mediaTime": 12.375,
+      "presented": 298
+    },
+    {
+      "mediaTime": 12.416667,
+      "presented": 299
+    },
+    {
+      "mediaTime": 12.458333,
+      "presented": 300
+    },
+    {
+      "mediaTime": 12.5,
+      "presented": 301
+    },
+    {
+      "mediaTime": 12.541667,
+      "presented": 302
+    },
+    {
+      "mediaTime": 12.583333,
+      "presented": 303
+    },
+    {
+      "mediaTime": 12.625,
+      "presented": 304
+    },
+    {
+      "mediaTime": 12.666667,
+      "presented": 305
+    },
+    {
+      "mediaTime": 12.708333,
+      "presented": 306
+    },
+    {
+      "mediaTime": 12.75,
+      "presented": 307
+    },
+    {
+      "mediaTime": 12.791667,
+      "presented": 308
+    },
+    {
+      "mediaTime": 12.833333,
+      "presented": 309
+    },
+    {
+      "mediaTime": 12.875,
+      "presented": 310
+    },
+    {
+      "mediaTime": 12.916667,
+      "presented": 311
+    },
+    {
+      "mediaTime": 12.958333,
+      "presented": 312
+    },
+    {
+      "mediaTime": 13,
+      "presented": 313
+    },
+    {
+      "mediaTime": 13.041667,
+      "presented": 314
+    },
+    {
+      "mediaTime": 13.083333,
+      "presented": 315
+    },
+    {
+      "mediaTime": 13.125,
+      "presented": 316
+    },
+    {
+      "mediaTime": 13.166667,
+      "presented": 317
+    },
+    {
+      "mediaTime": 13.208333,
+      "presented": 318
+    },
+    {
+      "mediaTime": 13.25,
+      "presented": 319
+    },
+    {
+      "mediaTime": 13.291667,
+      "presented": 320
+    },
+    {
+      "mediaTime": 13.333333,
+      "presented": 321
+    },
+    {
+      "mediaTime": 13.375,
+      "presented": 322
+    },
+    {
+      "mediaTime": 13.416667,
+      "presented": 323
+    },
+    {
+      "mediaTime": 13.458333,
+      "presented": 324
+    },
+    {
+      "mediaTime": 13.5,
+      "presented": 325
+    },
+    {
+      "mediaTime": 13.541667,
+      "presented": 326
+    },
+    {
+      "mediaTime": 13.583333,
+      "presented": 327
+    },
+    {
+      "mediaTime": 13.625,
+      "presented": 328
+    },
+    {
+      "mediaTime": 13.666667,
+      "presented": 329
+    },
+    {
+      "mediaTime": 13.708333,
+      "presented": 330
+    },
+    {
+      "mediaTime": 13.75,
+      "presented": 331
+    },
+    {
+      "mediaTime": 13.791667,
+      "presented": 332
+    },
+    {
+      "mediaTime": 13.833333,
+      "presented": 333
+    },
+    {
+      "mediaTime": 13.875,
+      "presented": 334
+    },
+    {
+      "mediaTime": 13.916667,
+      "presented": 335
+    },
+    {
+      "mediaTime": 13.958333,
+      "presented": 336
+    },
+    {
+      "mediaTime": 14,
+      "presented": 337
+    },
+    {
+      "mediaTime": 14.041667,
+      "presented": 338
+    },
+    {
+      "mediaTime": 14.083333,
+      "presented": 339
+    },
+    {
+      "mediaTime": 14.125,
+      "presented": 340
+    },
+    {
+      "mediaTime": 14.166667,
+      "presented": 341
+    },
+    {
+      "mediaTime": 14.208333,
+      "presented": 342
+    },
+    {
+      "mediaTime": 14.25,
+      "presented": 343
+    },
+    {
+      "mediaTime": 14.291667,
+      "presented": 344
+    },
+    {
+      "mediaTime": 14.333333,
+      "presented": 345
+    },
+    {
+      "mediaTime": 14.375,
+      "presented": 346
+    },
+    {
+      "mediaTime": 14.416667,
+      "presented": 347
+    },
+    {
+      "mediaTime": 14.458333,
+      "presented": 348
+    },
+    {
+      "mediaTime": 14.5,
+      "presented": 349
+    },
+    {
+      "mediaTime": 14.541667,
+      "presented": 350
+    },
+    {
+      "mediaTime": 14.583333,
+      "presented": 351
+    },
+    {
+      "mediaTime": 14.625,
+      "presented": 352
+    },
+    {
+      "mediaTime": 14.666667,
+      "presented": 353
+    },
+    {
+      "mediaTime": 14.708333,
+      "presented": 354
+    },
+    {
+      "mediaTime": 14.75,
+      "presented": 355
+    },
+    {
+      "mediaTime": 14.791667,
+      "presented": 356
+    },
+    {
+      "mediaTime": 14.833333,
+      "presented": 357
+    },
+    {
+      "mediaTime": 14.875,
+      "presented": 358
+    },
+    {
+      "mediaTime": 14.916667,
+      "presented": 359
+    },
+    {
+      "mediaTime": 14.958333,
+      "presented": 360
+    },
+    {
+      "mediaTime": 15,
+      "presented": 361
+    },
+    {
+      "mediaTime": 15.041667,
+      "presented": 362
+    },
+    {
+      "mediaTime": 15.083333,
+      "presented": 363
+    },
+    {
+      "mediaTime": 15.125,
+      "presented": 364
+    },
+    {
+      "mediaTime": 15.166667,
+      "presented": 365
+    },
+    {
+      "mediaTime": 15.208333,
+      "presented": 366
+    },
+    {
+      "mediaTime": 15.25,
+      "presented": 367
+    },
+    {
+      "mediaTime": 15.291667,
+      "presented": 368
+    },
+    {
+      "mediaTime": 15.333333,
+      "presented": 369
+    },
+    {
+      "mediaTime": 15.375,
+      "presented": 370
+    },
+    {
+      "mediaTime": 15.416667,
+      "presented": 371
+    },
+    {
+      "mediaTime": 15.458333,
+      "presented": 372
+    },
+    {
+      "mediaTime": 15.5,
+      "presented": 373
+    },
+    {
+      "mediaTime": 15.541667,
+      "presented": 374
+    },
+    {
+      "mediaTime": 15.583333,
+      "presented": 375
+    },
+    {
+      "mediaTime": 15.625,
+      "presented": 376
+    },
+    {
+      "mediaTime": 15.666667,
+      "presented": 377
+    },
+    {
+      "mediaTime": 15.708333,
+      "presented": 378
+    },
+    {
+      "mediaTime": 15.75,
+      "presented": 379
+    },
+    {
+      "mediaTime": 15.791667,
+      "presented": 380
+    },
+    {
+      "mediaTime": 15.833333,
+      "presented": 381
+    },
+    {
+      "mediaTime": 15.875,
+      "presented": 382
+    },
+    {
+      "mediaTime": 15.916667,
+      "presented": 383
+    },
+    {
+      "mediaTime": 15.958333,
+      "presented": 384
+    },
+    {
+      "mediaTime": 16,
+      "presented": 385
+    },
+    {
+      "mediaTime": 16.041667,
+      "presented": 386
+    },
+    {
+      "mediaTime": 16.083333,
+      "presented": 387
+    },
+    {
+      "mediaTime": 16.125,
+      "presented": 388
+    },
+    {
+      "mediaTime": 16.166667,
+      "presented": 389
+    },
+    {
+      "mediaTime": 16.208333,
+      "presented": 390
+    },
+    {
+      "mediaTime": 16.25,
+      "presented": 391
+    },
+    {
+      "mediaTime": 16.291667,
+      "presented": 392
+    },
+    {
+      "mediaTime": 16.333333,
+      "presented": 393
+    },
+    {
+      "mediaTime": 16.375,
+      "presented": 394
+    },
+    {
+      "mediaTime": 16.416667,
+      "presented": 395
+    },
+    {
+      "mediaTime": 16.458333,
+      "presented": 396
+    },
+    {
+      "mediaTime": 16.5,
+      "presented": 397
+    },
+    {
+      "mediaTime": 16.541667,
+      "presented": 398
+    },
+    {
+      "mediaTime": 16.583333,
+      "presented": 399
+    },
+    {
+      "mediaTime": 16.625,
+      "presented": 400
+    },
+    {
+      "mediaTime": 16.666667,
+      "presented": 401
+    },
+    {
+      "mediaTime": 16.708333,
+      "presented": 402
+    },
+    {
+      "mediaTime": 16.75,
+      "presented": 403
+    },
+    {
+      "mediaTime": 16.791667,
+      "presented": 404
+    },
+    {
+      "mediaTime": 16.833333,
+      "presented": 405
+    },
+    {
+      "mediaTime": 16.875,
+      "presented": 406
+    },
+    {
+      "mediaTime": 16.916667,
+      "presented": 407
+    },
+    {
+      "mediaTime": 16.958333,
+      "presented": 408
+    },
+    {
+      "mediaTime": 17,
+      "presented": 409
+    },
+    {
+      "mediaTime": 17.041667,
+      "presented": 410
+    },
+    {
+      "mediaTime": 17.083333,
+      "presented": 411
+    },
+    {
+      "mediaTime": 17.125,
+      "presented": 412
+    },
+    {
+      "mediaTime": 17.166667,
+      "presented": 413
+    },
+    {
+      "mediaTime": 17.208333,
+      "presented": 414
+    },
+    {
+      "mediaTime": 17.25,
+      "presented": 415
+    },
+    {
+      "mediaTime": 17.291667,
+      "presented": 416
+    },
+    {
+      "mediaTime": 17.333333,
+      "presented": 417
+    },
+    {
+      "mediaTime": 17.375,
+      "presented": 418
+    },
+    {
+      "mediaTime": 17.416667,
+      "presented": 419
+    },
+    {
+      "mediaTime": 17.458333,
+      "presented": 420
+    },
+    {
+      "mediaTime": 17.5,
+      "presented": 421
+    },
+    {
+      "mediaTime": 17.541667,
+      "presented": 422
+    },
+    {
+      "mediaTime": 17.583333,
+      "presented": 423
+    },
+    {
+      "mediaTime": 17.625,
+      "presented": 424
+    },
+    {
+      "mediaTime": 17.666667,
+      "presented": 425
+    },
+    {
+      "mediaTime": 17.708333,
+      "presented": 426
+    },
+    {
+      "mediaTime": 17.75,
+      "presented": 427
+    },
+    {
+      "mediaTime": 17.791667,
+      "presented": 428
+    },
+    {
+      "mediaTime": 17.833333,
+      "presented": 429
+    },
+    {
+      "mediaTime": 17.875,
+      "presented": 430
+    },
+    {
+      "mediaTime": 17.916667,
+      "presented": 431
+    },
+    {
+      "mediaTime": 17.958333,
+      "presented": 432
+    },
+    {
+      "mediaTime": 18,
+      "presented": 433
+    },
+    {
+      "mediaTime": 18.041667,
+      "presented": 434
+    },
+    {
+      "mediaTime": 18.083333,
+      "presented": 435
+    },
+    {
+      "mediaTime": 18.125,
+      "presented": 436
+    },
+    {
+      "mediaTime": 18.166667,
+      "presented": 437
+    },
+    {
+      "mediaTime": 18.208333,
+      "presented": 438
+    },
+    {
+      "mediaTime": 18.25,
+      "presented": 439
+    },
+    {
+      "mediaTime": 18.291667,
+      "presented": 440
+    },
+    {
+      "mediaTime": 18.333333,
+      "presented": 441
+    },
+    {
+      "mediaTime": 18.375,
+      "presented": 442
+    },
+    {
+      "mediaTime": 18.416667,
+      "presented": 443
+    },
+    {
+      "mediaTime": 18.458333,
+      "presented": 444
+    },
+    {
+      "mediaTime": 18.5,
+      "presented": 445
+    },
+    {
+      "mediaTime": 18.541667,
+      "presented": 446
+    },
+    {
+      "mediaTime": 18.583333,
+      "presented": 447
+    },
+    {
+      "mediaTime": 18.625,
+      "presented": 448
+    },
+    {
+      "mediaTime": 18.666667,
+      "presented": 449
+    },
+    {
+      "mediaTime": 18.708333,
+      "presented": 450
+    },
+    {
+      "mediaTime": 18.75,
+      "presented": 451
+    },
+    {
+      "mediaTime": 18.791667,
+      "presented": 452
+    },
+    {
+      "mediaTime": 18.833333,
+      "presented": 453
+    },
+    {
+      "mediaTime": 18.875,
+      "presented": 454
+    },
+    {
+      "mediaTime": 18.916667,
+      "presented": 455
+    },
+    {
+      "mediaTime": 18.958333,
+      "presented": 456
+    },
+    {
+      "mediaTime": 19,
+      "presented": 457
+    },
+    {
+      "mediaTime": 19.041667,
+      "presented": 458
+    },
+    {
+      "mediaTime": 19.083333,
+      "presented": 459
+    },
+    {
+      "mediaTime": 19.125,
+      "presented": 460
+    },
+    {
+      "mediaTime": 19.166667,
+      "presented": 461
+    },
+    {
+      "mediaTime": 19.208333,
+      "presented": 462
+    },
+    {
+      "mediaTime": 19.25,
+      "presented": 463
+    },
+    {
+      "mediaTime": 19.291667,
+      "presented": 464
+    },
+    {
+      "mediaTime": 19.333333,
+      "presented": 465
+    },
+    {
+      "mediaTime": 19.375,
+      "presented": 466
+    },
+    {
+      "mediaTime": 19.416667,
+      "presented": 467
+    },
+    {
+      "mediaTime": 19.458333,
+      "presented": 468
+    },
+    {
+      "mediaTime": 19.5,
+      "presented": 469
+    },
+    {
+      "mediaTime": 19.541667,
+      "presented": 470
+    },
+    {
+      "mediaTime": 19.583333,
+      "presented": 471
+    },
+    {
+      "mediaTime": 19.625,
+      "presented": 472
+    },
+    {
+      "mediaTime": 19.666667,
+      "presented": 473
+    },
+    {
+      "mediaTime": 19.708333,
+      "presented": 474
+    },
+    {
+      "mediaTime": 19.75,
+      "presented": 475
+    },
+    {
+      "mediaTime": 19.791667,
+      "presented": 476
+    },
+    {
+      "mediaTime": 19.833333,
+      "presented": 477
+    },
+    {
+      "mediaTime": 19.875,
+      "presented": 478
+    },
+    {
+      "mediaTime": 19.916667,
+      "presented": 479
+    },
+    {
+      "mediaTime": 19.958333,
+      "presented": 480
+    },
+    {
+      "mediaTime": 20,
+      "presented": 481
+    },
+    {
+      "mediaTime": 20.041667,
+      "presented": 482
+    },
+    {
+      "mediaTime": 20.083333,
+      "presented": 483
+    },
+    {
+      "mediaTime": 20.125,
+      "presented": 484
+    },
+    {
+      "mediaTime": 20.166667,
+      "presented": 485
+    },
+    {
+      "mediaTime": 20.208333,
+      "presented": 486
+    },
+    {
+      "mediaTime": 20.25,
+      "presented": 487
+    },
+    {
+      "mediaTime": 20.291667,
+      "presented": 488
+    },
+    {
+      "mediaTime": 20.333333,
+      "presented": 489
+    },
+    {
+      "mediaTime": 20.375,
+      "presented": 490
+    },
+    {
+      "mediaTime": 20.416667,
+      "presented": 491
+    },
+    {
+      "mediaTime": 20.458333,
+      "presented": 492
+    },
+    {
+      "mediaTime": 20.5,
+      "presented": 493
+    },
+    {
+      "mediaTime": 20.541667,
+      "presented": 494
+    },
+    {
+      "mediaTime": 20.583333,
+      "presented": 495
+    },
+    {
+      "mediaTime": 20.625,
+      "presented": 496
+    },
+    {
+      "mediaTime": 20.666667,
+      "presented": 497
+    },
+    {
+      "mediaTime": 20.708333,
+      "presented": 498
+    },
+    {
+      "mediaTime": 20.75,
+      "presented": 499
+    },
+    {
+      "mediaTime": 20.791667,
+      "presented": 500
+    },
+    {
+      "mediaTime": 20.833333,
+      "presented": 501
+    },
+    {
+      "mediaTime": 20.875,
+      "presented": 502
+    },
+    {
+      "mediaTime": 20.916667,
+      "presented": 503
+    },
+    {
+      "mediaTime": 20.958333,
+      "presented": 504
+    },
+    {
+      "mediaTime": 21,
+      "presented": 505
+    },
+    {
+      "mediaTime": 21.041667,
+      "presented": 506
+    },
+    {
+      "mediaTime": 21.083333,
+      "presented": 507
+    },
+    {
+      "mediaTime": 21.125,
+      "presented": 508
+    },
+    {
+      "mediaTime": 21.166667,
+      "presented": 509
+    },
+    {
+      "mediaTime": 21.208333,
+      "presented": 510
+    },
+    {
+      "mediaTime": 21.25,
+      "presented": 511
+    },
+    {
+      "mediaTime": 21.291667,
+      "presented": 512
+    },
+    {
+      "mediaTime": 21.333333,
+      "presented": 513
+    },
+    {
+      "mediaTime": 21.375,
+      "presented": 514
+    },
+    {
+      "mediaTime": 21.416667,
+      "presented": 515
+    },
+    {
+      "mediaTime": 21.458333,
+      "presented": 516
+    },
+    {
+      "mediaTime": 21.5,
+      "presented": 517
+    },
+    {
+      "mediaTime": 21.541667,
+      "presented": 518
+    },
+    {
+      "mediaTime": 21.583333,
+      "presented": 519
+    },
+    {
+      "mediaTime": 21.625,
+      "presented": 520
+    },
+    {
+      "mediaTime": 21.666667,
+      "presented": 521
+    },
+    {
+      "mediaTime": 21.708333,
+      "presented": 522
+    },
+    {
+      "mediaTime": 21.75,
+      "presented": 523
+    },
+    {
+      "mediaTime": 21.791667,
+      "presented": 524
+    },
+    {
+      "mediaTime": 21.833333,
+      "presented": 525
+    },
+    {
+      "mediaTime": 21.875,
+      "presented": 526
+    },
+    {
+      "mediaTime": 21.916667,
+      "presented": 527
+    },
+    {
+      "mediaTime": 21.958333,
+      "presented": 528
+    },
+    {
+      "mediaTime": 22,
+      "presented": 529
+    },
+    {
+      "mediaTime": 22.041667,
+      "presented": 530
+    },
+    {
+      "mediaTime": 22.083333,
+      "presented": 531
+    },
+    {
+      "mediaTime": 22.125,
+      "presented": 532
+    },
+    {
+      "mediaTime": 22.166667,
+      "presented": 533
+    },
+    {
+      "mediaTime": 22.208333,
+      "presented": 534
+    },
+    {
+      "mediaTime": 22.25,
+      "presented": 535
+    },
+    {
+      "mediaTime": 22.291667,
+      "presented": 536
+    },
+    {
+      "mediaTime": 22.333333,
+      "presented": 537
+    },
+    {
+      "mediaTime": 22.375,
+      "presented": 538
+    },
+    {
+      "mediaTime": 22.416667,
+      "presented": 539
+    },
+    {
+      "mediaTime": 22.458333,
+      "presented": 540
+    },
+    {
+      "mediaTime": 22.5,
+      "presented": 541
+    },
+    {
+      "mediaTime": 22.541667,
+      "presented": 542
+    },
+    {
+      "mediaTime": 22.583333,
+      "presented": 543
+    },
+    {
+      "mediaTime": 22.625,
+      "presented": 544
+    },
+    {
+      "mediaTime": 22.666667,
+      "presented": 545
+    },
+    {
+      "mediaTime": 22.708333,
+      "presented": 546
+    },
+    {
+      "mediaTime": 22.75,
+      "presented": 547
+    },
+    {
+      "mediaTime": 22.791667,
+      "presented": 548
+    },
+    {
+      "mediaTime": 22.833333,
+      "presented": 549
+    },
+    {
+      "mediaTime": 22.875,
+      "presented": 550
+    },
+    {
+      "mediaTime": 22.916667,
+      "presented": 551
+    },
+    {
+      "mediaTime": 22.958333,
+      "presented": 552
+    },
+    {
+      "mediaTime": 23,
+      "presented": 553
+    },
+    {
+      "mediaTime": 23.041667,
+      "presented": 554
+    },
+    {
+      "mediaTime": 23.083333,
+      "presented": 555
+    },
+    {
+      "mediaTime": 23.125,
+      "presented": 556
+    },
+    {
+      "mediaTime": 23.166667,
+      "presented": 557
+    },
+    {
+      "mediaTime": 23.208333,
+      "presented": 558
+    },
+    {
+      "mediaTime": 23.25,
+      "presented": 559
+    },
+    {
+      "mediaTime": 23.291667,
+      "presented": 560
+    },
+    {
+      "mediaTime": 23.333333,
+      "presented": 561
+    },
+    {
+      "mediaTime": 23.375,
+      "presented": 562
+    },
+    {
+      "mediaTime": 23.416667,
+      "presented": 563
+    },
+    {
+      "mediaTime": 23.458333,
+      "presented": 564
+    },
+    {
+      "mediaTime": 23.5,
+      "presented": 565
+    },
+    {
+      "mediaTime": 23.541667,
+      "presented": 566
+    },
+    {
+      "mediaTime": 23.583333,
+      "presented": 567
+    },
+    {
+      "mediaTime": 23.625,
+      "presented": 568
+    },
+    {
+      "mediaTime": 23.666667,
+      "presented": 569
+    },
+    {
+      "mediaTime": 23.708333,
+      "presented": 570
+    },
+    {
+      "mediaTime": 23.75,
+      "presented": 571
+    },
+    {
+      "mediaTime": 23.791667,
+      "presented": 572
+    },
+    {
+      "mediaTime": 23.833333,
+      "presented": 573
+    },
+    {
+      "mediaTime": 23.875,
+      "presented": 574
+    },
+    {
+      "mediaTime": 23.916667,
+      "presented": 575
+    },
+    {
+      "mediaTime": 23.958333,
+      "presented": 576
+    },
+    {
+      "mediaTime": 24,
+      "presented": 577
+    },
+    {
+      "mediaTime": 24.041667,
+      "presented": 578
+    },
+    {
+      "mediaTime": 24.083333,
+      "presented": 579
+    },
+    {
+      "mediaTime": 24.125,
+      "presented": 580
+    },
+    {
+      "mediaTime": 24.166667,
+      "presented": 581
+    },
+    {
+      "mediaTime": 24.208333,
+      "presented": 582
+    },
+    {
+      "mediaTime": 24.25,
+      "presented": 583
+    },
+    {
+      "mediaTime": 24.291667,
+      "presented": 584
+    },
+    {
+      "mediaTime": 24.333333,
+      "presented": 585
+    },
+    {
+      "mediaTime": 24.375,
+      "presented": 586
+    },
+    {
+      "mediaTime": 24.416667,
+      "presented": 587
+    },
+    {
+      "mediaTime": 24.458333,
+      "presented": 588
+    },
+    {
+      "mediaTime": 24.5,
+      "presented": 589
+    },
+    {
+      "mediaTime": 24.541667,
+      "presented": 590
+    },
+    {
+      "mediaTime": 24.583333,
+      "presented": 591
+    },
+    {
+      "mediaTime": 24.625,
+      "presented": 592
+    },
+    {
+      "mediaTime": 24.666667,
+      "presented": 593
+    },
+    {
+      "mediaTime": 24.708333,
+      "presented": 594
+    },
+    {
+      "mediaTime": 24.75,
+      "presented": 595
+    },
+    {
+      "mediaTime": 24.791667,
+      "presented": 596
+    },
+    {
+      "mediaTime": 24.833333,
+      "presented": 597
+    },
+    {
+      "mediaTime": 24.875,
+      "presented": 598
+    },
+    {
+      "mediaTime": 24.916667,
+      "presented": 599
+    },
+    {
+      "mediaTime": 24.958333,
+      "presented": 600
+    },
+    {
+      "mediaTime": 25,
+      "presented": 601
+    },
+    {
+      "mediaTime": 25.041667,
+      "presented": 602
+    },
+    {
+      "mediaTime": 25.083333,
+      "presented": 603
+    },
+    {
+      "mediaTime": 25.125,
+      "presented": 604
+    },
+    {
+      "mediaTime": 25.166667,
+      "presented": 605
+    },
+    {
+      "mediaTime": 25.208333,
+      "presented": 606
+    },
+    {
+      "mediaTime": 25.25,
+      "presented": 607
+    },
+    {
+      "mediaTime": 25.291667,
+      "presented": 608
+    },
+    {
+      "mediaTime": 25.333333,
+      "presented": 609
+    },
+    {
+      "mediaTime": 25.375,
+      "presented": 610
+    },
+    {
+      "mediaTime": 25.416667,
+      "presented": 611
+    },
+    {
+      "mediaTime": 25.458333,
+      "presented": 612
+    },
+    {
+      "mediaTime": 25.5,
+      "presented": 613
+    },
+    {
+      "mediaTime": 25.541667,
+      "presented": 614
+    },
+    {
+      "mediaTime": 25.583333,
+      "presented": 615
+    },
+    {
+      "mediaTime": 25.625,
+      "presented": 616
+    },
+    {
+      "mediaTime": 25.666667,
+      "presented": 617
+    },
+    {
+      "mediaTime": 25.708333,
+      "presented": 618
+    },
+    {
+      "mediaTime": 25.75,
+      "presented": 619
+    },
+    {
+      "mediaTime": 25.791667,
+      "presented": 620
+    },
+    {
+      "mediaTime": 25.833333,
+      "presented": 621
+    },
+    {
+      "mediaTime": 25.875,
+      "presented": 622
+    },
+    {
+      "mediaTime": 25.916667,
+      "presented": 623
+    },
+    {
+      "mediaTime": 25.958333,
+      "presented": 624
+    },
+    {
+      "mediaTime": 26,
+      "presented": 625
+    },
+    {
+      "mediaTime": 26.041667,
+      "presented": 626
+    },
+    {
+      "mediaTime": 26.083333,
+      "presented": 627
+    },
+    {
+      "mediaTime": 26.125,
+      "presented": 628
+    },
+    {
+      "mediaTime": 26.166667,
+      "presented": 629
+    },
+    {
+      "mediaTime": 26.208333,
+      "presented": 630
+    },
+    {
+      "mediaTime": 26.25,
+      "presented": 631
+    },
+    {
+      "mediaTime": 26.291667,
+      "presented": 632
+    },
+    {
+      "mediaTime": 26.333333,
+      "presented": 633
+    },
+    {
+      "mediaTime": 26.375,
+      "presented": 634
+    },
+    {
+      "mediaTime": 26.416667,
+      "presented": 635
+    },
+    {
+      "mediaTime": 26.458333,
+      "presented": 636
+    },
+    {
+      "mediaTime": 26.5,
+      "presented": 637
+    },
+    {
+      "mediaTime": 26.541667,
+      "presented": 638
+    },
+    {
+      "mediaTime": 26.583333,
+      "presented": 639
+    },
+    {
+      "mediaTime": 26.625,
+      "presented": 640
+    },
+    {
+      "mediaTime": 26.666667,
+      "presented": 641
+    },
+    {
+      "mediaTime": 26.708333,
+      "presented": 642
+    },
+    {
+      "mediaTime": 26.75,
+      "presented": 643
+    },
+    {
+      "mediaTime": 26.791667,
+      "presented": 644
+    },
+    {
+      "mediaTime": 26.833333,
+      "presented": 645
+    },
+    {
+      "mediaTime": 26.875,
+      "presented": 646
+    },
+    {
+      "mediaTime": 26.916667,
+      "presented": 647
+    },
+    {
+      "mediaTime": 26.958333,
+      "presented": 648
+    },
+    {
+      "mediaTime": 27,
+      "presented": 649
+    },
+    {
+      "mediaTime": 27.041667,
+      "presented": 650
+    },
+    {
+      "mediaTime": 27.083333,
+      "presented": 651
+    },
+    {
+      "mediaTime": 27.125,
+      "presented": 652
+    },
+    {
+      "mediaTime": 27.166667,
+      "presented": 653
+    },
+    {
+      "mediaTime": 27.208333,
+      "presented": 654
+    },
+    {
+      "mediaTime": 27.25,
+      "presented": 655
+    },
+    {
+      "mediaTime": 27.291667,
+      "presented": 656
+    },
+    {
+      "mediaTime": 27.333333,
+      "presented": 657
+    },
+    {
+      "mediaTime": 27.375,
+      "presented": 658
+    },
+    {
+      "mediaTime": 27.416667,
+      "presented": 659
+    },
+    {
+      "mediaTime": 27.458333,
+      "presented": 660
+    },
+    {
+      "mediaTime": 27.5,
+      "presented": 661
+    },
+    {
+      "mediaTime": 27.541667,
+      "presented": 662
+    },
+    {
+      "mediaTime": 27.583333,
+      "presented": 663
+    },
+    {
+      "mediaTime": 27.625,
+      "presented": 664
+    },
+    {
+      "mediaTime": 27.666667,
+      "presented": 665
+    },
+    {
+      "mediaTime": 27.708333,
+      "presented": 666
+    },
+    {
+      "mediaTime": 27.75,
+      "presented": 667
+    },
+    {
+      "mediaTime": 27.791667,
+      "presented": 668
+    },
+    {
+      "mediaTime": 27.833333,
+      "presented": 669
+    },
+    {
+      "mediaTime": 27.875,
+      "presented": 670
+    },
+    {
+      "mediaTime": 27.916667,
+      "presented": 671
+    },
+    {
+      "mediaTime": 27.958333,
+      "presented": 672
+    },
+    {
+      "mediaTime": 28,
+      "presented": 673
+    },
+    {
+      "mediaTime": 28.041667,
+      "presented": 674
+    },
+    {
+      "mediaTime": 28.083333,
+      "presented": 675
+    },
+    {
+      "mediaTime": 28.125,
+      "presented": 676
+    },
+    {
+      "mediaTime": 28.166667,
+      "presented": 677
+    },
+    {
+      "mediaTime": 28.208333,
+      "presented": 678
+    },
+    {
+      "mediaTime": 28.25,
+      "presented": 679
+    },
+    {
+      "mediaTime": 28.291667,
+      "presented": 680
+    },
+    {
+      "mediaTime": 28.333333,
+      "presented": 681
+    },
+    {
+      "mediaTime": 28.375,
+      "presented": 682
+    },
+    {
+      "mediaTime": 28.416667,
+      "presented": 683
+    },
+    {
+      "mediaTime": 28.458333,
+      "presented": 684
+    },
+    {
+      "mediaTime": 28.5,
+      "presented": 685
+    },
+    {
+      "mediaTime": 28.541667,
+      "presented": 686
+    },
+    {
+      "mediaTime": 28.583333,
+      "presented": 687
+    },
+    {
+      "mediaTime": 28.625,
+      "presented": 688
+    },
+    {
+      "mediaTime": 28.666667,
+      "presented": 689
+    },
+    {
+      "mediaTime": 28.708333,
+      "presented": 690
+    },
+    {
+      "mediaTime": 28.75,
+      "presented": 691
+    },
+    {
+      "mediaTime": 28.791667,
+      "presented": 692
+    },
+    {
+      "mediaTime": 28.833333,
+      "presented": 693
+    },
+    {
+      "mediaTime": 28.875,
+      "presented": 694
+    },
+    {
+      "mediaTime": 28.916667,
+      "presented": 695
+    },
+    {
+      "mediaTime": 28.958333,
+      "presented": 696
+    },
+    {
+      "mediaTime": 29,
+      "presented": 697
+    },
+    {
+      "mediaTime": 29.041667,
+      "presented": 698
+    },
+    {
+      "mediaTime": 29.083333,
+      "presented": 699
+    },
+    {
+      "mediaTime": 29.125,
+      "presented": 700
+    },
+    {
+      "mediaTime": 29.166667,
+      "presented": 701
+    },
+    {
+      "mediaTime": 29.208333,
+      "presented": 702
+    },
+    {
+      "mediaTime": 29.25,
+      "presented": 703
+    },
+    {
+      "mediaTime": 29.291667,
+      "presented": 704
+    },
+    {
+      "mediaTime": 29.333333,
+      "presented": 705
+    },
+    {
+      "mediaTime": 29.375,
+      "presented": 706
+    },
+    {
+      "mediaTime": 29.416667,
+      "presented": 707
+    },
+    {
+      "mediaTime": 29.458333,
+      "presented": 708
+    },
+    {
+      "mediaTime": 29.5,
+      "presented": 709
+    },
+    {
+      "mediaTime": 29.541667,
+      "presented": 710
+    },
+    {
+      "mediaTime": 29.583333,
+      "presented": 711
+    },
+    {
+      "mediaTime": 29.625,
+      "presented": 712
+    },
+    {
+      "mediaTime": 29.666667,
+      "presented": 713
+    },
+    {
+      "mediaTime": 29.708333,
+      "presented": 714
+    },
+    {
+      "mediaTime": 29.75,
+      "presented": 715
+    },
+    {
+      "mediaTime": 29.791667,
+      "presented": 716
+    },
+    {
+      "mediaTime": 29.833333,
+      "presented": 717
+    },
+    {
+      "mediaTime": 29.875,
+      "presented": 718
+    },
+    {
+      "mediaTime": 29.916667,
+      "presented": 719
+    },
+    {
+      "mediaTime": 29.958333,
+      "presented": 720
+    },
+    {
+      "mediaTime": 30,
+      "presented": 721
+    },
+    {
+      "mediaTime": 30.041667,
+      "presented": 722
+    },
+    {
+      "mediaTime": 30.083333,
+      "presented": 723
+    },
+    {
+      "mediaTime": 30.125,
+      "presented": 724
+    },
+    {
+      "mediaTime": 30.166667,
+      "presented": 725
+    },
+    {
+      "mediaTime": 30.208333,
+      "presented": 726
+    },
+    {
+      "mediaTime": 30.25,
+      "presented": 727
+    },
+    {
+      "mediaTime": 30.291667,
+      "presented": 728
+    },
+    {
+      "mediaTime": 30.333333,
+      "presented": 729
+    },
+    {
+      "mediaTime": 30.375,
+      "presented": 730
+    },
+    {
+      "mediaTime": 30.416667,
+      "presented": 731
+    },
+    {
+      "mediaTime": 30.458333,
+      "presented": 732
+    },
+    {
+      "mediaTime": 30.5,
+      "presented": 733
+    },
+    {
+      "mediaTime": 30.541667,
+      "presented": 734
+    },
+    {
+      "mediaTime": 30.583333,
+      "presented": 735
+    },
+    {
+      "mediaTime": 30.625,
+      "presented": 736
+    },
+    {
+      "mediaTime": 30.666667,
+      "presented": 737
+    },
+    {
+      "mediaTime": 30.708333,
+      "presented": 738
+    },
+    {
+      "mediaTime": 30.75,
+      "presented": 739
+    },
+    {
+      "mediaTime": 30.791667,
+      "presented": 740
+    },
+    {
+      "mediaTime": 30.833333,
+      "presented": 741
+    },
+    {
+      "mediaTime": 30.875,
+      "presented": 742
+    },
+    {
+      "mediaTime": 30.916667,
+      "presented": 743
+    },
+    {
+      "mediaTime": 30.958333,
+      "presented": 744
+    },
+    {
+      "mediaTime": 31,
+      "presented": 745
+    },
+    {
+      "mediaTime": 31.041667,
+      "presented": 746
+    },
+    {
+      "mediaTime": 31.083333,
+      "presented": 747
+    },
+    {
+      "mediaTime": 31.125,
+      "presented": 748
+    },
+    {
+      "mediaTime": 31.166667,
+      "presented": 749
+    },
+    {
+      "mediaTime": 31.208333,
+      "presented": 750
+    },
+    {
+      "mediaTime": 31.25,
+      "presented": 751
+    },
+    {
+      "mediaTime": 31.291667,
+      "presented": 752
+    },
+    {
+      "mediaTime": 31.333333,
+      "presented": 753
+    },
+    {
+      "mediaTime": 31.375,
+      "presented": 754
+    },
+    {
+      "mediaTime": 31.416667,
+      "presented": 755
+    },
+    {
+      "mediaTime": 31.458333,
+      "presented": 756
+    },
+    {
+      "mediaTime": 31.5,
+      "presented": 757
+    },
+    {
+      "mediaTime": 31.541667,
+      "presented": 758
+    },
+    {
+      "mediaTime": 31.583333,
+      "presented": 759
+    },
+    {
+      "mediaTime": 31.625,
+      "presented": 760
+    },
+    {
+      "mediaTime": 31.666667,
+      "presented": 761
+    },
+    {
+      "mediaTime": 31.708333,
+      "presented": 762
+    },
+    {
+      "mediaTime": 31.75,
+      "presented": 763
+    },
+    {
+      "mediaTime": 31.791667,
+      "presented": 764
+    },
+    {
+      "mediaTime": 31.833333,
+      "presented": 765
+    },
+    {
+      "mediaTime": 31.875,
+      "presented": 766
+    },
+    {
+      "mediaTime": 31.916667,
+      "presented": 767
+    },
+    {
+      "mediaTime": 31.958333,
+      "presented": 768
+    },
+    {
+      "mediaTime": 32,
+      "presented": 769
+    },
+    {
+      "mediaTime": 32.041667,
+      "presented": 770
+    },
+    {
+      "mediaTime": 32.083333,
+      "presented": 771
+    },
+    {
+      "mediaTime": 32.125,
+      "presented": 772
+    },
+    {
+      "mediaTime": 32.166667,
+      "presented": 773
+    },
+    {
+      "mediaTime": 32.208333,
+      "presented": 774
+    },
+    {
+      "mediaTime": 32.25,
+      "presented": 775
+    },
+    {
+      "mediaTime": 32.291667,
+      "presented": 776
+    },
+    {
+      "mediaTime": 32.333333,
+      "presented": 777
+    },
+    {
+      "mediaTime": 32.375,
+      "presented": 778
+    },
+    {
+      "mediaTime": 32.416667,
+      "presented": 779
+    },
+    {
+      "mediaTime": 32.458333,
+      "presented": 780
+    },
+    {
+      "mediaTime": 32.5,
+      "presented": 781
+    },
+    {
+      "mediaTime": 32.541667,
+      "presented": 782
+    },
+    {
+      "mediaTime": 32.583333,
+      "presented": 783
+    },
+    {
+      "mediaTime": 32.625,
+      "presented": 784
+    },
+    {
+      "mediaTime": 32.666667,
+      "presented": 785
+    },
+    {
+      "mediaTime": 32.708333,
+      "presented": 786
+    },
+    {
+      "mediaTime": 32.75,
+      "presented": 787
+    },
+    {
+      "mediaTime": 32.791667,
+      "presented": 788
+    },
+    {
+      "mediaTime": 32.833333,
+      "presented": 789
+    },
+    {
+      "mediaTime": 32.875,
+      "presented": 790
+    },
+    {
+      "mediaTime": 32.916667,
+      "presented": 791
+    },
+    {
+      "mediaTime": 32.958333,
+      "presented": 792
+    },
+    {
+      "mediaTime": 33,
+      "presented": 793
+    },
+    {
+      "mediaTime": 33.041667,
+      "presented": 794
+    },
+    {
+      "mediaTime": 33.083333,
+      "presented": 795
+    },
+    {
+      "mediaTime": 33.125,
+      "presented": 796
+    },
+    {
+      "mediaTime": 33.166667,
+      "presented": 797
+    },
+    {
+      "mediaTime": 33.208333,
+      "presented": 798
+    },
+    {
+      "mediaTime": 33.25,
+      "presented": 799
+    },
+    {
+      "mediaTime": 33.291667,
+      "presented": 800
+    },
+    {
+      "mediaTime": 33.333333,
+      "presented": 801
+    },
+    {
+      "mediaTime": 33.375,
+      "presented": 802
+    },
+    {
+      "mediaTime": 33.416667,
+      "presented": 803
+    },
+    {
+      "mediaTime": 33.458333,
+      "presented": 804
+    },
+    {
+      "mediaTime": 33.5,
+      "presented": 805
+    },
+    {
+      "mediaTime": 33.541667,
+      "presented": 806
+    },
+    {
+      "mediaTime": 33.583333,
+      "presented": 807
+    },
+    {
+      "mediaTime": 33.625,
+      "presented": 808
+    },
+    {
+      "mediaTime": 33.666667,
+      "presented": 809
+    },
+    {
+      "mediaTime": 33.708333,
+      "presented": 810
+    },
+    {
+      "mediaTime": 33.75,
+      "presented": 811
+    },
+    {
+      "mediaTime": 33.791667,
+      "presented": 812
+    },
+    {
+      "mediaTime": 33.833333,
+      "presented": 813
+    },
+    {
+      "mediaTime": 33.875,
+      "presented": 814
+    },
+    {
+      "mediaTime": 33.916667,
+      "presented": 815
+    },
+    {
+      "mediaTime": 33.958333,
+      "presented": 816
+    },
+    {
+      "mediaTime": 34,
+      "presented": 817
+    },
+    {
+      "mediaTime": 34.041667,
+      "presented": 818
+    },
+    {
+      "mediaTime": 34.083333,
+      "presented": 819
+    },
+    {
+      "mediaTime": 34.125,
+      "presented": 820
+    },
+    {
+      "mediaTime": 34.166667,
+      "presented": 821
+    },
+    {
+      "mediaTime": 34.208333,
+      "presented": 822
+    },
+    {
+      "mediaTime": 34.25,
+      "presented": 823
+    },
+    {
+      "mediaTime": 34.291667,
+      "presented": 824
+    },
+    {
+      "mediaTime": 34.333333,
+      "presented": 825
+    },
+    {
+      "mediaTime": 34.375,
+      "presented": 826
+    },
+    {
+      "mediaTime": 34.416667,
+      "presented": 827
+    },
+    {
+      "mediaTime": 34.458333,
+      "presented": 828
+    },
+    {
+      "mediaTime": 34.5,
+      "presented": 829
+    },
+    {
+      "mediaTime": 34.541667,
+      "presented": 830
+    },
+    {
+      "mediaTime": 34.583333,
+      "presented": 831
+    },
+    {
+      "mediaTime": 34.625,
+      "presented": 832
+    },
+    {
+      "mediaTime": 34.666667,
+      "presented": 833
+    },
+    {
+      "mediaTime": 34.708333,
+      "presented": 834
+    },
+    {
+      "mediaTime": 34.75,
+      "presented": 835
+    },
+    {
+      "mediaTime": 34.791667,
+      "presented": 836
+    },
+    {
+      "mediaTime": 34.833333,
+      "presented": 837
+    },
+    {
+      "mediaTime": 34.875,
+      "presented": 838
+    },
+    {
+      "mediaTime": 34.916667,
+      "presented": 839
+    },
+    {
+      "mediaTime": 34.958333,
+      "presented": 840
+    },
+    {
+      "mediaTime": 35,
+      "presented": 841
+    },
+    {
+      "mediaTime": 35.041667,
+      "presented": 842
+    },
+    {
+      "mediaTime": 35.083333,
+      "presented": 843
+    },
+    {
+      "mediaTime": 35.125,
+      "presented": 844
+    },
+    {
+      "mediaTime": 35.166667,
+      "presented": 845
+    },
+    {
+      "mediaTime": 35.208333,
+      "presented": 846
+    },
+    {
+      "mediaTime": 35.25,
+      "presented": 847
+    },
+    {
+      "mediaTime": 35.291667,
+      "presented": 848
+    },
+    {
+      "mediaTime": 35.333333,
+      "presented": 849
+    },
+    {
+      "mediaTime": 35.375,
+      "presented": 850
+    },
+    {
+      "mediaTime": 35.416667,
+      "presented": 851
+    },
+    {
+      "mediaTime": 35.458333,
+      "presented": 852
+    },
+    {
+      "mediaTime": 35.5,
+      "presented": 853
+    },
+    {
+      "mediaTime": 35.541667,
+      "presented": 854
+    },
+    {
+      "mediaTime": 35.583333,
+      "presented": 855
+    },
+    {
+      "mediaTime": 35.625,
+      "presented": 856
+    },
+    {
+      "mediaTime": 35.666667,
+      "presented": 857
+    },
+    {
+      "mediaTime": 35.708333,
+      "presented": 858
+    },
+    {
+      "mediaTime": 35.75,
+      "presented": 859
+    },
+    {
+      "mediaTime": 35.791667,
+      "presented": 860
+    },
+    {
+      "mediaTime": 35.833333,
+      "presented": 861
+    },
+    {
+      "mediaTime": 35.875,
+      "presented": 862
+    },
+    {
+      "mediaTime": 35.916667,
+      "presented": 863
+    },
+    {
+      "mediaTime": 35.958333,
+      "presented": 864
+    },
+    {
+      "mediaTime": 36,
+      "presented": 865
+    },
+    {
+      "mediaTime": 36.041667,
+      "presented": 866
+    },
+    {
+      "mediaTime": 36.083333,
+      "presented": 867
+    },
+    {
+      "mediaTime": 36.125,
+      "presented": 868
+    },
+    {
+      "mediaTime": 36.166667,
+      "presented": 869
+    },
+    {
+      "mediaTime": 36.208333,
+      "presented": 870
+    },
+    {
+      "mediaTime": 36.25,
+      "presented": 871
+    },
+    {
+      "mediaTime": 36.291667,
+      "presented": 872
+    },
+    {
+      "mediaTime": 36.333333,
+      "presented": 873
+    },
+    {
+      "mediaTime": 36.375,
+      "presented": 874
+    },
+    {
+      "mediaTime": 36.416667,
+      "presented": 875
+    },
+    {
+      "mediaTime": 36.458333,
+      "presented": 876
+    },
+    {
+      "mediaTime": 36.5,
+      "presented": 877
+    },
+    {
+      "mediaTime": 36.541667,
+      "presented": 878
+    },
+    {
+      "mediaTime": 36.583333,
+      "presented": 879
+    },
+    {
+      "mediaTime": 36.625,
+      "presented": 880
+    },
+    {
+      "mediaTime": 36.666667,
+      "presented": 881
+    },
+    {
+      "mediaTime": 36.708333,
+      "presented": 882
+    },
+    {
+      "mediaTime": 36.75,
+      "presented": 883
+    },
+    {
+      "mediaTime": 36.791667,
+      "presented": 884
+    },
+    {
+      "mediaTime": 36.833333,
+      "presented": 885
+    },
+    {
+      "mediaTime": 36.875,
+      "presented": 886
+    },
+    {
+      "mediaTime": 36.916667,
+      "presented": 887
+    },
+    {
+      "mediaTime": 36.958333,
+      "presented": 888
+    },
+    {
+      "mediaTime": 37,
+      "presented": 889
+    },
+    {
+      "mediaTime": 37.041667,
+      "presented": 890
+    },
+    {
+      "mediaTime": 37.083333,
+      "presented": 891
+    },
+    {
+      "mediaTime": 37.125,
+      "presented": 892
+    },
+    {
+      "mediaTime": 37.166667,
+      "presented": 893
+    },
+    {
+      "mediaTime": 37.208333,
+      "presented": 894
+    },
+    {
+      "mediaTime": 37.25,
+      "presented": 895
+    },
+    {
+      "mediaTime": 37.291667,
+      "presented": 896
+    },
+    {
+      "mediaTime": 37.333333,
+      "presented": 897
+    },
+    {
+      "mediaTime": 37.375,
+      "presented": 898
+    },
+    {
+      "mediaTime": 37.416667,
+      "presented": 899
+    },
+    {
+      "mediaTime": 37.458333,
+      "presented": 900
+    },
+    {
+      "mediaTime": 37.5,
+      "presented": 901
+    },
+    {
+      "mediaTime": 37.541667,
+      "presented": 902
+    },
+    {
+      "mediaTime": 37.583333,
+      "presented": 903
+    },
+    {
+      "mediaTime": 37.625,
+      "presented": 904
+    },
+    {
+      "mediaTime": 37.666667,
+      "presented": 905
+    },
+    {
+      "mediaTime": 37.708333,
+      "presented": 906
+    },
+    {
+      "mediaTime": 37.75,
+      "presented": 907
+    },
+    {
+      "mediaTime": 37.791667,
+      "presented": 908
+    },
+    {
+      "mediaTime": 37.833333,
+      "presented": 909
+    },
+    {
+      "mediaTime": 37.875,
+      "presented": 910
+    },
+    {
+      "mediaTime": 37.916667,
+      "presented": 911
+    },
+    {
+      "mediaTime": 37.958333,
+      "presented": 912
+    },
+    {
+      "mediaTime": 38,
+      "presented": 913
+    },
+    {
+      "mediaTime": 38.041667,
+      "presented": 914
+    },
+    {
+      "mediaTime": 38.083333,
+      "presented": 915
+    },
+    {
+      "mediaTime": 38.125,
+      "presented": 916
+    },
+    {
+      "mediaTime": 38.166667,
+      "presented": 917
+    },
+    {
+      "mediaTime": 38.208333,
+      "presented": 918
+    },
+    {
+      "mediaTime": 38.25,
+      "presented": 919
+    },
+    {
+      "mediaTime": 38.291667,
+      "presented": 920
+    },
+    {
+      "mediaTime": 38.333333,
+      "presented": 921
+    },
+    {
+      "mediaTime": 38.375,
+      "presented": 922
+    },
+    {
+      "mediaTime": 38.416667,
+      "presented": 923
+    },
+    {
+      "mediaTime": 38.458333,
+      "presented": 924
+    },
+    {
+      "mediaTime": 38.5,
+      "presented": 925
+    },
+    {
+      "mediaTime": 38.541667,
+      "presented": 926
+    },
+    {
+      "mediaTime": 38.583333,
+      "presented": 927
+    },
+    {
+      "mediaTime": 38.625,
+      "presented": 928
+    },
+    {
+      "mediaTime": 38.666667,
+      "presented": 929
+    },
+    {
+      "mediaTime": 38.708333,
+      "presented": 930
+    },
+    {
+      "mediaTime": 38.75,
+      "presented": 931
+    },
+    {
+      "mediaTime": 38.791667,
+      "presented": 932
+    },
+    {
+      "mediaTime": 38.833333,
+      "presented": 933
+    },
+    {
+      "mediaTime": 38.875,
+      "presented": 934
+    },
+    {
+      "mediaTime": 38.916667,
+      "presented": 935
+    },
+    {
+      "mediaTime": 38.958333,
+      "presented": 936
+    },
+    {
+      "mediaTime": 39,
+      "presented": 937
+    },
+    {
+      "mediaTime": 39.041667,
+      "presented": 938
+    },
+    {
+      "mediaTime": 39.083333,
+      "presented": 939
+    },
+    {
+      "mediaTime": 39.125,
+      "presented": 940
+    },
+    {
+      "mediaTime": 39.166667,
+      "presented": 941
+    },
+    {
+      "mediaTime": 39.208333,
+      "presented": 942
+    },
+    {
+      "mediaTime": 39.25,
+      "presented": 943
+    },
+    {
+      "mediaTime": 39.291667,
+      "presented": 944
+    },
+    {
+      "mediaTime": 39.333333,
+      "presented": 945
+    },
+    {
+      "mediaTime": 39.375,
+      "presented": 946
+    },
+    {
+      "mediaTime": 39.416667,
+      "presented": 947
+    },
+    {
+      "mediaTime": 39.458333,
+      "presented": 948
+    },
+    {
+      "mediaTime": 39.5,
+      "presented": 949
+    },
+    {
+      "mediaTime": 39.541667,
+      "presented": 950
+    },
+    {
+      "mediaTime": 39.583333,
+      "presented": 951
+    },
+    {
+      "mediaTime": 39.625,
+      "presented": 952
+    },
+    {
+      "mediaTime": 39.666667,
+      "presented": 953
+    },
+    {
+      "mediaTime": 39.708333,
+      "presented": 954
+    },
+    {
+      "mediaTime": 39.75,
+      "presented": 955
+    },
+    {
+      "mediaTime": 39.791667,
+      "presented": 956
+    },
+    {
+      "mediaTime": 39.833333,
+      "presented": 957
+    },
+    {
+      "mediaTime": 39.875,
+      "presented": 958
+    },
+    {
+      "mediaTime": 39.916667,
+      "presented": 959
+    },
+    {
+      "mediaTime": 39.958333,
+      "presented": 960
+    },
+    {
+      "mediaTime": 40,
+      "presented": 961
+    },
+    {
+      "mediaTime": 40.041667,
+      "presented": 962
+    },
+    {
+      "mediaTime": 40.083333,
+      "presented": 963
+    },
+    {
+      "mediaTime": 40.125,
+      "presented": 964
+    },
+    {
+      "mediaTime": 40.166667,
+      "presented": 965
+    },
+    {
+      "mediaTime": 40.208333,
+      "presented": 966
+    },
+    {
+      "mediaTime": 40.25,
+      "presented": 967
+    },
+    {
+      "mediaTime": 40.291667,
+      "presented": 968
+    },
+    {
+      "mediaTime": 40.333333,
+      "presented": 969
+    },
+    {
+      "mediaTime": 40.375,
+      "presented": 970
+    },
+    {
+      "mediaTime": 40.416667,
+      "presented": 971
+    },
+    {
+      "mediaTime": 40.458333,
+      "presented": 972
+    },
+    {
+      "mediaTime": 40.5,
+      "presented": 973
+    },
+    {
+      "mediaTime": 40.541667,
+      "presented": 974
+    },
+    {
+      "mediaTime": 40.583333,
+      "presented": 975
+    },
+    {
+      "mediaTime": 40.625,
+      "presented": 976
+    },
+    {
+      "mediaTime": 40.666667,
+      "presented": 977
+    },
+    {
+      "mediaTime": 40.708333,
+      "presented": 978
+    },
+    {
+      "mediaTime": 40.75,
+      "presented": 979
+    },
+    {
+      "mediaTime": 40.791667,
+      "presented": 980
+    },
+    {
+      "mediaTime": 40.833333,
+      "presented": 981
+    },
+    {
+      "mediaTime": 40.875,
+      "presented": 982
+    },
+    {
+      "mediaTime": 40.916667,
+      "presented": 983
+    },
+    {
+      "mediaTime": 40.958333,
+      "presented": 984
+    },
+    {
+      "mediaTime": 41,
+      "presented": 985
+    },
+    {
+      "mediaTime": 41.041667,
+      "presented": 986
+    },
+    {
+      "mediaTime": 41.083333,
+      "presented": 987
+    },
+    {
+      "mediaTime": 41.125,
+      "presented": 988
+    },
+    {
+      "mediaTime": 41.166667,
+      "presented": 989
+    },
+    {
+      "mediaTime": 41.208333,
+      "presented": 990
+    },
+    {
+      "mediaTime": 41.25,
+      "presented": 991
+    },
+    {
+      "mediaTime": 41.291667,
+      "presented": 992
+    },
+    {
+      "mediaTime": 41.333333,
+      "presented": 993
+    },
+    {
+      "mediaTime": 41.375,
+      "presented": 994
+    },
+    {
+      "mediaTime": 41.416667,
+      "presented": 995
+    },
+    {
+      "mediaTime": 41.458333,
+      "presented": 996
+    },
+    {
+      "mediaTime": 41.5,
+      "presented": 997
+    },
+    {
+      "mediaTime": 41.541667,
+      "presented": 998
+    },
+    {
+      "mediaTime": 41.583333,
+      "presented": 999
+    },
+    {
+      "mediaTime": 41.625,
+      "presented": 1000
+    },
+    {
+      "mediaTime": 41.666667,
+      "presented": 1001
+    },
+    {
+      "mediaTime": 41.708333,
+      "presented": 1002
+    },
+    {
+      "mediaTime": 41.75,
+      "presented": 1003
+    },
+    {
+      "mediaTime": 41.791667,
+      "presented": 1004
+    },
+    {
+      "mediaTime": 41.833333,
+      "presented": 1005
+    },
+    {
+      "mediaTime": 41.875,
+      "presented": 1006
+    },
+    {
+      "mediaTime": 41.916667,
+      "presented": 1007
+    },
+    {
+      "mediaTime": 41.958333,
+      "presented": 1008
+    },
+    {
+      "mediaTime": 42,
+      "presented": 1009
+    },
+    {
+      "mediaTime": 42.041667,
+      "presented": 1010
+    },
+    {
+      "mediaTime": 42.083333,
+      "presented": 1011
+    },
+    {
+      "mediaTime": 42.125,
+      "presented": 1012
+    },
+    {
+      "mediaTime": 42.166667,
+      "presented": 1013
+    },
+    {
+      "mediaTime": 42.208333,
+      "presented": 1014
+    },
+    {
+      "mediaTime": 42.25,
+      "presented": 1015
+    },
+    {
+      "mediaTime": 42.291667,
+      "presented": 1016
+    },
+    {
+      "mediaTime": 42.333333,
+      "presented": 1017
+    },
+    {
+      "mediaTime": 42.375,
+      "presented": 1018
+    },
+    {
+      "mediaTime": 42.416667,
+      "presented": 1019
+    },
+    {
+      "mediaTime": 42.458333,
+      "presented": 1020
+    },
+    {
+      "mediaTime": 42.5,
+      "presented": 1021
+    },
+    {
+      "mediaTime": 42.541667,
+      "presented": 1022
+    },
+    {
+      "mediaTime": 42.583333,
+      "presented": 1023
+    },
+    {
+      "mediaTime": 42.625,
+      "presented": 1024
+    },
+    {
+      "mediaTime": 42.666667,
+      "presented": 1025
+    },
+    {
+      "mediaTime": 42.708333,
+      "presented": 1026
+    },
+    {
+      "mediaTime": 42.75,
+      "presented": 1027
+    },
+    {
+      "mediaTime": 42.791667,
+      "presented": 1028
+    },
+    {
+      "mediaTime": 42.833333,
+      "presented": 1029
+    },
+    {
+      "mediaTime": 42.875,
+      "presented": 1030
+    },
+    {
+      "mediaTime": 42.916667,
+      "presented": 1031
+    },
+    {
+      "mediaTime": 42.958333,
+      "presented": 1032
+    },
+    {
+      "mediaTime": 43,
+      "presented": 1033
+    },
+    {
+      "mediaTime": 43.041667,
+      "presented": 1034
+    },
+    {
+      "mediaTime": 43.083333,
+      "presented": 1035
+    },
+    {
+      "mediaTime": 43.125,
+      "presented": 1036
+    },
+    {
+      "mediaTime": 43.166667,
+      "presented": 1037
+    },
+    {
+      "mediaTime": 43.208333,
+      "presented": 1038
+    },
+    {
+      "mediaTime": 43.25,
+      "presented": 1039
+    },
+    {
+      "mediaTime": 43.291667,
+      "presented": 1040
+    },
+    {
+      "mediaTime": 43.333333,
+      "presented": 1041
+    },
+    {
+      "mediaTime": 43.375,
+      "presented": 1042
+    },
+    {
+      "mediaTime": 43.416667,
+      "presented": 1043
+    },
+    {
+      "mediaTime": 43.458333,
+      "presented": 1044
+    },
+    {
+      "mediaTime": 43.5,
+      "presented": 1045
+    },
+    {
+      "mediaTime": 43.541667,
+      "presented": 1046
+    },
+    {
+      "mediaTime": 43.583333,
+      "presented": 1047
+    },
+    {
+      "mediaTime": 43.625,
+      "presented": 1048
+    },
+    {
+      "mediaTime": 43.666667,
+      "presented": 1049
+    },
+    {
+      "mediaTime": 43.708333,
+      "presented": 1050
+    },
+    {
+      "mediaTime": 43.75,
+      "presented": 1051
+    },
+    {
+      "mediaTime": 43.791667,
+      "presented": 1052
+    },
+    {
+      "mediaTime": 43.833333,
+      "presented": 1053
+    },
+    {
+      "mediaTime": 43.875,
+      "presented": 1054
+    },
+    {
+      "mediaTime": 43.916667,
+      "presented": 1055
+    },
+    {
+      "mediaTime": 43.958333,
+      "presented": 1056
+    },
+    {
+      "mediaTime": 44,
+      "presented": 1057
+    },
+    {
+      "mediaTime": 44.041667,
+      "presented": 1058
+    },
+    {
+      "mediaTime": 44.083333,
+      "presented": 1059
+    },
+    {
+      "mediaTime": 44.125,
+      "presented": 1060
+    },
+    {
+      "mediaTime": 44.166667,
+      "presented": 1061
+    },
+    {
+      "mediaTime": 44.208333,
+      "presented": 1062
+    },
+    {
+      "mediaTime": 44.25,
+      "presented": 1063
+    },
+    {
+      "mediaTime": 44.291667,
+      "presented": 1064
+    },
+    {
+      "mediaTime": 44.333333,
+      "presented": 1065
+    },
+    {
+      "mediaTime": 44.375,
+      "presented": 1066
+    },
+    {
+      "mediaTime": 44.416667,
+      "presented": 1067
+    },
+    {
+      "mediaTime": 44.458333,
+      "presented": 1068
+    },
+    {
+      "mediaTime": 44.5,
+      "presented": 1069
+    },
+    {
+      "mediaTime": 44.541667,
+      "presented": 1070
+    },
+    {
+      "mediaTime": 44.583333,
+      "presented": 1071
+    },
+    {
+      "mediaTime": 44.625,
+      "presented": 1072
+    },
+    {
+      "mediaTime": 44.666667,
+      "presented": 1073
+    },
+    {
+      "mediaTime": 44.708333,
+      "presented": 1074
+    },
+    {
+      "mediaTime": 44.75,
+      "presented": 1075
+    },
+    {
+      "mediaTime": 44.791667,
+      "presented": 1076
+    },
+    {
+      "mediaTime": 44.833333,
+      "presented": 1077
+    },
+    {
+      "mediaTime": 44.875,
+      "presented": 1078
+    },
+    {
+      "mediaTime": 44.916667,
+      "presented": 1079
+    },
+    {
+      "mediaTime": 44.958333,
+      "presented": 1080
+    },
+    {
+      "mediaTime": 45,
+      "presented": 1081
+    },
+    {
+      "mediaTime": 45.041667,
+      "presented": 1082
+    },
+    {
+      "mediaTime": 45.083333,
+      "presented": 1083
+    },
+    {
+      "mediaTime": 45.125,
+      "presented": 1084
+    },
+    {
+      "mediaTime": 45.166667,
+      "presented": 1085
+    },
+    {
+      "mediaTime": 45.208333,
+      "presented": 1086
+    },
+    {
+      "mediaTime": 45.25,
+      "presented": 1087
+    },
+    {
+      "mediaTime": 45.291667,
+      "presented": 1088
+    },
+    {
+      "mediaTime": 45.333333,
+      "presented": 1089
+    },
+    {
+      "mediaTime": 45.375,
+      "presented": 1090
+    },
+    {
+      "mediaTime": 45.416667,
+      "presented": 1091
+    },
+    {
+      "mediaTime": 45.458333,
+      "presented": 1092
+    },
+    {
+      "mediaTime": 45.5,
+      "presented": 1093
+    },
+    {
+      "mediaTime": 45.541667,
+      "presented": 1094
+    },
+    {
+      "mediaTime": 45.583333,
+      "presented": 1095
+    },
+    {
+      "mediaTime": 45.625,
+      "presented": 1096
+    },
+    {
+      "mediaTime": 45.666667,
+      "presented": 1097
+    },
+    {
+      "mediaTime": 45.708333,
+      "presented": 1098
+    },
+    {
+      "mediaTime": 45.75,
+      "presented": 1099
+    },
+    {
+      "mediaTime": 45.791667,
+      "presented": 1100
+    },
+    {
+      "mediaTime": 45.833333,
+      "presented": 1101
+    },
+    {
+      "mediaTime": 45.875,
+      "presented": 1102
+    },
+    {
+      "mediaTime": 45.916667,
+      "presented": 1103
+    },
+    {
+      "mediaTime": 45.958333,
+      "presented": 1104
+    },
+    {
+      "mediaTime": 46,
+      "presented": 1105
+    },
+    {
+      "mediaTime": 46.041667,
+      "presented": 1106
+    },
+    {
+      "mediaTime": 46.083333,
+      "presented": 1107
+    },
+    {
+      "mediaTime": 46.125,
+      "presented": 1108
+    },
+    {
+      "mediaTime": 46.166667,
+      "presented": 1109
+    },
+    {
+      "mediaTime": 46.208333,
+      "presented": 1110
+    },
+    {
+      "mediaTime": 46.25,
+      "presented": 1111
+    },
+    {
+      "mediaTime": 46.291667,
+      "presented": 1112
+    },
+    {
+      "mediaTime": 46.333333,
+      "presented": 1113
+    },
+    {
+      "mediaTime": 46.375,
+      "presented": 1114
+    },
+    {
+      "mediaTime": 46.416667,
+      "presented": 1115
+    },
+    {
+      "mediaTime": 46.458333,
+      "presented": 1116
+    },
+    {
+      "mediaTime": 46.5,
+      "presented": 1117
+    },
+    {
+      "mediaTime": 46.541667,
+      "presented": 1118
+    },
+    {
+      "mediaTime": 46.583333,
+      "presented": 1119
+    },
+    {
+      "mediaTime": 46.625,
+      "presented": 1120
+    },
+    {
+      "mediaTime": 46.666667,
+      "presented": 1121
+    },
+    {
+      "mediaTime": 46.708333,
+      "presented": 1122
+    },
+    {
+      "mediaTime": 46.75,
+      "presented": 1123
+    },
+    {
+      "mediaTime": 46.791667,
+      "presented": 1124
+    },
+    {
+      "mediaTime": 46.833333,
+      "presented": 1125
+    },
+    {
+      "mediaTime": 46.875,
+      "presented": 1126
+    },
+    {
+      "mediaTime": 46.916667,
+      "presented": 1127
+    },
+    {
+      "mediaTime": 46.958333,
+      "presented": 1128
+    },
+    {
+      "mediaTime": 47,
+      "presented": 1129
+    },
+    {
+      "mediaTime": 47.041667,
+      "presented": 1130
+    },
+    {
+      "mediaTime": 47.083333,
+      "presented": 1131
+    },
+    {
+      "mediaTime": 47.125,
+      "presented": 1132
+    },
+    {
+      "mediaTime": 47.166667,
+      "presented": 1133
+    },
+    {
+      "mediaTime": 47.208333,
+      "presented": 1134
+    },
+    {
+      "mediaTime": 47.25,
+      "presented": 1135
+    },
+    {
+      "mediaTime": 47.291667,
+      "presented": 1136
+    },
+    {
+      "mediaTime": 47.333333,
+      "presented": 1137
+    },
+    {
+      "mediaTime": 47.375,
+      "presented": 1138
+    },
+    {
+      "mediaTime": 47.416667,
+      "presented": 1139
+    },
+    {
+      "mediaTime": 47.458333,
+      "presented": 1140
+    },
+    {
+      "mediaTime": 47.5,
+      "presented": 1141
+    },
+    {
+      "mediaTime": 47.541667,
+      "presented": 1142
+    },
+    {
+      "mediaTime": 47.583333,
+      "presented": 1143
+    },
+    {
+      "mediaTime": 47.625,
+      "presented": 1144
+    },
+    {
+      "mediaTime": 47.666667,
+      "presented": 1145
+    },
+    {
+      "mediaTime": 47.708333,
+      "presented": 1146
+    },
+    {
+      "mediaTime": 47.75,
+      "presented": 1147
+    },
+    {
+      "mediaTime": 47.791667,
+      "presented": 1148
+    },
+    {
+      "mediaTime": 47.833333,
+      "presented": 1149
+    },
+    {
+      "mediaTime": 47.875,
+      "presented": 1150
+    },
+    {
+      "mediaTime": 47.916667,
+      "presented": 1151
+    },
+    {
+      "mediaTime": 47.958333,
+      "presented": 1152
+    },
+    {
+      "mediaTime": 48,
+      "presented": 1153
+    },
+    {
+      "mediaTime": 48.041667,
+      "presented": 1154
+    },
+    {
+      "mediaTime": 48.083333,
+      "presented": 1155
+    },
+    {
+      "mediaTime": 48.125,
+      "presented": 1156
+    },
+    {
+      "mediaTime": 48.166667,
+      "presented": 1157
+    },
+    {
+      "mediaTime": 48.208333,
+      "presented": 1158
+    },
+    {
+      "mediaTime": 48.25,
+      "presented": 1159
+    },
+    {
+      "mediaTime": 48.291667,
+      "presented": 1160
+    },
+    {
+      "mediaTime": 48.333333,
+      "presented": 1161
+    },
+    {
+      "mediaTime": 48.375,
+      "presented": 1162
+    },
+    {
+      "mediaTime": 48.416667,
+      "presented": 1163
+    },
+    {
+      "mediaTime": 48.458333,
+      "presented": 1164
+    },
+    {
+      "mediaTime": 48.5,
+      "presented": 1165
+    },
+    {
+      "mediaTime": 48.541667,
+      "presented": 1166
+    },
+    {
+      "mediaTime": 48.583333,
+      "presented": 1167
+    },
+    {
+      "mediaTime": 48.625,
+      "presented": 1168
+    },
+    {
+      "mediaTime": 48.666667,
+      "presented": 1169
+    },
+    {
+      "mediaTime": 48.708333,
+      "presented": 1170
+    },
+    {
+      "mediaTime": 48.75,
+      "presented": 1171
+    },
+    {
+      "mediaTime": 48.791667,
+      "presented": 1172
+    },
+    {
+      "mediaTime": 48.833333,
+      "presented": 1173
+    },
+    {
+      "mediaTime": 48.875,
+      "presented": 1174
+    },
+    {
+      "mediaTime": 48.916667,
+      "presented": 1175
+    },
+    {
+      "mediaTime": 48.958333,
+      "presented": 1176
+    },
+    {
+      "mediaTime": 49,
+      "presented": 1177
+    },
+    {
+      "mediaTime": 49.041667,
+      "presented": 1178
+    },
+    {
+      "mediaTime": 49.083333,
+      "presented": 1179
+    },
+    {
+      "mediaTime": 49.125,
+      "presented": 1180
+    },
+    {
+      "mediaTime": 49.166667,
+      "presented": 1181
+    },
+    {
+      "mediaTime": 49.208333,
+      "presented": 1182
+    },
+    {
+      "mediaTime": 49.25,
+      "presented": 1183
+    },
+    {
+      "mediaTime": 49.291667,
+      "presented": 1184
+    },
+    {
+      "mediaTime": 49.333333,
+      "presented": 1185
+    },
+    {
+      "mediaTime": 49.375,
+      "presented": 1186
+    },
+    {
+      "mediaTime": 49.416667,
+      "presented": 1187
+    },
+    {
+      "mediaTime": 49.458333,
+      "presented": 1188
+    },
+    {
+      "mediaTime": 49.5,
+      "presented": 1189
+    },
+    {
+      "mediaTime": 49.541667,
+      "presented": 1190
+    },
+    {
+      "mediaTime": 49.583333,
+      "presented": 1191
+    },
+    {
+      "mediaTime": 49.625,
+      "presented": 1192
+    },
+    {
+      "mediaTime": 49.666667,
+      "presented": 1193
+    },
+    {
+      "mediaTime": 49.708333,
+      "presented": 1194
+    },
+    {
+      "mediaTime": 49.75,
+      "presented": 1195
+    },
+    {
+      "mediaTime": 49.791667,
+      "presented": 1196
+    },
+    {
+      "mediaTime": 49.833333,
+      "presented": 1197
+    },
+    {
+      "mediaTime": 49.875,
+      "presented": 1198
+    },
+    {
+      "mediaTime": 49.916667,
+      "presented": 1199
+    },
+    {
+      "mediaTime": 49.958333,
+      "presented": 1200
+    },
+    {
+      "mediaTime": 50,
+      "presented": 1201
+    },
+    {
+      "mediaTime": 50.041667,
+      "presented": 1202
+    },
+    {
+      "mediaTime": 50.083333,
+      "presented": 1203
+    },
+    {
+      "mediaTime": 50.125,
+      "presented": 1204
+    },
+    {
+      "mediaTime": 50.166667,
+      "presented": 1205
+    },
+    {
+      "mediaTime": 50.208333,
+      "presented": 1206
+    },
+    {
+      "mediaTime": 50.25,
+      "presented": 1207
+    },
+    {
+      "mediaTime": 50.291667,
+      "presented": 1208
+    },
+    {
+      "mediaTime": 50.333333,
+      "presented": 1209
+    },
+    {
+      "mediaTime": 50.375,
+      "presented": 1210
+    },
+    {
+      "mediaTime": 50.416667,
+      "presented": 1211
+    },
+    {
+      "mediaTime": 50.458333,
+      "presented": 1212
+    },
+    {
+      "mediaTime": 50.5,
+      "presented": 1213
+    },
+    {
+      "mediaTime": 50.541667,
+      "presented": 1214
+    },
+    {
+      "mediaTime": 50.583333,
+      "presented": 1215
+    },
+    {
+      "mediaTime": 50.625,
+      "presented": 1216
+    },
+    {
+      "mediaTime": 50.666667,
+      "presented": 1217
+    },
+    {
+      "mediaTime": 50.708333,
+      "presented": 1218
+    },
+    {
+      "mediaTime": 50.75,
+      "presented": 1219
+    },
+    {
+      "mediaTime": 50.791667,
+      "presented": 1220
+    },
+    {
+      "mediaTime": 50.833333,
+      "presented": 1221
+    },
+    {
+      "mediaTime": 50.875,
+      "presented": 1222
+    },
+    {
+      "mediaTime": 50.916667,
+      "presented": 1223
+    },
+    {
+      "mediaTime": 50.958333,
+      "presented": 1224
+    },
+    {
+      "mediaTime": 51,
+      "presented": 1225
+    },
+    {
+      "mediaTime": 51.041667,
+      "presented": 1226
+    },
+    {
+      "mediaTime": 51.083333,
+      "presented": 1227
+    },
+    {
+      "mediaTime": 51.125,
+      "presented": 1228
+    },
+    {
+      "mediaTime": 51.166667,
+      "presented": 1229
+    },
+    {
+      "mediaTime": 51.208333,
+      "presented": 1230
+    },
+    {
+      "mediaTime": 51.25,
+      "presented": 1231
+    },
+    {
+      "mediaTime": 51.291667,
+      "presented": 1232
+    },
+    {
+      "mediaTime": 51.333333,
+      "presented": 1233
+    },
+    {
+      "mediaTime": 51.375,
+      "presented": 1234
+    },
+    {
+      "mediaTime": 51.416667,
+      "presented": 1235
+    },
+    {
+      "mediaTime": 51.458333,
+      "presented": 1236
+    },
+    {
+      "mediaTime": 51.5,
+      "presented": 1237
+    },
+    {
+      "mediaTime": 51.541667,
+      "presented": 1238
+    },
+    {
+      "mediaTime": 51.583333,
+      "presented": 1239
+    },
+    {
+      "mediaTime": 51.625,
+      "presented": 1240
+    },
+    {
+      "mediaTime": 51.666667,
+      "presented": 1241
+    },
+    {
+      "mediaTime": 51.708333,
+      "presented": 1242
+    },
+    {
+      "mediaTime": 51.75,
+      "presented": 1243
+    },
+    {
+      "mediaTime": 51.791667,
+      "presented": 1244
+    },
+    {
+      "mediaTime": 51.833333,
+      "presented": 1245
+    },
+    {
+      "mediaTime": 51.875,
+      "presented": 1246
+    },
+    {
+      "mediaTime": 51.916667,
+      "presented": 1247
+    },
+    {
+      "mediaTime": 51.958333,
+      "presented": 1248
+    },
+    {
+      "mediaTime": 52,
+      "presented": 1249
+    },
+    {
+      "mediaTime": 52.041667,
+      "presented": 1250
+    },
+    {
+      "mediaTime": 52.083333,
+      "presented": 1251
+    },
+    {
+      "mediaTime": 52.125,
+      "presented": 1252
+    },
+    {
+      "mediaTime": 52.166667,
+      "presented": 1253
+    },
+    {
+      "mediaTime": 52.208333,
+      "presented": 1254
+    },
+    {
+      "mediaTime": 52.25,
+      "presented": 1255
+    },
+    {
+      "mediaTime": 52.291667,
+      "presented": 1256
+    },
+    {
+      "mediaTime": 52.333333,
+      "presented": 1257
+    },
+    {
+      "mediaTime": 52.375,
+      "presented": 1258
+    },
+    {
+      "mediaTime": 52.416667,
+      "presented": 1259
+    },
+    {
+      "mediaTime": 52.458333,
+      "presented": 1260
+    },
+    {
+      "mediaTime": 52.5,
+      "presented": 1261
+    },
+    {
+      "mediaTime": 52.541667,
+      "presented": 1262
+    },
+    {
+      "mediaTime": 52.583333,
+      "presented": 1263
+    },
+    {
+      "mediaTime": 52.625,
+      "presented": 1264
+    },
+    {
+      "mediaTime": 52.666667,
+      "presented": 1265
+    },
+    {
+      "mediaTime": 52.708333,
+      "presented": 1266
+    },
+    {
+      "mediaTime": 52.75,
+      "presented": 1267
+    },
+    {
+      "mediaTime": 52.791667,
+      "presented": 1268
+    },
+    {
+      "mediaTime": 52.833333,
+      "presented": 1269
+    },
+    {
+      "mediaTime": 52.875,
+      "presented": 1270
+    },
+    {
+      "mediaTime": 52.916667,
+      "presented": 1271
+    },
+    {
+      "mediaTime": 52.958333,
+      "presented": 1272
+    },
+    {
+      "mediaTime": 53,
+      "presented": 1273
+    },
+    {
+      "mediaTime": 53.041667,
+      "presented": 1274
+    },
+    {
+      "mediaTime": 53.083333,
+      "presented": 1275
+    },
+    {
+      "mediaTime": 53.125,
+      "presented": 1276
+    },
+    {
+      "mediaTime": 53.166667,
+      "presented": 1277
+    },
+    {
+      "mediaTime": 53.208333,
+      "presented": 1278
+    },
+    {
+      "mediaTime": 53.25,
+      "presented": 1279
+    },
+    {
+      "mediaTime": 53.291667,
+      "presented": 1280
+    },
+    {
+      "mediaTime": 53.333333,
+      "presented": 1281
+    },
+    {
+      "mediaTime": 53.375,
+      "presented": 1282
+    },
+    {
+      "mediaTime": 53.416667,
+      "presented": 1283
+    },
+    {
+      "mediaTime": 53.458333,
+      "presented": 1284
+    },
+    {
+      "mediaTime": 53.5,
+      "presented": 1285
+    },
+    {
+      "mediaTime": 53.541667,
+      "presented": 1286
+    },
+    {
+      "mediaTime": 53.583333,
+      "presented": 1287
+    },
+    {
+      "mediaTime": 53.625,
+      "presented": 1288
+    },
+    {
+      "mediaTime": 53.666667,
+      "presented": 1289
+    },
+    {
+      "mediaTime": 53.708333,
+      "presented": 1290
+    },
+    {
+      "mediaTime": 53.75,
+      "presented": 1291
+    },
+    {
+      "mediaTime": 53.791667,
+      "presented": 1292
+    },
+    {
+      "mediaTime": 53.833333,
+      "presented": 1293
+    },
+    {
+      "mediaTime": 53.875,
+      "presented": 1294
+    },
+    {
+      "mediaTime": 53.916667,
+      "presented": 1295
+    },
+    {
+      "mediaTime": 53.958333,
+      "presented": 1296
+    },
+    {
+      "mediaTime": 54,
+      "presented": 1297
+    },
+    {
+      "mediaTime": 54.041667,
+      "presented": 1298
+    },
+    {
+      "mediaTime": 54.083333,
+      "presented": 1299
+    },
+    {
+      "mediaTime": 54.125,
+      "presented": 1300
+    },
+    {
+      "mediaTime": 54.166667,
+      "presented": 1301
+    },
+    {
+      "mediaTime": 54.208333,
+      "presented": 1302
+    },
+    {
+      "mediaTime": 54.25,
+      "presented": 1303
+    },
+    {
+      "mediaTime": 54.291667,
+      "presented": 1304
+    },
+    {
+      "mediaTime": 54.333333,
+      "presented": 1305
+    },
+    {
+      "mediaTime": 54.375,
+      "presented": 1306
+    },
+    {
+      "mediaTime": 54.416667,
+      "presented": 1307
+    },
+    {
+      "mediaTime": 54.458333,
+      "presented": 1308
+    },
+    {
+      "mediaTime": 54.5,
+      "presented": 1309
+    },
+    {
+      "mediaTime": 54.541667,
+      "presented": 1310
+    },
+    {
+      "mediaTime": 54.583333,
+      "presented": 1311
+    },
+    {
+      "mediaTime": 54.625,
+      "presented": 1312
+    },
+    {
+      "mediaTime": 54.666667,
+      "presented": 1313
+    },
+    {
+      "mediaTime": 54.708333,
+      "presented": 1314
+    },
+    {
+      "mediaTime": 54.75,
+      "presented": 1315
+    },
+    {
+      "mediaTime": 54.791667,
+      "presented": 1316
+    },
+    {
+      "mediaTime": 54.833333,
+      "presented": 1317
+    },
+    {
+      "mediaTime": 54.875,
+      "presented": 1318
+    },
+    {
+      "mediaTime": 54.916667,
+      "presented": 1319
+    },
+    {
+      "mediaTime": 54.958333,
+      "presented": 1320
+    },
+    {
+      "mediaTime": 55,
+      "presented": 1321
+    },
+    {
+      "mediaTime": 55.041667,
+      "presented": 1322
+    },
+    {
+      "mediaTime": 55.083333,
+      "presented": 1323
+    },
+    {
+      "mediaTime": 55.125,
+      "presented": 1324
+    },
+    {
+      "mediaTime": 55.166667,
+      "presented": 1325
+    },
+    {
+      "mediaTime": 55.208333,
+      "presented": 1326
+    },
+    {
+      "mediaTime": 55.25,
+      "presented": 1327
+    },
+    {
+      "mediaTime": 55.291667,
+      "presented": 1328
+    },
+    {
+      "mediaTime": 55.333333,
+      "presented": 1329
+    },
+    {
+      "mediaTime": 55.375,
+      "presented": 1330
+    },
+    {
+      "mediaTime": 55.416667,
+      "presented": 1331
+    },
+    {
+      "mediaTime": 55.458333,
+      "presented": 1332
+    },
+    {
+      "mediaTime": 55.5,
+      "presented": 1333
+    },
+    {
+      "mediaTime": 55.541667,
+      "presented": 1334
+    },
+    {
+      "mediaTime": 55.583333,
+      "presented": 1335
+    },
+    {
+      "mediaTime": 55.625,
+      "presented": 1336
+    },
+    {
+      "mediaTime": 55.666667,
+      "presented": 1337
+    },
+    {
+      "mediaTime": 55.708333,
+      "presented": 1338
+    },
+    {
+      "mediaTime": 55.75,
+      "presented": 1339
+    },
+    {
+      "mediaTime": 55.791667,
+      "presented": 1340
+    },
+    {
+      "mediaTime": 55.833333,
+      "presented": 1341
+    },
+    {
+      "mediaTime": 55.875,
+      "presented": 1342
+    },
+    {
+      "mediaTime": 55.916667,
+      "presented": 1343
+    },
+    {
+      "mediaTime": 55.958333,
+      "presented": 1344
+    },
+    {
+      "mediaTime": 56,
+      "presented": 1345
+    },
+    {
+      "mediaTime": 56.041667,
+      "presented": 1346
+    },
+    {
+      "mediaTime": 56.083333,
+      "presented": 1347
+    },
+    {
+      "mediaTime": 56.125,
+      "presented": 1348
+    },
+    {
+      "mediaTime": 56.166667,
+      "presented": 1349
+    },
+    {
+      "mediaTime": 56.208333,
+      "presented": 1350
+    },
+    {
+      "mediaTime": 56.25,
+      "presented": 1351
+    },
+    {
+      "mediaTime": 56.291667,
+      "presented": 1352
+    },
+    {
+      "mediaTime": 56.333333,
+      "presented": 1353
+    },
+    {
+      "mediaTime": 56.375,
+      "presented": 1354
+    },
+    {
+      "mediaTime": 56.416667,
+      "presented": 1355
+    },
+    {
+      "mediaTime": 56.458333,
+      "presented": 1356
+    },
+    {
+      "mediaTime": 56.5,
+      "presented": 1357
+    },
+    {
+      "mediaTime": 56.541667,
+      "presented": 1358
+    },
+    {
+      "mediaTime": 56.583333,
+      "presented": 1359
+    },
+    {
+      "mediaTime": 56.625,
+      "presented": 1360
+    },
+    {
+      "mediaTime": 56.666667,
+      "presented": 1361
+    },
+    {
+      "mediaTime": 56.708333,
+      "presented": 1362
+    },
+    {
+      "mediaTime": 56.75,
+      "presented": 1363
+    },
+    {
+      "mediaTime": 56.791667,
+      "presented": 1364
+    },
+    {
+      "mediaTime": 56.833333,
+      "presented": 1365
+    },
+    {
+      "mediaTime": 56.875,
+      "presented": 1366
+    },
+    {
+      "mediaTime": 56.916667,
+      "presented": 1367
+    },
+    {
+      "mediaTime": 56.958333,
+      "presented": 1368
+    },
+    {
+      "mediaTime": 57,
+      "presented": 1369
+    },
+    {
+      "mediaTime": 57.041667,
+      "presented": 1370
+    },
+    {
+      "mediaTime": 57.083333,
+      "presented": 1371
+    },
+    {
+      "mediaTime": 57.125,
+      "presented": 1372
+    },
+    {
+      "mediaTime": 57.166667,
+      "presented": 1373
+    },
+    {
+      "mediaTime": 57.208333,
+      "presented": 1374
+    },
+    {
+      "mediaTime": 57.25,
+      "presented": 1375
+    },
+    {
+      "mediaTime": 57.291667,
+      "presented": 1376
+    },
+    {
+      "mediaTime": 57.333333,
+      "presented": 1377
+    },
+    {
+      "mediaTime": 57.375,
+      "presented": 1378
+    },
+    {
+      "mediaTime": 57.416667,
+      "presented": 1379
+    },
+    {
+      "mediaTime": 57.458333,
+      "presented": 1380
+    },
+    {
+      "mediaTime": 57.5,
+      "presented": 1381
+    },
+    {
+      "mediaTime": 57.541667,
+      "presented": 1382
+    },
+    {
+      "mediaTime": 57.583333,
+      "presented": 1383
+    },
+    {
+      "mediaTime": 57.625,
+      "presented": 1384
+    },
+    {
+      "mediaTime": 57.666667,
+      "presented": 1385
+    },
+    {
+      "mediaTime": 57.708333,
+      "presented": 1386
+    },
+    {
+      "mediaTime": 57.75,
+      "presented": 1387
+    },
+    {
+      "mediaTime": 57.791667,
+      "presented": 1388
+    },
+    {
+      "mediaTime": 57.833333,
+      "presented": 1389
+    },
+    {
+      "mediaTime": 57.875,
+      "presented": 1390
+    },
+    {
+      "mediaTime": 57.916667,
+      "presented": 1391
+    },
+    {
+      "mediaTime": 57.958333,
+      "presented": 1392
+    },
+    {
+      "mediaTime": 58,
+      "presented": 1393
+    },
+    {
+      "mediaTime": 58.041667,
+      "presented": 1394
+    },
+    {
+      "mediaTime": 58.083333,
+      "presented": 1395
+    },
+    {
+      "mediaTime": 58.125,
+      "presented": 1396
+    },
+    {
+      "mediaTime": 58.166667,
+      "presented": 1397
+    },
+    {
+      "mediaTime": 58.208333,
+      "presented": 1398
+    },
+    {
+      "mediaTime": 58.25,
+      "presented": 1399
+    },
+    {
+      "mediaTime": 58.291667,
+      "presented": 1400
+    },
+    {
+      "mediaTime": 58.333333,
+      "presented": 1401
+    },
+    {
+      "mediaTime": 58.375,
+      "presented": 1402
+    },
+    {
+      "mediaTime": 58.416667,
+      "presented": 1403
+    },
+    {
+      "mediaTime": 58.458333,
+      "presented": 1404
+    },
+    {
+      "mediaTime": 58.5,
+      "presented": 1405
+    },
+    {
+      "mediaTime": 58.541667,
+      "presented": 1406
+    },
+    {
+      "mediaTime": 58.583333,
+      "presented": 1407
+    },
+    {
+      "mediaTime": 58.625,
+      "presented": 1408
+    },
+    {
+      "mediaTime": 58.666667,
+      "presented": 1409
+    }
+  ],
+  "audioListeningPerformed": false,
+  "physicalAndroidTest": false,
+  "pageErrors": [],
+  "browser": "Chromium, headless local full-duration playback",
+  "videoSha256": "c1ccf3e809d2f55e0538781e6388bddeec397fd289c7ddaa1ebc232112928284",
+  "videoUnchangedDuringPlayback": true
+}

@@ -1,0 +1,90 @@
+{
+  "source_video_sha256": "bcba454f4adf56c67ee0b1350051649c410e1056d06cfdbff8385252cbda1134",
+  "purpose": "Verified scene-scoped visual signatures permit one worksheet-motion fix without rerendering unaffected scenes.",
+  "scenes": [
+    {
+      "scene": "care-catch",
+      "key": "69b1ffbef8a13459e9ecb9b21a5656b1d89dc897105e805c2f49191294d73ce9",
+      "sha256": "91744899ca0458017b1f3b0be1d2177ac618d2cc0964aaac6b5adab9ba663915",
+      "frames": 78
+    },
+    {
+      "scene": "chat-alex",
+      "key": "c48dbf5064a24480ad37595e5d499e6c4958beb6fca5157e86dd931613980bc5",
+      "sha256": "3ed9af4f449d8cb0bb30c82f97959adad320bd1f9bebd70d056560bee852bece",
+      "frames": 72
+    },
+    {
+      "scene": "chat-danny",
+      "key": "a58a61dc660b34adc2964e9aae713ce36340e7b51b891879d470d3a4bf1e763a",
+      "sha256": "156313ab93f87a9a1bcc3569d2e8d424caf63ffa8621dbf68dd39ecd0c809ece",
+      "frames": 72
+    },
+    {
+      "scene": "clinic-visit",
+      "key": "6ce29eac04e9a86b70ea460190843adc4f5e4b3eb002e757eb179e8aa84cd4a6",
+      "sha256": "fbdd8b8f0ac8f9a753b8a963ade25d14966b39c03be49a14cb6f9a737713fc2d",
+      "frames": 66
+    },
+    {
+      "scene": "pharmacy-pickup",
+      "key": "094e7d7f7c6df65681dfefbc69cb851aa558d6640c33f3b6df2b0e717efb9a2e",
+      "sha256": "2126fe6bb5f4b948d2594643bc78f0d6e764622d776398208ec97fc396768638",
+      "frames": 72
+    },
+    {
+      "scene": "ppo-review",
+      "key": "55e8c72e3dfe38df0bb911921510b9195c38b8fd4dc736ea90dd28a0e75588c4",
+      "sha256": "b850997a77b58992b2f635fda32a31ff3d80375a03ddebae14661bc6ebcf5444",
+      "frames": 54
+    },
+    {
+      "scene": "network-check",
+      "key": "ef7c1e099d4323b360ddf4fff0033854f0c53aa5eab5ade85dceb014123450db",
+      "sha256": "534424349c8ad9ff6b28617f22817e7b78fcbc2a25414c006dc468af0c477a13",
+      "frames": 60
+    },
+    {
+      "scene": "plan-limits",
+      "key": "ea737cd9f7e2c3d0c2b718d954170fe263248daf992c1f4aa3fe195b72d804f6",
+      "sha256": "6c8a032b36b5c56ce56166a2cfc1b137fea832edb1cfaa660570bf7594081b24",
+      "frames": 66
+    },
+    {
+      "scene": "hsa-timing",
+      "key": "4aa47cf64132eacf2171bd407ec9b5a92d173e1237152da0930d3cfb4ba77b4e",
+      "sha256": "d2cad19b6711db2858b651d1b3bcb35ce7864d9eb0a483b8b670cb047e9a7bf0",
+      "frames": 82
+    },
+    {
+      "scene": "desk-review",
+      "key": "3161e3da33fb699db35b4b997fe4e5e9faeb13fe94dfc8c1796f096f436267d7",
+      "sha256": "78d97ee0722b7181e1c8d81bcb8df8df002e05a4ca6d2e8b648c8cd04319793a",
+      "frames": 74
+    },
+    {
+      "scene": "deliberate-choice",
+      "key": "5928c596a70999c4484e33e0153cbee1f046ce3bc568eb3eed0c108fa7716a51",
+      "sha256": "dafc69ad7b57bc8828d5c2030689fc4cf5605ff0978851b642921c21167717f3",
+      "frames": 90
+    },
+    {
+      "scene": "three-questions",
+      "key": "55e2b39c8d6f2fc42c4a46e110d76c7568f1df39c9222c7aaa0142d65ed06936",
+      "sha256": "3c5b620990c09f96d34e8a1beeadb3e747b46f84868fd1cf78a858ecc0d032d8",
+      "frames": 112
+    },
+    {
+      "scene": "annual-review",
+      "key": "69adebfe0cb1a17951141138396c4c73c48b04d469413db82024b5e0b2864856",
+      "sha256": "17c0f58a16c230fd312e7e65fd239e957790e6d6593672bff525bee565525c11",
+      "frames": 80
+    },
+    {
+      "scene": "total-cost-ending",
+      "key": "41089a408329474367cd4eb9099f65c182e31293e7a3972286d26ca01c41073c",
+      "sha256": "a0fcd827dab03f46fd21e5472cfee80bb008dfaa060a5b042fc65989dd0dd48f",
+      "frames": 71
+    }
+  ]
+}

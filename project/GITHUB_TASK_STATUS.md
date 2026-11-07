@@ -1,3 +1,28 @@
+# Current task — full health Short complete, 7 November 2026
+
+Production branch `codex/health-short-revision6`. Jon approved exact Revision6 and
+authorized full production. Final: Ren_Health_Short_v2_Final.mp4,58.708333s,
+1080×1920/9:16/24fps/H.264-AAC/1409frames. First360frames pixel-identical to approved
+MP4, copied without re-encoding. Narration master reuses exact existing samples;
+AAC encoded once across join, no new TTS/voice/quota usage.
+
+Two new matching empty clinic/pharmacy environments; approved Ren/hand/office/props
+reused. Source checkpoints282530d and87454b2 pushed/fetched and byte-verified.
+All19shots validated; full fatal decode, every-frame timestamps/blank/border/layout
+checks pass. Whole timeline visually reviewed in sequential sheets/native crops;
+full Chromium playback ended with1409frames and0dropped, no media/page errors.
+Ear-based listening and physical Android testing remain unverified. No new major
+character artwork, no publication, long-form/originals/main unchanged.
+
+Full source, approvals, audio/asset hashes, reports and reproducible commands:
+`episodes/long1-open-enrollment/short-cinematic-v2/full-production/`.
+MP4/captions/contact sheet/report ZIP are separate ignored deliverables. Final
+source/QA checkpoint prepared; remote verification and download delivery pending.
+No further rendering or production approval gate remains for this authorized task.
+Videos/caches stay outside Git; no merge or YouTube upload.
+
+---
+
 # Current task — full health Short authorized, 7 November 2026
 
 Existing branch `codex/health-short-revision6`. Jon explicitly approved the exact
