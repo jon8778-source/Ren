@@ -23,3 +23,7 @@ For GitHub publishing, follow project/GITHUB_TASK_WORKFLOW.md and maintain
 project/GITHUB_TASK_STATUS.md with remotely verified checkpoints. These are
 publishing safeguards, not an Android client-sync fix. Resume from the remote
 branch after an interruption; do not regenerate approved art or narration.
+
+## Shorts production
+
+For any vertical Ren YouTube Short, read both `project/REN_VIDEO_RULES.md` and `project/REN_SHORTS_RULES.md` before planning, asset generation, narration or rendering. The Shorts rules add story-first creative direction and a 15-second owner-approval prototype gate; the general video rules continue to govern approved character identity, Qwen voice, technical integrity and financial accuracy. If the two documents conflict on Shorts-specific composition or storytelling, prefer `REN_SHORTS_RULES.md` while preserving the general rules' voice, character and accuracy safeguards. For long-form videos, use `REN_VIDEO_RULES.md` without imposing Shorts-specific rules. Do not assume an owner's reference MP4 is available locally; verify assets before using them.
