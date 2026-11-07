@@ -64,4 +64,24 @@ Hair, cowlick, glasses, navy shirt over a solid white tee, trousers and sneakers
 ## Files in this commit
 `library/` (the unzipped pack), `scripts/Ren_Free_Money_Script.md`, `videos/free_money/matting.py`, `matted/` (8 transparent Ren PNGs), `sheets/` (the contact sheets named above), this report.
 
+## 8. Amendment: v3 production rules now apply (added 7 November 2026)
+Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_RULES.md`, `project/GITHUB_TASK_WORKFLOW.md` and `project/REN_SHORTS_RULES.md` from `codex/health-short-cinematic-v2` into this branch, read the first three in full, and amended the plan as below. Gate 0 findings (matting, style, folder text) are unchanged. I found no "story-first" document anywhere in the repo, so that part still rests on your script's own structure.
+
+| v3 rule | What it changes here |
+|---|---|
+| Voice: `Qwen/Qwen3-TTS-12Hz-1.7B-Base`, English, `use_xvector_only=True` | Narration will be generated with the x-vector-only prompt (`x_vector_only_mode=True` locally), not the transcript-conditioned prompt (`False`) my earlier scripts used. **Discrepancy:** `project/cliplib/qwen_voice.py` and `qwen_local_voice.py` both default to `False`, while the v3 rules say `True`. I follow the rules and will compare against the reference. |
+| No speed changes, stretching or silence padding | Lines are laid on the timeline as generated. Gaps between lines come only from the model's own silence and from cuts. I will not insert extra pauses. |
+| Space workflow, resumable on quota, no paid fallback or blind retry | The Space is out of quota and the token is dead, so narration runs locally. Completed lines are kept and reused, and a failed line is inspected before it is retried. |
+| Native-resolution Ren, 100% face and edge checks | The stills are matted from the full 1352-1464 px sources. Each gate's check includes 100% face, glasses and edge crops in wide and close framing. |
+| Reuse the existing animation library (present_palm_left, nod_yes, shake_no, thinking), closed mouth, no random talking motion, inspect gesture direction | The plan will use those clips in presenter moments next to the approved stills, with palm-left never mirrored automatically. This is a change to your still-based brief, so the Gate 1 table will mark which shots are clips and which are stills. I will confirm each clip's real duration and direction before use. |
+| Max shot length: Ren 5.5 s, story still 2.5 s, graphic 3.5 s. No repeated pose in consecutive shots. | The plan will be cut to those limits, with many more cutaways than before. The briefed push-ins on the folder and car count against the 2.5 s story-still limit unless you grant an exception. |
+| No decorative wobble, no large white panel over desk or chair, text away from faces | Applied to every layout. |
+| Disclaimer at start and end, no large banner | The briefed "Educational content only, not financial advice" lower-third will be small and shown at the start and end. |
+| Every displayed equation true on every frame | Fixed totals, with a separate animated calendar or jar. The year counter and "Missed" amounts will never sit beside a wrong total. |
+| Format: baseline 1280x720, 24 fps, H.264/AAC | I will build at 1280x720 and 24 fps. **This overrides the 1920x1080 in your brief.** The matted stills and plates can be re-rendered at 1080p later if you want it. |
+| Branches | Stays on `video/free-money-v2`. No merge to `main`, no upload. |
+| GitHub workflow | Checkpoint commits, remote verification, and `project/GITHUB_TASK_STATUS.md` kept up to date. |
+
+**Still needs your decision:** whether to keep the 2.5 s story-still cap for the porch, folder and car shots, or allow longer holds on those specific shots.
+
 **STOP. Waiting for: `style lock approved`.**
