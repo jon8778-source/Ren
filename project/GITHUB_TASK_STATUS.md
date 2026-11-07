@@ -1,3 +1,16 @@
+# Current task — Revision5 removal-only prototype, 7 November2026
+
+Branch `codex/health-short-cinematic-v2`. Jon requested removal of the laptop
+pointing hand and white foreground papers in Ren's shot around second5.
+Both removed. Only2 clips/156frames rendered; calendar and premium comparison
+(204frames) reused pixel-identically. AAC/PCM identical; no new artwork/TTS.
+15s/1080×1920/24fps/H.264/AAC,360frames. Technical QA passes; originals/main/
+long-form retained. Revision4 voice proof remains applicable; no new ear/device
+assessment claimed. Revised prototype approval still pending; no full Short.
+Source checkpoint publication pending; media/caches stay outside Git.
+
+---
+
 # Current task — Revision4 story prototype, 7 November2026
 
 Branch `codex/health-short-cinematic-v2`. Jon explicitly declined Revision3 for

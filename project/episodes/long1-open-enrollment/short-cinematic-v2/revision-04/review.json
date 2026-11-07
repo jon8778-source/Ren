@@ -1,0 +1,84 @@
+{
+  "revision": 4,
+  "duration_seconds": 15,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "scene_frame_counts": {
+    "renewal-action": 84,
+    "four-renewals": 48,
+    "ren-reaction": 72,
+    "price-a": 72,
+    "price-comparison": 84
+  },
+  "voice_generation_calls": 0,
+  "image_generation_calls": 0,
+  "narration_AAC_packets_unchanged": true,
+  "narration_decoded_PCM_unchanged": true,
+  "encoded_audio_peak_dbfs": -2.0049335956573486,
+  "qwen_generated_wav_sha256_verified": "246e6fdae8385dab1112bf84e48e339f8ff12cef61dcd72a83916761a35b7217",
+  "qwen_generated_wav_sample_rate": 24000,
+  "qwen_wav_vs_current_first13_84s_correlation": 0.9994561335912864,
+  "proper_resampling_used_for_signal_comparison": true,
+  "voice_settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451"
+  },
+  "voice_identity_ear_review_performed": false,
+  "full_audio_listening_performed": false,
+  "physical_android_test": false,
+  "character_native_decode": [
+    1280,
+    720
+  ],
+  "reaction_source": "ren_confused.mp4,2.0\u20135.0s,closed mouth",
+  "reaction_resize_linear": 2.6,
+  "raised_arm_negative_space_matte_checked": true,
+  "white_shirt_alpha_asserted_each_native_frame": true,
+  "prices_derived_from_shared_assumptions": [
+    2520,
+    840
+  ],
+  "price_font_px": 158,
+  "large_story_labels_px": [
+    48,
+    52,
+    56,
+    58,
+    60,
+    62,
+    64,
+    68,
+    70,
+    76,
+    78,
+    130,
+    158
+  ],
+  "disclaimer_font_px": 36,
+  "caption_boxes_removed": true,
+  "separate_srt": "deliverables/Revision4_Narration.srt",
+  "prototype_approval": "pending",
+  "full_short_rendered": false,
+  "output_sha256": "fe6e46193d0d035e96a61da0b2bd2d90e906c0cfa0751d3544bca9cb336eff20",
+  "visual_review_samples": 60,
+  "native_detail_crops_inspected": [
+    "Ren face/glasses/hair",
+    "raised-arm negative space",
+    "opaque white T-shirt",
+    "approved hand/trackpad composite",
+    "large price typography"
+  ],
+  "review_method": "Quarter-second encoded motion samples across whole15s; changed opening rechecked after cleanup, other four shots reused unchanged"
+}

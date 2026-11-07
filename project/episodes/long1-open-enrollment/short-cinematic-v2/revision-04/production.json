@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "title": "Health Insurance Short \u2014 Revision4 story prototype",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 360,
+  "full_bleed": true,
+  "permanent_border": false,
+  "asset_report": "REVISION4_PLAN.md",
+  "layout_evidence": "layout.json",
+  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4",
+  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.qa.json",
+  "assets": [
+    {
+      "id": "script",
+      "path": "script-prototype.txt",
+      "kind": "script",
+      "sha256": "e2ddc99e03773351a1baf47328d2f234b82fa6ad15cfb473a021d5869c2e9a72",
+      "status": "approved",
+      "approval_evidence": "Existing approved opening narration, reused verbatim through catch; current request authorizes visual prototype"
+    },
+    {
+      "id": "source-short",
+      "path": "../portrait-short-01/deliverables/Ren_Health_Plan_Portrait_1min.mp4",
+      "kind": "audio",
+      "sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+      "status": "approved",
+      "approval_evidence": "Exact existing Short specified by Jon, preserved; Qwen provenance in opening-hook-v1/manifest.json"
+    },
+    {
+      "id": "office",
+      "path": "../../../prototypes/coffee-minute-v3/assets/office.png",
+      "kind": "environment",
+      "sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36",
+      "status": "approved",
+      "approval_evidence": "Approved coffee v3 original; exact hash in artwork/manifest.json"
+    },
+    {
+      "id": "laptop",
+      "path": "assets/laptop-generated.png",
+      "kind": "prop",
+      "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8",
+      "status": "approved",
+      "approval_evidence": "Jon explicitly requested a generated laptop in the revised prototype; artwork is for prototype review, not full-film design approval"
+    },
+    {
+      "id": "previous-prototype-audio",
+      "path": "deliverables/Ren_Health_Short_v2_15s_Prototype.mp4",
+      "kind": "audio",
+      "sha256": "6018ae46c6f80623f13ad0f946fc7f674c9eec8b7683da707562ae221663fb6c",
+      "status": "approved",
+      "approval_evidence": "Reuse original prototype AAC narration unchanged in this visual-only revision"
+    },
+    {
+      "id": "voice-config",
+      "path": "voice-configuration.json",
+      "kind": "configuration",
+      "sha256": "2d8653dc4603c072b912d1ea12b0bdfa90758b85824b8eebc9b7c6984e34498d",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "native-matte",
+      "path": "../render.py",
+      "kind": "renderer",
+      "sha256": "a957d81ba5520b743443684f7f7d8954445ea80a07e0adc27d75d8863661ac16",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "calculations",
+      "path": "../calculations.py",
+      "kind": "renderer",
+      "sha256": "8e2b5ac72e36f292424f4bb33a6364c48a8a78f28c2081027dafae7fa9161b31",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "assumptions",
+      "path": "../assumptions.json",
+      "kind": "configuration",
+      "sha256": "d2d8eb860757b439890424259d86ab87813d4c07a040e1b56c84d1d2240b73e6",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "parent-timing",
+      "path": "../audio-timing.json",
+      "kind": "configuration",
+      "sha256": "cb7c79679c2c2286dc7cb5e9613137233132d9c155a9dc36fffde2327f0a8cd2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "voice-provenance",
+      "path": "../opening-hook-v1/manifest.json",
+      "kind": "configuration",
+      "sha256": "f7a85240dcf2e0c9a891ef89f434097995a3637a0bb058964dfabff1fef6d8e2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "font",
+      "path": "../../../remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "kind": "configuration",
+      "sha256": "7046069756572f2d090fd5ac943b24d1958f2fbb259cd6b99872758d24dbe369",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-render",
+      "path": "../../../prototypes/coffee-minute-v3/render.py",
+      "kind": "renderer",
+      "sha256": "4e7973365ed8a0e5686eb67e81e7616a4e41871220270c6f75133dca616d3103",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-unpack",
+      "path": "../../../prototypes/coffee-minute-v3/unpack_artwork.py",
+      "kind": "renderer",
+      "sha256": "bda26d01aca768eaeed6d7ca3fbc857bf2793c5b278f79e5f5c75108f68b553f",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "qa-gate",
+      "path": "../../../pipeline/shorts_standards.py",
+      "kind": "renderer",
+      "sha256": "20d4ac3c459bb11e5143028fc64fbac1e5ebc36f6559d7b83d265ffe4f95fa97",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-ref",
+      "path": "../../../../Audio/ren_reference.wav",
+      "kind": "configuration",
+      "sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-text",
+      "path": "../../../../Audio/ren_reference.txt",
+      "kind": "configuration",
+      "sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "render-r4",
+      "path": "render_revision4.py",
+      "kind": "renderer",
+      "sha256": "9414e5fededf295fa3f53d3abda4c2e072d743501438fd675939a4b9a3b862c0",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "prepare-r4",
+      "path": "prepare_revision4.py",
+      "kind": "renderer",
+      "sha256": "c2fe39be41587fa059a13b16789ebf5b5eff0c577fef462f2ea9d9cac8d3dbde",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "render-components",
+      "path": "render.py",
+      "kind": "renderer",
+      "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "config",
+      "path": "revision4-config.json",
+      "kind": "configuration",
+      "sha256": "0107d73f98062feddc595a4332eb3e03b14638dfcd51e7b02ed40b2360410121",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "point-hand",
+      "path": "../../../../assets/ren_library/ren_point_down_right.mp4",
+      "kind": "character",
+      "sha256": "7cfd517ef14d781a65233475e671baf6e9fa3589989d9164459f6813a4d444a0",
+      "status": "approved",
+      "approval_evidence": "Existing Ren v3 library; actual3s hand/sleeve inspected, crop/rotation only, no new hand design"
+    },
+    {
+      "id": "reaction",
+      "path": "../../../../assets/ren_library/ren_confused.mp4",
+      "kind": "character",
+      "sha256": "7aff6a1e3cc652e122f674e679928a5f200948b6e8854a4d350c4d0332ed39c9",
+      "status": "approved",
+      "approval_evidence": "Existing Ren v3 library; actual closed-mouth reaction inspected, same face/outfit/model"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "renewal-action",
+      "start_frame": 0,
+      "end_frame": 84,
+      "composition": "renewal-button-hand-closeup",
+      "action": "Ren hand approaches trackpad and presses at spoken click",
+      "motion_purpose": "Show the automatic decision as an actual action",
+      "animations": [
+        "approved-pointing-hand-trackpad"
+      ],
+      "kind": "action",
+      "environment_fullscreen": false,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font",
+        "point-hand"
+      ]
+    },
+    {
+      "id": "four-renewals",
+      "start_frame": 84,
+      "end_frame": 132,
+      "composition": "physical-calendar-page-closeup",
+      "action": "Four annual renewal pages turn then hold Year4",
+      "motion_purpose": "Compress repeated annual choices without a paragraph",
+      "animations": [
+        "annual-page-turn"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font"
+      ]
+    },
+    {
+      "id": "ren-reaction",
+      "start_frame": 132,
+      "end_frame": 204,
+      "composition": "waist-up-ren-over-documents",
+      "action": "Ren expression/gesture changes as he compares",
+      "motion_purpose": "Human reaction replaces full-body presenter pose",
+      "animations": [
+        "approved-confused-2-5"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font",
+        "reaction"
+      ]
+    },
+    {
+      "id": "price-a",
+      "start_frame": 204,
+      "end_frame": 276,
+      "composition": "folded-comparison-document",
+      "action": "First annual premium opens on a single comparison sheet",
+      "motion_purpose": "Hold the correct price at phone-readable size",
+      "animations": [
+        "comparison-page-place"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font"
+      ]
+    },
+    {
+      "id": "price-comparison",
+      "start_frame": 276,
+      "end_frame": 360,
+      "composition": "unfolded-comparison-document",
+      "action": "Reveal other premium then inspect the care-cost line",
+      "motion_purpose": "Compare premiums without implying guaranteed total saving",
+      "animations": [
+        "comparison-fold-open-and-inspect"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font"
+      ]
+    }
+  ],
+  "audio_cues": [
+    {
+      "start": 0.08,
+      "end": 2.74,
+      "text": "For four years, I renewed the same health plan."
+    },
+    {
+      "start": 3.06,
+      "end": 5.45,
+      "text": "One click. Same plan. Done."
+    },
+    {
+      "start": 5.95,
+      "end": 7.36,
+      "text": "Then I compared my options."
+    },
+    {
+      "start": 7.79,
+      "end": 11.69,
+      "text": "One plan: $2,520 a year in premiums."
+    },
+    {
+      "start": 11.69,
+      "end": 13.77,
+      "text": "Another: just $840."
+    },
+    {
+      "start": 13.963333,
+      "end": 14.923333,
+      "text": "But here's the catch."
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.08,
+      "end": 2.74,
+      "text": "For four years, I renewed the same health plan."
+    },
+    {
+      "start": 3.06,
+      "end": 5.45,
+      "text": "One click. Same plan. Done."
+    },
+    {
+      "start": 5.95,
+      "end": 7.36,
+      "text": "Then I compared my options."
+    },
+    {
+      "start": 7.79,
+      "end": 11.69,
+      "text": "One plan: $2,520 a year in premiums."
+    },
+    {
+      "start": 11.69,
+      "end": 13.77,
+      "text": "Another: just $840."
+    },
+    {
+      "start": 13.963333,
+      "end": 14.923333,
+      "text": "But here's the catch."
+    }
+  ],
+  "full_production_blocked": "Explicit revised prototype approval pending; only15s implemented"
+}

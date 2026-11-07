@@ -1,0 +1,34 @@
+{
+  "revision": 5,
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 360,
+  "actor_decode": [
+    1280,
+    720
+  ],
+  "actor_source_crop": [
+    465,
+    0,
+    825,
+    720
+  ],
+  "actor_size": [
+    936,
+    1872
+  ],
+  "actor_position": [
+    20,
+    350
+  ],
+  "reaction_interval": [
+    2.0,
+    5.0
+  ],
+  "reaction_foreground_papers": false,
+  "pointing_hand_overlay": false,
+  "burned_in_transcript": false,
+  "separate_srt": true,
+  "voice_generation_requests": 0
+}

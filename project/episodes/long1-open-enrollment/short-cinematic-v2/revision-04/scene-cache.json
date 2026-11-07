@@ -1,0 +1,18 @@
+{
+  "source_file": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4",
+  "source_sha256": "fe6e46193d0d035e96a61da0b2bd2d90e906c0cfa0751d3544bca9cb336eff20",
+  "scenes": {
+    "four-renewals": {
+      "file": "build/revision4/four-renewals.mp4",
+      "sha256": "298b0a790447ac8b2d11db46b9b0894027931e4208c0932b2309cf68909032bf"
+    },
+    "price-a": {
+      "file": "build/revision4/price-a.mp4",
+      "sha256": "26bb7419aed25eb86627e19b252d7eb90c6011ccacff56d31fa0b833c1c3de2c"
+    },
+    "price-comparison": {
+      "file": "build/revision4/price-comparison.mp4",
+      "sha256": "53d6f64553fd452186d8c7b6abda82e2585f6ed96ec0aa052c9b85293a369320"
+    }
+  }
+}

@@ -1,17 +1,17 @@
-# Health insurance Short — Revision4 prototype
+# Health insurance Short — Revision5 prototype
 
-Latest adapter: render_revision4.py. **Only15seconds; full Short NOT approved.**
+Latest adapter: render_revision5.py. **Only15seconds; full Short NOT approved.**
 Jon explicitly rejected Revision03 for full production and requested a targeted
 iteration. Earlier videos/artwork remain unchanged. No new narration or images.
 
 ## Latest deliverables
 
-- `deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4`
-- `deliverables/Revision4_Narration.srt`: full narration captions, separate from
+- `deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4`
+- `deliverables/Revision5_Narration.srt`: full narration captions, separate from
   the large story labels in the video; small caption boxes are no longer burnt in.
-- `REVISION4_PLAN.md`: inventory, source intervals, storyboard and voice provenance.
+- `REVISION5_NOTES.md`: requested removals; original story/voice retained.
 - `production.json` / `layout.json`: hashed inputs and measured final text bounds.
-- `revision4-config.json`: framing and source settings.
+- `revision5-config.json`: framing and source settings.
 - `technical-qa.json`, `review.json`, `QA.md`: technical results/inspection limits.
 
 ## Resume/reproduce
@@ -22,9 +22,9 @@ AAC reuse, approved office/laptop artwork, fonts, animation library and referenc
 files at their recorded paths. No token/model download is needed for audio reuse.
 From repository root:
 
-    python project/episodes/long1-open-enrollment/short-cinematic-v2/prepare_revision4.py
+    python project/episodes/long1-open-enrollment/short-cinematic-v2/prepare_revision5.py
     python project/pipeline/shorts_standards.py preflight --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json
-    python project/pipeline/shorts_standards.py run --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json --stage prototype --output project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4 -- python project/episodes/long1-open-enrollment/short-cinematic-v2/render_revision4.py
+    python project/pipeline/shorts_standards.py run --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json --stage prototype --output project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4 -- python project/episodes/long1-open-enrollment/short-cinematic-v2/render_revision5.py
 
 Scene chunks/native actor mattes are cached under build/revision4 with dependency
 hashes. Both launcher and adapter enforce the360-frame prototype stage. The
@@ -33,8 +33,8 @@ an episode shot adapter, not a replacement long-form production system.
 
 ## Character and narration integrity
 
-Actual pointing hand/sleeve from ren_point_down_right at3s is cropped/rotated
-without mirroring; no new hand design. Close reaction uses ren_confused2–5s,
+No pointing hand is composited in Revision5. The foreground paper shapes are
+also removed from Ren’s reaction. Close reaction uses ren_confused2–5s,
 which changes the expression while keeping the mouth closed. Decode1280×720,
 matte natively and resize once. The raised-arm negative-space pocket gets extra
 background flood seeds, while the separate white shirt remains opaque. The
@@ -54,3 +54,6 @@ above for current work. Prior MP4s, source Short and long film are never overwri
 No video/cache files go into Git. No merge or YouTube publication. STOP after
 prototype delivery and await explicit approval; future major artwork needs its
 own approval before full-production use.
+
+Revision5 rerenders only0–3.5s and5.5–8.5s; the calendar, price reveal and
+AAC narration are reused unchanged. Revision4 source/art/video remain preserved.

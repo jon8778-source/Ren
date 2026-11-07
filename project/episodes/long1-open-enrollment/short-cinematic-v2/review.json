@@ -1,5 +1,5 @@
 {
-  "revision": 4,
+  "revision": 5,
   "duration_seconds": 15,
   "resolution": [
     1080,
@@ -69,16 +69,21 @@
   "disclaimer_font_px": 36,
   "caption_boxes_removed": true,
   "separate_srt": "deliverables/Revision4_Narration.srt",
-  "prototype_approval": "pending",
+  "prototype_approval": "pending Revision5 review",
   "full_short_rendered": false,
-  "output_sha256": "fe6e46193d0d035e96a61da0b2bd2d90e906c0cfa0751d3544bca9cb336eff20",
+  "output_sha256": "8a78f5ef7d36faafa9c9caa641ef307a152aca1d3f2db7a3049881b626eed7d7",
   "visual_review_samples": 60,
   "native_detail_crops_inspected": [
-    "Ren face/glasses/hair",
-    "raised-arm negative space",
-    "opaque white T-shirt",
-    "approved hand/trackpad composite",
-    "large price typography"
+    "laptop without hand overlay",
+    "Ren with clear foreground",
+    "Ren face/glasses and opaque white T-shirt"
   ],
-  "review_method": "Quarter-second encoded motion samples across whole15s; changed opening rechecked after cleanup, other four shots reused unchanged"
+  "review_method": "Quarter-second encoded samples of edited shots;204 other frames verified pixel-identical to Revision4",
+  "pointing_hand_overlay_removed": true,
+  "foreground_papers_removed_from_reaction": true,
+  "unchanged_cutaway_frames": 204,
+  "unchanged_cutaways_pixel_identical": true,
+  "rendered_frames": 156,
+  "new_artwork_requests": 0,
+  "previous_prototype_sha256_unchanged": "fe6e46193d0d035e96a61da0b2bd2d90e906c0cfa0751d3544bca9cb336eff20"
 }

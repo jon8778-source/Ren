@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "title": "Health Insurance Short \u2014 Revision4 story prototype",
+  "title": "Health Insurance Short \u2014 Revision5 story prototype",
   "width": 1080,
   "height": 1920,
   "fps": 24,
   "frames": 360,
   "full_bleed": true,
   "permanent_border": false,
-  "asset_report": "REVISION4_PLAN.md",
+  "asset_report": "REVISION5_NOTES.md",
   "layout_evidence": "layout.json",
-  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4",
-  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.qa.json",
+  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4",
+  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.qa.json",
   "assets": [
     {
       "id": "script",
@@ -149,20 +149,20 @@
       "approval_evidence": "Existing approved production dependency; reference hashes verified"
     },
     {
-      "id": "render-r4",
-      "path": "render_revision4.py",
+      "id": "render-r5",
+      "path": "render_revision5.py",
       "kind": "renderer",
-      "sha256": "9414e5fededf295fa3f53d3abda4c2e072d743501438fd675939a4b9a3b862c0",
+      "sha256": "28cb74cc6eaadb600d30cbe3a85649dac19e44c458d4e1c30437997663d9112e",
       "status": "approved",
-      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
     },
     {
-      "id": "prepare-r4",
-      "path": "prepare_revision4.py",
+      "id": "prepare-r5",
+      "path": "prepare_revision5.py",
       "kind": "renderer",
-      "sha256": "c2fe39be41587fa059a13b16789ebf5b5eff0c577fef462f2ea9d9cac8d3dbde",
+      "sha256": "584e4719839c5c0ed983593067ee9870db3930833b1d2e56241074d885679116",
       "status": "approved",
-      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
     },
     {
       "id": "render-components",
@@ -170,23 +170,15 @@
       "kind": "renderer",
       "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
       "status": "approved",
-      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
     },
     {
       "id": "config",
-      "path": "revision4-config.json",
+      "path": "revision5-config.json",
       "kind": "configuration",
-      "sha256": "0107d73f98062feddc595a4332eb3e03b14638dfcd51e7b02ed40b2360410121",
+      "sha256": "2e4bce563b43a08b4ea4d1cc46dd936869cbb974c45ae0a707b72d141dc78398",
       "status": "approved",
-      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
-    },
-    {
-      "id": "point-hand",
-      "path": "../../../../assets/ren_library/ren_point_down_right.mp4",
-      "kind": "character",
-      "sha256": "7cfd517ef14d781a65233475e671baf6e9fa3589989d9164459f6813a4d444a0",
-      "status": "approved",
-      "approval_evidence": "Existing Ren v3 library; actual3s hand/sleeve inspected, crop/rotation only, no new hand design"
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
     },
     {
       "id": "reaction",
@@ -195,6 +187,22 @@
       "sha256": "7aff6a1e3cc652e122f674e679928a5f200948b6e8854a4d350c4d0332ed39c9",
       "status": "approved",
       "approval_evidence": "Existing Ren v3 library; actual closed-mouth reaction inspected, same face/outfit/model"
+    },
+    {
+      "id": "reuse-registry",
+      "path": "revision-04/scene-cache.json",
+      "kind": "configuration",
+      "sha256": "a469c0ec6def7b8507abfb13e8a6c220a15515e697ca83bdc26538a668950196",
+      "status": "approved",
+      "approval_evidence": "Verified Revision4 cutaway cache registry; only unchanged scenes reused"
+    },
+    {
+      "id": "previous-layout",
+      "path": "revision-04/layout.json",
+      "kind": "configuration",
+      "sha256": "c2feaf46b7e8a8e8b5a4c11c24e6f6b0333dcbba60bbec83039d91ec42c73279",
+      "status": "approved",
+      "approval_evidence": "Preserved measured layout for the three unchanged cutaways"
     }
   ],
   "scenes": [
@@ -202,20 +210,19 @@
       "id": "renewal-action",
       "start_frame": 0,
       "end_frame": 84,
-      "composition": "renewal-button-hand-closeup",
-      "action": "Ren hand approaches trackpad and presses at spoken click",
+      "composition": "renewal-button-cursor-closeup",
+      "action": "Mouse cursor clicks the renewal button; no hand overlay",
       "motion_purpose": "Show the automatic decision as an actual action",
       "animations": [
-        "approved-pointing-hand-trackpad"
+        "cursor-click"
       ],
       "kind": "action",
       "environment_fullscreen": false,
       "assets": [
         "office",
         "laptop",
-        "render-r4",
-        "font",
-        "point-hand"
+        "render-r5",
+        "font"
       ]
     },
     {
@@ -233,7 +240,7 @@
       "assets": [
         "office",
         "laptop",
-        "render-r4",
+        "render-r5",
         "font"
       ]
     },
@@ -241,7 +248,7 @@
       "id": "ren-reaction",
       "start_frame": 132,
       "end_frame": 204,
-      "composition": "waist-up-ren-over-documents",
+      "composition": "close-ren-clear-foreground",
       "action": "Ren expression/gesture changes as he compares",
       "motion_purpose": "Human reaction replaces full-body presenter pose",
       "animations": [
@@ -252,7 +259,7 @@
       "assets": [
         "office",
         "laptop",
-        "render-r4",
+        "render-r5",
         "font",
         "reaction"
       ]
@@ -272,7 +279,7 @@
       "assets": [
         "office",
         "laptop",
-        "render-r4",
+        "render-r5",
         "font"
       ]
     },
@@ -291,7 +298,7 @@
       "assets": [
         "office",
         "laptop",
-        "render-r4",
+        "render-r5",
         "font"
       ]
     }
