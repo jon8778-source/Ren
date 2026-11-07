@@ -490,10 +490,11 @@ class Rev:
         dr.rectangle((92, 62, 1188, 132), fill=(*NAVY, 255))
         dr.text((130, 97), "401(k) enrollment", font=font(40, 700), fill=(255, 255, 255), anchor="lm")
         dr.text((640, 190), "Every dollar you put in is matched", font=font(40, 600), fill=(*NAVY, 255), anchor="mm")
-        n = int(min(6, max(0, (t - 0.25) / 0.2)))
+        n = int(min(6, max(0, (t - 0.25) / 0.2)))          # both stacks grow together, so the "=" is true on every frame
         stack(dr, 400, 540, n, (255, 196, 40), r=52, step=38)
-        stack(dr, 880, 540, max(0, min(6, int((t - 0.45) / 0.2))), SAGE, r=52, step=38)
-        dr.text((640, 380), "=", font=font(120, 700), fill=(*MUTED, 255), anchor="mm")
+        stack(dr, 880, 540, n, SAGE, r=52, step=38)
+        if n > 0:
+            dr.text((640, 380), "=", font=font(120, 700), fill=(*MUTED, 255), anchor="mm")
         dr.text((400, 600), "You", font=font(34, 700), fill=NAVY, anchor="mm")
         dr.text((880, 600), "Company", font=font(34, 700), fill=NAVY, anchor="mm")
         f.alpha_composite(lay)
