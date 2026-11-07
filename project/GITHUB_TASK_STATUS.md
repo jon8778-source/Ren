@@ -1,3 +1,23 @@
+# Current task — Revision6 asset-quality checkpoint blocked, 7 November2026
+
+Branch `codex/health-short-revision6`, based on verified Revision5 `3ccd45f`.
+Baseline Revision5 SHA verified and original media/renderers/production manifest
+unchanged. Inspected approved library, candidate portraits and supplied asset pack.
+Genuine chest-up still tests at4×/5× native source:5× yields approximately35.6%face
+width, but100% detail review fails sharpness. No suitable approved higher-detail
+reaction or correctly oriented trackpad-click insert verified in this checkout.
+
+Per Jon's explicit Revision6 fallback, STOP before generating/substituting major
+artwork. Two exact asset briefs and source refs prepared. No Revision6 MP4 or new
+art/voice generated; full60s production not started. A/C motion remains planned,
+not falsely passed. Assessment/report/checklist/reproducible test are under
+project/episodes/long1-open-enrollment/short-cinematic-v2/revision6-assessment/.
+Diagnostic/baseline images are separate review artifacts, not new production art.
+Approval requested for reaction master and clicking-hand insert before further work.
+Source checkpoint publication pending. Media stays outside Git; main untouched.
+
+---
+
 # Current task — Revision5 removal-only prototype, 7 November2026
 
 Branch `codex/health-short-cinematic-v2`. Jon requested removal of the laptop

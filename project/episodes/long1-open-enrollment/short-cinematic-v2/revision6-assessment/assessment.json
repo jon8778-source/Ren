@@ -1,0 +1,272 @@
+{
+  "task": "Revision6 preflight assessment \u2014 blocked before production",
+  "baseline": "project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4",
+  "baseline_sha256": "8a78f5ef7d36faafa9c9caa641ef307a152aca1d3f2db7a3049881b626eed7d7",
+  "baseline_probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1080,
+        "height": 1920,
+        "coded_width": 1080,
+        "coded_height": 1920,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "time_base": "1/12288",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 184320,
+        "duration": "15.000000",
+        "bit_rate": "621683",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "360",
+        "extradata_size": 47,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc61.19.101 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 720000,
+        "duration": "15.000000",
+        "bit_rate": "171401",
+        "nb_frames": "705",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "15.000000",
+      "size": "1499239",
+      "bit_rate": "799594",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.103"
+      }
+    }
+  },
+  "originals_modified": false,
+  "new_movie_rendered": false,
+  "new_artwork_generated": false,
+  "new_voice_generated": false,
+  "diagnostic_source": "assets/ren_library/ren_confused.mp4",
+  "source_time_seconds": 4.5,
+  "native_resolution": [
+    1280,
+    720
+  ],
+  "diagnostic_resize_factors": [
+    4,
+    5
+  ],
+  "manual_face_bounds_native": [
+    598,
+    54,
+    675,
+    143
+  ],
+  "manual_face_width_native_pixels": 77,
+  "five_times_face_width_output_pixels": 385,
+  "five_times_face_width_percent": 35.648148148148145,
+  "measurement_scope": "Approximate manual temple/face span at one representative source frame; not a face-detector measurement or sequence-wide certification",
+  "diagnostic_verdict": "Chest-up framing achieved in still; failed source-detail quality review at100%output. No Revision6 acceptance claimed.",
+  "checked_alternative_assets": [
+    "Approved full-body v3 library and extracted reference frames",
+    "project/characters/ren portrait PNGs: no verified v3 approval provenance",
+    "Supplied long1 asset pack: manifest explicitly labels cutouts as concepts, not approved renderer frames",
+    "Earlier seated-office illustration: pending approval status, not suitable approved close reaction"
+  ],
+  "assets": [
+    {
+      "path": "project/episodes/long1-open-enrollment/short-cinematic-v2/render_revision5.py",
+      "sha256": "28cb74cc6eaadb600d30cbe3a85649dac19e44c458d4e1c30437997663d9112e"
+    },
+    {
+      "path": "project/episodes/long1-open-enrollment/short-cinematic-v2/prepare_revision5.py",
+      "sha256": "584e4719839c5c0ed983593067ee9870db3930833b1d2e56241074d885679116"
+    },
+    {
+      "path": "assets/ren_library/ren_confused.mp4",
+      "sha256": "7aff6a1e3cc652e122f674e679928a5f200948b6e8854a4d350c4d0332ed39c9"
+    },
+    {
+      "path": "assets/ren_library/ren_thinking.mp4",
+      "sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354"
+    },
+    {
+      "path": "assets/ren_library/ren_nod_yes.mp4",
+      "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d"
+    },
+    {
+      "path": "assets/ren_library/ren_point_down_right.mp4",
+      "sha256": "7cfd517ef14d781a65233475e671baf6e9fa3589989d9164459f6813a4d444a0"
+    },
+    {
+      "path": "project/episodes/open-enrollment-short-01/assets/ren-approved-reference.png",
+      "sha256": "de305611b5964226191998c3e961dab90c59f1f85afc831d603f276ec7432459"
+    },
+    {
+      "path": "project/prototypes/coffee-minute-v3/assets/office.png",
+      "sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36"
+    }
+  ],
+  "diagnostic_files": [
+    {
+      "file": "deliverables/revision6-assessment/01-baseline-opening.png",
+      "sha256": "49a941ec9f3ad426e6895bae8a0bf0853ea2155b73dfb761e64e5260ebcd5b92"
+    },
+    {
+      "file": "deliverables/revision6-assessment/closeup-4.0x.png",
+      "sha256": "04bd4059d0d937fc45674ace4d557a73df7c4a3635af9205d8f87cf8c070a463"
+    },
+    {
+      "file": "deliverables/revision6-assessment/02-closeup-diagnostic-not-approved.png",
+      "sha256": "e4ee80213097f9205d7f73c1cf32fbc3abc48a2b73a77afddd206845747204e8"
+    },
+    {
+      "file": "deliverables/revision6-assessment/closeup-5.0x.png",
+      "sha256": "e4ee80213097f9205d7f73c1cf32fbc3abc48a2b73a77afddd206845747204e8"
+    },
+    {
+      "file": "deliverables/revision6-assessment/source-head-detail.png",
+      "sha256": "e634eb4ff3270abf9e68421a27b702ef5a8f3ddec98eee358f4df34559c0147d"
+    },
+    {
+      "file": "deliverables/revision6-assessment/03-baseline-price-reveal.png",
+      "sha256": "34acf694be508656a5d93a43904920fe4e74516e4513982a54744872e49e62c7"
+    }
+  ],
+  "voice_settings": {
+    "space": "Qwen/Qwen3-TTS",
+    "endpoint": "/generate_voice_clone",
+    "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "model_size": "1.7B",
+    "language": "English",
+    "use_xvector_only": true,
+    "reference": "Audio/ren_reference.wav",
+    "transcript": "Audio/ren_reference.txt",
+    "other_generation_parameters": "unchanged public Space defaults",
+    "reference_sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+    "transcript_sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+    "reuse_audio": "project/episodes/long1-open-enrollment/portrait-short-01/deliverables/Ren_Health_Plan_Portrait_1min.mp4",
+    "new_generation_calls": 0,
+    "new_quota_consumption_gpu_seconds": 0,
+    "source_sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+    "pause_edit": {
+      "remove_source_seconds": [
+        13.84,
+        14.006666666666668
+      ],
+      "reason": "Finish complete \u201ccatch\u201d phrase inside 15 seconds, removing only quiet inter-sentence pause; no speed change, padding or speech removed"
+    }
+  },
+  "voice_reference_hashes_match": true,
+  "new_hf_generation_requests": 0,
+  "new_image_generation_requests": 0,
+  "r6_acceptance": "blocked; diagnostic stills only",
+  "additional_library_candidates_inspected": [
+    "ren_confused",
+    "ren_worried",
+    "ren_thinking",
+    "ren_shocked",
+    "ren_point_down_right",
+    "ren_point_camera",
+    "ren_clipboard_tick",
+    "ren_rub_hands"
+  ],
+  "preservation_scope": "Original media/art/narration/renderers/active production manifest unchanged; administrative task status updated on isolated assessment branch"
+}
