@@ -123,5 +123,7 @@ Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_
 7. **Validation limits:** this used my own `validate.py`, not the existing repo validator, and there is no approved reference MP4 to compare frames against.
 8. The 2.5 s story-still cap forced the folder and car shots to be short. No exceptions were needed in the pilot.
 
+**Narration status:** S1 and S2 are done and checked. The background job for S3-S7 stopped after the first two S3 chunks (likely memory pressure while rendering). It is resumable and I restarted it. S3-S7 are not yet generated or checked.
+
 **STOP. Waiting for: `pilot approved`.**
 
