@@ -1,0 +1,507 @@
+[
+ {
+  "word": "Twenty",
+  "start": 0.0,
+  "end": 0.64
+ },
+ {
+  "word": "-five,",
+  "start": 0.64,
+  "end": 1.06
+ },
+ {
+  "word": "first",
+  "start": 1.46,
+  "end": 1.64
+ },
+ {
+  "word": "real",
+  "start": 1.64,
+  "end": 1.92
+ },
+ {
+  "word": "job,",
+  "start": 1.92,
+  "end": 2.34
+ },
+ {
+  "word": "44",
+  "start": 2.7,
+  "end": 2.98
+ },
+ {
+  "word": ",000",
+  "start": 2.98,
+  "end": 3.38
+ },
+ {
+  "word": "a",
+  "start": 3.38,
+  "end": 3.54
+ },
+ {
+  "word": "year,",
+  "start": 3.54,
+  "end": 3.76
+ },
+ {
+  "word": "and",
+  "start": 3.98,
+  "end": 4.18
+ },
+ {
+  "word": "I",
+  "start": 4.18,
+  "end": 4.32
+ },
+ {
+  "word": "felt",
+  "start": 4.32,
+  "end": 4.52
+ },
+ {
+  "word": "like",
+  "start": 4.52,
+  "end": 4.72
+ },
+ {
+  "word": "I'd",
+  "start": 4.72,
+  "end": 4.94
+ },
+ {
+  "word": "made",
+  "start": 4.94,
+  "end": 5.1
+ },
+ {
+  "word": "it,",
+  "start": 5.1,
+  "end": 5.3
+ },
+ {
+  "word": "so",
+  "start": 5.4,
+  "end": 5.46
+ },
+ {
+  "word": "I",
+  "start": 5.46,
+  "end": 5.62
+ },
+ {
+  "word": "did",
+  "start": 5.62,
+  "end": 5.78
+ },
+ {
+  "word": "what",
+  "start": 5.78,
+  "end": 5.98
+ },
+ {
+  "word": "felt",
+  "start": 5.98,
+  "end": 6.18
+ },
+ {
+  "word": "right",
+  "start": 6.18,
+  "end": 6.56
+ },
+ {
+  "word": "and",
+  "start": 6.56,
+  "end": 7.0
+ },
+ {
+  "word": "leased",
+  "start": 7.0,
+  "end": 7.16
+ },
+ {
+  "word": "a",
+  "start": 7.16,
+  "end": 7.38
+ },
+ {
+  "word": "brand",
+  "start": 7.38,
+  "end": 7.54
+ },
+ {
+  "word": "-new",
+  "start": 7.54,
+  "end": 7.7
+ },
+ {
+  "word": "car,",
+  "start": 7.7,
+  "end": 8.08
+ },
+ {
+  "word": "$489",
+  "start": 8.52,
+  "end": 9.18
+ },
+ {
+  "word": "a",
+  "start": 9.18,
+  "end": 10.0
+ },
+ {
+  "word": "month,",
+  "start": 10.0,
+  "end": 10.24
+ },
+ {
+  "word": "not",
+  "start": 10.52,
+  "end": 10.72
+ },
+ {
+  "word": "because",
+  "start": 10.72,
+  "end": 10.94
+ },
+ {
+  "word": "I",
+  "start": 10.94,
+  "end": 11.1
+ },
+ {
+  "word": "needed",
+  "start": 11.1,
+  "end": 11.32
+ },
+ {
+  "word": "it,",
+  "start": 11.32,
+  "end": 11.54
+ },
+ {
+  "word": "because",
+  "start": 11.58,
+  "end": 11.84
+ },
+ {
+  "word": "I",
+  "start": 11.84,
+  "end": 12.04
+ },
+ {
+  "word": "wanted",
+  "start": 12.04,
+  "end": 12.26
+ },
+ {
+  "word": "everyone",
+  "start": 12.26,
+  "end": 12.76
+ },
+ {
+  "word": "in",
+  "start": 12.76,
+  "end": 12.96
+ },
+ {
+  "word": "that",
+  "start": 12.96,
+  "end": 13.12
+ },
+ {
+  "word": "parking",
+  "start": 13.12,
+  "end": 13.44
+ },
+ {
+  "word": "lot",
+  "start": 13.44,
+  "end": 13.74
+ },
+ {
+  "word": "to",
+  "start": 13.74,
+  "end": 13.92
+ },
+ {
+  "word": "think",
+  "start": 13.92,
+  "end": 14.1
+ },
+ {
+  "word": "I",
+  "start": 14.1,
+  "end": 14.26
+ },
+ {
+  "word": "was",
+  "start": 14.26,
+  "end": 14.42
+ },
+ {
+  "word": "doing",
+  "start": 14.42,
+  "end": 14.62
+ },
+ {
+  "word": "great.",
+  "start": 14.62,
+  "end": 15.0
+ },
+ {
+  "word": "On",
+  "start": 15.46,
+  "end": 15.7
+ },
+ {
+  "word": "day",
+  "start": 15.7,
+  "end": 15.92
+ },
+ {
+  "word": "one,",
+  "start": 15.92,
+  "end": 16.28
+ },
+ {
+  "word": "HR",
+  "start": 16.74,
+  "end": 17.04
+ },
+ {
+  "word": "gave",
+  "start": 17.04,
+  "end": 17.34
+ },
+ {
+  "word": "me",
+  "start": 17.34,
+  "end": 17.52
+ },
+ {
+  "word": "a",
+  "start": 17.52,
+  "end": 17.74
+ },
+ {
+  "word": "folder.",
+  "start": 17.74,
+  "end": 18.04
+ },
+ {
+  "word": "Somewhere",
+  "start": 18.24,
+  "end": 18.52
+ },
+ {
+  "word": "on",
+  "start": 18.52,
+  "end": 18.82
+ },
+ {
+  "word": "page",
+  "start": 18.82,
+  "end": 19.06
+ },
+ {
+  "word": "six,",
+  "start": 19.06,
+  "end": 19.42
+ },
+ {
+  "word": "it",
+  "start": 19.76,
+  "end": 19.82
+ },
+ {
+  "word": "said",
+  "start": 19.82,
+  "end": 19.98
+ },
+ {
+  "word": "the",
+  "start": 19.98,
+  "end": 20.16
+ },
+ {
+  "word": "company",
+  "start": 20.16,
+  "end": 20.44
+ },
+ {
+  "word": "would",
+  "start": 20.44,
+  "end": 20.66
+ },
+ {
+  "word": "match",
+  "start": 20.66,
+  "end": 20.9
+ },
+ {
+  "word": "every",
+  "start": 20.9,
+  "end": 21.3
+ },
+ {
+  "word": "dollar",
+  "start": 21.3,
+  "end": 21.6
+ },
+ {
+  "word": "I",
+  "start": 21.6,
+  "end": 21.8
+ },
+ {
+  "word": "put",
+  "start": 21.8,
+  "end": 21.96
+ },
+ {
+  "word": "into",
+  "start": 21.96,
+  "end": 22.16
+ },
+ {
+  "word": "my",
+  "start": 22.16,
+  "end": 22.36
+ },
+ {
+  "word": "retirement",
+  "start": 22.36,
+  "end": 22.78
+ },
+ {
+  "word": "plan,",
+  "start": 22.78,
+  "end": 23.2
+ },
+ {
+  "word": "up",
+  "start": 23.52,
+  "end": 23.62
+ },
+ {
+  "word": "to",
+  "start": 23.62,
+  "end": 23.84
+ },
+ {
+  "word": "4",
+  "start": 23.84,
+  "end": 24.04
+ },
+ {
+  "word": "%",
+  "start": 24.04,
+  "end": 24.34
+ },
+ {
+  "word": "of",
+  "start": 24.34,
+  "end": 24.48
+ },
+ {
+  "word": "my",
+  "start": 24.48,
+  "end": 24.72
+ },
+ {
+  "word": "salary.",
+  "start": 24.72,
+  "end": 25.1
+ },
+ {
+  "word": "I",
+  "start": 25.1,
+  "end": 25.84
+ },
+ {
+  "word": "never",
+  "start": 25.84,
+  "end": 26.06
+ },
+ {
+  "word": "got",
+  "start": 26.06,
+  "end": 26.3
+ },
+ {
+  "word": "to",
+  "start": 26.3,
+  "end": 26.48
+ },
+ {
+  "word": "page",
+  "start": 26.48,
+  "end": 26.68
+ },
+ {
+  "word": "6,",
+  "start": 26.68,
+  "end": 27.06
+ },
+ {
+  "word": "I",
+  "start": 27.42,
+  "end": 27.54
+ },
+ {
+  "word": "picked",
+  "start": 27.54,
+  "end": 27.72
+ },
+ {
+  "word": "2%,",
+  "start": 27.72,
+  "end": 28.4
+ },
+ {
+  "word": "because",
+  "start": 28.4,
+  "end": 28.86
+ },
+ {
+  "word": "2",
+  "start": 28.86,
+  "end": 29.12
+ },
+ {
+  "word": "sounded",
+  "start": 29.12,
+  "end": 29.46
+ },
+ {
+  "word": "responsible,",
+  "start": 29.46,
+  "end": 30.06
+ },
+ {
+  "word": "and",
+  "start": 30.5,
+  "end": 30.6
+ },
+ {
+  "word": "the",
+  "start": 30.6,
+  "end": 30.7
+ },
+ {
+  "word": "least",
+  "start": 30.7,
+  "end": 30.92
+ },
+ {
+  "word": "sounded",
+  "start": 30.92,
+  "end": 31.32
+ },
+ {
+  "word": "urgent.",
+  "start": 31.32,
+  "end": 31.7
+ }
+]

@@ -1,0 +1,357 @@
+[
+ {
+  "word": "I",
+  "start": 0.0,
+  "end": 0.14
+ },
+ {
+  "word": "was",
+  "start": 0.14,
+  "end": 0.3
+ },
+ {
+  "word": "28",
+  "start": 0.3,
+  "end": 0.74
+ },
+ {
+  "word": "when",
+  "start": 0.74,
+  "end": 1.06
+ },
+ {
+  "word": "dev",
+  "start": 1.06,
+  "end": 1.3
+ },
+ {
+  "word": "held",
+  "start": 1.3,
+  "end": 1.54
+ },
+ {
+  "word": "up",
+  "start": 1.54,
+  "end": 1.68
+ },
+ {
+  "word": "my",
+  "start": 1.68,
+  "end": 1.88
+ },
+ {
+  "word": "pay",
+  "start": 1.88,
+  "end": 2.08
+ },
+ {
+  "word": "stub",
+  "start": 2.08,
+  "end": 2.34
+ },
+ {
+  "word": "and",
+  "start": 2.34,
+  "end": 2.56
+ },
+ {
+  "word": "asked",
+  "start": 2.56,
+  "end": 2.82
+ },
+ {
+  "word": "me",
+  "start": 2.82,
+  "end": 3.0
+ },
+ {
+  "word": "one",
+  "start": 3.0,
+  "end": 3.2
+ },
+ {
+  "word": "question,",
+  "start": 3.2,
+  "end": 3.64
+ },
+ {
+  "word": "who's",
+  "start": 4.14,
+  "end": 4.4
+ },
+ {
+  "word": "keeping",
+  "start": 4.4,
+  "end": 4.64
+ },
+ {
+  "word": "the",
+  "start": 4.64,
+  "end": 4.86
+ },
+ {
+  "word": "difference?",
+  "start": 4.86,
+  "end": 5.16
+ },
+ {
+  "word": "I",
+  "start": 5.8,
+  "end": 5.94
+ },
+ {
+  "word": "didn't",
+  "start": 5.94,
+  "end": 6.24
+ },
+ {
+  "word": "know",
+  "start": 6.24,
+  "end": 6.4
+ },
+ {
+  "word": "what",
+  "start": 6.4,
+  "end": 6.56
+ },
+ {
+  "word": "he",
+  "start": 6.56,
+  "end": 6.64
+ },
+ {
+  "word": "meant,",
+  "start": 6.64,
+  "end": 6.94
+ },
+ {
+  "word": "then",
+  "start": 7.44,
+  "end": 7.56
+ },
+ {
+  "word": "he",
+  "start": 7.56,
+  "end": 7.7
+ },
+ {
+  "word": "pointed",
+  "start": 7.7,
+  "end": 7.96
+ },
+ {
+  "word": "at",
+  "start": 7.96,
+  "end": 8.18
+ },
+ {
+  "word": "one",
+  "start": 8.18,
+  "end": 8.38
+ },
+ {
+  "word": "line",
+  "start": 8.38,
+  "end": 8.74
+ },
+ {
+  "word": "and",
+  "start": 8.74,
+  "end": 9.08
+ },
+ {
+  "word": "my",
+  "start": 9.08,
+  "end": 9.24
+ },
+ {
+  "word": "stomach",
+  "start": 9.24,
+  "end": 9.54
+ },
+ {
+  "word": "dropped,",
+  "start": 9.54,
+  "end": 10.0
+ },
+ {
+  "word": "for",
+  "start": 10.56,
+  "end": 10.72
+ },
+ {
+  "word": "3",
+  "start": 10.72,
+  "end": 10.96
+ },
+ {
+  "word": "years,",
+  "start": 10.96,
+  "end": 11.34
+ },
+ {
+  "word": "I'd",
+  "start": 11.72,
+  "end": 11.88
+ },
+ {
+  "word": "been",
+  "start": 11.88,
+  "end": 12.02
+ },
+ {
+  "word": "turning",
+  "start": 12.02,
+  "end": 12.28
+ },
+ {
+  "word": "down",
+  "start": 12.28,
+  "end": 12.58
+ },
+ {
+  "word": "free",
+  "start": 12.58,
+  "end": 12.84
+ },
+ {
+  "word": "money.",
+  "start": 12.84,
+  "end": 13.16
+ },
+ {
+  "word": "And",
+  "start": 13.52,
+  "end": 13.72
+ },
+ {
+  "word": "the",
+  "start": 13.72,
+  "end": 13.92
+ },
+ {
+  "word": "worst",
+  "start": 13.92,
+  "end": 14.08
+ },
+ {
+  "word": "part,",
+  "start": 14.08,
+  "end": 14.48
+ },
+ {
+  "word": "I",
+  "start": 14.8,
+  "end": 14.96
+ },
+ {
+  "word": "did",
+  "start": 14.96,
+  "end": 15.12
+ },
+ {
+  "word": "it",
+  "start": 15.12,
+  "end": 15.26
+ },
+ {
+  "word": "to",
+  "start": 15.26,
+  "end": 15.42
+ },
+ {
+  "word": "impress",
+  "start": 15.42,
+  "end": 15.78
+ },
+ {
+  "word": "people",
+  "start": 15.78,
+  "end": 16.16
+ },
+ {
+  "word": "I",
+  "start": 16.16,
+  "end": 16.44
+ },
+ {
+  "word": "barely",
+  "start": 16.44,
+  "end": 16.84
+ },
+ {
+  "word": "knew.",
+  "start": 16.84,
+  "end": 17.18
+ },
+ {
+  "word": "Let",
+  "start": 17.82,
+  "end": 17.96
+ },
+ {
+  "word": "me",
+  "start": 17.96,
+  "end": 18.16
+ },
+ {
+  "word": "take",
+  "start": 18.16,
+  "end": 18.36
+ },
+ {
+  "word": "you",
+  "start": 18.36,
+  "end": 18.54
+ },
+ {
+  "word": "back.",
+  "start": 18.54,
+  "end": 18.82
+ },
+ {
+  "word": "Thank",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "you",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "for",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "watching",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "and",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "have",
+  "start": 18.82,
+  "end": 18.82
+ },
+ {
+  "word": "a",
+  "start": 18.82,
+  "end": 18.86
+ },
+ {
+  "word": "great",
+  "start": 18.86,
+  "end": 18.86
+ },
+ {
+  "word": "week!",
+  "start": 18.86,
+  "end": 18.88
+ }
+]

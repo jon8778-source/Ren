@@ -1,0 +1,64 @@
+{
+ "S1": {
+  "ratio": 0.9206,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "insert",
+    "",
+    "thank you for watching have a great week"
+   ]
+  ],
+  "heard": "I was 28 when dev held up my pay stub and asked me one question, who's keeping the difference? I didn't know what he meant, then he pointed at one line and my stomach dropped, for 3 years, I'd been turning down free money. And the worst part, I did it to impress people I barely knew. Let me take you back. Thank you for watching and have a great week!"
+ },
+ "S2": {
+  "ratio": 0.8911,
+  "differences": [
+   [
+    "replace",
+    "forty four thousand",
+    "44 000"
+   ],
+   [
+    "delete",
+    "four hundred eighty nine",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "489"
+   ],
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "six",
+    "6"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "lease",
+    "least"
+   ]
+  ],
+  "heard": "Twenty -five, first real job, 44 ,000 a year, and I felt like I'd made it, so I did what felt right and leased a brand -new car, $489 a month, not because I needed it, because I wanted everyone in that parking lot to think I was doing great. On day one, HR gave me a folder. Somewhere on page six, it said the company would match every dollar I put into my retirement plan, up to 4 % of my salary. I never got to page 6, I picked 2%, because 2 sounded responsible, and the least sounded urgent."
+ }
+}
