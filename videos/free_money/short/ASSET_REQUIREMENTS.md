@@ -13,7 +13,7 @@ Prepared before rendering, under the v3 Shorts rules (asset-first checkpoint). *
 |---|---|---|---|---|
 | script | script | `scripts/Ren_Free_Money_Script.md` | 48be8a065cd3 | Owner supplied the script 7 Nov 2026; narration used word for word; Gate 3 'rough cut approved' |
 | audio | audio | `videos/free_money/short/short_audio_raw.wav` | 6656d8c4c67f | Cut from the approved long-form narration (voice/S1-S7.wav), no resynthesis; owner approved the long video narration at Gate 3 ('rough cut approved') and 'Approved, great' on the final |
-| renderer | renderer | `videos/free_money/short/fm_short.py` | 5814bd1a8fad | Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026) |
+| renderer | renderer | `videos/free_money/short/fm_short.py` | ecec74089797 | Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026) |
 | configuration | configuration | `videos/free_money/short/short_spec.json` | daed2cf392d0 | Generated from short_spec.py: beats and timings tied to short_cues.json |
 | ren_r1 | character | `videos/free_money/matted/Ren_1_neutral.png` | b2ae0b7e51b5 | Approved Ren still (library/ren_approved/Ren_1_neutral.jpg), matted; owner 'style lock approved' 7 Nov 2026 |
 | ren_r2 | character | `videos/free_money/matted/Ren_2_hand_on_chest_talking.png` | 04b66658e4d1 | Approved Ren still, matted; 'style lock approved' |

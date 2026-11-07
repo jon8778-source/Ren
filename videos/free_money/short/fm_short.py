@@ -369,6 +369,316 @@ class Short:
             self.disclaimer(c, f, 13.0, 15.0, None)
         return f
 
+
+    # ================= beats 7-21 (rendered only after prototype approval) =================
+    def scaled(self, lay, s, alpha=1.0, centre=(486, 840)):
+        """Pop a full-canvas layer about `centre`: scale s (<=1 keeps text inside its measured bounds) and alpha."""
+        if s != 1.0:
+            cx, cy = centre
+            lay = lay.transform((W, H), Image.AFFINE, (1 / s, 0, cx - cx / s, 0, 1 / s, cy - cy / s), Image.BICUBIC)
+        if alpha < 1:
+            lay.putalpha(lay.getchannel("A").point(lambda v: int(v * alpha)))
+        return lay
+
+    def phone(self, c, tag, draw_screen, s=1.0, alpha=1.0):
+        """A big portrait phone (x 166-806, y 250-1430) drawn in code; `draw_screen(lay, box)` fills the screen and records its text."""
+        lay = layer()
+        d = ImageDraw.Draw(lay)
+        cx, top, pw, ph = 486, 250, 640, 1180
+        d.rounded_rectangle((cx - pw / 2 + 8, top + 14, cx + pw / 2 + 8, top + ph + 14), 76, fill=(19, 35, 63, 60))
+        d.rounded_rectangle((cx - pw / 2, top, cx + pw / 2, top + ph), 76, fill=(24, 30, 44, 255))
+        box = (cx - pw / 2 + 20, top + 22, cx + pw / 2 - 20, top + ph - 22)
+        d.rounded_rectangle(box, 58, fill=(*CREAM, 255))
+        d.rounded_rectangle((cx - 60, top + 34, cx + 60, top + 58), 12, fill=(24, 30, 44, 255))
+        draw_screen(lay, box)
+        return self.scaled(lay, s, alpha)
+
+    def car_icon(self, d, x, y, w):
+        d.rounded_rectangle((x, y + 0.42 * w, x + w, y + 0.8 * w), 0.16 * w, fill=NAVY)
+        d.polygon([(x + 0.2 * w, y + 0.42 * w), (x + 0.32 * w, y + 0.12 * w), (x + 0.7 * w, y + 0.12 * w), (x + 0.84 * w, y + 0.42 * w)], fill=NAVY)
+        for cx_ in (x + 0.25 * w, x + 0.75 * w):
+            d.ellipse((cx_ - 0.13 * w, y + 0.68 * w, cx_ + 0.13 * w, y + 0.94 * w), fill=NAVY, outline=CREAM, width=4)
+
+    def lease_screen(self, c, urgent):
+        def draw(lay, box):
+            x0, y0, x1, y1 = box
+            d = ImageDraw.Draw(lay)
+            c.text(lay, "lease-title", (x0 + 44, y0 + 70), "Car lease", 56, 700, NAVY, "lm")
+            self.car_icon(d, x0 + 44, y0 + 150, 230)
+            c.text(lay, "lease-brand", (x0 + 44, y0 + 420), "Brand-new car", 44, 600, NAVY, "lm")
+            c.text(lay, "lease-monthly", (x0 + 44, y0 + 540), "Monthly payment", 44, 600, MUTED, "lm")
+            c.text(lay, "lease-489", (x0 + 40, y0 + 690), "$489", 190, 700, RED if urgent else NAVY, "lm")
+            c.text(lay, "lease-permonth", (x0 + 44, y0 + 835), "per month", 52, 600, NAVY, "lm")
+            d.rounded_rectangle((x0 + 44, y1 - 190, x1 - 44, y1 - 80), 55, fill=(*NAVY, 255))
+            c.text(lay, "lease-button", ((x0 + x1) / 2, y1 - 135), "Review lease", 50, 700, (255, 255, 255), "mm")
+            if urgent:
+                e = fade(c.t, 0.15, 0.3)
+                d2 = ImageDraw.Draw(lay)
+                d2.rounded_rectangle((x0 + 20, y0 + 20, x1 - 20, y0 + 170), 34, fill=(*RED, int(255 * e)))
+                c.text(lay, "due-1", (x0 + 70, y0 + 66), "Payment due", 50, 700, (255, 255, 255), "lm", alpha=e)
+                c.text(lay, "due-2", (x0 + 70, y0 + 124), "Lease: $489", 54, 700, (255, 255, 255), "lm", alpha=e)
+        return draw
+
+    def office_blur(self, z=1.0, cx=900):
+        return blurred(PCam(self.A.plate["OFFICE"], cx, 470, z), 14)
+
+    # ---- B7: the lease, in the parking lot
+    def s_lot_lease(self, c):
+        A = self.A
+        cam = PCam(A.plate["LOT"], push(c.t, c.d, 760, 790), 470, push(c.t, c.d, 1.0, 1.05))
+        f = cam.render()
+        rs.stand(f, cam, "LOT", A.ren["FS"], 650, 870, None)
+        return f
+
+    # ---- B8: $489 on the phone
+    def s_phone_489(self, c):
+        f = self.office_blur()
+        e = fade(c.t, 0.0, 0.3)
+        f.alpha_composite(self.phone(c, "p", self.lease_screen(c, False), s=lerp(0.92, 1.0, e), alpha=e))
+        return f
+
+    # ---- B9: the folder, page six (a portrait crop of the folder prop)
+    def folder_crop(self, c, wwin, cy=543, dx=0):
+        A = self.A
+        bg = self.office_blur()
+        wwin = min(wwin, 1086 * 9 / 16 - 0.01)
+        h = wwin * 16 / 9
+        x0 = min(max(1142 - wwin / 2, 0), 1448 - wwin)
+        y0 = min(max(cy - h / 2, 0), 1086 - h)
+        crop = A.folder.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + wwin, y0 + h))
+        if dx:
+            lay = layer()
+            lay.paste(crop, (int(dx), 0))
+            crop = lay
+        bg.alpha_composite(crop)
+        return bg, (x0, y0, wwin / W)
+
+    def s_folder_page6(self, c):
+        f, _ = self.folder_crop(c, push(c.t, c.d, 611, 570), dx=lerp(W, 0, ease(c.t / 0.45)))
+        return f
+
+    # ---- B10: dollar for dollar
+    def s_match_coins(self, c):
+        f = self.office_blur(cx=700)
+        n = int(min(6, max(0, (c.t - 0.35) / 0.28)))                     # both stacks grow together: the "=" is true on every frame
+        lay = layer()
+        d = ImageDraw.Draw(lay)
+        for cx_, col in ((250, GOLD), (722, SAGE)):
+            for k in range(n):
+                y = 1150 - k * 46
+                d.ellipse((cx_ - 130, y - 36, cx_ + 130, y + 36), fill=(*col, 255), outline=(*NAVY, 255), width=6)
+        f.alpha_composite(lay)
+        c.text(f, "coin-you", (250, 1250), "You", 56, 700, NAVY, "mm")
+        c.text(f, "coin-emp", (722, 1250), "Employer", 56, 700, NAVY, "mm")
+        if n > 0:
+            c.text(f, "equals", (486, 960), "=", 190, 700, MUTED, "mm")
+        a = fade(c.t, 0.1, 0.3)
+        if a > 0:
+            lay = layer()
+            ImageDraw.Draw(lay).rounded_rectangle((176, 330, 796, 440), 55, fill=(*CREAM, int(255 * a)), outline=(*SAGE, int(255 * a)), width=5)
+            f.alpha_composite(lay)
+            c.text(f, "coin-title", (486, 385), "$1 matched by $1", 54, 700, NAVY, "mm", alpha=a)
+        return f
+
+    # ---- B11: up to 4%
+    def s_match_strip(self, c):
+        f, (x0, y0, k) = self.folder_crop(c, 611)
+        a = fade(c.t, 0.1, 0.3)
+        sx0, sy0, sx1, sy1 = (860 - x0) / k, (621 - y0) / k, (1325 - x0) / k, (682 - y0) / k
+        lay = layer()
+        d = ImageDraw.Draw(lay)
+        glow = layer()
+        ImageDraw.Draw(glow).rounded_rectangle((sx0, sy0, sx1, sy1), 30, fill=(255, 226, 90, int(170 * a)))
+        f.alpha_composite(glow.filter(ImageFilter.GaussianBlur(24)))
+        d.rounded_rectangle((sx0, sy0, sx1, sy1), 30, fill=(255, 236, 150, int(245 * a)), outline=(*GREEN, int(255 * a)), width=7)
+        f.alpha_composite(lay)
+        c.text(f, "strip", ((sx0 + sx1) / 2 + 20, (sy0 + sy1) / 2), "We match 100%", 56, 700, NAVY, "mm", alpha=a)
+        b = fade(c.t, 0.7, 0.3)
+        if b > 0:
+            lay = layer()
+            ImageDraw.Draw(lay).rounded_rectangle((300, sy1 + 40, 760, sy1 + 150), 55, fill=(*GREEN, int(255 * b)))
+            f.alpha_composite(lay)
+            c.text(f, "up-to-4", (530, sy1 + 95), "up to 4%", 60, 700, (255, 255, 255), "mm", alpha=b)
+        return f
+
+    # ---- B12: the 2% decision on a benefits screen
+    def s_picked_two(self, c):
+        f = self.office_blur(cx=1000)
+        a = fade(c.t, 0.05, 0.3)
+        card(f, (72, 300, 900, 1240), a)
+        if a > 0:
+            c.text(f, "bs-title", (486, 400), "Retirement contribution", 52, 700, NAVY, "mm", alpha=a)
+            tx0, tx1, ty = 150, 820, 640
+            lay = layer()
+            d = ImageDraw.Draw(lay)
+            d.rounded_rectangle((tx0, ty, tx1, ty + 22), 11, fill=(205, 214, 226, 255))
+            kn = ease((c.t - 0.35) / 0.6)
+            kx = tx0 + (tx1 - tx0) * (2 / 6) * kn
+            d.rounded_rectangle((tx0, ty, kx, ty + 22), 11, fill=(*NAVY, 255))
+            for pct in (0, 2, 4, 6):
+                x = tx0 + (tx1 - tx0) * pct / 6
+                d.line((x, ty - 14, x, ty + 36), fill=(*MUTED, 255), width=4)
+            d.ellipse((kx - 26, ty - 14, kx + 26, ty + 38), fill=(255, 255, 255, 255), outline=(*NAVY, 255), width=7)
+            ey = 960
+            d.rounded_rectangle((tx0, ey, tx0 + (tx1 - tx0) * (2 / 6) * kn, ey + 56), 16, fill=(*SAGE, 255))
+            ga = fade(c.t, 1.2, 0.35)
+            if ga > 0:
+                g = layer()
+                dashed(ImageDraw.Draw(g), (tx0 + (tx1 - tx0) * (2 / 6) + 6, ey, tx0 + (tx1 - tx0) * (4 / 6), ey + 56), (*GREEN, 255))
+                g.putalpha(g.getchannel("A").point(lambda v: int(v * ga)))
+                lay.alpha_composite(g)
+            f.alpha_composite(lay)
+            for pct in (0, 2, 4, 6):
+                c.text(f, f"tick-{pct}", (tx0 + (tx1 - tx0) * pct / 6, ty + 80), f"{pct}%", 44, 600, MUTED, "mm")
+            if kn > 0.9:
+                c.text(f, "you-2", (kx, ty - 70), "You: 2%", 52, 700, NAVY, "mm")
+            c.text(f, "emp-label", (tx0, ey - 56), "Employer match", 46, 600, MUTED, "lm")
+            c.text(f, "up-to", (tx0 + (tx1 - tx0) * 0.5, ey + 120), "up to 4%", 50, 700, GREEN, "mm", alpha=ga)
+        return f
+
+    # ---- B13: the lease won
+    def s_lease_urgent(self, c):
+        f = self.office_blur()
+        f.alpha_composite(self.phone(c, "p", self.lease_screen(c, True)))
+        return f
+
+    # ---- jars (beats 14-15)
+    def jar(self, c, f, cx, base, label, pct, col, ghost_to=None, big=4.0, w=300, h=620, show=True):
+        lay = layer()
+        d = ImageDraw.Draw(lay)
+        x0, y0 = cx - w / 2, base - h
+        d.rounded_rectangle((x0 + 6, y0 + 12, x0 + w + 6, base + 12), 44, fill=(19, 35, 63, 45))
+        d.rounded_rectangle((x0, y0, x0 + w, base), 44, fill=(246, 249, 252, 255), outline=(*NAVY, 255), width=7)
+        top = base - 10 - (h - 20) * pct / big
+        if pct > 0.02:
+            m = Image.new("L", (W, H), 0)
+            ImageDraw.Draw(m).rounded_rectangle((x0 + 9, y0 + 9, x0 + w - 9, base - 9), 36, fill=255)
+            fl = layer()
+            ImageDraw.Draw(fl).rectangle((x0, top, x0 + w, base), fill=(*col, 255))
+            fl.putalpha(Image.fromarray(np.minimum(np.array(fl.getchannel("A")), np.array(m))))
+            lay.alpha_composite(fl)
+        if ghost_to is not None and ghost_to > pct + 0.1:
+            gt = base - 10 - (h - 20) * ghost_to / big
+            dashed(ImageDraw.Draw(lay), (x0 + 16, gt, x0 + w - 16, top), (*GREEN, 255))
+        f.alpha_composite(lay)
+        if show and pct >= 1.9 and h * pct / big > 90:
+            c.text(f, f"jar-{label}-pct", (cx, (top + base) / 2), "2%", 56, 700, (255, 255, 255), "mm")
+        c.text(f, f"jar-{label}", (cx, base + 60), "You (employee)" if label == "you" else "Employer", 46, 700, NAVY, "mm")
+
+    def s_jars_two(self, c):
+        f = self.office_blur(cx=700)
+        c.text(f, "jars-title", (486, 280), "One employer's plan (example)", 44, 600, MUTED, "mm")
+        e = ease((c.t - 0.1) / 1.0)
+        self.jar(c, f, 250, 1120, "you", 2 * e, NAVY)
+        self.jar(c, f, 722, 1120, "emp", 2 * e, SAGE, ghost_to=2 + 2 * ease((c.t - 1.3) / 0.7))
+        a = fade(c.t, 0.05, 0.3)
+        if a > 0:
+            lay = layer()
+            ImageDraw.Draw(lay).rounded_rectangle((176, 350, 796, 460), 55, fill=(*CREAM, int(255 * a)), outline=(*SAGE, int(255 * a)), width=5)
+            f.alpha_composite(lay)
+            c.text(f, "jars-pill", (486, 405), "$1 matched by $1", 54, 700, NAVY, "mm", alpha=a)
+        return f
+
+    def s_never_paid(self, c):
+        f = self.office_blur(cx=700)
+        c.text(f, "jars-title", (486, 280), "One employer's plan (example)", 44, 600, MUTED, "mm")
+        self.jar(c, f, 250, 1120, "you", 2, NAVY)
+        self.jar(c, f, 722, 1120, "emp", 2, SAGE, ghost_to=4)
+        a = fade(c.t, 0.4, 0.4)
+        if a > 0:
+            lay = layer()
+            ImageDraw.Draw(lay).rounded_rectangle((226, 1290, 746, 1400), 55, fill=(*NAVY, int(255 * a)))
+            f.alpha_composite(lay)
+            c.text(f, "never-paid", (486, 1345), "Never paid", 62, 700, (255, 255, 255), "mm", alpha=a)
+        return f
+
+    # ---- B16: the first year's cost
+    def s_missed_880(self, c):
+        f = self.office_blur(cx=600)
+        card(f, (72, 300, 900, 1180), fade(c.t, 0.0, 0.25))
+        c.text(f, "led-age", (122, 392), "Age 25", 58, 700, NAVY, "lm")
+        c.text(f, "led-sal", (850, 392), "$44,000", 58, 700, GREEN, "rm")
+        lay = layer()
+        ImageDraw.Draw(lay).line((122, 450, 850, 450), fill=(*SAGE, 255), width=5)
+        f.alpha_composite(lay)
+        c.text(f, "led-missed", (122, 540), "Missed match:", 50, 600, MUTED, "lm")
+        a = fade(c.t, 0.5, 0.4)
+        c.text(f, "led-880", (486, 760), "$880", 200, 700, RED, "mm", alpha=a)
+        c.text(f, "led-year", (486, 980), "the first year", 56, 600, NAVY, "mm", alpha=fade(c.t, 0.9, 0.4))
+        return f
+
+    # ---- B17 / B18: the retirement app
+    def app_screen(self, c, v):
+        def draw(lay, box):
+            x0, y0, x1, y1 = box
+            d = ImageDraw.Draw(lay)
+            c.text(lay, "app-title", (x0 + 44, y0 + 80), "401(k)", 58, 700, NAVY, "lm")
+            c.text(lay, "app-mine", (x0 + 44, y0 + 200), "My contribution", 46, 600, MUTED, "lm")
+            col = tuple(int(NAVY[i] + (GREEN[i] - NAVY[i]) * v) for i in range(3))
+            c.text(lay, "app-pct", (x0 + 44, y0 + 460), "4%" if v > 0.5 else "2%", 250, 700, col, "lm")
+            tx0, ty, tw, th = x0 + 60, y0 + 760, 440, 100
+            track = tuple(int(200 + (GREEN[i] - 200) * v) for i in range(3))
+            d.rounded_rectangle((tx0, ty, tx0 + tw, ty + th), 50, fill=(*track, 255))
+            kx = tx0 + 50 + v * (tw - 100)
+            d.ellipse((kx - 44, ty + 6, kx + 44, ty + th - 6), fill=(255, 255, 255, 255), outline=(150, 156, 170, 255), width=3)
+            c.text(lay, "app-2", (tx0 + 20, ty + 160), "2%", 46, 600, MUTED, "lm")
+            c.text(lay, "app-4", (tx0 + tw - 20, ty + 160), "4%", 46, 600, MUTED, "rm")
+        return draw
+
+    def s_toggle_app(self, c):
+        f = self.office_blur()
+        e = fade(c.t, 0.0, 0.3)
+        v = ease((c.t - 1.9) / 0.6)                                    # "changed two to four"
+        f.alpha_composite(self.phone(c, "p", self.app_screen(c, v), s=lerp(0.92, 1.0, e), alpha=e))
+        return f
+
+    def s_ninety_seconds(self, c):
+        f = self.office_blur()
+        f.alpha_composite(self.phone(c, "p", self.app_screen(c, 1.0)))
+        s_ = ease(min(1, c.t / 0.3)) * (1 + 0.08 * math.sin(math.pi * min(1, c.t / 0.4)))
+        s_ = min(s_, 1.0)
+        lay = layer()
+        d = ImageDraw.Draw(lay)
+        cx_, cy_, r = 702, 400, 138
+        d.ellipse((cx_ - r + 8, cy_ - r + 14, cx_ + r + 8, cy_ + r + 14), fill=(19, 35, 63, 50))
+        d.ellipse((cx_ - r, cy_ - r, cx_ + r, cy_ + r), fill=(*GREEN, 255))
+        c.text(lay, "badge-90", (cx_, cy_ - 28), "90", 120, 700, (255, 255, 255), "mm")
+        c.text(lay, "badge-sec", (cx_, cy_ + 62), "seconds", 46, 700, (255, 255, 255), "mm")
+        f.alpha_composite(self.scaled(lay, max(s_, 0.02), 1.0, centre=(cx_, cy_)))
+        return f
+
+    # ---- B19-B21: closing busts and the call to action
+    def s_three_years_late(self, c):
+        f = PCam(self.A.plate["OFFICE"], 940, 470, 1.0).render()
+        self.bust(c, f, "R1", push_=c.t / c.d)
+        a = fade(c.t, 0.1, 0.3)
+        if a > 0:
+            lay = layer()
+            ImageDraw.Draw(lay).rounded_rectangle((200, 236, 772, 372), 68, fill=(*NAVY, int(255 * a)))
+            f.alpha_composite(lay)
+            c.text(f, "late", (486, 304), "3 years late", 72, 700, (255, 255, 255), "mm", alpha=a)
+        return f
+
+    def s_free_part(self, c):
+        f = PCam(self.A.plate["OFFICE"], 700, 470, 1.0).render()
+        self.bust(c, f, "R2", push_=c.t / c.d)
+        a = fade(c.t, 0.1, 0.3)
+        card(f, (72, 236, 900, 400), a)
+        c.text(f, "free", (486, 318), "Don't skip the free part", 62, 700, GREEN, "mm", alpha=a)
+        return f
+
+    def s_collect_owed(self, c):
+        A = self.A
+        cam = PCam(A.plate["OFFICE"], 540, 470, push(c.t, c.d, 1.0, 1.04))
+        f = cam.render()
+        rs.stand(f, cam, "OFFICE", A.ren["FP"], 635, 890, None)
+        a = fade(c.t, 0.1, 0.3)
+        card(f, (72, 220, 900, 470), a)
+        c.text(f, "collect-1", (486, 300), "Collect what", 72, 700, NAVY, "mm", alpha=a)
+        c.text(f, "collect-2", (486, 396), "you're owed", 72, 700, GREEN, "mm", alpha=a)
+        self.disclaimer(c, f, 55.5, 57.5, None)           # the exact end disclaimer, continuous for the last 2 s
+        return f
+
     # ---- frames
     def frame(self, T):
         T = min(T, self.total / FPS - 1 / FPS)
