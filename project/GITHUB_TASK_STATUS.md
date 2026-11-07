@@ -8,7 +8,9 @@ Ren stays enlarged; captions move to his right. Dedicated laptop cutaway retaine
 (150frames/6.25s) rendered;3 cutaways(210frames) and narration reused unchanged.
 No new artwork/TTS; original MP4s/reference preserved. Technical QA passes and
 inspection limits are in QA.md. No full Short; revised-prototype approval pending.
-Source checkpoint publication pending. Media/caches remain excluded from Git.
+Source checkpoint `4c41286` pushed and fetched; renderer/manifest/technical QA/
+QA notes verified byte-identical remotely. Status-only follow-up records this.
+Media/caches remain excluded from Git. No merge or full-video publication.
 
 ---
 
