@@ -1,7 +1,7 @@
 # Current task: Free Money long-form video, 7 November 2026
 
-Branch `video/free-money-v2`. Stage: Gate 3 (rough cut S1-S7) complete; waiting for the phrase "rough cut approved".
-Gates 0-2 approved (pilot approved with revision 3.1). Rough cut MP4 is local only (`/output/free_money_S1_S7_rough_cut.mp4`, not in git).
-In git: `fm_rough.py` (renderer), narration for S1-S7 (`voice/`), `qa_timeline.py` (17 regression checks), `validate.py`,
-`shot_plan_actual.csv`, `GATE3_REPORT.md`, contact sheets under `sheets/rough/`. Timeline checks 17/17, validator PASS.
-Open: owner ear check (accent, "lease"), pacing, "8 years later" car grade. Remaining: Gate 4 (IRS 2027 re-check, final render, package zip), then "approved to publish". No merge or publication.
+Branch `video/free-money-v2`. Stage: Gate 4 (final render and package) complete; waiting for the phrase "approved to publish".
+Gates 0-3 approved. Final MP4 and the package zip are local only (`/output/final/free_money_final.mp4`,
+`videos/free_money/export/free_money_final_package.zip`; neither is in git). In git: renderer, narration, checks, `PACKAGE_REPORT.md`, `outline_final.md`,
+`shot_plan_actual.csv`, `build_package.py`. Timeline checks 17/17, validator PASS, jitter 0.06 px.
+Open: owner ear check; the IRS 2027 limit not verified against irs.gov (host not reachable); resolution 720p. No upload, merge or publication.

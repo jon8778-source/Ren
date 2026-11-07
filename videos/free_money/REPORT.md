@@ -131,3 +131,7 @@ Your answer was "Yes v3 rules please". I copied `AGENTS.md`, `project/REN_VIDEO_
 
 ## 11. Gate 3: rough cut S1-S7 (added 7 November 2026)
 **Waiting for: `rough cut approved`.** Full report: `GATE3_REPORT.md`. The MP4 is local only at `/output/free_money_S1_S7_rough_cut.mp4` (237.3 s, 1280x720, 24 fps, draft CRF 23, -16.2 LUFS). Timeline checks: 17 of 17 pass; validator PASS; all 112 shots within the v3 caps. Open: ear check of the audio, pacing, and the choice of grade for the "8 years later" car.
+
+
+## 12. Gate 4: final render and package (added 7 November 2026)
+**Waiting for: `approved to publish`.** Nothing uploaded, published or merged. Final video `/output/final/free_money_final.mp4` (237.3 s, 1280x720, CRF 18, -16.2 LUFS). Package `videos/free_money/export/free_money_final_package.zip` (local only, gitignored): final_video.mp4, narration/, script.md, outline.md, shot_plan.csv, assets_used/, contact_sheet.png, REPORT.md. Full details: `PACKAGE_REPORT.md`. Timeline checks 17 of 17, validator PASS. **The IRS 2027 limit could not be verified against irs.gov (not reachable from this session): re-check before publishing.**

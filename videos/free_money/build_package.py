@@ -26,6 +26,8 @@ sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 shutil.copy(mp4, STAGE / "final_video.mp4")
 shutil.copy(ROOT / "scripts" / "Ren_Free_Money_Script.md", STAGE / "script.md")
+shutil.copy(HERE / "outline_final.md", STAGE / "outline.md")
+shutil.copy(HERE / "PACKAGE_REPORT.md", STAGE / "REPORT.md")
 # narration: per-scene WAVs as generated, the joined full track, and the normalised track as in the video
 for sid in rep["scenes"]:
     shutil.copy(HERE / "voice" / f"{sid}.wav", STAGE / "narration" / "scenes" / f"{sid}.wav")
@@ -77,3 +79,14 @@ for k, s in enumerate(shots):
     S.paste(im, ((k % cols) * (w + 2), (k // cols) * (h + 2)))
 S.save(STAGE / "contact_sheet.png")
 print("staged", sum(1 for _ in STAGE.rglob("*") if _.is_file()), "files")
+
+# zip
+zp = EXP / "free_money_final_package.zip"
+if zp.exists():
+    zp.unlink()
+with zipfile.ZipFile(zp, "w", zipfile.ZIP_STORED) as z:           # media is already compressed
+    for p in sorted(STAGE.rglob("*")):
+        if p.is_file():
+            z.write(p, p.relative_to(STAGE))
+print("zip:", zp, round(zp.stat().st_size / 1e6, 1), "MB")
+shutil.rmtree(STAGE)
