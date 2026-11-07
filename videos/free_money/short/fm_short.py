@@ -296,14 +296,20 @@ class Short:
             c.text(f, "quote", (486, 256), "“Who's keeping the difference?”", 50, 700, NAVY, "mm", alpha=a)
         return f
 
-    # ---- B3: the line, sinking
+    # ---- B3: the line, sinking (a tight crop on the line; the camera sinks with it on "dropped")
     def s_stub_line(self, c):
         A = self.A
-        dst = (560, push(c.t, c.d, 560, 600))
-        f, sc = self.stub_bg(A, c, 3.4, 3.6, dst, 3.4, 3.6)
-        drop = ease((c.T - 7.2) / 0.5)                       # "my stomach dropped": the line darkens and sinks
-        pulse = 1.0 + 0.07 * math.sin(math.pi * min(1, max(0, (c.t - 0.2) / 0.5))) - 0.05 * drop
-        self.glow_line(c, f, (745, 335), dst, sc, "Match: 2%", pulse, 1.0 * (1 - 0.8 * drop), "stub-line")
+        drop = ease((c.T - 7.2) / 0.55)                       # "my stomach dropped": the line darkens and sinks, the camera follows
+        sc = push(c.t, c.d, 4.3, 4.7)
+        dst = (500, lerp(430, 790, drop))
+        cam = PCam(A.plate["PORCH"], 1000, 470, 1.0)
+        f = blurred(cam, 20)
+        f.alpha_composite(dev_view(A, (745, 335), dst, sc))
+        dark = layer()
+        ImageDraw.Draw(dark).rectangle((0, 0, W, H), fill=(19, 35, 63, int(95 * drop)))
+        f.alpha_composite(dark)
+        pulse = 1.0 + 0.06 * math.sin(math.pi * min(1, max(0, (c.t - 0.2) / 0.5))) - 0.05 * drop
+        self.glow_line(c, f, (745, 335), dst, sc, "Match: 2%", pulse, 1.0 * (1 - 0.75 * drop), "stub-line")
         return f
 
     # ---- B4: three years
