@@ -16,7 +16,7 @@
   "ren_screen_time_percent": 41.66666666666667,
   "actual_audio_listening_performed": false,
   "physical_android_playback_test": false,
-  "prototype_approval": "pending revised-prototype approval",
+  "prototype_approval": "pending Revision03 review",
   "full_short_rendered": false,
   "encoded_scene_frame_counts": {
     "renewal-office": 66,
@@ -27,12 +27,12 @@
   },
   "visual_review_samples": 60,
   "review_scope": "Quarter-second motion samples across full 15s, scene boundaries and native detail crops; no listening/physical-device claim",
-  "revision": 2,
+  "revision": 3,
   "narration_AAC_packets_identical_to_previous_prototype": true,
   "narration_decoded_PCM_identical_to_previous_prototype": true,
   "audio_packet_count": 705,
   "unchanged_paper_scene_decoded_pixels_identical": true,
-  "video_reencoded": "15-second prototype only; prior cached scene packet check failed safely, so five video chunks encoded; no full film render",
+  "video_reencoded": "Only office clips,150frames/6.25s; three cutaways/210frames copied, narration copied",
   "actor_composition_size": [
     540,
     1080
@@ -53,8 +53,20 @@
   "character_crop_resize_once": true,
   "laptop_generated_images": 1,
   "laptop_asset": "assets/laptop-generated.png",
-  "output_sha256": "4d0c7b806a329d6d002b2d7d978b052acb3e0f4061836bdddbea65dbb12a1a25",
-  "previous_prototype_sha256_unchanged": "6018ae46c6f80623f13ad0f946fc7f674c9eec8b7683da707562ae221663fb6c",
+  "output_sha256": "da8c1719d8168a4f7e91644887d51647cf3a7356d075a5ede345929caeff6410",
+  "previous_prototype_sha256_unchanged": "4d0c7b806a329d6d002b2d7d978b052acb3e0f4061836bdddbea65dbb12a1a25",
   "audio_edit_this_revision": false,
-  "pause_edit_scope": "Inherited from Revision01; no new timing edit in Revision02"
+  "pause_edit_scope": "Inherited from Revision01; no timing edits in Revision02 or Revision03",
+  "office_crop": [
+    1040,
+    0,
+    1569,
+    941
+  ],
+  "presenter_desk": false,
+  "presenter_laptop": false,
+  "cutaway_laptop_retained": true,
+  "new_images_generated_this_revision": 0,
+  "cutaway_frames_reused": 210,
+  "cutaway_decoded_pixels_identical": true
 }

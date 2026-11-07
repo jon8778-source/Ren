@@ -1,0 +1,24 @@
+{
+  "source_prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev02.mp4",
+  "source_sha256": "4d0c7b806a329d6d002b2d7d978b052acb3e0f4061836bdddbea65dbb12a1a25",
+  "clips": {
+    "renewal-close": {
+      "file": "build/renewal-close.mp4",
+      "sha256": "7d21833633ac2f98b7779adeab81bd35d1ba6a52ad77021e7ee7ae19214cc484",
+      "source_decoded_frames_match": true,
+      "decoded_frame_digest": "e49dd75a7d6e6eb345c3670d9547addf6d5bcd51aebdf4c37811f23d99d9fa7f"
+    },
+    "documents-arrive": {
+      "file": "build/documents-arrive.mp4",
+      "sha256": "13bba621294bfa805dca386be98812adab000061ff3b5ff52302543a48caf821",
+      "source_decoded_frames_match": true,
+      "decoded_frame_digest": "d751c944e67729fda4d841e7b8eb0c4260e942f381896035a03af932cd34c289"
+    },
+    "premium-close": {
+      "file": "build/premium-close.mp4",
+      "sha256": "12e21e7e85291f38c8a3cec11f417588293733cfbf3e1df8ee5f4ab237002ed5",
+      "source_decoded_frames_match": true,
+      "decoded_frame_digest": "2009c48b59328ae5262e06bdf7c0611c18a47171648f8260908955b999ff510b"
+    }
+  }
+}

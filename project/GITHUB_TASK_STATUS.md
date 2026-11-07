@@ -1,3 +1,17 @@
+# Current task — simplified office prototype Revision03, 7 November 2026
+
+Branch `codex/health-short-cinematic-v2`. Jon requested the plain right-hand
+approved office background and removal of desk/laptop facing the viewer.
+Both Ren shots now use only that wall/floor crop; foreground furniture removed.
+Ren stays enlarged; captions move to his right. Dedicated laptop cutaway retained.
+15s/1080×1920/24fps/H.264/AAC prototype complete locally. Only2 office clips
+(150frames/6.25s) rendered;3 cutaways(210frames) and narration reused unchanged.
+No new artwork/TTS; original MP4s/reference preserved. Technical QA passes and
+inspection limits are in QA.md. No full Short; revised-prototype approval pending.
+Source checkpoint publication pending. Media/caches remain excluded from Git.
+
+---
+
 # Current task — cinematic Short prototype Revision02, 6 November 2026
 
 Branch `codex/health-short-cinematic-v2`. Jon requested larger Ren and a generated

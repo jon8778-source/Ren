@@ -70,3 +70,16 @@ face/edge detail and desk-relative scale will be inspected at100% and phone size
 Previous prototype is preserved; Revision02 is a separate MP4. Original narration AAC packets are copied unchanged. The two paper scenes
 retain their designs/timings; their video is re-encoded when the conservative
 source-packet cache check cannot prove reuse, rather than reusing uncertain data.
+
+## Revision03 — simplified presenter background
+
+Jon requested the basic right-hand side of the approved office and removal of
+the desk/laptop facing the viewer in Ren's composition. Both office shots now
+use source crop(1040,0,1569,941): cream wall, light/shadow and wood floor only.
+No foreground desk or laptop is composited in either presenter shot. Ren retains
+his enlarged540×1080 framing at(5,400). Captions move to his right so his full-body
+silhouette stays clear. Plan B is a single paper pinned to the wall.
+
+No artwork or narration generation is required. The generated laptop remains in
+the separate close-up cutaway only. All three intervening cutaways are reused
+from verified Revision02 chunks. Earlier MP4s and approved reference are preserved.

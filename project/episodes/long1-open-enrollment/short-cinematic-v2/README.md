@@ -6,7 +6,7 @@ synthesises remaining narration nor renders the complete Short.
 
 ## Deliverables
 
-- `deliverables/Ren_Health_Short_v2_15s_Prototype_Rev02.mp4`: 1080×1920,24fps,H.264/AAC.
+- `deliverables/Ren_Health_Short_v2_15s_Prototype_Rev03.mp4`: 1080×1920,24fps,H.264/AAC.
 - `ASSET_REQUIREMENTS.md`: reusable assets, staging limits, future missing artwork.
 - `STORYBOARD.md`: five prototype compositions and planned continuation.
 - `voice-configuration.json`: exact approved Qwen settings/reference/audio identity.
@@ -24,7 +24,7 @@ From repository root:
 
     python project/episodes/long1-open-enrollment/short-cinematic-v2/prepare.py
     python project/pipeline/shorts_standards.py preflight --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json
-    python project/pipeline/shorts_standards.py run --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json --stage prototype --output project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev02.mp4 -- python project/episodes/long1-open-enrollment/short-cinematic-v2/render.py
+    python project/pipeline/shorts_standards.py run --manifest project/episodes/long1-open-enrollment/short-cinematic-v2/production.json --stage prototype --output project/episodes/long1-open-enrollment/short-cinematic-v2/deliverables/Ren_Health_Short_v2_15s_Prototype_Rev03.mp4 -- python project/episodes/long1-open-enrollment/short-cinematic-v2/render.py
 
 The launcher enforces the 15-second stage. The renderer separately refuses a full
 render. Source-hashed native actor caches and validated video-only scene chunks
@@ -44,7 +44,7 @@ Source character face, glasses, clothes and body proportions are unchanged.
 Office original fills the entire portrait frame; desk macro scenes are code-drawn
 prop environments, without a blue surround or framed landscape video.
 
-Revision02 copies the original15-second prototype AAC stream packet-for-packet.
+Revision03 copies the original15-second prototype AAC stream packet-for-packet.
 The original prototype and both unchanged paper scenes are preserved.
 For initial audio provenance, British Qwen narration was decoded from the existing MP4. Exact source
 samples0–13.84s plus14.006667–15.166667s make15s. Only0.166667s of measured quiet
@@ -57,3 +57,17 @@ also requires approval before use. Media/caches remain excluded from Git.
 The generated laptop original is retained in assets/laptop-generated.png. It was
 explicitly requested by Jon for this revised prototype; final design approval is
 pending, as for the entire preview. No new character design was generated.
+
+## Revision03 composition
+
+Jon requested the uncomplicated right-hand office area. Both presenter shots
+use exact source crop(1040,0,1569,941), with no background desk, background laptop,
+foreground desk or foreground laptop. Ren stays540×1080 at(5,400), grounded by a
+subtle floor-contact shadow. Captions sit beside him, clear of his face/body.
+Plan B is pinned to the wall on his right. The generated laptop is retained only
+in the separate2.75–5.75s close-up cutaway, not in Ren's presenter composition.
+
+Only two presenter clips are rendered. Three previously encoded cutaways are
+verified against Revision02 and reused. Source registry and previous layout are
+retained in revision-02/. Missing or corrupt local chunks fall back to rendering;
+reference movies/audio/art are never modified. Prior revisions remain available.

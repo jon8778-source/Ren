@@ -40,7 +40,7 @@ def shadow(im,box,radius=15):
 @functools.lru_cache(maxsize=4)
 def room(which):
     # Environmental original fills the complete output; no video window/frame.
-    crop=(180,0,709,941) if which==0 else (350,0,879,941)
+    crop=(1040,0,1569,941)  # Jon-selected right-hand wall/floor; no desk or laptop
     return OFFICE.crop(crop).resize((W,H),Image.Resampling.LANCZOS)
 
 @functools.lru_cache(maxsize=4)
@@ -81,6 +81,13 @@ def prepare_actors():
             rgba.save(folder/f'{i:03}.png')
         dec.stdout.close();assert dec.wait()==0
         mark.write_text(json.dumps({'key':signature}))
+
+def ground_actor(im,clip,index):
+    # Subtle floor contact anchors the existing full-body cutout, no body motion added.
+    layer=Image.new('RGBA',im.size);d=ImageDraw.Draw(layer)
+    d.ellipse((145,1445,405,1481),fill=(55,46,33,45))
+    im.paste(Image.alpha_composite(im.convert('RGBA'),layer.filter(ImageFilter.GaussianBlur(10))).convert('RGB'))
+    a=actor(clip,index);im.paste(a,(5,400),a)
 
 def desk_front(im):
     d=ImageDraw.Draw(im)
@@ -136,7 +143,7 @@ def paper(im,s,n,x,y,width,label,amount,detail=False,scale=1):
 def picture(s,n):
     sid=s['id'];t=(s['start_frame']+n)/24
     if sid=='renewal-office':
-        im=room(0).copy();a=actor('nod_yes',n);im.paste(a,(5,400),a);desk_front(im);laptop(im,s,n)
+        im=room(0).copy();ground_actor(im,'nod_yes',n)
     elif sid=='renewal-close':
         im=tabletop().copy();laptop(im,s,n,True)
     elif sid=='documents-arrive':
@@ -152,19 +159,22 @@ def picture(s,n):
         draw.line((155,685,155+round(470*u),685),fill='#719878',width=8)
         txt(im,s,n,(155,1100),'Illustrative premiums',42,GREEN)
     else:
-        im=room(1).copy();a=actor('thinking',n);im.paste(a,(5,400),a);desk_front(im)
-        # Both documents on a desk, Ren left; no floating frame or presenter panel.
+        im=room(1).copy();ground_actor(im,'thinking',n)
+        # One insurance paper pinned to the plain office wall, Ren left.
         paper(im,s,n,505,800,365,'PLAN B',parent.C['hdhp_annual_premium'],detail=False)
+        draw=ImageDraw.Draw(im);draw.ellipse((682,790,700,808),fill=GREEN,outline=INK,width=2)
         if t>=13.84:
             draw=ImageDraw.Draw(im);draw.polygon([(505,1245),(875,1210),(875,1310),(505,1345)],fill='#DBE5D2',outline=GREEN,width=3)
             txt(im,s,n,(535,1248),'Total cost?',48,GREEN)
     # Captions are on a fitted translucent strip only when speech is present.
     cue=next((c for c in M['captions'] if c['start']<=t<c['end']),None)
     if cue:
-        draw=ImageDraw.Draw(im);value=parent.wrap(draw,cue['text'],42,790)
-        bb=draw.multiline_textbbox((90,1365),value,font=font(42),spacing=8)
+        # Office captions live beside Ren, clearing his full-body silhouette.
+        xy,width=((505,650),370) if sid=='renewal-office' else (((505,570),370) if sid=='reaction-office' else ((90,1365),790))
+        draw=ImageDraw.Draw(im);value=parent.wrap(draw,cue['text'],42,width)
+        bb=draw.multiline_textbbox(xy,value,font=font(42),spacing=8)
         layer=Image.new('RGBA',(W,H));ImageDraw.Draw(layer).rounded_rectangle((bb[0]-14,bb[1]-10,bb[2]+14,bb[3]+12),12,fill=(250,246,238,230))
-        im=Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB');txt(im,s,n,(90,1365),value,42,INK,'caption')
+        im=Image.alpha_composite(im.convert('RGBA'),layer).convert('RGB');txt(im,s,n,xy,value,42,INK,'caption')
     if t<2.5 or t>=13:
         # Brief educational text, never a permanent footer/banner.
         value='Educational content only,\nnot financial advice.'
@@ -193,17 +203,18 @@ def packet_hashes(path):
     return [p['data_hash'] for p in data['packets']]
 
 def reuse_unchanged_scene(scene):
-    # Only the two unchanged paper scenes qualify. Audio, timings, code-drawn
-    # figures and captions are unchanged; prove cached video belongs to v1.
-    if scene['id'] not in ['documents-arrive','premium-close']:return None
-    path=BUILD/(scene['id']+'.mp4')
-    if not path.exists():return None
-    previous=json.loads((D/'revision-01/production.json').read_text())
+    # The user changed the office compositions only; use verified Rev02 cutaways.
+    registry=json.loads((D/'revision-02/scene-cache.json').read_text())
+    source=D/registry['source_prototype']
+    if not source.exists() or standards.sha(source)!=registry['source_sha256']:return None
+    entry=registry['clips'].get(scene['id'])
+    if not entry:return None
+    path=D/entry['file']
+    if not entry.get('source_decoded_frames_match') or not path.exists() or standards.sha(path)!=entry['sha256']:return None
+    previous=json.loads((D/'revision-02/production.json').read_text())
     if previous['captions']!=M['captions']:return None
-    original=OUT/'Ren_Health_Short_v2_15s_Prototype.mp4'
-    if packet_hashes(path)!=packet_hashes(original)[scene['start_frame']:scene['end_frame']]:return None
     parent.v3.check_video(path,scene['end_frame']-scene['start_frame'])
-    REC.scenes[scene['id']]=json.loads((D/'revision-01/layout.json').read_text())['scenes'][scene['id']]
+    REC.scenes[scene['id']]=json.loads((D/'revision-02/layout.json').read_text())['scenes'][scene['id']]
     return path
 
 def main():
@@ -242,7 +253,7 @@ def main():
     prior=next(a for a in M['assets'] if a['id']=='previous-prototype-audio')
     assert standards.sha(audio_source)==prior['sha256']
     concat=BUILD/'concat.txt';concat.write_text('\n'.join("file '%s'"%p for p in files)+'\n')
-    sp.run(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(audio_source),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','copy','-movflags','+faststart',str(OUT/'Ren_Health_Short_v2_15s_Prototype_Rev02.mp4')],check=True)
+    sp.run(['ffmpeg','-v','error','-xerror','-y','-f','concat','-safe','0','-i',str(concat),'-i',str(audio_source),'-map','0:v:0','-map','1:a:0','-c:v','copy','-c:a','copy','-movflags','+faststart',str(OUT/'Ren_Health_Short_v2_15s_Prototype_Rev03.mp4')],check=True)
     assert standards.sha(source)==json.loads((D/'voice-configuration.json').read_text())['source_sha256']
 
 if __name__=='__main__':main()

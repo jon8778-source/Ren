@@ -2,32 +2,6 @@
   "scenes": {
     "renewal-office": [
       {
-        "text": "HEALTH PLAN",
-        "bbox": [
-          580,
-          927,
-          859,
-          957
-        ],
-        "font_px": 42,
-        "role": "text",
-        "start": 0.0,
-        "end": 2.75
-      },
-      {
-        "text": "Same plan",
-        "bbox": [
-          580,
-          986,
-          785,
-          1028
-        ],
-        "font_px": 44,
-        "role": "text",
-        "start": 0.0,
-        "end": 2.75
-      },
-      {
         "text": "Educational content only,\nnot financial advice.",
         "bbox": [
           90,
@@ -41,29 +15,16 @@
         "end": 2.5
       },
       {
-        "text": "For four years, I renewed the same health\nplan.",
+        "text": "For four years, I\nrenewed the same\nhealth plan.",
         "bbox": [
-          90,
-          1376,
-          873,
-          1465
+          505,
+          661,
+          848,
+          800
         ],
         "font_px": 42,
         "role": "caption",
         "start": 0.08333333333333333,
-        "end": 2.75
-      },
-      {
-        "text": "Fourth year",
-        "bbox": [
-          580,
-          1051,
-          805,
-          1091
-        ],
-        "font_px": 42,
-        "role": "text",
-        "start": 0.5416666666666666,
         "end": 2.75
       }
     ],
@@ -426,12 +387,12 @@
         "end": 15.0
       },
       {
-        "text": "One plan: $2,520 a year in premiums.",
+        "text": "One plan: $2,520 a\nyear in premiums.",
         "bbox": [
-          90,
-          1376,
-          778,
-          1416
+          505,
+          581,
+          850,
+          671
         ],
         "font_px": 42,
         "role": "caption",
@@ -441,10 +402,10 @@
       {
         "text": "Another: just $840.",
         "bbox": [
-          90,
-          1375,
-          444,
-          1415
+          505,
+          580,
+          859,
+          620
         ],
         "font_px": 42,
         "role": "caption",
@@ -478,12 +439,12 @@
         "end": 15.0
       },
       {
-        "text": "But here's the catch.",
+        "text": "But here's the\ncatch.",
         "bbox": [
-          90,
-          1376,
-          472,
-          1406
+          505,
+          581,
+          763,
+          661
         ],
         "font_px": 42,
         "role": "caption",

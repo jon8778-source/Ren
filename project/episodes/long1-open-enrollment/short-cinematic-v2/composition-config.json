@@ -29,5 +29,13 @@
     5,
     400
   ],
-  "revision": 2
+  "revision": 3,
+  "office_crop": [
+    1040,
+    0,
+    1569,
+    941
+  ],
+  "presenter_desk": false,
+  "presenter_laptop": false
 }

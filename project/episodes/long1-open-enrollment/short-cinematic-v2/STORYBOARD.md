@@ -40,3 +40,8 @@ Revision02 retains all shot/audio timings. Both office shots enlarge Ren35%
 with consistent framing; laptop shots use the generated physical laptop prop.
 The two paper-only shots retain their original layouts/timings; narration AAC
 packets are preserved unchanged.
+
+Revision03:0–2.75s and11.5–15s show Ren against the plain right-hand office wall
+and floor only. There is no desk or laptop in either presenter shot. Captions
+move to his right; the Plan B paper is pinned to the wall.2.75–11.5s is unchanged,
+including the dedicated generated-laptop close-up. Audio and all timing unchanged.
