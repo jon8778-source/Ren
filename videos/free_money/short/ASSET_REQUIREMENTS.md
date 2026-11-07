@@ -13,8 +13,8 @@ Prepared before rendering, under the v3 Shorts rules (asset-first checkpoint). *
 |---|---|---|---|---|
 | script | script | `scripts/Ren_Free_Money_Script.md` | 48be8a065cd3 | Owner supplied the script 7 Nov 2026; narration used word for word; Gate 3 'rough cut approved' |
 | audio | audio | `videos/free_money/short/short_audio_raw.wav` | 6656d8c4c67f | Cut from the approved long-form narration (voice/S1-S7.wav), no resynthesis; owner approved the long video narration at Gate 3 ('rough cut approved') and 'Approved, great' on the final |
-| renderer | renderer | `videos/free_money/short/fm_short.py` | ecec74089797 | Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026) |
-| configuration | configuration | `videos/free_money/short/short_spec.json` | daed2cf392d0 | Generated from short_spec.py: beats and timings tied to short_cues.json |
+| renderer | renderer | `videos/free_money/short/fm_short.py` | f123c0ff8986 | Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026) |
+| configuration | configuration | `videos/free_money/short/short_spec.json` | 948751c76782 | Generated from short_spec.py: beats and timings tied to short_cues.json |
 | ren_r1 | character | `videos/free_money/matted/Ren_1_neutral.png` | b2ae0b7e51b5 | Approved Ren still (library/ren_approved/Ren_1_neutral.jpg), matted; owner 'style lock approved' 7 Nov 2026 |
 | ren_r2 | character | `videos/free_money/matted/Ren_2_hand_on_chest_talking.png` | 04b66658e4d1 | Approved Ren still, matted; 'style lock approved' |
 | ren_r3 | character | `videos/free_money/matted/Ren_3_thinking_bust.png` | af33fbdcfa11 | Approved Ren still, matted; 'style lock approved' |
@@ -51,7 +51,7 @@ Prepared before rendering, under the v3 Shorts rules (asset-first checkpoint). *
 | ninety-seconds | 1125-1177 | 2.17 | ninety-seconds-badge | A '90 seconds' badge pops on the phone | office |
 | three-years-late | 1177-1240 | 2.62 | bust-three-years-late | Ren, rueful, with a '3 years late' tag | ren_r1, office |
 | free-part | 1240-1288 | 2.00 | bust-free-part | Ren, hand on chest, with the line as a card | ren_r2, office |
-| collect-owed | 1288-1380 | 3.83 | office-standing-collect | Ren presents toward the desk; 'Collect what you're owed' card; the disclaimer holds for the last two seconds | ren_fp, office |
+| collect-owed | 1288-1360 | 3.00 | office-standing-collect | Ren presents toward the desk; 'Collect what you're owed' card; the disclaimer holds for the last two seconds | ren_fp, office |
 
 Drawn in code (never generated artwork): every number, label, card, jar, coin, phone screen, toggle, badge, ledger and the disclaimer.
 

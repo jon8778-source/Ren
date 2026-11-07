@@ -1,0 +1,22 @@
+{
+  "errors": [
+    "A/V stream start/end differ by more than tolerance"
+  ],
+  "warnings": [],
+  "stage": "full",
+  "frames": 1380,
+  "duration_seconds": 57.5,
+  "full_fatal_decode": true,
+  "av_start_difference": 0.0,
+  "av_duration_difference": 0.8400000000000034,
+  "longest_identical_frame_run": 10,
+  "persistent_uniform_edges": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "video_sha256": "08839fcf2edb2a0696003bef757c9c8fb57d765b5daf2e3bf7275f420a761135",
+  "fingerprint": "bbd42e8d8a0dde45fc43cf3bb2dfa7141bf2e4f3023b2c1a5b6d039a9f9fd893",
+  "status": "fail"
+}

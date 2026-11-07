@@ -11,7 +11,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 FPS = 24
-TOTAL_S = 57.5
+TOTAL_S = 1360 / FPS      # ends exactly with the narration (56.66 s); no silence is added to the audio
 DISCLAIMER = "Educational content only, not financial advice."
 
 # id, start s, end s, kind, composition, narration, action, motion_purpose, assets, fullscreen environment, justification
@@ -63,9 +63,9 @@ B = [
   "Ren, rueful, with a '3 years late' tag", "Land the regret, then the reassurance", ["ren_r1", "office"], False, ""),
  ("free-part", 51.65, 53.66, "presenter", "bust-free-part", "You just don't want to skip the free part.",
   "Ren, hand on chest, with the line as a card", "State the takeaway", ["ren_r2", "office"], False, ""),
- ("collect-owed", 53.66, 57.50, "presenter", "office-standing-collect", "Before you cut a single thing, collect what you're already owed.",
+ ("collect-owed", 53.66, 56.667, "presenter", "office-standing-collect", "Before you cut a single thing, collect what you're already owed.",
   "Ren presents toward the desk; 'Collect what you're owed' card; the disclaimer holds for the last two seconds", "Close with the call to action and the disclaimer",
-  ["ren_fp", "office"], True, "Holds 0.84 s past the last word so the exact end disclaimer is readable for 2 s"),
+  ["ren_fp", "office"], True, ""),
 ]
 
 ASSETS = [  # id, kind, path (repo-relative), approval evidence

@@ -4,7 +4,7 @@
  "width": 1080,
  "height": 1920,
  "fps": 24,
- "frames": 1380,
+ "frames": 1360,
  "full_bleed": true,
  "permanent_border": false,
  "asset_report": "ASSET_REQUIREMENTS.md",
@@ -32,7 +32,7 @@
    "id": "renderer",
    "kind": "renderer",
    "path": "../../../videos/free_money/short/fm_short.py",
-   "sha256": "ecec74089797ece2f4d735f23cf914e26cb6053c35ff54821c0d9a6ffb43a533",
+   "sha256": "f123c0ff8986865b2fce62ffb8297276ff036e32396fc29ab7b5c2f2a7e85ada",
    "status": "approved",
    "approval_evidence": "Adapter under the Shorts launcher; reuses the approved ren_stage placement (owner request 7 Nov 2026)"
   },
@@ -40,7 +40,7 @@
    "id": "configuration",
    "kind": "configuration",
    "path": "../../../videos/free_money/short/short_spec.json",
-   "sha256": "daed2cf392d0b0b37f263a012a3cf6bf395ce2384a4d641451ab8608ed5a8128",
+   "sha256": "948751c76782e996038ce7e8dc3349ffb93abe66f571c367e59722b9e8bc7154",
    "status": "approved",
    "approval_evidence": "Generated from short_spec.py: beats and timings tied to short_cues.json"
   },
@@ -470,7 +470,7 @@
   {
    "id": "collect-owed",
    "start_frame": 1288,
-   "end_frame": 1380,
+   "end_frame": 1360,
    "kind": "presenter",
    "composition": "office-standing-collect",
    "action": "Ren presents toward the desk; 'Collect what you're owed' card; the disclaimer holds for the last two seconds",
@@ -482,8 +482,7 @@
    "animations": [
     "collect-owed-motion"
    ],
-   "environment_fullscreen": true,
-   "timing_justification": "Holds 0.84 s past the last word so the exact end disclaimer is readable for 2 s"
+   "environment_fullscreen": true
   }
  ],
  "audio_cues": [

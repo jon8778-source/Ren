@@ -1,6 +1,6 @@
 {
  "fps": 24,
- "frames": 1380,
+ "frames": 1360,
  "disclaimer": "Educational content only, not financial advice.",
  "narration_s": 56.66,
  "beats": [
@@ -167,7 +167,7 @@
   {
    "id": "collect-owed",
    "start_frame": 1288,
-   "end_frame": 1380,
+   "end_frame": 1360,
    "kind": "presenter",
    "composition": "office-standing-collect",
    "narration": "Before you cut a single thing, collect what you're already owed."

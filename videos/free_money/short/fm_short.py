@@ -676,7 +676,7 @@ class Short:
         card(f, (72, 220, 900, 470), a)
         c.text(f, "collect-1", (486, 300), "Collect what", 72, 700, NAVY, "mm", alpha=a)
         c.text(f, "collect-2", (486, 396), "you're owed", 72, 700, GREEN, "mm", alpha=a)
-        self.disclaimer(c, f, 55.5, 57.5, None)           # the exact end disclaimer, continuous for the last 2 s
+        self.disclaimer(c, f, self.total / FPS - 2.0, self.total / FPS + 1, None)      # the exact end disclaimer, continuous for the last 2 s
         return f
 
     # ---- frames
