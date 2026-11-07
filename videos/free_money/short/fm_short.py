@@ -403,7 +403,7 @@ def merge_layout(parts, spec, frames, path):
                 m["start"] = min(m["start"], it["start"]); m["end"] = max(m["end"], it["end"]); m["font_px"] = min(m["font_px"], it["font_px"])
     for (sid, key), it in merged.items():
         scenes[sid].append(dict(text=it["text"], bbox=[round(v, 1) for v in it["bbox"]], font_px=round(it["font_px"], 1), role=it["role"],
-                                start=round(it["start"], 4), end=round(it["end"], 4)))
+                                start=it["start"], end=it["end"]))
     Path(path).write_text(json.dumps({"scenes": scenes}, indent=2) + "\n")
 
 
@@ -455,9 +455,9 @@ def main():
         lay = json.loads(layout_path.read_text())
         for sid, items in lay["scenes"].items():
             for it in items:
-                it["end"] = round(item_end(spec, sid, frames), 4)
+                it["end"] = item_end(spec, sid, frames)
                 if it["role"] == "disclaimer":
-                    it["end"] = round(min(it["end"], 15.0 if frames <= 360 else it["end"]), 4)
+                    it["end"] = min(it["end"], 15.0 if frames <= 360 else it["end"])
         layout_path.write_text(json.dumps(lay, indent=2) + "\n")
         for k in range(jobs):
             for suffix in (".mp4", ".layout.json"):
