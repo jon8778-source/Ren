@@ -14,7 +14,9 @@ not falsely passed. Assessment/report/checklist/reproducible test are under
 project/episodes/long1-open-enrollment/short-cinematic-v2/revision6-assessment/.
 Diagnostic/baseline images are separate review artifacts, not new production art.
 Approval requested for reaction master and clicking-hand insert before further work.
-Source checkpoint publication pending. Media stays outside Git; main untouched.
+Assessment checkpoint `14b6014` pushed/fetched; report/briefs/test/source
+manifest verified remotely. Revision5 source/manifest/media also verified unchanged.
+Status-only follow-up records this. Media stays outside Git; main untouched.
 
 ---
 
