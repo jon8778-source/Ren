@@ -23,7 +23,8 @@ from fm_pilot import W, H, FPS, NAVY, SAGE, CREAM, GREEN, MUTED, ease, lerp, lay
 from fm_rev031 import (Cam, push, zoom_frame, card_fit, card_bg, dashed_rect, car_icon, coin, stack, screen_small, PhoneClip, Rev, RED, CAPS, ROWS,
                        LAPTOP_SCREEN)
 
-SCENES = ["S1", "S2", "S3", "S4", "S5", "S6", "S7"]
+import os
+SCENES = os.environ.get("FM_SCENES", "S1 S2 S3 S4 S5 S6 S7").split()      # review aid: limit to scenes whose narration exists
 GOLD = (255, 196, 40)
 
 # (scene, first phrase, last phrase, type, name)  -- S1/S2 exactly as approved in rev03.1
@@ -64,7 +65,8 @@ SPEC = [
     ("S7", 5, 5, "ren", "s7_owed"), ("S7", 6, 6, "graphic", "s7_list_a"), ("S7", 7, 7, "graphic", "s7_list_b"), ("S7", 8, 8, "story", "s7_25"),
     ("S7", 9, 10, "ren", "s7_richer"), ("S7", 11, 11, "ren", "s7_next_week"), ("S7", 12, 12, "ren", "s7_wave"),
 ]
-PEEL_AT = ["desk_salary", "s6_today"]            # time changes: the page peel (age 25; eight years later)
+SPEC = [x for x in SPEC if x[0] in SCENES]
+PEEL_AT = [n for n in ("desk_salary", "s6_today") if n in [x[4] for x in SPEC]]            # time changes: the page peel (age 25; eight years later)
 
 
 def trim(im):
@@ -73,7 +75,7 @@ def trim(im):
     return im.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
 
 
-def jar(f, cx, base, w, h, pct, col, label, ghost_to=None, sub=None, a=1.0, big=4.0):
+def jar(f, cx, base, w, h, pct, col, label, ghost_to=None, sub=None, a=1.0, big=4.0, show=True):
     """A jar holding `pct` of `big` percent, with an optional dashed ghost level up to ghost_to."""
     lay = layer()
     d = ImageDraw.Draw(lay)
@@ -89,13 +91,16 @@ def jar(f, cx, base, w, h, pct, col, label, ghost_to=None, sub=None, a=1.0, big=
         fl.putalpha(Image.fromarray(np.minimum(np.array(fl.getchannel("A")), np.array(m))))
         lay.alpha_composite(fl)
         d = ImageDraw.Draw(lay)
-        if h * pct / big > 60:
+        if show and h * pct / big > 60:
             d.text((cx, (top + base) / 2), f"{pct:.0f}%" if abs(pct - round(pct)) < 0.05 else f"{pct:.1f}%", font=font(46, 700), fill=(255, 255, 255, 255), anchor="mm")
     if ghost_to is not None and ghost_to > pct + 0.1:
         gt = base - 8 - (h - 16) * ghost_to / big
         gb = base - 8 - (h - 16) * pct / big
         dashed_rect(d, (x0 + 12, gt, x0 + w - 12, gb), (*GREEN, 255), width=4)
-        d.text((cx, (gt + gb) / 2), "never paid", font=font(30, 700), fill=(*GREEN, 255), anchor="mm")
+        fs = 30
+        while d.textlength("never paid", font=font(fs, 700)) > w - 26 and fs > 18:
+            fs -= 2
+        d.text((cx, (gt + gb) / 2), "never paid", font=font(fs, 700), fill=(*GREEN, 255), anchor="mm")
     d.text((cx, base + 40), label, font=font(36, 700), fill=(*NAVY, 255), anchor="mm")
     if sub:
         d.text((cx, base + 82), sub, font=font(28, 600), fill=(*MUTED, 255), anchor="mm")
@@ -168,7 +173,7 @@ class Rough(Rev):
     def blur(self, name="OFFICE"):
         return self.A.blur[name].convert("RGBA")
 
-    def title(self, f, text, y=60):
+    def title(self, f, text, y=44):
         ImageDraw.Draw(f).text((W / 2, y), text, font=font(32, 600), fill=(*MUTED, 255), anchor="mm")
 
     def jars(self, t, d, b, you, comp, ghost=None, tags=(), title="One employer's plan (example)", base=500):
@@ -179,10 +184,10 @@ class Rough(Rev):
         gh = None
         if ghost:
             gh = lerp(ghost[0], ghost[1], e)
-        jar(f, 430, base, 190, 330, yv, NAVY, "You (employee)", sub=None)
-        jar(f, 850, base, 190, 330, cv, SAGE, "Employer", ghost_to=gh, sub=None)
+        jar(f, 430, base, 190, 330, yv, NAVY, "You (employee)", sub=None, show=(e > 0.97 or you[0] == you[1]))
+        jar(f, 850, base, 190, 330, cv, SAGE, "Employer", ghost_to=gh, sub=None, show=(e > 0.97 or comp[0] == comp[1]))
         for tx in tags:
-            pill(f, tx, 640 - 110, 125, px=34, fill=CREAM, colour=NAVY, boxes=b, pad=(22, 10))
+            pill(f, tx, 640 - 110, 98, px=34, fill=CREAM, colour=NAVY, boxes=b, pad=(22, 8))
         b.text.append((300, 150, 1000, 600, "jars"))
         return f
 

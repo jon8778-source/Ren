@@ -60,5 +60,117 @@
    ]
   ],
   "heard": "Twenty -five, first real job, 44 ,000 a year, and I felt like I'd made it, so I did what felt right and leased a brand -new car, $489 a month, not because I needed it, because I wanted everyone in that parking lot to think I was doing great. On day one, HR gave me a folder. Somewhere on page six, it said the company would match every dollar I put into my retirement plan, up to 4 % of my salary. I never got to page 6, I picked 2%, because 2 sounded responsible, and the least sounded urgent."
+ },
+ "S3": {
+  "ratio": 0.8246,
+  "differences": [
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "eight hundred eighty",
+    "880"
+   ],
+   [
+    "replace",
+    "forty six thousand forty eight",
+    "46 000 48"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "delete",
+    "four hundred eighty nine",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "489"
+   ],
+   [
+    "replace",
+    "seventy seven",
+    "dollars 77"
+   ]
+  ],
+  "heard": "Here's the thing about a match. If I put in 4%, they put in 4%, dollar for dollar, I put in 2, so they put in 2. The other 2%, it wasn't saved for later, it just never got paid. That was 880 dollars the first year. Then I got small raises, 46 ,000, 48, and every year I left the same 2 % and every year the ghost money got bigger. Meanwhile, I made that lease payment on time, every month, with pride. $489 to look successful, while skipping about $77 a month that would have actually made me successful."
+ },
+ "S4": {
+  "ratio": 0.878,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "should have",
+    "should've"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ],
+   [
+    "replace",
+    "ninety",
+    "90"
+   ],
+   [
+    "replace",
+    "ninety",
+    "90"
+   ],
+   [
+    "replace",
+    "three",
+    "3"
+   ]
+  ],
+  "heard": "Back on that porch, Dev asked me 3 questions. What does this line mean? What would it say if you'd read the folder? And who's keeping the difference? The line said 2%. It should've said 4. And the difference? The company keeps it. Not because they're evil, that's just how matches work. If you don't claim it, it stays with them. I went home, opened the app on my phone and changed 2 to 4. It took 90 seconds. 90 seconds 3 years late."
  }
 }

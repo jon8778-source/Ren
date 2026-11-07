@@ -1,0 +1,507 @@
+[
+ {
+  "word": "Here's",
+  "start": 0.0,
+  "end": 0.28
+ },
+ {
+  "word": "the",
+  "start": 0.28,
+  "end": 0.4
+ },
+ {
+  "word": "thing",
+  "start": 0.4,
+  "end": 0.54
+ },
+ {
+  "word": "about",
+  "start": 0.54,
+  "end": 0.76
+ },
+ {
+  "word": "a",
+  "start": 0.76,
+  "end": 0.92
+ },
+ {
+  "word": "match.",
+  "start": 0.92,
+  "end": 1.2
+ },
+ {
+  "word": "If",
+  "start": 1.5,
+  "end": 1.72
+ },
+ {
+  "word": "I",
+  "start": 1.72,
+  "end": 1.88
+ },
+ {
+  "word": "put",
+  "start": 1.88,
+  "end": 2.04
+ },
+ {
+  "word": "in",
+  "start": 2.04,
+  "end": 2.2
+ },
+ {
+  "word": "4%,",
+  "start": 2.2,
+  "end": 2.88
+ },
+ {
+  "word": "they",
+  "start": 2.88,
+  "end": 3.36
+ },
+ {
+  "word": "put",
+  "start": 3.36,
+  "end": 3.54
+ },
+ {
+  "word": "in",
+  "start": 3.54,
+  "end": 3.68
+ },
+ {
+  "word": "4%,",
+  "start": 3.68,
+  "end": 4.48
+ },
+ {
+  "word": "dollar",
+  "start": 4.48,
+  "end": 4.78
+ },
+ {
+  "word": "for",
+  "start": 4.78,
+  "end": 4.98
+ },
+ {
+  "word": "dollar,",
+  "start": 4.98,
+  "end": 5.3
+ },
+ {
+  "word": "I",
+  "start": 5.56,
+  "end": 5.74
+ },
+ {
+  "word": "put",
+  "start": 5.74,
+  "end": 5.9
+ },
+ {
+  "word": "in",
+  "start": 5.9,
+  "end": 6.06
+ },
+ {
+  "word": "2,",
+  "start": 6.06,
+  "end": 6.34
+ },
+ {
+  "word": "so",
+  "start": 6.64,
+  "end": 6.78
+ },
+ {
+  "word": "they",
+  "start": 6.78,
+  "end": 6.92
+ },
+ {
+  "word": "put",
+  "start": 6.92,
+  "end": 7.08
+ },
+ {
+  "word": "in",
+  "start": 7.08,
+  "end": 7.22
+ },
+ {
+  "word": "2.",
+  "start": 7.22,
+  "end": 7.54
+ },
+ {
+  "word": "The",
+  "start": 8.0,
+  "end": 8.22
+ },
+ {
+  "word": "other",
+  "start": 8.22,
+  "end": 8.38
+ },
+ {
+  "word": "2%,",
+  "start": 8.38,
+  "end": 9.06
+ },
+ {
+  "word": "it",
+  "start": 9.06,
+  "end": 9.48
+ },
+ {
+  "word": "wasn't",
+  "start": 9.48,
+  "end": 9.78
+ },
+ {
+  "word": "saved",
+  "start": 9.78,
+  "end": 10.08
+ },
+ {
+  "word": "for",
+  "start": 10.08,
+  "end": 10.28
+ },
+ {
+  "word": "later,",
+  "start": 10.28,
+  "end": 10.58
+ },
+ {
+  "word": "it",
+  "start": 10.94,
+  "end": 11.04
+ },
+ {
+  "word": "just",
+  "start": 11.04,
+  "end": 11.24
+ },
+ {
+  "word": "never",
+  "start": 11.24,
+  "end": 11.54
+ },
+ {
+  "word": "got",
+  "start": 11.54,
+  "end": 11.74
+ },
+ {
+  "word": "paid.",
+  "start": 11.74,
+  "end": 12.1
+ },
+ {
+  "word": "That",
+  "start": 12.4,
+  "end": 12.56
+ },
+ {
+  "word": "was",
+  "start": 12.56,
+  "end": 12.76
+ },
+ {
+  "word": "880",
+  "start": 12.76,
+  "end": 13.78
+ },
+ {
+  "word": "dollars",
+  "start": 13.78,
+  "end": 14.22
+ },
+ {
+  "word": "the",
+  "start": 14.22,
+  "end": 14.42
+ },
+ {
+  "word": "first",
+  "start": 14.42,
+  "end": 14.7
+ },
+ {
+  "word": "year.",
+  "start": 14.7,
+  "end": 15.04
+ },
+ {
+  "word": "Then",
+  "start": 15.78,
+  "end": 15.94
+ },
+ {
+  "word": "I",
+  "start": 15.94,
+  "end": 16.1
+ },
+ {
+  "word": "got",
+  "start": 16.1,
+  "end": 16.26
+ },
+ {
+  "word": "small",
+  "start": 16.26,
+  "end": 16.7
+ },
+ {
+  "word": "raises,",
+  "start": 16.7,
+  "end": 17.12
+ },
+ {
+  "word": "46",
+  "start": 17.58,
+  "end": 17.92
+ },
+ {
+  "word": ",000,",
+  "start": 17.92,
+  "end": 18.56
+ },
+ {
+  "word": "48,",
+  "start": 18.94,
+  "end": 19.34
+ },
+ {
+  "word": "and",
+  "start": 19.74,
+  "end": 19.98
+ },
+ {
+  "word": "every",
+  "start": 19.98,
+  "end": 20.28
+ },
+ {
+  "word": "year",
+  "start": 20.28,
+  "end": 20.54
+ },
+ {
+  "word": "I",
+  "start": 20.54,
+  "end": 20.74
+ },
+ {
+  "word": "left",
+  "start": 20.74,
+  "end": 20.92
+ },
+ {
+  "word": "the",
+  "start": 20.92,
+  "end": 21.14
+ },
+ {
+  "word": "same",
+  "start": 21.14,
+  "end": 21.34
+ },
+ {
+  "word": "2",
+  "start": 21.34,
+  "end": 21.62
+ },
+ {
+  "word": "%",
+  "start": 21.62,
+  "end": 21.98
+ },
+ {
+  "word": "and",
+  "start": 21.98,
+  "end": 22.52
+ },
+ {
+  "word": "every",
+  "start": 22.52,
+  "end": 22.9
+ },
+ {
+  "word": "year",
+  "start": 22.9,
+  "end": 23.12
+ },
+ {
+  "word": "the",
+  "start": 23.12,
+  "end": 23.34
+ },
+ {
+  "word": "ghost",
+  "start": 23.34,
+  "end": 23.54
+ },
+ {
+  "word": "money",
+  "start": 23.54,
+  "end": 23.82
+ },
+ {
+  "word": "got",
+  "start": 23.82,
+  "end": 24.04
+ },
+ {
+  "word": "bigger.",
+  "start": 24.04,
+  "end": 24.38
+ },
+ {
+  "word": "Meanwhile,",
+  "start": 24.38,
+  "end": 24.98
+ },
+ {
+  "word": "I",
+  "start": 25.42,
+  "end": 25.56
+ },
+ {
+  "word": "made",
+  "start": 25.56,
+  "end": 25.76
+ },
+ {
+  "word": "that",
+  "start": 25.76,
+  "end": 25.94
+ },
+ {
+  "word": "lease",
+  "start": 25.94,
+  "end": 26.2
+ },
+ {
+  "word": "payment",
+  "start": 26.2,
+  "end": 26.54
+ },
+ {
+  "word": "on",
+  "start": 26.54,
+  "end": 26.74
+ },
+ {
+  "word": "time,",
+  "start": 26.74,
+  "end": 27.12
+ },
+ {
+  "word": "every",
+  "start": 27.5,
+  "end": 27.7
+ },
+ {
+  "word": "month,",
+  "start": 27.7,
+  "end": 28.04
+ },
+ {
+  "word": "with",
+  "start": 28.42,
+  "end": 28.56
+ },
+ {
+  "word": "pride.",
+  "start": 28.56,
+  "end": 28.98
+ },
+ {
+  "word": "$489",
+  "start": 29.92,
+  "end": 30.52
+ },
+ {
+  "word": "to",
+  "start": 30.52,
+  "end": 31.32
+ },
+ {
+  "word": "look",
+  "start": 31.32,
+  "end": 31.48
+ },
+ {
+  "word": "successful,",
+  "start": 31.48,
+  "end": 32.04
+ },
+ {
+  "word": "while",
+  "start": 32.4,
+  "end": 32.5
+ },
+ {
+  "word": "skipping",
+  "start": 32.5,
+  "end": 32.8
+ },
+ {
+  "word": "about",
+  "start": 32.8,
+  "end": 33.04
+ },
+ {
+  "word": "$77",
+  "start": 33.04,
+  "end": 33.6
+ },
+ {
+  "word": "a",
+  "start": 33.6,
+  "end": 33.82
+ },
+ {
+  "word": "month",
+  "start": 33.82,
+  "end": 34.0
+ },
+ {
+  "word": "that",
+  "start": 34.0,
+  "end": 34.2
+ },
+ {
+  "word": "would",
+  "start": 34.2,
+  "end": 34.28
+ },
+ {
+  "word": "have",
+  "start": 34.28,
+  "end": 34.4
+ },
+ {
+  "word": "actually",
+  "start": 34.4,
+  "end": 34.72
+ },
+ {
+  "word": "made",
+  "start": 34.72,
+  "end": 34.94
+ },
+ {
+  "word": "me",
+  "start": 34.94,
+  "end": 35.12
+ },
+ {
+  "word": "successful.",
+  "start": 35.12,
+  "end": 35.54
+ }
+]

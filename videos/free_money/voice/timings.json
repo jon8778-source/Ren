@@ -92,5 +92,32 @@
     "gen_s": 0.0
    }
   ]
+ },
+ "S5": {
+  "duration": 35.52,
+  "sample_rate": 24000,
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "That night, I did the painful maths. If that two thousand seven hundred and sixty had been invested and grown at, say, seven percent a year, which is a hypothetical, not a promise, in thirty years it could be roughly twenty-one thousand dollars.",
+    "start": 0.0,
+    "end": 12.863,
+    "gen_s": 66.2
+   },
+   {
+    "chunk": 2,
+    "text": "That's the real cost of a lease-shaped decision. Not the payment. The opportunity. But here's the twist. The day I fixed it, my take-home dropped by about thirty-two dollars a paycheck, because those contributions come out before income tax. And I never missed it.",
+    "start": 12.863,
+    "end": 28.384,
+    "gen_s": 130.4
+   },
+   {
+    "chunk": 3,
+    "text": "I honestly couldn't tell you what that thirty-two dollars used to buy me. Probably a car wash, for a car I didn't even own.",
+    "start": 28.384,
+    "end": 35.52,
+    "gen_s": 72.4
+   }
+  ]
  }
 }
