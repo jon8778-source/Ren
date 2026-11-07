@@ -148,6 +148,7 @@ class Rough(Rev):
             if 0 < over < 0.12:
                 s["end"] = self.shots[k + 1]["start"] = s["start"] + CAPS[s["type"]]
         self.by = {s["name"]: s for s in self.shots}
+        self.p = lambda sc, i: self.phr[f"S{sc}"][i]            # phrase timings, as in the rev03.1 Rev class
         pc = self.by["phone_lease"]
         self.phone = PhoneClip(self.A, 1.5, pc["end"] - pc["start"] + 0.1)
         self.build = {}
