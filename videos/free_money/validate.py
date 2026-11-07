@@ -39,12 +39,14 @@ sd = run(["ffmpeg", "-nostats", "-i", str(mp4), "-af", "silencedetect=n=-45dB:d=
 sil = [(float(s), float(e)) for s, e in zip(re.findall(r"silence_start: ([\d.]+)", sd), re.findall(r"silence_end: ([\d.]+)", sd))]
 # a pause is natural when it starts right after a word that ends a sentence (.?!) and is under 1 s; anything else is a defect
 V = Path(__file__).parent / "voice"
+scenes = rep.get("scenes", ["S1", "S2"])
 ends, offv = [], 0.0
-for sid in ("S1", "S2"):
+for sid in scenes:
     for w in json.loads((V / f"words_{sid}.json").read_text()):
         if w["word"].rstrip()[-1:] in ".?!" and w["end"] > w["start"]:
             ends.append(offv + w["end"])
-    offv = rep["shots"][[x["scene"] for x in rep["shots"]].index("S2")]["start"]
+    import soundfile as _sf
+    offv += _sf.info(V / f"{sid}.wav").duration
 inside = [x for x in sil if x[1] < rep["narration_s"] - 0.1]
 res["pauses_inside_narration"] = [{"from": a_, "to": b_, "len": round(b_ - a_, 2), "at_sentence_end": any(abs(a_ - e) < 0.2 for e in ends)} for a_, b_ in inside]
 res["silences_over_0.6s_inside_narration"] = [x for x, d in zip(inside, res["pauses_inside_narration"]) if not d["at_sentence_end"] or d["len"] > 1.0]
@@ -60,7 +62,7 @@ for s in rep["shots"]:
 res["shots"] = len(rep["shots"]); res["shot_frames_sum"] = tot; res["shot_frames_equal_video_frames"] = tot == nb
 res["shots_over_cap"] = bad
 res["layout_problems"] = rep["layout_problems"]
-res["narration_check"] = {k: {"ratio": x["ratio"], "differences": x["differences"]} for k, x in json.loads((Path(__file__).parent / "voice" / "check.json").read_text()).items() if k in ("S1", "S2")}
+res["narration_check"] = {k: {"ratio": x["ratio"], "differences": x["differences"]} for k, x in json.loads((Path(__file__).parent / "voice" / "check.json").read_text()).items() if k in scenes}
 ok = res["full_decode_clean"] and res["format_ok"] and res["frames_match_duration"] and not res["silences_over_0.6s_inside_narration"] and not bad and not res["layout_problems"] and res["shot_frames_equal_video_frames"] and res["av_duration_diff_s"] < 0.1
 res["PASS"] = bool(ok)
 (mp4.parent / (mp4.stem + "_validation.json")).write_text(json.dumps(res, indent=1))
