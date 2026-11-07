@@ -10,7 +10,9 @@ Existing complete Qwen narration available; no new TTS needed. No new major
 character artwork proposed. Remaining work: extend scenes, render remaining45s,
 join unchanged opening, complete full QA/playback and deliver downloadable MP4.
 Long-form, originals and main unchanged. Videos/caches stay outside Git.
-Source/asset checkpoint prepared; remote verification pending.
+Source/asset checkpoint `282530d` pushed/fetched and byte-verified remotely.
+Approved full production now rendering only remaining scenes; 58.708333s timeline.
+Extended source, narration sample map and gated opening approval saved locally.
 
 ---
 

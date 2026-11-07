@@ -1,0 +1,9 @@
+{
+  "by": "Jon",
+  "evidence": "Current user explicitly approves the exact Revision 6 baseline and authorizes full production without additional intermediate gates except new major character artwork; none is used. Opening preserved exactly.",
+  "approved_at": "2026-11-07T11:37:57.763036+00:00",
+  "review_notes": "# Explicit approval and extension authorization\n\nJon: \u201cRevision 6 is APPROVED as the visual baseline.\u201d\nApproved MP4 SHA d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb.\nOriginal approval is bound independently in ../revision-06/prototype-approval.json.\n\nJon also explicitly authorizes the remaining film: \u201cYou are authorised to proceed\nwith the complete approximately 60-second health insurance Short\u201d and \u201cOtherwise,\ncomplete production without additional intermediate approval gates.\u201d New major\ncharacter artwork is the only specified additional asset approval gate; none used.\n\nThis extended manifest/report binding records that actual current authorization;\nit does not claim Jon visually reviewed the unrendered remainder or two new empty\nmedical backgrounds. First360frames remain copied from the approved exact MP4.\nExisting no-warning prototype technical QA and review limits remain disclosed.",
+  "fingerprint": "0dba9ce29e2614f024388b357b48ca803a23f67dd0958cd8d5d66ceb7bfaf139",
+  "prototype_sha256": "d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb",
+  "report_sha256": "a4b50cd9d7962a0089284ac3cdeb058454a0376faaa59ed91698cddf765538fd"
+}

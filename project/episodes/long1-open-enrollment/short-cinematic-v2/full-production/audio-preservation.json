@@ -1,0 +1,15 @@
+{
+  "sample_rate": 48000,
+  "samples": 2818000,
+  "duration": 58.708333333333336,
+  "first_15s": "Exact decoded approved prototype samples [0:720000]",
+  "tail": "Original Short samples [728000:2826000]; accounts for already-approved 8000-sample quiet-pause removal",
+  "original_source_sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+  "approved_prototype_sha256": "d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb",
+  "master_pcm_sha256": "56b744bc15495ed74976e1245c1c41e59fd294ce9d950f85432848cb06bde10a",
+  "master_wav_sha256": "04a9a9c022a5891e4d66c76a890cad48005afb6889881c74762f302e36323618",
+  "new_voice_requests": 0,
+  "speech_speed_changed": false,
+  "silence_padding": false,
+  "audio_encoding": "Final master AAC encoded once for seamless join; approved voice samples unchanged before encoding."
+}

@@ -1,0 +1,356 @@
+[
+  {
+    "id": "renewal-action",
+    "start_frame": 0,
+    "end_frame": 48,
+    "composition": "renewal-button-and-trackpad-closeup",
+    "action": "Palm-down right hand presses the trackpad at 0.625s; screen confirms renewal",
+    "motion_purpose": "Immediate focal button and visible hand action",
+    "animations": [
+      "right-trackpad-press"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "render-r6",
+      "r5-components",
+      "font",
+      "laptop",
+      "ren-right-hand-trackpad-click"
+    ]
+  },
+  {
+    "id": "four-renewals",
+    "start_frame": 48,
+    "end_frame": 120,
+    "composition": "physical-calendar-annual-confirmations",
+    "action": "Four annual pages reveal confirmed choices, then hold Year 4",
+    "motion_purpose": "Make four-year repetition visible without a paragraph",
+    "animations": [
+      "four-confirmed-page-turns"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "render-r6",
+      "r5-components",
+      "font"
+    ]
+  },
+  {
+    "id": "ren-reaction",
+    "start_frame": 120,
+    "end_frame": 216,
+    "composition": "genuine-chest-up-concerned-reaction",
+    "action": "Cut to approved concerned expression, chest-up, clear foreground",
+    "motion_purpose": "A locked human reaction hold lets the comparison register",
+    "animations": [
+      "approved-concerned-reaction-hold"
+    ],
+    "kind": "presenter",
+    "environment_fullscreen": true,
+    "assets": [
+      "render-r6",
+      "r5-components",
+      "font",
+      "office",
+      "ren-chest-up-reaction"
+    ]
+  },
+  {
+    "id": "price-a",
+    "start_frame": 216,
+    "end_frame": 276,
+    "composition": "folded-premium-document-closeup",
+    "action": "Plan A document settles; large fixed premium underlined",
+    "motion_purpose": "Reveal $2,520 first and hold before Plan B",
+    "animations": [
+      "premium-a-place-and-mark"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "render-r6",
+      "r5-components",
+      "font"
+    ]
+  },
+  {
+    "id": "price-comparison",
+    "start_frame": 276,
+    "end_frame": 360,
+    "composition": "unfolded-premium-document-closeup",
+    "action": "Physical fold opens to $840; care-cost magnifier arrives",
+    "motion_purpose": "Sequential premium contrast followed by incomplete-total-cost cue",
+    "animations": [
+      "premium-b-unfold-and-inspect"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "render-r6",
+      "r5-components",
+      "font"
+    ]
+  },
+  {
+    "id": "care-catch",
+    "start_frame": 360,
+    "end_frame": 438,
+    "composition": "clinic-bill-counter",
+    "action": "Medical bill slides onto consultation counter; premiums remain a separate line",
+    "motion_purpose": "Introduce real care costs after premium comparison",
+    "animations": [
+      "consultation-bill-arrival"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "clinic"
+    ]
+  },
+  {
+    "id": "chat-alex",
+    "start_frame": 438,
+    "end_frame": 510,
+    "composition": "ren-holding-phone-office",
+    "action": "Native Ren raises his phone; Alex\u2019s message appears beside it",
+    "motion_purpose": "Show the first number-free opinion as a conversation",
+    "animations": [
+      "native-phone-raise"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office",
+      "phone-clip"
+    ]
+  },
+  {
+    "id": "chat-danny",
+    "start_frame": 510,
+    "end_frame": 582,
+    "composition": "phone-message-macro",
+    "action": "Camera cuts into same phone; Danny\u2019s conflicting message arrives",
+    "motion_purpose": "Contrast advice without inventing supporting characters",
+    "animations": [
+      "second-message-arrival"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office"
+    ]
+  },
+  {
+    "id": "clinic-visit",
+    "start_frame": 582,
+    "end_frame": 648,
+    "composition": "doctor-room-appointment",
+    "action": "Appointment calendar and baby bottle join the consultation desk",
+    "motion_purpose": "Connect planned care with comparing coverage",
+    "animations": [
+      "appointment-page-open"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "clinic",
+      "medical-props"
+    ]
+  },
+  {
+    "id": "pharmacy-pickup",
+    "start_frame": 648,
+    "end_frame": 720,
+    "composition": "pharmacy-prescription-counter",
+    "action": "Prescription bottle arrives at collection/payment counter",
+    "motion_purpose": "Tie medication costs to a real collection moment",
+    "animations": [
+      "prescription-collection"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "pharmacy",
+      "medical-props"
+    ]
+  },
+  {
+    "id": "ppo-review",
+    "start_frame": 720,
+    "end_frame": 774,
+    "composition": "ren-clinic-bill-reaction",
+    "action": "Approved concerned Ren examines bill in clinic foreground",
+    "motion_purpose": "Show that the PPO could suit greater care needs",
+    "animations": [
+      "concerned-bill-reading"
+    ],
+    "kind": "presenter",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "clinic",
+      "ren-chest-up-reaction"
+    ]
+  },
+  {
+    "id": "network-check",
+    "start_frame": 774,
+    "end_frame": 834,
+    "composition": "phone-network-search-clinic",
+    "action": "Network search and prescription coverage are checked on phone",
+    "motion_purpose": "Make plan verification a concrete action",
+    "animations": [
+      "network-and-drug-check"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "clinic"
+    ]
+  },
+  {
+    "id": "plan-limits",
+    "start_frame": 834,
+    "end_frame": 900,
+    "composition": "medical-bill-plan-detail",
+    "action": "Deductible field and verified in-network out-of-pocket limits are inspected",
+    "motion_purpose": "Distinguish annual premiums from covered-care cost exposure",
+    "animations": [
+      "bill-limit-inspection"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "clinic"
+    ]
+  },
+  {
+    "id": "hsa-timing",
+    "start_frame": 900,
+    "end_frame": 982,
+    "composition": "pharmacy-bill-and-hsa",
+    "action": "Bill arrives beside HSA jar before annual contributions accumulate",
+    "motion_purpose": "Show funding timing risk without inventing day-one balance",
+    "animations": [
+      "early-bill-hsa-arrival"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "pharmacy",
+      "medical-props"
+    ]
+  },
+  {
+    "id": "desk-review",
+    "start_frame": 982,
+    "end_frame": 1056,
+    "composition": "ren-at-desk-paper-review",
+    "action": "Ren returns to office desk; physical plan documents laid out",
+    "motion_purpose": "Return to the same personal decision",
+    "animations": [
+      "desk-review-settle"
+    ],
+    "kind": "presenter",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office",
+      "ren-chest-up-reaction"
+    ]
+  },
+  {
+    "id": "deliberate-choice",
+    "start_frame": 1056,
+    "end_frame": 1146,
+    "composition": "laptop-review-trackpad",
+    "action": "Approved hand reviews network, drugs and costs on the laptop",
+    "motion_purpose": "Demonstrate checking numbers rather than repeating opening click",
+    "animations": [
+      "deliberate-plan-review"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "laptop",
+      "ren-right-hand-trackpad-click"
+    ]
+  },
+  {
+    "id": "three-questions",
+    "start_frame": 1146,
+    "end_frame": 1258,
+    "composition": "desktop-planning-worksheet",
+    "action": "Three questions gain sequential pen marks on one recurring worksheet",
+    "motion_purpose": "Bad year, real year and purpose of difference stay connected",
+    "animations": [
+      "worksheet-three-marks"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office"
+    ],
+    "timing_justification": "4.667s connected worksheet hold with three sequential marks tied to spoken questions; allows reading without flashing separate cards."
+  },
+  {
+    "id": "annual-review",
+    "start_frame": 1258,
+    "end_frame": 1338,
+    "composition": "office-review-timer",
+    "action": "Physical timer set for 40 minutes on desk, with annual-review label",
+    "motion_purpose": "Replace autopilot with a repeatable yearly habit",
+    "animations": [
+      "annual-review-timer"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office"
+    ]
+  },
+  {
+    "id": "total-cost-ending",
+    "start_frame": 1338,
+    "end_frame": 1409,
+    "composition": "completed-plan-office-desk",
+    "action": "Reviewed plan settles; takeaway stays readable in office environment",
+    "motion_purpose": "Finish on total cost, not premiums",
+    "animations": [
+      "completed-review-hold"
+    ],
+    "kind": "action",
+    "environment_fullscreen": true,
+    "assets": [
+      "full-renderer",
+      "font",
+      "office"
+    ]
+  }
+]

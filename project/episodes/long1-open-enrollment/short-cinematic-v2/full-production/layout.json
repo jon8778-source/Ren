@@ -1,0 +1,1082 @@
+{
+  "scenes": {
+    "renewal-action": [
+      {
+        "text": "HEALTH PLAN",
+        "bbox": [
+          120,
+          405,
+          466,
+          442
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Annual renewal",
+        "bbox": [
+          120,
+          493,
+          560,
+          540
+        ],
+        "font_px": 62,
+        "role": "text",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Keep current plan",
+        "bbox": [
+          145,
+          682,
+          626,
+          738
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 0.0,
+        "end": 0.625
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Renewal confirmed",
+        "bbox": [
+          145,
+          682,
+          660,
+          727
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 0.625,
+        "end": 2.0
+      }
+    ],
+    "four-renewals": [
+      {
+        "text": "ANNUAL RENEWAL",
+        "bbox": [
+          155,
+          427,
+          692,
+          471
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 2.0,
+        "end": 5.0
+      },
+      {
+        "text": "YEAR 1",
+        "bbox": [
+          165,
+          655,
+          580,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 2.0,
+        "end": 2.5833333333333335
+      },
+      {
+        "text": "CONFIRMED",
+        "bbox": [
+          165,
+          902,
+          591,
+          957
+        ],
+        "font_px": 76,
+        "role": "text",
+        "start": 2.0,
+        "end": 5.0
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 2.0,
+        "end": 2.5
+      },
+      {
+        "text": "YEAR 2",
+        "bbox": [
+          165,
+          655,
+          605,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 2.5833333333333335,
+        "end": 3.1666666666666665
+      },
+      {
+        "text": "YEAR 3",
+        "bbox": [
+          165,
+          655,
+          605,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 3.1666666666666665,
+        "end": 3.75
+      },
+      {
+        "text": "YEAR 4",
+        "bbox": [
+          165,
+          655,
+          602,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 3.75,
+        "end": 5.0
+      }
+    ],
+    "ren-reaction": [
+      {
+        "text": "I finally\ncompared.",
+        "bbox": [
+          100,
+          283,
+          513,
+          462
+        ],
+        "font_px": 88,
+        "role": "text",
+        "start": 5.0,
+        "end": 9.0
+      }
+    ],
+    "price-a": [
+      {
+        "text": "ILLUSTRATIVE",
+        "bbox": [
+          140,
+          274,
+          444,
+          364
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "ANNUAL PREMIUMS",
+        "bbox": [
+          140,
+          340,
+          615,
+          432
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "PLAN A",
+        "bbox": [
+          140,
+          447,
+          349,
+          545
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          140,
+          534,
+          656,
+          743
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          140,
+          711,
+          354,
+          808
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          150,
+          1031,
+          389,
+          1137
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      }
+    ],
+    "price-comparison": [
+      {
+        "text": "ILLUSTRATIVE",
+        "bbox": [
+          140,
+          274,
+          444,
+          309
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "ANNUAL PREMIUMS",
+        "bbox": [
+          140,
+          340,
+          615,
+          377
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "PLAN A",
+        "bbox": [
+          140,
+          447,
+          349,
+          490
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          140,
+          534,
+          656,
+          688
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          140,
+          711,
+          354,
+          1138
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          150,
+          1031,
+          389,
+          1082
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 11.5,
+        "end": 11.583333333333334
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          140,
+          837,
+          345,
+          880
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "$840",
+        "bbox": [
+          140,
+          924,
+          517,
+          1068
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "Premiums only",
+        "bbox": [
+          140,
+          1225,
+          521,
+          1281
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 13.0,
+        "end": 15.0
+      },
+      {
+        "text": "Care costs?",
+        "bbox": [
+          140,
+          1325,
+          431,
+          1366
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 13.875,
+        "end": 15.0
+      }
+    ],
+    "care-catch": [
+      {
+        "text": "MEDICAL BILL",
+        "bbox": [
+          155,
+          554,
+          567,
+          940
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 15.0,
+        "end": 18.25
+      },
+      {
+        "text": "Premiums",
+        "bbox": [
+          155,
+          700,
+          506,
+          1100
+        ],
+        "font_px": 80,
+        "role": "text",
+        "start": 15.0,
+        "end": 18.25
+      },
+      {
+        "text": "+ care costs",
+        "bbox": [
+          155,
+          820,
+          581,
+          1215
+        ],
+        "font_px": 80,
+        "role": "text",
+        "start": 15.0,
+        "end": 18.25
+      },
+      {
+        "text": "Compare the total.",
+        "bbox": [
+          155,
+          1022,
+          697,
+          1422
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 15.0,
+        "end": 18.25
+      }
+    ],
+    "chat-alex": [
+      {
+        "text": "GROUP CHAT",
+        "bbox": [
+          560,
+          502,
+          820,
+          534
+        ],
+        "font_px": 43,
+        "role": "text",
+        "start": 18.25,
+        "end": 21.25
+      },
+      {
+        "text": "I asked around.",
+        "bbox": [
+          100,
+          254,
+          571,
+          306
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 18.25,
+        "end": 21.25
+      },
+      {
+        "text": "Alex",
+        "bbox": [
+          560,
+          629,
+          671,
+          670
+        ],
+        "font_px": 54,
+        "role": "text",
+        "start": 19.75,
+        "end": 21.25
+      },
+      {
+        "text": "\u201cPick the\nbest.\u201d",
+        "bbox": [
+          560,
+          720,
+          789,
+          831
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 19.75,
+        "end": 21.25
+      }
+    ],
+    "chat-danny": [
+      {
+        "text": "GROUP CHAT",
+        "bbox": [
+          145,
+          401,
+          483,
+          442
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 21.25,
+        "end": 24.25
+      },
+      {
+        "text": "Alex",
+        "bbox": [
+          145,
+          554,
+          252,
+          592
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 21.25,
+        "end": 24.25
+      },
+      {
+        "text": "\u201cPick the best.\u201d",
+        "bbox": [
+          145,
+          642,
+          577,
+          690
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 21.25,
+        "end": 24.25
+      },
+      {
+        "text": "Danny",
+        "bbox": [
+          145,
+          865,
+          295,
+          988
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 21.25,
+        "end": 24.25
+      },
+      {
+        "text": "\u201cPick the\ncheapest.\u201d",
+        "bbox": [
+          145,
+          964,
+          475,
+          1185
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 21.25,
+        "end": 24.25
+      }
+    ],
+    "clinic-visit": [
+      {
+        "text": "PLANNED CARE",
+        "bbox": [
+          405,
+          989,
+          756,
+          1224
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 24.25,
+        "end": 27.0
+      },
+      {
+        "text": "Baby /\nsurgery",
+        "bbox": [
+          405,
+          1102,
+          634,
+          1442
+        ],
+        "font_px": 66,
+        "role": "text",
+        "start": 24.25,
+        "end": 27.0
+      }
+    ],
+    "pharmacy-pickup": [
+      {
+        "text": "PRESCRIPTION",
+        "bbox": [
+          515,
+          1022,
+          796,
+          1132
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 27.0,
+        "end": 30.0
+      },
+      {
+        "text": "Drug\ncoverage?",
+        "bbox": [
+          515,
+          1134,
+          811,
+          1346
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 27.0,
+        "end": 30.0
+      }
+    ],
+    "ppo-review": [
+      {
+        "text": "PPO",
+        "bbox": [
+          540,
+          988,
+          701,
+          1049
+        ],
+        "font_px": 84,
+        "role": "text",
+        "start": 30.0,
+        "end": 32.25
+      },
+      {
+        "text": "Could suit\nhigher\ncare needs",
+        "bbox": [
+          540,
+          1113,
+          785,
+          1269
+        ],
+        "font_px": 50,
+        "role": "text",
+        "start": 30.0,
+        "end": 32.25
+      }
+    ],
+    "network-check": [
+      {
+        "text": "CHECK YOUR PLAN",
+        "bbox": [
+          145,
+          431,
+          658,
+          474
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 32.25,
+        "end": 34.75
+      },
+      {
+        "text": "Doctors\nin-network?",
+        "bbox": [
+          145,
+          647,
+          556,
+          788
+        ],
+        "font_px": 76,
+        "role": "text",
+        "start": 32.25,
+        "end": 34.75
+      },
+      {
+        "text": "Drug\ncoverage?",
+        "bbox": [
+          145,
+          982,
+          497,
+          1137
+        ],
+        "font_px": 76,
+        "role": "text",
+        "start": 32.25,
+        "end": 34.75
+      }
+    ],
+    "plan-limits": [
+      {
+        "text": "PLAN DETAILS",
+        "bbox": [
+          140,
+          374,
+          562,
+          420
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      },
+      {
+        "text": "Deductible:",
+        "bbox": [
+          140,
+          546,
+          446,
+          591
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      },
+      {
+        "text": "Check your plan",
+        "bbox": [
+          140,
+          636,
+          578,
+          693
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      },
+      {
+        "text": "Covered in-network\nout-of-pocket limits",
+        "bbox": [
+          140,
+          812,
+          573,
+          915
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      },
+      {
+        "text": "Plan A  $4,000",
+        "bbox": [
+          140,
+          1028,
+          573,
+          1086
+        ],
+        "font_px": 68,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      },
+      {
+        "text": "Plan B  $6,500",
+        "bbox": [
+          140,
+          1168,
+          562,
+          1226
+        ],
+        "font_px": 68,
+        "role": "text",
+        "start": 34.75,
+        "end": 37.5
+      }
+    ],
+    "hsa-timing": [
+      {
+        "text": "HSA",
+        "bbox": [
+          190,
+          1242,
+          299,
+          1284
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 37.5,
+        "end": 40.916666666666664
+      },
+      {
+        "text": "EARLY BILL",
+        "bbox": [
+          500,
+          893,
+          772,
+          1112
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 37.5,
+        "end": 40.916666666666664
+      },
+      {
+        "text": "Funds may\nstill be\nbuilding.",
+        "bbox": [
+          500,
+          1015,
+          772,
+          1379
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 37.5,
+        "end": 40.916666666666664
+      }
+    ],
+    "desk-review": [
+      {
+        "text": "MY PLAN",
+        "bbox": [
+          540,
+          1193,
+          761,
+          1302
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 40.916666666666664,
+        "end": 44.0
+      },
+      {
+        "text": "Review\nfirst.",
+        "bbox": [
+          540,
+          1292,
+          742,
+          1484
+        ],
+        "font_px": 64,
+        "role": "text",
+        "start": 40.916666666666664,
+        "end": 44.0
+      }
+    ],
+    "deliberate-choice": [
+      {
+        "text": "Check. Compare.\nThen choose.",
+        "bbox": [
+          100,
+          270,
+          683,
+          415
+        ],
+        "font_px": 78,
+        "role": "text",
+        "start": 44.0,
+        "end": 47.75
+      },
+      {
+        "text": "MY PLAN REVIEW",
+        "bbox": [
+          125,
+          643,
+          553,
+          682
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 44.0,
+        "end": 47.75
+      },
+      {
+        "text": "Network",
+        "bbox": [
+          145,
+          755,
+          367,
+          799
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 44.0,
+        "end": 47.75
+      },
+      {
+        "text": "Drug coverage",
+        "bbox": [
+          145,
+          857,
+          526,
+          910
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 44.0,
+        "end": 47.75
+      },
+      {
+        "text": "Total costs",
+        "bbox": [
+          145,
+          955,
+          432,
+          998
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 44.0,
+        "end": 47.75
+      },
+      {
+        "text": "Choose deliberately.",
+        "bbox": [
+          125,
+          1502,
+          568,
+          1549
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 47.708333333333336,
+        "end": 47.75
+      }
+    ],
+    "three-questions": [
+      {
+        "text": "MY PLAN REVIEW",
+        "bbox": [
+          145,
+          352,
+          639,
+          396
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 47.75,
+        "end": 52.416666666666664
+      },
+      {
+        "text": "Bad year?",
+        "bbox": [
+          205,
+          569,
+          523,
+          636
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 47.75,
+        "end": 52.416666666666664
+      },
+      {
+        "text": "Real year?",
+        "bbox": [
+          205,
+          824,
+          540,
+          891
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 47.75,
+        "end": 52.416666666666664
+      },
+      {
+        "text": "Difference\nfor what?",
+        "bbox": [
+          205,
+          1079,
+          533,
+          1212
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 47.75,
+        "end": 52.416666666666664
+      }
+    ],
+    "annual-review": [
+      {
+        "text": "A yearly review.",
+        "bbox": [
+          110,
+          320,
+          684,
+          397
+        ],
+        "font_px": 80,
+        "role": "text",
+        "start": 52.416666666666664,
+        "end": 55.75
+      },
+      {
+        "text": "40 MIN",
+        "bbox": [
+          305,
+          950,
+          583,
+          1015
+        ],
+        "font_px": 90,
+        "role": "text",
+        "start": 52.416666666666664,
+        "end": 55.75
+      },
+      {
+        "text": "Once a year.",
+        "bbox": [
+          285,
+          1324,
+          552,
+          1369
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 52.416666666666664,
+        "end": 55.75
+      }
+    ],
+    "total-cost-ending": [
+      {
+        "text": "Compare\ntotal cost.",
+        "bbox": [
+          145,
+          379,
+          549,
+          540
+        ],
+        "font_px": 88,
+        "role": "text",
+        "start": 55.75,
+        "end": 58.708333333333336
+      },
+      {
+        "text": "Not just\npremiums.",
+        "bbox": [
+          145,
+          688,
+          547,
+          867
+        ],
+        "font_px": 88,
+        "role": "text",
+        "start": 55.75,
+        "end": 58.708333333333336
+      },
+      {
+        "text": "PLAN REVIEWED",
+        "bbox": [
+          145,
+          1310,
+          583,
+          1412
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 55.75,
+        "end": 58.708333333333336
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 55.75,
+        "end": 58.708333333333336
+      }
+    ]
+  }
+}

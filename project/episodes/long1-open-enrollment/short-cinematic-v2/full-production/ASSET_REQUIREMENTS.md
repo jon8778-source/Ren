@@ -7,10 +7,10 @@ report’s proposed environment-only approval gate. No new character art is need
 
 Reuse: exact 360-frame approved opening; approved high-resolution Ren reaction and
 right-hand insert; approved office original; existing laptop; approved medical prop
-sheet (baby bottle, prescription, clipboard, HSA jar); native1280×720 clipboard-tick
-and phone-hold sources. Actual clips inspected at1/2.5/4/6s with native detail crops.
-Use hands/object crops for close interaction, rather than enlarging the tiny native
-source face into a new close-up. Keep closed-mouth narrator-led format. All original
+sheet (baby bottle, prescription, clipboard, HSA jar); native1280×720 phone-hold source. Phone and clipboard candidates were inspected
+at1/2.5/4/6s with native detail crops. The clipboard macro was rejected because it
+would expose a cropped torso; the approved high-resolution hand performs the
+laptop review instead. Never enlarge the tiny native face into a new close-up. Keep closed-mouth narrator-led format. All original
 sources and long-form MP4 remain unchanged. No unrelated supporting characters.
 
 New required artwork: two EMPTY portrait environments (clinic and pharmacy) using

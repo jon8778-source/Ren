@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "title": "Ren Health Insurance Short v2 \u2014 full production",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 1409,
+  "full_bleed": true,
+  "permanent_border": false,
+  "asset_report": "ASSET_REQUIREMENTS.md",
+  "layout_evidence": "layout.json",
+  "prototype": "../deliverables/Ren_Health_Short_v2_15s_Prototype_rev06.mp4",
+  "prototype_report": "approved-opening.qa.json",
+  "assets": [
+    {
+      "id": "script",
+      "path": "../script-prototype.txt",
+      "kind": "script",
+      "sha256": "e2ddc99e03773351a1baf47328d2f234b82fa6ad15cfb473a021d5869c2e9a72",
+      "status": "approved",
+      "approval_evidence": "Existing approved opening narration, reused verbatim through catch; current request authorizes visual prototype"
+    },
+    {
+      "id": "source-short",
+      "path": "../../portrait-short-01/deliverables/Ren_Health_Plan_Portrait_1min.mp4",
+      "kind": "audio",
+      "sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+      "status": "approved",
+      "approval_evidence": "Exact existing Short specified by Jon, preserved; Qwen provenance in opening-hook-v1/manifest.json"
+    },
+    {
+      "id": "office",
+      "path": "../../../../prototypes/coffee-minute-v3/assets/office.png",
+      "kind": "environment",
+      "sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36",
+      "status": "approved",
+      "approval_evidence": "Approved coffee v3 original; exact hash in artwork/manifest.json"
+    },
+    {
+      "id": "laptop",
+      "path": "../assets/laptop-generated.png",
+      "kind": "prop",
+      "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8",
+      "status": "approved",
+      "approval_evidence": "Jon explicitly requested a generated laptop in the revised prototype; artwork is for prototype review, not full-film design approval"
+    },
+    {
+      "id": "voice-config",
+      "path": "../voice-configuration.json",
+      "kind": "configuration",
+      "sha256": "2d8653dc4603c072b912d1ea12b0bdfa90758b85824b8eebc9b7c6984e34498d",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "native-matte",
+      "path": "../../render.py",
+      "kind": "renderer",
+      "sha256": "a957d81ba5520b743443684f7f7d8954445ea80a07e0adc27d75d8863661ac16",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "calculations",
+      "path": "../../calculations.py",
+      "kind": "renderer",
+      "sha256": "8e2b5ac72e36f292424f4bb33a6364c48a8a78f28c2081027dafae7fa9161b31",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "assumptions",
+      "path": "../../assumptions.json",
+      "kind": "configuration",
+      "sha256": "d2d8eb860757b439890424259d86ab87813d4c07a040e1b56c84d1d2240b73e6",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "parent-timing",
+      "path": "../../audio-timing.json",
+      "kind": "configuration",
+      "sha256": "cb7c79679c2c2286dc7cb5e9613137233132d9c155a9dc36fffde2327f0a8cd2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "voice-provenance",
+      "path": "../../opening-hook-v1/manifest.json",
+      "kind": "configuration",
+      "sha256": "f7a85240dcf2e0c9a891ef89f434097995a3637a0bb058964dfabff1fef6d8e2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "font",
+      "path": "../../../../remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "kind": "configuration",
+      "sha256": "7046069756572f2d090fd5ac943b24d1958f2fbb259cd6b99872758d24dbe369",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-render",
+      "path": "../../../../prototypes/coffee-minute-v3/render.py",
+      "kind": "renderer",
+      "sha256": "4e7973365ed8a0e5686eb67e81e7616a4e41871220270c6f75133dca616d3103",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-unpack",
+      "path": "../../../../prototypes/coffee-minute-v3/unpack_artwork.py",
+      "kind": "renderer",
+      "sha256": "bda26d01aca768eaeed6d7ca3fbc857bf2793c5b278f79e5f5c75108f68b553f",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "qa-gate",
+      "path": "../../../../pipeline/shorts_standards.py",
+      "kind": "renderer",
+      "sha256": "20d4ac3c459bb11e5143028fc64fbac1e5ebc36f6559d7b83d265ffe4f95fa97",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-ref",
+      "path": "../../../../../Audio/ren_reference.wav",
+      "kind": "configuration",
+      "sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-text",
+      "path": "../../../../../Audio/ren_reference.txt",
+      "kind": "configuration",
+      "sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "render-components",
+      "path": "../render.py",
+      "kind": "renderer",
+      "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "render-r6",
+      "path": "../render_revision6.py",
+      "kind": "renderer",
+      "sha256": "b347966f49895371d2cefcf2d69390fa20b29b6cd3ab88866405d01b93c82ca2",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "prepare-r6",
+      "path": "../prepare_revision6.py",
+      "kind": "renderer",
+      "sha256": "f0ca57202347d6fa9b71b0f57d83b443eb1b49830686bdce23b1c6fbdd6abd52",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "r5-components",
+      "path": "../render_revision5.py",
+      "kind": "renderer",
+      "sha256": "28cb74cc6eaadb600d30cbe3a85649dac19e44c458d4e1c30437997663d9112e",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "artwork-approval",
+      "path": "../revision-06/artwork-approval.json",
+      "kind": "configuration",
+      "sha256": "48e08c367034cd935466336360cd91d3cc50d25537c4e80498bfce1f1f57e6a9",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "ren-chest-up-reaction",
+      "path": "../revision6-art-review/ren-chest-up-reaction.png",
+      "kind": "character",
+      "sha256": "b2107faffce8f679f59df713dffd1819c0e5d83cea52948c2800ee50464e9021",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "ren-right-hand-trackpad-click",
+      "path": "../revision6-art-review/ren-right-hand-trackpad-click.png",
+      "kind": "character",
+      "sha256": "2728524554a5ff69f38ea16988692ecb73385e9bad2180c5d4b73970d774bef5",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "revision5-audio",
+      "path": "../deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4",
+      "kind": "audio",
+      "sha256": "8a78f5ef7d36faafa9c9caa641ef307a152aca1d3f2db7a3049881b626eed7d7",
+      "status": "approved",
+      "approval_evidence": "Jon requires existing approved Qwen narration, unchanged; copy original Revision 5 AAC packets."
+    },
+    {
+      "id": "standards",
+      "path": "../../../../pipeline/shorts_standards.py",
+      "kind": "renderer",
+      "sha256": "20d4ac3c459bb11e5143028fc64fbac1e5ebc36f6559d7b83d265ffe4f95fa97",
+      "status": "approved",
+      "approval_evidence": "Existing mandatory Shorts preflight, gate and QA layer, unchanged."
+    },
+    {
+      "id": "full-renderer",
+      "path": "../render_full.py",
+      "kind": "renderer",
+      "sha256": "6efeaf37061e5cc66100d374449b076e34384dee79d7ce941a0664851ca8605e",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "full-preparer",
+      "path": "../prepare_full.py",
+      "kind": "renderer",
+      "sha256": "f9993a5649654fc4fe1519e2d119314ec5551b73bdeef560552a3515bdcbb287",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "full-script",
+      "path": "narration.txt",
+      "kind": "script",
+      "sha256": "512203b0a25d1287dc217fe2d8aa6535aa1f09942ac24f939120e95e625c378d",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "full-master",
+      "path": "../build/full-production/narration.wav",
+      "kind": "audio",
+      "sha256": "04a9a9c022a5891e4d66c76a890cad48005afb6889881c74762f302e36323618",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "full-authorization",
+      "path": "authorization.json",
+      "kind": "configuration",
+      "sha256": "91b057f4eb4055dc61c7cbe07b0ced92b7c4e56fef7ccbc185990e6d759a012f",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "audio-preservation",
+      "path": "audio-preservation.json",
+      "kind": "configuration",
+      "sha256": "b85827dd6c55385245df4259c217678e6f869a8992c85d1d5b1557458a6c683e",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "clinic",
+      "path": "assets/clinic.png",
+      "kind": "environment",
+      "sha256": "6aeed26c2ed0f84ffcd8b1a2a4b5babe4cd4230fb648a19758d93c0dee5b02bb",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "pharmacy",
+      "path": "assets/pharmacy.png",
+      "kind": "environment",
+      "sha256": "d280be86ca981a5f866014fe03b647512fef5102bae96b434af170738d599265",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "medical-props",
+      "path": "../../full/assets/medical-props.png",
+      "kind": "prop",
+      "sha256": "303b314c1d85858237bea0760ed061438cd3da52c8e58356aa41e4a2b7c3e48e",
+      "status": "approved",
+      "approval_evidence": "Current Jon full-production message authorizes matching empty environments and implementation, with no additional gate except new major character art; none is used."
+    },
+    {
+      "id": "phone-clip",
+      "path": "../../../../../assets/ren_library/ren_hold_phone.mp4",
+      "kind": "character",
+      "sha256": "470e6fc94ab5c930ba3518d39721d4412ae3fdad4ebd431cfcf87f926ccbd3b6",
+      "status": "approved",
+      "approval_evidence": "Existing approved Ren v3 animation library; native sources and actual action intervals inspected. No new major character artwork."
+    },
+    {
+      "id": "clipboard-clip",
+      "path": "../../../../../assets/ren_library/ren_clipboard_tick.mp4",
+      "kind": "character",
+      "sha256": "5305d4458959d5f02732f80bf60fed940d526d965e5f549b00e92642c34e6ffc",
+      "status": "approved",
+      "approval_evidence": "Existing approved Ren v3 animation library; native sources and actual action intervals inspected. No new major character artwork."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "renewal-action",
+      "start_frame": 0,
+      "end_frame": 48,
+      "composition": "renewal-button-and-trackpad-closeup",
+      "action": "Palm-down right hand presses the trackpad at 0.625s; screen confirms renewal",
+      "motion_purpose": "Immediate focal button and visible hand action",
+      "animations": [
+        "right-trackpad-press"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font",
+        "laptop",
+        "ren-right-hand-trackpad-click"
+      ]
+    },
+    {
+      "id": "four-renewals",
+      "start_frame": 48,
+      "end_frame": 120,
+      "composition": "physical-calendar-annual-confirmations",
+      "action": "Four annual pages reveal confirmed choices, then hold Year 4",
+      "motion_purpose": "Make four-year repetition visible without a paragraph",
+      "animations": [
+        "four-confirmed-page-turns"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    },
+    {
+      "id": "ren-reaction",
+      "start_frame": 120,
+      "end_frame": 216,
+      "composition": "genuine-chest-up-concerned-reaction",
+      "action": "Cut to approved concerned expression, chest-up, clear foreground",
+      "motion_purpose": "A locked human reaction hold lets the comparison register",
+      "animations": [
+        "approved-concerned-reaction-hold"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font",
+        "office",
+        "ren-chest-up-reaction"
+      ]
+    },
+    {
+      "id": "price-a",
+      "start_frame": 216,
+      "end_frame": 276,
+      "composition": "folded-premium-document-closeup",
+      "action": "Plan A document settles; large fixed premium underlined",
+      "motion_purpose": "Reveal $2,520 first and hold before Plan B",
+      "animations": [
+        "premium-a-place-and-mark"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    },
+    {
+      "id": "price-comparison",
+      "start_frame": 276,
+      "end_frame": 360,
+      "composition": "unfolded-premium-document-closeup",
+      "action": "Physical fold opens to $840; care-cost magnifier arrives",
+      "motion_purpose": "Sequential premium contrast followed by incomplete-total-cost cue",
+      "animations": [
+        "premium-b-unfold-and-inspect"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    },
+    {
+      "id": "care-catch",
+      "start_frame": 360,
+      "end_frame": 438,
+      "composition": "clinic-bill-counter",
+      "action": "Medical bill slides onto consultation counter; premiums remain a separate line",
+      "motion_purpose": "Introduce real care costs after premium comparison",
+      "animations": [
+        "consultation-bill-arrival"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "clinic"
+      ]
+    },
+    {
+      "id": "chat-alex",
+      "start_frame": 438,
+      "end_frame": 510,
+      "composition": "ren-holding-phone-office",
+      "action": "Native Ren raises his phone; Alex\u2019s message appears beside it",
+      "motion_purpose": "Show the first number-free opinion as a conversation",
+      "animations": [
+        "native-phone-raise"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office",
+        "phone-clip"
+      ]
+    },
+    {
+      "id": "chat-danny",
+      "start_frame": 510,
+      "end_frame": 582,
+      "composition": "phone-message-macro",
+      "action": "Camera cuts into same phone; Danny\u2019s conflicting message arrives",
+      "motion_purpose": "Contrast advice without inventing supporting characters",
+      "animations": [
+        "second-message-arrival"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office"
+      ]
+    },
+    {
+      "id": "clinic-visit",
+      "start_frame": 582,
+      "end_frame": 648,
+      "composition": "doctor-room-appointment",
+      "action": "Appointment calendar and baby bottle join the consultation desk",
+      "motion_purpose": "Connect planned care with comparing coverage",
+      "animations": [
+        "appointment-page-open"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "clinic",
+        "medical-props"
+      ]
+    },
+    {
+      "id": "pharmacy-pickup",
+      "start_frame": 648,
+      "end_frame": 720,
+      "composition": "pharmacy-prescription-counter",
+      "action": "Prescription bottle arrives at collection/payment counter",
+      "motion_purpose": "Tie medication costs to a real collection moment",
+      "animations": [
+        "prescription-collection"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "pharmacy",
+        "medical-props"
+      ]
+    },
+    {
+      "id": "ppo-review",
+      "start_frame": 720,
+      "end_frame": 774,
+      "composition": "ren-clinic-bill-reaction",
+      "action": "Approved concerned Ren examines bill in clinic foreground",
+      "motion_purpose": "Show that the PPO could suit greater care needs",
+      "animations": [
+        "concerned-bill-reading"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "clinic",
+        "ren-chest-up-reaction"
+      ]
+    },
+    {
+      "id": "network-check",
+      "start_frame": 774,
+      "end_frame": 834,
+      "composition": "phone-network-search-clinic",
+      "action": "Network search and prescription coverage are checked on phone",
+      "motion_purpose": "Make plan verification a concrete action",
+      "animations": [
+        "network-and-drug-check"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "clinic"
+      ]
+    },
+    {
+      "id": "plan-limits",
+      "start_frame": 834,
+      "end_frame": 900,
+      "composition": "medical-bill-plan-detail",
+      "action": "Deductible field and verified in-network out-of-pocket limits are inspected",
+      "motion_purpose": "Distinguish annual premiums from covered-care cost exposure",
+      "animations": [
+        "bill-limit-inspection"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "clinic"
+      ]
+    },
+    {
+      "id": "hsa-timing",
+      "start_frame": 900,
+      "end_frame": 982,
+      "composition": "pharmacy-bill-and-hsa",
+      "action": "Bill arrives beside HSA jar before annual contributions accumulate",
+      "motion_purpose": "Show funding timing risk without inventing day-one balance",
+      "animations": [
+        "early-bill-hsa-arrival"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "pharmacy",
+        "medical-props"
+      ]
+    },
+    {
+      "id": "desk-review",
+      "start_frame": 982,
+      "end_frame": 1056,
+      "composition": "ren-at-desk-paper-review",
+      "action": "Ren returns to office desk; physical plan documents laid out",
+      "motion_purpose": "Return to the same personal decision",
+      "animations": [
+        "desk-review-settle"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office",
+        "ren-chest-up-reaction"
+      ]
+    },
+    {
+      "id": "deliberate-choice",
+      "start_frame": 1056,
+      "end_frame": 1146,
+      "composition": "laptop-review-trackpad",
+      "action": "Approved hand reviews network, drugs and costs on the laptop",
+      "motion_purpose": "Demonstrate checking numbers rather than repeating opening click",
+      "animations": [
+        "deliberate-plan-review"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "laptop",
+        "ren-right-hand-trackpad-click"
+      ]
+    },
+    {
+      "id": "three-questions",
+      "start_frame": 1146,
+      "end_frame": 1258,
+      "composition": "desktop-planning-worksheet",
+      "action": "Three questions gain sequential pen marks on one recurring worksheet",
+      "motion_purpose": "Bad year, real year and purpose of difference stay connected",
+      "animations": [
+        "worksheet-three-marks"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office"
+      ],
+      "timing_justification": "4.667s connected worksheet hold with three sequential marks tied to spoken questions; allows reading without flashing separate cards."
+    },
+    {
+      "id": "annual-review",
+      "start_frame": 1258,
+      "end_frame": 1338,
+      "composition": "office-review-timer",
+      "action": "Physical timer set for 40 minutes on desk, with annual-review label",
+      "motion_purpose": "Replace autopilot with a repeatable yearly habit",
+      "animations": [
+        "annual-review-timer"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office"
+      ]
+    },
+    {
+      "id": "total-cost-ending",
+      "start_frame": 1338,
+      "end_frame": 1409,
+      "composition": "completed-plan-office-desk",
+      "action": "Reviewed plan settles; takeaway stays readable in office environment",
+      "motion_purpose": "Finish on total cost, not premiums",
+      "animations": [
+        "completed-review-hold"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "full-renderer",
+        "font",
+        "office"
+      ]
+    }
+  ],
+  "audio_cues": [
+    {
+      "start": 0,
+      "end": 18.208333333333332,
+      "text": "For four years, I renewed the same health plan. One click. Same plan. Done. Then I compared my options. One plan: two thousand five hundred and twenty dollars a year in premiums. Another: just eight hundred and forty. But here's the catch. Cheaper premiums didn't automatically mean a better deal."
+    },
+    {
+      "start": 18.208333333333332,
+      "end": 24.25,
+      "text": "I asked the group chat. Alex said, \u201cPick the best.\u201d Danny said, \u201cPick the cheapest.\u201d"
+    },
+    {
+      "start": 24.25,
+      "end": 41.25,
+      "text": "If you're expecting a baby, planning surgery, seeing specialists regularly or taking expensive medication, the PPO could be much better. Check both networks, your drug coverage, the exact deductible and the out-of-pocket limits. Remember that high expenses can arrive before your HSA has much money in it."
+    },
+    {
+      "start": 41.25,
+      "end": 47.75,
+      "text": "Back at my laptop, I didn't click \u201cKeep my current plan.\u201d I checked my own numbers and made a deliberate choice."
+    },
+    {
+      "start": 47.75,
+      "end": 56.5,
+      "text": "I learned to ask: what's the bad year, what's the real year, and where would the difference go? Forty minutes once a year. That's a better habit than four seconds of autopilot."
+    },
+    {
+      "start": 56.5,
+      "end": 58.708333333333336,
+      "text": "If this was useful, stick around."
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.08,
+      "end": 2.74,
+      "text": "For four years, I renewed the same health plan."
+    },
+    {
+      "start": 3.06,
+      "end": 5.45,
+      "text": "One click. Same plan. Done."
+    },
+    {
+      "start": 5.95,
+      "end": 8.93,
+      "text": "Then I compared my options. One plan: two"
+    },
+    {
+      "start": 8.93,
+      "end": 11.11,
+      "text": "thousand five hundred and twenty dollars a year in"
+    },
+    {
+      "start": 11.11,
+      "end": 13.77,
+      "text": "premiums. Another: just eight hundred and forty."
+    },
+    {
+      "start": 13.963333333333335,
+      "end": 16.35333333333333,
+      "text": "But here's the catch. Cheaper premiums didn't"
+    },
+    {
+      "start": 16.35333333333333,
+      "end": 17.953333333333333,
+      "text": "automatically mean a better deal."
+    },
+    {
+      "start": 18.418124999999993,
+      "end": 20.848124999999985,
+      "text": "I asked the group chat. Alex said,"
+    },
+    {
+      "start": 21.18812499999999,
+      "end": 24.028124999999992,
+      "text": "\u201cPick the best.\u201d Danny said, \u201cPick the cheapest.\u201d"
+    },
+    {
+      "start": 24.347708333333344,
+      "end": 27.047708333333333,
+      "text": "If you're expecting a baby, planning surgery, seeing"
+    },
+    {
+      "start": 27.047708333333333,
+      "end": 29.76770833333336,
+      "text": "specialists regularly or taking expensive medication,"
+    },
+    {
+      "start": 30.01770833333336,
+      "end": 32.51770833333337,
+      "text": "the PPO could be much better. Check both"
+    },
+    {
+      "start": 32.51770833333337,
+      "end": 35.417708333333344,
+      "text": "networks, your drug coverage, the exact deductible"
+    },
+    {
+      "start": 35.417708333333344,
+      "end": 37.97770833333335,
+      "text": "and the out-of-pocket limits. Remember that high"
+    },
+    {
+      "start": 37.97770833333335,
+      "end": 40.937708333333326,
+      "text": "expenses can arrive before your HSA has much money in it."
+    },
+    {
+      "start": 41.410208333333344,
+      "end": 44.220208333333346,
+      "text": "Back at my laptop, I didn't click \u201cKeep my current"
+    },
+    {
+      "start": 44.220208333333346,
+      "end": 47.54020833333334,
+      "text": "plan.\u201d I checked my own numbers and made a deliberate choice."
+    },
+    {
+      "start": 47.98520833333333,
+      "end": 50.595208333333346,
+      "text": "I learned to ask: what's the bad year, what's the real"
+    },
+    {
+      "start": 50.595208333333346,
+      "end": 53.17520833333333,
+      "text": "year, and where would the difference go? Forty minutes"
+    },
+    {
+      "start": 53.17520833333333,
+      "end": 56.24520833333332,
+      "text": "once a year. That's a better habit than four seconds of autopilot."
+    },
+    {
+      "start": 56.582083333333344,
+      "end": 58.57208333333335,
+      "text": "If this was useful, stick around."
+    }
+  ],
+  "full_production_blocked": false,
+  "final": "../deliverables/Ren_Health_Short_v2_Final.mp4"
+}
