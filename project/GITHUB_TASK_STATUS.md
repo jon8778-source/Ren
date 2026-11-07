@@ -10,7 +10,10 @@ and reference hashes/settings verified. Ear-based identity/delivery review pendi
 Source detail/inspection/device limits recorded in QA.md. Full transcript SRT is
 separate from the large scene labels. Earlier files/long form/main preserved.
 No full Short rendered. STOP: explicit Revision4 prototype approval pending.
-Source publication pending; media/caches remain outside Git.
+Source checkpoint `893f2c8` pushed/fetched; adapter, preparation, manifest,
+plan and QA/voice results verified byte-identical remotely. Official gated
+resume also reproduced the exact MP4 bytes from caches. Status-only follow-up
+records verification. Media/caches remain outside Git; no merge/publication.
 
 ---
 
