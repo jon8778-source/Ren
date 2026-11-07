@@ -69,7 +69,7 @@
     "text": "Meanwhile, I made that lease payment on time, every month, with pride. Four hundred eighty-nine dollars to look successful, while skipping about seventy-seven a month that would have actually made me successful.",
     "start": 24.629,
     "end": 35.863,
-    "gen_s": 67.7
+    "gen_s": 0.0
    }
   ]
  },
@@ -82,14 +82,14 @@
     "text": "Back on that porch, Dev asked me three questions. \"What does this line mean? What would it say if you'd read the folder? And who's keeping the difference?\" The line said two percent. It should have said four. And the difference? The company keeps it.",
     "start": 0.0,
     "end": 14.176,
-    "gen_s": 77.0
+    "gen_s": 0.0
    },
    {
     "chunk": 2,
     "text": "Not because they're evil. That's just how matches work. If you don't claim it, it stays with them. I went home, opened the app on my phone, and changed two to four. It took ninety seconds. Ninety seconds, three years late.",
     "start": 14.176,
     "end": 27.042,
-    "gen_s": 66.4
+    "gen_s": 0.0
    }
   ]
  }
