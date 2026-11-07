@@ -1,3 +1,20 @@
+# Current task — Revision 6 generated artwork awaiting review, 7 November 2026
+
+Branch `codex/health-short-revision6`. Jon authorized the two proposed artwork
+assets. Generated one chest-up concerned Ren and one correctly oriented right-hand
+trackpad insert using approved references. Native transparent originals, hashes,
+reference provenance and review limitations are in
+`episodes/long1-open-enrollment/short-cinematic-v2/revision6-art-review/`.
+
+Both assets await explicit artwork approval. Actual reaction size is 941×1672,
+not the requested 2160×3840; no upscale performed. Hand is 1568×1003. Inspected
+framing, closed mouth and hand orientation; final composition/animation remains
+unverified. No TTS, video render or full-Short production. Revision 5 originals,
+audio, renderer, main and long-form preserved. Source/art checkpoint prepared;
+remote verification pending. Generated videos/caches remain outside Git.
+
+---
+
 # Current task — Revision6 asset-quality checkpoint blocked, 7 November2026
 
 Branch `codex/health-short-revision6`, based on verified Revision5 `3ccd45f`.

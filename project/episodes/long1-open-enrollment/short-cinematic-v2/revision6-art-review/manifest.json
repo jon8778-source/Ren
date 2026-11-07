@@ -1,0 +1,66 @@
+{
+  "authorization": "Jon replied Yes to generation of one chest-up reaction and one correctly oriented clicking-hand insert for artwork review.",
+  "branch": "codex/health-short-revision6",
+  "assets": [
+    {
+      "id": "ren-chest-up-reaction",
+      "file": "ren-chest-up-reaction.png",
+      "sha256": "b2107faffce8f679f59df713dffd1819c0e5d83cea52948c2800ee50464e9021",
+      "native_dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "status": "awaiting_Jon_artwork_review",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "original_generated_path": "/workspace/generated_images/exec-7bd1dbb7-395b-4da5-ac72-94b32f266152.png"
+    },
+    {
+      "id": "ren-right-hand-trackpad-click",
+      "file": "ren-right-hand-trackpad-click.png",
+      "sha256": "2728524554a5ff69f38ea16988692ecb73385e9bad2180c5d4b73970d774bef5",
+      "native_dimensions": [
+        1568,
+        1003
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "status": "awaiting_Jon_artwork_review",
+      "generator": "image_gen.imagegen",
+      "transparent_background": true,
+      "original_generated_path": "/workspace/generated_images/exec-2c38e5a6-98a8-4d3b-8cae-a2b993607ac5.png"
+    }
+  ],
+  "references": [
+    {
+      "file": "project/episodes/open-enrollment-short-01/assets/ren-approved-reference.png",
+      "sha256": "de305611b5964226191998c3e961dab90c59f1f85afc831d603f276ec7432459"
+    },
+    {
+      "file": "assets/ren_library/ren_confused.mp4",
+      "sha256": "7aff6a1e3cc652e122f674e679928a5f200948b6e8854a4d350c4d0332ed39c9"
+    },
+    {
+      "file": "project/episodes/long1-open-enrollment/short-cinematic-v2/assets/laptop-generated.png",
+      "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8"
+    }
+  ],
+  "expression_reference": "ren_confused.mp4 at 4.5 seconds",
+  "production_approved": false,
+  "new_TTS_calls": 0,
+  "new_video_renders": 0,
+  "limitations": [
+    "Requested 2160x3840 reaction master not returned by generator; actual native size 941x1672, preserved without upscale.",
+    "Identity/style and final composite suitability require owner artwork review.",
+    "No click animation or laptop alignment has yet been rendered.",
+    "White shirt interior sample RGBA 233,237,239,253: near-opaque, not mathematically 255 alpha; check over office before production."
+  ]
+}
