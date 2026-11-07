@@ -55,7 +55,7 @@ SPEC = [
     # ---- S6: what I check now
     ("S6", 0, 0, "story", "s6_today"), ("S6", 1, 1, "story", "s6_older"), ("S6", 2, 3, "ren", "s6_100k"), ("S6", 4, 4, "graphic", "s6_more"), ("S6", 5, 5, "story", "s6_priya_in"),
     ("S6", 6, 6, "graphic", "s6_priya_200"), ("S6", 7, 7, "story", "s6_priya_hike"), ("S6", 8, 8, "story", "s6_priya_pack"), ("S6", 9, 9, "graphic", "s6_priya_max"),
-    ("S6", 10, 10, "story", "s6_gary_in"), ("S6", 11, 11, "graphic", "s6_gary_boat"), ("S6", 12, 13, "ren", "s6_everyone"), ("S6", 14, 14, "ren", "s6_first_money"),
+    ("S6", 10, 10, "story", "s6_gary_in"), ("S6", 11, 11, "graphic", "s6_gary_boat"), ("S6", 12, 12, "ren", "s6_everyone_a"), ("S6", 13, 13, "ren", "s6_everyone_b"), ("S6", 14, 14, "ren", "s6_first_money"),
     ("S6", 15, 16, "ren", "s6_check_now"), ("S6", 17, 17, "graphic", "s6_c1"), ("S6", 18, 18, "ren", "s6_plan_docs"), ("S6", 19, 19, "graphic", "s6_c2"),
     ("S6", 20, 21, "graphic", "s6_vest_bar"), ("S6", 22, 22, "graphic", "s6_vest_open"), ("S6", 23, 23, "graphic", "s6_c3"), ("S6", 24, 24, "graphic", "s6_lim_a"),
     ("S6", 25, 25, "graphic", "s6_lim_b"), ("S6", 26, 26, "graphic", "s6_lim_c"), ("S6", 27, 27, "ren", "s6_irs"), ("S6", 28, 28, "ren", "s6_check_official"),
@@ -383,7 +383,15 @@ class Rough(Rev):
         return f
 
     def s_s4_phone_in(self, t, d, b):
-        f = self._phone_big(t, d, b, False, cx=640)
+        """He opens the retirement app: the phone slides in showing the 401(k) screen at 2%."""
+        f = self.toggle_phone(t, d, b, 0.0)
+        dx = int(380 * (1 - ease(t / 0.45)))
+        if dx > 0:
+            sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            sh.paste(f.crop((0, 0, W - dx, H)), (dx, 0))
+            bg = self.blur("OFFICE")
+            bg.alpha_composite(sh)
+            return bg
         return f
 
     def toggle_phone(self, t, d, b, v):
@@ -641,8 +649,11 @@ class Rough(Rev):
         card_fit(f, [([("“Sell the boat.”", NAVY)], 0.1), ([("Uncle Gary's retirement plan", MUTED)], 0.1)], t, b, 640, 330, max_w=560, base_px=46)
         return f
 
-    def s_s6_everyone(self, t, d, b):
-        return self.pres("FP", t, d, b, swap=(0.5, "R1"))
+    def s_s6_everyone_a(self, t, d, b):
+        return self.pres("FP", t, d, b)
+
+    def s_s6_everyone_b(self, t, d, b):
+        return self.pres("R1", t, d, b)
 
     def s_s6_first_money(self, t, d, b):
         return self.pres("R4", t, d, b, card=[([("The first money", NAVY)], 0.15), ([("you're owed", GREEN)], 0.15)], cy=345, px=44)

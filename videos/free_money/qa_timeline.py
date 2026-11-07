@@ -98,7 +98,8 @@ for s in shots[1:]:
 check("6b no boundary shows the previous shot for an extra frame", not soft, str(soft))
 for p in peels:
     tail = [round(float(np.abs(F[k] - F[p]).mean()), 1) for k in range(p - 2, p + 3)]
-    check(f"6c page peel at frame {p} hands over cleanly", np.abs(F[p] - F[p + 1]).mean() < 3 and np.abs(F[p - 1] - F[p]).mean() < 25, f"diffs around the handover {tail}")
+    # a stray frame shows as a spike (rev03: 45 and 44 on both sides of it); normal motion after the handover (a slow push, a tag fading in) stays well below 12
+    check(f"6c page peel at frame {p} hands over cleanly (no spike)", np.abs(F[p] - F[p + 1]).mean() < 12 and np.abs(F[p - 1] - F[p]).mean() < 25, f"diffs around the handover {tail}")
 # 7. flashes
 lum = F.mean((1, 2))
 flash = [k for k in range(1, len(F) - 1) if abs(lum[k] - lum[k - 1]) > 12 and abs(lum[k] - lum[k + 1]) > 12 and abs(lum[k + 1] - lum[k - 1]) < 6]
