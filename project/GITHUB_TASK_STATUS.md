@@ -17,7 +17,9 @@ character artwork, no publication, long-form/originals/main unchanged.
 Full source, approvals, audio/asset hashes, reports and reproducible commands:
 `episodes/long1-open-enrollment/short-cinematic-v2/full-production/`.
 MP4/captions/contact sheet/report ZIP are separate ignored deliverables. Final
-source/QA checkpoint prepared; remote verification and download delivery pending.
+source/QA checkpoint `ac32530` pushed/fetched; all14 changed source/report files
+byte-verified remotely. Hosted MP4 and report ZIP downloaded back and SHA-verified
+for delivery. Links are temporary; originals remain in the execution workspace.
 No further rendering or production approval gate remains for this authorized task.
 Videos/caches stay outside Git; no merge or YouTube upload.
 
