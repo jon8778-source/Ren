@@ -16,7 +16,8 @@ Original Rev5 MP4/source/layout, long-form and main preserved. Actual Rev6 proto
 approval pending; full60s blocked. Source/reports in
 `episodes/long1-open-enrollment/short-cinematic-v2/revision-06/`; isolated adapters
 are render_revision6.py, prepare_revision6.py and validate_revision6.py.
-Source checkpoint prepared; remote verification pending. MP4, screenshots and
+Source checkpoint `df5b6ca` pushed/fetched; all 11 changed source/report files
+verified byte-identical remotely. MP4, screenshots and
 caches remain outside Git. No merge or YouTube publication.
 
 ---
