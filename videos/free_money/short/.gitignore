@@ -4,3 +4,6 @@ prototype_seg*
 segments.txt
 *.mp4
 still_*.png
+final*.wav
+final_seg*
+prototype.audio.wav
