@@ -1,0 +1,17 @@
+{
+  "by": "Jon",
+  "evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype.",
+  "scope": "The two listed artwork files only; not approval of Revision 6 MP4 or full Short.",
+  "assets": [
+    {
+      "id": "ren-chest-up-reaction",
+      "file": "ren-chest-up-reaction.png",
+      "sha256": "b2107faffce8f679f59df713dffd1819c0e5d83cea52948c2800ee50464e9021"
+    },
+    {
+      "id": "ren-right-hand-trackpad-click",
+      "file": "ren-right-hand-trackpad-click.png",
+      "sha256": "2728524554a5ff69f38ea16988692ecb73385e9bad2180c5d4b73970d774bef5"
+    }
+  ]
+}

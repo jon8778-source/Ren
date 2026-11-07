@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "title": "Health Insurance Short \u2014 Revision 6 targeted prototype",
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "frames": 360,
+  "full_bleed": true,
+  "permanent_border": false,
+  "asset_report": "ASSETS_AND_STORYBOARD.md",
+  "layout_evidence": "layout.json",
+  "prototype": "../deliverables/Ren_Health_Short_v2_15s_Prototype_rev06.mp4",
+  "prototype_report": "../deliverables/Ren_Health_Short_v2_15s_Prototype_rev06.qa.json",
+  "assets": [
+    {
+      "id": "script",
+      "path": "../script-prototype.txt",
+      "kind": "script",
+      "sha256": "e2ddc99e03773351a1baf47328d2f234b82fa6ad15cfb473a021d5869c2e9a72",
+      "status": "approved",
+      "approval_evidence": "Existing approved opening narration, reused verbatim through catch; current request authorizes visual prototype"
+    },
+    {
+      "id": "source-short",
+      "path": "../../portrait-short-01/deliverables/Ren_Health_Plan_Portrait_1min.mp4",
+      "kind": "audio",
+      "sha256": "a3bc18e231f3c4d40f84d5338048ec1b1f788ee615ef797896b9ab834092c2a9",
+      "status": "approved",
+      "approval_evidence": "Exact existing Short specified by Jon, preserved; Qwen provenance in opening-hook-v1/manifest.json"
+    },
+    {
+      "id": "office",
+      "path": "../../../../prototypes/coffee-minute-v3/assets/office.png",
+      "kind": "environment",
+      "sha256": "b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36",
+      "status": "approved",
+      "approval_evidence": "Approved coffee v3 original; exact hash in artwork/manifest.json"
+    },
+    {
+      "id": "laptop",
+      "path": "../assets/laptop-generated.png",
+      "kind": "prop",
+      "sha256": "c2d7ec618184f0135a306fa6c7b66574f6d2732388109a3b3d52d56d4c3792d8",
+      "status": "approved",
+      "approval_evidence": "Jon explicitly requested a generated laptop in the revised prototype; artwork is for prototype review, not full-film design approval"
+    },
+    {
+      "id": "voice-config",
+      "path": "../voice-configuration.json",
+      "kind": "configuration",
+      "sha256": "2d8653dc4603c072b912d1ea12b0bdfa90758b85824b8eebc9b7c6984e34498d",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "native-matte",
+      "path": "../../render.py",
+      "kind": "renderer",
+      "sha256": "a957d81ba5520b743443684f7f7d8954445ea80a07e0adc27d75d8863661ac16",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "calculations",
+      "path": "../../calculations.py",
+      "kind": "renderer",
+      "sha256": "8e2b5ac72e36f292424f4bb33a6364c48a8a78f28c2081027dafae7fa9161b31",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "assumptions",
+      "path": "../../assumptions.json",
+      "kind": "configuration",
+      "sha256": "d2d8eb860757b439890424259d86ab87813d4c07a040e1b56c84d1d2240b73e6",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "parent-timing",
+      "path": "../../audio-timing.json",
+      "kind": "configuration",
+      "sha256": "cb7c79679c2c2286dc7cb5e9613137233132d9c155a9dc36fffde2327f0a8cd2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "voice-provenance",
+      "path": "../../opening-hook-v1/manifest.json",
+      "kind": "configuration",
+      "sha256": "f7a85240dcf2e0c9a891ef89f434097995a3637a0bb058964dfabff1fef6d8e2",
+      "status": "approved",
+      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
+    },
+    {
+      "id": "font",
+      "path": "../../../../remotion/public/fonts/fredoka-latin-600-normal.woff2",
+      "kind": "configuration",
+      "sha256": "7046069756572f2d090fd5ac943b24d1958f2fbb259cd6b99872758d24dbe369",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-render",
+      "path": "../../../../prototypes/coffee-minute-v3/render.py",
+      "kind": "renderer",
+      "sha256": "4e7973365ed8a0e5686eb67e81e7616a4e41871220270c6f75133dca616d3103",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "v3-unpack",
+      "path": "../../../../prototypes/coffee-minute-v3/unpack_artwork.py",
+      "kind": "renderer",
+      "sha256": "bda26d01aca768eaeed6d7ca3fbc857bf2793c5b278f79e5f5c75108f68b553f",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "qa-gate",
+      "path": "../../../../pipeline/shorts_standards.py",
+      "kind": "renderer",
+      "sha256": "20d4ac3c459bb11e5143028fc64fbac1e5ebc36f6559d7b83d265ffe4f95fa97",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-ref",
+      "path": "../../../../../Audio/ren_reference.wav",
+      "kind": "configuration",
+      "sha256": "78de4bd45743554f15ce32d8db39deaf1c0b1a9a5cd69fabb6d637dff323ed1c",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "voice-text",
+      "path": "../../../../../Audio/ren_reference.txt",
+      "kind": "configuration",
+      "sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
+      "status": "approved",
+      "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "render-components",
+      "path": "../render.py",
+      "kind": "renderer",
+      "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision5 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "render-r6",
+      "path": "../render_revision6.py",
+      "kind": "renderer",
+      "sha256": "b347966f49895371d2cefcf2d69390fa20b29b6cd3ab88866405d01b93c82ca2",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "prepare-r6",
+      "path": "../prepare_revision6.py",
+      "kind": "renderer",
+      "sha256": "f0ca57202347d6fa9b71b0f57d83b443eb1b49830686bdce23b1c6fbdd6abd52",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "r5-components",
+      "path": "../render_revision5.py",
+      "kind": "renderer",
+      "sha256": "28cb74cc6eaadb600d30cbe3a85649dac19e44c458d4e1c30437997663d9112e",
+      "status": "approved",
+      "approval_evidence": "Jon authorized the targeted Revision 6 implementation; imported existing v3 components, not a replacement pipeline."
+    },
+    {
+      "id": "artwork-approval",
+      "path": "artwork-approval.json",
+      "kind": "configuration",
+      "sha256": "48e08c367034cd935466336360cd91d3cc50d25537c4e80498bfce1f1f57e6a9",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "ren-chest-up-reaction",
+      "path": "../revision6-art-review/ren-chest-up-reaction.png",
+      "kind": "character",
+      "sha256": "b2107faffce8f679f59df713dffd1819c0e5d83cea52948c2800ee50464e9021",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "ren-right-hand-trackpad-click",
+      "path": "../revision6-art-review/ren-right-hand-trackpad-click.png",
+      "kind": "character",
+      "sha256": "2728524554a5ff69f38ea16988692ecb73385e9bad2180c5d4b73970d774bef5",
+      "status": "approved",
+      "approval_evidence": "User replied \"Approve\" to the two generated artwork assets and request for approval to use them in the 15-second Revision 6 prototype."
+    },
+    {
+      "id": "revision5-audio",
+      "path": "../deliverables/Ren_Health_Short_v2_15s_Prototype_Rev05.mp4",
+      "kind": "audio",
+      "sha256": "8a78f5ef7d36faafa9c9caa641ef307a152aca1d3f2db7a3049881b626eed7d7",
+      "status": "approved",
+      "approval_evidence": "Jon requires existing approved Qwen narration, unchanged; copy original Revision 5 AAC packets."
+    },
+    {
+      "id": "standards",
+      "path": "../../../../pipeline/shorts_standards.py",
+      "kind": "renderer",
+      "sha256": "20d4ac3c459bb11e5143028fc64fbac1e5ebc36f6559d7b83d265ffe4f95fa97",
+      "status": "approved",
+      "approval_evidence": "Existing mandatory Shorts preflight, gate and QA layer, unchanged."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "renewal-action",
+      "start_frame": 0,
+      "end_frame": 48,
+      "composition": "renewal-button-and-trackpad-closeup",
+      "action": "Palm-down right hand presses the trackpad at 0.625s; screen confirms renewal",
+      "motion_purpose": "Immediate focal button and visible hand action",
+      "animations": [
+        "right-trackpad-press"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font",
+        "laptop",
+        "ren-right-hand-trackpad-click"
+      ]
+    },
+    {
+      "id": "four-renewals",
+      "start_frame": 48,
+      "end_frame": 120,
+      "composition": "physical-calendar-annual-confirmations",
+      "action": "Four annual pages reveal confirmed choices, then hold Year 4",
+      "motion_purpose": "Make four-year repetition visible without a paragraph",
+      "animations": [
+        "four-confirmed-page-turns"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    },
+    {
+      "id": "ren-reaction",
+      "start_frame": 120,
+      "end_frame": 216,
+      "composition": "genuine-chest-up-concerned-reaction",
+      "action": "Cut to approved concerned expression, chest-up, clear foreground",
+      "motion_purpose": "A locked human reaction hold lets the comparison register",
+      "animations": [
+        "approved-concerned-reaction-hold"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font",
+        "office",
+        "ren-chest-up-reaction"
+      ]
+    },
+    {
+      "id": "price-a",
+      "start_frame": 216,
+      "end_frame": 276,
+      "composition": "folded-premium-document-closeup",
+      "action": "Plan A document settles; large fixed premium underlined",
+      "motion_purpose": "Reveal $2,520 first and hold before Plan B",
+      "animations": [
+        "premium-a-place-and-mark"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    },
+    {
+      "id": "price-comparison",
+      "start_frame": 276,
+      "end_frame": 360,
+      "composition": "unfolded-premium-document-closeup",
+      "action": "Physical fold opens to $840; care-cost magnifier arrives",
+      "motion_purpose": "Sequential premium contrast followed by incomplete-total-cost cue",
+      "animations": [
+        "premium-b-unfold-and-inspect"
+      ],
+      "kind": "action",
+      "environment_fullscreen": true,
+      "assets": [
+        "render-r6",
+        "r5-components",
+        "font"
+      ]
+    }
+  ],
+  "audio_cues": [
+    {
+      "start": 0.08,
+      "end": 2.74,
+      "text": "For four years, I renewed the same health plan."
+    },
+    {
+      "start": 3.06,
+      "end": 5.45,
+      "text": "One click. Same plan. Done."
+    },
+    {
+      "start": 5.95,
+      "end": 7.36,
+      "text": "Then I compared my options."
+    },
+    {
+      "start": 7.79,
+      "end": 11.69,
+      "text": "One plan: $2,520 a year in premiums."
+    },
+    {
+      "start": 11.69,
+      "end": 13.77,
+      "text": "Another: just $840."
+    },
+    {
+      "start": 13.963333,
+      "end": 14.923333,
+      "text": "But here's the catch."
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.08,
+      "end": 2.74,
+      "text": "For four years, I renewed the same health plan."
+    },
+    {
+      "start": 3.06,
+      "end": 5.45,
+      "text": "One click. Same plan. Done."
+    },
+    {
+      "start": 5.95,
+      "end": 7.36,
+      "text": "Then I compared my options."
+    },
+    {
+      "start": 7.79,
+      "end": 11.69,
+      "text": "One plan: $2,520 a year in premiums."
+    },
+    {
+      "start": 11.69,
+      "end": 13.77,
+      "text": "Another: just $840."
+    },
+    {
+      "start": 13.963333,
+      "end": 14.923333,
+      "text": "But here's the catch."
+    }
+  ],
+  "full_production_blocked": "STOP after Revision 6: explicit approval of the actual 15-second prototype is required; only 360 frames implemented."
+}

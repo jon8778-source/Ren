@@ -1,0 +1,50 @@
+{
+  "video_sha256": "d9954b4d2518a120efc8b314e686e7fa11e5d5209d3efea0130187e870b5abcb",
+  "duration": 15,
+  "frames": 360,
+  "original_revision5_preserved": true,
+  "aac_packets_and_timestamps_identical": true,
+  "aac_packet_count": 705,
+  "decoded_pcm_identical": true,
+  "decoded_pcm_sha256": "9be97e25703b3075d56c49512fbc9c2a5191c407bac560b9e566743674adb37f",
+  "audio_peak_dbfs": -2.004855981025761,
+  "new_voice_calls": 0,
+  "new_artwork_generation_calls_this_revision": 0,
+  "opening_click_time_seconds": 0.625,
+  "annual_confirmation_times_seconds": [
+    2,
+    2.58,
+    3.16,
+    3.74
+  ],
+  "reaction_interval": [
+    5,
+    9
+  ],
+  "reaction_native_source": [
+    941,
+    1672
+  ],
+  "reaction_composite_width": 900,
+  "approximate_face_width_measurement": {
+    "native_x_bounds": [
+      258,
+      680
+    ],
+    "output_pixels": 403.6131774707758,
+    "percent_canvas": 37.37159050655332,
+    "method": "Manual facial-oval horizontal bounds checked against encoded close-up; approximate, not automated face recognition"
+  },
+  "plan_a_first_visible": 9.0,
+  "plan_b_first_visible": 11.916666666666666,
+  "premiums_only_first_visible": 11.916666666666666,
+  "care_cost_first_visible": 13.875,
+  "review_evidence": "Three native screenshots, six all-frame sequential sheets, three 4fps phone-sized sequences and native face/hand/shirt crops.",
+  "listening_review_performed": false,
+  "physical_android_test_performed": false,
+  "motion_playback_review_performed": false,
+  "limitations": [
+    "Frame-sequence review and all-frame checks do not equal real-time playback/listening.",
+    "Reaction uses the single approved static expression with a deliberate four-second hold; no new facial rig or lip sync."
+  ]
+}

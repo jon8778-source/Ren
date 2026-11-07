@@ -1,0 +1,404 @@
+{
+  "scenes": {
+    "renewal-action": [
+      {
+        "text": "HEALTH PLAN",
+        "bbox": [
+          120,
+          405,
+          466,
+          442
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Annual renewal",
+        "bbox": [
+          120,
+          493,
+          560,
+          540
+        ],
+        "font_px": 62,
+        "role": "text",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Keep current plan",
+        "bbox": [
+          145,
+          682,
+          626,
+          738
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 0.0,
+        "end": 0.625
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 0.0,
+        "end": 2.0
+      },
+      {
+        "text": "Renewal confirmed",
+        "bbox": [
+          145,
+          682,
+          660,
+          727
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 0.625,
+        "end": 2.0
+      }
+    ],
+    "four-renewals": [
+      {
+        "text": "ANNUAL RENEWAL",
+        "bbox": [
+          155,
+          427,
+          692,
+          471
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 2.0,
+        "end": 5.0
+      },
+      {
+        "text": "YEAR 1",
+        "bbox": [
+          165,
+          655,
+          580,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 2.0,
+        "end": 2.5833333333333335
+      },
+      {
+        "text": "CONFIRMED",
+        "bbox": [
+          165,
+          902,
+          591,
+          957
+        ],
+        "font_px": 76,
+        "role": "text",
+        "start": 2.0,
+        "end": 5.0
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 2.0,
+        "end": 2.5
+      },
+      {
+        "text": "YEAR 2",
+        "bbox": [
+          165,
+          655,
+          605,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 2.5833333333333335,
+        "end": 3.1666666666666665
+      },
+      {
+        "text": "YEAR 3",
+        "bbox": [
+          165,
+          655,
+          605,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 3.1666666666666665,
+        "end": 3.75
+      },
+      {
+        "text": "YEAR 4",
+        "bbox": [
+          165,
+          655,
+          602,
+          750
+        ],
+        "font_px": 130,
+        "role": "text",
+        "start": 3.75,
+        "end": 5.0
+      }
+    ],
+    "ren-reaction": [
+      {
+        "text": "I finally\ncompared.",
+        "bbox": [
+          100,
+          283,
+          513,
+          462
+        ],
+        "font_px": 88,
+        "role": "text",
+        "start": 5.0,
+        "end": 9.0
+      }
+    ],
+    "price-a": [
+      {
+        "text": "ILLUSTRATIVE",
+        "bbox": [
+          140,
+          274,
+          444,
+          364
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "ANNUAL PREMIUMS",
+        "bbox": [
+          140,
+          340,
+          615,
+          432
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "PLAN A",
+        "bbox": [
+          140,
+          447,
+          349,
+          545
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          140,
+          534,
+          656,
+          743
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          140,
+          711,
+          354,
+          808
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          150,
+          1031,
+          389,
+          1137
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 9.0,
+        "end": 11.5
+      }
+    ],
+    "price-comparison": [
+      {
+        "text": "ILLUSTRATIVE",
+        "bbox": [
+          140,
+          274,
+          444,
+          309
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "ANNUAL PREMIUMS",
+        "bbox": [
+          140,
+          340,
+          615,
+          377
+        ],
+        "font_px": 52,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "PLAN A",
+        "bbox": [
+          140,
+          447,
+          349,
+          490
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          140,
+          534,
+          656,
+          688
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          140,
+          711,
+          354,
+          1138
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          150,
+          1031,
+          389,
+          1082
+        ],
+        "font_px": 70,
+        "role": "text",
+        "start": 11.5,
+        "end": 11.583333333333334
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          140,
+          837,
+          345,
+          880
+        ],
+        "font_px": 60,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "$840",
+        "bbox": [
+          140,
+          924,
+          517,
+          1068
+        ],
+        "font_px": 178,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "Premiums only",
+        "bbox": [
+          140,
+          1225,
+          521,
+          1281
+        ],
+        "font_px": 58,
+        "role": "text",
+        "start": 11.916666666666666,
+        "end": 15.0
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          95,
+          1480,
+          510,
+          1552
+        ],
+        "font_px": 36,
+        "role": "disclaimer",
+        "start": 13.0,
+        "end": 15.0
+      },
+      {
+        "text": "Care costs?",
+        "bbox": [
+          140,
+          1325,
+          431,
+          1366
+        ],
+        "font_px": 56,
+        "role": "text",
+        "start": 13.875,
+        "end": 15.0
+      }
+    ]
+  }
+}

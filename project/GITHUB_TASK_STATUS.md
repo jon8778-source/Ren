@@ -1,3 +1,26 @@
+# Current task — Revision 6 prototype rendered, awaiting approval, 7 November 2026
+
+Branch `codex/health-short-revision6`. Jon approved the two artwork assets; approval
+is recorded against exact PNG hashes. Implemented only the targeted 15s Revision 6:
+click at 0.625s, four annual confirmations, genuine chest-up concerned reaction,
+sequential $2,520/$840 illustrative annual premiums and care-cost cue.
+
+15.000s / 1080×1920 / 24fps / H.264-AAC / 360 frames. Mandatory technical QA passes
+with no errors/warnings; all five encoded shots validated. AAC packets/timestamps
+and decoded PCM identical to Rev5; no new voice or artwork generation. Encoded
+screenshots/frame sequences and native detail crops inspected; real-time playback,
+ear-based listening and physical Android test unverified. Reaction is a deliberate
+4s hold of the approved expression, not a new facial animation rig.
+
+Original Rev5 MP4/source/layout, long-form and main preserved. Actual Rev6 prototype
+approval pending; full60s blocked. Source/reports in
+`episodes/long1-open-enrollment/short-cinematic-v2/revision-06/`; isolated adapters
+are render_revision6.py, prepare_revision6.py and validate_revision6.py.
+Source checkpoint prepared; remote verification pending. MP4, screenshots and
+caches remain outside Git. No merge or YouTube publication.
+
+---
+
 # Current task — Revision 6 generated artwork awaiting review, 7 November 2026
 
 Branch `codex/health-short-revision6`. Jon authorized the two proposed artwork
