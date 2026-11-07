@@ -383,20 +383,12 @@ class Rough(Rev):
         return f
 
     def s_s4_phone_in(self, t, d, b):
-        """He opens the retirement app: the phone slides in showing the 401(k) screen at 2%."""
-        f = self.toggle_phone(t, d, b, 0.0)
-        dx = int(380 * (1 - ease(t / 0.45)))
-        if dx > 0:
-            sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-            sh.paste(f.crop((0, 0, W - dx, H)), (dx, 0))
-            bg = self.blur("OFFICE")
-            bg.alpha_composite(sh)
-            return bg
-        return f
+        """He opens the retirement app: only the phone slides in (the background stays put), showing the 401(k) screen at 2%."""
+        return self.toggle_phone(t, d, b, 0.0, cx=640 + int(420 * (1 - ease(t / 0.45))))
 
-    def toggle_phone(self, t, d, b, v):
+    def toggle_phone(self, t, d, b, v, cx=640):
         f = self.blur("OFFICE")
-        cx, top, ph, pw = 640, 40, 650, 340
+        top, ph, pw = 40, 650, 340
         lay = layer()
         dr = ImageDraw.Draw(lay)
         dr.rounded_rectangle((cx - pw / 2 + 6, top + 12, cx + pw / 2 + 6, top + ph + 12), 52, fill=(19, 35, 63, 60))
@@ -416,7 +408,8 @@ class Rough(Rev):
         dr.text((tx0, ty + 78), "2%", font=font(28, 600), fill=(*MUTED, 255))
         dr.text((tx0 + tw - 40, ty + 78), "4%", font=font(28, 600), fill=(*MUTED, 255))
         f.alpha_composite(lay)
-        b.text.append((cx - pw / 2, top, cx + pw / 2, top + ph, "phone"))
+        if cx == 640:
+            b.text.append((cx - pw / 2, top, cx + pw / 2, top + ph, "phone"))
         return f
 
     def s_s4_toggle(self, t, d, b):

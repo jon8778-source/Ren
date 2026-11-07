@@ -85,7 +85,9 @@ check("5b no two-frame inserts", not aabb, str(aabb))
 starts = {fr(s["start"]) for s in shots[1:]}
 peels = [fr(t) for t in rep.get("peel_starts", [next(s["start"] for s in shots if s["name"] == "desk_salary")])]
 in_peel = lambda k: any(p - round(0.7 * FPS) <= k <= p + 1 for p in peels)
-hard = [k + 1 for k in range(len(D)) if D[k] > 12 and not in_peel(k + 1)]       # frame index where the new picture first shows
+# a cut is an isolated spike in frame-to-frame difference; a slide or push is sustained motion (several similar diffs in a row)
+spike = lambda k: D[k] > 12 and D[k] > 1.8 * (D[k - 1] if k > 0 else 0) and D[k] > 1.8 * (D[k + 1] if k + 1 < len(D) else 0)
+hard = [k + 1 for k in range(len(D)) if spike(k) and not in_peel(k + 1)]       # frame index where the new picture first shows
 stray = [k for k in hard if k not in starts]
 check("6a every hard cut lands on a shot start (none late/early)", not stray, f"stray cuts at frames {stray}")
 soft = []                                              # boundaries that should be cuts but show the previous shot for an extra frame
