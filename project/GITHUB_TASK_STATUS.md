@@ -1,3 +1,19 @@
+# Current task — Revision4 story prototype, 7 November2026
+
+Branch `codex/health-short-cinematic-v2`. Jon explicitly declined Revision3 for
+full production; authorized only one targeted15s iteration. New adapter reuses
+v3 compositor/artwork: button+actual hand, four annual pages, waist-up closed-mouth
+reaction, large unfolding premium comparison. No new artwork/voice requests.
+15s/1080×1920/24fps/H.264/AAC,360frames,five shots. Technical QA passes. AAC/PCM
+identical to Revision3; signal matches saved Qwen-generated WAV(correlation0.999456)
+and reference hashes/settings verified. Ear-based identity/delivery review pending.
+Source detail/inspection/device limits recorded in QA.md. Full transcript SRT is
+separate from the large scene labels. Earlier files/long form/main preserved.
+No full Short rendered. STOP: explicit Revision4 prototype approval pending.
+Source publication pending; media/caches remain outside Git.
+
+---
+
 # Current task — simplified office prototype Revision03, 7 November 2026
 
 Branch `codex/health-short-cinematic-v2`. Jon requested the plain right-hand

@@ -1,0 +1,456 @@
+{
+  "scenes": {
+    "renewal-office": [
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          90,
+          1498,
+          436,
+          1559
+        ],
+        "font_px": 30,
+        "role": "disclaimer",
+        "start": 0.0,
+        "end": 2.5
+      },
+      {
+        "text": "For four years, I\nrenewed the same\nhealth plan.",
+        "bbox": [
+          505,
+          661,
+          848,
+          800
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 0.08333333333333333,
+        "end": 2.75
+      }
+    ],
+    "renewal-close": [
+      {
+        "text": "HEALTH PLAN",
+        "bbox": [
+          165,
+          578,
+          458,
+          610
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 2.75,
+        "end": 5.75
+      },
+      {
+        "text": "Annual renewal",
+        "bbox": [
+          165,
+          642,
+          555,
+          684
+        ],
+        "font_px": 55,
+        "role": "text",
+        "start": 2.75,
+        "end": 5.75
+      },
+      {
+        "text": "Same plan. Again.",
+        "bbox": [
+          165,
+          714,
+          513,
+          756
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 2.75,
+        "end": 5.75
+      },
+      {
+        "text": "Keep current plan",
+        "bbox": [
+          190,
+          803,
+          542,
+          845
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 2.75,
+        "end": 5.75
+      },
+      {
+        "text": "One click. Same plan. Done.",
+        "bbox": [
+          90,
+          1376,
+          603,
+          1415
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 3.0833333333333335,
+        "end": 5.458333333333333
+      },
+      {
+        "text": "RENEWED  1/4",
+        "bbox": [
+          165,
+          901,
+          458,
+          936
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 3.6666666666666665,
+        "end": 4.041666666666667
+      },
+      {
+        "text": "RENEWED  2/4",
+        "bbox": [
+          165,
+          901,
+          466,
+          936
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 4.041666666666667,
+        "end": 4.375
+      },
+      {
+        "text": "RENEWED  3/4",
+        "bbox": [
+          165,
+          901,
+          466,
+          936
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 4.375,
+        "end": 4.75
+      },
+      {
+        "text": "RENEWED  4/4",
+        "bbox": [
+          165,
+          901,
+          465,
+          936
+        ],
+        "font_px": 44,
+        "role": "text",
+        "start": 4.75,
+        "end": 5.75
+      }
+    ],
+    "documents-arrive": [
+      {
+        "text": "PLAN A",
+        "bbox": [
+          118,
+          492,
+          264,
+          587
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "PREMIUM",
+        "bbox": [
+          118,
+          572,
+          716,
+          807
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          118,
+          639,
+          307,
+          761
+        ],
+        "font_px": 65,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          118,
+          734,
+          694,
+          971
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "PLAN B",
+        "bbox": [
+          533,
+          622,
+          676,
+          727
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "$840",
+        "bbox": [
+          533,
+          769,
+          671,
+          897
+        ],
+        "font_px": 65,
+        "role": "text",
+        "start": 5.75,
+        "end": 8.5
+      },
+      {
+        "text": "Then I compared my options.",
+        "bbox": [
+          90,
+          1376,
+          629,
+          1416
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 5.958333333333333,
+        "end": 7.375
+      },
+      {
+        "text": "One plan: $2,520 a year in premiums.",
+        "bbox": [
+          90,
+          1376,
+          778,
+          1416
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 7.791666666666667,
+        "end": 8.5
+      }
+    ],
+    "premium-close": [
+      {
+        "text": "PLAN A",
+        "bbox": [
+          153,
+          433,
+          379,
+          481
+        ],
+        "font_px": 65,
+        "role": "text",
+        "start": 8.5,
+        "end": 11.5
+      },
+      {
+        "text": "PREMIUM",
+        "bbox": [
+          153,
+          507,
+          336,
+          537
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 8.5,
+        "end": 11.5
+      },
+      {
+        "text": "$2,520",
+        "bbox": [
+          153,
+          582,
+          446,
+          671
+        ],
+        "font_px": 101,
+        "role": "text",
+        "start": 8.5,
+        "end": 11.5
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          153,
+          709,
+          314,
+          741
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 8.5,
+        "end": 11.5
+      },
+      {
+        "text": "Illustrative premiums",
+        "bbox": [
+          155,
+          1111,
+          553,
+          1150
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 8.5,
+        "end": 11.5
+      },
+      {
+        "text": "One plan: $2,520 a year in premiums.",
+        "bbox": [
+          90,
+          1376,
+          778,
+          1416
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 8.5,
+        "end": 11.5
+      }
+    ],
+    "reaction-office": [
+      {
+        "text": "PLAN B",
+        "bbox": [
+          533,
+          847,
+          676,
+          877
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "PREMIUM",
+        "bbox": [
+          533,
+          927,
+          716,
+          957
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "$840",
+        "bbox": [
+          533,
+          994,
+          671,
+          1047
+        ],
+        "font_px": 65,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "per year",
+        "bbox": [
+          533,
+          1089,
+          694,
+          1121
+        ],
+        "font_px": 42,
+        "role": "text",
+        "start": 11.5,
+        "end": 15.0
+      },
+      {
+        "text": "One plan: $2,520 a\nyear in premiums.",
+        "bbox": [
+          505,
+          581,
+          850,
+          671
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 11.5,
+        "end": 11.708333333333334
+      },
+      {
+        "text": "Another: just $840.",
+        "bbox": [
+          505,
+          580,
+          859,
+          620
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 11.708333333333334,
+        "end": 13.791666666666666
+      },
+      {
+        "text": "Educational content only,\nnot financial advice.",
+        "bbox": [
+          90,
+          1498,
+          436,
+          1559
+        ],
+        "font_px": 30,
+        "role": "disclaimer",
+        "start": 13.0,
+        "end": 15.0
+      },
+      {
+        "text": "Total cost?",
+        "bbox": [
+          535,
+          1260,
+          774,
+          1295
+        ],
+        "font_px": 48,
+        "role": "text",
+        "start": 13.875,
+        "end": 15.0
+      },
+      {
+        "text": "But here's the\ncatch.",
+        "bbox": [
+          505,
+          581,
+          763,
+          661
+        ],
+        "font_px": 42,
+        "role": "caption",
+        "start": 14.0,
+        "end": 14.958333333333334
+      }
+    ]
+  }
+}

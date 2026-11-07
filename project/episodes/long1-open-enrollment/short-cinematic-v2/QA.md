@@ -1,33 +1,43 @@
-# Revision03 prototype QA — approval pending
+# Revision4 prototype QA — approval pending
 
 15.000s,1080×1920,9:16,24fps,H.264/yuv420p,AAC48kHz mono,360frames.
+Five shots:84/48/72/72/84frames. No full Short or long film rendered.
 
-Owner-requested correction: both Ren shots use the uncluttered right side of the
-approved office, source crop(1040,0,1569,941). No original desk/laptop or foreground
-desk/laptop appears in either presenter shot. Ren remains enlarged540×1080 at
-(5,400), with consistent framing. A subtle contact shadow grounds him on the
-existing floor. Office captions are to his right, clearing his full body; Plan B
-is a single paper pinned to the wall. No new art or voice generation.
+Changes requested by Jon:
+- Open on the renewal button; actual approved Ren hand approaches/presses the
+  trackpad at spoken “click”, followed by four annual page changes.
+- Waist-up reaction replaces full-body presenter views. The actual closed-mouth
+  confused gesture changes expression without a repeated loop or invented face.
+- One unfolding comparison document holds much larger prices:158px. Other story
+  labels48–130px, disclaimer36px. No small burnt-in caption boxes; separate SRT.
+- Wood/object continuity replaces the generic green desktop. Right-hand office
+  crop remains behind Ren, with foreground documents motivating the reaction.
 
-The generated laptop remains only in the separate2.75–5.75s close-up. That shot
-and both paper cutaways are reused:210frames are decoded pixel-identical to
-Revision02. Only two office clips/150frames/6.25s were rendered. Full narration
-AAC packets and decoded PCM are unchanged. No speed, pause, level or voice edit.
-Earlier MP4s, approved reference and original office artwork remain unchanged.
+Technical QA passes without errors/warnings: exact360frames/duration, full fatal
+decode, regular timestamps, no black/blank frames or persistent borders, matching
+A/V endpoints, source/dependency hashes, measured text safe areas and exact final
+educational disclaimer. Every displayed price is complete and fixed, derived
+from shared assumptions: illustrative annual premiums$2,520 and$840. No saving
+or better-total-cost guarantee. “Premiums only” / “Care costs?” cue the catch.
 
-Automated Shorts QA passes with no errors or heuristic warnings: exact duration,
-frame count, full fatal decode, continuous timestamps, no blank/black frames or
-persistent border bands, matching audio/video endpoints, correct final disclaimer,
-asset hashes and measured text-safe-area bounds. Amounts remain illustrative
-annual premiums: Plan A$2,520,Plan B$840; no net-saving claim introduced.
+Voice verification is stronger than settings alone:
+- All AAC packets and decoded PCM match Revision3 exactly; peak−2.00dBFS.
+- The saved Qwen-generated WAV hash matches its successful generation manifest.
+- After proper sample-rate conversion, its first13.84s correlates0.999456 with
+  the current narration. No sample-rate relabelling/time stretching.
+- Model Qwen/Qwen3-TTS-12Hz-1.7B-Base,Space Qwen/Qwen3-TTS,endpoint
+  /generate_voice_clone,English,use_xvector_only=True. Reference/transcript SHA
+  verified. No new TTS/image requests or HF quota consumption.
+These establish lineage, not an ear-based confirmation of voice identity/accent.
 
-Visual review:60 encoded samples at quarter-second intervals across15s, all shot
-boundaries, and retained native-detail inspection of Ren. No faces, hands or
-body obscured by the office text; no leftover furniture in the selected crop.
-Full-screen approved environment, no decorative border. Cached native mattes and
-white clothing are preserved; no new source downsampling/sharpening/AI upscale.
+Inspection:60 encoded samples at quarter-second intervals across all15s, shot
+joins, and100% Ren face/glasses/hair/hand/white-shirt and price crops. The raised
+arm's enclosed background pocket and the hand crop's unrelated body-edge sliver
+are removed; shirt alpha is asserted for all native reaction frames. No sharpening,
+AI character upscale, mirroring, mouth flaps or source animation audio.
 
-Limits: sampled image review and full programmatic decode, not a claim of new
-real-time listening or physical Android testing. Subjective visual quality remains
-for Jon's review. No full Short rendered; explicit revised-prototype approval
-pending. Future medical-environment artwork still needs approval before use.
+Limits: existing720p animation sets the detail limit for the2.6× waist-up framing.
+That enlargement is disclosed; no higher-resolution character artwork was invented.
+No new real-time listening or physical Android test was performed. Subjective
+voice delivery, animation naturalness and visual quality remain for Jon's review.
+Earlier MP4s/reference/artwork are preserved. STOP for explicit prototype approval.

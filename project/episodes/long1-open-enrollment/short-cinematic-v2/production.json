@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "title": "Health Insurance Short v2 \u2014 15-second prototype only",
+  "title": "Health Insurance Short \u2014 Revision4 story prototype",
   "width": 1080,
   "height": 1920,
   "fps": 24,
   "frames": 360,
   "full_bleed": true,
   "permanent_border": false,
-  "asset_report": "ASSET_REQUIREMENTS.md",
+  "asset_report": "REVISION4_PLAN.md",
   "layout_evidence": "layout.json",
-  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev03.mp4",
-  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev03.qa.json",
+  "prototype": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.mp4",
+  "prototype_report": "deliverables/Ren_Health_Short_v2_15s_Prototype_Rev04.qa.json",
   "assets": [
     {
       "id": "script",
@@ -51,46 +51,6 @@
       "sha256": "6018ae46c6f80623f13ad0f946fc7f674c9eec8b7683da707562ae221663fb6c",
       "status": "approved",
       "approval_evidence": "Reuse original prototype AAC narration unchanged in this visual-only revision"
-    },
-    {
-      "id": "nod",
-      "path": "../../../../assets/ren_library/ren_nod_yes.mp4",
-      "kind": "character",
-      "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
-      "status": "approved",
-      "approval_evidence": "Approved Ren v3 animation library; actual source intervals inspected"
-    },
-    {
-      "id": "thinking",
-      "path": "../../../../assets/ren_library/ren_thinking.mp4",
-      "kind": "character",
-      "sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354",
-      "status": "approved",
-      "approval_evidence": "Approved Ren v3 animation library; actual source intervals inspected"
-    },
-    {
-      "id": "render",
-      "path": "render.py",
-      "kind": "renderer",
-      "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
-    },
-    {
-      "id": "prepare",
-      "path": "prepare.py",
-      "kind": "configuration",
-      "sha256": "01dacdf2a4fdfd1742fbffba751cb57b3fe0acd274b68f5b169721bf33660587",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
-    },
-    {
-      "id": "config",
-      "path": "composition-config.json",
-      "kind": "configuration",
-      "sha256": "28fa87e37c9e718edb3e29898a03a4ff86c1efb8c02392cfa97b15d244b9208d",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
     {
       "id": "voice-config",
@@ -141,30 +101,6 @@
       "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
     },
     {
-      "id": "previous-layout",
-      "path": "revision-02/layout.json",
-      "kind": "configuration",
-      "sha256": "7efd57d07a9827e3ee7385a5d1f6f2824c20943bf93e1bb71af03a19d450e4a2",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
-    },
-    {
-      "id": "previous-production",
-      "path": "revision-02/production.json",
-      "kind": "configuration",
-      "sha256": "1279663313c1957a72929f73046f3d3e9f46ac3e79b9858858a2b11a29d038c3",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
-    },
-    {
-      "id": "previous-scene-cache",
-      "path": "revision-02/scene-cache.json",
-      "kind": "configuration",
-      "sha256": "36f51007e4e49040b307934d2bd9b850dc00258a909b29ca82eb85b5a68c4dad",
-      "status": "approved",
-      "approval_evidence": "Existing approved dependencies or this task-authorized implementation; not a claim of prototype approval"
-    },
-    {
       "id": "font",
       "path": "../../../remotion/public/fonts/fredoka-latin-600-normal.woff2",
       "kind": "configuration",
@@ -211,102 +147,151 @@
       "sha256": "46de9b48af8de666aa7275169f1f95fab8a398de3198c7d2fa51edbe22fb8451",
       "status": "approved",
       "approval_evidence": "Existing approved production dependency; reference hashes verified"
+    },
+    {
+      "id": "render-r4",
+      "path": "render_revision4.py",
+      "kind": "renderer",
+      "sha256": "9414e5fededf295fa3f53d3abda4c2e072d743501438fd675939a4b9a3b862c0",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "prepare-r4",
+      "path": "prepare_revision4.py",
+      "kind": "renderer",
+      "sha256": "c2fe39be41587fa059a13b16789ebf5b5eff0c577fef462f2ea9d9cac8d3dbde",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "render-components",
+      "path": "render.py",
+      "kind": "renderer",
+      "sha256": "25b55363ccf4f79bec2d70623a6b693b27b48584fb0f966cd4adff71809fb4e8",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "config",
+      "path": "revision4-config.json",
+      "kind": "configuration",
+      "sha256": "0107d73f98062feddc595a4332eb3e03b14638dfcd51e7b02ed40b2360410121",
+      "status": "approved",
+      "approval_evidence": "This task authorizes targeted Revision4 implementation; prototype approval remains pending"
+    },
+    {
+      "id": "point-hand",
+      "path": "../../../../assets/ren_library/ren_point_down_right.mp4",
+      "kind": "character",
+      "sha256": "7cfd517ef14d781a65233475e671baf6e9fa3589989d9164459f6813a4d444a0",
+      "status": "approved",
+      "approval_evidence": "Existing Ren v3 library; actual3s hand/sleeve inspected, crop/rotation only, no new hand design"
+    },
+    {
+      "id": "reaction",
+      "path": "../../../../assets/ren_library/ren_confused.mp4",
+      "kind": "character",
+      "sha256": "7aff6a1e3cc652e122f674e679928a5f200948b6e8854a4d350c4d0332ed39c9",
+      "status": "approved",
+      "approval_evidence": "Existing Ren v3 library; actual closed-mouth reaction inspected, same face/outfit/model"
     }
   ],
   "scenes": [
     {
-      "id": "renewal-office",
+      "id": "renewal-action",
       "start_frame": 0,
-      "end_frame": 66,
-      "composition": "simple-office-ren-left",
-      "kind": "presenter",
-      "action": "Ren recalls automatic renewal; captions beside him",
-      "motion_purpose": "Establish familiar automatic choice",
+      "end_frame": 84,
+      "composition": "renewal-button-hand-closeup",
+      "action": "Ren hand approaches trackpad and presses at spoken click",
+      "motion_purpose": "Show the automatic decision as an actual action",
       "animations": [
-        "nod_yes-.5-3.25"
+        "approved-pointing-hand-trackpad"
       ],
-      "environment_fullscreen": true,
-      "assets": [
-        "office",
-        "nod",
-        "render",
-        "font"
-      ]
-    },
-    {
-      "id": "renewal-close",
-      "start_frame": 66,
-      "end_frame": 138,
-      "composition": "laptop-closeup",
       "kind": "action",
-      "action": "Cursor click and four annual renewal confirmations",
-      "motion_purpose": "Make the four repeated decisions visible",
-      "animations": [
-        "cursor-renewal-years"
-      ],
       "environment_fullscreen": false,
       "assets": [
         "office",
-        "nod",
-        "render",
+        "laptop",
+        "render-r4",
         "font",
-        "laptop"
+        "point-hand"
       ]
     },
     {
-      "id": "documents-arrive",
-      "start_frame": 138,
-      "end_frame": 204,
-      "composition": "desk-overhead",
-      "kind": "action",
-      "action": "Two insurance documents land on the physical desktop",
-      "motion_purpose": "Reveal the alternative plans",
+      "id": "four-renewals",
+      "start_frame": 84,
+      "end_frame": 132,
+      "composition": "physical-calendar-page-closeup",
+      "action": "Four annual renewal pages turn then hold Year4",
+      "motion_purpose": "Compress repeated annual choices without a paragraph",
       "animations": [
-        "papers-arrive"
+        "annual-page-turn"
       ],
+      "kind": "action",
       "environment_fullscreen": true,
       "assets": [
         "office",
-        "nod",
-        "render",
+        "laptop",
+        "render-r4",
         "font"
       ]
     },
     {
-      "id": "premium-close",
+      "id": "ren-reaction",
+      "start_frame": 132,
+      "end_frame": 204,
+      "composition": "waist-up-ren-over-documents",
+      "action": "Ren expression/gesture changes as he compares",
+      "motion_purpose": "Human reaction replaces full-body presenter pose",
+      "animations": [
+        "approved-confused-2-5"
+      ],
+      "kind": "presenter",
+      "environment_fullscreen": true,
+      "assets": [
+        "office",
+        "laptop",
+        "render-r4",
+        "font",
+        "reaction"
+      ]
+    },
+    {
+      "id": "price-a",
       "start_frame": 204,
       "end_frame": 276,
-      "composition": "insurance-paper-detail",
-      "kind": "action",
-      "action": "Marker draws beneath the completed annual premium",
-      "motion_purpose": "Hold the correct annual premium legibly",
+      "composition": "folded-comparison-document",
+      "action": "First annual premium opens on a single comparison sheet",
+      "motion_purpose": "Hold the correct price at phone-readable size",
       "animations": [
-        "premium-underline"
+        "comparison-page-place"
       ],
-      "environment_fullscreen": false,
+      "kind": "action",
+      "environment_fullscreen": true,
       "assets": [
         "office",
-        "nod",
-        "render",
+        "laptop",
+        "render-r4",
         "font"
       ]
     },
     {
-      "id": "reaction-office",
+      "id": "price-comparison",
       "start_frame": 276,
       "end_frame": 360,
-      "composition": "simple-office-ren-paper-reaction",
-      "kind": "presenter",
-      "action": "Ren thinks beside a pinned insurance paper; cost detail is revealed",
-      "motion_purpose": "Introduce the catch and the need to compare total cost",
+      "composition": "unfolded-comparison-document",
+      "action": "Reveal other premium then inspect the care-cost line",
+      "motion_purpose": "Compare premiums without implying guaranteed total saving",
       "animations": [
-        "thinking-1.25-4.75"
+        "comparison-fold-open-and-inspect"
       ],
+      "kind": "action",
       "environment_fullscreen": true,
       "assets": [
         "office",
-        "thinking",
-        "render",
+        "laptop",
+        "render-r4",
         "font"
       ]
     }
@@ -375,5 +360,5 @@
       "text": "But here's the catch."
     }
   ],
-  "full_production_blocked": "Await explicit approval; future medical artwork unresolved; renderer only implements first 15s"
+  "full_production_blocked": "Explicit revised prototype approval pending; only15s implemented"
 }
