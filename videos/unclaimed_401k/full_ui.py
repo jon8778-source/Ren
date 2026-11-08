@@ -78,18 +78,24 @@ def outcomes(stage, w=900, h=520):
     return Img(im, L)
 
 def budget(stage, w=860):
-    """Budget lines $12 + $40 + $48 = $100 / month (running total always true). stage 0..4."""
-    rows = [("Subscription", 12), ("Delivery habit", 40), ("App plans + gym", 48)]
-    n = min(stage, 3); hh = 150 + 100 * max(n, 1) + 150; im, d = card(w, hh); L = []
+    """Budget lines $12 + $40 + $48 = $100 / month (running total always true). stage 0..4; x.5 shows the next line's label before its amount."""
+    rows = [("Subscription", 12), ("Delivery habit", 40), ("App plans", 48)]
+    n = min(int(stage), 3); pend = (stage - int(stage)) > 0 and n < 3
+    hh = 150 + 100 * (max(n, 1) + (1 if pend else 0)) + 150; im, d = card(w, hh); L = []
     T(d, L, (34, 26), "Monthly budget", 36, 600, MUTED)
     tot = 0
     for i, (lab, amt) in enumerate(rows):
         y = 100 + 100 * i
         if i < n:
             tot += amt; rrect(d, (22, y - 8, w - 22, y + 76), 24, (255, 255, 255, 255), (*SAGE, 255), 4)
-            T(d, L, (50, y + 34), lab, 44, 600, NAVY, "lm"); T(d, L, (w - 50, y + 34), f"${amt}", 52, 700, NAVY, "rm")
+            lab2 = "App plans + gym" if (i == 2 and stage >= 3) else lab
+            T(d, L, (50, y + 34), lab2, 44, 600, NAVY, "lm"); T(d, L, (w - 50, y + 34), f"${amt}", 52, 700, NAVY, "rm")
+        elif i == n and pend:
+            lab2 = "App plans + gym" if (i == 2 and stage - int(stage) > 0.6) else lab
+            rrect(d, (22, y - 8, w - 22, y + 76), 24, (*CREAM, 255), (*MUTED, 255), 3)
+            T(d, L, (50, y + 34), lab2, 44, 600, NAVY, "lm"); T(d, L, (w - 50, y + 34), "$?", 52, 700, MUTED, "rm")
+    ty = 100 + 100 * (n + (1 if pend else 0)) + 40
     if n:
-        ty = 100 + 100 * n + 40
         T(d, L, (w - 50, ty), f"${tot} so far" if n < 3 else f"= ${tot} / month", 54 if n < 3 else 66, 700, NAVY, "rm")
         if stage >= 4: d.rounded_rectangle((16, ty - 42, w - 16, ty + 42), 30, outline=(*GOLD, 255), width=8)
     T(d, L, (34, hh - 40), "Illustrative example", 34, 500, MUTED, "lm")

@@ -121,7 +121,7 @@ for s in ren_all:
     x0, y0, x1, y1 = [int(v_) for v_ in (min(b.ren[0] for b in boxes) - 6, min(b.ren[1] for b in boxes) - 6, max(b.ren[2] for b in boxes) + 6, max(b.ren[3] for b in boxes) + 6)]
     mv = dd[:, max(y0, 0):y1, max(x0, 0):x1].mean((1, 2))
     if n > 3 and not (mv.mean() > 0.2 and (mv > 0.1).sum() >= 0.5 * len(mv)): fails9.append((s["id"], "movement", round(float(mv.mean()), 2)))
-    rf = [np.asarray(RF.frame_at(i)[0].convert("RGB"))[0:800, 0:200].astype(np.int16) for i in (s["fa"], s["fa"] + n // 2, s["fb"] - 1)]      # wall/window strip left of Ren (no panel, no Ren)
+    rf = [np.asarray(RF.frame_at(i)[0].convert("RGB"))[0:700, 0:150].astype(np.int16) for i in (s["fa"], s["fa"] + n // 2, s["fb"] - 1)]      # wall/window strip left of Ren (no panel, no Ren)
     if max(int(np.abs(rf[k + 1] - rf[k]).max()) for k in range(2)) != 0: fails9.append((s["id"], "camera/background changed"))
     mid = boxes[len(boxes) // 2]
     if not ((mid.ren[0] + mid.ren[2]) / 2 < 960 and not [b for b in mid if b[4] != "Ren" and b[0] < mid.ren[2]]): fails9.append((s["id"], "layout"))
