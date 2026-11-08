@@ -41,3 +41,14 @@ P2 = Path("/tmp/claude-0/p2/02_Individual_Props")
 for n in ("coin_front_white", "coin_side_white"):
     rgba = Image.fromarray(matte(np.array(Image.open(P2 / f"{n}.png").convert("RGB"))), "RGBA")
     rgba = rgba.crop(rgba.getbbox()); rgba.save(OUT.parent / "props" / f"{n[:-6]}.png"); print(n, rgba.size)
+
+# O1 at 3840x2160 (same mirror + stool patch at 2x) so the office can be framed closer without losing sharpness
+o4 = Image.open(SRC / "O1_office_day_3840x2160.png").convert("RGB").transpose(Image.FLIP_LEFT_RIGHT)
+b4 = tuple(2 * v for v in box); w4 = b4[2] - b4[0]
+src4 = o4.crop((b4[0] - w4 - 10, b4[1], b4[2] - w4 - 10, b4[3]))
+m4 = np.zeros((src4.height, src4.width), np.float32); m4[16:-16, 16:-16] = 1
+mask4 = Image.fromarray((m4 * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(12))
+o4.paste(src4, b4[:2], mask4); o4.save(OUT / "O1_4k.png")
+# the approved sage office (Ren's background) at 3840x2160
+Image.open(Path("/tmp/claude-0/cv3/project/prototypes/coffee-minute-v3/assets/office.png")).convert("RGB").resize((3840, 2160), Image.LANCZOS).save(OUT / "SAGE_4k.png")
+Image.open(Path("/tmp/claude-0/cv3/project/prototypes/coffee-minute-v3/assets/office.png")).convert("RGB").resize((1920, 1080), Image.LANCZOS).save(OUT / "SAGE.png")

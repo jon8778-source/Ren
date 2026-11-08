@@ -21,6 +21,7 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(ROOT / "project" / "cliplib"))
 import pilot_assets as A
 import pilot_ui as U
+import pilot_ren as PR
 from ren_stage import paste_smooth, _shadow_patch
 
 W, H, FPS = 1920, 1080, 24
@@ -28,7 +29,7 @@ S0 = 1.25                       # global Maya scale; per-sheet factors come from
 BLEND = 3 / FPS                 # pose-to-pose cross-fade: 3 frames
 VOICE = HERE / "voice"
 OFF = 31.717                    # P2 starts where P1 ends (the narration is joined exactly as generated)
-CAPS = {"CHARACTER_ACTION": 5.5, "STORY_STILL": 2.5, "GRAPHIC": 3.5}
+CAPS = {"CHARACTER_ACTION": 5.5, "STORY_STILL": 2.5, "GRAPHIC": 3.5, "REN_ANIMATED": 5.5}
 
 # ---- shot list (cut times = first narrated word of each phrase, from voice/words_P*.json) -----------------------------------
 def _shots():
@@ -42,10 +43,10 @@ def _shots():
            ("P05", "CHARACTER_ACTION", "There was a number sitting in there that made the subscription look tiny,"),
            ("P06", "GRAPHIC", "One hundred dollars a month."),
            ("P07", "GRAPHIC", "Twelve hundred dollars a year."),
-           ("P08", "CHARACTER_ACTION", "Her employer was willing to put that into her retirement account,"),
+           ("P08", "REN_ANIMATED", "Her employer was willing to put that into her retirement account,"),
            ("P09", "CHARACTER_ACTION", "but only if she made one change."),
            ("P10", "CHARACTER_ACTION", "She'd worked there for three years and never noticed."),
-           ("P11", "GRAPHIC", "This isn't a story about a secret investment trick."),
+           ("P11", "REN_ANIMATED", "This isn't a story about a secret investment trick."),
            ("P12", "CHARACTER_ACTION", "It's about a benefit hiding in plain sight."),
            ("P13", "CHARACTER_ACTION", "Meet Maya. She's thirty-one, earns sixty thousand dollars a year,"),
            ("P14", "CHARACTER_ACTION", "and has a pretty normal relationship with money."),
@@ -65,10 +66,14 @@ NFRAMES = int(math.ceil((OFF + 21.378) * FPS - 1e-6))
 for s in SHOTS:
     s["fa"] = round(s["a"] * FPS); s["fb"] = round(s["b"] * FPS)
 SHOTS[-1]["fb"] = NFRAMES
-SCENE = {"P01": "H1", "P02": "H1", "P03": "H1", "P04": "H1", "P05": "H1", "P06": "H1", "P07": "H1", "P08": "H1", "P09": "H1", "P10": "H1",
-         "P11": "H1", "P12": "H1", "P13": "O1", "P14": "O1", "P15": "O1", "P16": "O1", "P17": "O2", "P18": "O1", "P19": "O1"}
+SCENE = {"P01": "H1", "P02": "H1", "P03": "H1", "P04": "H1", "P05": "H1", "P06": "H1", "P07": "H1", "P08": "SAGE", "P09": "H1", "P10": "H1",
+         "P11": "SAGE", "P12": "H1", "P13": "O1", "P14": "O1", "P15": "O1", "P16": "O1", "P17": "O2", "P18": "O1", "P19": "O1"}
 
 # ---- drawing helpers --------------------------------------------------------------------------------------------------------
+class Boxes(list):
+    ren = None; ren_i = None; poses = None; maya = None; tip = None
+REC = {"poses": [], "maya": None, "tip": None}
+
 _bl = {}
 def backdrop(name, r=16, dark=0.58):
     k = (name, r, dark)
@@ -77,7 +82,7 @@ def backdrop(name, r=16, dark=0.58):
     return _bl[k].copy()
 
 def anch(key):
-    return A.anchor(key) if key.startswith(("walk_sit_01", "walk_sit_02", "walk_sit_03", "walk_sit_04", "maya_nochair")) else A.stool_anchor(key)
+    return A.anchor(key) if key.startswith(("seat_", "walk_sit_01", "walk_sit_02", "walk_sit_03", "walk_sit_04", "maya_nochair")) else A.stool_anchor(key)
 
 def draw_pose(f, key, X, Yb, S=S0, alpha=1.0, shadow=True):
     im = A.pose(key); sc = S * A.scale_of(key); ax, ay = anch(key)
@@ -86,6 +91,7 @@ def draw_pose(f, key, X, Yb, S=S0, alpha=1.0, shadow=True):
     if shadow and not key.startswith("maya_nochair"):
         sw = 330 * sc; sh = sw * 0.2; paste_smooth(tgt, _shadow_patch(), X - sw / 2, Yb - sh * 0.5, sw, sh)
     paste_smooth(tgt, im, X - ax * sc, Yb - ay * sc, w, h)
+    REC["maya"] = (round(X, 2), round(Yb, 2), round(sc, 4))
     if alpha < 1:
         tgt.putalpha(tgt.getchannel("A").point(lambda v: int(v * alpha))); f.alpha_composite(tgt)
     return (X - ax * sc, Yb - ay * sc, X - ax * sc + w, Yb)
@@ -93,10 +99,11 @@ def draw_pose(f, key, X, Yb, S=S0, alpha=1.0, shadow=True):
 SOFT = {("stool_01", "stool_02"), ("stool_02", "stool_03"), ("receipt_laptop_04", "receipt_laptop_05"), ("receipt_laptop_01", "receipt_laptop_02"),
         ("receipt_laptop_02", "receipt_laptop_03"), ("overshoulder_01", "overshoulder_02"), ("overshoulder_02", "overshoulder_03"),
         ("drawer_01", "drawer_02"), ("drawer_02", "drawer_03"), ("drawer_03", "drawer_04"), ("drawer_04", "drawer_05"),
-        ("stool_03", "stool_04"), ("stool_04", "stool_05"), ("maya_nochair_03", "maya_nochair_02")}   # small changes cross-fade over 3 frames; big ones cut
+        ("stool_03", "stool_04"), ("stool_04", "stool_05"), ("maya_nochair_03", "maya_nochair_02"),
+        ("seat_stool_03", "seat_stool_04"), ("seat_stool_04", "seat_stool_05"), ("seat_receipt_laptop_04", "seat_receipt_laptop_05")}   # small changes cross-fade over 3 frames; big ones cut
 def track(f, tl, t, X, Yb, **kw):
     idx = max(i for i, (t0, _) in enumerate(tl) if t >= t0 - 1e-9)
-    cur = tl[idx][1]
+    cur = tl[idx][1]; REC["poses"].append(cur)
     if idx > 0 and (tl[idx - 1][1], cur) in SOFT:
         a = (t - tl[idx][0]) / BLEND
         if a < 1:
@@ -149,6 +156,17 @@ def front_h1():
     return _front["h1"]
 def over_h1(f): f.alpha_composite(front_h1())
 
+class Cam:
+    """Plate-space camera: zoom z about plate point (cx, cy) of the 1920x1080 plate; plate points map to frame points."""
+    def __init__(self, z=1.0, cx=960, cy=540): self.z, self.cx, self.cy = z, cx, cy
+    def pt(self, x, y): return ((x - self.cx) * self.z + 960, (y - self.cy) * self.z + 540)
+_big = {}
+def plate4k(name, cam):
+    if name not in _big: _big[name] = Image.open(A.ART / "plates" / f"{name}.png").convert("RGB")
+    z = cam.z; a = 2.0 / z
+    c = ((cam.cx - 960 / z) * 2, (cam.cy - 540 / z) * 2)
+    return _big[name].transform((W, H), Image.AFFINE, (a, 0, c[0], 0, a, c[1]), Image.BICUBIC).convert("RGBA")
+
 # ---- placements ------------------------------------------------------------------------------------------------------------
 ARM = (640, 885)                  # armchair poses (Maya sits in the plate's own chair)
 H1S = (1130, 830)                 # stool beside the coffee table, home plate
@@ -173,7 +191,7 @@ def hand_ui(key, state):
 
 def blend_images(f, seq, t, x, y):
     """seq: [(t0, image)], cross-faded over BLEND."""
-    idx = max(i for i, (t0, _) in enumerate(seq) if t >= t0 - 1e-9)
+    idx = max(i for i, (t0, _) in enumerate(seq) if t >= t0 - 1e-9); REC["poses"].append(f"img{idx}")
     if idx > 0 and (t - seq[idx][0]) / BLEND < 1:
         f.alpha_composite(seq[idx - 1][1], (int(x), int(y)))
         im = seq[idx][1].copy(); im.putalpha(im.getchannel("A").point(lambda v: int(v * max(0, (t - seq[idx][0]) / BLEND)))); f.alpha_composite(im, (int(x), int(y)))
@@ -191,10 +209,12 @@ def p03(f, t, d, B):
     track(f, [(0, "maya_nochair_03"), (1.4, "maya_nochair_02")], t, *ARM)
     slide_in(f, U.email_card(), 1020, 130, t, 0.5, B=B)
 def p04(f, t, d, B):
-    track(f, [(0, "stool_03"), (0.8, "stool_04")], t, *H1S); over_h1(f)
+    track(f, [(0, "seat_stool_03"), (0.8, "seat_stool_04")], t, *ARM)
+
 def p05(f, t, d, B):
-    track(f, [(0, "stool_05"), (1.5, "receipt_laptop_04")], t, *H1S); over_h1(f)
+    track(f, [(0, "seat_stool_05"), (1.5, "seat_receipt_laptop_04")], t, *ARM)
     pop_in(f, U.alert_card(), 1530, 130, t, 0.9, B=B)
+
 def p06(f, t, d, B):
     pass  # drawn by graphic()
 def graphic_portal(f, t, d, B, mode):
@@ -206,62 +226,68 @@ def graphic_portal(f, t, d, B, mode):
         else: pt = U.portal("$1,200 / year", U.back((t - 0.2) / 0.45))
     U.put(f, pt.im, 210, 90, boxes=B, texts=pt.texts)
 def p08(f, t, d, B):
-    track(f, [(0, "overshoulder_01"), (1.0, "overshoulder_02"), (2.0, "overshoulder_03")], t, 520, 1040, S=1.55)
-    fc = U.flow_card(U.clamp((t - 0.7) / 1.6)); slide_in(f, fc, 1030, 230, t, 0.2, B=B)
+    c = ren_clip("p08"); bx, i = c.draw(f, t); B.ren, B.ren_i = bx, i
+    U.pill(f, "Ren", 60, 56, px=40, weight=700, boxes=B, pad=(28, 12))
+    slide_in(f, U.flow_card(U.clamp((t - 0.9) / 1.6)), 1010, 320, t, 0.3, B=B)
+
 def p09(f, t, d, B):
-    track(f, [(0, "receipt_laptop_04"), (1.3, "receipt_laptop_05")], t, *H1S); over_h1(f)
+    track(f, [(0, "seat_receipt_laptop_04"), (1.3, "seat_receipt_laptop_05")], t, *ARM)
     pulse = U.clamp(1 - abs(t - 1.4) / 0.5) if t > 0.9 else 0
-    slide_in(f, U.field_card(pulse), 1200, 160, t, 0.2, B=B)
+    slide_in(f, U.field_card(pulse), 1160, 150, t, 0.2, B=B)
+
 def p10(f, t, d, B):
-    track(f, [(0, "receipt_laptop_06"), (0.6, "stool_06")], t, *H1S); over_h1(f)
-    slide_in(f, U.years_card(U.clamp((t - 0.3) / 1.9) * 3), 1180, 150, t, 0.1, B=B)
+    track(f, [(0, "seat_receipt_laptop_06"), (0.6, "seat_stool_06")], t, *ARM)
+    slide_in(f, U.years_card(U.clamp((t - 0.3) / 1.9) * 3), 1160, 150, t, 0.1, B=B)
+
 def p11(f, t, d, B):
-    icons = 1 - U.ease((t - 0.35) / 1.0); glow = U.ease((t - 1.3) / 0.5)
-    pt = U.portal(None, 0, icons=icons, line_glow=glow, plain=True)
-    z = 1.0 + 0.07 * U.ease(t / d)
-    g = Image.new("RGBA", (W, H), (0, 0, 0, 0)); U.put(g, pt.im, 210, 90)
-    g = zoom(g, z, W / 2, H / 2); f.alpha_composite(g)
-    for (a, b, c, e, s, px) in pt.texts: pass
-    # text boxes after the zoom
-    for (a, b, c, e, s, px) in pt.texts:
-        x0, y0 = (210 + a - W / 2) * z + W / 2, (90 + b - H / 2) * z + H / 2; x1, y1 = (210 + c - W / 2) * z + W / 2, (90 + e - H / 2) * z + H / 2
-        B.append((x0, y0, x1, y1, s, px * z))
+    c = ren_clip("p11"); bx, i = c.draw(f, t); B.ren, B.ren_i = bx, i
+    pn = U.trick_panel(icons=1 - U.ease((t - 0.35) / 0.9), glow=U.ease((t - 1.4) / 0.5))
+    U.put(f, pn.im, 980, 230, boxes=B, texts=pn.texts)
+
 def p12(f, t, d, B):
-    sc = Image.new("RGBA", (W, H), (0, 0, 0, 0)); 
     scene = f.copy()
-    track(scene, [(0, "stool_05"), (1.2, "receipt_laptop_06")], t, *H1S); over_h1(scene)
+    track(scene, [(0, "seat_stool_05"), (1.2, "seat_receipt_laptop_06")], t, *ARM)
     z = 1.0 + 0.5 * (1 - U.ease(t / d))
-    scene = zoom(scene, z, 1180, 560); f.alpha_composite(scene)
-    slide_in(f, U.line_card(), 90, 120, t, 0.15, B=B)
+    scene = zoom(scene, z, 700, 600); f.alpha_composite(scene)
+    slide_in(f, U.line_card(), 1010, 110, t, 0.15, B=B)
+
 def p13(f, t, d, B):
-    ST = O1S; sc5 = S0 * A.scale_of("walk_sit_05")
+    cam = CAMS["P13"]; ST = O1S; sc5 = S0 * A.scale_of("walk_sit_05")
     # walk-in: x_end is where Maya's trousers sit in the 'reach for the stool' pose, relative to the stool
     nx5 = A.anchor("walk_sit_05")[0]; sx5 = A.stool_anchor("walk_sit_05")[0]
     x_end = ST[0] + (nx5 - sx5) * sc5
     tw, v, cyc = 1.30, 780.0, 0.125
     if t < tw:
-        x = x_end - v * (tw - t); k = int(t / cyc) % 4
+        x = x_end - v * (tw - t); k = int(t / cyc) % 4; REC["poses"].append(f"walk_sit_0{k + 1}")
         draw_pose(f, f"walk_sit_0{k + 1}", x, 940, shadow=True)
     else:
         track(f, [(tw, "walk_sit_05"), (tw + 0.5, "walk_sit_06"), (tw + 0.95, "stool_01")], t, *ST)
     slide_in(f, U.chips_card(), 1190, 120, t, 1.0, B=B)
+
 def p14(f, t, d, B):
-    track(f, [(0, "stool_01"), (0.9, "stool_02"), (1.9, "stool_03")], t, *O1S)
-def _jar(f, t):
-    jar = A.pose("props_08"); jh = 150; jw = jar.width * jh / jar.height; jx, jy = 1320, 650        # jar sits on the table top
+    cam = CAMS["P14"]; X, Y = cam.pt(*O1S)
+    track(f, [(0, "stool_01"), (0.9, "stool_02"), (1.9, "stool_03")], t, X, Y, S=S0 * cam.z)
+
+def _jar(f, t, cam):
+    jar = A.pose("props_08"); z = cam.z; jh = 150 * z; jw = jar.width * jh / jar.height; jx, jy = cam.pt(1320, 650)       # jar sits on the table top
     paste_smooth(f, jar, jx - jw / 2, jy - jh, jw, jh)
     t0, t1 = 1.7, 2.4
     if t >= t0:
-        p = U.clamp((t - t0) / (t1 - t0)); y = 250 + (jy - 40 - 250) * p * p      # accelerating fall into the jar
+        p = U.clamp((t - t0) / (t1 - t0)); y = 250 + (650 - 40 - 250) * p * p      # accelerating fall into the jar (plate px)
         coin = A.ART / "props" / ("coin_front.png" if int(t * 12) % 2 == 0 and p < 1 else "coin_side.png")
         key = str(coin)
         if key not in A._cache: A._cache[key] = Image.open(coin).convert("RGBA")
-        c = A._cache[key]; ch = 46; cw = c.width * ch / c.height
-        paste_smooth(f, c, jx - cw / 2, y - ch / 2, cw, ch)
+        c = A._cache[key]; ch = 46 * z; cw = c.width * ch / c.height; cx_, cy_ = cam.pt(1320, y)
+        paste_smooth(f, c, cx_ - cw / 2, cy_ - ch / 2, cw, ch)
+
 def p15(f, t, d, B):
-    track(f, [(0, "stool_05"), (1.4, "receipt_laptop_05")], t, *O1S); _jar(f, t)
+    cam = CAMS["P15"]; X, Y = cam.pt(*O1S)
+    track(f, [(0, "stool_05"), (1.4, "receipt_laptop_05")], t, X, Y, S=S0 * cam.z); _jar(f, t, cam)
+
 def p16(f, t, d, B):
-    track(f, [(0, "receipt_laptop_01"), (1.2, "receipt_laptop_02"), (2.2, "receipt_laptop_03")], t, *O1S)
+    cam = CAMS["P16"]; X, Y = cam.pt(*O1S)
+    track(f, [(0, "receipt_laptop_01"), (1.2, "receipt_laptop_02"), (2.2, "receipt_laptop_03")], t, X, Y, S=S0 * cam.z)
+
 def p17(f, t, d, B):
     hr = A.pose("hr_offer_folder_01"); mt = A.pose("maya_take_folder_01")
     for key, X in (("maya_take_folder_01", 1010), ("hr_offer_folder_01", 1420)):
@@ -302,27 +328,41 @@ def p18(f, t, d, B):
         else: q = (run - L1) / L2; tip = (pts[1][0] + (pts[2][0] - pts[1][0]) * q, pts[1][1] + (pts[2][1] - pts[1][1]) * q)
     else:
         u2 = U.ease((t - tick_t1) / 0.6); tip = (pts[2][0] + 90 * u2, pts[2][1] - 70 * u2)
+    REC["tip"] = (round(tip[0], 2), round(tip[1], 2)); REC["poses"].append("pen_hand")
     hs = hand.resize((bw, bh), Image.LANCZOS); dx, dy = tip[0] - tip0[0], tip[1] - tip0[1]
     hsh = Image.new("RGBA", (bw, bh), (0, 0, 0, 0)); hsh.paste((*U.NAVY, 60), (0, 0), hs.getchannel("A")); f.alpha_composite(hsh.filter(ImageFilter.GaussianBlur(8)), (int(ox + dx + 10), int(oy + dy + 18)))
     paste_smooth(f, hand, ox + dx, oy + dy, bw, bh)
     return
 def p19(f, t, d, B):
-    track(f, [(0, "drawer_01"), (0.55, "drawer_02"), (1.15, "drawer_03"), (1.75, "drawer_04"), (2.3, "drawer_05")], t, *O1S)
+    cam = CAMS["P19"]; X, Y = cam.pt(*O1S)
+    track(f, [(0, "drawer_01"), (0.55, "drawer_02"), (1.15, "drawer_03"), (1.75, "drawer_04"), (2.3, "drawer_05")], t, X, Y, S=S0 * cam.z)
 
+CAMS = {"P13": Cam(1.0, 960, 540), "P14": Cam(1.3, 1000, 565), "P15": Cam(1.25, 1060, 560), "P16": Cam(1.55, 920, 470), "P19": Cam(1.3, 1000, 565)}
+_RC = {}
+REN_SPEC = {"p08": ("ren_point_right", 1.3), "p11": ("ren_shrug", 1.3)}       # clip, start second inside the library window
+def ren_clip(k):
+    if k not in _RC:
+        shot = next(x for x in SHOTS if x["id"] == k.upper()); clip, st = REN_SPEC[k]
+        _RC[k] = PR.RenClip(clip, st, (shot["fb"] - shot["fa"]) / FPS + 0.05)
+    return _RC[k]
 FN = {"P01": p01, "P02": p02, "P03": p03, "P04": p04, "P05": p05, "P06": lambda f, t, d, B: graphic_portal(f, t, d, B, "p06"),
       "P07": lambda f, t, d, B: graphic_portal(f, t, d, B, "p07"), "P08": p08, "P09": p09, "P10": p10, "P11": p11, "P12": p12,
       "P13": p13, "P14": p14, "P15": p15, "P16": p16, "P17": p17, "P18": p18, "P19": p19}
-GRAPHIC_BG = {"P06", "P07", "P11"}
-CLOSEUP_BG = {"P02", "P08", "P18"}
+GRAPHIC_BG = {"P06", "P07"}
+CLOSEUP_BG = {"P02", "P18"}
 
 def frame_at(i):
     T = i / FPS
     sh = next(s for s in SHOTS if s["fa"] <= i < s["fb"])          # half-open [start, end): the first frame of a cut belongs to the new shot
-    t = (i - sh["fa"]) / FPS; d = (sh["fb"] - sh["fa"]) / FPS; B = []        # local time is frame-aligned: the first frame of a shot is t = 0
+    t = (i - sh["fa"]) / FPS; d = (sh["fb"] - sh["fa"]) / FPS; B = Boxes()        # local time is frame-aligned: the first frame of a shot is t = 0
     if sh["id"] in GRAPHIC_BG: f = backdrop("H1", 16, 0.58)
     elif sh["id"] in CLOSEUP_BG: f = backdrop("H1" if sh["id"] != "P18" else "O1", 16, 0.62)
+    elif sh["id"] in ("P08", "P11"): f = A.plate("SAGE")
+    elif sh["id"] in CAMS: f = plate4k("O1_4k", CAMS[sh["id"]])
     else: f = A.plate(SCENE[sh["id"]])
+    REC["poses"] = []; REC["maya"] = None; REC["tip"] = None
     FN[sh["id"]](f, t, d, B)
+    B.poses = list(REC["poses"]); B.maya = REC["maya"]; B.tip = REC["tip"]
     chip_edu(f, T, B)
     return f, sh, B
 

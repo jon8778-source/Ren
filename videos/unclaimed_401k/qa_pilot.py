@@ -25,13 +25,20 @@ check("1a shots contiguous", not gaps, str(gaps))
 check("1b shot frames add up to the video", sum(fr(s["end"]) - fr(s["start"]) for s in shots) == rep["frames"], f"{sum(fr(s['end']) - fr(s['start']) for s in shots)} vs {rep['frames']}")
 over = [(s["id"], round(s["end"] - s["start"], 2)) for s in shots if s["end"] - s["start"] > R.CAPS[s["type"]] + 1e-6]
 check("1c v3 shot caps (CHARACTER_ACTION 5.5, STORY_STILL 2.5, GRAPHIC 3.5)", not over, str(over))
-check("1d shot types match the plan (15 action, 3 graphic, 1 story still)", [sum(1 for s in shots if s["type"] == t) for t in ("CHARACTER_ACTION", "GRAPHIC", "STORY_STILL")] == [15, 3, 1])
+cnt = [sum(1 for s in shots if s["type"] == t) for t in ("CHARACTER_ACTION", "GRAPHIC", "STORY_STILL", "REN_ANIMATED")]
+check("1d shot mix: 14 Maya action, 2 graphic, 1 story still, 2 Ren cutaways", cnt == [14, 2, 1, 2], str(cnt))
+check("1e one or two Ren cutaways, each within the 5.5 s cap", 1 <= cnt[3] <= 2)
 # 2 order
 tm = json.loads((R.VOICE / "timings.json").read_text())
 norm = lambda t: re.findall(r"[a-z0-9$']+", t.lower().replace("’", "'"))
 want = norm(tm["P1"]["text"] + " " + tm["P2"]["text"]); got = norm(" ".join(s["phrase"] for s in shots))
 fixed = lambda ws: [w.replace("$", "") for w in ws]
 check("2 phrases tile the approved narration in order", fixed(want) == fixed(got) or " ".join(want).replace("$", "") == " ".join(got).replace("$", ""), f"{len(want)} vs {len(got)} words")
+def _script_secs():
+    t = (HERE / "script" / "narration_v3.md").read_text(); parts = re.split(r"\*\*\[(S\d+): [^\]]*\]\*\*", t)
+    return {parts[i]: " ".join(parts[i + 1].split()) for i in range(1, len(parts), 2)}
+sc = _script_secs(); s2 = sc["S2"]; cut = s2.index("so she moved on.") + len("so she moved on.")
+check("2b spoken text equals the approved script (S1 + S2 up to 'so she moved on.'), unchanged", norm(sc["S1"] + " " + s2[:cut]) == want)
 # 3 assets
 need = [R.A.ART / "plates" / p for p in ("H1.png", "O1.png", "O2.png")] + [R.VOICE / "P1.wav", R.VOICE / "P2.wav", R.A.ART / "props" / "coin_front.png"]
 miss = [p.name for p in need if not p.exists() or p.stat().st_size < 1000]; check("3 plates, voice and props exist", not miss, str(miss))
@@ -91,6 +98,73 @@ worst = 0.0; det = []
 for key in ("stool_01", "stool_05", "maya_nochair_02", "walk_sit_01", "receipt_laptop_04"):
     jx, jy = jitter(key); worst = max(worst, jx, jy); det.append(f"{key} x={jx:.3f} y={jy:.3f}")
 check("8 Maya sub-pixel placement noise <= 0.12 px over a 60-frame move and scale (jitter_check method)", worst <= 0.12, f"worst {worst:.3f}px; " + "; ".join(det))
+
+# 9 Ren cutaways: genuine library clips, real movement, no camera move, grounding, layout (left Ren, right graphics)
+lib = {c["file"]: c for c in json.loads((R.ROOT / "assets" / "ren_library" / "ren_library.json").read_text())["clips"]}
+ren_shots = [s for s in R.SHOTS if s["type"] == "REN_ANIMATED"]
+import pilot_ren as PR
+from ren_stage import height_px
+exp_h = height_px("OFFICE_SAGE", 770) * PR.PK
+vf = lambda a, b: np.frombuffer(subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(mp4), "-vf", f"select='between(n,{a},{b - 1})',format=rgb24", "-vsync", "0", "-f", "rawvideo", "-"]), np.uint8).reshape(-1, 1080, 1920, 3)
+for sh in ren_shots:
+    key = sh["id"].lower(); clip, st = R.REN_SPEC[key]; ent = lib[clip + ".mp4"]; n = sh["fb"] - sh["fa"]
+    ok = ent["status"] == "ok" and ent["in_s"] <= st and st + n / FPS <= ent["out_s"] + 0.01
+    check(f"9a {sh['id']} uses approved library clip {clip}.mp4 inside its usable window ({ent['in_s']}-{ent['out_s']} s)", ok, f"plays {st:.2f}-{st + n / FPS:.2f} s; shot {n / FPS:.2f} s <= 5.5")
+    boxes = [R.frame_at(i)[2] for i in range(sh["fa"], sh["fb"])]
+    bot = np.array([b.ren[3] for b in boxes]); top = np.array([b.ren[1] for b in boxes]); idx = [b.ren_i for b in boxes]
+    check(f"9b {sh['id']} Ren feet fixed on the floor (no bobbing): bottom row std {bot.std():.2f}px", bot.std() <= 1.0 and bot.max() - bot.min() <= 3.0, f"min {bot.min():.1f} max {bot.max():.1f}")
+    hh = bot - top; check(f"9c {sh['id']} Ren scale matches the plate standard (175 cm = {exp_h:.0f}px): measured {np.median(hh):.0f}px", abs(np.median(hh) - exp_h) / exp_h < 0.05)
+    V = vf(sh["fa"], sh["fb"]).astype(np.int16); d = np.abs(np.diff(V, axis=0)).mean(3)
+    x0, y0, x1, y1 = [int(v) for v in (min(b.ren[0] for b in boxes) - 6, min(b.ren[1] for b in boxes) - 6, max(b.ren[2] for b in boxes) + 6, max(b.ren[3] for b in boxes) + 6)]
+    ren_move = d[:, max(y0, 0):y1, max(x0, 0):x1].mean((1, 2)); bg = d[:, 0:200, 1000:1900].mean((1, 2))
+    check(f"9d {sh['id']} Ren genuinely moves: mean in-box change {ren_move.mean():.2f}/255, moving in {int((ren_move > 0.15).sum())} of {len(ren_move)} frame steps, {len(set(idx))} distinct clip frames", ren_move.mean() > 0.3 and (ren_move > 0.15).sum() >= 0.6 * len(ren_move) and len(set(idx)) == n)
+    check(f"9e {sh['id']} no camera move: static background region change {bg.max():.3f}", bg.max() < 0.01)
+    mid = boxes[len(boxes) // 2]; tb = [b for b in mid if True]
+    xs = [b[0] for b in mid]; clash = [b for b in mid if not (b[2] < mid.ren[0] or b[0] > mid.ren[2] or b[3] < mid.ren[1] or b[1] > mid.ren[3])]
+    check(f"9f {sh['id']} Ren on the left, graphics on the right, no text over Ren", (mid.ren[0] + mid.ren[2]) / 2 < 960 and not [b for b in mid if b[4] != "Ren" and b[0] < mid.ren[2]] and not [b for b in clash if b[4] != "Ren"], f"Ren x {mid.ren[0]:.0f}-{mid.ren[2]:.0f}")
+# 10 Maya continuity, scale, acting
+home = [s for s in R.SHOTS if R.SCENE[s["id"]] == "H1" and s["id"] not in ("P06", "P07")]
+bad_pose, bad_pos = [], []
+for sh in home:
+    for i in range(sh["fa"], sh["fb"], 3):
+        b = R.frame_at(i)[2]
+        if sh["id"] == "P02": continue
+        if any(not k.startswith(("maya_nochair", "seat_")) for k in b.poses): bad_pose.append((sh["id"], i, b.poses))
+        if b.maya and (abs(b.maya[0] - R.ARM[0]) > 0.01 or abs(b.maya[1] - R.ARM[1]) > 0.01): bad_pos.append((sh["id"], i, b.maya))
+check("10a living room: Maya stays in the armchair in every home shot (no stool pose, no repositioning)", not bad_pose and not bad_pos, str((bad_pose[:2], bad_pos[:2])))
+off_bad = []
+for sh in [s for s in R.SHOTS if s["id"] in ("P14", "P15", "P16", "P19")]:
+    cam = R.CAMS[sh["id"]]
+    for i in range(sh["fa"], sh["fb"], 3):
+        b = R.frame_at(i)[2]; X, Y = cam.pt(*R.O1S)
+        if abs(b.maya[0] - X) > 0.01 or abs(b.maya[1] - Y) > 0.01 or abs(b.maya[2] / A.scale_of(b.poses[0]) - R.S0 * cam.z) > 1e-3: off_bad.append((sh["id"], i))
+check("10b office: Maya sits on the same floor spot in every shot and her scale follows the camera zoom exactly", not off_bad, str(off_bad[:3]))
+sz = {sh["id"]: R.CAMS[sh["id"]].z for sh in R.SHOTS if sh["id"] in R.CAMS}
+check("10c office Maya is larger than in the first pilot (zoom 1.25-1.55x on P14-P16, P19 vs 1.0x)", all(sz[k] >= 1.25 for k in ("P14", "P15", "P16", "P19")), str(sz))
+weak = []
+for sh in R.SHOTS:
+    if sh["type"] != "CHARACTER_ACTION": continue
+    seen = []; tips = []
+    for i in range(sh["fa"], sh["fb"]):
+        b = R.frame_at(i)[2]; seen.extend(b.poses)
+        if b.tip: tips.append(b.tip)
+    ndist = len(set(seen)); mv = (max(t[0] for t in tips) - min(t[0] for t in tips)) if tips else 0
+    if ndist < 2 and mv < 100: weak.append((sh["id"], ndist, mv))
+check("10d every character shot changes pose or moves a prop/hand (no shot is only a pan or zoom over a still)", not weak, str(weak))
+# 11 24 fps playback
+pk = [float(x) for x in run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "packet=pts_time", "-of", "csv=p=0", str(mp4)]).stdout.split()]
+dpk = np.diff(sorted(pk)); fr_rates = (v["r_frame_rate"], v["avg_frame_rate"])
+check("11 constant 24 fps: r_frame_rate and avg_frame_rate 24/1, every packet 1/24 s apart, no dropped or duplicated frame timestamps", fr_rates == ("24/1", "24/1") and np.allclose(dpk, 1 / 24, atol=2e-4) and len(pk) == rep["frames"], f"{fr_rates}, {len(pk)} packets, delta min {dpk.min():.5f} max {dpk.max():.5f}")
+# 12 voice reused, not re-synthesised
+import hashlib
+hs = {f: hashlib.sha256((R.VOICE / f).read_bytes()).hexdigest() for f in ("P1.wav", "P2.wav")}; ref = json.loads((HERE / "voice_hashes.json").read_text())
+check("12a narration WAVs are byte-identical to the ones generated for the first pilot (no new synthesis)", hs == ref, f"P1 {hs['P1.wav'][:12]} P2 {hs['P2.wav'][:12]}")
+src = "".join((HERE / f).read_text() for f in ("render_pilot.py", "pilot_ren.py", "pilot_assets.py", "pilot_ui.py", "qa_pilot.py"))
+check("12b renderer imports no TTS code", not re.search(r"qwen|torch|generate_voice", src, re.I))
+au_raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(mp4), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]); got_a = np.frombuffer(au_raw, np.float32)
+ref_a, _ = R.audio(); m = min(len(got_a), len(ref_a)); cc = float(np.dot(got_a[:m], ref_a[:m]) / (np.linalg.norm(got_a[:m]) * np.linalg.norm(ref_a[:m]) + 1e-9))
+check("12c MP4 audio matches the original narration waveform (correlation >= 0.95)", cc >= 0.95, f"{cc:.4f}")
+
 # write report
 out = HERE / "reports"; out.mkdir(exist_ok=True)
 md = ["# Hybrid QC - Ren | Unclaimed 401(k) match, pilot", "", f"File: `{mp4.name}`  |  frames {rep['frames']}  |  {rep['size'][0]}x{rep['size'][1]} @ {FPS} fps", "",
@@ -98,6 +172,7 @@ md = ["# Hybrid QC - Ren | Unclaimed 401(k) match, pilot", "", f"File: `{mp4.nam
 for n, st, dt in res: md.append(f"| {n} | {st} | {dt.replace('|', '/')[:220]} |")
 md += ["", "## Not run / limits", "- NOT RUN: listening review (pronunciation, accent, tone, joins). Speech-to-text only confirms the words; see voice_check_summary.json.",
        "- NOT RUN: the original repo `qa_timeline.py`, `validate.py` and `jitter_check.py`. They are wired to the 1280x720 free_money renderer and Ren stills; `qa_pilot.py` re-implements their checks for this renderer (half-open shot lookup, caps, A-B-A, flashes, cuts on boundaries, decode, jitter).",
+       "- Ren: genuine library clips only; mouth-closed windows were chosen from the library notes and checked by eye on 100% crops, not by an automated mouth detector.",
        "- Motion is limited animation: Maya is a set of approved keyframe poses with pose-to-pose changes (3-frame cross-fade where the poses are close, hard cut otherwise), plus code-driven props, pen path, coin and UI. It is not a skeletal rig.",
        "- Plates are 2.3x upscales of 1672x941 art and are not perspective-calibrated; scale was matched by eye to the plate furniture."]
 (out / "hybrid_qc.md").write_text("\n".join(md) + "\n")

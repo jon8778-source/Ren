@@ -46,6 +46,7 @@ MANUAL = {"stool": 1.0, "maya_nochair": 0.85, "receipt_laptop": 1.10, "drawer": 
           "hr_offer_folder": 0.40, "maya_take_folder": 0.40}      # matched by eye on a comparison sheet (hair/stool metrics disagree)
 def scale_of(key):
     """Relative scale that makes every sheet's Maya the same size as the stool sheet (stool height is the yardstick)."""
+    key = key[5:] if key.startswith("seat_") else key
     k = "sc_" + _sheet(key)
     if k not in _anch:
         sh = _sheet(key)

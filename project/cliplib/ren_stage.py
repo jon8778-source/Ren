@@ -22,7 +22,10 @@ from PIL import Image, ImageDraw, ImageFilter
 #   lot:    car tyre 63 cm, car roof 1.45 m                                 -> camera ~1.10 m, horizon at plate row 454
 # (horizon row in plate pixels, camera height in cm). Each plate is a pinhole view, so for a person at floor row y:
 #   height_px = cm * (y - horizon) / camera_height
-PLATE_GEOM = {"OFFICE": (507, 107), "PORCH": (384, 102), "LOT": (454, 110)}
+#   office_sage (the approved "Welcoming sage-accented home office", 1672x941): desk 75 cm = 278 px at floor row 728, chair seat 45 cm
+#           = 175 px at row 775; the horizon is poorly constrained by those two objects, so it is fixed at row 300 and the camera height
+#           (115.7 cm) is fitted to the desk legs (Nov 2026, 401(k) pilot)
+PLATE_GEOM = {"OFFICE": (507, 107), "PORCH": (384, 102), "LOT": (454, 110), "OFFICE_SAGE": (300, 115.7)}
 REN_CM = 175
 
 

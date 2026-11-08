@@ -68,3 +68,40 @@ if __name__ == "__main__":
         o = o.crop(o.getbbox()); o.save(f"art/poses/maya_nochair_{i:02d}.png")
         bg = Image.new("RGBA", o.size, (60, 90, 60, 255)); bg.alpha_composite(o); bg.convert("RGB").save(f"/tmp/claude-0/nochair_{i}.png")
         print(i, im.size, o.size)
+
+def unstool(im):
+    """Remove the baked-in wooden stool from a seated pose so Maya can sit in the plate's armchair (keeps laptop, phone, hands).
+    Below the hips only pixels close to body colours (trousers, sweater, skin, laptop) survive; pale shoe/laptop-white pixels survive near them."""
+    a = np.array(im.convert("RGBA")); al = a[..., 3] > 40
+    h, s, v = hsv(a[..., :3]); H_ = a.shape[0]
+    ys = np.arange(H_)[:, None] * np.ones((1, a.shape[1]))
+    navy = al & (h > 190) & (h < 265) & (s > 0.15) & (v < 0.6)
+    rust = al & (h > 3) & (h < 17.5) & (s > 0.5)
+    skin = al & (h > 12) & (h < 38) & (s > 0.15) & (s < 0.43) & (v > 0.92)
+    gray = al & (s < 0.12) & (v > 0.5) & (v < 0.86)                       # laptop body
+    seed = navy | rust | skin | gray
+    seed = ndimage.binary_opening(seed, iterations=1)
+    keep = ndimage.binary_dilation(seed, iterations=4) & al
+    pale = al & (s < 0.12) & (v > 0.84)
+    keep |= ndimage.binary_dilation(navy, iterations=16) & pale             # white shoes beside the trousers
+    keep |= ndimage.binary_dilation(navy | rust, iterations=3) & al & (v < 0.4)   # outlines hugging the body
+    keep = ndimage.binary_closing(keep, iterations=4); keep = ndimage.binary_fill_holes(keep) & al
+    out = np.where(ys < H_ * 0.45, al, keep)
+    wood = al & (h > 17) & (h < 34) & (s > 0.42) & (v < 0.9) & (ys > H_ * 0.45)
+    out &= ~ndimage.binary_dilation(wood, iterations=1)
+    # shoes: keep every non-wood pixel near the body in the bottom band (the 'pale beside navy' rule leaves ragged soles)
+    band = ys > H_ * 0.86
+    out |= band & al & ~ndimage.binary_dilation(wood, iterations=1) & ndimage.binary_dilation(keep, iterations=9) & (v > 0.45)
+    # thin pale slivers between hips and shoes are stool gaps, not Maya
+    pale_mid = out & (s < 0.12) & (v > 0.84) & (ys > H_ * 0.5) & (ys < H_ * 0.86)
+    pl, pn = ndimage.label(pale_mid)
+    for i in range(1, pn + 1):
+        c = pl == i
+        if c.sum() < 2500: out &= ~c
+    out = ndimage.binary_opening(out, iterations=1)
+    lab, n = ndimage.label(out); sz = ndimage.sum(out, lab, range(1, n + 1)); out = np.isin(lab, 1 + np.where(sz > 600)[0])
+    res = a.copy(); res[..., 3] = np.where(out, a[..., 3], 0)
+    return Image.fromarray(res, "RGBA")
+
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "stool":
+    pass

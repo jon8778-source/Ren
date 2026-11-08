@@ -217,3 +217,26 @@ def line_card(w=760, h=200):
     T.append((*txt(d, (30, 96), f"${CLAIMS['unclaimed_month']} / month", 76, 700, NAVY), f"${CLAIMS['unclaimed_month']} / month", 76))
     d.rounded_rectangle((-6, -6, w + 5, h + 5), 34, outline=(*GOLD, 255), width=9)
     return Img(im, T)
+
+
+def trick_panel(icons=1.0, glow=0.0, w=840, h=520):
+    """Right-hand graphic for the 'not a secret trick' beat: decorative trick icons (on cream discs) fade away above the plain benefits line."""
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); T = []
+    a = int(255 * clamp(icons)); k = 1.0
+    if a > 3:
+        lay = Image.new("RGBA", (w, h), (0, 0, 0, 0)); ld = ImageDraw.Draw(lay)
+        for cx, cy, kind in ((150, 120, "spark"), (w // 2, 120, "ball"), (w - 150, 120, "rocket")):
+            ld.ellipse((cx - 100, cy - 100, cx + 100, cy + 100), fill=(*CREAM, a), outline=(*NAVY, a), width=5)
+            if kind == "spark":
+                for r, c in ((60, GOLD), (34, CREAM)): ld.polygon([(cx, cy - r), (cx + r * .3, cy - r * .3), (cx + r, cy), (cx + r * .3, cy + r * .3), (cx, cy + r), (cx - r * .3, cy + r * .3), (cx - r, cy), (cx - r * .3, cy - r * .3)], fill=(*c, a), outline=(*NAVY, a) if c == GOLD else None)
+            elif kind == "ball":
+                R = 48; ld.ellipse((cx - R, cy - R - 8, cx + R, cy + R - 8), fill=(*SAGE, a), outline=(*NAVY, a), width=5); ld.ellipse((cx - 26, cy - 44, cx - 6, cy - 24), fill=(*CREAM, a)); ld.rectangle((cx - 50, cy + R - 8, cx + 50, cy + R + 14), fill=(*NAVY, a))
+            else:
+                ld.polygon([(cx, cy - 62), (cx + 28, cy + 10), (cx - 28, cy + 10)], fill=(*RED, a), outline=(*NAVY, a)); ld.rectangle((cx - 18, cy + 10, cx + 18, cy + 50), fill=(*CREAM, a), outline=(*NAVY, a), width=4)
+                ld.polygon([(cx - 18, cy + 50), (cx, cy + 84), (cx + 18, cy + 50)], fill=(*GOLD, a))
+        im.alpha_composite(lay)
+    rrect(d, (20, 280, w - 20, h - 20), 30, (*SAGE, 255), (*NAVY, 255), 5)
+    T.append((*txt(d, (56, 320), "Employer contribution available", 44, 600, NAVY), "Employer contribution available", 44))
+    T.append((*txt(d, (56, 396), f"${CLAIMS['unclaimed_month']} / month", 84, 700, NAVY), f"${CLAIMS['unclaimed_month']} / month", 84))
+    if glow > 0: d.rounded_rectangle((12, 272, w - 12, h - 12), 36, outline=(*GOLD, int(255 * clamp(glow))), width=9)
+    return Img(im, T)
