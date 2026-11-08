@@ -20,7 +20,7 @@ Command: `project/.tools/venv/bin/python videos/unclaimed_401k/qa_full.py <mp4>`
 | 4f loudness -23..-12 LUFS, true peak <= -1 dBTP | PASS | -18.7 LUFS, -1.2 dBTP |
 | 4g no silence gap over 1.4 s inside the narration (sentence pauses and section joins allowed) | PASS | [] |
 | 5a hard cuts (mean diff > 14) land only on shot boundaries | PASS | off-boundary: []; 94 cuts detected |
-| 5b every shot boundary changes the picture (progressive graphics and pose changes count; nothing identical across a cut) | FAIL | [('T05', 0.18)] |
+| 5b every shot boundary changes the picture (progressive graphics and pose changes count; nothing identical across a cut) | PASS | [] |
 | 5c no A-B-A one-frame inserts | PASS | [] |
 | 5d no single-frame brightness flashes | PASS | [] |
 | 6a all on-screen text inside the safe area (x 40..1880, y 20..950; bottom 12% empty), 788 frames incl. every shot's first and last | PASS | [] |
