@@ -40,8 +40,8 @@ def _shots():
            ("P03", "CHARACTER_ACTION", "checked the confirmation email, and felt pretty good about it."),
            ("P04", "CHARACTER_ACTION", "Then she opened her work benefits portal."),
            ("P05", "CHARACTER_ACTION", "There was a number sitting in there that made the subscription look tiny,"),
-           ("P06", "GRAPHIC", "$100 a month,"),
-           ("P07", "GRAPHIC", "$1,200 a year."),
+           ("P06", "GRAPHIC", "One hundred dollars a month."),
+           ("P07", "GRAPHIC", "Twelve hundred dollars a year."),
            ("P08", "CHARACTER_ACTION", "Her employer was willing to put that into her retirement account,"),
            ("P09", "CHARACTER_ACTION", "but only if she made one change."),
            ("P10", "CHARACTER_ACTION", "She'd worked there for three years and never noticed."),
@@ -193,7 +193,7 @@ def p03(f, t, d, B):
 def p04(f, t, d, B):
     track(f, [(0, "stool_03"), (0.8, "stool_04")], t, *H1S); over_h1(f)
 def p05(f, t, d, B):
-    track(f, [(0, "stool_04"), (0.5, "stool_05")], t, *H1S); over_h1(f)
+    track(f, [(0, "stool_05"), (1.5, "receipt_laptop_04")], t, *H1S); over_h1(f)
     pop_in(f, U.alert_card(), 1530, 130, t, 0.9, B=B)
 def p06(f, t, d, B):
     pass  # drawn by graphic()

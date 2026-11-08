@@ -1,0 +1,9 @@
+asset,status,basis,limits
+Maya identity lock + 10 pose sheets (50 cut-outs),FOUND_APPROVED,"Owner approved as identity lock and source art, incl. seated poses (messages 'Yea to both', 'Approved')","Keyframe art, not an animation rig; figures about 600 px tall"
+Maya armchair poses with the baked chair removed,FOUND_NEEDS_REVIEW,Derived by colour segmentation (unchair.py),Small leftover specks near shoes
+HR character (hr_offer_folder),FOUND_APPROVED,Owner 'Approved' to the HR character,Single pose
+Plates H1 / O1 / O2 (3840x2160 upscales),FOUND_APPROVED,Owner 'Approved',"2.3x upscale of 1672x941; not perspective-calibrated; O1 mirrored with its stool removed, O2 with its stool removed (patched)"
+"Props: hand+phone, clipboard+pen hand, jar, coin",FOUND_APPROVED,From the sheets and the part-2 pack,Pen hand and clipboard split by segmentation
+"Qwen narration, pilot only (P1 31.7 s, P2 21.4 s)",GENERATED,Script approved by the owner for the pilot narration,"Words verified by Whisper; accent, pace and joins need listening review"
+"Finance UI, cards, chips, portal",CODE_DRAWN,"Drawn in code, Fredoka, navy/sage/cream",Style sheet and the nine UI screens were never supplied; design is new and needs review
+Ren animated clips,NOT_USED,Pilot is Maya-led; no Ren shots in the pilot plan,
