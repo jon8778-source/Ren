@@ -9,8 +9,10 @@ are prepared. Existing video, episode source and voice were not altered.
 The supplied MP4 exceeds the 32 MiB attachment transfer limit and could not be
 inspected or archived. Its checksum, durable artifact, complete asset manifest
 and matching source commit remain unverified. The branch's package report is
-for a differently named 3:57.3 video; do not conflate them. Remote verification
-and pull request remain pending. No merge, publication, TTS or video render.
+for a differently named 3:57.3 video; do not conflate them. Source checkpoint `c230228` pushed/fetched; all seven changed files verified
+byte-identical remotely. Pull request creation was attempted via GitHub CLI but
+`api.github.com/graphql` returned Forbidden; no GitHub app tools are available.
+PR and video archival/inspection remain pending. No merge, publication, TTS or video render.
 
 ---
 
