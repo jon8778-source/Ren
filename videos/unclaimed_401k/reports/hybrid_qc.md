@@ -48,7 +48,7 @@ Commands: `project/.tools/venv/bin/python videos/unclaimed_401k/qa_pilot.py <mp4
 | 10d every character shot changes pose or moves a prop/hand (no shot is only a pan or zoom over a still) | PASS | [] |
 | 11 constant 24 fps: r_frame_rate and avg_frame_rate 24/1, every packet 1/24 s apart, no dropped or duplicated frame timestamps | PASS | ('24/1', '24/1'), 1275 packets, delta min 0.04167 max 0.04167 |
 | 12a narration WAVs are byte-identical to the ones generated for the first pilot (no new synthesis) | PASS | P1 4ee4f6273b36 P2 b620ffd31309 |
-| 12b renderer imports no TTS code | FAIL |  |
+| 12b renderer imports and calls no TTS code (no qwen_tts / torch / transformers import, no generate_voice_clone call) | PASS |  |
 | 12c MP4 audio matches the original narration waveform (correlation >= 0.95) | PASS | 1.0000 |
 
 ## Not run / limits
