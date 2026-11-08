@@ -66,8 +66,8 @@ def aligned_word_times(sec):
 
 # Ren library windows (usable in/out from ren_library.json) and the second at which each clip's gesture starts (from the motion profile)
 ROT = [("ren_thinking", 1.25, 9.12, False, 1.5), ("ren_open_arms", 1.38, 7.0, False, 1.5), ("ren_present_palm_left", 1.12, 7.88, True, 1.5), ("ren_nod_yes", 1.12, 9.0, False, 1.5),
-       ("ren_shrug", 1.12, 10.0, False, 1.5), ("ren_point_up", 1.12, 9.0, False, 1.5), ("ren_point_right", 1.0, 6.38, False, 1.5), ("ren_thumbs_up", 2.75, 8.0, False, 2.75)]
-SPECIAL = {"ren_wave_hello": (1.12, 10.0, False, 1.5), "ren_point_camera": (1.12, 5.88, False, 1.5)}
+       ("ren_shrug", 1.12, 10.0, False, 1.5), ("ren_point_up", 1.12, 9.0, False, 1.5), ("ren_point_right", 1.0, 6.38, False, 1.5)]      # thumbs_up left out: toothy grin at its peak
+SPECIAL = {"ren_wave_bye": (1.25, 6.12, False, 1.6), "ren_point_camera": (1.12, 5.88, False, 1.5)}      # wave_hello opens its mouth mid-wave; wave_bye keeps it closed
 CAMS = {"w": R.Cam(1.0, 960, 540), "m": R.Cam(1.3, 1000, 565), "c": R.Cam(1.55, 920, 470)}
 
 def build_shots():
@@ -100,8 +100,8 @@ def build_shots():
         else:
             clip, in_s, out_s, mir, onset = ROT[ri % len(ROT)]; ri += 1
         n = uses.get(clip, 0); uses[clip] = n + 1
-        start = max(in_s, onset - 0.3) if n == 0 else max(in_s, out_s - d - 0.05)
-        if start + d > out_s: start = max(in_s, out_s - d - 0.02)
+        start = max(in_s, onset - 0.3)          # always the clean part of the clip (the tails of some clips turn Ren sideways)
+        if start + d > out_s - 0.12: start = max(in_s, out_s - d - 0.12)
         s["ren"] = dict(clip=clip, start=round(start, 2), mirror=mir, fits=(start + d <= out_s + 0.01 and start >= in_s - 0.001))
     return shots
 

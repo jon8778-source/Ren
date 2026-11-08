@@ -36,7 +36,7 @@ def stat_card(label, value, sub=None, tone="sage", w=860, strike=False, tag=None
     if strike: d.line((40, h - 50, w - 40, 50), fill=(*RED, 255), width=12)
     return Img(im, L)
 
-def two_stream(stage, t=0.0, w=900, h=700):
+def two_stream(stage, t=0.0, w=900, h=770):
     """Two-stream payroll match diagram: Maya and Employer feed the 401(k) account. Only finished, true values are ever shown."""
     im, d = card(w, h); L = []
     def stream(y, label, col, amt, p, on=True):
@@ -46,7 +46,7 @@ def two_stream(stage, t=0.0, w=900, h=700):
             d.line((*a, *b), fill=(*NAVY, 255), width=8); d.polygon([(b[0] + 14, b[1] + 3), (b[0] - 16, b[1] - 18), (b[0] - 16, b[1] + 22)], fill=(*NAVY, 255))
             q = ease(p % 1.0 if p < 99 else 1.0); x, yy = a[0] + (b[0] - a[0]) * q, a[1] + (b[1] - a[1]) * q
             d.ellipse((x - 22, yy - 22, x + 22, yy + 22), fill=(*GOLD, 255), outline=(*NAVY, 255), width=4); d.text((x, yy + 1), "$", font=font(28, 700), fill=NAVY, anchor="mm")
-        if amt: T(d, L, (320, y + 55 - 60 if y < 300 else y + 55 + 62), amt, 38, 700, NAVY, "lm", maxw=240)
+        if amt: T(d, L, (320, y - 28 if y < 300 else y + 140), amt, 38, 700, NAVY, "lm", maxw=300)
     rrect(d, (570, 270, w - 30, 420), 30, (255, 255, 255, 255), (*NAVY, 255), 5)
     T(d, L, ((570 + w - 30) // 2, 318), "401(k)", 50, 700, NAVY, "mm"); T(d, L, ((570 + w - 30) // 2, 380), "account", 36, 500, MUTED, "mm")
     amts = {1: ("$1", None), 2: ("$1", "$1"), 3: ("up to 4%", "up to 4%"), 4: ("$2,400 / yr", "$2,400 / yr"), 5: ("$200 / mo", "up to $200 / mo"), 6: ("$1,200 / yr", "$1,200 / yr"),
@@ -54,17 +54,16 @@ def two_stream(stage, t=0.0, w=900, h=700):
     m_amt, e_amt = amts.get(stage, (None, None))
     stream(110, "Maya", SAGE, m_amt, t * 0.6, stage >= 1)
     stream(500, "Employer", CREAM, e_amt, t * 0.6 + 0.3, stage >= 2)
-    if stage == 4: T(d, L, (w // 2, 640), "$60,000 x 4% = $2,400 a year", 38, 600, NAVY, "mm", maxw=w - 60)
-    if stage in (7, 8, 9): d.rounded_rectangle((20, 478, 330, 628), 34, outline=(*GOLD, 255), width=8)
-    if stage == 10: T(d, L, (w // 2, 640), "and she must qualify under her plan", 36, 500, MUTED, "mm", maxw=w - 60)
+    if stage == 4: T(d, L, (w // 2, 722), "$60,000 x 4% = $2,400 a year", 40, 600, NAVY, "mm", maxw=w - 60)
+    if stage in (7, 8, 9): d.rounded_rectangle((20, 490, 310, 626), 34, outline=(*GOLD, 255), width=8)
+    if stage == 10: T(d, L, (w // 2, 722), "and she must qualify under her plan", 38, 500, MUTED, "mm", maxw=w - 60)
     if stage == 0:
-        T(d, L, (w // 2, 80), "Employer match", 54, 700, NAVY, "mm"); T(d, L, (w // 2, 640), "Illustrative example", 34, 500, MUTED, "mm")
+        T(d, L, (w // 2, 80), "Employer match", 54, 700, NAVY, "mm"); T(d, L, (w // 2, 722), "Illustrative example", 34, 500, MUTED, "mm")
     return Img(im, L)
 
 def bubble(text, strike=0.0, w=860, h=330):
     im, d = card(w, h, fill=(255, 255, 255)); L = []
     T(d, L, (w // 2, h // 2 - 10), text, 58, 700, NAVY, "mm", maxw=w - 80)
-    d.polygon([(120, h - 4), (190, h - 4), (110, h + 50)], fill=(255, 255, 255, 255), outline=(*NAVY, 255)); d.rectangle((125, h - 8, 186, h + 2), fill=(255, 255, 255, 255))
     if strike > 0: d.line((40, h - 40, 40 + (w - 80) * clamp(strike), h - 40 - (h - 80) * clamp(strike)), fill=(*RED, 255), width=14)
     return Img(im, L)
 
@@ -75,13 +74,13 @@ def outcomes(stage, w=900, h=520):
         lit = (stage in (1, 2) and k == 0) or (stage in (3, 4) and k == 1) or stage == 0
         show = (stage == 2 and k == 0) or (stage == 4 and k == 1)
         rrect(d, (30, y, w - 30, y + 190), 30, (*(SAGE if lit else CREAM), 255), (*NAVY, 255), 5)
-        T(d, L, (66, y + 50), name, 54, 700, NAVY, "lm"); T(d, L, (66, y + 125), val if show else "take-home pay", 46 if show else 38, 700 if show else 500, NAVY if show else MUTED, "lm", maxw=w - 130)
+        T(d, L, (66, y + 50), name, 54, 700, NAVY, "lm"); T(d, L, (66, y + 125), val if show else "take-home pay", 46 if show else 38, 700 if show else 500, NAVY if (show or lit) else MUTED, "lm", maxw=w - 130)
     return Img(im, L)
 
 def budget(stage, w=860):
     """Budget lines $12 + $40 + $48 = $100 / month (running total always true). stage 0..4."""
     rows = [("Subscription", 12), ("Delivery habit", 40), ("App plans + gym", 48)]
-    n = min(stage, 3); im, d = card(w, 560); L = []
+    n = min(stage, 3); hh = 150 + 100 * max(n, 1) + 150; im, d = card(w, hh); L = []
     T(d, L, (34, 26), "Monthly budget", 36, 600, MUTED)
     tot = 0
     for i, (lab, amt) in enumerate(rows):
@@ -90,9 +89,10 @@ def budget(stage, w=860):
             tot += amt; rrect(d, (22, y - 8, w - 22, y + 76), 24, (255, 255, 255, 255), (*SAGE, 255), 4)
             T(d, L, (50, y + 34), lab, 44, 600, NAVY, "lm"); T(d, L, (w - 50, y + 34), f"${amt}", 52, 700, NAVY, "rm")
     if n:
-        T(d, L, (w - 50, 430), f"${tot} so far" if n < 3 else f"= ${tot} / month", 54 if n < 3 else 66, 700, NAVY, "rm")
-    if stage >= 4: d.rounded_rectangle((16, 395, w - 16, 475), 30, outline=(*GOLD, 255), width=8)
-    T(d, L, (34, 520), "Illustrative example", 34, 500, MUTED, "lm")
+        ty = 100 + 100 * n + 40
+        T(d, L, (w - 50, ty), f"${tot} so far" if n < 3 else f"= ${tot} / month", 54 if n < 3 else 66, 700, NAVY, "rm")
+        if stage >= 4: d.rounded_rectangle((16, ty - 42, w - 16, ty + 42), 30, outline=(*GOLD, 255), width=8)
+    T(d, L, (34, hh - 40), "Illustrative example", 34, 500, MUTED, "lm")
     return Img(im, L)
 
 def contrib_ui(pct, p_change=0.0, save_pulse=0.0, saved=False, w=860, h=470):
@@ -187,9 +187,9 @@ def streams(t, w=860, h=470):
     rrect(d, (570, 160, w - 30, 320), 30, (255, 255, 255, 255), (*NAVY, 255), 5); T(d, L, ((570 + w - 30) // 2, 215), "401(k)", 52, 700, NAVY, "mm"); T(d, L, ((570 + w - 30) // 2, 275), "account", 36, 500, MUTED, "mm")
     return Img(im, L)
 
-def calendar(years, label, stage, w=900, h=560):
+def calendar(years, label, stage, w=900, h=None):
     """Calendar of years: `years` ticks (3 already worked, or 10 more), each Year = $1,200 left unclaimed (stage shows the total)."""
-    im, d = card(w, h); L = []
+    h = 110 + 150 * ((years + 4) // 5) + 20; im, d = card(w, h); L = []
     T(d, L, (34, 24), label, 38, 600, MUTED, maxw=w - 68)
     cols = 5; n = years
     for i in range(n):
