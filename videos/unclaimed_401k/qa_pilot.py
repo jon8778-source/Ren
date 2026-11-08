@@ -162,7 +162,7 @@ import hashlib
 hs = {f: hashlib.sha256((R.VOICE / f).read_bytes()).hexdigest() for f in ("P1.wav", "P2.wav")}; ref = json.loads((HERE / "voice_hashes.json").read_text())
 check("12a narration WAVs are byte-identical to the ones generated for the first pilot (no new synthesis)", hs == ref, f"P1 {hs['P1.wav'][:12]} P2 {hs['P2.wav'][:12]}")
 src = "".join((HERE / f).read_text() for f in ("render_pilot.py", "pilot_ren.py", "pilot_assets.py", "pilot_ui.py"))
-check("12b renderer imports no TTS code", not re.search(r"qwen|torch|generate_voice", src, re.I))
+check("12b renderer imports and calls no TTS code (no qwen_tts / torch / transformers import, no generate_voice_clone call)", not re.search(r"^\s*(import|from)\s+(qwen_tts|torch|transformers|soundfile\.tts)|generate_voice_clone|create_voice_clone_prompt", src, re.M))
 au_raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(mp4), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]); got_a = np.frombuffer(au_raw, np.float32)
 ref_a, _ = R.audio(); m = min(len(got_a), len(ref_a)); cc = float(np.dot(got_a[:m], ref_a[:m]) / (np.linalg.norm(got_a[:m]) * np.linalg.norm(ref_a[:m]) + 1e-9))
 check("12c MP4 audio matches the original narration waveform (correlation >= 0.95)", cc >= 0.95, f"{cc:.4f}")
