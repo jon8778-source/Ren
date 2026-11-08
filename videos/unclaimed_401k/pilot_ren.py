@@ -33,32 +33,34 @@ def cut_out(rgb):
     c = rgb.astype(np.float32); c = np.where(a > 0.02, (c - (1 - a) * 255.0) / np.maximum(a, 0.02), 0)
     return np.concatenate([np.clip(c, 0, 255), a * 255], 2).astype(np.uint8)
 
-def _decode(clip, start, n):
-    raw = subprocess.check_output(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-i", str(LIB / f"{clip}.mp4"), "-frames:v", str(n), "-vf", "fps=24,format=rgb24", "-f", "rawvideo", "-"])
+def _decode(clip, start, n, mirror=False):
+    raw = subprocess.check_output(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-i", str(LIB / f"{clip}.mp4"), "-frames:v", str(n), "-vf", "fps=24," + ("hflip," if mirror else "") + "format=rgb24", "-f", "rawvideo", "-"])
     return np.frombuffer(raw, np.uint8).reshape(-1, 720, 1280, 3)
 
 class RenClip:
     """`seconds` of `clip` starting at `start`. Anchors (feet row, centre column, standing height) come from the clip's own neutral first frame."""
-    def __init__(self, clip, start, seconds, cx_plate=420, feet_plate=770):
+    def __init__(self, clip, start, seconds, cx_plate=420, feet_plate=770, mirror=False):
         n = int(np.ceil(seconds * FPS - 1e-6)); self.clip, self.start = clip, start
-        neutral = cut_out(_decode(clip, 0, 1)[0]); al = neutral[..., 3] > 128
+        neutral = cut_out(_decode(clip, 0, 1, mirror)[0]); al = neutral[..., 3] > 128
         rows = np.where(al.any(1))[0]; self.top, self.feet = int(rows.min()), int(rows.max())
         leg = np.where(al[self.feet - 120:self.feet + 1].any(0))[0]; self.cx = float((leg.min() + leg.max()) / 2)
         self.h_clip = self.feet - self.top
-        self.frames = [cut_out(f) for f in _decode(clip, start, n)]
+        self.frames = [cut_out(f) for f in _decode(clip, start, n, mirror)]; self.mirror = mirror
         assert len(self.frames) >= n, (clip, len(self.frames), n)
         self.n = n; self.cxp, self.fp = cx_plate, feet_plate
         # crop every frame to the union of Ren's pixels so the per-frame transform stays small (positions are unchanged)
         solid = np.zeros((720, 1280), bool)
         for f in self.frames: solid |= f[..., 3] > 8
+        frames = self.frames
         cols, rows = np.where(solid.any(0))[0], np.where(solid.any(1))[0]
         self.box = (max(0, int(cols.min()) - 4), max(0, int(rows.min()) - 4), min(1280, int(cols.max()) + 5), min(720, int(rows.max()) + 5))
         x0, y0, x1, y1 = self.box
-        self.imgs = [Image.fromarray(f[y0:y1, x0:x1], "RGBA") for f in self.frames]
+        self.imgs = [Image.fromarray(f[y0:y1, x0:x1], "RGBA") for f in frames]
         H_plate = height_px("OFFICE_SAGE", feet_plate)          # 175 cm at this floor row, in plate px
         self.scale = H_plate * PK / self.h_clip                 # clip px -> frame px
         self.fx, self.fy = cx_plate * PK, feet_plate * PK
         self.feet_rec = []
+        del self.frames                                           # keep only the cropped images (memory)
 
     def draw(self, frame, t):
         i = min(max(int(t * FPS + 1e-6), 0), self.n - 1)
