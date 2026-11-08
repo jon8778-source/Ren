@@ -1,5 +1,11 @@
 # Ren project instructions
 
+For every new or substantially revised long-form Ren video, read
+`project/REN_LONGFORM_BASELINE.md`, `project/REN_VIDEO_RULES.md`, and
+`project/REN_LONGFORM_CHECKLIST.md` before planning or production. The baseline's
+owner-approval gates apply unless the owner explicitly directs otherwise. The
+current hybrid/Qwen rules take precedence over conflicting historical guidance.
+
 For new hybrid animation prototypes, read project/REN_VIDEO_RULES.md first.
 These owner-approved v3 rules supersede conflicting older prototype styling
 in CLAUDE.md and project/DECISIONS.md. Continue using their existing workflow
