@@ -133,11 +133,11 @@ def shot_frame(i, s, B):
     elif s["kind"] == "ren":
         f = A.plate("SAGE"); c = ren_for(s); bx, idx = c.draw(f, t); B.ren, B.ren_i = bx, idx
         img = s["panel"](t); x = 1880 - img.im.width; y = int(max(40, min(540 - img.im.height / 2 - 20, 950 - img.im.height)))
-        R.slide_in(f, img, x, y, t, 0.15, B=B)
+        R.slide_in(f, img, x, y, t, 0.0, dur=0.5, frm=0, B=B)
     elif s["kind"] == "graphic":
         f = R.backdrop("O1", 16, 0.58); img = s["panel"](t); sc = s["s"] or min(1.45, 1700 / img.im.width, 800 / img.im.height); img = scaled(img, sc)
         x = (W - img.im.width) / 2; y = max(40, min((H - img.im.height) / 2 - 30, 950 - img.im.height))
-        R.slide_in(f, img, x, y, t, 0.0, dur=0.25, frm=0, B=B)
+        R.slide_in(f, img, x, y, t, 0.0, dur=0.0, frm=0, B=B)
     elif s["kind"] == "still":
         im = Image.open(A.ART / "stills" / f"{s['image']}.png").convert("RGB"); z = 1.0 + 0.06 * U.ease(t / d)
         base = im.resize((W, H), Image.LANCZOS).convert("RGBA"); f = R.zoom(base, z, W * 0.45, H * 0.45)
@@ -190,7 +190,7 @@ def main():
         futs = [ex.submit(render_range, (edges[k], edges[k + 1], o / f"_seg{k}.mp4")) for k in range(n)]; segs = [f.result() for f in futs]
     lst = o / "_segs.txt"; lst.write_text("".join(f"file '{s}'\n" for s in segs))
     au, sr = audio(); wav = o / f"{a.name}_audio.wav"; sf.write(wav, au, sr); mp4 = o / f"{a.name}.mp4"
-    subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-i", str(wav), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-af", "apad", "-shortest", "-movflags", "+faststart", str(mp4)])
+    subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-i", str(wav), "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-af", "apad,volume=-0.3dB", "-shortest", "-movflags", "+faststart", str(mp4)])
     for s in segs: Path(s).unlink()
     lst.unlink()
     allshots = [dict(id=x["id"], type=x["type"], phrase=x["phrase"], scene=R.SCENE[x["id"]], start=x["fa"] / FPS, end=x["fb"] / FPS, fa=x["fa"], fb=x["fb"], pilot=True) for x in R.SHOTS[:-1]]

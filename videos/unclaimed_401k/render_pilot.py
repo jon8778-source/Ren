@@ -135,7 +135,7 @@ def chip_edu(f, T, B):
         U.pill(f, "Educational only. Illustrative example.", 60, 48, px=32, weight=500, alpha=a, boxes=B, pad=(22, 10))
 
 def slide_in(f, img, x_to, y, t, t0, dur=0.45, frm=60, B=None, fade=True):
-    p = U.ease((t - t0) / dur)
+    p = 1.0 if dur <= 0 else U.ease((t - t0) / dur)       # dur <= 0: appears at once (a hard cut to the graphic)
     if t < t0: return
     x = x_to + frm * (1 - p)
     U.put(f, img.im, x, y, alpha=min(1.0, p * 1.6) if fade else 1.0, boxes=B, texts=img.texts)

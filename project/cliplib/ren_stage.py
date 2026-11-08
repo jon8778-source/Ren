@@ -42,13 +42,19 @@ _MIP_STEP = 12
 
 
 def _mip(img, h):
-    key = (id(img), int(h // _MIP_STEP))
-    m = _MIP.get(key)
-    if m is None:
-        th = int(h // _MIP_STEP) * _MIP_STEP + _MIP_STEP
-        tw = max(1, round(img.width * th / img.height))
-        m = img.resize((tw, th), Image.LANCZOS)
-        _MIP[key] = m
+    """Pre-scaled copy of `img` for height `h` (one per 12 px step). The cache keeps a reference to the source image and checks
+    identity: keying on id(img) alone returned a stale mip of a DIFFERENT image once the original was garbage-collected and its id
+    reused (a stretched or wrong frame for a few frames; found in the 401(k) episode render, Nov 2026)."""
+    key = (id(img), img.size, int(h // _MIP_STEP))
+    hit = _MIP.get(key)
+    if hit is not None and hit[0] is img:
+        return hit[1]
+    th = int(h // _MIP_STEP) * _MIP_STEP + _MIP_STEP
+    tw = max(1, round(img.width * th / img.height))
+    m = img.resize((tw, th), Image.LANCZOS)
+    if len(_MIP) > 4000:
+        _MIP.clear()
+    _MIP[key] = (img, m)
     return m
 
 
