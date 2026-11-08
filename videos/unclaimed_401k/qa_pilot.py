@@ -118,7 +118,9 @@ for sh in ren_shots:
     x0, y0, x1, y1 = [int(v) for v in (min(b.ren[0] for b in boxes) - 6, min(b.ren[1] for b in boxes) - 6, max(b.ren[2] for b in boxes) + 6, max(b.ren[3] for b in boxes) + 6)]
     ren_move = d[:, max(y0, 0):y1, max(x0, 0):x1].mean((1, 2)); bg = d[:, 0:200, 1000:1900].mean((1, 2))
     check(f"9d {sh['id']} Ren genuinely moves: mean in-box change {ren_move.mean():.2f}/255, moving in {int((ren_move > 0.15).sum())} of {len(ren_move)} frame steps, {len(set(idx))} distinct clip frames", ren_move.mean() > 0.3 and (ren_move > 0.15).sum() >= 0.6 * len(ren_move) and len(set(idx)) == n)
-    check(f"9e {sh['id']} no camera move: static background region change {bg.max():.3f}", bg.max() < 0.01)
+    rf = [np.asarray(R.frame_at(i)[0].convert("RGB"))[0:200, 1000:1900].astype(np.int16) for i in range(sh["fa"], sh["fb"])]
+    exact = max(int(np.abs(rf[k + 1] - rf[k]).max()) for k in range(len(rf) - 1))
+    check(f"9e {sh['id']} no camera move or pan: background region unchanged in every rendered frame (max change {exact}/255; encoded video {bg.max():.2f}, codec noise only)", exact == 0 and bg.max() < 0.8)
     mid = boxes[len(boxes) // 2]; tb = [b for b in mid if True]
     xs = [b[0] for b in mid]; clash = [b for b in mid if not (b[2] < mid.ren[0] or b[0] > mid.ren[2] or b[3] < mid.ren[1] or b[1] > mid.ren[3])]
     check(f"9f {sh['id']} Ren on the left, graphics on the right, no text over Ren", (mid.ren[0] + mid.ren[2]) / 2 < 960 and not [b for b in mid if b[4] != "Ren" and b[0] < mid.ren[2]] and not [b for b in clash if b[4] != "Ren"], f"Ren x {mid.ren[0]:.0f}-{mid.ren[2]:.0f}")
@@ -159,7 +161,7 @@ check("11 constant 24 fps: r_frame_rate and avg_frame_rate 24/1, every packet 1/
 import hashlib
 hs = {f: hashlib.sha256((R.VOICE / f).read_bytes()).hexdigest() for f in ("P1.wav", "P2.wav")}; ref = json.loads((HERE / "voice_hashes.json").read_text())
 check("12a narration WAVs are byte-identical to the ones generated for the first pilot (no new synthesis)", hs == ref, f"P1 {hs['P1.wav'][:12]} P2 {hs['P2.wav'][:12]}")
-src = "".join((HERE / f).read_text() for f in ("render_pilot.py", "pilot_ren.py", "pilot_assets.py", "pilot_ui.py", "qa_pilot.py"))
+src = "".join((HERE / f).read_text() for f in ("render_pilot.py", "pilot_ren.py", "pilot_assets.py", "pilot_ui.py"))
 check("12b renderer imports no TTS code", not re.search(r"qwen|torch|generate_voice", src, re.I))
 au_raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(mp4), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]); got_a = np.frombuffer(au_raw, np.float32)
 ref_a, _ = R.audio(); m = min(len(got_a), len(ref_a)); cc = float(np.dot(got_a[:m], ref_a[:m]) / (np.linalg.norm(got_a[:m]) * np.linalg.norm(ref_a[:m]) + 1e-9))
