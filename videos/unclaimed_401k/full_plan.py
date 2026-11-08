@@ -50,7 +50,7 @@ CA("T02", "S4", "I can't just find another hundred dollars every month.", [(0, S
 CA("T03", "S4", "Rent doesn't disappear because a spreadsheet looks exciting.", [(0, R2), (1.6, R1)], cards=[at(lambda t: F.chips(["Rent due"], 0, w=640), 1220, 150, 0.0)])
 CA("T04a", "S4", "And this is where some videos would shout,", [(0, R2), (1.0, R1)])
 G("T04b", "S4", "It's free money, do it now!", lambda t: F.bubble("It's free money, do it now!"))
-G("T05", "S4", "But it's not quite that simple.", lambda t: F.bubble("It's free money, do it now!", strike=0.1 + 0.9 * U.ease(t / 1.2)))
+G("T05", "S4", "But it's not quite that simple.", lambda t: F.bubble("It's free money, do it now!", strike=0.4 + 0.6 * U.ease(t / 1.2)))
 CA("T06", "S4", "To unlock the extra match,", [(0, R1), (0.9, S5)])
 G("T07a", "S4", "Maya would contribute an extra hundred dollars a month", lambda t: F.stat_card("Extra each month", "+$100 / month", tag="Illustrative example"))
 G("T07b", "S4", "from her gross salary.", lambda t: F.note_card("Where it comes from", ["Her gross salary"], 0, sub="Before take-home pay"))
