@@ -124,8 +124,8 @@ def side_card(title, value, w=380, tone="sage", vpx=64):
     return Img(im, L)
 
 def cta_card(w=380):
-    im, d = card(w, 470, fill=SAGE); L = []
-    for i, s in enumerate(("Money Leak", "Audit Workbook", "in the", "description")): _t(d, L, (w // 2, 70 + 96 * i), s, 46, 700, NAVY, "mm")
+    im, d = card(w, 560, fill=SAGE); L = []
+    for i, s in enumerate(("Money Leak", "Audit", "Workbook", "in the", "description")): _t(d, L, (w // 2, 66 + 96 * i), s, 50, 700, NAVY, "mm")
     return Img(im, L)
 
 def phone_screen(state, w=300, h=560):
