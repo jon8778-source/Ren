@@ -1,5 +1,14 @@
 # Ren Video Production & Decision Log
 
+## Current long-form baseline — 8 November 2026
+
+The owner approved the overall visual and storytelling direction of the 401(k)
+video as the new long-form baseline. Read `REN_LONGFORM_BASELINE.md`,
+`REN_VIDEO_RULES.md` and `REN_LONGFORM_CHECKLIST.md` for new long-form work.
+The white-background, static-bust and Kokoro decisions recorded below are
+historical and apply only to legacy work where explicitly required. Do not apply
+their automatic Shorts, thumbnail or merge steps to a new long-form request.
+
 ## Current prototype update — 27 October 2026
 
 Owner requested the newer hybrid style and voice reference integration. For animation prototypes,
