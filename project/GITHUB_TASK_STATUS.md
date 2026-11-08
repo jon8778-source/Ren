@@ -12,7 +12,14 @@ and matching source commit remain unverified. The branch's package report is
 for a differently named 3:57.3 video; do not conflate them. Source checkpoint `c230228` pushed/fetched; all seven changed files verified
 byte-identical remotely. Pull request creation was attempted via GitHub CLI but
 `api.github.com/graphql` returned Forbidden; no GitHub app tools are available.
-PR and video archival/inspection remain pending. No merge, publication, TTS or video render.
+On continuation, the owner's compressed Google Drive folder was attempted, but
+the environment proxy rejected `drive.google.com` with HTTP 403 before folder
+access; folder privacy could not be determined. The related 3:57 rough-cut contact
+sheet was inspected as a still, not as the supplied video. Visual conclusions
+requiring the actual 5:42 reference are recorded in REN_LONGFORM_REFERENCE.md.
+Another authorized PR creation attempt returned Forbidden from GitHub GraphQL;
+no GitHub connector is available. PR and video archival/inspection remain pending.
+No merge, publication, TTS or video render.
 
 ---
 
