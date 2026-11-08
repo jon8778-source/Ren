@@ -1,0 +1,301 @@
+{
+  "scenes": {
+    "armchair-phone": [
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          204.0,
+          738.0,
+          239.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 0.20833333333333334,
+        "end": 2.625
+      }
+    ],
+    "phone-cancel": [
+      {
+        "text": "My plans",
+        "bbox": [
+          204.8,
+          473.1,
+          424.7,
+          556.3
+        ],
+        "font_px": 47.9,
+        "role": "text",
+        "start": 2.625,
+        "end": 5.5
+      },
+      {
+        "text": "Premium plan",
+        "bbox": [
+          175.7,
+          618.0,
+          493.8,
+          707.5
+        ],
+        "font_px": 47.9,
+        "role": "text",
+        "start": 2.625,
+        "end": 5.5
+      },
+      {
+        "text": "$12 / month",
+        "bbox": [
+          191.2,
+          714.9,
+          512.1,
+          812.0
+        ],
+        "font_px": 57.5,
+        "role": "text",
+        "start": 2.625,
+        "end": 5.5
+      },
+      {
+        "text": "Active",
+        "bbox": [
+          207.7,
+          830.4,
+          359.2,
+          899.6
+        ],
+        "font_px": 47.9,
+        "role": "text",
+        "start": 2.625,
+        "end": 5.5
+      },
+      {
+        "text": "Cancel plan",
+        "bbox": [
+          256.7,
+          1009.6,
+          515.0,
+          1096.3
+        ],
+        "font_px": 47.9,
+        "role": "text",
+        "start": 2.625,
+        "end": 5.5
+      },
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          204.0,
+          738.0,
+          239.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 2.625,
+        "end": 3.0
+      },
+      {
+        "text": "Ended",
+        "bbox": [
+          207.7,
+          830.4,
+          354.5,
+          884.7
+        ],
+        "font_px": 48.4,
+        "role": "text",
+        "start": 4.208333333333333,
+        "end": 5.5
+      },
+      {
+        "text": "Canceled",
+        "bbox": [
+          325.1,
+          1018.9,
+          527.4,
+          1078.0
+        ],
+        "font_px": 48.4,
+        "role": "text",
+        "start": 4.208333333333333,
+        "end": 5.5
+      }
+    ],
+    "armchair-email": [
+      {
+        "text": "Plan canceled",
+        "bbox": [
+          428.0,
+          235.0,
+          762.2,
+          271.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 6.166666666666667,
+        "end": 9.25
+      },
+      {
+        "text": "Confirmation email",
+        "bbox": [
+          428.0,
+          301.0,
+          821.2,
+          332.0
+        ],
+        "font_px": 42.0,
+        "role": "text",
+        "start": 6.166666666666667,
+        "end": 9.25
+      },
+      {
+        "text": "Ends today",
+        "bbox": [
+          330.0,
+          372.0,
+          594.2,
+          416.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 6.166666666666667,
+        "end": 9.25
+      }
+    ],
+    "armchair-laptop": [],
+    "armchair-alert": [
+      {
+        "text": "Benefits alert",
+        "bbox": [
+          368.0,
+          342.0,
+          682.0,
+          380.0
+        ],
+        "font_px": 50.0,
+        "role": "text",
+        "start": 12.583333333333334,
+        "end": 14.875
+      },
+      {
+        "text": "Employer contribution",
+        "bbox": [
+          270.0,
+          440.0,
+          756.0,
+          487.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 12.583333333333334,
+        "end": 14.875
+      },
+      {
+        "text": "available",
+        "bbox": [
+          270.0,
+          504.0,
+          469.0,
+          539.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 12.583333333333334,
+        "end": 14.875
+      },
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 12.833333333333334,
+        "end": 14.875
+      }
+    ],
+    "portal-numbers": [
+      {
+        "text": "Benefits portal",
+        "bbox": [
+          375.0,
+          554.0,
+          704.0,
+          601.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 14.875,
+        "end": 15.0
+      },
+      {
+        "text": "You contribute",
+        "bbox": [
+          182.0,
+          693.0,
+          484.0,
+          727.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 14.875,
+        "end": 15.0
+      },
+      {
+        "text": "2%",
+        "bbox": [
+          817.0,
+          687.0,
+          898.0,
+          735.0
+        ],
+        "font_px": 60.0,
+        "role": "text",
+        "start": 14.875,
+        "end": 15.0
+      },
+      {
+        "text": "Employer match available",
+        "bbox": [
+          182.0,
+          844.0,
+          722.0,
+          888.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 14.875,
+        "end": 15.0
+      },
+      {
+        "text": "Illustrative example",
+        "bbox": [
+          355.0,
+          1236.0,
+          726.0,
+          1275.0
+        ],
+        "font_px": 42.0,
+        "role": "text",
+        "start": 14.875,
+        "end": 15.0
+      },
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 14.875,
+        "end": 15.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,1216 @@
+{
+ "duration": 58.715,
+ "words": [
+  {
+   "section": "P1",
+   "word": "Maya",
+   "start": 0.0,
+   "end": 0.34,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "saved",
+   "start": 0.34,
+   "end": 0.7,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "twelve",
+   "start": 0.787,
+   "end": 0.873,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "dollars",
+   "start": 0.96,
+   "end": 1.047,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "last",
+   "start": 1.22,
+   "end": 1.74,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "night.",
+   "start": 1.74,
+   "end": 2.14,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "She",
+   "start": 2.64,
+   "end": 2.92,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "canceled",
+   "start": 2.92,
+   "end": 3.28,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "a",
+   "start": 3.28,
+   "end": 3.5,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "subscription",
+   "start": 3.5,
+   "end": 3.96,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "she",
+   "start": 3.96,
+   "end": 4.26,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "barely",
+   "start": 4.26,
+   "end": 4.58,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "used,",
+   "start": 4.58,
+   "end": 5.1,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "checked",
+   "start": 5.5,
+   "end": 5.64,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "the",
+   "start": 5.64,
+   "end": 5.86,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "confirmation",
+   "start": 5.86,
+   "end": 6.36,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "email,",
+   "start": 6.36,
+   "end": 6.74,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "and",
+   "start": 7.12,
+   "end": 7.28,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "felt",
+   "start": 7.28,
+   "end": 7.46,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "pretty",
+   "start": 7.46,
+   "end": 7.78,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "good",
+   "start": 7.78,
+   "end": 7.94,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "about",
+   "start": 7.94,
+   "end": 8.14,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "it.",
+   "start": 8.14,
+   "end": 8.58,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "Then",
+   "start": 9.24,
+   "end": 9.42,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "she",
+   "start": 9.42,
+   "end": 9.66,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "opened",
+   "start": 9.66,
+   "end": 9.92,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "her",
+   "start": 9.92,
+   "end": 10.14,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "work",
+   "start": 10.14,
+   "end": 10.34,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "benefits",
+   "start": 10.34,
+   "end": 10.72,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "portal.",
+   "start": 10.72,
+   "end": 11.08,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "There",
+   "start": 11.72,
+   "end": 11.88,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "was",
+   "start": 11.88,
+   "end": 12.0,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "a",
+   "start": 12.0,
+   "end": 12.16,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "number",
+   "start": 12.16,
+   "end": 12.38,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "sitting",
+   "start": 12.38,
+   "end": 12.68,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "in",
+   "start": 12.68,
+   "end": 12.9,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "there",
+   "start": 12.9,
+   "end": 13.06,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "that",
+   "start": 13.06,
+   "end": 13.24,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "made",
+   "start": 13.24,
+   "end": 13.42,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "the",
+   "start": 13.42,
+   "end": 13.6,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "subscription",
+   "start": 13.6,
+   "end": 14.1,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "look",
+   "start": 14.1,
+   "end": 14.36,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "tiny.",
+   "start": 14.36,
+   "end": 14.78,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "One",
+   "start": 14.867,
+   "end": 14.955,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "hundred",
+   "start": 15.043,
+   "end": 15.13,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "dollars",
+   "start": 15.217,
+   "end": 15.305,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "a",
+   "start": 15.48,
+   "end": 15.94,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "month.",
+   "start": 15.94,
+   "end": 16.22,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "Twelve",
+   "start": 16.348,
+   "end": 16.475,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "hundred",
+   "start": 16.602,
+   "end": 16.73,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "dollars",
+   "start": 16.857,
+   "end": 16.985,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "a",
+   "start": 17.24,
+   "end": 17.76,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "year.",
+   "start": 17.76,
+   "end": 18.12,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "Her",
+   "start": 18.56,
+   "end": 18.8,
+   "sentence_start": true
+  },
+  {
+   "section": "P1",
+   "word": "employer",
+   "start": 18.8,
+   "end": 19.22,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "was",
+   "start": 19.22,
+   "end": 19.42,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "willing",
+   "start": 19.42,
+   "end": 19.7,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "to",
+   "start": 19.7,
+   "end": 19.88,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "put",
+   "start": 19.88,
+   "end": 20.0,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "that",
+   "start": 20.0,
+   "end": 20.18,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "into",
+   "start": 20.18,
+   "end": 20.36,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "her",
+   "start": 20.36,
+   "end": 20.56,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "retirement",
+   "start": 20.56,
+   "end": 20.98,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "account,",
+   "start": 20.98,
+   "end": 21.4,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "but",
+   "start": 21.64,
+   "end": 21.84,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "only",
+   "start": 21.84,
+   "end": 22.12,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "if",
+   "start": 22.12,
+   "end": 22.3,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "she",
+   "start": 22.3,
+   "end": 22.44,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "made",
+   "start": 22.44,
+   "end": 22.64,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "one",
+   "start": 22.64,
+   "end": 22.9,
+   "sentence_start": false
+  },
+  {
+   "section": "P1",
+   "word": "change.",
+   "start": 22.9,
+   "end": 23.36,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "But",
+   "start": 23.63,
+   "end": 23.87,
+   "sentence_start": true
+  },
+  {
+   "section": "S3",
+   "word": "Maya's",
+   "start": 23.87,
+   "end": 24.27,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "been",
+   "start": 24.27,
+   "end": 24.43,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "putting",
+   "start": 24.43,
+   "end": 24.67,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "in",
+   "start": 24.67,
+   "end": 24.91,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "two",
+   "start": 25.057,
+   "end": 25.203,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "percent.",
+   "start": 25.35,
+   "end": 25.497,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "That's",
+   "start": 25.79,
+   "end": 26.33,
+   "sentence_start": true
+  },
+  {
+   "section": "S3",
+   "word": "twelve",
+   "start": 26.377,
+   "end": 26.423,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "hundred",
+   "start": 26.47,
+   "end": 26.517,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "a",
+   "start": 26.61,
+   "end": 27.05,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "year",
+   "start": 27.05,
+   "end": 27.21,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "from",
+   "start": 27.21,
+   "end": 27.45,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "her,",
+   "start": 27.45,
+   "end": 27.71,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "with",
+   "start": 28.01,
+   "end": 28.17,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "twelve",
+   "start": 28.277,
+   "end": 28.383,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "hundred",
+   "start": 28.49,
+   "end": 28.597,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "matched",
+   "start": 28.81,
+   "end": 29.27,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "by",
+   "start": 29.27,
+   "end": 29.53,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "work.",
+   "start": 29.53,
+   "end": 29.85,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "She's",
+   "start": 30.12,
+   "end": 30.34,
+   "sentence_start": true
+  },
+  {
+   "section": "S3",
+   "word": "been",
+   "start": 30.34,
+   "end": 30.48,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "getting",
+   "start": 30.48,
+   "end": 30.76,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "half",
+   "start": 30.76,
+   "end": 30.98,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "the",
+   "start": 30.98,
+   "end": 31.14,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "match",
+   "start": 31.14,
+   "end": 31.36,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "she",
+   "start": 31.36,
+   "end": 31.54,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "could",
+   "start": 31.54,
+   "end": 31.68,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "receive.",
+   "start": 31.68,
+   "end": 32.12,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "The",
+   "start": 32.58,
+   "end": 32.68,
+   "sentence_start": true
+  },
+  {
+   "section": "S3",
+   "word": "missing",
+   "start": 32.68,
+   "end": 32.94,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "half",
+   "start": 32.94,
+   "end": 33.24,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "is",
+   "start": 33.24,
+   "end": 33.38,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "another",
+   "start": 33.38,
+   "end": 33.68,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "twelve",
+   "start": 33.75,
+   "end": 33.82,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "hundred",
+   "start": 33.89,
+   "end": 33.96,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "dollars",
+   "start": 34.03,
+   "end": 34.1,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "a",
+   "start": 34.24,
+   "end": 34.66,
+   "sentence_start": false
+  },
+  {
+   "section": "S3",
+   "word": "year.",
+   "start": 34.66,
+   "end": 34.94,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Leave",
+   "start": 35.21,
+   "end": 35.39,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "it",
+   "start": 35.39,
+   "end": 35.55,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "unclaimed",
+   "start": 35.55,
+   "end": 35.95,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "for",
+   "start": 35.95,
+   "end": 36.21,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "ten",
+   "start": 36.265,
+   "end": 36.32,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "more",
+   "start": 36.43,
+   "end": 36.67,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "years,",
+   "start": 36.67,
+   "end": 37.07,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "and",
+   "start": 37.29,
+   "end": 37.49,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "that's",
+   "start": 37.49,
+   "end": 37.79,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "twelve",
+   "start": 37.87,
+   "end": 37.95,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "thousand",
+   "start": 38.03,
+   "end": 38.11,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "dollars",
+   "start": 38.19,
+   "end": 38.27,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "of",
+   "start": 38.43,
+   "end": 38.83,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "employer",
+   "start": 38.83,
+   "end": 39.17,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "contributions",
+   "start": 39.17,
+   "end": 39.75,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "alone,",
+   "start": 39.75,
+   "end": 40.17,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "before",
+   "start": 40.17,
+   "end": 40.63,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "considering",
+   "start": 40.63,
+   "end": 41.11,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "any",
+   "start": 41.11,
+   "end": 41.47,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "investment",
+   "start": 41.47,
+   "end": 41.83,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "growth,",
+   "start": 41.83,
+   "end": 42.17,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "changes",
+   "start": 42.61,
+   "end": 42.85,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "in",
+   "start": 42.85,
+   "end": 43.09,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "salary,",
+   "start": 43.09,
+   "end": 43.45,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "or",
+   "start": 43.85,
+   "end": 43.99,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "changes",
+   "start": 43.99,
+   "end": 44.31,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "to",
+   "start": 44.31,
+   "end": 44.51,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "the",
+   "start": 44.51,
+   "end": 44.67,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "plan.",
+   "start": 44.67,
+   "end": 44.93,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "I'm",
+   "start": 45.2,
+   "end": 45.38,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "Ren.",
+   "start": 45.38,
+   "end": 45.58,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "And",
+   "start": 45.84,
+   "end": 46.02,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "sometimes",
+   "start": 46.02,
+   "end": 46.52,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "the",
+   "start": 46.52,
+   "end": 46.88,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "next",
+   "start": 46.88,
+   "end": 47.1,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "useful",
+   "start": 47.1,
+   "end": 47.54,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "money",
+   "start": 47.54,
+   "end": 47.82,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "move",
+   "start": 47.82,
+   "end": 48.16,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "isn't",
+   "start": 48.16,
+   "end": 48.64,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "earning",
+   "start": 48.64,
+   "end": 48.9,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "more.",
+   "start": 48.9,
+   "end": 49.3,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "It's",
+   "start": 49.84,
+   "end": 50.3,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "noticing",
+   "start": 50.3,
+   "end": 50.7,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "what's",
+   "start": 50.7,
+   "end": 51.0,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "already",
+   "start": 51.0,
+   "end": 51.36,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "on",
+   "start": 51.36,
+   "end": 51.56,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "the",
+   "start": 51.56,
+   "end": 51.7,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "table.",
+   "start": 51.7,
+   "end": 52.06,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Check",
+   "start": 52.72,
+   "end": 52.86,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "out",
+   "start": 52.86,
+   "end": 53.1,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "the",
+   "start": 53.1,
+   "end": 53.28,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Money",
+   "start": 53.28,
+   "end": 53.46,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Leak",
+   "start": 53.46,
+   "end": 53.78,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Audit",
+   "start": 53.78,
+   "end": 54.12,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Workbook",
+   "start": 54.12,
+   "end": 54.6,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "in",
+   "start": 54.6,
+   "end": 54.76,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "the",
+   "start": 54.76,
+   "end": 54.9,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "description.",
+   "start": 54.9,
+   "end": 55.32,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "Educational",
+   "start": 55.98,
+   "end": 56.58,
+   "sentence_start": true
+  },
+  {
+   "section": "S8",
+   "word": "only,",
+   "start": 56.58,
+   "end": 57.04,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "not",
+   "start": 57.46,
+   "end": 57.6,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "financial",
+   "start": 57.6,
+   "end": 58.12,
+   "sentence_start": false
+  },
+  {
+   "section": "S8",
+   "word": "advice.",
+   "start": 58.12,
+   "end": 58.54,
+   "sentence_start": false
+  }
+ ]
+}

@@ -52,3 +52,6 @@ o4.paste(src4, b4[:2], mask4); o4.save(OUT / "O1_4k.png")
 # the approved sage office (Ren's background) at 3840x2160
 Image.open(Path("/tmp/claude-0/cv3/project/prototypes/coffee-minute-v3/assets/office.png")).convert("RGB").resize((3840, 2160), Image.LANCZOS).save(OUT / "SAGE_4k.png")
 Image.open(Path("/tmp/claude-0/cv3/project/prototypes/coffee-minute-v3/assets/office.png")).convert("RGB").resize((1920, 1080), Image.LANCZOS).save(OUT / "SAGE.png")
+
+# H1 at 3840x2160 for the portrait Short (the living room, Maya in the armchair)
+Image.open(SRC / "H1_living_room_evening_3840x2160.png").convert("RGB").save(OUT / "H1_4k.png")
