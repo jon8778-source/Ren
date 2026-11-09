@@ -32,7 +32,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thr
 | 7 claim arithmetic (760 + 390 + 1,050 = 2,200; 2,600 - 2,200 = 400; 50 x 52 = 2,600) and check_numbers.py | PASS |  |
 | 8 Maya sub-pixel placement noise <= 0.12 px (jitter_check method, all four poses) | PASS | worst 0.051px |
 | 9 all 4 Ren cutaways: approved library clips inside their usable windows, feet fixed, 175 cm plate scale, every frame a distinct clip frame, real movement, static camera, Ren left / graphics right | PASS | [] |
-| 10a Maya's measured height equals the calibrated plate perspective (ren_stage height_px for 165 cm, within 3%) and feet are inside the frame | FAIL | ([], [('S12', 759, [625, -24, 893, 942]), ('S12', 761, [625, -24, 893, 942]), ('S12', 763, [625, -24, 893, 942])]) |
+| 10a Maya's measured height equals the calibrated plate perspective (ren_stage height_px for 165 cm, within 3%) and feet are inside the frame | PASS | ([], []) |
 | 10b every Maya shot changes pose or carries a moving prop/overlay (no shot is only a camera move over a still) | PASS | [] |
 | 11 constant 24 fps: every packet 1/24 s apart, no dropped or duplicated timestamps | PASS | 1364 packets, delta 0.04167-0.04167 |
 | 12a voice runner config: Qwen/Qwen3-TTS-12Hz-1.7B-Base, English, x_vector_only_mode=True, Audio/ren_reference.wav, fixed seeds, no speed change | PASS |  |

@@ -1,0 +1,20 @@
+shot,type,start_s,end_s,dur_s,narration,what actually moves
+S01,REN_ANIMATED,0.0,2.0,2.0,Three bills. Thirty days.,Ren clip ren_present_palm_left (mirrored) 1.2 s onward: arm presents; title card slides in
+S02,CHARACTER_ACTION,2.0,5.33,3.33,"First, Maya's car broke down.",camera push-in 1.25-1.4x; Maya neutral to surprised (cross-fade); car-key prop spins and stops
+S03,GRAPHIC,5.33,7.46,2.12,Then came an urgent dental bill.,invoice slides in; URGENT stamp lands (veil backdrop)
+S04,CHARACTER_ACTION,7.46,10.0,2.54,"And just when she thought the month couldn't get worse,",slow push; Maya worried to neutral (cross-fade)
+S05,GRAPHIC,10.0,12.38,2.38,a pipe leaked beneath her kitchen sink.,"drip forms, falls and splashes on the pipe prop (veil backdrop)"
+S06,REN_ANIMATED,12.38,14.92,2.54,The total? Two thousand two hundred dollars.,Ren clip ren_shrug; finished equation card slides in
+S07,CHARACTER_ACTION,14.92,19.38,4.46,"Eighteen months earlier, one unexpected bill had pushed her into debt.","slow push; '18 months earlier' chip, credit card slides in; Maya worried (single pose)"
+S08,CHARACTER_ACTION,19.38,22.25,2.88,"This time, she handled all three.",slow push; Maya worried to relief (cross-fade)
+S09,CHARACTER_ACTION,22.25,26.46,4.21,"But when Maya opened her savings app afterward, she didn't feel proud.",Maya neutral to worried; savings phone inset slides in
+S10,CHARACTER_ACTION,26.46,30.38,3.92,"She saw how much her balance had fallen and thought, I've gone backwards.","slow push; balance phone ($2,600 to $400) and thought bubble slide in"
+S11,REN_ANIMATED,30.38,31.62,1.25,Here's why she hadn't.,Ren clip ren_point_right; 'Not backwards' chip
+S12,CHARACTER_ACTION,31.62,35.25,3.62,"To understand that feeling, go back a year and a half.",Maya relief to neutral (porch); calendar card swaps Today / 18 months earlier
+S13,CHARACTER_ACTION,35.25,37.96,2.71,Maya was doing what so many budgets require:,slow cut-in; Maya neutral; 'Monthly budget' chip slides in
+S13b,CHARACTER_ACTION,37.96,41.67,3.71,"making the rent, groceries and gas stretch until payday.","Maya neutral to worried; Rent, Groceries, Gas chips slide in one by one"
+S14,CHARACTER_ACTION,41.67,43.96,2.29,There wasn't much left between deposits.,slow push; Maya worried; 'Between deposits' chip
+S14b,GRAPHIC,43.96,45.96,2.0,Her savings balance was eighty dollars.,phone inset $80 slides in (veil)
+S15,CHARACTER_ACTION,45.96,48.38,2.42,Then a six-hundred-dollar car repair landed.,push; Maya surprised with envelope; '$600' tag
+S16,CHARACTER_ACTION,48.38,52.92,4.54,"She couldn't just make six hundred dollars appear. So she put the repair on a credit card,",Maya surprised to worried (cross-fade); credit card slides in
+S17,REN_ANIMATED,52.92,56.83,3.92,"postponed a dentist visit, and spent the next few months trying to catch up.",Ren clip ren_thinking; chain Repair > Card > Dentist builds
