@@ -44,7 +44,9 @@ for a in man["assets"]:
 check("3a pack assets on disk match ASSET_MANIFEST.json hashes (Maya poses, props, plates)", not bad, str(bad))
 lib = {c["file"]: c for c in json.loads((TR.ROOT / "assets" / "ren_library" / "ren_library.json").read_text())["clips"]}
 need = [TR.LIB / "Office_parking_lot_car_16x9.png", TR.LIB / "Porch_background_16x9.png", TR.LIB / "Office_background_16x9.png", TR.VOICE / "H.wav", TR.VOICE / "L.wav", TR.ROOT / "Audio" / "ren_reference.wav"]
-miss = [p.name for p in need if not p.exists()]; check("3b approved plates, narration WAVs and the voice reference exist", not miss, str(miss))
+need.append(TR.ART / "plates" / "kitchen_leak_ref.png"); miss = [p.name for p in need if not p.exists()]; check("3b approved plates, narration WAVs and the voice reference exist", not miss, str(miss))
+kb = [TR.BOX_A, TR.BOX_B, TR.BOX_C]; import hashlib as _h
+check("3c S05a/b use only the sink, pipe and bucket area of the owner-supplied kitchen image (crop x >= 780; the woman, who is not the approved Maya, is outside every crop)", all(b[0] >= 780 for b in kb), f"crop left edges {[b[0] for b in kb]}; source SHA-256 {_h.sha256((TR.ART / 'plates' / 'kitchen_leak_ref.png').read_bytes()).hexdigest()[:16]}")
 # 4 decode / format
 r = run(["ffmpeg", "-v", "error", "-xerror", "-i", str(mp4), "-f", "null", "-"]); check("4a full decode clean (-xerror)", r.returncode == 0 and not r.stderr.strip(), r.stderr[:200])
 pr = json.loads(run(["ffprobe", "-v", "error", "-show_streams", "-of", "json", str(mp4)]).stdout); v = next(s for s in pr["streams"] if s["codec_type"] == "video"); a = next(s for s in pr["streams"] if s["codec_type"] == "audio")

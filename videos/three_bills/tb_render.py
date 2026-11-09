@@ -95,8 +95,8 @@ SPEC = [
  ("S02", "CHARACTER_ACTION", "First, Maya's car broke down."),
  ("S03", "GRAPHIC", "Then came an urgent dental bill."),
  ("S04", "CHARACTER_ACTION", "And just when she thought the month couldn't get worse,"),
- ("S05a", "GRAPHIC", "a pipe leaked"),
- ("S05b", "CHARACTER_ACTION", "beneath her kitchen sink."),
+ ("S05a", "STORY_STILL", "a pipe leaked"),
+ ("S05b", "STORY_STILL", "beneath her kitchen sink."),
  ("S06", "REN_ANIMATED", "The total? Two thousand two hundred dollars."),
  ("S07a", "CHARACTER_ACTION", "Eighteen months earlier,"),
  ("S07b", "GRAPHIC", "one unexpected bill had pushed her into debt."),
@@ -194,19 +194,6 @@ def drip(f, x0, y0, y_floor, t, period=0.9, lead=0.15):
     else:
         q = (ph - 0.62) / 0.38; rr = 10 + 70 * q; d.arc((x0 - rr, y_floor - rr * 0.22, x0 + rr, y_floor + rr * 0.22), 0, 360, fill=(*U.NAVY, int(255 * (1 - q))), width=4)
 
-def s_s05a(c):
-    f = c.f; d = ImageDraw.Draw(f); f.paste((214, 206, 190), (0, 0, W, H)); d = ImageDraw.Draw(f)
-    d.rectangle((0, 0, 150, H), fill=(*U.SAGE, 255)); d.rectangle((W - 150, 0, W, H), fill=(*U.SAGE, 255)); d.line((150, 0, 150, H), fill=(*U.NAVY, 255), width=6); d.line((W - 150, 0, W - 150, H), fill=(*U.NAVY, 255), width=6)
-    d.rectangle((150, 930, W - 150, H), fill=(190, 178, 156, 255)); d.line((150, 930, W - 150, 930), fill=(*U.NAVY, 255), width=5)
-    p = pipe_crop(); h = 640; w = p.width * h / p.height; f.alpha_composite(p.resize((int(w), h), Image.LANCZOS), (int(960 - w / 2), 120))
-    x0 = 960 - w / 2 + (446 - 69) * h / 546.0; y0 = 120 + (625 - 79) * h / 546.0 - 8
-    puddle(f, 960, 960, 30 + 260 * ease((c.t + 0.1) / 1.1)); drip(f, x0, y0, 955, c.t)
-def s_s05b(c):
-    f = c.f; kitchen_set(f); cab = T.sink_cabinet(); cx0, cy0 = 960, 440; f.alpha_composite(cab, (cx0, cy0))
-    p = pipe_crop(); h = 250; w = p.width * h / p.height; f.alpha_composite(p.resize((int(w), h), Image.LANCZOS), (int(cx0 + 310 - w / 2), cy0 + 100))
-    x0 = cx0 + 310 - w / 2 + (446 - 69) * h / 546.0; y0 = cy0 + 100 + (625 - 79) * h / 546.0 - 4
-    drip(f, x0, y0, cy0 + 380, c.t, 0.8, 0.0); puddle(f, cx0 + 310, 880, 60 + 330 * ease(c.t / max(c.d, 1e-6)))
-    r = maya_free(f, [(0, "worried"), (0.35, "surprised")], c.t, 520, 930, 780); RP.REC["maya"] = None
 def s_s07a(c):
     cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "worried")], c.t, 580, 800, c.B)
@@ -292,6 +279,37 @@ def s_s14(c):
 def s_s14b(c):
     cam = Cam(1.3, 900, 560); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 700, 820, c.B)
     img = T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 460, 720); p = ease(c.t / 0.4); c.put(img, 1240, int(1080 - 880 * p), rec=p > 0.99)
+
+# ---- S05a/b: the owner-supplied sink-leak illustration (art/plates/kitchen_leak_ref.png, received 9 Nov 2026) ------------------------------
+# Only the pipe, sink, bucket and cabinet area (x >= 790) is used: the woman at the left of the image is NOT the approved Maya design and is cropped out.
+_kit = {}
+def kit():
+    if "k" not in _kit: _kit["k"] = Image.open(ART / "plates" / "kitchen_leak_ref.png").convert("RGB")
+    return _kit["k"]
+def kit_view(box):
+    """Frame (1920x1080) showing image box (x0, y0, x1, y1) at full height; the sides are filled with a blurred, darkened enlargement of the same crop."""
+    x0, y0, x1, y1 = box; k = kit(); s = H / (y1 - y0); w = (x1 - x0) * s
+    big = max(W / (x1 - x0), H / (y1 - y0)); cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    bg = k.transform((W, H), Image.AFFINE, (1 / big, 0, cx - W / 2 / big, 0, 1 / big, cy - H / 2 / big), Image.BICUBIC).filter(ImageFilter.GaussianBlur(24)).convert("RGBA")
+    bg.alpha_composite(Image.new("RGBA", (W, H), (*U.NAVY, 90)))
+    fg = k.transform((int(round(w)), H), Image.AFFINE, ((x1 - x0) / round(w), 0, x0, 0, (y1 - y0) / H, y0), Image.BICUBIC).convert("RGBA")
+    bg.alpha_composite(fg, (int((W - round(w)) / 2), 0)); ox = (W - round(w)) / 2
+    return bg, (lambda x, y: ((x - x0) * s + ox, (y - y0) * s)), s
+def _lerp_box(a, b, p): return tuple(a[i] + (b[i] - a[i]) * p for i in range(4))
+def kit_drip(f, m, s, t, period=0.6, lead=0.1):
+    """Animated drop from the pipe (image x 1163, y 530) into the bucket (water at y ~710) with an expanding ripple; drawn over the artwork."""
+    ph = ((t + lead) % period) / period; d = ImageDraw.Draw(f); X = 1163
+    if ph < 0.7:
+        q = ph / 0.7; y = 535 + (708 - 535) * q * q; fx, fy = m(X, y); r = 7 * s
+        d.ellipse((fx - r * 0.6, fy - r * 1.1, fx + r * 0.6, fy + r * 1.1), fill=(205, 232, 246, 235), outline=(60, 90, 130, 255), width=2); d.ellipse((fx - r * 0.2, fy - r * 0.6, fx + r * 0.05, fy - r * 0.1), fill=(255, 255, 255, 240))
+    else:
+        q = (ph - 0.7) / 0.3; fx, fy = m(X, 711); rr = (8 + 70 * q) * s
+        d.ellipse((fx - rr, fy - rr * 0.22, fx + rr, fy + rr * 0.22), outline=(220, 238, 250, int(240 * (1 - q))), width=max(2, int(3 * s)))
+BOX_A = (780, 232, 1672, 734); BOX_B = (800, 262, 1650, 740); BOX_C = (780, 0, 1672, 941)     # A and B are full-width 16:9 crops (about 2.1x enlargement); C is the whole right half (sink, pipe, bucket)
+def s_s05a(c):
+    f, m, s = kit_view(_lerp_box(BOX_A, BOX_B, ease(c.t / max(c.d, 1e-6)))); c.f.alpha_composite(f); kit_drip(c.f, m, s, c.t)
+def s_s05b(c):
+    f, m, s = kit_view(_lerp_box(BOX_B, BOX_C, ease(c.t / max(c.d, 1e-6)))); c.f.alpha_composite(f); kit_drip(c.f, m, s, c.t + 0.3)
 
 FN = {"S01": s_ren, "S02": s_s02, "S03": s_s03, "S04": s_s04, "S05a": s_s05a, "S05b": s_s05b, "S06": s_ren, "S07a": s_s07a, "S07b": s_s07b, "S08": s_s08, "S09a": s_s09a, "S09b": s_s09b,
       "S10a": s_s10a, "S10b": s_s10b, "S11": s_ren, "S12": s_s12, "S13": s_s13, "S13b": s_s13b, "S14": s_s14, "S14b": s_s14b, "S15": s_s15, "S16": s_s16, "S17": s_ren}
