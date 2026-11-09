@@ -20,7 +20,7 @@ def ms(pl, z0, z1, cx, cy, poses, g=None, extra=None, mx=None, my=None, closeup=
     def fn(c):
         cam = Cam(z0 + (z1 - z0) * ease(c.t / max(c.d, 1e-6)), cx, cy); c.f.alpha_composite(plate(pl, cam))
         x, y = (mx if mx is not None else PLX[pl][0]), (my if my is not None else PLX[pl][1]); r = maya(c.f, cam, pl, poses, c.t, x, y, c.B); grade(c, g)
-        if extra: extra(c, r)
+        if extra: RP.REC["poses"].append("overlay"); extra(c, r)       # every extra is an animated overlay (slide-in, tick, drip, spin, glow ...): counted as motion, not as a pose
     fn.closeup = closeup
     return fn
 def chip(text, x, y, t0=0.3, w=560, tone="cream", px=56): return lambda c, r=None: c.slide(T.chip_card(text, w, tone, px), x, y, t0, frm=40)
@@ -91,7 +91,7 @@ def paused(c):
     veil_bg()(c); q = 1 - clamp((c.t - 0.7) / 0.35); phone(c, T2.phone_ui([("title", "Automatic transfer"), ("big", T.usd(T.A["weekly_transfer"])), ("toggle", "Automatic", True, q), ("row", "Status", "Paused", U.MUTED)]), 700, 70)
 def day(n):
     def fn(c):
-        veil_bg()(c); k = max(0.2, U.back(c.t / 0.35)); img = T2.day_card(n); sc = 1.5 * k; im = img.im.resize((int(img.im.width * sc), int(img.im.height * sc)), Image.LANCZOS)
+        veil_bg()(c); k = 0.7 + 0.3 * ease(c.t / 0.5); img = T2.day_card(n); sc = 1.5 * k; im = img.im.resize((int(img.im.width * sc), int(img.im.height * sc)), Image.LANCZOS)
         x0, y0 = 960 - im.width / 2, 540 - im.height / 2; c.f.alpha_composite(im, (int(x0), int(y0)))
         if k > 1.0 or c.t > 0.4: c.B.extend([(x0 + a * sc, y0 + b * sc, x0 + cc * sc, y0 + e * sc, s_, px * sc) for (a, b, cc, e, s_, px) in img.texts])
     return fn
@@ -132,7 +132,7 @@ def kitchen(box_a, box_b, drip=True, tick=False, chip_=None):
     return fn
 BOX_D = (780, 440, 1672, 941); BOX_E = (780, 560, 1672, 941 - 0)
 def compare(c, r=None): c.slide(T2.compare_card(clamp((c.t - 0.5) / 2.5)), 880, 300, 0.2, frm=50)
-def pay_phone(c, r=None): phone(c, T2.phone_ui([("title", "Invoice"), ("big", T.usd(T.A["dental_bill"])), ("row", "Dental bill", "Due"), ("toggle", "Pay", True, clamp((c.t - 1.5) / 0.4))]), 1250, 60, 0.3, scale=0.78)
+def pay_phone(c, r=None): phone(c, T2.phone_ui([("title", "Invoice"), ("big", T.usd(T.A["dental_bill"])), ("row", "Dental bill", "Due"), ("toggle", "Pay", True, clamp((c.t - 1.5) / 0.4))]), 1250, 60, 0.3, scale=0.92)
 def tiles_ov(items, t0s, x=1250, y=160): return lambda c, r=None: c.slide(T2.tiles(items, [clamp((c.t - t) / 0.4) for t in t0s]), x, y, 0.2, frm=50)
 def two_acc(c, r=None): c.slide(T2.two_accounts(c.t), 880, 300, 0.2, frm=60)
 def amounts(c):
