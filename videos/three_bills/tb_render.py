@@ -102,9 +102,11 @@ SPEC = [
  ("S09", "CHARACTER_ACTION", "But when Maya opened her savings app afterward, she didn't feel proud."),
  ("S10", "CHARACTER_ACTION", "She saw how much her balance had fallen and thought, I've gone backwards."),
  ("S11", "REN_ANIMATED", "Here's why she hadn't."),
- ("S12", "GRAPHIC", "To understand that feeling, go back a year and a half."),
- ("S13", "CHARACTER_ACTION", "Maya was doing what so many budgets require: making the rent, groceries and gas stretch until payday."),
- ("S14", "GRAPHIC", "There wasn't much left between deposits. Her savings balance was eighty dollars."),
+ ("S12", "CHARACTER_ACTION", "To understand that feeling, go back a year and a half."),
+ ("S13", "CHARACTER_ACTION", "Maya was doing what so many budgets require:"),
+ ("S13b", "CHARACTER_ACTION", "making the rent, groceries and gas stretch until payday."),
+ ("S14", "CHARACTER_ACTION", "There wasn't much left between deposits."),
+ ("S14b", "GRAPHIC", "Her savings balance was eighty dollars."),
  ("S15", "CHARACTER_ACTION", "Then a six-hundred-dollar car repair landed."),
  ("S16", "CHARACTER_ACTION", "She couldn't just make six hundred dollars appear. So she put the repair on a credit card,"),
  ("S17", "REN_ANIMATED", "postponed a dentist visit, and spent the next few months trying to catch up."),
@@ -172,16 +174,19 @@ def s_s10(c):
     c.slide(T.phone_balance_pair(T.A["fund_start"], T.A["fund_final"]), 1320, 150, 0.2)
     c.slide(T.bubble("I've gone backwards", 700), 1120, 840, 1.6)
 def s_s12(c):
-    c.f.alpha_composite(veil("PORCH"))
-    img = T.calendar_card("Today" if c.t < 1.0 else "18 months earlier", None); s = 1.4
-    im = img.im.resize((int(img.im.width * s), int(img.im.height * s)), Image.LANCZOS); p = ease((c.t - 0.2) / 0.4)
-    c.f.alpha_composite(im, (int(960 - im.width / 2), int(300 + 40 * (1 - p))))
-    for (a, b, cc, e, s_, px) in img.texts: c.B.append((960 - im.width / 2 + a * s, 300 + b * s, 960 - im.width / 2 + cc * s, 300 + e * s, s_, px * s))
+    cam = Cam(1.25, 700, 520); c.f.alpha_composite(plate("PORCH", cam))
+    maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
+    lab = "Today" if c.t < 1.3 else "18 months earlier"; img = T.calendar_card(lab, None, w=620); p = ease((c.t - 0.2) / 0.4)
+    c.put(img, 1150, 260 + 30 * (1 - p), alpha=min(1, p * 1.6))
 def s_s13(c):
-    cam = Cam(1.6, 900, 600); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral")], c.t, 760, 820, c.B)
-    for i, lab in enumerate(("Rent", "Groceries", "Gas")): c.slide(T.chip_card(lab, 420, "cream", 54), 1300, 200 + 190 * i, 0.5 + 1.2 * i, frm=40)
+    cam = Cam(1.5, 880, 600); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral")], c.t, 760, 820, c.B)
+def s_s13b(c):
+    cam = Cam(1.75, 860, 640); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.8, "worried")], c.t, 760, 820, c.B)
+    for i, lab in enumerate(("Rent", "Groceries", "Gas")): c.slide(T.chip_card(lab, 420, "cream", 54), 1330, 190 + 180 * i, 0.5 + 1.1 * i, frm=40)
 def s_s14(c):
-    c.f.alpha_composite(veil("OFFICE")); c.slide(T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 420, 640), 750, 200, 0.2, frm=0)
+    cam = Cam(1.5 + 0.1 * ease(c.t / c.d), 860, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 760, 820, c.B)
+def s_s14b(c):
+    c.f.alpha_composite(veil("OFFICE")); c.slide(T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 420, 640), 750, 200, 0.15, frm=0)
 def s_s15(c):
     cam = Cam(1.25 + 0.1 * ease(c.t / c.d), 700, 560); c.f.alpha_composite(plate("LOT", cam)); maya(c.f, cam, "LOT", [(0, "surprised")], c.t, 480, 800, c.B)
     c.slide(T.chip_card("Car repair " + T.usd(T.A["story_prev_repair"]), 640, "gold", 54), 1180, 160, 0.4)
@@ -189,7 +194,7 @@ def s_s16(c):
     cam = Cam(1.3, 720, 560); c.f.alpha_composite(plate("LOT", cam)); maya(c.f, cam, "LOT", [(0, "surprised"), (0.9, "worried")], c.t, 480, 800, c.B)
     c.slide(T.credit_card(), 1220, 260, 1.7)
 FN = {"S01": s_ren, "S02": s_s02, "S03": s_s03, "S04": s_s04, "S05": s_s05, "S06": s_ren, "S07": s_s07, "S08": s_s08, "S09": s_s09, "S10": s_s10, "S11": s_ren, "S12": s_s12,
-      "S13": s_s13, "S14": s_s14, "S15": s_s15, "S16": s_s16, "S17": s_ren}
+      "S13": s_s13, "S13b": s_s13b, "S14": s_s14, "S14b": s_s14b, "S15": s_s15, "S16": s_s16, "S17": s_ren}
 
 # ---- timing from the real narration ------------------------------------------------------------------------------------------------
 def aligned_word_times(sec):

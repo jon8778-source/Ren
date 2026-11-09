@@ -1,0 +1,57 @@
+{
+ "H": {
+  "ratio": 0.9268,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "replace",
+    "thirty",
+    "30"
+   ],
+   [
+    "delete",
+    "two thousand two hundred",
+    ""
+   ],
+   [
+    "replace",
+    "eighteen",
+    "2 200 18"
+   ]
+  ]
+ },
+ "L": {
+  "ratio": 0.9468,
+  "differences": [
+   [
+    "delete",
+    "eighty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "80"
+   ],
+   [
+    "replace",
+    "six hundred dollar",
+    "dollars 600"
+   ],
+   [
+    "delete",
+    "six hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "600"
+   ]
+  ]
+ }
+}
