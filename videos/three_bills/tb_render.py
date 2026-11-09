@@ -174,7 +174,7 @@ def s_s10(c):
     c.slide(T.phone_balance_pair(T.A["fund_start"], T.A["fund_final"]), 1320, 150, 0.2)
     c.slide(T.bubble("I've gone backwards", 700), 1120, 840, 1.6)
 def s_s12(c):
-    cam = Cam(1.25, 700, 520); c.f.alpha_composite(plate("PORCH", cam))
+    cam = Cam(1.08, 640, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
     lab = "Today" if c.t < 1.3 else "18 months earlier"; img = T.calendar_card(lab, None, w=620); p = ease((c.t - 0.2) / 0.4)
     c.put(img, 1150, 260 + 30 * (1 - p), alpha=min(1, p * 1.6))
@@ -182,7 +182,7 @@ def s_s13(c):
     cam = Cam(1.5, 880, 600); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral")], c.t, 760, 820, c.B)
     c.slide(T.chip_card("Monthly budget", 520, "cream", 54), 1260, 220, 0.8, frm=40)
 def s_s13b(c):
-    cam = Cam(1.75, 860, 640); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.8, "worried")], c.t, 760, 820, c.B)
+    cam = Cam(1.5, 870, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.8, "worried")], c.t, 760, 820, c.B)
     for i, lab in enumerate(("Rent", "Groceries", "Gas")): c.slide(T.chip_card(lab, 420, "cream", 54), 1330, 190 + 180 * i, 0.5 + 1.1 * i, frm=40)
 def s_s14(c):
     cam = Cam(1.5 + 0.1 * ease(c.t / c.d), 860, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 760, 820, c.B)
