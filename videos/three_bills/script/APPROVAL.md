@@ -1,0 +1,3 @@
+# Approvals recorded for Three Bills (from owner messages in this session)
+- 9 Nov 2026: pack records "Script approved" (v2, SHA-256 14801320...) and "Maya images approved".
+- 9 Nov 2026: owner reviewed pilot revisions; "I approve ren_three_bills_pilot_rev3_57s.mp4 as the visual and storytelling pilot baseline ... You are authorised to proceed with the approximately six-minute production" with conditions 1-8 (follow baseline/rules/checklist; keep pilot quality; avoid long Maya-with-phone stretches; genuine Ren animation with returns every 30-45 s; avoid repetitive cards; preserve voice, identities, figures; full QA and honest reporting; do not claim still-image camera moves as animation). Not authorised: publishing, Shorts, merging.

@@ -69,12 +69,12 @@ def chip_card(label, w=520, tone="cream", px=54):
     im, d = card(w, 150, fill={"cream": CREAM, "sage": SAGE, "gold": (246, 222, 160), "white": (255, 255, 255)}[tone]); L = []
     _t(d, L, (w // 2, 76), label, px, 700, NAVY, "mm"); return Img(im, L)
 
-def invoice(title, amount, urgent=False, w=520, h=680):
+def invoice(title, amount, urgent=False, w=520, h=680, note="After insurance"):
     """Blank invoice prop look (paper with grey rules) with code-drawn title and amount."""
     im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); L = []
     d.polygon([(0, 0), (w - 80, 0), (w, 80), (w, h), (0, h)], fill=(255, 255, 250, 255), outline=(*NAVY, 255)); d.line((w - 80, 0, w - 80, 80, w, 80), fill=(*NAVY, 255), width=4)
     _t(d, L, (40, 70), title, 54, 700, NAVY)
-    if amount is not None: _t(d, L, (40, 150), "After insurance", 42, 500, MUTED)
+    if amount is not None: _t(d, L, (40, 150), note, 42, 500, MUTED)
     for i in range(3 if amount is not None else 5): d.line((40, 250 + 50 * i, w - 60 - (60 if i == 2 else 0), 250 + 50 * i), fill=(*SAGE, 255), width=8)
     if amount is not None: _t(d, L, (w // 2, 470), usd(amount), 100, 700, NAVY, "mm")
     if urgent: rrect(d, (w // 2 - 130, h - 110, w // 2 + 130, h - 30), 30, (*RED, 255)); _t(d, L, (w // 2, h - 70), "URGENT", 50, 700, CREAM, "mm")
