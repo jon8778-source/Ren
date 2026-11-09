@@ -157,12 +157,12 @@ def s_s05(c):
     else:
         d = ImageDraw.Draw(c.f); a = 1 - (ph - 0.55) / 0.45; d.arc((x0 - r * 2, y - r, x0 + r * 2, y + r), 180, 360, fill=(*U.NAVY, int(255 * a)), width=5)
 def s_s07(c):
-    cam = Cam(1.2 + 0.06 * ease(c.t / c.d), 600, 520); c.f.alpha_composite(plate("PORCH", cam))
+    cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "worried")], c.t, 580, 800, c.B)
     c.slide(T.chip_card("18 months earlier", 560, "cream", 56), 1180, 150, 0.3)
     c.slide(T.credit_card(), 1220, 380, 1.6)
 def s_s08(c):
-    cam = Cam(1.2 + 0.06 * ease(c.t / c.d), 600, 520); c.f.alpha_composite(plate("PORCH", cam))
+    cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "worried"), (0.7, "relief")], c.t, 580, 800, c.B)
 def s_s09(c):
     cam = Cam(1.6, 900, 600); c.f.alpha_composite(plate("OFFICE", cam))
