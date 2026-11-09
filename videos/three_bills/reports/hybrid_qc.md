@@ -8,13 +8,14 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thr
 |---|---|---|
 | 1a shots contiguous from frame 0 to the last frame | PASS | [] |
 | 1b shot caps (Ren / Maya action 5.5 s, story still 2.5 s, graphic 3.5 s) | PASS | [] |
-| 1c shot mix recorded | PASS | {'CHARACTER_ACTION': 14, 'REN_ANIMATED': 4, 'STORY_STILL': 0, 'GRAPHIC': 5} |
+| 1c shot mix recorded | PASS | {'CHARACTER_ACTION': 13, 'REN_ANIMATED': 4, 'STORY_STILL': 2, 'GRAPHIC': 4} |
 | 1d no run of 3 or more consecutive graphic-only shots (long-form baseline: avoid card sequences) | PASS | longest run 1 |
 | 1e Ren returns at least every 45 s | PASS | Ren shots start at [0.0, 12.4, 30.4, 52.9]; longest gap 22.5s |
 | 2a shot phrases tile the approved v2 voice script, paragraphs 1-9, in order, unchanged | PASS | 164 vs 164 words |
 | 2b SCRIPT.md and VOICE_SCRIPT.txt match the approved SHA-256 (14801320..., efa04724...) | PASS |  |
 | 3a pack assets on disk match ASSET_MANIFEST.json hashes (Maya poses, props, plates) | PASS | [] |
 | 3b approved plates, narration WAVs and the voice reference exist | PASS | [] |
+| 3c S05a/b use only the sink, pipe and bucket area of the owner-supplied kitchen image (crop x >= 780; the woman, who is not the approved Maya, is outside every crop) | PASS | crop left edges [780, 800, 780]; source SHA-256 29cb65b86e550def |
 | 4a full decode clean (-xerror) | PASS |  |
 | 4b format 1920x1080 24 fps h264 + aac | PASS | 1920x1080 24/1 |
 | 4c frame count equals shot frames | PASS | 1364 vs 1364 |
@@ -22,7 +23,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thr
 | 4e narration length equals H + L (cut after the pilot's last sentence) as generated | PASS | 56.808s vs 56.808s |
 | 4f loudness -23..-12 LUFS, true peak <= -1 dBTP | PASS | -18.6 LUFS, -1.0 dBTP |
 | 4g no silence gap over 1.4 s inside the narration | PASS | [] |
-| 5a hard cuts (mean diff > 14) land only on shot boundaries | PASS | off-boundary: []; 22 cuts detected |
+| 5a hard cuts (mean diff > 14) land only on shot boundaries | PASS | off-boundary: []; 21 cuts detected |
 | 5b every shot boundary changes the picture | PASS | [] |
 | 5c no A-B-A one-frame inserts | PASS | [] |
 | 5d no single-frame brightness flashes | PASS | [] |
@@ -39,7 +40,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thr
 | 12b renderer imports and calls no TTS code | PASS |  |
 | 12c MP4 audio matches H + L waveform (correlation >= 0.95) | PASS | 1.0000 |
 | 12d spoken-word check against the script (Whisper) | PASS | see voice_check_summary.json (digits differ only) |
-| 13a unaffected shots (S01-S04, S06, S11, S15-S17) keep their frame ranges and look unchanged from the first pilot (max per-frame mean difference at 480x270) | PASS | range changes []; worst 0.23/255 |
+| 13a unaffected shots (S01-S04, S06, S11, S15-S17) keep their frame ranges and look unchanged from the first pilot (max per-frame mean difference at 480x270) | PASS | range changes []; worst 0.32/255 |
 | 13b narration identical to the first pilot's audio (correlation) | PASS | 1.00000 |
 
 ## Not run / limits

@@ -1,0 +1,24 @@
+shot,type,start_s,end_s,dur_s,narration,vs first pilot,what is genuinely animated vs static artwork
+S01,REN_ANIMATED,0.0,2.0,2.0,Three bills. Thirty days.,unchanged,"Ren: GENUINE clip (ren_present_palm_left, mirrored). Cards: code."
+S02,CHARACTER_ACTION,2.0,5.33,3.33,"First, Maya's car broke down.",unchanged,"Maya: static art, pose cross-fade neutral>surprised, camera push. Key prop: code rotation."
+S03,GRAPHIC,5.33,7.46,2.12,Then came an urgent dental bill.,unchanged,"No character. Invoice prop slides, stamp: code."
+S04,CHARACTER_ACTION,7.46,10.0,2.54,"And just when she thought the month couldn't get worse,",unchanged,"Maya: static art, pose cross-fade worried>neutral, slow push."
+S05a,STORY_STILL,10.0,10.75,0.75,a pipe leaked,NEW (owner-supplied sink-leak image),"No character. STORY STILL (owner-supplied illustration, pipe/sink/bucket crop at about 2.1x): camera push; the drip falls and the ripple expands in code over the static artwork."
+S05b,STORY_STILL,10.75,12.38,1.62,beneath her kitchen sink.,NEW (owner-supplied sink-leak image),No character. STORY STILL: pull-back revealing the sink above the pipe; code drip and ripple over static artwork. The woman in the image is cropped out (not the approved Maya).
+S06,REN_ANIMATED,12.38,14.92,2.54,The total? Two thousand two hundred dollars.,unchanged,Ren: GENUINE clip (ren_shrug). Equation card: code.
+S07a,CHARACTER_ACTION,14.92,16.75,1.83,"Eighteen months earlier,","CHANGED (shorter, same porch shot)","Maya: static art, one pose (worried), slow push. Chip: code."
+S07b,GRAPHIC,16.75,19.38,2.62,one unexpected bill had pushed her into debt.,NEW,No character. Invoice and credit card are code-drawn objects with fall/bounce/slide/stamp motion.
+S08,CHARACTER_ACTION,19.38,22.25,2.88,"This time, she handled all three.",CHANGED,"Maya: static art, cross-fade worried>relief, slow push. Three prop tiles with ticks drawn progressively (code)."
+S09a,CHARACTER_ACTION,22.25,24.88,2.62,"But when Maya opened her savings app afterward,",NEW,"Maya: static art, cross-fade neutral>worried, close-up (about 1.9x enlargement of 981 px art: slightly soft). Evening grade (code)."
+S09b,CHARACTER_ACTION,24.88,26.46,1.58,she didn't feel proud.,NEW,"Maya: static art, ONE pose, slow push and a pulsing light glow (code). Weakest shot for activity."
+S10a,GRAPHIC,26.46,28.25,1.79,She saw how much her balance had fallen,NEW,No character. Phone screen drawn in code; balance steps and withdrawal rows appear (code).
+S10b,CHARACTER_ACTION,28.25,30.38,2.12,"and thought, I've gone backwards.",NEW,"Maya: static art, one pose, close-up; thought bubble slides in (code)."
+S11,REN_ANIMATED,30.38,31.62,1.25,Here's why she hadn't.,unchanged,Ren: GENUINE clip (ren_point_right).
+S12,CHARACTER_ACTION,31.62,35.25,3.62,"To understand that feeling, go back a year and a half.",CHANGED,"Maya: static art, cross-fade relief>neutral. Calendar pages flip (code)."
+S13,GRAPHIC,35.25,37.96,2.71,Maya was doing what so many budgets require:,NEW,No character. Envelope prop (static art) with bills rising (code).
+S13b,CHARACTER_ACTION,37.96,41.67,3.71,"making the rent, groceries and gas stretch until payday.",CHANGED,"Maya: static art, cross-fade neutral>worried. Envelope with bills leaving as Rent/Groceries/Gas tags peel away (code)."
+S14,CHARACTER_ACTION,41.67,43.96,2.29,There wasn't much left between deposits.,CHANGED,"Maya: static art, one pose, close-up; empty envelope slides in, chip (code)."
+S14b,CHARACTER_ACTION,43.96,45.96,2.0,Her savings balance was eighty dollars.,CHANGED,"Maya: static art, one pose; phone insert slides up (code)."
+S15,CHARACTER_ACTION,45.96,48.38,2.42,Then a six-hundred-dollar car repair landed.,unchanged,"Maya: static art, one pose, push; tag: code."
+S16,CHARACTER_ACTION,48.38,52.92,4.54,"She couldn't just make six hundred dollars appear. So she put the repair on a credit card,",unchanged,"Maya: static art, cross-fade surprised>worried; card slides."
+S17,REN_ANIMATED,52.92,56.83,3.92,"postponed a dentist visit, and spent the next few months trying to catch up.",unchanged,Ren: GENUINE clip (ren_thinking). Chain card: code.
