@@ -23,7 +23,7 @@ Unchanged: S01-S04, S06, S11, S15-S17. Financial figures, narration audio and cu
 - **Props and graphics (invoice, credit card, envelope, bills, drip, puddle, calendar pages, phone screens, tiles, ticks):** animated in code; the key, pipe and envelope are static artwork moved by code.
 - **Temporary new art, not approved:** the sink-base cabinet, floor, bills, credit card and stamp are drawn in code in the brand palette; the earlier-approved provisional kitchen plate was not used. If you want these as real artwork, say so.
 
-## Validation (QA 49 checks, OVERALL PASS; `reports/hybrid_qc.md`)
+## Validation (QA 35 checks, OVERALL PASS; `reports/hybrid_qc.md`)
 - Scene boundaries: 22 hard cuts, all on shot boundaries; no A-B-A inserts, no flashes; every cut changes the picture; no run of 3 graphic-only shots (longest 1); caps held (Ren 5.5 s, graphic 3.5 s).
 - Unchanged shots really unchanged: S01-S04, S06, S11, S15-S17 keep their frame ranges and differ from the first pilot by at most 0.23/255 (codec noise); narration correlation with the first pilot 1.00000.
 - Maya: height equals the calibrated plate perspective in every plate shot; head and feet in frame except three deliberate close-ups (S09a, S10b, S14: head in, feet out by design); sub-pixel jitter 0.051 px. The coded-floor shot S05b is scaled by eye, not plate-calibrated.

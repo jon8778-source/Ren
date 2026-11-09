@@ -57,7 +57,7 @@ Branch: `video/three-bills-30-days` (new, from `video/unclaimed-401k-match-maya`
 | Accent, pace, pronunciation, joins | NOT VERIFIED | I cannot hear audio. |
 
 ## 7. Rendering QA
-44 checks in `reports/hybrid_qc.md`, OVERALL PASS: contiguous frame-aligned timeline from frame 0, caps (Ren 5.5 s / graphic 3.5 s; story stills 0), no 3+ graphic run (longest 1), Ren returns longest gap 22.5 s, phrases tile the script (164 words), full decode with -xerror, 1920x1080 24 fps, 1364 frames, A/V 0.001 s apart, -18.6 LUFS / -1.0 dBTP, constant 24 fps (every packet 1/24 s), text in the safe area and >= 32 px, Maya jitter 0.051 px (limit 0.12), audio correlation 1.0000.
+33 checks in the first pilot's `reports/hybrid_qc.md` (earlier wrongly written as 44), OVERALL PASS: contiguous frame-aligned timeline from frame 0, caps (Ren 5.5 s / graphic 3.5 s; story stills 0), no 3+ graphic run (longest 1), Ren returns longest gap 22.5 s, phrases tile the script (164 words), full decode with -xerror, 1920x1080 24 fps, 1364 frames, A/V 0.001 s apart, -18.6 LUFS / -1.0 dBTP, constant 24 fps (every packet 1/24 s), text in the safe area and >= 32 px, Maya jitter 0.051 px (limit 0.12), audio correlation 1.0000.
 Pilot length is 56.8 s, not 60 s, because that is where a sentence ends (the rule: cut after a complete sentence; no padding).
 
 ## 8. Approval gates
