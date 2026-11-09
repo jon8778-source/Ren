@@ -95,18 +95,22 @@ SPEC = [
  ("S02", "CHARACTER_ACTION", "First, Maya's car broke down."),
  ("S03", "GRAPHIC", "Then came an urgent dental bill."),
  ("S04", "CHARACTER_ACTION", "And just when she thought the month couldn't get worse,"),
- ("S05", "GRAPHIC", "a pipe leaked beneath her kitchen sink."),
+ ("S05a", "GRAPHIC", "a pipe leaked"),
+ ("S05b", "CHARACTER_ACTION", "beneath her kitchen sink."),
  ("S06", "REN_ANIMATED", "The total? Two thousand two hundred dollars."),
- ("S07", "CHARACTER_ACTION", "Eighteen months earlier, one unexpected bill had pushed her into debt."),
+ ("S07a", "CHARACTER_ACTION", "Eighteen months earlier,"),
+ ("S07b", "GRAPHIC", "one unexpected bill had pushed her into debt."),
  ("S08", "CHARACTER_ACTION", "This time, she handled all three."),
- ("S09", "CHARACTER_ACTION", "But when Maya opened her savings app afterward, she didn't feel proud."),
- ("S10", "CHARACTER_ACTION", "She saw how much her balance had fallen and thought, I've gone backwards."),
+ ("S09a", "CHARACTER_ACTION", "But when Maya opened her savings app afterward,"),
+ ("S09b", "CHARACTER_ACTION", "she didn't feel proud."),
+ ("S10a", "GRAPHIC", "She saw how much her balance had fallen"),
+ ("S10b", "CHARACTER_ACTION", "and thought, I've gone backwards."),
  ("S11", "REN_ANIMATED", "Here's why she hadn't."),
  ("S12", "CHARACTER_ACTION", "To understand that feeling, go back a year and a half."),
- ("S13", "CHARACTER_ACTION", "Maya was doing what so many budgets require:"),
+ ("S13", "GRAPHIC", "Maya was doing what so many budgets require:"),
  ("S13b", "CHARACTER_ACTION", "making the rent, groceries and gas stretch until payday."),
  ("S14", "CHARACTER_ACTION", "There wasn't much left between deposits."),
- ("S14b", "GRAPHIC", "Her savings balance was eighty dollars."),
+ ("S14b", "CHARACTER_ACTION", "Her savings balance was eighty dollars."),
  ("S15", "CHARACTER_ACTION", "Then a six-hundred-dollar car repair landed."),
  ("S16", "CHARACTER_ACTION", "She couldn't just make six hundred dollars appear. So she put the repair on a credit card,"),
  ("S17", "REN_ANIMATED", "postponed a dentist visit, and spent the next few months trying to catch up."),
@@ -146,57 +150,149 @@ def s_s03(c):
 def s_s04(c):
     cam = Cam(1.08 + 0.06 * ease(c.t / c.d), 640, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "worried"), (1.4, "neutral")], c.t, 620, 800, c.B)
-def s_s05(c):
-    c.f.alpha_composite(veil("SAGE"))
-    box = put_prop(c.f, "leaking_pipe", 960, 520, 620)
-    # drip: a drop forms at the pipe's low point, falls and splashes
-    period = 1.1; ph = (c.t % period) / period; x0, y0 = 960 - 6, 520 + 118
-    if ph < 0.55: y = y0 + (ph / 0.55) ** 2 * 300; r = 16 - 6 * (ph / 0.55)
-    else: y = y0 + 300; r = 4 + 30 * (ph - 0.55) / 0.45
-    if ph < 0.55: ImageDraw.Draw(c.f).ellipse((x0 - r * 0.7, y - r, x0 + r * 0.7, y + r), fill=(*U.SAGE, 255), outline=(*U.NAVY, 255), width=3)
-    else:
-        d = ImageDraw.Draw(c.f); a = 1 - (ph - 0.55) / 0.45; d.arc((x0 - r * 2, y - r, x0 + r * 2, y + r), 180, 360, fill=(*U.NAVY, int(255 * a)), width=5)
-def s_s07(c):
-    cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
-    maya(c.f, cam, "PORCH", [(0, "worried")], c.t, 580, 800, c.B)
-    c.slide(T.chip_card("18 months earlier", 560, "cream", 56), 1180, 150, 0.3)
-    c.slide(T.credit_card(), 1220, 380, 1.6)
-def s_s08(c):
-    cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
-    maya(c.f, cam, "PORCH", [(0, "worried"), (0.7, "relief")], c.t, 580, 800, c.B)
-def s_s09(c):
-    cam = Cam(1.6, 900, 600); c.f.alpha_composite(plate("OFFICE", cam))
-    maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.6, "worried")], c.t, 760, 820, c.B)
-    c.slide(T.phone_inset(T.A["fund_final"], None, 420, 560), 1320, 200, 1.2)
-def s_s10(c):
-    cam = Cam(1.6 + 0.08 * ease(c.t / c.d), 880, 600); c.f.alpha_composite(plate("OFFICE", cam))
-    maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 780, 820, c.B)
-    c.slide(T.phone_balance_pair(T.A["fund_start"], T.A["fund_final"]), 1320, 150, 0.2)
-    c.slide(T.bubble("I've gone backwards", 700), 1120, 840, 1.6)
-def s_s12(c):
-    cam = Cam(1.08, 640, 560); c.f.alpha_composite(plate("PORCH", cam))
-    maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
-    lab = "Today" if c.t < 1.3 else "18 months earlier"; img = T.calendar_card(lab, None, w=620); p = ease((c.t - 0.2) / 0.4)
-    c.put(img, 1150, 260 + 30 * (1 - p), alpha=min(1, p * 1.6))
-def s_s13(c):
-    cam = Cam(1.5, 880, 600); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral")], c.t, 760, 820, c.B)
-    c.slide(T.chip_card("Monthly budget", 520, "cream", 54), 1260, 220, 0.8, frm=40)
-def s_s13b(c):
-    cam = Cam(1.5, 870, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.8, "worried")], c.t, 760, 820, c.B)
-    for i, lab in enumerate(("Rent", "Groceries", "Gas")): c.slide(T.chip_card(lab, 420, "cream", 54), 1330, 190 + 180 * i, 0.5 + 1.1 * i, frm=40)
-def s_s14(c):
-    cam = Cam(1.5 + 0.1 * ease(c.t / c.d), 860, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 760, 820, c.B)
-    c.slide(T.chip_card("Between deposits", 560, "cream", 54), 1230, 220, 0.4, frm=40)
-def s_s14b(c):
-    c.f.alpha_composite(veil("OFFICE")); c.slide(T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 420, 640), 750, 200, 0.15, frm=0)
 def s_s15(c):
     cam = Cam(1.25 + 0.1 * ease(c.t / c.d), 700, 560); c.f.alpha_composite(plate("LOT", cam)); maya(c.f, cam, "LOT", [(0, "surprised")], c.t, 480, 800, c.B)
     c.slide(T.chip_card("Car repair " + T.usd(T.A["story_prev_repair"]), 640, "gold", 54), 1180, 160, 0.4)
 def s_s16(c):
     cam = Cam(1.3, 720, 560); c.f.alpha_composite(plate("LOT", cam)); maya(c.f, cam, "LOT", [(0, "surprised"), (0.9, "worried")], c.t, 480, 800, c.B)
     c.slide(T.credit_card(), 1220, 260, 1.7)
-FN = {"S01": s_ren, "S02": s_s02, "S03": s_s03, "S04": s_s04, "S05": s_s05, "S06": s_ren, "S07": s_s07, "S08": s_s08, "S09": s_s09, "S10": s_s10, "S11": s_ren, "S12": s_s12,
-      "S13": s_s13, "S13b": s_s13b, "S14": s_s14, "S14b": s_s14b, "S15": s_s15, "S16": s_s16, "S17": s_ren}
+# ---- revision 2: story interactions in place of abstract cutaways (shots S05a/b, S07a/b, S08-S10b, S12-S14b) -----------------------------
+EVE = (40, 50, 110, 56)
+def evening(f): f.alpha_composite(Image.new("RGBA", f.size, EVE))
+class _FC:
+    k = 1.0
+    def pt(self, x, y): return (x, y)
+def maya_free(f, seq, t, x, y_feet, hpx):
+    """Maya on a coded floor (no plate perspective): pose cross-fade, scaled to `hpx`, contact shadow."""
+    idx = max(i for i, (t0, _) in enumerate(seq) if t >= t0 - 1e-9); cur = seq[idx][1]; a = (t - seq[idx][0]) / BLEND
+    layers = [(seq[idx - 1][1], 1.0), (cur, clamp(a))] if idx > 0 and a < 1 else [(cur, 1.0)]
+    RP.REC["poses"].extend([k for k, _ in layers]); im0 = maya_img(cur); w = im0.width * hpx / im0.height
+    contact_shadow(f, _FC(), x, y_feet, w * 0.95)
+    for key, al in layers:
+        im = maya_img(key); tgt = f if al >= 1 else Image.new("RGBA", f.size, (0, 0, 0, 0)); paste_smooth(tgt, im, x - im.width * hpx / im.height / 2, y_feet - hpx, im.width * hpx / im.height, hpx)
+        if al < 1: tgt.putalpha(tgt.getchannel("A").point(lambda v: int(v * al))); f.alpha_composite(tgt)
+    return (x - w / 2, y_feet - hpx, x + w / 2, y_feet)
+_pipe = {}
+def pipe_crop():
+    if "p" not in _pipe: im = Image.open(ART / "props" / "leaking_pipe.png").convert("RGBA"); _pipe["p"] = im.crop((69, 79, 965, 625))   # the pipe without its baked-in drop (the drop is animated)
+    return _pipe["p"]
+def kitchen_set(f):
+    d = ImageDraw.Draw(f); d.rectangle((0, 0, W, 700), fill=(244, 236, 222, 255)); d.rectangle((0, 700, W, H), fill=(196, 150, 112, 255))
+    for x in range(-200, W + 300, 240): d.line((x, 700, x - 90, H), fill=(176, 130, 94, 255), width=3)
+    d.line((0, 700, W, 700), fill=(150, 110, 80, 255), width=5)
+def puddle(f, cx, cy, rx):
+    if rx < 4: return
+    lay = Image.new("RGBA", f.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay); ry = max(3, rx * 0.2)
+    d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), fill=(150, 200, 222, 235), outline=(*U.NAVY, 200), width=3)
+    d.ellipse((cx - rx * 0.55, cy - ry * 0.55, cx - rx * 0.1, cy - ry * 0.15), fill=(215, 238, 248, 220)); f.alpha_composite(lay)
+def drip(f, x0, y0, y_floor, t, period=0.9, lead=0.15):
+    """A drop forms at (x0, y0), falls under gravity to y_floor and splashes in a ring; repeating every `period` s."""
+    ph = ((t + lead) % period) / period; d = ImageDraw.Draw(f)
+    if ph < 0.38: r = 4 + 14 * ph / 0.38; d.ellipse((x0 - r * 0.7, y0 - r * 0.2, x0 + r * 0.7, y0 + r * 1.6), fill=(150, 200, 222, 255), outline=(*U.NAVY, 255), width=3)
+    elif ph < 0.62:
+        q = (ph - 0.38) / 0.24; y = y0 + (y_floor - y0) * q * q; d.ellipse((x0 - 11, y - 8, x0 + 11, y + 20), fill=(150, 200, 222, 255), outline=(*U.NAVY, 255), width=3)
+    else:
+        q = (ph - 0.62) / 0.38; rr = 10 + 70 * q; d.arc((x0 - rr, y_floor - rr * 0.22, x0 + rr, y_floor + rr * 0.22), 0, 360, fill=(*U.NAVY, int(255 * (1 - q))), width=4)
+
+def s_s05a(c):
+    f = c.f; d = ImageDraw.Draw(f); f.paste((214, 206, 190), (0, 0, W, H)); d = ImageDraw.Draw(f)
+    d.rectangle((0, 0, 150, H), fill=(*U.SAGE, 255)); d.rectangle((W - 150, 0, W, H), fill=(*U.SAGE, 255)); d.line((150, 0, 150, H), fill=(*U.NAVY, 255), width=6); d.line((W - 150, 0, W - 150, H), fill=(*U.NAVY, 255), width=6)
+    d.rectangle((150, 930, W - 150, H), fill=(190, 178, 156, 255)); d.line((150, 930, W - 150, 930), fill=(*U.NAVY, 255), width=5)
+    p = pipe_crop(); h = 640; w = p.width * h / p.height; f.alpha_composite(p.resize((int(w), h), Image.LANCZOS), (int(960 - w / 2), 120))
+    x0 = 960 - w / 2 + (446 - 69) * h / 546.0; y0 = 120 + (625 - 79) * h / 546.0 - 8
+    puddle(f, 960, 960, 30 + 260 * ease((c.t + 0.1) / 1.1)); drip(f, x0, y0, 955, c.t)
+def s_s05b(c):
+    f = c.f; kitchen_set(f); cab = T.sink_cabinet(); cx0, cy0 = 960, 440; f.alpha_composite(cab, (cx0, cy0))
+    p = pipe_crop(); h = 250; w = p.width * h / p.height; f.alpha_composite(p.resize((int(w), h), Image.LANCZOS), (int(cx0 + 310 - w / 2), cy0 + 100))
+    x0 = cx0 + 310 - w / 2 + (446 - 69) * h / 546.0; y0 = cy0 + 100 + (625 - 79) * h / 546.0 - 4
+    drip(f, x0, y0, cy0 + 380, c.t, 0.8, 0.0); puddle(f, cx0 + 310, 880, 60 + 330 * ease(c.t / max(c.d, 1e-6)))
+    r = maya_free(f, [(0, "worried"), (0.35, "surprised")], c.t, 520, 930, 780); RP.REC["maya"] = None
+def s_s07a(c):
+    cam = Cam(1.08 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
+    maya(c.f, cam, "PORCH", [(0, "worried")], c.t, 580, 800, c.B)
+    c.slide(T.chip_card("18 months earlier", 560, "cream", 56), 1180, 150, 0.3)
+def s_s07b(c):
+    f = c.f; f.alpha_composite(veil("OFFICE")); d = ImageDraw.Draw(f); d.rectangle((0, 690, W, H), fill=(178, 124, 88, 255)); d.line((0, 690, W, 690), fill=(*U.NAVY, 255), width=6)
+    for x in range(-100, W + 200, 260): d.line((x, 700, x - 60, H), fill=(160, 110, 78, 255), width=3)
+    inv = T.invoice("Unexpected bill", None, False, 500, 640); q = clamp(c.t / 0.42); y = -660 + (150 + 660) * q * q
+    if c.t > 0.42: y = 150 - 26 * math.sin(clamp((c.t - 0.42) / 0.22) * math.pi)
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse((520, 760, 1120, 840), fill=(*U.NAVY, int(60 * clamp(q)))); f.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
+    rot = inv.im.rotate(-5, Image.BICUBIC, expand=True); f.alpha_composite(rot, (int(560 - 20), int(y)))
+    for (a, b_, cc, e, s_, px) in inv.texts: c.B.append((540 + a, y + b_, 540 + cc, y + e, s_, px))
+    cc_ = T.credit_card(560); p = ease((c.t - 0.9) / 0.35)
+    if c.t >= 0.9:
+        x = 1920 - (1920 - 880) * p; pop = 1 + 0.06 * math.sin(clamp((c.t - 1.25) / 0.2) * math.pi); im = cc_.im.resize((int(cc_.im.width * pop), int(cc_.im.height * pop)), Image.LANCZOS).rotate(7, Image.BICUBIC, expand=True)
+        f.alpha_composite(im, (int(x), 430)); [c.B.append((x + a, 430 + b_, x + cc, 430 + e, s_, px)) for (a, b_, cc, e, s_, px) in cc_.texts if p > 0.95]
+    if c.t >= 1.7:
+        k = U.back((c.t - 1.7) / 0.3); st = T.chip_card("Debt", 300, "gold", 64).im; st2 = Image.new("RGBA", st.size, (0, 0, 0, 0))
+        dd = ImageDraw.Draw(st2); U.rrect(dd, (0, 0, st.width - 1, st.height - 1), 40, (*U.RED, 255), (*U.NAVY, 255), 5); dd.text((st.width // 2, st.height // 2), "Debt", font=U.font(70, 700), fill=U.CREAM, anchor="mm")
+        s_ = max(0.05, k); st2 = st2.resize((int(st2.width * s_), int(st2.height * s_)), Image.LANCZOS).rotate(-10, Image.BICUBIC, expand=True); f.alpha_composite(st2, (int(1300 - st2.width / 2), int(300 - st2.height / 2)))
+        if k > 0.97: c.B.append((1300 - 90, 300 - 40, 1300 + 90, 300 + 40, "Debt", 70))
+def s_s08(c):
+    cam = Cam(1.1 + 0.05 * ease(c.t / c.d), 620, 560); c.f.alpha_composite(plate("PORCH", cam))
+    maya(c.f, cam, "PORCH", [(0, "worried"), (0.9, "relief")], c.t, 600, 800, c.B)
+    for i, (lab, icon) in enumerate((("Car", "car_key"), ("Dental", "blank_invoice"), ("Pipe", "leaking_pipe"))):
+        tl = T.tile(lab, 500, 190); x, y = 1260, 170 + 230 * i; t0 = 0.15 + 0.15 * i; pr = ease((c.t - t0) / 0.35)
+        if c.t < t0: continue
+        tk = T.tick_on(tl, clamp((c.t - (0.5 + 0.55 * i)) / 0.35)); img = tk.im.copy(); ic = prop(icon) if icon != "leaking_pipe" else pipe_crop(); hh = 120; ww = ic.width * hh / ic.height
+        if ww > 150: hh = int(120 * 150 / ww); ww = 150
+        img.alpha_composite(ic.resize((max(1, int(ww)), hh), Image.LANCZOS), (int(110 - ww / 2 + (0 if i != 0 else 0)), 35)) if False else None
+        # icon at the tile's left, tick over it once drawn
+        base = tl.im.copy(); base.alpha_composite(ic.resize((max(1, int(ww)), hh), Image.LANCZOS), (int(110 - ww / 2), int(95 - hh / 2))); d_ = ImageDraw.Draw(base)
+        p_ = clamp((c.t - (0.5 + 0.55 * i)) / 0.35)
+        if p_ > 0: U.check(d_, 215, 100, 44, U.GREEN, 14, p=p_)
+        im = F_img(base, tl.texts); RP.slide_in(c.f, im, x, y, c.t, t0, dur=0.35, frm=60, B=c.B)
+def F_img(im, texts): return U.Img(im, texts)
+def _glow(f, box, t):
+    cx, cy = (box[0] + box[2]) / 2, box[1] + (box[3] - box[1]) * 0.33; a = 0.5 + 0.5 * math.sin(t * 2.4); lay = Image.new("RGBA", f.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    for r_, al in ((260, 18), (170, 26), (90, 34)): d.ellipse((cx - r_, cy - r_, cx + r_, cy + r_), fill=(190, 215, 245, int(al * (0.6 + 0.4 * a))))
+    f.alpha_composite(lay)
+def s_s09a(c):
+    cam = Cam(2.05, 760, 505); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.9, "worried")], c.t, 760, 820, c.B); evening(c.f)
+def s_s09b(c):
+    cam = Cam(1.25 + 0.05 * ease(c.t / c.d), 1180, 560); c.f.alpha_composite(plate("OFFICE", cam)); r = maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 1180, 820, c.B); evening(c.f); _glow(c.f, r, c.t)
+def s_s10a(c):
+    f = c.f; f.alpha_composite(veil("OFFICE")); evening(f); img = T.balance_steps(c.t); p = ease(c.t / 0.35)
+    c.put(img, 690, 70 + int(120 * (1 - p)), alpha=min(1, p * 1.5))
+def s_s10b(c):
+    cam = Cam(2.05, 900, 505); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 900, 820, c.B); evening(c.f)
+    c.slide(T.bubble("I've gone backwards", 700), 1000, 230, 0.35)
+def s_s12(c):
+    cam = Cam(1.3, 640, 540); c.f.alpha_composite(plate("PORCH", cam)); maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
+    labs = ["Today", "6 months earlier", "12 months earlier", "18 months earlier"]; x, y = 1130, 240; t0, step = 0.3, 0.5
+    k = min(2, max(0, int((c.t - t0) / step))) if c.t >= t0 else -1
+    if c.t < t0: pages = [(labs[0], 1.0)]
+    elif c.t >= t0 + 3 * step: pages = [(labs[3], 1.0)]
+    else:
+        ph = clamp((c.t - t0 - k * step) / step); pages = [(labs[k + 1], 1.0), (labs[k], math.cos(ph * math.pi / 2))]
+    for lab, sy in pages:
+        img = T.calendar_card(lab, None, w=620)
+        if sy >= 0.999: c.put(img, x, y)
+        elif sy > 0.02: im = img.im.resize((img.im.width, max(2, int(img.im.height * sy))), Image.BILINEAR); c.f.alpha_composite(im, (x, y))
+def envelope(f, cx, cy, h, bills, rise=1.0):
+    im = prop("savings_envelope"); w = im.width * h / im.height
+    for i in range(bills):
+        b = T.bill().rotate((-10, 4, 12)[i], Image.BICUBIC, expand=True); f.alpha_composite(b, (int(cx - b.width / 2 + (-40, 10, 50)[i]), int(cy - h / 2 - 95 * rise - 22 * i)))
+    f.alpha_composite(im.resize((int(w), int(h)), Image.LANCZOS), (int(cx - w / 2), int(cy - h / 2)))
+def s_s13(c):
+    f = c.f; f.alpha_composite(veil("OFFICE")); envelope(f, 960, 620, 520, 3, ease(c.t / 0.7))
+    c.slide(T.chip_card("Payday", 420, "sage", 64), 740, 120, 0.2, frm=0)
+def s_s13b(c):
+    cam = Cam(1.5, 870, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (1.6, "worried")], c.t, 760, 820, c.B)
+    marks = (0.6, 1.7, 2.8); gone = sum(1 for m in marks if c.t >= m + 0.4); envelope(c.f, 1480, 760, 380, 3 - gone)
+    for i, lab in enumerate(("Rent", "Groceries", "Gas")):
+        if c.t < marks[i]: continue
+        p = ease((c.t - marks[i]) / 0.5); x = 1480 + 60 - 300 * p + 0 ; y = 560 - 90 * i - 80 * p
+        ch = T.chip_card(lab, 360, "cream", 54); a = 1.0; c.put(ch, 1250 - 40 * (i == 1) + 220 * (1 - p), 150 + 150 * i - 0 * p, alpha=min(1, p * 2))
+def s_s14(c):
+    cam = Cam(2.05, 860, 505); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 860, 820, c.B)
+    p = ease(c.t / 0.4); envelope(c.f, 1620, 1000 - int(190 * p), 340, 0); c.slide(T.chip_card("Between deposits", 560, "cream", 54), 1180, 190, 0.3, frm=40)
+def s_s14b(c):
+    cam = Cam(1.3, 900, 560); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 700, 820, c.B)
+    img = T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 460, 720); p = ease(c.t / 0.4); c.put(img, 1240, int(1080 - 880 * p))
+
+FN = {"S01": s_ren, "S02": s_s02, "S03": s_s03, "S04": s_s04, "S05a": s_s05a, "S05b": s_s05b, "S06": s_ren, "S07a": s_s07a, "S07b": s_s07b, "S08": s_s08, "S09a": s_s09a, "S09b": s_s09b,
+      "S10a": s_s10a, "S10b": s_s10b, "S11": s_ren, "S12": s_s12, "S13": s_s13, "S13b": s_s13b, "S14": s_s14, "S14b": s_s14b, "S15": s_s15, "S16": s_s16, "S17": s_ren}
 
 # ---- timing from the real narration ------------------------------------------------------------------------------------------------
 def aligned_word_times(sec):

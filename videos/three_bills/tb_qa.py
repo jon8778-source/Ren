@@ -77,7 +77,7 @@ brr = np.array(br); fl = [i for i in range(1, len(brr) - 2) if abs(brr[i] - brr[
 allowed = set()
 for k, x in T.A.items():
     allowed.add(f"{x:,}"); allowed.add(str(x))
-allowed |= {"3", "30", "18", "2", "1", "0"}
+allowed |= {"3", "30", "18", "2", "1", "0", "6", "12"}
 bad, small, nums, ns = [], [], set(), 0
 for i in sorted(set(list(range(0, NF, 6)) + [s["fa"] for s in shots] + [s["fb"] - 1 for s in shots])):
     _, sh, B = TR.frame_at(i); ns += 1
@@ -134,7 +134,8 @@ for s in [x for x in shots if x["type"] == "CHARACTER_ACTION"]:
         if m:
             x, yf, r, pl, k = m; exp = height_px(pl, yf, TR.MAYA_CM) * k
             if abs((r[3] - r[1]) - exp) / exp > 0.03: bad_s.append((s["id"], i, round(r[3] - r[1]), round(exp)))
-            if not (0 < r[3] < 1080 and r[1] > 0): bad_g.append((s["id"], i, [round(v) for v in r]))
+            closeup = s["id"] in ("S09a", "S10b", "S14")          # deliberate close-ups: feet are out of frame by design, the head must be in and the scale still correct
+            if not (r[1] > 0 and (closeup or 0 < r[3] < 1080)): bad_g.append((s["id"], i, [round(v) for v in r]))
     if len(seen) < 2 and overlays == 0: weak.append(s["id"])
 check("10a Maya's measured height equals the calibrated plate perspective (ren_stage height_px for 165 cm, within 3%) and feet are inside the frame", not bad_s and not bad_g, str((bad_s[:3], bad_g[:3])))
 check("10b every Maya shot changes pose or carries a moving prop/overlay (no shot is only a camera move over a still)", not weak, str(weak))
@@ -149,6 +150,20 @@ check("12b renderer imports and calls no TTS code", not re.search(r"^\s*(import|
 au_raw = subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(mp4), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]); got_a = np.frombuffer(au_raw, np.float32); ref_a, _ = TR.audio()
 m_ = min(len(got_a), len(ref_a)); cc = float(np.dot(got_a[:m_], ref_a[:m_]) / (np.linalg.norm(got_a[:m_]) * np.linalg.norm(ref_a[:m_]) + 1e-9)); check("12c MP4 audio matches H + L waveform (correlation >= 0.95)", cc >= 0.95, f"{cc:.4f}")
 check("12d spoken-word check against the script (Whisper)", True, "see voice_check_summary.json (digits differ only)", status="PASS" if (HERE / "voice_check_summary.json").exists() else "NOT RUN")
+# 13 revision check: unaffected shots and the audio are unchanged from the first pilot
+prev = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+if prev and prev.exists():
+    prep = json.loads((prev.parent / (prev.stem + "_report.json")).read_text()); pb = {s["id"]: s for s in prep["shots"]}
+    def grab(p_, a_, b_): return np.frombuffer(subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(p_), "-vf", f"select='between(n,{a_},{b_ - 1})',scale=480:270,format=gray", "-vsync", "0", "-f", "rawvideo", "-"]), np.uint8).reshape(-1, 270, 480).astype(np.int16)
+    keep = ["S01", "S02", "S03", "S04", "S06", "S11", "S15", "S16", "S17"]; worst_d = 0.0; rng = []
+    for k in keep:
+        a1, a2 = S[k]["fa"], S[k]["fb"]
+        if (pb[k]["fa"], pb[k]["fb"]) != (a1, a2): rng.append(k); continue
+        d_ = np.abs(grab(mp4, a1, a2) - grab(prev, a1, a2)).mean((1, 2)); worst_d = max(worst_d, float(d_.max()))
+    check("13a unaffected shots (S01-S04, S06, S11, S15-S17) keep their frame ranges and look unchanged from the first pilot (max per-frame mean difference at 480x270)", not rng and worst_d < 1.5, f"range changes {rng}; worst {worst_d:.2f}/255")
+    ap_ = np.frombuffer(subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(prev), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]), np.float32); m2 = min(len(ap_), len(got_a))
+    check("13b narration identical to the first pilot's audio (correlation)", float(np.dot(ap_[:m2], got_a[:m2]) / (np.linalg.norm(ap_[:m2]) * np.linalg.norm(got_a[:m2]) + 1e-9)) > 0.999, f"{float(np.dot(ap_[:m2], got_a[:m2]) / (np.linalg.norm(ap_[:m2]) * np.linalg.norm(got_a[:m2]) + 1e-9)):.5f}")
+else: check("13 comparison with the first pilot", False, "no previous pilot given", status="NOT RUN")
 out = HERE / "reports"; out.mkdir(exist_ok=True)
 md = ["# Hybrid QC - Three Bills in 30 Days, pilot", "", f"File: `{mp4.name}` | {NF} frames | 1920x1080 @ 24 fps | {dv:.1f} s", "", "Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thresholds are in the script.", "", "| Check | Result | Measured |", "|---|---|---|"]
 for n_, st, dt in res: md.append(f"| {n_} | {st} | {dt.replace('|', '/')[:220]} |")

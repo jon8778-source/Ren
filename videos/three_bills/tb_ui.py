@@ -73,9 +73,10 @@ def invoice(title, amount, urgent=False, w=520, h=680):
     """Blank invoice prop look (paper with grey rules) with code-drawn title and amount."""
     im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); L = []
     d.polygon([(0, 0), (w - 80, 0), (w, 80), (w, h), (0, h)], fill=(255, 255, 250, 255), outline=(*NAVY, 255)); d.line((w - 80, 0, w - 80, 80, w, 80), fill=(*NAVY, 255), width=4)
-    _t(d, L, (40, 70), title, 54, 700, NAVY); _t(d, L, (40, 150), "After insurance", 42, 500, MUTED)
-    for i in range(3): d.line((40, 250 + 50 * i, w - 60 - (60 if i == 2 else 0), 250 + 50 * i), fill=(*SAGE, 255), width=8)
-    _t(d, L, (w // 2, 470), usd(amount), 100, 700, NAVY, "mm")
+    _t(d, L, (40, 70), title, 54, 700, NAVY)
+    if amount is not None: _t(d, L, (40, 150), "After insurance", 42, 500, MUTED)
+    for i in range(3 if amount is not None else 5): d.line((40, 250 + 50 * i, w - 60 - (60 if i == 2 else 0), 250 + 50 * i), fill=(*SAGE, 255), width=8)
+    if amount is not None: _t(d, L, (w // 2, 470), usd(amount), 100, 700, NAVY, "mm")
     if urgent: rrect(d, (w // 2 - 130, h - 110, w // 2 + 130, h - 30), 30, (*RED, 255)); _t(d, L, (w // 2, h - 70), "URGENT", 50, 700, CREAM, "mm")
     return Img(im, L)
 
@@ -104,3 +105,43 @@ def chain(stage, w=640):
             rrect(d, (40, y, w - 40, y + 100), 36, (*SAGE, 255), (*NAVY, 255), 4); _t(d, L, (w // 2, y + 50), s, 50, 700, NAVY, "mm")
             if i + 1 < stage and i < len(items) - 1: d.line((w // 2, y + 100, w // 2, y + 150), fill=(*NAVY, 255), width=8); d.polygon([(w // 2, y + 150), (w // 2 - 14, y + 128), (w // 2 + 14, y + 128)], fill=(*NAVY, 255))
     return Img(im, L)
+
+# ---- revision 2 additions: object-interaction graphics -----------------------------------------------------------------------------
+def balance_steps(t, w=540, h=940):
+    """Savings app: the balance steps 2,600 -> 1,840 -> 1,450 -> 400 as the three bills leave (all values from assumptions.csv)."""
+    steps = [(0.0, A["fund_start"], None), (0.45, A["fund_after_car"], ("Car repair", A["car_bill"])), (0.95, A["fund_after_dental"], ("Dental bill", A["dental_bill"])), (1.45, A["fund_final"], ("Leaking pipe", A["plumber_bill"]))]
+    cur = max(i for i, s in enumerate(steps) if t >= s[0])
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); L = []
+    rrect(d, (0, 0, w - 1, h - 1), 64, (*NAVY, 255)); rrect(d, (24, 60, w - 25, h - 76), 34, (*CREAM, 255))
+    d.rounded_rectangle((w // 2 - 62, 22, w // 2 + 62, 40), 9, fill=(*SAGE, 255)); d.ellipse((w // 2 - 24, h - 62, w // 2 + 24, h - 16), fill=(*SAGE, 255))
+    _t(d, L, (w // 2, 130), "Savings", 52, 600, MUTED, "mm")
+    _t(d, L, (w // 2, 260), usd(steps[cur][1]), 112, 700, RED if cur == 3 else NAVY, "mm")
+    for k in range(1, cur + 1):
+        lab, amt = steps[k][2]; y = 380 + 130 * (k - 1); p = ease((t - steps[k][0]) / 0.25)
+        rrect(d, (44, y, w - 45, y + 104), 28, (255, 255, 255, 255), (*RED, 255), 4)
+        _t(d, L, (70, y + 52), lab, 42, 600, NAVY, "lm"); _t(d, L, (w - 70, y + 52), "-" + usd(amt), 50, 700, RED, "rm")
+    return Img(im, L)
+
+def tile(label, w=500, h=190):
+    """Empty tile for a prop icon (the icon is composited by the renderer) with a label; the tick is drawn by tick_on()."""
+    im, d = card(w, h); L = []
+    _t(d, L, (w - 40, h // 2), label, 54, 700, NAVY, "rm"); return Img(im, L)
+
+def tick_on(img, p):
+    """Return a copy of a tile with a green tick drawn to progress p (0..1) over the icon area."""
+    im = img.im.copy(); d = ImageDraw.Draw(im)
+    if p > 0: check(d, 215, im.height // 2 + 6, 44, GREEN, 14, p=clamp(p))
+    return Img(im, img.texts)
+
+def sink_cabinet(w=620, h=420):
+    """Sink base cabinet drawn in the brand palette (temporary coded set piece, not approved artwork): counter, body, one open door."""
+    im = Image.new("RGBA", (w + 200, h + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(im); WOOD = (176, 122, 86)
+    rrect(d, (0, 0, w, 56), 14, (*WOOD, 255), (*NAVY, 255), 5)                                  # counter
+    rrect(d, (20, 56, w - 20, h), 10, (*SAGE, 255), (*NAVY, 255), 5)                           # body
+    rrect(d, (60, 92, w - 60, h - 30), 8, (214, 206, 190, 255), (*NAVY, 255), 4)               # open interior
+    d.polygon([(w - 60, 92), (w + 120, 120), (w + 120, h - 6), (w - 60, h - 30)], fill=(*SAGE, 255), outline=(*NAVY, 255))   # open door
+    d.ellipse((w + 60, 250, w + 76, 266), fill=(*WOOD, 255)); return im
+
+def bill(w=190, h=96):
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); rrect(d, (0, 0, w - 1, h - 1), 14, (206, 226, 200, 255), (*NAVY, 255), 4)
+    d.ellipse((w // 2 - 24, h // 2 - 24, w // 2 + 24, h // 2 + 24), outline=(*NAVY, 255), width=4); d.text((w // 2, h // 2), "$", font=font(34, 700), fill=NAVY, anchor="mm"); return im
