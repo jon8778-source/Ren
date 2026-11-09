@@ -105,7 +105,7 @@ def cup(w=220, h=240, steam=0.0):
     im = Image.new("RGBA", (w, h + 120), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     for k in range(3):
         x = 60 + 50 * k; ph = (steam * 1.3 + k * 0.33) % 1.0; y = 110 - 90 * ph; d.line((x, y + 70, x - 12, y + 35, x + 12, y, x, y - 30), fill=(*MUTED, int(200 * (1 - ph))), width=7, joint="curve")
-    rrect(d, (20, 130, w - 50, h + 100), 24, (*CREAM, 255), (*NAVY, 255), 6); d.arc((w - 100, 170, w - 10, 250), -90, 90, fill=(*NAVY, 255), width=10); return im
+    rrect(d, (20, 130, w - 50, h + 100), 24, (*SAGE, 255), (*NAVY, 255), 6); d.arc((w - 100, 170, w - 10, 250), -90, 90, fill=(*NAVY, 255), width=10); return im
 
 def suitcase(w=360, h=300):
     im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im); rrect(d, (20, 70, w - 20, h - 20), 30, (*SAGE, 255), (*NAVY, 255), 6); rrect(d, (w // 2 - 50, 20, w // 2 + 50, 80), 18, (0, 0, 0, 0), (*NAVY, 255), 8)

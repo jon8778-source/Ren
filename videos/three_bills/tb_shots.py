@@ -57,7 +57,7 @@ def ren(clip, start, mirror, panel, y=None, px=None):
 
 # ---------------- object / graphic scenes -------------------------------------------------------------------------------------------------
 def dominoes_scene(c):
-    table_bg(c, "PORCH"); img = T2.dominoes(clamp((c.t - 0.2) / max(c.d - 0.6, 0.5))); c.put(img, 360, 330)
+    table_bg(c, "PORCH"); img = T2.dominoes(clamp((c.t - 0.2) / max(c.d - 0.6, 0.5))); sc = 1.35; im = img.im.resize((int(img.im.width * sc), int(img.im.height * sc)), Image.LANCZOS); c.f.alpha_composite(im, (150, 150)); c.B.extend([(150 + a * sc, 150 + b * sc, 150 + cc * sc, 150 + e * sc, s_, px * sc) for (a, b, cc, e, s_, px) in img.texts])
 def paid_off(c):
     table_bg(c); cc_ = T.credit_card(620); f = c.f; x, y = 640, 250
     f.alpha_composite(cc_.im, (x, y)); [c.B.append((x + a, y + b, x + cc, y + e, s, px)) for (a, b, cc, e, s, px) in cc_.texts]
@@ -127,8 +127,8 @@ def tiles_ov(items, t0s, x=1250, y=160): return lambda c, r=None: c.slide(T2.til
 def two_acc(c, r=None): c.slide(T2.two_accounts(c.t), 880, 300, 0.2, frm=60)
 def amounts(c):
     veil_bg()(c)
-    for i, lab in enumerate(("$5", "$20", "$50")): c.slide(T.chip_card(lab, 380, "sage" if i == 2 else "cream", 84), 300 + 440 * i, 400, 0.25 + 0.6 * i, frm=60)
-def refill(c, r=None): phone(c, T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_final"] + int(T.A["weekly_transfer"] * 6 * clamp((c.t - 0.8) / 2.5)))), ("toggle", "Automatic", True, clamp((c.t - 0.3) / 0.35)), ("row", "Every", "week")]), 1180, 70, 0.2, scale=0.8)
+    for i, lab in enumerate(("$5", "$20", "$50")): c.slide(T.chip_card(lab, 380, "sage" if i == 2 else "cream", 84), 330 + 440 * i, 400, 0.25 + 0.6 * i, frm=60)
+def refill(c, r=None): phone(c, T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_final"])), ("toggle", "Automatic", True, clamp((c.t - 0.3) / 0.35)), ("bar", clamp((c.t - 0.8) / 2.5) * 0.7 + 0.15, U.SAGE, "Refilling")]), 1180, 70, 0.2, scale=0.8)
 def cups_ov(c, r=None):
     d = ImageDraw.Draw(c.f); d.ellipse((1140, 700, 1620, 760), fill=(*U.CREAM, 255), outline=(*U.NAVY, 255), width=5); d.rectangle((1360, 760, 1400, 900), fill=(*U.NAVY, 255)); d.ellipse((1290, 890, 1470, 930), fill=(*U.NAVY, 255))
     for k, x in enumerate((1190, 1400)):
@@ -152,7 +152,7 @@ def key_turn(c, r=None):
 def friends_tiles(c, r=None): pass
 def three_props_pick(c, r=None):
     for k, nm in enumerate(("car_key", "blank_invoice", "leaking_pipe")):
-        x = 1250 + 250 * k; hl = 1 if (int(c.t / 1.0) % 3 == 1 and k == 1) else 0
+        x = 1150 + 250 * k; hl = 1 if (int(c.t / 1.0) % 3 == 1 and k == 1) else 0
         d = ImageDraw.Draw(c.f); d.rounded_rectangle((x - 110, 300, x + 110, 560), 30, fill=(*U.CREAM, 255), outline=(*(U.GOLD if hl else U.NAVY), 255), width=8 if hl else 4)
         if nm == "leaking_pipe": im = TR.pipe_crop(); w = im.width * 150 / im.height; c.f.alpha_composite(im.resize((int(w), 150), Image.LANCZOS), (int(x - w / 2), 360))
         else: put_prop(c.f, nm, x, 430, 190 if nm == "blank_invoice" else 120)
