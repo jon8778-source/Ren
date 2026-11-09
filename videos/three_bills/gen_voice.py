@@ -11,10 +11,7 @@ Writes voice/chunks/*.wav, voice/<section>.wav and voice/timings.json.
 """
 import argparse, json, sys, time
 from pathlib import Path
-import numpy as np, soundfile as sf, torch
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "free_money"))
-from gen_voice import chunks, trim   # audited helpers: sentence chunking and edge trimming
-from qwen_tts import Qwen3TTSModel
+import numpy as np, soundfile as sf
 HERE = Path(__file__).resolve().parent; ROOT = HERE.parents[1]; OUT = HERE / "voice"; SEED = 9011
 SECTIONS_PILOT = {"H": (0, 4), "L": (5, 9)}          # paragraph ranges of VOICE_SCRIPT.txt
 def paras():
@@ -26,6 +23,10 @@ def sections(all_):
         secs.update({k: " ".join(ps[a:b + 1]) for k, (a, b) in rest.items()})
     return secs
 def main():
+    import torch
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "free_money"))
+    from gen_voice import chunks, trim   # audited helpers: sentence chunking and edge trimming
+    from qwen_tts import Qwen3TTSModel
     ap = argparse.ArgumentParser(); ap.add_argument("--all", action="store_true"); args = ap.parse_args()
     secs = sections(args.all); (OUT / "chunks").mkdir(parents=True, exist_ok=True); t0 = time.monotonic()
     m = Qwen3TTSModel.from_pretrained("Qwen/Qwen3-TTS-12Hz-1.7B-Base", device_map="cpu", dtype=torch.float32, attn_implementation="sdpa")
