@@ -56,8 +56,18 @@ def ren(clip, start, mirror, panel, y=None, px=None):
     return fn
 
 # ---------------- object / graphic scenes -------------------------------------------------------------------------------------------------
-def dominoes_scene(c):
-    table_bg(c, "PORCH"); img = T2.dominoes(clamp((c.t - 0.2) / max(c.d - 0.6, 0.5))); sc = 1.35; im = img.im.resize((int(img.im.width * sc), int(img.im.height * sc)), Image.LANCZOS); c.f.alpha_composite(im, (150, 150)); c.B.extend([(150 + a * sc, 150 + b * sc, 150 + cc * sc, 150 + e * sc, s_, px * sc) for (a, b, cc, e, s_, px) in img.texts])
+def dom(p0, p1):
+    """Dominoes scene covering progress p0 -> p1 of the tipping chain over the shot."""
+    def fn(c):
+        table_bg(c, "PORCH"); p = p0 + (p1 - p0) * clamp((c.t - 0.1) / max(c.d - 0.3, 0.4)); img = T2.dominoes(p); sc = 1.35
+        im = img.im.resize((int(img.im.width * sc), int(img.im.height * sc)), Image.LANCZOS); c.f.alpha_composite(im, (150, 150)); c.B.extend([(150 + a * sc, 150 + b * sc, 150 + cc * sc, 150 + e * sc, s_, px * sc) for (a, b, cc, e, s_, px) in img.texts])
+    return fn
+dominoes_scene = dom(0.0, 1.0)
+def amount_big(text, tone="gold"):
+    def fn(c): veil_bg()(c); k = max(0.3, U.back(c.t / 0.3)); img = T2.sign(text, 900, tone, 150); im = img.im.resize((int(img.im.width * k), int(img.im.height * k)), Image.LANCZOS); x0, y0 = 960 - im.width / 2, 540 - im.height / 2; c.f.alpha_composite(im, (int(x0), int(y0))); c.B.extend([(x0 + a * k, y0 + b * k, x0 + cc * k, y0 + e * k, s_, px * k) for (a, b, cc, e, s_, px) in img.texts] if k > 0.97 else [])
+    return fn
+def two_big(c):
+    veil_bg()(c); c.put(T2.two_accounts(c.t, 1100, 560), 410, 260)
 def paid_off(c):
     table_bg(c); cc_ = T.credit_card(620); f = c.f; x, y = 640, 250
     f.alpha_composite(cc_.im, (x, y)); [c.B.append((x + a, y + b, x + cc, y + e, s, px)) for (a, b, cc, e, s, px) in cc_.texts]
