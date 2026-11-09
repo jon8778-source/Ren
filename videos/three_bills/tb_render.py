@@ -144,7 +144,7 @@ def s_s03(c):
     p = ease(c.t / 0.5); inv = T.invoice("Dental bill", T.A["dental_bill"], urgent=c.t > 0.9)
     x = 960 - inv.im.width / 2 + 300 * (1 - p); c.put(inv, x, 190, alpha=min(1, p * 1.5))
 def s_s04(c):
-    cam = Cam(1.2 + 0.08 * ease(c.t / c.d), 640, 520); c.f.alpha_composite(plate("PORCH", cam))
+    cam = Cam(1.08 + 0.06 * ease(c.t / c.d), 640, 560); c.f.alpha_composite(plate("PORCH", cam))
     maya(c.f, cam, "PORCH", [(0, "worried"), (1.4, "neutral")], c.t, 620, 800, c.B)
 def s_s05(c):
     c.f.alpha_composite(veil("SAGE"))
@@ -180,11 +180,13 @@ def s_s12(c):
     c.put(img, 1150, 260 + 30 * (1 - p), alpha=min(1, p * 1.6))
 def s_s13(c):
     cam = Cam(1.5, 880, 600); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral")], c.t, 760, 820, c.B)
+    c.slide(T.chip_card("Monthly budget", 520, "cream", 54), 1260, 220, 0.8, frm=40)
 def s_s13b(c):
     cam = Cam(1.75, 860, 640); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "neutral"), (0.8, "worried")], c.t, 760, 820, c.B)
     for i, lab in enumerate(("Rent", "Groceries", "Gas")): c.slide(T.chip_card(lab, 420, "cream", 54), 1330, 190 + 180 * i, 0.5 + 1.1 * i, frm=40)
 def s_s14(c):
     cam = Cam(1.5 + 0.1 * ease(c.t / c.d), 860, 620); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 760, 820, c.B)
+    c.slide(T.chip_card("Between deposits", 560, "cream", 54), 1230, 220, 0.4, frm=40)
 def s_s14b(c):
     c.f.alpha_composite(veil("OFFICE")); c.slide(T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 420, 640), 750, 200, 0.15, frm=0)
 def s_s15(c):
@@ -254,8 +256,9 @@ def frame_at(i):
     init(); s = next(x for x in SHOTS if x["fa"] <= i < x["fb"]); t = (i - s["fa"]) / FPS; d = (s["fb"] - s["fa"]) / FPS; B = RP.Boxes()
     f = Image.new("RGBA", (W, H)); RP.REC["poses"] = []; RP.REC["maya"] = None; c = Ctx(s["id"], t, d, i / FPS, f, B)
     FN[s["id"]](c); B.poses = list(RP.REC["poses"]); B.maya = RP.REC["maya"]; T_ = i / FPS
-    if T_ < 3.0: U.pill(f, "Educational only, not financial advice. Illustrative story and figures.", 60, 48, px=32, weight=500, alpha=min(clamp(T_ / 0.4), clamp((3.0 - T_) / 0.4)), boxes=B, pad=(22, 10))
-    elif T_ > TOTAL - 2.6: U.pill(f, DISC, 60, 960, px=34, weight=500, alpha=clamp((T_ - (TOTAL - 2.6)) / 0.3), boxes=B, pad=(22, 10))
+    dw = ImageDraw.Draw(Image.new("RGBA", (4, 4))).textbbox((0, 0), DISC, font=U.font(32, 500)); wpx = dw[2] - dw[0] + 44       # right-aligned, clear of Ren and Maya (both stand left of centre)
+    if T_ < 3.0: U.pill(f, DISC, 1860 - wpx, 48, px=32, weight=500, alpha=min(clamp(T_ / 0.4), clamp((3.0 - T_) / 0.4)), boxes=B, pad=(22, 10))
+    elif T_ > TOTAL - 2.6: U.pill(f, DISC, 1860 - wpx, 980, px=32, weight=500, alpha=clamp((T_ - (TOTAL - 2.6)) / 0.3), boxes=B, pad=(22, 10))
     return f, s, B
 
 def audio():
