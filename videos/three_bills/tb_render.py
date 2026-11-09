@@ -124,7 +124,7 @@ def ren_clip(c):
 class Ctx:
     def __init__(self, sid, t, d, T_abs, f, B): self.sid, self.t, self.d, self.T, self.f, self.B = sid, t, d, T_abs, f, B
     def slide(self, img, x, y, t0=0.2, dur=0.4, frm=50): RP.slide_in(self.f, img, x, y, self.t, t0, dur=dur, frm=frm, B=self.B)
-    def put(self, img, x, y, alpha=1.0): U.put(self.f, img.im, x, y, alpha=alpha, boxes=self.B, texts=img.texts)
+    def put(self, img, x, y, alpha=1.0, rec=True): U.put(self.f, img.im, x, y, alpha=alpha, boxes=self.B if rec else None, texts=img.texts)
 
 def s_ren(c):
     f = plate("SAGE", Cam()); c.f.alpha_composite(f)
@@ -218,7 +218,8 @@ def s_s07b(c):
     if c.t > 0.42: y = 150 - 26 * math.sin(clamp((c.t - 0.42) / 0.22) * math.pi)
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse((520, 760, 1120, 840), fill=(*U.NAVY, int(60 * clamp(q)))); f.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
     rot = inv.im.rotate(-5, Image.BICUBIC, expand=True); f.alpha_composite(rot, (int(560 - 20), int(y)))
-    for (a, b_, cc, e, s_, px) in inv.texts: c.B.append((540 + a, y + b_, 540 + cc, y + e, s_, px))
+    if y > 60:
+        for (a, b_, cc, e, s_, px) in inv.texts: c.B.append((540 + a, y + b_, 540 + cc, y + e, s_, px))      # text boxes only once the invoice is on screen
     cc_ = T.credit_card(560); p = ease((c.t - 0.9) / 0.35)
     if c.t >= 0.9:
         x = 1920 - (1920 - 880) * p; pop = 1 + 0.06 * math.sin(clamp((c.t - 1.25) / 0.2) * math.pi); im = cc_.im.resize((int(cc_.im.width * pop), int(cc_.im.height * pop)), Image.LANCZOS).rotate(7, Image.BICUBIC, expand=True)
@@ -244,6 +245,7 @@ def s_s08(c):
         im = F_img(base, tl.texts); RP.slide_in(c.f, im, x, y, c.t, t0, dur=0.35, frm=60, B=c.B)
 def F_img(im, texts): return U.Img(im, texts)
 def _glow(f, box, t):
+    RP.REC["poses"].append("glow_overlay")        # a moving light overlay on Maya (counted as an overlay, not a pose, in the animation inventory)
     cx, cy = (box[0] + box[2]) / 2, box[1] + (box[3] - box[1]) * 0.33; a = 0.5 + 0.5 * math.sin(t * 2.4); lay = Image.new("RGBA", f.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
     for r_, al in ((260, 18), (170, 26), (90, 34)): d.ellipse((cx - r_, cy - r_, cx + r_, cy + r_), fill=(190, 215, 245, int(al * (0.6 + 0.4 * a))))
     f.alpha_composite(lay)
@@ -258,7 +260,7 @@ def s_s10b(c):
     cam = Cam(2.05, 900, 505); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 900, 820, c.B); evening(c.f)
     c.slide(T.bubble("I've gone backwards", 700), 1000, 230, 0.35)
 def s_s12(c):
-    cam = Cam(1.3, 640, 540); c.f.alpha_composite(plate("PORCH", cam)); maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
+    cam = Cam(1.12, 640, 560); c.f.alpha_composite(plate("PORCH", cam)); maya(c.f, cam, "PORCH", [(0, "relief"), (1.0, "neutral")], c.t, 560, 800, c.B)
     labs = ["Today", "6 months earlier", "12 months earlier", "18 months earlier"]; x, y = 1130, 240; t0, step = 0.3, 0.5
     k = min(2, max(0, int((c.t - t0) / step))) if c.t >= t0 else -1
     if c.t < t0: pages = [(labs[0], 1.0)]
@@ -289,7 +291,7 @@ def s_s14(c):
     p = ease(c.t / 0.4); envelope(c.f, 1620, 1000 - int(190 * p), 340, 0); c.slide(T.chip_card("Between deposits", 560, "cream", 54), 1180, 190, 0.3, frm=40)
 def s_s14b(c):
     cam = Cam(1.3, 900, 560); c.f.alpha_composite(plate("OFFICE", cam)); maya(c.f, cam, "OFFICE", [(0, "worried")], c.t, 700, 820, c.B)
-    img = T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 460, 720); p = ease(c.t / 0.4); c.put(img, 1240, int(1080 - 880 * p))
+    img = T.phone_inset(T.A["story_prev_savings"], "Eighty dollars", 460, 720); p = ease(c.t / 0.4); c.put(img, 1240, int(1080 - 880 * p), rec=p > 0.99)
 
 FN = {"S01": s_ren, "S02": s_s02, "S03": s_s03, "S04": s_s04, "S05a": s_s05a, "S05b": s_s05b, "S06": s_ren, "S07a": s_s07a, "S07b": s_s07b, "S08": s_s08, "S09a": s_s09a, "S09b": s_s09b,
       "S10a": s_s10a, "S10b": s_s10b, "S11": s_ren, "S12": s_s12, "S13": s_s13, "S13b": s_s13b, "S14": s_s14, "S14b": s_s14b, "S15": s_s15, "S16": s_s16, "S17": s_ren}
