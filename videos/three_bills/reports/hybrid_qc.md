@@ -26,14 +26,14 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa.py <mp4>`; thr
 | 5b every shot boundary changes the picture | PASS | [] |
 | 5c no A-B-A one-frame inserts | PASS | [] |
 | 5d no single-frame brightness flashes | PASS | [] |
-| 6a all on-screen text inside the safe area (x 40..1880, y 20..1040), 266 frames incl. every shot's first and last | FAIL | [(402, 'Unexpected bill', [580, -577, 960, -525]), (408, 'Unexpected bill', [580, -290, 960, -238]), (1055, 'Savings', [1387, 1183, 1554, 1228]), (1055, '$80', [1402, 1299, 1538, 1371]), (1055, 'Eighty dollars', [1332, 1 |
+| 6a all on-screen text inside the safe area (x 40..1880, y 20..1040), 266 frames incl. every shot's first and last | PASS | [] |
 | 6b on-screen text at least 32 px | PASS | [] |
 | 6c every on-screen number appears in production/assumptions.csv (or is a day/month label) | PASS | ['1,050', '1,450', '1,840', '12', '18', '2,200', '2,600', '3', '30', '390', '400', '6', '600', '760', '80'] |
 | 7 claim arithmetic (760 + 390 + 1,050 = 2,200; 2,600 - 2,200 = 400; 50 x 52 = 2,600) and check_numbers.py | PASS |  |
 | 8 Maya sub-pixel placement noise <= 0.12 px (jitter_check method, all four poses) | PASS | worst 0.051px |
 | 9 all 4 Ren cutaways: approved library clips inside their usable windows, feet fixed, 175 cm plate scale, every frame a distinct clip frame, real movement, static camera, Ren left / graphics right | PASS | [] |
-| 10a Maya's measured height equals the calibrated plate perspective (ren_stage height_px for 165 cm, within 3%) and feet are inside the frame | FAIL | ([], [('S12', 759, [697, -76, 975, 928]), ('S12', 761, [697, -76, 975, 928]), ('S12', 763, [697, -76, 975, 928])]) |
-| 10b every Maya shot changes pose or carries a moving prop/overlay (no shot is only a camera move over a still) | FAIL | ['S09b'] |
+| 10a Maya's measured height equals the calibrated plate perspective (ren_stage height_px for 165 cm, within 3%) and feet are inside the frame | PASS | ([], []) |
+| 10b every Maya shot changes pose or carries a moving prop/overlay (no shot is only a camera move over a still) | PASS | [] |
 | 11 constant 24 fps: every packet 1/24 s apart, no dropped or duplicated timestamps | PASS | 1364 packets, delta 0.04167-0.04167 |
 | 12a voice runner config: Qwen/Qwen3-TTS-12Hz-1.7B-Base, English, x_vector_only_mode=True, Audio/ren_reference.wav, fixed seeds, no speed change | PASS |  |
 | 12b renderer imports and calls no TTS code | PASS |  |
