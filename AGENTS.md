@@ -1,36 +1,25 @@
-# Ren project instructions
+# Ren production instructions (repository-wide)
 
-For new hybrid animation prototypes, read project/REN_VIDEO_RULES.md first.
-These owner-approved v3 rules supersede conflicting older prototype styling
-in CLAUDE.md and project/DECISIONS.md. Continue using their existing workflow
-for legacy production episodes.
+These are standing instructions for Codex and other development agents starting in this repository. Before any Ren video task, identify the active Git branch, check that the required files and assets are actually available, and read the applicable rules. Do not infer approval from the existence of a file.
 
-The approved v3 renderer, all four original artworks, pinned dependencies,
-run instructions and validation results are published under
-project/prototypes/coffee-minute-v3/. Artwork is stored losslessly in the
-artwork/ chunks and restored automatically by render.py (or unpack_artwork.py);
-SHA-256 checks prevent substitution or corruption. See README.md and
-validation.json for fresh-checkout verification. Keep prototype work separate
-from main and preserve approved narration. No new voice requests are needed.
+## Long-form videos
 
-## Character sharpness and GitHub task recovery
+For every new or substantially revised long-form Ren video, read:
+- `project/REN_LONGFORM_BASELINE.md`
+- `project/REN_VIDEO_RULES.md`
+- `project/REN_LONGFORM_CHECKLIST.md`
+- `project/DECISIONS.md`
 
-Decode Ren clips at their native 1280×720 resolution before matting and the
-final composition resize. Do not downsample them to 640×360. Check the face,
-glasses, hair, hands and clothing at 100% output size in wide and close shots;
-resolution/frame-count checks alone do not establish visual sharpness.
-For GitHub publishing, follow project/GITHUB_TASK_WORKFLOW.md and maintain
-project/GITHUB_TASK_STATUS.md with remotely verified checkpoints. These are
-publishing safeguards, not an Android client-sync fix. Resume from the remote
-branch after an interruption; do not regenerate approved art or narration.
+Use approved story-led hybrid animation, genuine Ren animation clips, illustrated environments, Qwen British voice cloning, and the owner approval gates. The normal gate sequence is: verified research and claims; explicit script approval; asset inventory; approximately 60-second animated pilot; explicit pilot approval; full video; technical/visual/audio/financial QA; owner final approval. Never synthesize voice before required script approval, render the full video before pilot approval, or publish without separate authorization.
 
-## Mandatory Shorts workflow
+## Shorts
 
-Whenever planning, creating, adapting or revising a YouTube Short, read
-[project/REN_SHORTS_RULES.md](project/REN_SHORTS_RULES.md) before implementation.
-These Shorts-specific standards supersede historical Shorts layouts/helpers.
-Use the asset-first report and `project/pipeline/shorts_standards.py` workflow.
-Produce only the 15-second prototype first, deliver it and STOP for explicit
-owner approval before complete-Short rendering. Record real approval bound to
-its preview hash and production inputs; never treat a render as approval.
-Existing approved long-form production continues under REN_VIDEO_RULES.md.
+For every new or revised Ren Short, additionally read `project/REN_SHORTS_RULES.md`. Require its asset-first review and 15-second portrait prototype. Stop for explicit owner approval before producing a complete Short. Do not infer a Short's approval from an approved long-form video.
+
+## Precedence and asset verification
+
+Approved current hybrid/Qwen instructions take precedence over older white-background, static-bust, and Kokoro procedures in `CLAUDE.md` or `project/DECISIONS.md`; the latter remain available for legacy episodes. Explicit owner instructions for a task take precedence when consistent with the required approvals.
+
+These policy files live on `main` so new Codex sessions can find them. Some source media, animation helpers, templates and episode-specific QA scripts are maintained on production/reference branches (including `video/free-money-v2` and `codex/ren-approved-v3`), not necessarily on `main`. **Verify actual paths, clip approvals, tool availability and test results on the working branch before claiming anything was inspected, executed or approved.** If required assets or tools are absent, report the blocker and use an authorized production branch or request a scoped implementation; do not silently substitute assets, voice, QA or renderer.
+
+Make changes on an isolated working branch, preserve existing episodes, and use a reviewed pull request for integration. Do not merge unfinished episode source or large video binaries merely to propagate production rules.

@@ -1,0 +1,16 @@
+key,value,unit,classification,note
+story_prev_savings,80,USD,fictional_character,Prior balance at flashback; not the new fund's opening balance
+story_prev_repair,600,USD,fictional_character,Old unexpected car repair
+weekly_transfer,50,USD/week,illustrative,52 consecutive weekly contributions in this fictional timeline; then stopped at target
+contribution_weeks,52,weeks,illustrative,52 transfers with no withdrawal and no interest modelled
+fund_start,2600,USD,calculated,weekly_transfer * contribution_weeks
+car_day,3,day_of_month,fictional_character,Illustrative day within 30-day month
+car_bill,760,USD,illustrative,Unexpected car repair
+dental_day,16,day_of_month,fictional_character,Illustrative day within 30-day month
+dental_bill,390,USD,illustrative,After fictional insurance processing
+plumber_day,27,day_of_month,fictional_character,Illustrative day within 30-day month
+plumber_bill,1050,USD,illustrative,Unexpected leak repair
+fund_after_car,1840,USD,calculated,fund_start - car_bill
+fund_after_dental,1450,USD,calculated,fund_after_car - dental_bill
+total_emergencies,2200,USD,calculated,car_bill + dental_bill + plumber_bill
+fund_final,400,USD,calculated,fund_start - total_emergencies

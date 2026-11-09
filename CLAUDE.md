@@ -1,5 +1,14 @@
 # Ren videos
 
+## Current long-form production (8 November 2026)
+
+For new long-form videos, read `project/REN_LONGFORM_BASELINE.md`,
+`project/REN_VIDEO_RULES.md`, and `project/REN_LONGFORM_CHECKLIST.md` first.
+Use the approved hybrid visual system and British Qwen clone. The white-only,
+static-bust and Kokoro instructions below describe legacy episodes and are not
+the default for new long-form work. The current owner-requested gates and any
+explicit task instructions control over the historical workflow below.
+
 ## Current animation prototype route (27 October 2026)
 
 For new animated prototypes, use `project/cliplib/README.md` and `render_hybrid.py`: animated Ren
