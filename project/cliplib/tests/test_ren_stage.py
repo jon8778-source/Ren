@@ -123,5 +123,20 @@ class StandTests(unittest.TestCase):
         self.assertLess(abs(xs.mean() - fx), 3)
 
 
+    def test_mip_cache_never_returns_another_images_pixels(self):
+        # regression: the cache was keyed on id(img); a new image that reused a freed image's id got the old one's pre-scaled copy
+        red = Image.new('RGBA', (300, 600), (255, 0, 0, 255))
+        f1 = Image.new('RGBA', (400, 700), (0, 0, 0, 0))
+        rs.paste_smooth(f1, red, 50, 50, 150, 300)
+        key = (id(red), red.size, int(300 // rs._MIP_STEP))
+        stale = rs._MIP[key]
+        blue = Image.new('RGBA', (500, 600), (0, 0, 255, 255))            # different size and colour
+        rs._MIP[(id(blue), blue.size, int(300 // rs._MIP_STEP))] = stale   # simulate an id collision with a different image object
+        f2 = Image.new('RGBA', (400, 700), (0, 0, 0, 0))
+        rs.paste_smooth(f2, blue, 50, 50, 250, 300)
+        px = np.asarray(f2)[200, 150]
+        self.assertEqual(tuple(px[:3]), (0, 0, 255))
+
+
 if __name__ == '__main__':
     unittest.main()

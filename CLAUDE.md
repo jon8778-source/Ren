@@ -1,5 +1,7 @@
 # Ren videos
 
+**New long-form work:** start at `project/REN_LONGFORM_WORKFLOW.md`; it routes current production and approval gates. The historical instructions below remain for reproducing legacy work.
+
 ## Current long-form production (8 November 2026)
 
 For new long-form videos, read `project/REN_LONGFORM_BASELINE.md`,
