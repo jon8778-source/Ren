@@ -133,7 +133,7 @@ def s_ren(c):
              "S17": lambda: T.chain(3)}[c.sid]()
     x = 1860 - panel.im.width; y = int(max(60, 520 - panel.im.height / 2))
     if c.sid == "S17":
-        stage = 1 + int(c.t / max(min(c.d, 94 / 24.0), 1e-6) * 3 - 1e-9)      # fixed to the approved pilot's S17 length so the chain timing is identical in the full episode; panel = T.chain(min(3, stage)); x = 1860 - panel.im.width; y = 300
+        stage = 1 + int(c.t / max(min(c.d, 94 / 24.0), 1e-6) * 3 - 1e-9); panel = T.chain(min(3, stage)); x = 1860 - panel.im.width; y = 300      # chain timing is pinned to the approved pilot's S17 length (94 frames) so it is identical in the full episode
     RP.slide_in(c.f, panel, x, y, c.t, 0.25, dur=0.0 if False else 0.45, frm=0, B=c.B)
 
 def bg(name, cam, blur=0, dark=0.0): return plate(name, cam, blur, dark)

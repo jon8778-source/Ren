@@ -165,9 +165,9 @@ check("12d spoken-word check against the script (Whisper)", (HERE / "voice_check
 if pilot and pilot.exists():
     prep = json.loads((pilot.parent / (pilot.stem + "_report.json")).read_text()) if (pilot.parent / (pilot.stem + "_report.json")).exists() else None
     def grab(p_, a_, b_): return np.frombuffer(subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(p_), "-vf", f"select='between(n,{a_},{b_ - 1})',scale=480:270,format=gray", "-vsync", "0", "-f", "rawvideo", "-"]), np.uint8).reshape(-1, 270, 480).astype(np.int16)
-    pf = int(prep["frames"]) if prep else 1364; end_ = ST["S17"]["fa"] + int(0.8 * (min(ST["S17"]["fb"], pf) - ST["S17"]["fa"]))
+    pf = int(prep["frames"]) if prep else 1364; end_ = pf - int(2.7 * FPS)       # the pilot ends with its closing disclaimer (last 2.6 s); the full episode shows the disclaimer only at its own end
     dd_ = [float(np.abs(grab(mp4, a_, min(a_ + 200, end_)) - grab(pilot, a_, min(a_ + 200, end_))).mean((1, 2)).max()) for a_ in range(0, end_, 200)]
-    check("13a approved pilot frames (0 to 80% of S17) unchanged in the full episode (max per-frame mean difference at 480x270)", max(dd_) < 1.5, f"worst {max(dd_):.2f}/255 over {end_} frames")
+    check("13a approved pilot frames (from frame 0 up to the pilot's closing-disclaimer lead-in) unchanged in the full episode (max per-frame mean difference at 480x270)", max(dd_) < 1.5, f"worst {max(dd_):.2f}/255 over {end_} frames")
     ap_ = np.frombuffer(subprocess.check_output(["ffmpeg", "-v", "error", "-i", str(pilot), "-ac", "1", "-ar", "24000", "-f", "f32le", "-"]), np.float32); m2 = min(len(ap_), len(got_a)) - 12000
     check("13b pilot narration unchanged in the full episode (correlation over the pilot's length)", float(np.dot(ap_[:m2], got_a[:m2]) / (np.linalg.norm(ap_[:m2]) * np.linalg.norm(got_a[:m2]) + 1e-9)) > 0.999, f"{float(np.dot(ap_[:m2], got_a[:m2]) / (np.linalg.norm(ap_[:m2]) * np.linalg.norm(got_a[:m2]) + 1e-9)):.5f}")
 else: check("13 pilot comparison", False, "no pilot given", status="NOT RUN")

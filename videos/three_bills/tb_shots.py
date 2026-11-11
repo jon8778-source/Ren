@@ -117,8 +117,8 @@ def new_bal(a, b, label, amt, flip=0.9):
 def enough(c):
     veil_bg()(c); phone(c, T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_after_dental"])), ("bar", clamp((c.t - 0.3) / 0.6) * T.A["plumber_bill"] / T.A["fund_after_dental"], U.SAGE, "Plumbing " + T.usd(T.A["plumber_bill"])), ("check", "Enough")]), 700, 70)
 def shrink_phone(c):
-    veil_bg("OFFICE", "eve")(c); s = 1.0 - 0.45 * ease(c.t / max(c.d, 1e-6)); img = T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_final"]))]); im = img.im.resize((int(img.im.width * s), int(img.im.height * s)), Image.LANCZOS); c.f.alpha_composite(im, (int(960 - im.width / 2), int(540 - im.height / 2)))
-    if s < 0.58: c.B.extend([(960 - im.width / 2 + a * s, 540 - im.height / 2 + b * s, 960 - im.width / 2 + cc * s, 540 - im.height / 2 + e * s, s_, px * s) for (a, b, cc, e, s_, px) in img.texts])
+    veil_bg("OFFICE", "eve")(c); s = 1.0 - 0.28 * ease(c.t / max(c.d, 1e-6)); img = T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_final"]))]); im = img.im.resize((int(img.im.width * s), int(img.im.height * s)), Image.LANCZOS)
+    x0, y0 = 960 - im.width / 2, 540 - im.height / 2; c.f.alpha_composite(im, (int(x0), int(y0))); c.B.extend([(x0 + a * s, y0 + b * s, x0 + cc * s, y0 + e * s, s_, px * s) for (a, b, cc, e, s_, px) in img.texts])
 def tank(a, b, title="Emergency fund"):
     def fn(c): veil_bg("OFFICE", "eve" if title == "Looks like" else None)(c); c.put(T2.fund_bar((a, b), clamp(c.t / max(c.d - 0.4, 0.5)), 860, 560, title), 530, 260)
     return fn
