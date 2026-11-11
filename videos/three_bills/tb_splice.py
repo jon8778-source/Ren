@@ -29,7 +29,7 @@ if cur < NF: parts.append(("old", cur, NF))
 files = []
 for k, (kind, a, b) in enumerate(parts):
     f = out / f"_p{k}_{kind}.mp4"
-    if kind == "old": subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-ss", f"{a / FPS:.6f}", "-i", str(old), "-t", f"{(b - a) / FPS:.6f}", "-an", "-c:v", "copy", "-avoid_negative_ts", "make_zero", str(f)])
+    if kind == "old": subprocess.check_call(["ffmpeg", "-y", "-v", "error", "-ss", f"{a / FPS:.6f}", "-i", str(old), "-frames:v", str(b - a), "-an", "-c:v", "copy", "-avoid_negative_ts", "make_zero", str(f)])
     else:
         p = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", "1920x1080", "-r", "24", "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "15", "-pix_fmt", "yuv420p", "-g", "48", str(f)], stdin=subprocess.PIPE)
         for i in range(a, b): fr, _, _ = TF.frame_at(i); p.stdin.write(fr.convert("RGB").tobytes())
