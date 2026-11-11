@@ -1,0 +1,33 @@
+filename,duration_s,width,height,fps,manifest_in_s,manifest_out_s,window_within_duration,manifest_notes,verified_direction,verified_closed_mouth_window,visual_status
+ren_celebrate_fist_pump.mp4,10.000,1280,720,24/1,1.25,10,YES,Open grin ~2s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_clipboard_tick.mp4,10.000,1280,720,24/1,0.75,10,YES,Brief open smile,Clipboard held on screen left; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_confused.mp4,10.000,1280,720,24/1,2.0,7.38,YES,Stray arm wave before scratch; trimmed,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_count_fingers.mp4,10.000,1280,720,24/1,0.75,8.5,YES,Brief open mouth,Counting fingers visible; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_empty_pockets.mp4,10.000,1280,720,24/1,1.25,10,YES,Open grin ~2s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_explain_hands.mp4,9.903,1280,720,24/1,9.0,28.0,NO,30s take; mouth closed and hands gesturing 9.0-28.0s; mouth talks before 8.5s and at 28.25s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_facepalm.mp4,10.000,1280,720,24/1,1.25,7.75,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_hold_phone.mp4,10.000,1280,720,24/1,1.25,10,YES,,Phone held on screen left; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_idea.mp4,10.000,1280,720,24/1,0.62,7.0,YES,Open grin ~3s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_idle_calm.mp4,10.000,1280,720,24/1,0.0,10.0,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_idle_listen.mp4,10.000,1280,720,24/1,0.0,10.0,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_lean_in.mp4,10.000,1280,720,24/1,0.88,8.38,YES,Zooms to close-up; use as a deliberate secret moment,Moves into close framing; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_nod_yes.mp4,10.000,1280,720,24/1,1.12,9.0,YES,Ends slightly off neutral; trimmed last second,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_open_arms.mp4,10.000,1280,720,24/1,1.38,7.0,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_point_camera.mp4,10.000,1280,720,24/1,1.12,5.88,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_point_down_right.mp4,10.000,1280,720,24/1,1.0,7.0,YES,"Regenerated; points clearly to bottom-right corner, mouth closed",Points to screen lower right; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_point_right.mp4,10.000,1280,720,24/1,1.0,6.38,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_point_up.mp4,10.000,1280,720,24/1,1.12,9.0,YES,Ends slightly off neutral; trimmed last second,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_present_palm_left.mp4,10.000,1280,720,24/1,1.12,7.88,YES,Actually presents to screen left; mirror for right,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_relieved.mp4,10.000,1280,720,24/1,1.25,7.88,YES,Open grin ~2s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_rub_hands.mp4,10.000,1280,720,24/1,0,7.88,YES,Toothy grin ~3s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_shake_no.mp4,10.000,1280,720,24/1,1.25,7.25,YES,,Hand gesture on screen left; sampled frames only,NOT VERIFIED,"SAMPLED 4 FRAMES, not continuous playback; mouth/edges NOT VERIFIED"
+ren_shocked.mp4,10.000,1280,720,24/1,1.12,6.5,YES,Open mouth during shock,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_shrug.mp4,10.000,1280,720,24/1,1.12,10,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_thinking.mp4,10.000,1280,720,24/1,1.25,9.12,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_thumbs_up.mp4,10.000,1280,720,24/1,2.75,8.0,YES,Regenerated; white background fixed; toothy grin ~1s at peak; starts after small wave,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_walk_in_left.mp4,10.000,1280,720,24/1,0.0,10.0,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_walk_in_place_profile.mp4,10.000,1280,720,24/1,0.0,10.0,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_walk_off_right.mp4,10.000,1280,720,24/1,0.0,10,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_wave_bye.mp4,10.000,1280,720,24/1,1.25,6.12,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_wave_hello.mp4,10.000,1280,720,24/1,1.12,10,YES,,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED
+ren_worried.mp4,10.000,1280,720,24/1,1.25,7.0,YES,Gritted teeth ~2s,NOT VERIFIED,NOT VERIFIED,NOT VISUALLY INSPECTED

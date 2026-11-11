@@ -1,0 +1,2 @@
+shot_id,start_s,end_s,scene,story_purpose,narration,shot_type,acting_type,asset_or_clip,source_in_s,source_out_s,gesture_screen_direction,mirror_approved,setting,framing,prop_interaction,grounding_and_contact,transition,text_and_readability,review_notes
+EXAMPLE_01,0,3,opening,Introduce the question,Example only,ren,approved_clip,ren_point_right.mp4,1.2,4.2,verify against content,no,approved office,wide,points toward benefit,feet on calibrated floor with contact shadow,cut on beat,short label on right,EXAMPLE ONLY - review actual clip and approval
