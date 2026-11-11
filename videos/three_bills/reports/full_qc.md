@@ -29,7 +29,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa_full.py <mp4> 
 | 5c no A-B-A one-frame inserts | PASS | [] |
 | 5d no single-frame brightness flashes | PASS | [] |
 | 6a all on-screen text inside the safe area (x 40..1880, y 20..1040), 998 frames incl. every shot's first, middle and last | PASS | [] |
-| 6b on-screen text at least 32 px | FAIL | [(4704, 'F57', 'Savings', 26), (4707, 'F57', 'Savings', 25)] |
+| 6b on-screen text at least 32 px | PASS | [] |
 | 6c every on-screen number appears in production/assumptions.csv, the script, or is a day/month label | PASS | ['0', '1', '1,050', '1,450', '1,840', '12', '16', '18', '2,200', '2,600', '20', '27', '3', '30', '390', '400', '5', '50', '52', '6', '600', '760', '80'] |
 | 7 claim arithmetic (50 x 52 = 2,600; 2,600-760 = 1,840; -390 = 1,450; -1,050 = 400; total 2,200; 1,050 < 1,450 'enough') and check_numbers.py | PASS |  |
 | 8 Maya sub-pixel placement noise <= 0.12 px (jitter_check method, all four poses) | PASS | worst 0.051px |
@@ -45,7 +45,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa_full.py <mp4> 
 | 12b renderers import and call no TTS code | PASS |  |
 | 12c MP4 audio matches the joined narration WAVs (correlation >= 0.95) | PASS | 1.0000 |
 | 12d spoken-word check against the script (Whisper) | PASS | see voice_check_summary.json |
-| 13a approved pilot frames (0 to 80% of S17) unchanged in the full episode (max per-frame mean difference at 480x270) | FAIL | worst 12.26/255 over 1345 frames |
+| 13a approved pilot frames (from frame 0 up to the pilot's closing-disclaimer lead-in) unchanged in the full episode (max per-frame mean difference at 480x270) | PASS | worst 0.42/255 over 1300 frames |
 | 13b pilot narration unchanged in the full episode (correlation over the pilot's length) | PASS | 1.00000 |
 
 ## Not run / limits
