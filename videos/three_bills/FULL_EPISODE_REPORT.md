@@ -13,7 +13,7 @@ Authorised by the owner's pilot approval (rev3) with conditions 1-8. Branch `vid
 4. Ren: 21 genuine library clips, 10 distinct clips, never the same clip twice in a row, longest gap between Ren shots 29.1 s.
 5. Repetitive cards: no more than 2 graphic-only shots in a row; graphic-only screen time 22%. The four-principles section (about 4:15-5:00) alternates Maya in the office/porch/lot, Ren and phone/envelope props; it is still text-led.
 6. Voice and figures: approved Qwen clone, all sections generated once from the approved v2 script (SHA-256 verified), no regeneration of the pilot audio; every on-screen figure from `assumptions.csv`; arithmetic and "1,050 < 1,450" checked.
-7. QA: 38 checks, OVERALL PASS (`reports/full_qc.md`). Includes full decode, every cut on a shot boundary, no one-frame inserts or flashes, safe area and 32 px minimum on 998 frames, Ren and Maya scale/grounding, jitter 0.051 px, constant 24 fps.
+7. QA: 41 checks, OVERALL PASS (`reports/full_qc.md`). Includes full decode, every cut on a shot boundary, no one-frame inserts or flashes, safe area and 32 px minimum on 998 frames, Ren and Maya scale/grounding, jitter 0.051 px, constant 24 fps.
 8. Unverified, stated plainly below.
 
 ## Not verified
