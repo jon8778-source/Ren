@@ -27,7 +27,7 @@ CA, GR, RN, ST = "CHARACTER_ACTION", "GRAPHIC", "REN_ANIMATED", "STORY_STILL"
 P, LT, OF = "PORCH", "LOT", "OFFICE"
 # Ren clips: (clip, start second in the clip, mirror)
 R_TH = ("ren_thinking", 1.5, False); R_OA = ("ren_open_arms", 1.5, False); R_PL = ("ren_present_palm_left", 1.3, True); R_NY = ("ren_nod_yes", 1.3, False); R_SH = ("ren_shrug", 1.3, False)
-R_PU = ("ren_point_up", 1.3, False); R_PR = ("ren_point_right", 1.3, False); R_NO = ("ren_shake_no", 1.5, False); R_HP = ("ren_hold_phone", 1.5, False); R_EX = ("ren_explain_hands", 10.0, False); R_PC = ("ren_point_camera", 1.3, False)
+R_PU = ("ren_point_up", 1.3, False); R_PR = ("ren_point_right", 1.3, False); R_NO = ("ren_shake_no", 1.5, False); R_HP = ("ren_hold_phone", 1.5, False); R_EX = ("ren_explain_hands", 10.0, False); R_PC = ("ren_point_camera", 1.3, False); R_CF = ("ren_count_fingers", 1.3, False); R_HP2 = ("ren_hold_phone", 1.3, False)
 def R(clip, panel, y=None): return ren(*clip, panel, y)
 def sg(text, tone="sage", w=900, px=60): return lambda c: T2.sign(text, w, tone, px)
 def ch(text, w=560, tone="cream", px=56): return lambda c: T.chip_card(text, w, tone, px)
@@ -42,9 +42,9 @@ FULL = [
  ("F05", CA, "She didn't discover a perfect side hustle.", ms(OF, 1.5, 1.4, 900, 600, [(0, "neutral"), (1.0, "surprised")], extra=cross("Perfect side hustle", 1170, 230, 0.4, 700))),
  ("F06", CA, "And she definitely didn't stop enjoying her life for a year.", ms(P, 1.1, 1.18, 700, 500, [(0, "relief")], g="sun", extra=SH.cups_ov)),
  ("F07", GR, "Once the card was paid off,", SH.paid_off),
- ("F08", CA, "she opened a separate savings account", ms(OF, 1.35, 1.45, 880, 600, [(0, "neutral")], extra=lambda c, r=None: SH.phone(c, T2.phone_ui([("title", "New account"), ("big", "$0"), ("row", "Savings", "Separate")]), 1230, 70, 0.2, scale=0.85))),
+ ("F08", RN, "she opened a separate savings account", R(R_HP2, lambda c: T2.phone_ui([("title", "New account"), ("big", "$0"), ("row", "Type", "Savings")], 440, 620))),
  ("F09", GR, "and set up an automatic transfer of fifty dollars every week.", SH.auto_transfer),
- ("F10", RN, "Fifty dollars a week, for fifty-two weeks,", R(R_HP, sg("$50 a week for 52 weeks", "cream", 860, 56))),
+ ("F10", RN, "Fifty dollars a week, for fifty-two weeks,", R(R_TH, sg("$50 a week for 52 weeks", "cream", 860, 56))),
  ("F11", GR, "gave her two thousand six hundred dollars.", SH.equation_full),
  ("F12", CA, "No miracle return.", ms(OF, 1.4, 1.5, 880, 600, [(0, "neutral")], extra=cross("Miracle return", 1200, 260, 0.2, 700, 0.5))),
  ("F13", GR, "Just money deliberately left untouched.", SH.envelope_fill),
@@ -72,7 +72,7 @@ FULL = [
  ("F35", GR, "Toothache. Appointment.", SH.tooth_appt),
  ("F36", GR, "A three-hundred-and-ninety-dollar bill after insurance.", estimate_invoice("Dental bill", T.A["dental_bill"], "After insurance")),
  ("F37", CA, "Maya sat in the parking lot with the invoice on her phone.", ms(LT, 1.25, 1.3, 760, 560, [(0, "worried")], extra=SH.pay_phone)),
- ("F38", GR, "She looked at the savings account, tapped transfer,", SH.phone_card(SH.tapped)),
+ ("F38", RN, "She looked at the savings account, tapped transfer,", R(R_HP2, lambda c: T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_after_car"])), ("row", "Dental bill", T.usd(T.A["dental_bill"]), U.RED), ("toggle", "Transfer", True, clamp((c.t - 1.2) / 0.3))], 440, 620))),
  ("F39a", CA, "and stared at the new balance:", ms(OF, 1.35, 1.42, 880, 600, [(0, "surprised"), (0.9, "worried")])),
  ("F39b", GR, "one thousand four hundred and fifty dollars.", SH.phone_card(SH.new_bal(T.A["fund_after_car"], T.A["fund_after_dental"], "Dental bill", T.A["dental_bill"], 0.5))),
  ("F40", CA, "She felt the same little punch of anxiety.", ms(P, 1.1, 1.18, 620, 500, [(0, "surprised"), (0.9, "worried")])),
@@ -118,12 +118,12 @@ FULL = [
  ("F79", RN, "Even a small buffer can change the choices you have.", R(R_TH, sg("A small buffer, more choices", "cream", 840, 54))),
  ("F80a", CA, "Second, move a manageable amount automatically", ms(OF, 1.35, 1.45, 880, 600, [(0, "neutral")], extra=SH.two_acc)),
  ("F80b", CA, "into a separate, easy-to-access savings account.", ms(P, 1.1, 1.18, 640, 500, [(0, "neutral")], extra=SH.two_acc)),
- ("F81", GR, "Five dollars, twenty dollars, fifty dollars:", SH.amounts),
+ ("F81", RN, "Five dollars, twenty dollars, fifty dollars:", R(R_CF, lambda c: T2.sign("$5   $20   $50", 760, "cream", 84))),
  ("F82", CA, "the right amount is the one your budget can actually sustain without creating overdraft fees.", ms(OF, 1.3, 1.4, 880, 600, [(0, "neutral")], extra=both(sign("Sustainable", 1200, 200, 0.3, 560, "sage", 64), cross("Overdraft fees", 1160, 420, 1.4, 640, 0.7)))),
  ("F83", RN, "Third, don't call every predictable bill an emergency.", R(R_PR, sg("3  Not every bill is an emergency", "cream", 860, 52))),
  ("F84", CA, "Annual insurance, holiday gifts, and routine car maintenance need their own plan.", ms(OF, 1.35, 1.45, 880, 600, [(0, "neutral")], extra=SH.envelopes_three)),
  ("F85", CA, "The emergency fund is for the things you couldn't reasonably schedule.", ms(LT, 1.25, 1.32, 700, 560, [(0, "neutral"), (1.5, "surprised")], extra=sign("Unscheduled", 1330, 240, 0.4, 520, "gold", 64))),
- ("F86", CA, "And fourth, when you use it, refill it as circumstances allow.", ms(OF, 1.35, 1.42, 880, 600, [(0, "neutral")], extra=SH.refill)),
+ ("F86", RN, "And fourth, when you use it, refill it as circumstances allow.", R(R_HP2, lambda c: T2.phone_ui([("title", "Savings"), ("big", T.usd(T.A["fund_final"])), ("toggle", "Automatic", True, clamp((c.t - 0.6) / 0.35)), ("bar", clamp((c.t - 1.0) / 2.5) * 0.7 + 0.15, U.SAGE, "Refilling")], 440, 620))),
  ("F87", CA, "Maya's next step isn't shame.", ms(P, 1.5, 1.6, 640, 380, [(0, "neutral")], extra=cross("Shame", 1250, 220, 0.3, 480, 0.6), closeup=True)),
  ("F88", RN, "It's restarting that transfer.", R(R_NY, lambda c: T2.phone_ui([("title", "Transfer"), ("big", T.usd(T.A["weekly_transfer"])), ("toggle", "Automatic", True, clamp((c.t - 0.5) / 0.4))], 520, 620))),
  ("F89", CA, "Maya still wants a bigger emergency cushion,", ms(OF, 1.3, 1.38, 880, 600, [(0, "neutral")], g="sun", extra=SH.cushion)),
