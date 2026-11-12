@@ -35,7 +35,7 @@ Command: `project/.tools/venv/bin/python videos/three_bills/tb_qa_full.py <mp4> 
 | 8 Maya sub-pixel placement noise <= 0.12 px (jitter_check method, all four poses) | PASS | worst 0.051px |
 | 9a all 25 Ren shots: approved library clips inside their usable windows, feet fixed, 175 cm plate scale, every frame a distinct clip frame, real movement, static camera, Ren left / graphics right | PASS | [] |
 | 9b consecutive Ren shots never repeat the same clip | PASS | [] |
-| 9c Ren clip variety recorded | PASS | {'ren_hold_phone': 3, 'ren_nod_yes': 3, 'ren_open_arms': 4, 'ren_point_camera': 1, 'ren_point_right': 3, 'ren_point_up': 1, 'ren_present_palm_left': 3, 'ren_shake_no': 1, 'ren_shrug': 3, 'ren_thinking': 3} |
+| 9c Ren clip variety recorded | PASS | {'ren_hold_phone': 3, 'ren_nod_yes': 3, 'ren_open_arms': 3, 'ren_point_camera': 1, 'ren_point_right': 3, 'ren_point_up': 1, 'ren_present_palm_left': 4, 'ren_shake_no': 1, 'ren_shrug': 3, 'ren_thinking': 3} |
 | 10a Maya's measured height equals the calibrated plate perspective (165 cm, within 3%); head and feet in frame except deliberate close-ups (head in) | PASS | ([], []) |
 | 10b every Maya shot changes pose or carries a moving prop/overlay (no shot is only a camera move over a still) | PASS | [] |
 | 10c no long stretch in which Maya only holds a phone pose (worried/relief) while graphics change: longest stretch without a Ren shot or a phone-free Maya pose <= 20 s | PASS | longest 7.3s at 15-22 s; phone-pose share of Maya screen time 7% |
