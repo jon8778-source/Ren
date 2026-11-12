@@ -118,7 +118,7 @@ FULL = [
  ("F79", RN, "Even a small buffer can change the choices you have.", R(R_TH, sg("A small buffer, more choices", "cream", 840, 54))),
  ("F80a", CA, "Second, move a manageable amount automatically", ms(OF, 1.35, 1.45, 880, 600, [(0, "neutral")], extra=SH.two_acc)),
  ("F80b", CA, "into a separate, easy-to-access savings account.", ms(P, 1.1, 1.18, 640, 500, [(0, "neutral")], extra=SH.two_acc)),
- ("F81", RN, "Five dollars, twenty dollars, fifty dollars:", R(R_OA, lambda c: T2.sign("$5   $20   $50", 760, "cream", 84))),
+ ("F81", RN, "Five dollars, twenty dollars, fifty dollars:", R(R_PL, lambda c: T2.sign("$5   $20   $50", 760, "cream", 84))),
  ("F82", CA, "the right amount is the one your budget can actually sustain without creating overdraft fees.", ms(OF, 1.3, 1.4, 880, 600, [(0, "neutral")], extra=both(sign("Sustainable", 1200, 200, 0.3, 560, "sage", 64), cross("Overdraft fees", 1160, 420, 1.4, 640, 0.7)))),
  ("F83", RN, "Third, don't call every predictable bill an emergency.", R(R_PR, sg("3  Not every bill is an emergency", "cream", 860, 52))),
  ("F84", CA, "Annual insurance, holiday gifts, and routine car maintenance need their own plan.", ms(OF, 1.35, 1.45, 880, 600, [(0, "neutral")], extra=SH.envelopes_three)),
