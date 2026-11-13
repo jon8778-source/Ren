@@ -2,3 +2,5 @@
 __pycache__/
 still_*.png
 segments.txt
+*.wav
+!short_audio_raw.wav
