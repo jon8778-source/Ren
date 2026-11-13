@@ -32,7 +32,7 @@
    "id": "renderer",
    "kind": "renderer",
    "path": "../../../videos/three_bills/short/render_short.py",
-   "sha256": "c0f8bb0c2a3ac4cf09b8a14aece39480379a91bd08be5b42746c10a14429b48f",
+   "sha256": "f0d08fe018ab039b2cf6f3644106443ce6423ea72bb0303d5fe9852e6d7d5e87",
    "status": "approved",
    "approval_evidence": "Portrait adapter under the Shorts launcher; reuses the approved ren_stage placement and the episode's Maya and Ren rendering code"
   },

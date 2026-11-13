@@ -85,7 +85,7 @@ _rc = {}
 def ren_draw(c, clip, start, mirror):
     key = (c.sid, clip)
     if key not in _rc: _rc.clear(); _rc[key] = PR.RenClip(clip, start, c.d + 0.1, mirror=mirror)
-    rc = _rc[key]; i = min(max(int(c.t * FPS + 1e-6), 0), rc.n - 1); im = rc.imgs[i]; x0, y0, _, _ = rc.box; feet = (225, 770); cam = RCam(); X, Y = cam.pt(*feet); s = height_px("OFFICE_SAGE", feet[1]) * cam.k / rc.h_clip
+    rc = _rc[key]; i = min(max(int(c.t * FPS + 1e-6), 0), rc.n - 1); im = rc.imgs[i]; x0, y0, _, _ = rc.box; feet = (185, 770); cam = RCam(); X, Y = cam.pt(*feet); s = height_px("OFFICE_SAGE", feet[1]) * cam.k / rc.h_clip
     contact_shadow(c.f, cam, feet[0], feet[1], 230); left = X - rc.cx * s + x0 * s; top = Y - rc.feet * s + y0 * s; paste_smooth(c.f, im, left, top, im.width * s, im.height * s)
     a = np.asarray(im)[..., 3]; ys, xs = np.where(a > 128); return (left + xs.min() * s, top + ys.min() * s, left + xs.max() * s, top + ys.max() * s)
 def ren_scene(clip, start, mirror, panel, y=400, x=480, delay=0.25):
