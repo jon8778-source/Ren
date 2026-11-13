@@ -1,0 +1,168 @@
+{
+ "fps": 24,
+ "frames": 1415,
+ "disclaimer": "Educational content only, not financial advice.",
+ "narration_s": 58.955,
+ "beats": [
+  {
+   "id": "ren-hook",
+   "start_frame": 0,
+   "end_frame": 47,
+   "kind": "presenter",
+   "composition": "ren-left-title-card",
+   "narration": "Three bills. Thirty days."
+  },
+  {
+   "id": "car-breakdown",
+   "start_frame": 47,
+   "end_frame": 127,
+   "kind": "action",
+   "composition": "lot-maya-car-key",
+   "narration": "First, Maya's car broke down."
+  },
+  {
+   "id": "dental-invoice",
+   "start_frame": 127,
+   "end_frame": 178,
+   "kind": "graphic",
+   "composition": "invoice-urgent",
+   "narration": "Then came an urgent dental bill."
+  },
+  {
+   "id": "porch-worse",
+   "start_frame": 178,
+   "end_frame": 240,
+   "kind": "action",
+   "composition": "porch-maya-worried",
+   "narration": "And just when she thought the month couldn't get worse,"
+  },
+  {
+   "id": "kitchen-leak",
+   "start_frame": 240,
+   "end_frame": 296,
+   "kind": "story_still",
+   "composition": "sink-leak-portrait",
+   "narration": "a pipe leaked beneath her kitchen sink."
+  },
+  {
+   "id": "ren-total",
+   "start_frame": 296,
+   "end_frame": 357,
+   "kind": "presenter",
+   "composition": "ren-left-equation",
+   "narration": "The total? Two thousand two hundred dollars."
+  },
+  {
+   "id": "savings-app",
+   "start_frame": 357,
+   "end_frame": 459,
+   "kind": "action",
+   "composition": "office-maya-phone-balance",
+   "narration": "But when Maya opened her savings app afterward, she didn't feel proud."
+  },
+  {
+   "id": "gone-backwards",
+   "start_frame": 459,
+   "end_frame": 552,
+   "kind": "action",
+   "composition": "porch-maya-closeup-bubble",
+   "narration": "She saw how much her balance had fallen and thought, I've gone backwards."
+  },
+  {
+   "id": "ren-why",
+   "start_frame": 552,
+   "end_frame": 584,
+   "kind": "presenter",
+   "composition": "ren-left-not-backwards",
+   "narration": "Here's why she hadn't."
+  },
+  {
+   "id": "card-paid-off",
+   "start_frame": 584,
+   "end_frame": 661,
+   "kind": "action",
+   "composition": "porch-maya-paid-off",
+   "narration": "Once the card was paid off, she opened a separate savings account"
+  },
+  {
+   "id": "auto-transfer",
+   "start_frame": 661,
+   "end_frame": 742,
+   "kind": "graphic",
+   "composition": "phone-auto-transfer",
+   "narration": "and set up an automatic transfer of fifty dollars every week."
+  },
+  {
+   "id": "ren-fifty-two",
+   "start_frame": 742,
+   "end_frame": 866,
+   "kind": "presenter",
+   "composition": "ren-left-fund-equation",
+   "narration": "Fifty dollars a week, for fifty-two weeks, gave her two thousand six hundred dollars."
+  },
+  {
+   "id": "money-was-there",
+   "start_frame": 866,
+   "end_frame": 943,
+   "kind": "action",
+   "composition": "lot-maya-answer",
+   "narration": "But this time, she had an answer. The money was already there."
+  },
+  {
+   "id": "three-bills-gone",
+   "start_frame": 943,
+   "end_frame": 1037,
+   "kind": "action",
+   "composition": "office-maya-fund-tank",
+   "narration": "Three bills in thirty days. Two thousand two hundred dollars gone."
+  },
+  {
+   "id": "four-hundred",
+   "start_frame": 1037,
+   "end_frame": 1085,
+   "kind": "graphic",
+   "composition": "phone-400-left",
+   "narration": "Four hundred dollars left."
+  },
+  {
+   "id": "ren-smaller",
+   "start_frame": 1085,
+   "end_frame": 1168,
+   "kind": "presenter",
+   "composition": "ren-left-fund-smaller",
+   "narration": "An emergency fund is supposed to get smaller when there's an emergency."
+  },
+  {
+   "id": "using-it",
+   "start_frame": 1168,
+   "end_frame": 1212,
+   "kind": "action",
+   "composition": "porch-maya-failure-struck",
+   "narration": "Using it isn't failure."
+  },
+  {
+   "id": "its-the-job",
+   "start_frame": 1212,
+   "end_frame": 1269,
+   "kind": "action",
+   "composition": "lot-maya-the-job",
+   "narration": "That's literally the job it was hired to do."
+  },
+  {
+   "id": "ren-question",
+   "start_frame": 1269,
+   "end_frame": 1374,
+   "kind": "presenter",
+   "composition": "ren-left-question",
+   "narration": "What bill would have shaken you a year ago, but feels more manageable today?"
+  },
+  {
+   "id": "closing",
+   "start_frame": 1374,
+   "end_frame": 1415,
+   "kind": "action",
+   "composition": "porch-maya-sunset-close",
+   "narration": "I'd love to hear it in the comments."
+  }
+ ]
+}
