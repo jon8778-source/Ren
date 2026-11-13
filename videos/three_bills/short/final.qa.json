@@ -1,0 +1,23 @@
+{
+  "errors": [
+    "Text outside safe area: three-bills-gone: Used on purpose",
+    "Text outside safe area: ren-smaller: Used on purpose"
+  ],
+  "warnings": [],
+  "stage": "full",
+  "frames": 1415,
+  "duration_seconds": 58.958333,
+  "full_fatal_decode": true,
+  "av_start_difference": 0.0,
+  "av_duration_difference": 0.0033330000000049154,
+  "longest_identical_frame_run": 3,
+  "persistent_uniform_edges": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "video_sha256": "b35f4db039f5cfef72ee129ec2693917640d2ebd4391ded602fd72403cde5f9e",
+  "fingerprint": "4a00f21c5558832bd7a5513495b17e7a02f9d7b8093f175008a1db7937745916",
+  "status": "fail"
+}

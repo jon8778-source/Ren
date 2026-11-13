@@ -138,7 +138,7 @@ def b_auto(c):
 def b_fifty(c): ren_scene("ren_open_arms", 1.5, False, lambda c: S.sign_p("$50 x 52 = $2,600", 420, "gold", 64), y=400)(c)
 def b_answer(c): maya_scene("LOT", [(0, "surprised"), (0.7, "relief")], 1.0, 1.1, extra=lambda c, r: c.slide(S.sign_p("The money was already there", 440, "gold", 54), 460, 300, 0.7, key="mw"))(c)
 def _fund_phone(c, p):
-    return S.phone_p([("title", "Emergency fund"), ("bar", 1.0 - (1.0 - T.A["fund_final"] / T.A["fund_start"]) * ease(p), U.SAGE, "$2,600 to $400"), ("gap", 20), ("check", "Used on purpose") if p > 0.95 else ("gap", 10)], 440, 560)
+    return S.phone_p([("title", "Emergency fund"), ("bar", 1.0 - (1.0 - T.A["fund_final"] / T.A["fund_start"]) * ease(p), U.SAGE, "$2,600 to $400"), ("gap", 20), ("check", "On purpose") if p > 0.95 else ("gap", 10)], 440, 560)
 def b_gone(c): maya_scene("OFFICE", [(0, "worried")], 1.35, 1.42, g="eve", extra=lambda c, r: c.slide(_fund_phone(c, clamp((c.t - 0.5) / 2.2)), 470, 250, 0.2, key="fp"))(c)
 def b_400(c):
     veil_bg("OFFICE", "eve")(c); p = ease(c.t / 0.4); c.put(S.phone_p([("title", "Savings"), ("big", T.usd(T.A["fund_final"]), U.RED, 120)], 620, 420), 230, 520 + 240 * (1 - p), alpha=min(1, p * 1.6), rec=p > 0.99)

@@ -12,7 +12,7 @@ Prepared before rendering (v3 Shorts rules, asset-first checkpoint). **Status: p
 |---|---|---|---|---|
 | script | script | `videos/three_bills/script/SCRIPT.md` | 148013206649 | Owner's v2 script, 'Script approved' 9 Nov 2026 (SHA-256 14801320...); the full episode was approved ('Approved, good work Claude') |
 | audio | audio | `videos/three_bills/short/short_audio_raw.wav` | 808428832aaf | Cut from the approved full-episode narration (voice/H, L, D1-D7), no resynthesis |
-| renderer | renderer | `videos/three_bills/short/render_short.py` | f0d08fe018ab | Portrait adapter under the Shorts launcher; reuses the approved ren_stage placement and the episode's Maya and Ren rendering code |
+| renderer | renderer | `videos/three_bills/short/render_short.py` | 2f67311c1f4a | Portrait adapter under the Shorts launcher; reuses the approved ren_stage placement and the episode's Maya and Ren rendering code |
 | configuration | configuration | `videos/three_bills/short/short_spec.json` | e74a165a7e2d | Generated from short_spec.py: beats and timings tied to short_cues.json |
 | maya | character | `videos/three_bills/art/cast/maya_01_neutral.png` | 6b140a9c8a70 | Owner-approved four-pose Maya sheet ('Maya images approved', 9 Nov 2026; hashes in the pack manifest) |
 | ren_present | character | `assets/ren_library/ren_present_palm_left.mp4` | 4ab89972324e | Approved animated Ren library clip (mirrored); approved in the full episode |
