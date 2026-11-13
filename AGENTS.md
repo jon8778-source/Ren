@@ -18,7 +18,7 @@ For every new or revised Ren Short, additionally read `project/REN_SHORTS_RULES.
 
 ## Precedence and asset verification
 
-Approved current hybrid/Qwen instructions take precedence over older white-background, static-bust, and Kokoro procedures in `CLAUDE.md` or `project/DECISIONS.md`; the latter remain available for legacy episodes. Explicit owner instructions for a task take precedence when consistent with the required approvals.
+Approved current hybrid/Qwen instructions take precedence over older white-background, static-bust, and Kokoro procedures in `project/LEGACY_WORKFLOW.md` (moved from `CLAUDE.md`) and the older sections of `project/DECISIONS.md`; those remain available for legacy episodes only. Explicit owner instructions for a task take precedence when consistent with the required approvals.
 
 These policy files live on `main` so new Codex sessions can find them. Some source media, animation helpers, templates and episode-specific QA scripts are maintained on production/reference branches (including `video/free-money-v2` and `codex/ren-approved-v3`), not necessarily on `main`. **Verify actual paths, clip approvals, tool availability and test results on the working branch before claiming anything was inspected, executed or approved.** If required assets or tools are absent, report the blocker and use an authorized production branch or request a scoped implementation; do not silently substitute assets, voice, QA or renderer.
 

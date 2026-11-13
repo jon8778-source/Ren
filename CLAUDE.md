@@ -1,75 +1,143 @@
 # Ren videos
 
-## Current long-form production (8 November 2026)
+@AGENTS.md
 
-For new long-form videos, read `project/REN_LONGFORM_BASELINE.md`,
-`project/REN_VIDEO_RULES.md`, and `project/REN_LONGFORM_CHECKLIST.md` first.
-Use the approved hybrid visual system and British Qwen clone. The white-only,
-static-bust and Kokoro instructions below describe legacy episodes and are not
-the default for new long-form work. The current owner-requested gates and any
-explicit task instructions control over the historical workflow below.
+Animated personal-finance videos narrated by Ren, the mascot. The owner (the channel creator) reviews at
+fixed gates. This file adds Claude Code specifics to the shared rules in `AGENTS.md` (imported above).
 
-## Current animation prototype route (27 October 2026)
+## Precedence
 
-For new animated prototypes, use `project/cliplib/README.md` and `render_hybrid.py`: animated Ren
-in an office, brief story cutaways and moving infographics, with the Qwen cloned voice. This is the
-owner-requested update to the prototype style and supersedes the white-only/static-bust/Kokoro
-rules below **for this route**. The office and story art in the example are placeholders until the
-approved office/Alex assets are supplied. Do not describe them as the exact approved artwork.
-The legacy episode workflow below still applies to existing episodes.
+1. The owner's explicit instruction for the task (consistent with the approval gates below).
+2. Current rules: `AGENTS.md`, `project/REN_LONGFORM_BASELINE.md`, `project/REN_VIDEO_RULES.md`,
+   `project/REN_LONGFORM_CHECKLIST.md`, and for Shorts `project/REN_SHORTS_RULES.md`.
+3. Legacy: `project/LEGACY_WORKFLOW.md` ("Existing episodes only") and the older sections of
+   `project/DECISIONS.md`. Use these only to maintain an existing episode.
 
+If two current files disagree and you cannot tell which is newer, do not guess: stop and ask. Known open
+questions are listed under "Open TODOs" at the end of this file.
 
-Animated personal-finance videos narrated by Ren, the mascot. Owner: the channel creator, who reviews
-at fixed gates. Two systems live here:
+## Preflight (before any Ren video task)
 
-- `project/`: **the main pipeline**. A 16:9 long video (about 6 minutes) plus vertical shorts and
-  thumbnails per episode. Use this for new episodes. Read `project/README.md` for every command.
-- `project/DECISIONS.md`: condensed decision log (read first).
-- `src/` (Remotion) and `videos/` (HyperFrames): older one-off 9:16 shorts. Leave them alone unless asked.
+Do these and report the result before claiming anything was inspected, run or approved:
 
-## "New episode: <topic>" means this workflow
+1. Identify the branch: `git branch --show-current`. Work only on an isolated working branch.
+2. Read the applicable rules (long-form: the three `project/REN_LONGFORM_*`/`REN_VIDEO_RULES` files plus
+   `project/DECISIONS.md`; Shorts: also `project/REN_SHORTS_RULES.md`).
+3. Check that the files and tools you need exist on **this** branch (`ls`, `git ls-tree`), including
+   `ffmpeg`/`ffprobe`, Python deps, and the browser (see "Browser path").
+4. Do not infer approval from a file's existence. Clip, character and artwork approvals need evidence.
+5. If something is missing, report the blocker and use an authorized production branch or ask for a scoped
+   implementation. Never silently substitute assets, voice, QA or renderer.
 
-When the owner asks for a new episode (a 6-minute video and 2 shorts), run these stages in
-`project/episodes/<id>/` (`<id>` is a short slug of the topic). **Stop at each gate and wait for the
-owner's reply before continuing.**
+Not all production assets are on `main`. Verified by listing the remote branches:
 
-1. **Setup** (once per session): `cd project && ./setup.sh`. In the Claude Code cloud container, pass
-   `--browser-executable /opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell` to
-   assemble.py and thumbnails.py.
-2. **Plan and numbers:** `assumptions.csv` (income, fixed costs, leaks, savings per character, plus any
-   `value` rows the story needs) and `claims.txt` (every factual story claim as a checkable expression).
-   Run `python3 pipeline/calc.py episodes/<id>`: it must print MATHS OK.
-3. **Script:** `script.md`, about 900 words for 6 minutes, with numbers written as spoken and each line
-   tagged with the table values it says. **GATE: send the script and wait for "OK".**
-4. **Scenes:** `scenes.json`. Reuse the templates in `remotion/src/Graphics.tsx` and add new ones if needed.
-   Put numbers on screen only as `{refs}`; change the visual at least every 7 seconds.
-5. **Voice:** `.tools/venv/bin/python pipeline/voice.py episodes/<id> --model .tools/kokoro-q8.onnx --voices .tools/voices`
-6. **Render:** `python3 pipeline/assemble.py episodes/<id> --out renders/full.mp4 ...` (about 9 minutes; run it
-   in the background). Look at frames from every scene and fix overlaps before the QC.
-7. **QC:** `.tools/venv/bin/python pipeline/qc.py episodes/<id> --video renders/full.mp4 --name final`.
-   It must say OVERALL PASS. Fix causes, never loosen checks. Send the video and `reports/qc-final.md`.
-8. **Thumbnails:** `python3 pipeline/thumbnails.py episodes/<id> ...`, giving three options.
-   **GATE: the owner picks one.**
-9. **Shorts:** write `shorts.json`, with two self-contained ~30-second stories made of the long video's
-   lines, plus scene overrides where a line's picture needs context. Run `pipeline/shorts.py`, then assemble
-   with `--config config.vertical.json`, then QC each short. Send both.
-10. Commit and push after each stage, on the session's working branch.
+| Needed for | Where it lives | On `main`? |
+|---|---|---|
+| Ren animation clips (`assets/ren_library/`, `ren_library.json`) | `main` | yes |
+| Qwen voice reference (`Audio/ren_reference.wav`, `.txt`) and `project/cliplib/` voice scripts | `main` | yes |
+| `project/cliplib/ren_stage.py` (scale, grounding, smooth placement) and its tests | `video/free-money-v2`, `codex/ren-longform-baseline` | no |
+| `videos/free_money/` QA scripts (`qa_timeline.py`, `validate.py`, `jitter_check.py`) | `video/free-money-v2`, `codex/ren-longform-baseline` | no |
+| `project/pipeline/shorts_standards.py`, `project/shorts/production.example.json` | `video/free-money-v2`, `codex/shorts-production-standards` | no |
+| `project/prototypes/coffee-minute-v3/` (approved v3 renderer and artwork) | `codex/ren-approved-v3`, `codex/shorts-production-standards` | no |
 
-## Owner's standing decisions
-- Ren narrates everything. One voice: Kokoro `am_michael` + `am_eric` 50/50 (settings in `config.json`).
-  No music.
-- Solid plain white background. No other colours or fonts beyond `config.json` (Fredoka, navy/green/red/gold).
-- Characters must not shake: no talking bob or sway. Only the entrance slide and a small pop on pose changes.
-- Cast with locked art in `project/characters/` (hashes in `manifest.json`): Ren (guide), Sam (L1), Nina (L2),
-  Claire (L3), Marcus (L4), Richard (L5). New characters: cut out with `pipeline/cutout.py`, check the
-  cutouts on a coloured background, then add them to the manifest.
-- US dollars, US-style costs. Every figure is an illustrative example, labelled "Example figures" on screen.
-- Never invent statistics or sources. A real statistic needs `[VERIFY]` plus a source link, or it gets cut.
-  The QC flags claims like "most people".
-- "Educational only, not financial advice" on screen at the start and end, and in the description.
-- Call to action: "Check out the Money Leak Audit Workbook in the description." Don't call the workbook
-  "free" in the video. Descriptions carry a `[WORKBOOK LINK]` placeholder for the owner.
-- Long video about 6 minutes. Shorts 9:16, about 30 seconds, two per episode. The owner liked thumbnail
-  layout "C": who copes better, lowest vs highest income.
-- If unsure, ask rather than guess. Say plainly that you can't listen to the audio, and ask the owner to
-  check pronunciation.
+Re-verify this table against the branch you are on; branches move. Do not merge these branches into your
+working branch just to obtain files. Check them out read-only or copy what is authorized.
+
+## Gate sequence (long-form)
+
+Stop at each gate and wait for the owner's explicit reply. An encoded preview or silence is not approval.
+
+1. Verified research and claims; calculate and label every illustrative figure.
+2. **Explicit script approval.** Do not synthesize voice before this gate.
+3. Asset inventory: provenance, character continuity, clip durations, approvals, gaps.
+4. Approximately 60-second animated pilot using the real production workflow.
+5. **Explicit pilot approval.** Do not render the full video before this gate.
+6. Full video, reusing approved material.
+7. Technical, visual, audio and financial QA, including every scene boundary.
+8. **Owner final approval.**
+9. **Publishing needs separate explicit authorization.** Neither final approval nor a merge authorizes it.
+
+A script the owner explicitly supplies as production-approved need not be approved again. Record real
+approval evidence and input/output hashes. Say what you did not do (listening, device playback, claim checks).
+
+### Shorts
+
+Read `project/REN_SHORTS_RULES.md`: asset-first review, then a 15-second portrait prototype. Stop for explicit
+owner approval before producing a complete Short. A long-form approval is not a Short approval.
+
+## Current visual and audio system
+
+- Hybrid story-led animation: genuine Ren MP4 clips from the approved library, illustrated environments,
+  code-drawn graphics. Moving or zooming a still is not character animation. Details and shot caps are in
+  `project/REN_VIDEO_RULES.md` and `project/REN_LONGFORM_BASELINE.md`.
+- Voice: British Qwen clone only. No fallback voice, speed change, stretching or silence padding. No music
+  unless the owner authorizes it. Discard animation-clip audio. Narrator-led mouths stay closed.
+- Route and scripts for hybrid prototypes: `project/cliplib/README.md` and `project/cliplib/render_hybrid.py`.
+
+### Where the Qwen voice settings live
+
+Verified on `main`; there is no single config file:
+
+- Reference audio: `Audio/ren_reference.wav`; exact transcript: `Audio/ren_reference.txt` (strip the stray
+  leading quote mark only; keep every word).
+- Descriptor: `Audio/ren_voice_description.txt` (British male, 30-35, light Manchester-influenced). The Base
+  cloning API uses the WAV and transcript, not this prose. It documents intent only.
+- Model/Space/endpoint: `Qwen/Qwen3-TTS-12Hz-1.7B-Base`, Space `Qwen/Qwen3-TTS`, `/generate_voice_clone`,
+  English, set in `project/cliplib/qwen_voice.py` (hosted) and `project/cliplib/local_voice.py` /
+  `qwen_local_voice.py` (local). Prose summary: `project/cliplib/README.md`.
+- `HF_TOKEN` comes from the runtime environment only. Never commit or print it.
+
+TODO (owner): the current rules say `use_xvector_only=True`, but `project/cliplib/qwen_voice.py` on `main`
+passes `use_xvector_only=False`. Do not change either until the owner says which is approved. The "resumable
+quota workflow" named in `project/REN_VIDEO_RULES.md` is not documented on `main`.
+
+## Maths and editorial rules (always)
+
+- Never invent statistics, sources or guarantees. A real statistic needs `[VERIFY]` plus a source link, or it
+  is cut. Unsourced "most people"-style claims are not allowed.
+- Calculate figures in code from one assumptions source; draw numbers in code, never inside generated art.
+  Every displayed equation must be correct on every frame.
+- The disclaimer "Educational only, not financial advice" appears on screen (start and end for long-form;
+  see the Shorts rules for Shorts) and in the description.
+- You cannot listen to audio. Say so plainly, and ask the owner to check pronunciation, pace and joins.
+
+## Git rules
+
+- Commit on the working branch only. Never push to `main`. Never merge. Open a pull request only when the
+  owner asks (a PR is also how work reaches `main`, after review).
+- Do not commit large video files (MP4/MOV/WAV renders, caches, decoded frames) or credentials. Source,
+  manifests, rules and reports belong on a feature branch.
+- Preserve existing episodes. Do not merge unfinished episode source merely to share rules.
+- No YouTube publication or merge without separate explicit instruction.
+
+## Browser path (Remotion, legacy renderer, thumbnails)
+
+Do not hardcode a Chromium version. Use an environment variable, else a glob:
+
+```sh
+BROWSER="${REN_BROWSER_EXECUTABLE:-$(ls -d /opt/pw-browsers/chromium_headless_shell-*/*/headless_shell \
+  /opt/pw-browsers/chromium_headless_shell-*/*/chrome-headless-shell 2>/dev/null | sort -V | tail -n 1)}"
+# then: --browser-executable "$BROWSER"   (only if $BROWSER is non-empty)
+```
+
+Verified: this container has `chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`,
+a different layout from the older `chromium_headless_shell-1194/chrome-linux/headless_shell`, so the glob
+covers both.
+
+## Other code
+
+`src/` (Remotion) and `videos/` (HyperFrames) hold older one-off 9:16 shorts and episode-specific scripts.
+Leave them alone unless asked. The legacy episode pipeline and its "New episode" workflow are in
+`project/LEGACY_WORKFLOW.md`.
+
+## Open TODOs (do not guess these)
+
+- TODO (owner): Shorts length. `project/REN_SHORTS_RULES.md` requires a 15-second prototype but gives no
+  full-Short length; legacy docs say about 30 seconds. Ask before fixing a target length.
+- TODO (owner): Is the "Money Leak Audit Workbook" call to action still used? Legacy docs require it; the
+  current rules are silent. Do not add or remove it without confirmation.
+- TODO (owner): Do thumbnails (3 options, owner picks) and "2 shorts per episode" remain part of new
+  long-form work? The current gate sequence omits both; legacy included them.
+- TODO (owner): Long-form output size. Legacy was 1920x1080; the approved v3 prototype was 1280x720.
+- TODO (owner): Exact disclaimer wording and placement (legacy "Educational only, not financial advice";
+  Shorts rules "Educational content only, not financial advice.").
