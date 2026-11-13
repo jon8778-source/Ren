@@ -1,10 +1,8 @@
 # Ren Shorts QA
 
-Status: fail
+Status: technical-pass-review-required
 
 Errors:
-- Text outside safe area: three-bills-gone: Used on purpose
-- Text outside safe area: ren-smaller: Used on purpose
 
 Warnings:
 
