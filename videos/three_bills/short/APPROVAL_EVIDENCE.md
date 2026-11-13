@@ -1,1 +1,1 @@
-User chat message 'Approved' (after 'Approver', clarified on my question) approving the revised 15 s prototype.
+User chat message 'Approved' re-approving the unchanged 15 s prototype after a post-prototype label fix (frames identical, md5 12b51527...).
