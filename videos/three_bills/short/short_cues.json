@@ -1,0 +1,1258 @@
+{
+ "duration": 58.955,
+ "words": [
+  {
+   "section": "H",
+   "word": "Three",
+   "start": 0.05,
+   "end": 0.13,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "bills.",
+   "start": 0.29,
+   "end": 0.67,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "Thirty",
+   "start": 0.875,
+   "end": 1.08,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "days.",
+   "start": 1.49,
+   "end": 1.95,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "First,",
+   "start": 1.95,
+   "end": 3.39,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "Maya's",
+   "start": 3.79,
+   "end": 3.99,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "car",
+   "start": 3.99,
+   "end": 4.15,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "broke",
+   "start": 4.15,
+   "end": 4.41,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "down.",
+   "start": 4.41,
+   "end": 4.87,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "Then",
+   "start": 5.29,
+   "end": 5.61,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "came",
+   "start": 5.61,
+   "end": 5.83,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "an",
+   "start": 5.83,
+   "end": 6.03,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "urgent",
+   "start": 6.03,
+   "end": 6.39,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "dental",
+   "start": 6.39,
+   "end": 6.71,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "bill.",
+   "start": 6.71,
+   "end": 7.03,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "And",
+   "start": 7.41,
+   "end": 7.69,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "just",
+   "start": 7.69,
+   "end": 7.87,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "when",
+   "start": 7.87,
+   "end": 8.07,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "she",
+   "start": 8.07,
+   "end": 8.25,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "thought",
+   "start": 8.25,
+   "end": 8.43,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "the",
+   "start": 8.43,
+   "end": 8.65,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "month",
+   "start": 8.65,
+   "end": 8.87,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "couldn't",
+   "start": 8.87,
+   "end": 9.13,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "get",
+   "start": 9.13,
+   "end": 9.33,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "worse,",
+   "start": 9.33,
+   "end": 9.63,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "a",
+   "start": 9.99,
+   "end": 10.17,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "pipe",
+   "start": 10.17,
+   "end": 10.37,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "leaked",
+   "start": 10.37,
+   "end": 10.71,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "beneath",
+   "start": 10.71,
+   "end": 11.01,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "her",
+   "start": 11.01,
+   "end": 11.19,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "kitchen",
+   "start": 11.19,
+   "end": 11.43,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "sink.",
+   "start": 11.43,
+   "end": 11.77,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "The",
+   "start": 12.33,
+   "end": 12.47,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "total?",
+   "start": 12.47,
+   "end": 12.73,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "Two",
+   "start": 12.924,
+   "end": 13.119,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "thousand",
+   "start": 13.313,
+   "end": 13.507,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "two",
+   "start": 13.701,
+   "end": 13.896,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "hundred",
+   "start": 14.09,
+   "end": 14.284,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "dollars.",
+   "start": 14.479,
+   "end": 14.673,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "But",
+   "start": 14.887,
+   "end": 15.087,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "when",
+   "start": 15.087,
+   "end": 15.247,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "Maya",
+   "start": 15.247,
+   "end": 15.487,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "opened",
+   "start": 15.487,
+   "end": 15.807,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "her",
+   "start": 15.807,
+   "end": 16.007,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "savings",
+   "start": 16.007,
+   "end": 16.347,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "app",
+   "start": 16.347,
+   "end": 16.587,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "afterward,",
+   "start": 16.587,
+   "end": 17.047,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "she",
+   "start": 17.507,
+   "end": 17.707,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "didn't",
+   "start": 17.707,
+   "end": 17.927,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "feel",
+   "start": 17.927,
+   "end": 18.107,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "proud.",
+   "start": 18.107,
+   "end": 18.507,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "She",
+   "start": 19.107,
+   "end": 19.307,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "saw",
+   "start": 19.307,
+   "end": 19.547,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "how",
+   "start": 19.547,
+   "end": 19.747,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "much",
+   "start": 19.747,
+   "end": 19.927,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "her",
+   "start": 19.927,
+   "end": 20.067,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "balance",
+   "start": 20.067,
+   "end": 20.407,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "had",
+   "start": 20.407,
+   "end": 20.567,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "fallen",
+   "start": 20.567,
+   "end": 20.887,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "and",
+   "start": 20.887,
+   "end": 21.127,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "thought,",
+   "start": 21.127,
+   "end": 21.307,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "I've",
+   "start": 21.747,
+   "end": 22.087,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "gone",
+   "start": 22.087,
+   "end": 22.247,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "backwards.",
+   "start": 22.247,
+   "end": 22.707,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "Here's",
+   "start": 23.007,
+   "end": 23.327,
+   "sentence_start": true
+  },
+  {
+   "section": "H",
+   "word": "why",
+   "start": 23.327,
+   "end": 23.447,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "she",
+   "start": 23.447,
+   "end": 23.647,
+   "sentence_start": false
+  },
+  {
+   "section": "H",
+   "word": "hadn't.",
+   "start": 23.647,
+   "end": 24.127,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "Once",
+   "start": 24.315,
+   "end": 24.515,
+   "sentence_start": true
+  },
+  {
+   "section": "D1",
+   "word": "the",
+   "start": 24.515,
+   "end": 24.695,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "card",
+   "start": 24.695,
+   "end": 24.895,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "was",
+   "start": 24.895,
+   "end": 25.095,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "paid",
+   "start": 25.095,
+   "end": 25.315,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "off,",
+   "start": 25.315,
+   "end": 25.635,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "she",
+   "start": 25.935,
+   "end": 26.055,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "opened",
+   "start": 26.055,
+   "end": 26.335,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "a",
+   "start": 26.335,
+   "end": 26.535,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "separate",
+   "start": 26.535,
+   "end": 26.815,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "savings",
+   "start": 26.815,
+   "end": 27.175,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "account",
+   "start": 27.175,
+   "end": 27.535,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "and",
+   "start": 27.535,
+   "end": 27.835,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "set",
+   "start": 27.835,
+   "end": 28.035,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "up",
+   "start": 28.035,
+   "end": 28.195,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "an",
+   "start": 28.195,
+   "end": 28.415,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "automatic",
+   "start": 28.415,
+   "end": 28.815,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "transfer",
+   "start": 28.815,
+   "end": 29.315,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "of",
+   "start": 29.315,
+   "end": 29.555,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "fifty",
+   "start": 29.622,
+   "end": 29.688,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "dollars",
+   "start": 29.755,
+   "end": 29.822,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "every",
+   "start": 29.955,
+   "end": 30.455,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "week.",
+   "start": 30.455,
+   "end": 30.775,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "Fifty",
+   "start": 30.928,
+   "end": 31.082,
+   "sentence_start": true
+  },
+  {
+   "section": "D1",
+   "word": "dollars",
+   "start": 31.235,
+   "end": 31.388,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "a",
+   "start": 31.695,
+   "end": 32.155,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "week,",
+   "start": 32.155,
+   "end": 32.355,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "for",
+   "start": 32.695,
+   "end": 32.855,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "fifty-two",
+   "start": 32.965,
+   "end": 33.075,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "weeks,",
+   "start": 33.295,
+   "end": 33.655,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "gave",
+   "start": 34.055,
+   "end": 34.155,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "her",
+   "start": 34.155,
+   "end": 34.315,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "two",
+   "start": 34.465,
+   "end": 34.615,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "thousand",
+   "start": 34.765,
+   "end": 34.915,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "six",
+   "start": 35.065,
+   "end": 35.215,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "hundred",
+   "start": 35.365,
+   "end": 35.515,
+   "sentence_start": false
+  },
+  {
+   "section": "D1",
+   "word": "dollars.",
+   "start": 35.665,
+   "end": 35.815,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "But",
+   "start": 36.085,
+   "end": 36.265,
+   "sentence_start": true
+  },
+  {
+   "section": "D2",
+   "word": "this",
+   "start": 36.265,
+   "end": 36.405,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "time,",
+   "start": 36.405,
+   "end": 36.685,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "she",
+   "start": 36.685,
+   "end": 36.905,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "had",
+   "start": 36.905,
+   "end": 37.065,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "an",
+   "start": 37.065,
+   "end": 37.225,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "answer.",
+   "start": 37.225,
+   "end": 37.505,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "The",
+   "start": 37.685,
+   "end": 37.825,
+   "sentence_start": true
+  },
+  {
+   "section": "D2",
+   "word": "money",
+   "start": 37.825,
+   "end": 38.025,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "was",
+   "start": 38.025,
+   "end": 38.245,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "already",
+   "start": 38.245,
+   "end": 38.605,
+   "sentence_start": false
+  },
+  {
+   "section": "D2",
+   "word": "there.",
+   "start": 38.605,
+   "end": 39.025,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "Three",
+   "start": 39.295,
+   "end": 39.855,
+   "sentence_start": true
+  },
+  {
+   "section": "D4",
+   "word": "bills",
+   "start": 39.855,
+   "end": 40.155,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "in",
+   "start": 40.155,
+   "end": 40.355,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "thirty",
+   "start": 40.405,
+   "end": 40.455,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "days.",
+   "start": 40.555,
+   "end": 40.935,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "Two",
+   "start": 41.06,
+   "end": 41.185,
+   "sentence_start": true
+  },
+  {
+   "section": "D4",
+   "word": "thousand",
+   "start": 41.31,
+   "end": 41.435,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "two",
+   "start": 41.56,
+   "end": 41.685,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "hundred",
+   "start": 41.81,
+   "end": 41.935,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "dollars",
+   "start": 42.06,
+   "end": 42.185,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "gone.",
+   "start": 42.435,
+   "end": 43.055,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "Four",
+   "start": 43.21,
+   "end": 43.365,
+   "sentence_start": true
+  },
+  {
+   "section": "D4",
+   "word": "hundred",
+   "start": 43.52,
+   "end": 43.675,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "dollars",
+   "start": 43.83,
+   "end": 43.985,
+   "sentence_start": false
+  },
+  {
+   "section": "D4",
+   "word": "left.",
+   "start": 44.295,
+   "end": 44.935,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "An",
+   "start": 45.205,
+   "end": 45.305,
+   "sentence_start": true
+  },
+  {
+   "section": "D5",
+   "word": "emergency",
+   "start": 45.305,
+   "end": 45.785,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "fund",
+   "start": 45.785,
+   "end": 46.105,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "is",
+   "start": 46.105,
+   "end": 46.285,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "supposed",
+   "start": 46.285,
+   "end": 46.545,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "to",
+   "start": 46.545,
+   "end": 46.765,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "get",
+   "start": 46.765,
+   "end": 46.885,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "smaller",
+   "start": 46.885,
+   "end": 47.305,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "when",
+   "start": 47.305,
+   "end": 47.505,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "there's",
+   "start": 47.505,
+   "end": 47.705,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "an",
+   "start": 47.705,
+   "end": 47.825,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "emergency.",
+   "start": 47.825,
+   "end": 48.325,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "Using",
+   "start": 48.685,
+   "end": 49.065,
+   "sentence_start": true
+  },
+  {
+   "section": "D5",
+   "word": "it",
+   "start": 49.065,
+   "end": 49.245,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "isn't",
+   "start": 49.245,
+   "end": 49.585,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "failure.",
+   "start": 49.585,
+   "end": 49.945,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "That's",
+   "start": 50.485,
+   "end": 50.805,
+   "sentence_start": true
+  },
+  {
+   "section": "D5",
+   "word": "literally",
+   "start": 50.805,
+   "end": 51.105,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "the",
+   "start": 51.105,
+   "end": 51.365,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "job",
+   "start": 51.365,
+   "end": 51.605,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "it",
+   "start": 51.605,
+   "end": 51.745,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "was",
+   "start": 51.745,
+   "end": 51.865,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "hired",
+   "start": 51.865,
+   "end": 52.125,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "to",
+   "start": 52.125,
+   "end": 52.345,
+   "sentence_start": false
+  },
+  {
+   "section": "D5",
+   "word": "do.",
+   "start": 52.345,
+   "end": 52.625,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "What",
+   "start": 52.895,
+   "end": 53.075,
+   "sentence_start": true
+  },
+  {
+   "section": "D7",
+   "word": "bill",
+   "start": 53.075,
+   "end": 53.335,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "would",
+   "start": 53.335,
+   "end": 53.535,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "have",
+   "start": 53.535,
+   "end": 53.675,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "shaken",
+   "start": 53.675,
+   "end": 53.955,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "you",
+   "start": 53.955,
+   "end": 54.175,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "a",
+   "start": 54.175,
+   "end": 54.355,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "year",
+   "start": 54.355,
+   "end": 54.495,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "ago,",
+   "start": 54.495,
+   "end": 54.895,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "but",
+   "start": 54.895,
+   "end": 55.235,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "feels",
+   "start": 55.235,
+   "end": 55.495,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "more",
+   "start": 55.495,
+   "end": 55.775,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "manageable",
+   "start": 55.775,
+   "end": 56.215,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "today?",
+   "start": 56.215,
+   "end": 56.755,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "I'd",
+   "start": 57.235,
+   "end": 57.555,
+   "sentence_start": true
+  },
+  {
+   "section": "D7",
+   "word": "love",
+   "start": 57.555,
+   "end": 57.675,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "to",
+   "start": 57.675,
+   "end": 57.855,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "hear",
+   "start": 57.855,
+   "end": 58.015,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "it",
+   "start": 58.015,
+   "end": 58.155,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "in",
+   "start": 58.155,
+   "end": 58.275,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "the",
+   "start": 58.275,
+   "end": 58.375,
+   "sentence_start": false
+  },
+  {
+   "section": "D7",
+   "word": "comments.",
+   "start": 58.375,
+   "end": 58.735,
+   "sentence_start": false
+  }
+ ]
+}

@@ -1,0 +1,250 @@
+{
+  "scenes": {
+    "ren-hook": [
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          1454.0,
+          738.0,
+          1489.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 0.20833333333333334,
+        "end": 1.9583333333333333
+      },
+      {
+        "text": "3 bills, 30",
+        "bbox": [
+          554.0,
+          473.0,
+          826.0,
+          530.0
+        ],
+        "font_px": 64.0,
+        "role": "text",
+        "start": 0.6666666666666666,
+        "end": 1.9583333333333333
+      },
+      {
+        "text": "days",
+        "bbox": [
+          623.0,
+          565.0,
+          758.0,
+          628.0
+        ],
+        "font_px": 64.0,
+        "role": "text",
+        "start": 0.6666666666666666,
+        "end": 1.9583333333333333
+      }
+    ],
+    "car-breakdown": [
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          1454.0,
+          738.0,
+          1489.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 1.9583333333333333,
+        "end": 3.0
+      }
+    ],
+    "dental-invoice": [
+      {
+        "text": "Dental bill",
+        "bbox": [
+          240.0,
+          417.0,
+          559.0,
+          499.0
+        ],
+        "font_px": 68.0,
+        "role": "text",
+        "start": 5.708333333333333,
+        "end": 7.416666666666667
+      },
+      {
+        "text": "After insurance",
+        "bbox": [
+          240.0,
+          518.0,
+          573.0,
+          584.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 5.708333333333333,
+        "end": 7.416666666666667
+      },
+      {
+        "text": "$390",
+        "bbox": [
+          383.0,
+          866.0,
+          697.0,
+          1020.0
+        ],
+        "font_px": 150.0,
+        "role": "text",
+        "start": 5.708333333333333,
+        "end": 7.416666666666667
+      },
+      {
+        "text": "URGENT",
+        "bbox": [
+          419.0,
+          1120.0,
+          661.0,
+          1165.0
+        ],
+        "font_px": 62.0,
+        "role": "text",
+        "start": 6.208333333333333,
+        "end": 7.416666666666667
+      }
+    ],
+    "porch-worse": [],
+    "kitchen-leak": [],
+    "ren-total": [
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 12.833333333333334,
+        "end": 14.875
+      },
+      {
+        "text": "Car",
+        "bbox": [
+          524.0,
+          443.0,
+          598.0,
+          475.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "$760",
+        "bbox": [
+          758.0,
+          440.0,
+          856.0,
+          481.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "Dental",
+        "bbox": [
+          524.0,
+          554.0,
+          664.0,
+          587.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "$390",
+        "bbox": [
+          756.0,
+          552.0,
+          856.0,
+          593.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "Pipe",
+        "bbox": [
+          524.0,
+          666.0,
+          612.0,
+          709.0
+        ],
+        "font_px": 46.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "$1,050",
+        "bbox": [
+          728.0,
+          664.0,
+          856.0,
+          708.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "Total",
+        "bbox": [
+          524.0,
+          808.0,
+          642.0,
+          845.0
+        ],
+        "font_px": 50.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      },
+      {
+        "text": "$2,200",
+        "bbox": [
+          686.0,
+          805.0,
+          856.0,
+          857.0
+        ],
+        "font_px": 58.0,
+        "role": "text",
+        "start": 13.0,
+        "end": 14.875
+      }
+    ],
+    "savings-app": [
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 14.875,
+        "end": 15.0
+      }
+    ]
+  }
+}

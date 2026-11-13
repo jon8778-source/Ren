@@ -1,0 +1,27 @@
+# Asset inventory: Three Bills pilot
+
+| Kind | Path | SHA-256 (16) | Status | Used in pilot | Note |
+|---|---|---|---|---|---|
+| script | `videos/three_bills/script/SCRIPT.md` | 14801320664962eb | OWNER APPROVED (per pack record) | all narration | I did not see the approval message live; the pack records it |
+| script | `videos/three_bills/script/VOICE_SCRIPT.txt` | efa047244dd83cc5 | OWNER APPROVED (per pack record) | voice synthesis (paragraphs 1-9 for the pilot) |  |
+| character (Maya) | `videos/three_bills/art/cast/maya_01_neutral.png` | 6b140a9c8a70ccb4 | OWNER APPROVED 9 Nov 2026 (per pack record) | S02 (start), S09 (start), S13 | alpha edges inspected at 100% on dark and sage backgrounds; NOT the same design as the 401(k) episode's Maya |
+| character (Maya) | `videos/three_bills/art/cast/maya_02_surprised_envelope.png` | ba173f462624ec19 | OWNER APPROVED 9 Nov 2026 (per pack record) | S02 (after 0.9 s), S15, S16 (start) | alpha edges inspected at 100% on dark and sage backgrounds; NOT the same design as the 401(k) episode's Maya |
+| character (Maya) | `videos/three_bills/art/cast/maya_03_worried_phone.png` | e8770c7e9cef2a4e | OWNER APPROVED 9 Nov 2026 (per pack record) | S04, S07, S08 (start), S09, S10, S16 | alpha edges inspected at 100% on dark and sage backgrounds; NOT the same design as the 401(k) episode's Maya |
+| character (Maya) | `videos/three_bills/art/cast/maya_04_relief_phone.png` | f123ada071ee7cb3 | OWNER APPROVED 9 Nov 2026 (per pack record) | S08 | alpha edges inspected at 100% on dark and sage backgrounds; NOT the same design as the 401(k) episode's Maya |
+| environment | `library/supporting_assets/backgrounds/Office_parking_lot_car_16x9.png` | 0dc0b4d6e623f571 | APPROVED (Free Money pack, PLATE_GEOM LOT calibrated) | S02, S15, S16 | reuse for this episode is allowed by the pack; no new approval implied beyond that |
+| environment | `library/supporting_assets/backgrounds/Porch_background_16x9.png` | b6732b5526d5bbc8 | APPROVED (Free Money pack, PLATE_GEOM PORCH calibrated) | S04, S07, S08, S12 veil | reuse for this episode is allowed by the pack; no new approval implied beyond that |
+| environment | `library/supporting_assets/backgrounds/Office_background_16x9.png` | bfc7066bc8253ac3 | APPROVED (Free Money pack, PLATE_GEOM OFFICE calibrated) | S09, S10, S13, S14 veil | reuse for this episode is allowed by the pack; no new approval implied beyond that |
+| environment | `videos/unclaimed_401k/art/plates/SAGE.png` | 29ec6e09828d535b | APPROVED (Ren's sage home office, REN_VIDEO_RULES.md) | S01, S05 veil, S06, S11, S17 (Ren shots) | plate geometry OFFICE_SAGE fitted by eye in the 401(k) episode |
+| prop | `videos/three_bills/art/props/car_key.png` | 77edfe9e71506c16 | kit asset (not individually approved) | S02 |  |
+| prop | `videos/three_bills/art/props/leaking_pipe.png` | 372452f58c700289 | kit asset (not individually approved) | S05 |  |
+| prop | `videos/three_bills/art/props/blank_invoice.png` | 2361d3636acc6faf | kit asset, UNUSED in the pilot | - | invoice and phone are drawn in code in the pilot so figures stay editable |
+| prop | `videos/three_bills/art/props/blank_phone.png` | bc3a2ccd5461d6e8 | kit asset, UNUSED in the pilot | - | invoice and phone are drawn in code in the pilot so figures stay editable |
+| prop | `videos/three_bills/art/props/savings_envelope.png` | 30546aed155703d2 | kit asset, UNUSED in the pilot | - | invoice and phone are drawn in code in the pilot so figures stay editable |
+| environment | `videos/three_bills/art/plates/kitchen_sink_plate_16x9.png` | 14a5242627e312a2 | PROVISIONAL, NOT USED | - | needs owner approval before any use |
+| environment | `videos/three_bills/art/plates/dental_waiting_plate_16x9.png` | d71f656f6661c22e | PROVISIONAL, NOT USED | - | needs owner approval before any use |
+| character (Ren) | `assets/ren_library/ren_present_palm_left.mp4` | 4ab89972324e639b | APPROVED animated clip (ren_library.json status ok) | S01 (mirrored) | mouth-closed window; source audio discarded |
+| character (Ren) | `assets/ren_library/ren_shrug.mp4` | 1cacb6dd155bbec0 | APPROVED animated clip (ren_library.json status ok) | S06 | mouth-closed window; source audio discarded |
+| character (Ren) | `assets/ren_library/ren_point_right.mp4` | ae725bb9225f4847 | APPROVED animated clip (ren_library.json status ok) | S11 | mouth-closed window; source audio discarded |
+| character (Ren) | `assets/ren_library/ren_thinking.mp4` | 5451d99e329777ff | APPROVED animated clip (ren_library.json status ok) | S17 | mouth-closed window; source audio discarded |
+| voice | `Audio/ren_reference.wav` | 78de4bd45743554f | APPROVED reference (Ren Qwen clone) | voice/H.wav, voice/L.wav |  |
+| production | `videos/three_bills/production/assumptions.csv` | 13981daab6ee556c | single numeric source | every on-screen figure (tb_ui.A) |  |

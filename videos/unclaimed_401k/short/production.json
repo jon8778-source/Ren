@@ -1,0 +1,556 @@
+{
+ "schema_version": 1,
+ "title": "Ren | Unclaimed 401(k) match: 1-minute Short (derived from the long video)",
+ "width": 1080,
+ "height": 1920,
+ "fps": 24,
+ "frames": 1409,
+ "full_bleed": true,
+ "permanent_border": false,
+ "asset_report": "ASSET_REQUIREMENTS.md",
+ "layout_evidence": "layout.json",
+ "prototype": "prototype.mp4",
+ "prototype_report": "prototype.qa.json",
+ "assets": [
+  {
+   "id": "script",
+   "kind": "script",
+   "path": "../../../videos/unclaimed_401k/script/narration_v3.md",
+   "sha256": "e4a422f4957e45c095b62630fe88ecc3256b9b271ee186fee270e907e15c68b3",
+   "status": "approved",
+   "approval_evidence": "Owner's v3 script, 'Script approved' 8 Nov 2026; narration used word for word"
+  },
+  {
+   "id": "audio",
+   "kind": "audio",
+   "path": "../../../videos/unclaimed_401k/short/short_audio_raw.wav",
+   "sha256": "601281ceddc14c886df92cae699910f6e0ccf66731082b4b2b956fc017099e56",
+   "status": "approved",
+   "approval_evidence": "Cut from the approved long-form narration (voice/P1..S8.wav), no resynthesis; pilot narration approved ('Approved'); full episode delivered 8 Nov 2026"
+  },
+  {
+   "id": "renderer",
+   "kind": "renderer",
+   "path": "../../../videos/unclaimed_401k/short/render_short.py",
+   "sha256": "3b562836e8d6d04db998f71526b62b273fbf8593412fd68e8616d8e300c41b06",
+   "status": "approved",
+   "approval_evidence": "Portrait adapter under the Shorts launcher; reuses the approved ren_stage placement and the episode's Maya and Ren rendering code"
+  },
+  {
+   "id": "configuration",
+   "kind": "configuration",
+   "path": "../../../videos/unclaimed_401k/short/short_spec.json",
+   "sha256": "e09d7b2658a582027fdb87f71a46b2a9947780276d58919de69d646327d862a2",
+   "status": "approved",
+   "approval_evidence": "Generated from short_spec.py: beats and timings tied to short_cues.json"
+  },
+  {
+   "id": "maya",
+   "kind": "character",
+   "path": "../../../videos/unclaimed_401k/art/poses/stool_03.png",
+   "sha256": "f8372002baca64a27b35e864c64f9c471d38830042bb3c95eda7979347e6971e",
+   "status": "approved",
+   "approval_evidence": "Maya pose cut-outs from the owner's approved identity sheets ('Yea to both', 'Approved'); armchair/stool variants derived by segmentation (unchair.py)"
+  },
+  {
+   "id": "hand_phone",
+   "kind": "character",
+   "path": "../../../videos/unclaimed_401k/art/poses/props_01.png",
+   "sha256": "2774143093e73164d563feb173cb46fb7ec031f5d15642b31ded6d06e3738e27",
+   "status": "approved",
+   "approval_evidence": "Hand-and-phone close-up from the approved prop sheet; owner 'Approved' the props"
+  },
+  {
+   "id": "ren_point_right",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_point_right.mp4",
+   "sha256": "ae725bb9225f4847286de6f4b331da0acb8393ea7caeb577f26eade40c4703f0",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip (assets/ren_library, status ok); owner 'Approved' the pilot with Ren cutaways"
+  },
+  {
+   "id": "ren_shrug",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_shrug.mp4",
+   "sha256": "1cacb6dd155bbec0a9afbc278dbd02881498adfeff377b50bdc05fbb5597ecd8",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; used in the approved pilot"
+  },
+  {
+   "id": "ren_present",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_present_palm_left.mp4",
+   "sha256": "4ab89972324e639ba4b39f50ec096a5118662a8b65eb0167abfbba26d43b2754",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip (mirrored to present right)"
+  },
+  {
+   "id": "ren_wave",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_wave_bye.mp4",
+   "sha256": "2dd94fde6cce95f5417dbbc2ed9b51f7565135da4901edcf95f59105582e5b67",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; mouth stays closed through the wave"
+  },
+  {
+   "id": "ren_arms",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_open_arms.mp4",
+   "sha256": "ffe871e05afc3c9cbc36b9de877bce7a84c3a74b56a720afb1e35758566321a4",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip"
+  },
+  {
+   "id": "ren_camera",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_point_camera.mp4",
+   "sha256": "c81a0fbcf66b1af5f66ffea155b70bde048b0039fc4e4e530a3861670c938786",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip"
+  },
+  {
+   "id": "ren_nod",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_nod_yes.mp4",
+   "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip"
+  },
+  {
+   "id": "h1",
+   "kind": "environment",
+   "path": "../../../videos/unclaimed_401k/art/plates/H1_4k.png",
+   "sha256": "dbfb21d9e33e1e074adf8dcbf5f490de0b2c97fe9a05c1742e1900a6d31b006c",
+   "status": "approved",
+   "approval_evidence": "Living-room plate H1, owner 'Approved' 8 Nov 2026 (2.3x upscale of 1672x941)"
+  },
+  {
+   "id": "sage",
+   "kind": "environment",
+   "path": "../../../videos/unclaimed_401k/art/plates/SAGE_4k.png",
+   "sha256": "82282c1e7827d035dbbedeea3a98778777f6085657756a040fb7ff14638965bb",
+   "status": "approved",
+   "approval_evidence": "Ren's approved sage home office (office.png, listed in REN_VIDEO_RULES.md), restored from branch codex/ren-approved-v3"
+  },
+  {
+   "id": "typography",
+   "kind": "font",
+   "path": "../../../project/remotion/public/fonts/fredoka-latin-700-normal.woff2",
+   "sha256": "c28f2b70e6e1bf0d9b6653022c613e7923218c6a0ff83f47c6ff080603119190",
+   "status": "approved",
+   "approval_evidence": "Fredoka, the established house typeface"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "armchair-phone",
+   "start_frame": 0,
+   "end_frame": 63,
+   "kind": "action",
+   "composition": "armchair-settle-phone",
+   "action": "Maya settles into the living-room armchair and raises her phone; the opening educational chip shows",
+   "motion_purpose": "Open on the story in a real room",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-phone-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "phone-cancel",
+   "start_frame": 63,
+   "end_frame": 132,
+   "kind": "action",
+   "composition": "hand-phone-closeup",
+   "action": "Close-up of a hand and phone: thumb hovers, presses Cancel plan, the app turns green 'Canceled'",
+   "motion_purpose": "Show the saved $12 as an action",
+   "assets": [
+    "hand_phone",
+    "h1"
+   ],
+   "animations": [
+    "phone-cancel-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "armchair-email",
+   "start_frame": 132,
+   "end_frame": 222,
+   "kind": "action",
+   "composition": "armchair-smile-email",
+   "action": "Maya reads the phone and gives a small smile; a confirmation email card slides in",
+   "motion_purpose": "Show the small win",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-email-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "armchair-laptop",
+   "start_frame": 222,
+   "end_frame": 281,
+   "kind": "action",
+   "composition": "armchair-lid-lift",
+   "action": "Maya lifts the laptop lid in the armchair",
+   "motion_purpose": "Move the story from phone to benefits",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-laptop-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "armchair-alert",
+   "start_frame": 281,
+   "end_frame": 357,
+   "kind": "action",
+   "composition": "armchair-lean-alert",
+   "action": "Maya leans in, eyes widen; a benefits alert pops up",
+   "motion_purpose": "Show the discovery",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-alert-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "portal-numbers",
+   "start_frame": 357,
+   "end_frame": 445,
+   "kind": "graphic",
+   "composition": "portal-card-swap",
+   "action": "The portal card shows $100 / month, then the label swaps to $1,200 / year",
+   "motion_purpose": "Show both figures at the moment they are spoken",
+   "assets": [
+    "h1"
+   ],
+   "animations": [
+    "portal-numbers-motion"
+   ],
+   "environment_fullscreen": false,
+   "timing_justification": "Two spoken figures share one card; the label swaps on the second figure (3.7 s)"
+  },
+  {
+   "id": "ren-employer-flow",
+   "start_frame": 445,
+   "end_frame": 519,
+   "kind": "presenter",
+   "composition": "ren-left-flow-card",
+   "action": "Ren raises his arm and points at the Employer to 401(k) card while a token travels into the account",
+   "motion_purpose": "Explain where the employer money goes",
+   "assets": [
+    "ren_point_right",
+    "sage"
+   ],
+   "animations": [
+    "ren-employer-flow-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "armchair-field",
+   "start_frame": 519,
+   "end_frame": 567,
+   "kind": "action",
+   "composition": "armchair-finger-hover",
+   "action": "Maya's finger hovers over the laptop; the Contribution % field highlights",
+   "motion_purpose": "Show the one change",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-field-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "armchair-two-percent",
+   "start_frame": 567,
+   "end_frame": 619,
+   "kind": "action",
+   "composition": "armchair-think-two",
+   "action": "Maya sits back and exhales; a '2%' card appears",
+   "motion_purpose": "State what she has been doing",
+   "assets": [
+    "maya",
+    "h1"
+   ],
+   "animations": [
+    "armchair-two-percent-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-match-cards",
+   "start_frame": 619,
+   "end_frame": 723,
+   "kind": "presenter",
+   "composition": "ren-left-match-cards",
+   "action": "Ren shrugs; the Maya card, then the Employer card, appear on their words",
+   "motion_purpose": "Show the dollar-for-dollar match",
+   "assets": [
+    "ren_shrug",
+    "sage"
+   ],
+   "animations": [
+    "ren-match-cards-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "One 4.3 s sentence with two clauses; the second card lands on the second clause while Ren gestures"
+  },
+  {
+   "id": "ren-half-meter",
+   "start_frame": 723,
+   "end_frame": 782,
+   "kind": "presenter",
+   "composition": "ren-left-half-meter",
+   "action": "Ren presents toward a match meter that is half full",
+   "motion_purpose": "Show the half she receives",
+   "assets": [
+    "ren_present",
+    "sage"
+   ],
+   "animations": [
+    "ren-half-meter-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "missing-half",
+   "start_frame": 782,
+   "end_frame": 845,
+   "kind": "graphic",
+   "composition": "missing-half-card",
+   "action": "A card names the missing half: $1,200 / year",
+   "motion_purpose": "Land the key figure",
+   "assets": [
+    "h1"
+   ],
+   "animations": [
+    "missing-half-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "ten-years",
+   "start_frame": 845,
+   "end_frame": 895,
+   "kind": "graphic",
+   "composition": "ten-year-tiles",
+   "action": "Ten year tiles tick on one by one",
+   "motion_purpose": "Show the passage of ten years",
+   "assets": [
+    "h1"
+   ],
+   "animations": [
+    "ten-years-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "twelve-thousand",
+   "start_frame": 895,
+   "end_frame": 964,
+   "kind": "graphic",
+   "composition": "twelve-thousand-card",
+   "action": "A card shows 10 years x $1,200 = $12,000",
+   "motion_purpose": "Land the total",
+   "assets": [
+    "h1"
+   ],
+   "animations": [
+    "twelve-thousand-motion"
+   ],
+   "environment_fullscreen": false,
+   "timing_justification": "Spoken phrase is 3.9 s; the card appears on the figure"
+  },
+  {
+   "id": "not-included",
+   "start_frame": 964,
+   "end_frame": 1085,
+   "kind": "graphic",
+   "composition": "not-included-list",
+   "action": "Three chips light up in turn: investment growth, changes in salary, changes to the plan",
+   "motion_purpose": "Show what the $12,000 leaves out",
+   "assets": [
+    "h1"
+   ],
+   "animations": [
+    "not-included-motion"
+   ],
+   "environment_fullscreen": false,
+   "timing_justification": "One list revealed item by item while three phrases are spoken (4.3 s)"
+  },
+  {
+   "id": "ren-intro",
+   "start_frame": 1085,
+   "end_frame": 1196,
+   "kind": "presenter",
+   "composition": "ren-left-next-move",
+   "action": "Ren waves, then a card says the next useful money move isn't earning more",
+   "motion_purpose": "Introduce the host and the takeaway",
+   "assets": [
+    "ren_wave",
+    "sage"
+   ],
+   "animations": [
+    "ren-intro-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Two short sentences (4.6 s): the wave on 'I'm Ren', the card on the second sentence"
+  },
+  {
+   "id": "ren-table",
+   "start_frame": 1196,
+   "end_frame": 1265,
+   "kind": "presenter",
+   "composition": "ren-left-on-the-table",
+   "action": "Ren opens his arms toward a card: the match",
+   "motion_purpose": "State the takeaway",
+   "assets": [
+    "ren_arms",
+    "sage"
+   ],
+   "animations": [
+    "ren-table-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-cta",
+   "start_frame": 1265,
+   "end_frame": 1344,
+   "kind": "presenter",
+   "composition": "ren-left-cta",
+   "action": "Ren points at the camera beside the workbook card",
+   "motion_purpose": "Call to action",
+   "assets": [
+    "ren_camera",
+    "sage"
+   ],
+   "animations": [
+    "ren-cta-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-disclaimer",
+   "start_frame": 1344,
+   "end_frame": 1409,
+   "kind": "presenter",
+   "composition": "ren-left-disclaimer",
+   "action": "Ren nods; the exact disclaimer holds for the whole beat",
+   "motion_purpose": "Close with the disclaimer",
+   "assets": [
+    "ren_nod",
+    "sage"
+   ],
+   "animations": [
+    "ren-disclaimer-motion"
+   ],
+   "environment_fullscreen": true
+  }
+ ],
+ "audio_cues": [
+  {
+   "start": 0.0,
+   "end": 2.14,
+   "text": "Maya saved twelve dollars last night."
+  },
+  {
+   "start": 2.64,
+   "end": 8.58,
+   "text": "She canceled a subscription she barely used, checked the confirmation email, and felt pretty good about it."
+  },
+  {
+   "start": 9.24,
+   "end": 11.08,
+   "text": "Then she opened her work benefits portal."
+  },
+  {
+   "start": 11.72,
+   "end": 14.78,
+   "text": "There was a number sitting in there that made the subscription look tiny."
+  },
+  {
+   "start": 14.867,
+   "end": 16.22,
+   "text": "One hundred dollars a month."
+  },
+  {
+   "start": 16.348,
+   "end": 18.12,
+   "text": "Twelve hundred dollars a year."
+  },
+  {
+   "start": 18.56,
+   "end": 23.36,
+   "text": "Her employer was willing to put that into her retirement account, but only if she made one change."
+  },
+  {
+   "start": 23.63,
+   "end": 25.497,
+   "text": "But Maya's been putting in two percent."
+  },
+  {
+   "start": 25.79,
+   "end": 29.85,
+   "text": "That's twelve hundred a year from her, with twelve hundred matched by work."
+  },
+  {
+   "start": 30.12,
+   "end": 32.12,
+   "text": "She's been getting half the match she could receive."
+  },
+  {
+   "start": 32.58,
+   "end": 34.94,
+   "text": "The missing half is another twelve hundred dollars a year."
+  },
+  {
+   "start": 35.21,
+   "end": 44.93,
+   "text": "Leave it unclaimed for ten more years, and that's twelve thousand dollars of employer contributions alone, before considering any investment growth, changes in salary, or changes to the plan."
+  },
+  {
+   "start": 45.2,
+   "end": 45.58,
+   "text": "I'm Ren."
+  },
+  {
+   "start": 45.84,
+   "end": 49.3,
+   "text": "And sometimes the next useful money move isn't earning more."
+  },
+  {
+   "start": 49.84,
+   "end": 52.06,
+   "text": "It's noticing what's already on the table."
+  },
+  {
+   "start": 52.72,
+   "end": 55.32,
+   "text": "Check out the Money Leak Audit Workbook in the description."
+  },
+  {
+   "start": 55.98,
+   "end": 58.54,
+   "text": "Educational only, not financial advice."
+  }
+ ]
+}

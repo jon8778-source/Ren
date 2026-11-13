@@ -1,0 +1,9 @@
+{
+  "by": "channel owner",
+  "evidence": "videos/three_bills/short/APPROVAL_EVIDENCE.md",
+  "approved_at": "2026-11-13T15:22:18.052154+00:00",
+  "review_notes": "# Prototype review notes (Three Bills Short)\n\nOwner reviewed the 15 s prototype over several rounds. Requested change: Ren looked like he was floating and stood too close to the chair. Resolved: Ren moved forward and left, larger, with a wider contact shadow; verified in frames at 1.5 s and 13 s of the final prototype render (sha256 069c23bae142d731...). Owner then replied \"Approved\" (after \"Approver\", clarified).\nQA warnings: none. Errors: none. Not verified by me: audio listening, lip sync, phone playback. Known minor: Ren's outstretched hand crops slightly at the left edge at ~13 s.",
+  "fingerprint": "4a00f21c5558832bd7a5513495b17e7a02f9d7b8093f175008a1db7937745916",
+  "prototype_sha256": "069c23bae142d731cc5a0a1ae09bfe68c9b45de929ae75946a41ab08e0d48003",
+  "report_sha256": "2029816e2e7c4f9bfe91eb26ad0964894ab5935755cad46600cc1de4285da504"
+}

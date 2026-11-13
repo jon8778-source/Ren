@@ -1,0 +1,225 @@
+{
+  "episode_slug": "three-bills-30-days",
+  "created_utc_date": "2026-11-09",
+  "status": "SCRIPT_V2_AND_MAYA_IMAGES_OWNER_APPROVED_PILOT_PENDING",
+  "approved_Ren_and_Maya_origin": "Existing repository assets, not duplicated in package. Verify prior to use.",
+  "full_video_generated": false,
+  "voice_generated": false,
+  "asset_count": 20,
+  "assets": [
+    {
+      "path": "assets/cast/maya_01_neutral.png",
+      "sha256": "6b140a9c8a70ccb4d8439e09ab6219e793d7db065284ea9759c2376537ce49c1",
+      "bytes": 235529,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        326,
+        981
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/cast/maya_02_surprised_envelope.png",
+      "sha256": "ba173f462624ec199517ed881d01bd0fbfc25951db3699a3c5067473e0410758",
+      "bytes": 241018,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        332,
+        981
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/cast/maya_03_worried_phone.png",
+      "sha256": "e8770c7e9cef2a4ec812ab9e1210743ce19e9b75c2f48cb5639aac513d8f522f",
+      "bytes": 237081,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        326,
+        981
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/cast/maya_04_relief_phone.png",
+      "sha256": "f123ada071ee7cb36c82a4f64fc3a80bff2ae639da981a96cd3f8caa521fdda3",
+      "bytes": 236437,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        331,
+        981
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/cast/maya_pose_preview.jpg",
+      "sha256": "340b38353cd059f88d67b9dc4312a172a7c292cffe9cff6731133d9da86b266c",
+      "bytes": 97200,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        1440,
+        650
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/cast/maya_approved_4_pose_sheet_source.png",
+      "sha256": "ea8df9804a23c1b13a1dd01ca7466a678a497ca12c5552c3d0bfb062a7870a37",
+      "bytes": 1719329,
+      "approval": "OWNER_APPROVED_2026_11_09",
+      "source": "image_gen + cutout",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/plates/dental_waiting_plate_16x9.png",
+      "sha256": "d71f656f6661c22e3887bb775436434f0b223cbf5bad162af513dc49f0e3c713",
+      "bytes": 108354,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/plates/dental_waiting_plate_16x9.svg",
+      "sha256": "9187b3f9ec1c526f296afaefe70c9ed6dc5f765aebabf71b6d4cb4225c1b0ad7",
+      "bytes": 1791,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/plates/kitchen_sink_plate_16x9.png",
+      "sha256": "14a5242627e312a29556c6d3b1653c710c4e1a38959b10b238b3618cdf695a1e",
+      "bytes": 63382,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/plates/kitchen_sink_plate_16x9.svg",
+      "sha256": "11171012992626222682bd801f9e3eb0ccc0a5bc19d5ff8168022ecb4cdfe2db",
+      "bytes": 2550,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/props/blank_invoice.png",
+      "sha256": "2361d3636acc6faf3543b7037d85581c176ebe24c3b8df7ee0cd72b162a8cf9c",
+      "bytes": 16455,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        1024,
+        1331
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/props/blank_invoice.svg",
+      "sha256": "26832bf78e639f3163085531e6095a1c2fecfcfb64370742a6435e1536a866c8",
+      "bytes": 432,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/props/blank_phone.png",
+      "sha256": "bc3a2ccd5461d6e89a167444510b29147bcade0797ba3cb9cabf162cc2a63114",
+      "bytes": 25329,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        1024,
+        1621
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/props/blank_phone.svg",
+      "sha256": "9fe3f40bd503329266aa00d3990f220bfb3ed349926b97ebe7f7a58f1de5eab1",
+      "bytes": 662,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/props/car_key.png",
+      "sha256": "77edfe9e71506c16a53c4a9aabba74483cf305a709b6d6ccd74b9b0f3305e2a0",
+      "bytes": 26238,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        1024,
+        683
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/props/car_key.svg",
+      "sha256": "8a33b72984ca9424bd895d920f091e96c9d4338cadbbba2bbe37fbba1bc8a778",
+      "bytes": 549,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/props/leaking_pipe.png",
+      "sha256": "372452f58c7002892f0f60da746a599956ada3cabaee19c128d93d302263d452",
+      "bytes": 34477,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        1024,
+        928
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/props/leaking_pipe.svg",
+      "sha256": "db29815e8f7e00e41989f10bfeb587c517ebc3849c025da456290a32c179b5e4",
+      "bytes": 662,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    },
+    {
+      "path": "assets/props/savings_envelope.png",
+      "sha256": "30546aed155703d2c794c40fe41bc71dacf91472c93c2f87ae19852f8c7a1a04",
+      "bytes": 38355,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode",
+      "dimensions": [
+        1024,
+        695
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/props/savings_envelope.svg",
+      "sha256": "53bd44ad72eed7a5e9f04719a9d2bb912cf0719003a7d5d633c96792b4cd6252",
+      "bytes": 363,
+      "approval": "PROVISIONAL",
+      "source": "original SVG vector generated for this episode"
+    }
+  ],
+  "updated_utc_date": "2026-11-09",
+  "script_path": "SCRIPT.md",
+  "script_sha256": "14801320664962ebd79d3ed55d0065a61d905f2dea7d7f9110bdb9d85d695636",
+  "voice_script_sha256": "efa047244dd83cc5670be2937ea5a63dc6ad252d6b9811ca78a082a3a45bd4ed",
+  "maya_owner_approval": "2026-11-09 explicit user message: Maya images approved",
+  "character_approval_scope": "Four episode-specific Maya cutout PNGs, preview JPEG and 4-pose source PNG",
+  "other_plates_approval": "PROVISIONAL",
+  "script_owner_approved_date": "2026-11-09",
+  "pilot_owner_approved": false
+}

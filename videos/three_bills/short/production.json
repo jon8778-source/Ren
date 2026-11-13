@@ -1,0 +1,609 @@
+{
+ "schema_version": 1,
+ "title": "Ren | Three Bills in 30 Days: 1-minute Short (derived from the long video)",
+ "width": 1080,
+ "height": 1920,
+ "fps": 24,
+ "frames": 1415,
+ "full_bleed": true,
+ "permanent_border": false,
+ "asset_report": "ASSET_REQUIREMENTS.md",
+ "layout_evidence": "layout.json",
+ "prototype": "prototype.mp4",
+ "prototype_report": "prototype.qa.json",
+ "assets": [
+  {
+   "id": "script",
+   "kind": "script",
+   "path": "../../../videos/three_bills/script/SCRIPT.md",
+   "sha256": "14801320664962ebd79d3ed55d0065a61d905f2dea7d7f9110bdb9d85d695636",
+   "status": "approved",
+   "approval_evidence": "Owner's v2 script, 'Script approved' 9 Nov 2026 (SHA-256 14801320...); the full episode was approved ('Approved, good work Claude')"
+  },
+  {
+   "id": "audio",
+   "kind": "audio",
+   "path": "../../../videos/three_bills/short/short_audio_raw.wav",
+   "sha256": "808428832aaf0c8d42eca0fd4e67f5f6f923c5c9eabbf85b7c3006be5259a472",
+   "status": "approved",
+   "approval_evidence": "Cut from the approved full-episode narration (voice/H, L, D1-D7), no resynthesis"
+  },
+  {
+   "id": "renderer",
+   "kind": "renderer",
+   "path": "../../../videos/three_bills/short/render_short.py",
+   "sha256": "2f67311c1f4a4196bd99172e619d7409c4511f3df0af2a211bb36ec550d2919f",
+   "status": "approved",
+   "approval_evidence": "Portrait adapter under the Shorts launcher; reuses the approved ren_stage placement and the episode's Maya and Ren rendering code"
+  },
+  {
+   "id": "configuration",
+   "kind": "configuration",
+   "path": "../../../videos/three_bills/short/short_spec.json",
+   "sha256": "e74a165a7e2d9f0e31929f9dea1f84d022fff27fb8649b84f541c9fc5795c7d4",
+   "status": "approved",
+   "approval_evidence": "Generated from short_spec.py: beats and timings tied to short_cues.json"
+  },
+  {
+   "id": "maya",
+   "kind": "character",
+   "path": "../../../videos/three_bills/art/cast/maya_01_neutral.png",
+   "sha256": "6b140a9c8a70ccb4d8439e09ab6219e793d7db065284ea9759c2376537ce49c1",
+   "status": "approved",
+   "approval_evidence": "Owner-approved four-pose Maya sheet ('Maya images approved', 9 Nov 2026; hashes in the pack manifest)"
+  },
+  {
+   "id": "ren_present",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_present_palm_left.mp4",
+   "sha256": "4ab89972324e639ba4b39f50ec096a5118662a8b65eb0167abfbba26d43b2754",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip (mirrored); approved in the full episode"
+  },
+  {
+   "id": "ren_shrug",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_shrug.mp4",
+   "sha256": "1cacb6dd155bbec0a9afbc278dbd02881498adfeff377b50bdc05fbb5597ecd8",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; approved in the full episode"
+  },
+  {
+   "id": "ren_point",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_point_right.mp4",
+   "sha256": "ae725bb9225f4847286de6f4b331da0acb8393ea7caeb577f26eade40c4703f0",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; approved in the full episode"
+  },
+  {
+   "id": "ren_open",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_open_arms.mp4",
+   "sha256": "ffe871e05afc3c9cbc36b9de877bce7a84c3a74b56a720afb1e35758566321a4",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; approved in the full episode"
+  },
+  {
+   "id": "ren_nod",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_nod_yes.mp4",
+   "sha256": "ca3ef50d4b8677db720058e9fc62cf120a186b1519eb1ad03dc03ce374b11a7d",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; approved in the full episode"
+  },
+  {
+   "id": "ren_think",
+   "kind": "character",
+   "path": "../../../assets/ren_library/ren_thinking.mp4",
+   "sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354",
+   "status": "approved",
+   "approval_evidence": "Approved animated Ren library clip; approved in the full episode"
+  },
+  {
+   "id": "lot",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Office_parking_lot_car_16x9.png",
+   "sha256": "0dc0b4d6e623f57162de0b9cfdf4b78f6b352d1372b3a8d905dcc6152acfdab2",
+   "status": "approved",
+   "approval_evidence": "Approved plate (Free Money pack; used in the approved episode); 1672x941 landscape, enlarged about 2x for portrait"
+  },
+  {
+   "id": "porch",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Porch_background_16x9.png",
+   "sha256": "b6732b5526d5bbc8032a36ab4e7d50719efa202918488bb35401e5e8025f4c3b",
+   "status": "approved",
+   "approval_evidence": "Approved plate (used in the approved episode)"
+  },
+  {
+   "id": "office",
+   "kind": "environment",
+   "path": "../../../library/supporting_assets/backgrounds/Office_background_16x9.png",
+   "sha256": "bfc7066bc8253ac38bba9b987280ad8575afd86458762d4e0054b98b1b1b3945",
+   "status": "approved",
+   "approval_evidence": "Approved plate (used in the approved episode)"
+  },
+  {
+   "id": "sage",
+   "kind": "environment",
+   "path": "../../../videos/unclaimed_401k/art/plates/SAGE_4k.png",
+   "sha256": "82282c1e7827d035dbbedeea3a98778777f6085657756a040fb7ff14638965bb",
+   "status": "approved",
+   "approval_evidence": "Ren's approved sage home office (REN_VIDEO_RULES.md), restored from codex/ren-approved-v3"
+  },
+  {
+   "id": "kitchen",
+   "kind": "environment",
+   "path": "../../../videos/three_bills/art/plates/kitchen_leak_ref.png",
+   "sha256": "29cb65b86e550defe015304e1a5a0ec2624238b6935dac94448284cfb18fea1d",
+   "status": "approved",
+   "approval_evidence": "Sink-leak illustration supplied by the owner (9 Nov 2026); only the pipe/sink/bucket area is used; approved in the full episode ('Approved')"
+  },
+  {
+   "id": "typography",
+   "kind": "font",
+   "path": "../../../project/remotion/public/fonts/fredoka-latin-700-normal.woff2",
+   "sha256": "c28f2b70e6e1bf0d9b6653022c613e7923218c6a0ff83f47c6ff080603119190",
+   "status": "approved",
+   "approval_evidence": "Fredoka, the established house typeface"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "ren-hook",
+   "start_frame": 0,
+   "end_frame": 47,
+   "kind": "presenter",
+   "composition": "ren-left-title-card",
+   "action": "Ren (genuine clip, presenting) beside a '3 bills / 30 days' card; the opening educational chip shows",
+   "motion_purpose": "Introduce the host and the premise",
+   "assets": [
+    "ren_present",
+    "sage"
+   ],
+   "animations": [
+    "ren-hook-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 2.0 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "car-breakdown",
+   "start_frame": 47,
+   "end_frame": 127,
+   "kind": "action",
+   "composition": "lot-maya-car-key",
+   "action": "Maya surprised beside the car; the car key spins and stops",
+   "motion_purpose": "Show bill one as an action",
+   "assets": [
+    "maya",
+    "lot"
+   ],
+   "animations": [
+    "car-breakdown-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "dental-invoice",
+   "start_frame": 127,
+   "end_frame": 178,
+   "kind": "graphic",
+   "composition": "invoice-urgent",
+   "action": "An urgent $390 invoice drops onto the table and the URGENT stamp lands",
+   "motion_purpose": "Show bill two as an object",
+   "assets": [
+    "lot"
+   ],
+   "animations": [
+    "dental-invoice-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "porch-worse",
+   "start_frame": 178,
+   "end_frame": 240,
+   "kind": "action",
+   "composition": "porch-maya-worried",
+   "action": "Maya on the porch, worried with her phone; slow push",
+   "motion_purpose": "Build the tension before the third bill",
+   "assets": [
+    "maya",
+    "porch"
+   ],
+   "animations": [
+    "porch-worse-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "kitchen-leak",
+   "start_frame": 240,
+   "end_frame": 296,
+   "kind": "story_still",
+   "composition": "sink-leak-portrait",
+   "action": "The sink-leak illustration (pipe, sink, bucket) with an animated drip and ripple",
+   "motion_purpose": "Show bill three",
+   "assets": [
+    "kitchen"
+   ],
+   "animations": [
+    "kitchen-leak-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-total",
+   "start_frame": 296,
+   "end_frame": 357,
+   "kind": "presenter",
+   "composition": "ren-left-equation",
+   "action": "Ren shrugs; the three bills and their total appear in a column",
+   "motion_purpose": "State the total once",
+   "assets": [
+    "ren_shrug",
+    "sage"
+   ],
+   "animations": [
+    "ren-total-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "savings-app",
+   "start_frame": 357,
+   "end_frame": 459,
+   "kind": "action",
+   "composition": "office-maya-phone-balance",
+   "action": "Maya at her desk looks worried at her phone; a savings card shows $2,600 falling to $400",
+   "motion_purpose": "Show the emotional low",
+   "assets": [
+    "maya",
+    "office"
+   ],
+   "animations": [
+    "savings-app-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 4.2 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "gone-backwards",
+   "start_frame": 459,
+   "end_frame": 552,
+   "kind": "action",
+   "composition": "porch-maya-closeup-bubble",
+   "action": "Close-up of Maya at dusk; a thought bubble appears",
+   "motion_purpose": "Land the hook's worry",
+   "assets": [
+    "maya",
+    "porch"
+   ],
+   "animations": [
+    "gone-backwards-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-why",
+   "start_frame": 552,
+   "end_frame": 584,
+   "kind": "presenter",
+   "composition": "ren-left-not-backwards",
+   "action": "Ren points; a 'Not backwards' chip appears",
+   "motion_purpose": "Turn the story from worry to explanation",
+   "assets": [
+    "ren_point",
+    "sage"
+   ],
+   "animations": [
+    "ren-why-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.3 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "card-paid-off",
+   "start_frame": 584,
+   "end_frame": 661,
+   "kind": "action",
+   "composition": "porch-maya-paid-off",
+   "action": "Maya relieved on the porch; a 'Paid off' stamp lands on a credit card",
+   "motion_purpose": "Show the fresh start",
+   "assets": [
+    "maya",
+    "porch"
+   ],
+   "animations": [
+    "card-paid-off-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "auto-transfer",
+   "start_frame": 661,
+   "end_frame": 742,
+   "kind": "graphic",
+   "composition": "phone-auto-transfer",
+   "action": "A phone shows the $50 automatic transfer; the toggle switches on",
+   "motion_purpose": "Show the one habit",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "auto-transfer-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "ren-fifty-two",
+   "start_frame": 742,
+   "end_frame": 866,
+   "kind": "presenter",
+   "composition": "ren-left-fund-equation",
+   "action": "Ren opens his arms toward the finished sum $50 x 52 = $2,600",
+   "motion_purpose": "Show the fund and its source",
+   "assets": [
+    "ren_open",
+    "sage"
+   ],
+   "animations": [
+    "ren-fifty-two-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 5.2 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "money-was-there",
+   "start_frame": 866,
+   "end_frame": 943,
+   "kind": "action",
+   "composition": "lot-maya-answer",
+   "action": "Maya relieved beside the car; 'The money was already there' card",
+   "motion_purpose": "Pay off the hook",
+   "assets": [
+    "maya",
+    "lot"
+   ],
+   "animations": [
+    "money-was-there-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "three-bills-gone",
+   "start_frame": 943,
+   "end_frame": 1037,
+   "kind": "action",
+   "composition": "office-maya-fund-tank",
+   "action": "Maya at her desk; the fund tank drains from $2,600",
+   "motion_purpose": "Show the cost of the month",
+   "assets": [
+    "maya",
+    "office"
+   ],
+   "animations": [
+    "three-bills-gone-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "four-hundred",
+   "start_frame": 1037,
+   "end_frame": 1085,
+   "kind": "graphic",
+   "composition": "phone-400-left",
+   "action": "The savings phone shows $400 left",
+   "motion_purpose": "Land the remaining balance",
+   "assets": [
+    "office"
+   ],
+   "animations": [
+    "four-hundred-motion"
+   ],
+   "environment_fullscreen": false
+  },
+  {
+   "id": "ren-smaller",
+   "start_frame": 1085,
+   "end_frame": 1168,
+   "kind": "presenter",
+   "composition": "ren-left-fund-smaller",
+   "action": "Ren nods; the fund tank drops from $2,600 to $400",
+   "motion_purpose": "State the idea",
+   "assets": [
+    "ren_nod",
+    "sage"
+   ],
+   "animations": [
+    "ren-smaller-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "using-it",
+   "start_frame": 1168,
+   "end_frame": 1212,
+   "kind": "action",
+   "composition": "porch-maya-failure-struck",
+   "action": "Close-up of Maya, relieved; 'Failure' is struck through",
+   "motion_purpose": "Reframe the spend",
+   "assets": [
+    "maya",
+    "porch"
+   ],
+   "animations": [
+    "using-it-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.8 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "its-the-job",
+   "start_frame": 1212,
+   "end_frame": 1269,
+   "kind": "action",
+   "composition": "lot-maya-the-job",
+   "action": "Maya in the morning light; 'Its job: pay for emergencies' card",
+   "motion_purpose": "Land the takeaway",
+   "assets": [
+    "maya",
+    "lot"
+   ],
+   "animations": [
+    "its-the-job-motion"
+   ],
+   "environment_fullscreen": true
+  },
+  {
+   "id": "ren-question",
+   "start_frame": 1269,
+   "end_frame": 1374,
+   "kind": "presenter",
+   "composition": "ren-left-question",
+   "action": "Ren thinks; the question card appears",
+   "motion_purpose": "Ask the audience",
+   "assets": [
+    "ren_think",
+    "sage"
+   ],
+   "animations": [
+    "ren-question-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 4.4 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "closing",
+   "start_frame": 1374,
+   "end_frame": 1415,
+   "kind": "action",
+   "composition": "porch-maya-sunset-close",
+   "action": "Maya at sunset on the porch; the exact disclaimer holds for the last two seconds",
+   "motion_purpose": "Close with the call to comment and the disclaimer",
+   "assets": [
+    "maya",
+    "porch"
+   ],
+   "animations": [
+    "closing-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.7 s follows the spoken phrase boundaries; the visual change lands on its words"
+  }
+ ],
+ "audio_cues": [
+  {
+   "start": 0.05,
+   "end": 0.67,
+   "text": "Three bills."
+  },
+  {
+   "start": 0.875,
+   "end": 1.95,
+   "text": "Thirty days."
+  },
+  {
+   "start": 1.95,
+   "end": 4.87,
+   "text": "First, Maya's car broke down."
+  },
+  {
+   "start": 5.29,
+   "end": 7.03,
+   "text": "Then came an urgent dental bill."
+  },
+  {
+   "start": 7.41,
+   "end": 11.77,
+   "text": "And just when she thought the month couldn't get worse, a pipe leaked beneath her kitchen sink."
+  },
+  {
+   "start": 12.33,
+   "end": 12.73,
+   "text": "The total?"
+  },
+  {
+   "start": 12.924,
+   "end": 14.673,
+   "text": "Two thousand two hundred dollars."
+  },
+  {
+   "start": 14.887,
+   "end": 18.507,
+   "text": "But when Maya opened her savings app afterward, she didn't feel proud."
+  },
+  {
+   "start": 19.107,
+   "end": 22.707,
+   "text": "She saw how much her balance had fallen and thought, I've gone backwards."
+  },
+  {
+   "start": 23.007,
+   "end": 24.127,
+   "text": "Here's why she hadn't."
+  },
+  {
+   "start": 24.315,
+   "end": 30.775,
+   "text": "Once the card was paid off, she opened a separate savings account and set up an automatic transfer of fifty dollars every week."
+  },
+  {
+   "start": 30.928,
+   "end": 35.815,
+   "text": "Fifty dollars a week, for fifty-two weeks, gave her two thousand six hundred dollars."
+  },
+  {
+   "start": 36.085,
+   "end": 37.505,
+   "text": "But this time, she had an answer."
+  },
+  {
+   "start": 37.685,
+   "end": 39.025,
+   "text": "The money was already there."
+  },
+  {
+   "start": 39.295,
+   "end": 40.935,
+   "text": "Three bills in thirty days."
+  },
+  {
+   "start": 41.06,
+   "end": 43.055,
+   "text": "Two thousand two hundred dollars gone."
+  },
+  {
+   "start": 43.21,
+   "end": 44.935,
+   "text": "Four hundred dollars left."
+  },
+  {
+   "start": 45.205,
+   "end": 48.325,
+   "text": "An emergency fund is supposed to get smaller when there's an emergency."
+  },
+  {
+   "start": 48.685,
+   "end": 49.945,
+   "text": "Using it isn't failure."
+  },
+  {
+   "start": 50.485,
+   "end": 52.625,
+   "text": "That's literally the job it was hired to do."
+  },
+  {
+   "start": 52.895,
+   "end": 56.755,
+   "text": "What bill would have shaken you a year ago, but feels more manageable today?"
+  },
+  {
+   "start": 57.235,
+   "end": 58.735,
+   "text": "I'd love to hear it in the comments."
+  }
+ ]
+}

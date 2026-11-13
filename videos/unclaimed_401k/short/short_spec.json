@@ -1,0 +1,160 @@
+{
+ "fps": 24,
+ "frames": 1409,
+ "disclaimer": "Educational content only, not financial advice.",
+ "narration_s": 58.715,
+ "beats": [
+  {
+   "id": "armchair-phone",
+   "start_frame": 0,
+   "end_frame": 63,
+   "kind": "action",
+   "composition": "armchair-settle-phone",
+   "narration": "Maya saved twelve dollars last night."
+  },
+  {
+   "id": "phone-cancel",
+   "start_frame": 63,
+   "end_frame": 132,
+   "kind": "action",
+   "composition": "hand-phone-closeup",
+   "narration": "She canceled a subscription she barely used,"
+  },
+  {
+   "id": "armchair-email",
+   "start_frame": 132,
+   "end_frame": 222,
+   "kind": "action",
+   "composition": "armchair-smile-email",
+   "narration": "checked the confirmation email, and felt pretty good about it."
+  },
+  {
+   "id": "armchair-laptop",
+   "start_frame": 222,
+   "end_frame": 281,
+   "kind": "action",
+   "composition": "armchair-lid-lift",
+   "narration": "Then she opened her work benefits portal."
+  },
+  {
+   "id": "armchair-alert",
+   "start_frame": 281,
+   "end_frame": 357,
+   "kind": "action",
+   "composition": "armchair-lean-alert",
+   "narration": "There was a number sitting in there that made the subscription look tiny."
+  },
+  {
+   "id": "portal-numbers",
+   "start_frame": 357,
+   "end_frame": 445,
+   "kind": "graphic",
+   "composition": "portal-card-swap",
+   "narration": "One hundred dollars a month. Twelve hundred dollars a year."
+  },
+  {
+   "id": "ren-employer-flow",
+   "start_frame": 445,
+   "end_frame": 519,
+   "kind": "presenter",
+   "composition": "ren-left-flow-card",
+   "narration": "Her employer was willing to put that into her retirement account,"
+  },
+  {
+   "id": "armchair-field",
+   "start_frame": 519,
+   "end_frame": 567,
+   "kind": "action",
+   "composition": "armchair-finger-hover",
+   "narration": "but only if she made one change."
+  },
+  {
+   "id": "armchair-two-percent",
+   "start_frame": 567,
+   "end_frame": 619,
+   "kind": "action",
+   "composition": "armchair-think-two",
+   "narration": "But Maya's been putting in two percent."
+  },
+  {
+   "id": "ren-match-cards",
+   "start_frame": 619,
+   "end_frame": 723,
+   "kind": "presenter",
+   "composition": "ren-left-match-cards",
+   "narration": "That's twelve hundred a year from her, with twelve hundred matched by work."
+  },
+  {
+   "id": "ren-half-meter",
+   "start_frame": 723,
+   "end_frame": 782,
+   "kind": "presenter",
+   "composition": "ren-left-half-meter",
+   "narration": "She's been getting half the match she could receive."
+  },
+  {
+   "id": "missing-half",
+   "start_frame": 782,
+   "end_frame": 845,
+   "kind": "graphic",
+   "composition": "missing-half-card",
+   "narration": "The missing half is another twelve hundred dollars a year."
+  },
+  {
+   "id": "ten-years",
+   "start_frame": 845,
+   "end_frame": 895,
+   "kind": "graphic",
+   "composition": "ten-year-tiles",
+   "narration": "Leave it unclaimed for ten more years,"
+  },
+  {
+   "id": "twelve-thousand",
+   "start_frame": 895,
+   "end_frame": 964,
+   "kind": "graphic",
+   "composition": "twelve-thousand-card",
+   "narration": "and that's twelve thousand dollars of employer contributions alone,"
+  },
+  {
+   "id": "not-included",
+   "start_frame": 964,
+   "end_frame": 1085,
+   "kind": "graphic",
+   "composition": "not-included-list",
+   "narration": "before considering any investment growth, changes in salary, or changes to the plan."
+  },
+  {
+   "id": "ren-intro",
+   "start_frame": 1085,
+   "end_frame": 1196,
+   "kind": "presenter",
+   "composition": "ren-left-next-move",
+   "narration": "I'm Ren. And sometimes the next useful money move isn't earning more."
+  },
+  {
+   "id": "ren-table",
+   "start_frame": 1196,
+   "end_frame": 1265,
+   "kind": "presenter",
+   "composition": "ren-left-on-the-table",
+   "narration": "It's noticing what's already on the table."
+  },
+  {
+   "id": "ren-cta",
+   "start_frame": 1265,
+   "end_frame": 1344,
+   "kind": "presenter",
+   "composition": "ren-left-cta",
+   "narration": "Check out the Money Leak Audit Workbook in the description."
+  },
+  {
+   "id": "ren-disclaimer",
+   "start_frame": 1344,
+   "end_frame": 1409,
+   "kind": "presenter",
+   "composition": "ren-left-disclaimer",
+   "narration": "Educational only, not financial advice."
+  }
+ ]
+}

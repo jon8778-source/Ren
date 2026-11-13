@@ -1,0 +1,7 @@
+renders/
+__pycache__/
+*.mp4
+*.mov
+*.webm
+*.mkv
+export/

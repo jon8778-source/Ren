@@ -1,0 +1,422 @@
+[
+ {
+  "word": "Back",
+  "start": 0.0,
+  "end": 0.28
+ },
+ {
+  "word": "on",
+  "start": 0.28,
+  "end": 0.5
+ },
+ {
+  "word": "that",
+  "start": 0.5,
+  "end": 0.68
+ },
+ {
+  "word": "porch,",
+  "start": 0.68,
+  "end": 1.1
+ },
+ {
+  "word": "Dev",
+  "start": 1.46,
+  "end": 1.62
+ },
+ {
+  "word": "asked",
+  "start": 1.62,
+  "end": 2.0
+ },
+ {
+  "word": "me",
+  "start": 2.0,
+  "end": 2.22
+ },
+ {
+  "word": "3",
+  "start": 2.22,
+  "end": 2.48
+ },
+ {
+  "word": "questions.",
+  "start": 2.48,
+  "end": 3.0
+ },
+ {
+  "word": "What",
+  "start": 3.62,
+  "end": 3.84
+ },
+ {
+  "word": "does",
+  "start": 3.84,
+  "end": 4.0
+ },
+ {
+  "word": "this",
+  "start": 4.0,
+  "end": 4.22
+ },
+ {
+  "word": "line",
+  "start": 4.22,
+  "end": 4.46
+ },
+ {
+  "word": "mean?",
+  "start": 4.46,
+  "end": 4.8
+ },
+ {
+  "word": "What",
+  "start": 5.28,
+  "end": 5.44
+ },
+ {
+  "word": "would",
+  "start": 5.44,
+  "end": 5.58
+ },
+ {
+  "word": "it",
+  "start": 5.58,
+  "end": 5.74
+ },
+ {
+  "word": "say",
+  "start": 5.74,
+  "end": 5.94
+ },
+ {
+  "word": "if",
+  "start": 5.94,
+  "end": 6.1
+ },
+ {
+  "word": "you'd",
+  "start": 6.1,
+  "end": 6.34
+ },
+ {
+  "word": "read",
+  "start": 6.34,
+  "end": 6.5
+ },
+ {
+  "word": "the",
+  "start": 6.5,
+  "end": 6.7
+ },
+ {
+  "word": "folder?",
+  "start": 6.7,
+  "end": 7.02
+ },
+ {
+  "word": "And",
+  "start": 7.36,
+  "end": 7.6
+ },
+ {
+  "word": "who's",
+  "start": 7.6,
+  "end": 7.82
+ },
+ {
+  "word": "keeping",
+  "start": 7.82,
+  "end": 8.04
+ },
+ {
+  "word": "the",
+  "start": 8.04,
+  "end": 8.24
+ },
+ {
+  "word": "difference?",
+  "start": 8.24,
+  "end": 8.52
+ },
+ {
+  "word": "The",
+  "start": 9.16,
+  "end": 9.32
+ },
+ {
+  "word": "line",
+  "start": 9.32,
+  "end": 9.54
+ },
+ {
+  "word": "said",
+  "start": 9.54,
+  "end": 9.8
+ },
+ {
+  "word": "2%.",
+  "start": 9.8,
+  "end": 10.6
+ },
+ {
+  "word": "It",
+  "start": 10.6,
+  "end": 11.02
+ },
+ {
+  "word": "should've",
+  "start": 11.02,
+  "end": 11.28
+ },
+ {
+  "word": "said",
+  "start": 11.28,
+  "end": 11.5
+ },
+ {
+  "word": "4.",
+  "start": 11.5,
+  "end": 11.84
+ },
+ {
+  "word": "And",
+  "start": 12.16,
+  "end": 12.28
+ },
+ {
+  "word": "the",
+  "start": 12.28,
+  "end": 12.4
+ },
+ {
+  "word": "difference?",
+  "start": 12.4,
+  "end": 12.72
+ },
+ {
+  "word": "The",
+  "start": 13.2,
+  "end": 13.34
+ },
+ {
+  "word": "company",
+  "start": 13.34,
+  "end": 13.62
+ },
+ {
+  "word": "keeps",
+  "start": 13.62,
+  "end": 13.92
+ },
+ {
+  "word": "it.",
+  "start": 13.92,
+  "end": 14.1
+ },
+ {
+  "word": "Not",
+  "start": 14.22,
+  "end": 14.44
+ },
+ {
+  "word": "because",
+  "start": 14.44,
+  "end": 14.82
+ },
+ {
+  "word": "they're",
+  "start": 14.82,
+  "end": 15.16
+ },
+ {
+  "word": "evil,",
+  "start": 15.16,
+  "end": 15.38
+ },
+ {
+  "word": "that's",
+  "start": 15.66,
+  "end": 15.94
+ },
+ {
+  "word": "just",
+  "start": 15.94,
+  "end": 16.12
+ },
+ {
+  "word": "how",
+  "start": 16.12,
+  "end": 16.32
+ },
+ {
+  "word": "matches",
+  "start": 16.32,
+  "end": 16.62
+ },
+ {
+  "word": "work.",
+  "start": 16.62,
+  "end": 17.0
+ },
+ {
+  "word": "If",
+  "start": 17.38,
+  "end": 17.58
+ },
+ {
+  "word": "you",
+  "start": 17.58,
+  "end": 17.68
+ },
+ {
+  "word": "don't",
+  "start": 17.68,
+  "end": 17.92
+ },
+ {
+  "word": "claim",
+  "start": 17.92,
+  "end": 18.14
+ },
+ {
+  "word": "it,",
+  "start": 18.14,
+  "end": 18.36
+ },
+ {
+  "word": "it",
+  "start": 18.5,
+  "end": 18.62
+ },
+ {
+  "word": "stays",
+  "start": 18.62,
+  "end": 18.84
+ },
+ {
+  "word": "with",
+  "start": 18.84,
+  "end": 19.14
+ },
+ {
+  "word": "them.",
+  "start": 19.14,
+  "end": 19.36
+ },
+ {
+  "word": "I",
+  "start": 20.08,
+  "end": 20.22
+ },
+ {
+  "word": "went",
+  "start": 20.22,
+  "end": 20.4
+ },
+ {
+  "word": "home,",
+  "start": 20.4,
+  "end": 20.74
+ },
+ {
+  "word": "opened",
+  "start": 20.98,
+  "end": 21.16
+ },
+ {
+  "word": "the",
+  "start": 21.16,
+  "end": 21.38
+ },
+ {
+  "word": "app",
+  "start": 21.38,
+  "end": 21.52
+ },
+ {
+  "word": "on",
+  "start": 21.52,
+  "end": 21.72
+ },
+ {
+  "word": "my",
+  "start": 21.72,
+  "end": 21.9
+ },
+ {
+  "word": "phone",
+  "start": 21.9,
+  "end": 22.22
+ },
+ {
+  "word": "and",
+  "start": 22.22,
+  "end": 22.48
+ },
+ {
+  "word": "changed",
+  "start": 22.48,
+  "end": 22.82
+ },
+ {
+  "word": "2",
+  "start": 22.82,
+  "end": 23.06
+ },
+ {
+  "word": "to",
+  "start": 23.06,
+  "end": 23.2
+ },
+ {
+  "word": "4.",
+  "start": 23.2,
+  "end": 23.46
+ },
+ {
+  "word": "It",
+  "start": 23.86,
+  "end": 23.98
+ },
+ {
+  "word": "took",
+  "start": 23.98,
+  "end": 24.12
+ },
+ {
+  "word": "90",
+  "start": 24.12,
+  "end": 24.48
+ },
+ {
+  "word": "seconds.",
+  "start": 24.48,
+  "end": 24.96
+ },
+ {
+  "word": "90",
+  "start": 25.34,
+  "end": 25.6
+ },
+ {
+  "word": "seconds",
+  "start": 25.6,
+  "end": 25.98
+ },
+ {
+  "word": "3",
+  "start": 25.98,
+  "end": 26.24
+ },
+ {
+  "word": "years",
+  "start": 26.24,
+  "end": 26.46
+ },
+ {
+  "word": "late.",
+  "start": 26.46,
+  "end": 26.76
+ }
+]

@@ -1,0 +1,5 @@
+art/
+voice/
+renders/
+__pycache__/
+reports/*.mp4

@@ -1,0 +1,220 @@
+{
+ "H": {
+  "ratio": 0.9268,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "replace",
+    "thirty",
+    "30"
+   ],
+   [
+    "delete",
+    "two thousand two hundred",
+    ""
+   ],
+   [
+    "replace",
+    "eighteen",
+    "2 200 18"
+   ]
+  ]
+ },
+ "L": {
+  "ratio": 0.9468,
+  "differences": [
+   [
+    "delete",
+    "eighty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "80"
+   ],
+   [
+    "replace",
+    "six hundred dollar",
+    "dollars 600"
+   ],
+   [
+    "delete",
+    "six hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "600"
+   ]
+  ]
+ },
+ "D1": {
+  "ratio": 0.9442,
+  "differences": [
+   [
+    "delete",
+    "fifty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "50"
+   ],
+   [
+    "delete",
+    "fifty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "50"
+   ],
+   [
+    "replace",
+    "fifty two",
+    "52"
+   ],
+   [
+    "delete",
+    "two thousand six hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "2 600"
+   ]
+  ]
+ },
+ "D2": {
+  "ratio": 0.9123,
+  "differences": [
+   [
+    "replace",
+    "seven hundred sixty",
+    "760"
+   ],
+   [
+    "replace",
+    "two thousand six hundred",
+    "2600"
+   ],
+   [
+    "replace",
+    "one thousand eight hundred forty",
+    "1840"
+   ]
+  ]
+ },
+ "D3": {
+  "ratio": 0.9032,
+  "differences": [
+   [
+    "replace",
+    "sixteen",
+    "16"
+   ],
+   [
+    "replace",
+    "three hundred ninety dollar",
+    "dollars 390"
+   ],
+   [
+    "delete",
+    "one thousand four hundred fifty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "1 450"
+   ]
+  ]
+ },
+ "D4": {
+  "ratio": 0.9174,
+  "differences": [
+   [
+    "replace",
+    "twenty seven",
+    "27"
+   ],
+   [
+    "delete",
+    "one thousand fifty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "1050"
+   ],
+   [
+    "replace",
+    "thirty",
+    "30"
+   ],
+   [
+    "delete",
+    "two thousand two hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "2 200"
+   ],
+   [
+    "delete",
+    "four hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "400"
+   ]
+  ]
+ },
+ "D5": {
+  "ratio": 0.9782,
+  "differences": [
+   [
+    "delete",
+    "four hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "400"
+   ],
+   [
+    "delete",
+    "fifty",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "50"
+   ]
+  ]
+ },
+ "D6": {
+  "ratio": 1.0,
+  "differences": []
+ },
+ "D7": {
+  "ratio": 1.0,
+  "differences": []
+ }
+}

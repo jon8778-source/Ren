@@ -1,0 +1,532 @@
+[
+ {
+  "word": "That",
+  "start": 0.0,
+  "end": 0.18
+ },
+ {
+  "word": "night,",
+  "start": 0.18,
+  "end": 0.44
+ },
+ {
+  "word": "I",
+  "start": 0.72,
+  "end": 0.88
+ },
+ {
+  "word": "did",
+  "start": 0.88,
+  "end": 1.02
+ },
+ {
+  "word": "the",
+  "start": 1.02,
+  "end": 1.18
+ },
+ {
+  "word": "painful",
+  "start": 1.18,
+  "end": 1.5
+ },
+ {
+  "word": "maths.",
+  "start": 1.5,
+  "end": 1.9
+ },
+ {
+  "word": "If",
+  "start": 2.4,
+  "end": 2.6
+ },
+ {
+  "word": "that",
+  "start": 2.6,
+  "end": 2.8
+ },
+ {
+  "word": "2",
+  "start": 2.8,
+  "end": 3.06
+ },
+ {
+  "word": ",760",
+  "start": 3.06,
+  "end": 3.76
+ },
+ {
+  "word": "had",
+  "start": 3.76,
+  "end": 4.5
+ },
+ {
+  "word": "been",
+  "start": 4.5,
+  "end": 4.68
+ },
+ {
+  "word": "invested",
+  "start": 4.68,
+  "end": 5.04
+ },
+ {
+  "word": "and",
+  "start": 5.04,
+  "end": 5.28
+ },
+ {
+  "word": "grown",
+  "start": 5.28,
+  "end": 5.5
+ },
+ {
+  "word": "at,",
+  "start": 5.5,
+  "end": 5.78
+ },
+ {
+  "word": "say,",
+  "start": 5.86,
+  "end": 6.0
+ },
+ {
+  "word": "7",
+  "start": 6.46,
+  "end": 6.62
+ },
+ {
+  "word": "%",
+  "start": 6.62,
+  "end": 6.9
+ },
+ {
+  "word": "a",
+  "start": 6.9,
+  "end": 7.1
+ },
+ {
+  "word": "year,",
+  "start": 7.1,
+  "end": 7.34
+ },
+ {
+  "word": "which",
+  "start": 7.58,
+  "end": 7.78
+ },
+ {
+  "word": "is",
+  "start": 7.78,
+  "end": 7.9
+ },
+ {
+  "word": "a",
+  "start": 7.9,
+  "end": 8.04
+ },
+ {
+  "word": "hypothetical,",
+  "start": 8.04,
+  "end": 8.54
+ },
+ {
+  "word": "not",
+  "start": 8.9,
+  "end": 9.06
+ },
+ {
+  "word": "a",
+  "start": 9.06,
+  "end": 9.26
+ },
+ {
+  "word": "promise,",
+  "start": 9.26,
+  "end": 9.54
+ },
+ {
+  "word": "in",
+  "start": 9.9,
+  "end": 10.06
+ },
+ {
+  "word": "30",
+  "start": 10.06,
+  "end": 10.34
+ },
+ {
+  "word": "years,",
+  "start": 10.34,
+  "end": 10.68
+ },
+ {
+  "word": "it",
+  "start": 10.8,
+  "end": 10.9
+ },
+ {
+  "word": "could",
+  "start": 10.9,
+  "end": 11.02
+ },
+ {
+  "word": "be",
+  "start": 11.02,
+  "end": 11.22
+ },
+ {
+  "word": "roughly",
+  "start": 11.22,
+  "end": 11.48
+ },
+ {
+  "word": "$21",
+  "start": 11.48,
+  "end": 12.0
+ },
+ {
+  "word": ",000.",
+  "start": 12.0,
+  "end": 12.46
+ },
+ {
+  "word": "That's",
+  "start": 12.88,
+  "end": 13.18
+ },
+ {
+  "word": "the",
+  "start": 13.18,
+  "end": 13.38
+ },
+ {
+  "word": "real",
+  "start": 13.38,
+  "end": 13.58
+ },
+ {
+  "word": "cost",
+  "start": 13.58,
+  "end": 14.08
+ },
+ {
+  "word": "of",
+  "start": 14.08,
+  "end": 14.24
+ },
+ {
+  "word": "a",
+  "start": 14.24,
+  "end": 14.44
+ },
+ {
+  "word": "lease",
+  "start": 14.44,
+  "end": 14.6
+ },
+ {
+  "word": "-shaped",
+  "start": 14.6,
+  "end": 14.88
+ },
+ {
+  "word": "decision,",
+  "start": 14.88,
+  "end": 15.4
+ },
+ {
+  "word": "not",
+  "start": 15.62,
+  "end": 15.9
+ },
+ {
+  "word": "the",
+  "start": 15.9,
+  "end": 16.08
+ },
+ {
+  "word": "payment,",
+  "start": 16.08,
+  "end": 16.38
+ },
+ {
+  "word": "the",
+  "start": 16.76,
+  "end": 16.9
+ },
+ {
+  "word": "opportunity.",
+  "start": 16.9,
+  "end": 17.46
+ },
+ {
+  "word": "But",
+  "start": 17.82,
+  "end": 18.06
+ },
+ {
+  "word": "here's",
+  "start": 18.06,
+  "end": 18.4
+ },
+ {
+  "word": "the",
+  "start": 18.4,
+  "end": 18.52
+ },
+ {
+  "word": "twist.",
+  "start": 18.52,
+  "end": 18.88
+ },
+ {
+  "word": "The",
+  "start": 19.4,
+  "end": 19.62
+ },
+ {
+  "word": "day",
+  "start": 19.62,
+  "end": 19.78
+ },
+ {
+  "word": "I",
+  "start": 19.78,
+  "end": 19.98
+ },
+ {
+  "word": "fixed",
+  "start": 19.98,
+  "end": 20.24
+ },
+ {
+  "word": "it,",
+  "start": 20.24,
+  "end": 20.44
+ },
+ {
+  "word": "my",
+  "start": 20.64,
+  "end": 20.82
+ },
+ {
+  "word": "take",
+  "start": 20.82,
+  "end": 21.04
+ },
+ {
+  "word": "-home",
+  "start": 21.04,
+  "end": 21.16
+ },
+ {
+  "word": "dropped",
+  "start": 21.16,
+  "end": 21.52
+ },
+ {
+  "word": "by",
+  "start": 21.52,
+  "end": 21.76
+ },
+ {
+  "word": "about",
+  "start": 21.76,
+  "end": 21.98
+ },
+ {
+  "word": "$32",
+  "start": 21.98,
+  "end": 22.48
+ },
+ {
+  "word": "a",
+  "start": 22.48,
+  "end": 23.02
+ },
+ {
+  "word": "paycheck,",
+  "start": 23.02,
+  "end": 23.4
+ },
+ {
+  "word": "because",
+  "start": 23.7,
+  "end": 24.08
+ },
+ {
+  "word": "those",
+  "start": 24.08,
+  "end": 24.38
+ },
+ {
+  "word": "contributions",
+  "start": 24.38,
+  "end": 25.0
+ },
+ {
+  "word": "come",
+  "start": 25.0,
+  "end": 25.3
+ },
+ {
+  "word": "out",
+  "start": 25.3,
+  "end": 25.52
+ },
+ {
+  "word": "before",
+  "start": 25.52,
+  "end": 25.82
+ },
+ {
+  "word": "income",
+  "start": 25.82,
+  "end": 26.16
+ },
+ {
+  "word": "tax.",
+  "start": 26.16,
+  "end": 26.56
+ },
+ {
+  "word": "And",
+  "start": 27.02,
+  "end": 27.5
+ },
+ {
+  "word": "I",
+  "start": 27.5,
+  "end": 27.62
+ },
+ {
+  "word": "never",
+  "start": 27.62,
+  "end": 27.8
+ },
+ {
+  "word": "missed",
+  "start": 27.8,
+  "end": 28.04
+ },
+ {
+  "word": "it.",
+  "start": 28.04,
+  "end": 28.26
+ },
+ {
+  "word": "I",
+  "start": 28.26,
+  "end": 28.58
+ },
+ {
+  "word": "honestly",
+  "start": 28.58,
+  "end": 29.02
+ },
+ {
+  "word": "couldn't",
+  "start": 29.02,
+  "end": 29.44
+ },
+ {
+  "word": "tell",
+  "start": 29.44,
+  "end": 29.62
+ },
+ {
+  "word": "you",
+  "start": 29.62,
+  "end": 29.8
+ },
+ {
+  "word": "what",
+  "start": 29.8,
+  "end": 29.98
+ },
+ {
+  "word": "that",
+  "start": 29.98,
+  "end": 30.18
+ },
+ {
+  "word": "$32",
+  "start": 30.18,
+  "end": 30.66
+ },
+ {
+  "word": "used",
+  "start": 30.66,
+  "end": 31.2
+ },
+ {
+  "word": "to",
+  "start": 31.2,
+  "end": 31.42
+ },
+ {
+  "word": "buy",
+  "start": 31.42,
+  "end": 31.56
+ },
+ {
+  "word": "me.",
+  "start": 31.56,
+  "end": 31.82
+ },
+ {
+  "word": "Probably",
+  "start": 32.34,
+  "end": 32.68
+ },
+ {
+  "word": "a",
+  "start": 32.68,
+  "end": 32.92
+ },
+ {
+  "word": "car",
+  "start": 32.92,
+  "end": 33.1
+ },
+ {
+  "word": "wash,",
+  "start": 33.1,
+  "end": 33.44
+ },
+ {
+  "word": "for",
+  "start": 33.84,
+  "end": 34.0
+ },
+ {
+  "word": "a",
+  "start": 34.0,
+  "end": 34.14
+ },
+ {
+  "word": "car",
+  "start": 34.14,
+  "end": 34.38
+ },
+ {
+  "word": "I",
+  "start": 34.38,
+  "end": 34.6
+ },
+ {
+  "word": "didn't",
+  "start": 34.6,
+  "end": 34.92
+ },
+ {
+  "word": "even",
+  "start": 34.92,
+  "end": 35.08
+ },
+ {
+  "word": "own.",
+  "start": 35.08,
+  "end": 35.38
+ }
+]

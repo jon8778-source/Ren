@@ -1,0 +1,319 @@
+{
+ "S1": {
+  "ratio": 0.9206,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "insert",
+    "",
+    "thank you for watching have a great week"
+   ]
+  ],
+  "heard": "I was 28 when dev held up my pay stub and asked me one question, who's keeping the difference? I didn't know what he meant, then he pointed at one line and my stomach dropped, for 3 years, I'd been turning down free money. And the worst part, I did it to impress people I barely knew. Let me take you back. Thank you for watching and have a great week!"
+ },
+ "S2": {
+  "ratio": 0.8911,
+  "differences": [
+   [
+    "replace",
+    "forty four thousand",
+    "44 000"
+   ],
+   [
+    "delete",
+    "four hundred eighty nine",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "489"
+   ],
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "six",
+    "6"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "lease",
+    "least"
+   ]
+  ],
+  "heard": "Twenty -five, first real job, 44 ,000 a year, and I felt like I'd made it, so I did what felt right and leased a brand -new car, $489 a month, not because I needed it, because I wanted everyone in that parking lot to think I was doing great. On day one, HR gave me a folder. Somewhere on page six, it said the company would match every dollar I put into my retirement plan, up to 4 % of my salary. I never got to page 6, I picked 2%, because 2 sounded responsible, and the least sounded urgent."
+ },
+ "S3": {
+  "ratio": 0.8246,
+  "differences": [
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "eight hundred eighty",
+    "880"
+   ],
+   [
+    "replace",
+    "forty six thousand forty eight",
+    "46 000 48"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "delete",
+    "four hundred eighty nine",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "489"
+   ],
+   [
+    "replace",
+    "seventy seven",
+    "dollars 77"
+   ]
+  ],
+  "heard": "Here's the thing about a match. If I put in 4%, they put in 4%, dollar for dollar, I put in 2, so they put in 2. The other 2%, it wasn't saved for later, it just never got paid. That was 880 dollars the first year. Then I got small raises, 46 ,000, 48, and every year I left the same 2 % and every year the ghost money got bigger. Meanwhile, I made that lease payment on time, every month, with pride. $489 to look successful, while skipping about $77 a month that would have actually made me successful."
+ },
+ "S4": {
+  "ratio": 0.878,
+  "differences": [
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "should have",
+    "should've"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ],
+   [
+    "replace",
+    "ninety",
+    "90"
+   ],
+   [
+    "replace",
+    "ninety",
+    "90"
+   ],
+   [
+    "replace",
+    "three",
+    "3"
+   ]
+  ],
+  "heard": "Back on that porch, Dev asked me 3 questions. What does this line mean? What would it say if you'd read the folder? And who's keeping the difference? The line said 2%. It should've said 4. And the difference? The company keeps it. Not because they're evil, that's just how matches work. If you don't claim it, it stays with them. I went home, opened the app on my phone and changed 2 to 4. It took 90 seconds. 90 seconds 3 years late."
+ },
+ "S5": {
+  "ratio": 0.895,
+  "differences": [
+   [
+    "replace",
+    "two thousand seven hundred sixty",
+    "2 760"
+   ],
+   [
+    "replace",
+    "seven percent",
+    "7"
+   ],
+   [
+    "replace",
+    "thirty",
+    "30"
+   ],
+   [
+    "delete",
+    "twenty one thousand",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "21 000"
+   ],
+   [
+    "delete",
+    "thirty two",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "32"
+   ],
+   [
+    "delete",
+    "thirty two",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "32"
+   ]
+  ],
+  "heard": "That night, I did the painful maths. If that 2 ,760 had been invested and grown at, say, 7 % a year, which is a hypothetical, not a promise, in 30 years, it could be roughly $21 ,000. That's the real cost of a lease -shaped decision, not the payment, the opportunity. But here's the twist. The day I fixed it, my take -home dropped by about $32 a paycheck, because those contributions come out before income tax. And I never missed it. I honestly couldn't tell you what that $32 used to buy me. Probably a car wash, for a car I didn't even own."
+ },
+ "S6": {
+  "ratio": 0.8953,
+  "differences": [
+   [
+    "replace",
+    "eight",
+    "8"
+   ],
+   [
+    "replace",
+    "a hundred thousand",
+    "100 000"
+   ],
+   [
+    "replace",
+    "two hundred thousand",
+    "200 000"
+   ],
+   [
+    "replace",
+    "one",
+    "1"
+   ],
+   [
+    "replace",
+    "plan",
+    "planned"
+   ],
+   [
+    "replace",
+    "two",
+    "2"
+   ],
+   [
+    "replace",
+    "three",
+    "3"
+   ],
+   [
+    "delete",
+    "twenty five thousand five hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "25 500"
+   ],
+   [
+    "replace",
+    "twenty four thousand five hundred",
+    "dollars 24 500"
+   ],
+   [
+    "delete",
+    "of",
+    ""
+   ]
+  ],
+  "heard": "Today, same car, 8 years older. I earn around 100 ,000 a year, and I always take the full match, plus more on top. My cousin Priya, the one who earns 200 ,000 and dresses like she's off to hike a mountain, maxes hers out every year. Uncle Gary told me his retirement plan is, sell the boat. Everyone's different. But the match works the same for everyone who's offered one. It's the first money you're owed. So, here's what I check now and what I wish I'd checked at 25, 1. Your match formula. It's in the planned documents, not the vibes. 2. Your vesting schedule. Because some companies make you stay a few years before the match is fully yours. 3. Next year's limit. For 2027, the actuarial firm Milliman projects $25 ,500, up from $24 ,500. The IRS hadn't confirmed it at the end October, so check the official number. You don't have to max it out, you just don't want to skip the free part."
+ },
+ "S7": {
+  "ratio": 0.9357,
+  "differences": [
+   [
+    "delete",
+    "if",
+    ""
+   ],
+   [
+    "replace",
+    "six",
+    "6"
+   ],
+   [
+    "replace",
+    "twenty five",
+    "25"
+   ],
+   [
+    "replace",
+    "twenty eight",
+    "28"
+   ],
+   [
+    "replace",
+    "three",
+    "3"
+   ]
+  ],
+  "heard": "I could go back, I wouldn't lecture him about coffee. I'd just hand him that folder open to page 6, before you cut a single thing, collect what you're already owed, the match, the HSA money, the stuff in the folder. 25 -year -old me wanted to look rich. 28 -year -old me just wanted to stop missing free money. Honestly, the second guy was richer. Next week, the month 3 bills hit me at once, and why, for the first time, I didn't panic."
+ }
+}

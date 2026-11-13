@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "warnings": [],
+  "stage": "prototype",
+  "frames": 360,
+  "duration_seconds": 15.0,
+  "full_fatal_decode": true,
+  "av_start_difference": 0.0,
+  "av_duration_difference": 0.0,
+  "longest_identical_frame_run": 3,
+  "persistent_uniform_edges": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "video_sha256": "637b145a1f1865aa52ca15a0a924fa6bb4533782dff518f20a7c874ba5f0f4ab",
+  "fingerprint": "106b62987280646a0b8c091ca4d246629fac30636b84b3f648bef8f0f39b508d",
+  "status": "technical-pass-review-required"
+}

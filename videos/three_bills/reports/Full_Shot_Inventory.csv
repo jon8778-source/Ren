@@ -1,0 +1,127 @@
+shot,type,start_s,end_s,dur_s,narration,source,animation status
+S01,REN_ANIMATED,0.0,2.0,2.0,Three bills. Thirty days.,approved pilot rev3 (unchanged),Ren: genuine approved library clip
+S02,CHARACTER_ACTION,2.0,5.33,3.33,"First, Maya's car broke down.",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S03,GRAPHIC,5.33,7.46,2.12,Then came an urgent dental bill.,approved pilot rev3 (unchanged),No character: graphics/props animated in code
+S04,CHARACTER_ACTION,7.46,10.0,2.54,"And just when she thought the month couldn't get worse,",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S05a,STORY_STILL,10.0,10.75,0.75,a pipe leaked,approved pilot rev3 (unchanged),No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+S05b,STORY_STILL,10.75,12.38,1.62,beneath her kitchen sink.,approved pilot rev3 (unchanged),No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+S06,REN_ANIMATED,12.38,14.92,2.54,The total? Two thousand two hundred dollars.,approved pilot rev3 (unchanged),Ren: genuine approved library clip
+S07a,CHARACTER_ACTION,14.92,16.75,1.83,"Eighteen months earlier,",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S07b,GRAPHIC,16.75,19.38,2.62,one unexpected bill had pushed her into debt.,approved pilot rev3 (unchanged),No character: graphics/props animated in code
+S08,CHARACTER_ACTION,19.38,22.25,2.88,"This time, she handled all three.",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S09a,CHARACTER_ACTION,22.25,24.88,2.62,"But when Maya opened her savings app afterward,",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S09b,CHARACTER_ACTION,24.88,26.46,1.58,she didn't feel proud.,approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S10a,GRAPHIC,26.46,28.25,1.79,She saw how much her balance had fallen,approved pilot rev3 (unchanged),No character: graphics/props animated in code
+S10b,CHARACTER_ACTION,28.25,30.38,2.12,"and thought, I've gone backwards.",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S11,REN_ANIMATED,30.38,31.62,1.25,Here's why she hadn't.,approved pilot rev3 (unchanged),Ren: genuine approved library clip
+S12,CHARACTER_ACTION,31.62,35.25,3.62,"To understand that feeling, go back a year and a half.",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S13,GRAPHIC,35.25,37.96,2.71,Maya was doing what so many budgets require:,approved pilot rev3 (unchanged),No character: graphics/props animated in code
+S13b,CHARACTER_ACTION,37.96,41.67,3.71,"making the rent, groceries and gas stretch until payday.",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S14,CHARACTER_ACTION,41.67,43.96,2.29,There wasn't much left between deposits.,approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S14b,CHARACTER_ACTION,43.96,45.96,2.0,Her savings balance was eighty dollars.,approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S15,CHARACTER_ACTION,45.96,48.38,2.42,Then a six-hundred-dollar car repair landed.,approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S16,CHARACTER_ACTION,48.38,52.92,4.54,"She couldn't just make six hundred dollars appear. So she put the repair on a credit card,",approved pilot rev3 (unchanged),"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+S17,REN_ANIMATED,52.92,57.25,4.33,"postponed a dentist visit, and spent the next few months trying to catch up.",approved pilot rev3 (unchanged),Ren: genuine approved library clip
+F01,CHARACTER_ACTION,57.25,59.21,1.96,The hardest part wasn't the repair itself.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F02a,GRAPHIC,59.21,61.12,1.92,It was watching one surprise turn,new for full episode,No character: graphics/props animated in code
+F02b,CHARACTER_ACTION,61.12,62.96,1.83,into a chain of other decisions.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F03,CHARACTER_ACTION,62.96,65.42,2.46,She never wanted that feeling again.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F04,CHARACTER_ACTION,65.42,67.79,2.38,Maya didn't suddenly double her salary.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F05,CHARACTER_ACTION,67.79,70.29,2.5,She didn't discover a perfect side hustle.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F06,CHARACTER_ACTION,70.29,73.29,3.0,And she definitely didn't stop enjoying her life for a year.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F07,GRAPHIC,73.29,74.92,1.62,"Once the card was paid off,",new for full episode,No character: graphics/props animated in code
+F08,CHARACTER_ACTION,74.92,76.54,1.62,she opened a separate savings account,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F09,GRAPHIC,76.54,79.92,3.38,and set up an automatic transfer of fifty dollars every week.,new for full episode,No character: graphics/props animated in code
+F10,REN_ANIMATED,79.92,83.04,3.12,"Fifty dollars a week, for fifty-two weeks,",new for full episode,Ren: genuine approved library clip
+F11,GRAPHIC,83.04,85.12,2.08,gave her two thousand six hundred dollars.,new for full episode,No character: graphics/props animated in code
+F12,CHARACTER_ACTION,85.12,86.62,1.5,No miracle return.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F13,GRAPHIC,86.62,88.75,2.12,Just money deliberately left untouched.,new for full episode,No character: graphics/props animated in code
+F14,CHARACTER_ACTION,88.75,90.04,1.29,She still went out with friends.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F15,CHARACTER_ACTION,90.04,93.33,3.29,She still took a weekend trip she'd planned.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F16,REN_ANIMATED,93.33,95.12,1.79,This account had one job:,new for full episode,Ren: genuine approved library clip
+F17,CHARACTER_ACTION,95.12,98.92,3.79,be available when life did something expensive and uninvited.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F18,GRAPHIC,98.92,101.04,2.12,"When the balance reached that first target,",new for full episode,No character: graphics/props animated in code
+F19,GRAPHIC,101.04,102.29,1.25,she paused the transfers.,new for full episode,No character: graphics/props animated in code
+F20,CHARACTER_ACTION,102.29,105.12,2.83,"And then, one Tuesday, life tested it.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F21,GRAPHIC,105.12,106.17,1.04,Day three.,new for full episode,No character: graphics/props animated in code
+F22,CHARACTER_ACTION,106.17,107.25,1.08,Maya turned the key.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F23,CHARACTER_ACTION,107.25,109.79,2.54,"The engine complained, then nothing.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F24,GRAPHIC,109.79,113.29,3.5,The repair shop's estimate was seven hundred and sixty dollars.,new for full episode,No character: graphics/props animated in code
+F25,CHARACTER_ACTION,113.29,115.62,2.33,Her old instinct arrived immediately:,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F26,CHARACTER_ACTION,115.62,117.54,1.92,How am I going to pay for this?,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F27,REN_ANIMATED,117.54,121.0,3.46,"But this time, she had an answer. The money was already there.",new for full episode,Ren: genuine approved library clip
+F28,GRAPHIC,121.0,123.21,2.21,"She paid for the repair from savings,",new for full episode,No character: graphics/props animated in code
+F29,CHARACTER_ACTION,123.21,126.29,3.08,"got the car back, and drove to work the next morning.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F30,REN_ANIMATED,126.29,129.25,2.96,Her emergency balance dropped from two thousand six hundred dollars,new for full episode,Ren: genuine approved library clip
+F31,GRAPHIC,129.25,131.29,2.04,to one thousand eight hundred and forty.,new for full episode,No character: graphics/props animated in code
+F32,CHARACTER_ACTION,131.29,132.17,0.88,It stung.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F33,CHARACTER_ACTION,132.17,135.12,2.96,But the problem ended where it began: with the car.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F34,CHARACTER_ACTION,135.12,136.79,1.67,Day sixteen.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F35,GRAPHIC,136.79,138.38,1.58,Toothache. Appointment.,new for full episode,No character: graphics/props animated in code
+F36,GRAPHIC,138.38,141.58,3.21,A three-hundred-and-ninety-dollar bill after insurance.,new for full episode,No character: graphics/props animated in code
+F37,CHARACTER_ACTION,141.58,144.71,3.12,Maya sat in the parking lot with the invoice on her phone.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F38,GRAPHIC,144.71,147.5,2.79,"She looked at the savings account, tapped transfer,",new for full episode,No character: graphics/props animated in code
+F39a,CHARACTER_ACTION,147.5,148.88,1.38,and stared at the new balance:,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F39b,GRAPHIC,148.88,151.33,2.46,one thousand four hundred and fifty dollars.,new for full episode,No character: graphics/props animated in code
+F40,CHARACTER_ACTION,151.33,154.0,2.67,She felt the same little punch of anxiety.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F41,REN_ANIMATED,154.0,156.79,2.79,But there was no missed rent payment to rearrange.,new for full episode,Ren: genuine approved library clip
+F42,REN_ANIMATED,156.79,160.21,3.42,No new card balance she had to carry just to cover the bill.,new for full episode,Ren: genuine approved library clip
+F43,CHARACTER_ACTION,160.21,163.38,3.17,Two surprises. Both paid. She kept moving.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F44,GRAPHIC,163.38,164.83,1.46,Day twenty-seven.,new for full episode,No character: graphics/props animated in code
+F45,STORY_STILL,164.83,165.46,0.62,Water appeared,new for full episode,No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+F46,STORY_STILL,165.46,167.08,1.62,beneath the kitchen sink.,new for full episode,No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+F47,STORY_STILL,167.08,168.58,1.5,Not a dramatic flood.,new for full episode,No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+F48,CHARACTER_ACTION,168.58,171.46,2.88,Just enough to make ignoring it a terrible idea.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F49a,GRAPHIC,171.46,172.96,1.5,The emergency plumbing repair,new for full episode,No character: graphics/props animated in code
+F49b,GRAPHIC,172.96,175.42,2.46,was one thousand and fifty dollars.,new for full episode,No character: graphics/props animated in code
+F50,CHARACTER_ACTION,175.42,177.96,2.54,Maya actually laughed when she heard the number.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F51,CHARACTER_ACTION,177.96,181.54,3.58,"Not because it was funny. Because, seriously, again?",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F52,GRAPHIC,181.54,184.21,2.67,She checked the fund. There was enough.,new for full episode,No character: graphics/props animated in code
+F53,GRAPHIC,184.21,185.92,1.71,She booked the repair and paid it.,new for full episode,No character: graphics/props animated in code
+F54,REN_ANIMATED,185.92,189.83,3.92,Three bills in thirty days. Two thousand two hundred dollars gone.,new for full episode,Ren: genuine approved library clip
+F55,GRAPHIC,189.83,192.42,2.58,Four hundred dollars left.,new for full episode,No character: graphics/props animated in code
+F56,CHARACTER_ACTION,192.42,194.96,2.54,"That evening, Maya opened her savings app.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F57,GRAPHIC,194.96,196.17,1.21,The number looked small.,new for full episode,No character: graphics/props animated in code
+F58,CHARACTER_ACTION,196.17,198.62,2.46,"I've gone backwards, she thought.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F59,CHARACTER_ACTION,198.62,200.67,2.04,"From the outside, it looked like a month",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F60,GRAPHIC,200.67,203.58,2.92,where she'd lost almost everything she'd saved.,new for full episode,No character: graphics/props animated in code
+F61,REN_ANIMATED,203.58,205.08,1.5,But look at what she kept.,new for full episode,Ren: genuine approved library clip
+F62,CHARACTER_ACTION,205.08,207.17,2.08,She kept her car working.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F63,GRAPHIC,207.17,209.38,2.21,She got dental care when she needed it.,new for full episode,No character: graphics/props animated in code
+F64,STORY_STILL,209.38,211.71,2.33,She stopped the leak before it got worse.,new for full episode,No character: owner-supplied sink-leak illustration (static art) with code-animated drip/tick
+F65,CHARACTER_ACTION,211.71,215.62,3.92,And she didn't have to turn three urgent problems into three new debts.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F66,REN_ANIMATED,215.62,217.67,2.04,"Now, savings cannot prevent every hardship.",new for full episode,Ren: genuine approved library clip
+F67,CHARACTER_ACTION,217.67,222.21,4.54,Four hundred dollars would not be enough for a long stretch without a paycheck.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F68,CHARACTER_ACTION,222.21,226.04,3.83,And plenty of people simply don't have fifty dollars spare every week.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F69,CHARACTER_ACTION,226.04,228.38,2.33,But this is the part we rarely celebrate.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F70,REN_ANIMATED,228.38,231.88,3.5,An emergency fund is supposed to get smaller when there's an emergency.,new for full episode,Ren: genuine approved library clip
+F71,CHARACTER_ACTION,231.88,233.67,1.79,Using it isn't failure.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F72,GRAPHIC,233.67,236.38,2.71,That's literally the job it was hired to do.,new for full episode,No character: graphics/props animated in code
+F73,CHARACTER_ACTION,236.38,240.21,3.83,The old Maya saw an unexpected bill and lost her options.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F74,CHARACTER_ACTION,240.21,242.29,2.08,This Maya could choose what to do next.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F75,REN_ANIMATED,242.29,244.46,2.17,So what can you take from her month?,new for full episode,Ren: genuine approved library clip
+F76,CHARACTER_ACTION,244.46,247.17,2.71,"First, start with a realistic first target.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F77,CHARACTER_ACTION,247.17,249.58,2.42,Not somebody else's magic number.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F78,CHARACTER_ACTION,249.58,253.67,4.08,Think about the unexpected expense that would cause the most trouble for you right now.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F79,REN_ANIMATED,253.67,256.58,2.92,Even a small buffer can change the choices you have.,new for full episode,Ren: genuine approved library clip
+F80a,CHARACTER_ACTION,256.58,259.21,2.62,"Second, move a manageable amount automatically",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F80b,CHARACTER_ACTION,259.21,262.79,3.58,"into a separate, easy-to-access savings account.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F81,GRAPHIC,262.79,265.96,3.17,"Five dollars, twenty dollars, fifty dollars:",new for full episode,No character: graphics/props animated in code
+F82,CHARACTER_ACTION,265.96,271.17,5.21,the right amount is the one your budget can actually sustain without creating overdraft fees.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F83,REN_ANIMATED,271.17,274.92,3.75,"Third, don't call every predictable bill an emergency.",new for full episode,Ren: genuine approved library clip
+F84,CHARACTER_ACTION,274.92,279.79,4.88,"Annual insurance, holiday gifts, and routine car maintenance need their own plan.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F85,CHARACTER_ACTION,279.79,282.96,3.17,The emergency fund is for the things you couldn't reasonably schedule.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F86,CHARACTER_ACTION,282.96,286.96,4.0,"And fourth, when you use it, refill it as circumstances allow.",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F87,CHARACTER_ACTION,286.96,288.75,1.79,Maya's next step isn't shame.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F88,REN_ANIMATED,288.75,290.25,1.5,It's restarting that transfer.,new for full episode,Ren: genuine approved library clip
+F89,CHARACTER_ACTION,290.25,293.17,2.92,"Maya still wants a bigger emergency cushion,",new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F90,CHARACTER_ACTION,293.17,296.67,3.5,eventually enough to help with a loss of income as well as repairs.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F91,REN_ANIMATED,296.67,299.12,2.46,But she doesn't have to pretend she made no progress,new for full episode,Ren: genuine approved library clip
+F92,GRAPHIC,299.12,301.96,2.83,just because the account looks smaller today.,new for full episode,No character: graphics/props animated in code
+F93,CHARACTER_ACTION,301.96,305.58,3.62,She built something worth more than an impressive number on a screen:,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F94,GRAPHIC,305.58,307.08,1.5,room to respond.,new for full episode,No character: graphics/props animated in code
+F95,CHARACTER_ACTION,307.08,309.12,2.04,That is a kind of financial freedom.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F96,CHARACTER_ACTION,309.12,311.17,2.04,Not a life where nothing goes wrong.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F97,CHARACTER_ACTION,311.17,314.58,3.42,A life where one bad month doesn't have to take the next six with it.,new for full episode,"Maya: static cut-out art (4 poses): pose cross-fades, camera push/close-up; props, chips and graphics animated in code"
+F98,REN_ANIMATED,314.58,318.96,4.38,"What bill would have shaken you a year ago, but feels more manageable today?",new for full episode,Ren: genuine approved library clip
+F99,REN_ANIMATED,318.96,320.79,1.83,I'd love to hear it in the comments.,new for full episode,Ren: genuine approved library clip

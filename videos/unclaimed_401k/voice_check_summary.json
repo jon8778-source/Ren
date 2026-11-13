@@ -1,0 +1,276 @@
+{
+ "P1": {
+  "ratio": 0.9524,
+  "differences": [
+   [
+    "delete",
+    "twelve",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "12"
+   ],
+   [
+    "delete",
+    "one hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "100"
+   ],
+   [
+    "delete",
+    "twelve hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "1 200"
+   ]
+  ]
+ },
+ "P2": {
+  "ratio": 0.8837,
+  "differences": [
+   [
+    "replace",
+    "thirty one",
+    "31"
+   ],
+   [
+    "delete",
+    "sixty thousand",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "60 000"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "four oh one k",
+    "401k"
+   ]
+  ]
+ },
+ "P3": {
+  "ratio": 0.9346,
+  "differences": [
+   [
+    "replace",
+    "one hundred percent",
+    "100"
+   ],
+   [
+    "replace",
+    "four percent",
+    "4"
+   ]
+  ]
+ },
+ "S3": {
+  "ratio": 0.8456,
+  "differences": [
+   [
+    "replace",
+    "four percent",
+    "4"
+   ],
+   [
+    "delete",
+    "sixty thousand",
+    ""
+   ],
+   [
+    "replace",
+    "four percent",
+    "60 000 4"
+   ],
+   [
+    "replace",
+    "twenty four hundred",
+    "dollars 2400"
+   ],
+   [
+    "delete",
+    "two hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "200"
+   ],
+   [
+    "replace",
+    "two hundred",
+    "dollars 200"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "twelve hundred",
+    "dollars 1200"
+   ],
+   [
+    "replace",
+    "twelve hundred",
+    "dollars 1200"
+   ],
+   [
+    "delete",
+    "twelve hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "1 200"
+   ],
+   [
+    "replace",
+    "one hundred",
+    "100"
+   ],
+   [
+    "replace",
+    "hundred",
+    "100"
+   ]
+  ]
+ },
+ "S4": {
+  "ratio": 1.0,
+  "differences": []
+ },
+ "S5": {
+  "ratio": 0.9174,
+  "differences": [
+   [
+    "delete",
+    "twelve",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "12"
+   ],
+   [
+    "replace",
+    "forty",
+    "40"
+   ],
+   [
+    "replace",
+    "forty eight",
+    "48"
+   ],
+   [
+    "delete",
+    "a hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "100"
+   ],
+   [
+    "replace",
+    "four oh one k",
+    "401k"
+   ],
+   [
+    "replace",
+    "two percent",
+    "2"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ]
+  ]
+ },
+ "S6": {
+  "ratio": 0.9924,
+  "differences": [
+   [
+    "replace",
+    "fifty",
+    "50"
+   ]
+  ]
+ },
+ "S7": {
+  "ratio": 0.9735,
+  "differences": [
+   [
+    "replace",
+    "four oh one k",
+    "401k"
+   ]
+  ]
+ },
+ "S8": {
+  "ratio": 0.9497,
+  "differences": [
+   [
+    "delete",
+    "one hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "100"
+   ],
+   [
+    "delete",
+    "thirty six hundred",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "3 600"
+   ],
+   [
+    "replace",
+    "ten",
+    "10"
+   ],
+   [
+    "delete",
+    "twelve thousand",
+    ""
+   ],
+   [
+    "insert",
+    "",
+    "12 000"
+   ],
+   [
+    "replace",
+    "ten",
+    "10"
+   ]
+  ]
+ }
+}
