@@ -1,0 +1,88 @@
+{
+ "fps": 24,
+ "frames": 645,
+ "disclaimer": "Educational content only, not financial advice.",
+ "narration_s": 26.845,
+ "beats": [
+  {
+   "id": "hook",
+   "start_frame": 0,
+   "end_frame": 68,
+   "kind": "presenter",
+   "composition": "ren-left-shop-street",
+   "narration": "Black Friday isn't a sale. It's a test."
+  },
+  {
+   "id": "countdown",
+   "start_frame": 68,
+   "end_frame": 162,
+   "kind": "graphic",
+   "composition": "phone-countdown-closeup",
+   "narration": "Countdowns. 'Only three left.' Built to make you rush."
+  },
+  {
+   "id": "rule-one",
+   "start_frame": 162,
+   "end_frame": 229,
+   "kind": "presenter",
+   "composition": "ren-left-notepad",
+   "narration": "Rule one: make your list before the sales start."
+  },
+  {
+   "id": "not-listed",
+   "start_frame": 229,
+   "end_frame": 273,
+   "kind": "graphic",
+   "composition": "notepad-closeup-cross",
+   "narration": "Not on the list? Not a deal."
+  },
+  {
+   "id": "rule-two",
+   "start_frame": 273,
+   "end_frame": 312,
+   "kind": "presenter",
+   "composition": "ren-left-calculator",
+   "narration": "Rule two: do the math."
+  },
+  {
+   "id": "the-math",
+   "start_frame": 312,
+   "end_frame": 396,
+   "kind": "graphic",
+   "composition": "calculator-closeup-price",
+   "narration": "A hundred dollars at thirty percent off still costs seventy."
+  },
+  {
+   "id": "savings",
+   "start_frame": 396,
+   "end_frame": 445,
+   "kind": "presenter",
+   "composition": "ren-left-parcels",
+   "narration": "It's only savings if you needed it."
+  },
+  {
+   "id": "rule-three",
+   "start_frame": 445,
+   "end_frame": 528,
+   "kind": "action",
+   "composition": "hourglass-cart",
+   "narration": "Rule three: let it sit in the cart for twenty-four hours."
+  },
+  {
+   "id": "tomorrow",
+   "start_frame": 528,
+   "end_frame": 580,
+   "kind": "presenter",
+   "composition": "ren-left-morning",
+   "narration": "Still want it tomorrow? Buy it."
+  },
+  {
+   "id": "cta",
+   "start_frame": 580,
+   "end_frame": 645,
+   "kind": "presenter",
+   "composition": "ren-left-end-card",
+   "narration": "Check out the Money Leak Audit Workbook in the description."
+  }
+ ]
+}

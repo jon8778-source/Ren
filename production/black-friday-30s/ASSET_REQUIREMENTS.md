@@ -21,3 +21,9 @@ Branch: `video/black-friday-30s`, created from `video/three-bills-30-days`. Reas
 Matte white-background Ren clips and props at native resolution, upscale environments once, draw all text/phone/notepad/calculator/badges/captions/end card in code, Qwen British voice, 15 s prototype (beats 1-6, at least 3 compositions), preflight + QA, then STOP for your explicit approval before the full Short.
 
 Missing poses: none. Not verified: voice, any rendering, audio listening.
+
+## Update 14 Nov 2026 (after "Approved")
+- Script approved in chat. Narration generated once with the Qwen British clone (`gen_voice.py`, seed 1114, 2 chunks): **26.84 s**, 82 words (script says 77), fits 30 s; Whisper medium.en matches the approved text except spoken numbers (rule 1/2/3, 30 %, 70, 24). Beat boundaries from `voice/beats.json`.
+- Generated environments/props used as placeholders; the owner's "Approved" replied to the report that called them temporary placeholders. **Final art approval is requested at the prototype gate.** The manifest lists them as `approved` only because the launcher requires it; the evidence text states the placeholder status.
+- Mouth-closed check by frame scan: `ren_clipboard_tick` (open smile at clip 3.0-3.5 s) now starts at 5.4 s and `ren_thumbs_up` (grin 2.75-4.75 s) starts at 4.9 s. Consequence: in those windows Ren holds no clipboard and the thumbs-up hand has already lowered. Other four clips: mouths closed in the windows used (sampled every 0.3 s).
+- Ren clips matted at native resolution (`cut_out`), matte pulled in 1 px to remove the white fringe on dark backgrounds. Props P1/P2 matted with the same method. Environments upscaled once 768x1344 -> 1080x1920 (soft, not sharp).
