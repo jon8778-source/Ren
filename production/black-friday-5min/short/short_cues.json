@@ -1,0 +1,992 @@
+{
+ "duration": 60.01,
+ "sentences": [
+  "Black Friday has a clever trick. It can make spending feel like saving. Today, Alex heads into the sales with a three hundred dollar budget and two very different plans. One plan ends at three hundred and forty-one dollars. The other ends at two hundred and sixty-three. Same shop, same sales, seventy-eight dollars apart.",
+  "Then Alex opens a shop's website. A countdown clock is ticking. A badge says only three left.",
+  "The website cheerfully announces that Alex has saved one hundred and seven dollars.",
+  "And here's the thing. Alex hasn't saved one hundred and seven dollars. Alex is about to spend one hundred and eighty-three.",
+  "Rule two: do the math. A discount isn't a saving. It's just a smaller bill. Add the list to the cart and Alex is at three hundred and forty-one dollars, which is forty-one dollars over budget.",
+  "Rule four: let it sit for twenty-four hours.",
+  "Do I need this, or did the timer need me to buy it?",
+  "It just means the answer has to survive a night's sleep.",
+  "That's thirty-seven under budget, and seventy-eight dollars less than the impulse cart.",
+  "Check out the Money Leak Audit Workbook in the description."
+ ],
+ "words": [
+  {
+   "word": "black",
+   "start": 0.0,
+   "end": 0.36
+  },
+  {
+   "word": "friday",
+   "start": 0.36,
+   "end": 0.7
+  },
+  {
+   "word": "has",
+   "start": 0.7,
+   "end": 0.94
+  },
+  {
+   "word": "a",
+   "start": 0.94,
+   "end": 1.1
+  },
+  {
+   "word": "clever",
+   "start": 1.1,
+   "end": 1.34
+  },
+  {
+   "word": "trick",
+   "start": 1.34,
+   "end": 1.74
+  },
+  {
+   "word": "it",
+   "start": 2.02,
+   "end": 2.08
+  },
+  {
+   "word": "can",
+   "start": 2.08,
+   "end": 2.24
+  },
+  {
+   "word": "make",
+   "start": 2.24,
+   "end": 2.44
+  },
+  {
+   "word": "spending",
+   "start": 2.44,
+   "end": 2.8
+  },
+  {
+   "word": "feel",
+   "start": 2.8,
+   "end": 3.08
+  },
+  {
+   "word": "like",
+   "start": 3.08,
+   "end": 3.28
+  },
+  {
+   "word": "saving",
+   "start": 3.28,
+   "end": 3.66
+  },
+  {
+   "word": "today",
+   "start": 4.18,
+   "end": 4.42
+  },
+  {
+   "word": "alex",
+   "start": 4.6,
+   "end": 4.84
+  },
+  {
+   "word": "heads",
+   "start": 4.84,
+   "end": 5.12
+  },
+  {
+   "word": "into",
+   "start": 5.12,
+   "end": 5.34
+  },
+  {
+   "word": "the",
+   "start": 5.34,
+   "end": 5.54
+  },
+  {
+   "word": "sales",
+   "start": 5.54,
+   "end": 5.82
+  },
+  {
+   "word": "with",
+   "start": 5.82,
+   "end": 6.06
+  },
+  {
+   "word": "a",
+   "start": 6.06,
+   "end": 6.28
+  },
+  {
+   "word": "three",
+   "start": 6.32,
+   "end": 6.52
+  },
+  {
+   "word": "hundred",
+   "start": 6.36,
+   "end": 6.56
+  },
+  {
+   "word": "dollar",
+   "start": 6.4,
+   "end": 6.6
+  },
+  {
+   "word": "budget",
+   "start": 6.74,
+   "end": 7.3
+  },
+  {
+   "word": "and",
+   "start": 7.3,
+   "end": 7.64
+  },
+  {
+   "word": "two",
+   "start": 7.64,
+   "end": 7.92
+  },
+  {
+   "word": "very",
+   "start": 7.92,
+   "end": 8.22
+  },
+  {
+   "word": "different",
+   "start": 8.22,
+   "end": 8.48
+  },
+  {
+   "word": "plans",
+   "start": 8.48,
+   "end": 8.9
+  },
+  {
+   "word": "one",
+   "start": 9.42,
+   "end": 9.66
+  },
+  {
+   "word": "plan",
+   "start": 9.66,
+   "end": 9.96
+  },
+  {
+   "word": "ends",
+   "start": 9.96,
+   "end": 10.26
+  },
+  {
+   "word": "at",
+   "start": 10.26,
+   "end": 10.46
+  },
+  {
+   "word": "three",
+   "start": 10.5,
+   "end": 10.7
+  },
+  {
+   "word": "hundred",
+   "start": 10.54,
+   "end": 10.74
+  },
+  {
+   "word": "and",
+   "start": 10.58,
+   "end": 10.78
+  },
+  {
+   "word": "forty-one",
+   "start": 10.62,
+   "end": 10.86
+  },
+  {
+   "word": "dollars",
+   "start": 10.7,
+   "end": 10.9
+  },
+  {
+   "word": "the",
+   "start": 12.06,
+   "end": 12.22
+  },
+  {
+   "word": "other",
+   "start": 12.22,
+   "end": 12.42
+  },
+  {
+   "word": "ends",
+   "start": 12.42,
+   "end": 12.78
+  },
+  {
+   "word": "at",
+   "start": 12.78,
+   "end": 12.98
+  },
+  {
+   "word": "two",
+   "start": 13.02,
+   "end": 13.22
+  },
+  {
+   "word": "hundred",
+   "start": 13.06,
+   "end": 13.26
+  },
+  {
+   "word": "and",
+   "start": 13.1,
+   "end": 13.3
+  },
+  {
+   "word": "sixty-three",
+   "start": 13.14,
+   "end": 13.38
+  },
+  {
+   "word": "same",
+   "start": 14.66,
+   "end": 14.86
+  },
+  {
+   "word": "shop",
+   "start": 14.86,
+   "end": 15.26
+  },
+  {
+   "word": "same",
+   "start": 15.68,
+   "end": 15.86
+  },
+  {
+   "word": "sales",
+   "start": 15.86,
+   "end": 16.34
+  },
+  {
+   "word": "seventy-eight",
+   "start": 16.38,
+   "end": 16.62
+  },
+  {
+   "word": "dollars",
+   "start": 16.46,
+   "end": 16.66
+  },
+  {
+   "word": "apart",
+   "start": 17.22,
+   "end": 17.94
+  },
+  {
+   "word": "then",
+   "start": 18.21,
+   "end": 18.33
+  },
+  {
+   "word": "alex",
+   "start": 18.33,
+   "end": 18.67
+  },
+  {
+   "word": "opens",
+   "start": 18.67,
+   "end": 18.97
+  },
+  {
+   "word": "a",
+   "start": 18.97,
+   "end": 19.23
+  },
+  {
+   "word": "shop's",
+   "start": 19.23,
+   "end": 19.57
+  },
+  {
+   "word": "website",
+   "start": 19.57,
+   "end": 19.91
+  },
+  {
+   "word": "a",
+   "start": 20.39,
+   "end": 20.51
+  },
+  {
+   "word": "countdown",
+   "start": 20.51,
+   "end": 20.79
+  },
+  {
+   "word": "clock",
+   "start": 20.79,
+   "end": 21.15
+  },
+  {
+   "word": "is",
+   "start": 21.15,
+   "end": 21.35
+  },
+  {
+   "word": "ticking",
+   "start": 21.35,
+   "end": 21.65
+  },
+  {
+   "word": "a",
+   "start": 22.01,
+   "end": 22.15
+  },
+  {
+   "word": "badge",
+   "start": 22.15,
+   "end": 22.33
+  },
+  {
+   "word": "says",
+   "start": 22.33,
+   "end": 22.59
+  },
+  {
+   "word": "only",
+   "start": 22.59,
+   "end": 22.89
+  },
+  {
+   "word": "three",
+   "start": 22.89,
+   "end": 23.19
+  },
+  {
+   "word": "left",
+   "start": 23.19,
+   "end": 23.55
+  },
+  {
+   "word": "the",
+   "start": 23.82,
+   "end": 24.02
+  },
+  {
+   "word": "website",
+   "start": 24.02,
+   "end": 24.36
+  },
+  {
+   "word": "cheerfully",
+   "start": 24.36,
+   "end": 24.88
+  },
+  {
+   "word": "announces",
+   "start": 24.88,
+   "end": 25.28
+  },
+  {
+   "word": "that",
+   "start": 25.28,
+   "end": 25.52
+  },
+  {
+   "word": "alex",
+   "start": 25.52,
+   "end": 25.82
+  },
+  {
+   "word": "has",
+   "start": 25.82,
+   "end": 26.02
+  },
+  {
+   "word": "saved",
+   "start": 26.02,
+   "end": 26.26
+  },
+  {
+   "word": "one",
+   "start": 26.3,
+   "end": 26.5
+  },
+  {
+   "word": "hundred",
+   "start": 26.34,
+   "end": 26.54
+  },
+  {
+   "word": "and",
+   "start": 26.38,
+   "end": 26.58
+  },
+  {
+   "word": "seven",
+   "start": 26.42,
+   "end": 26.62
+  },
+  {
+   "word": "dollars",
+   "start": 26.46,
+   "end": 26.66
+  },
+  {
+   "word": "and",
+   "start": 26.93,
+   "end": 27.03
+  },
+  {
+   "word": "here's",
+   "start": 27.03,
+   "end": 27.29
+  },
+  {
+   "word": "the",
+   "start": 27.29,
+   "end": 27.41
+  },
+  {
+   "word": "thing",
+   "start": 27.41,
+   "end": 27.69
+  },
+  {
+   "word": "alex",
+   "start": 28.19,
+   "end": 28.41
+  },
+  {
+   "word": "hasn't",
+   "start": 28.41,
+   "end": 28.77
+  },
+  {
+   "word": "saved",
+   "start": 28.77,
+   "end": 29.09
+  },
+  {
+   "word": "one",
+   "start": 29.13,
+   "end": 29.33
+  },
+  {
+   "word": "hundred",
+   "start": 29.17,
+   "end": 29.37
+  },
+  {
+   "word": "and",
+   "start": 29.21,
+   "end": 29.41
+  },
+  {
+   "word": "seven",
+   "start": 29.25,
+   "end": 29.45
+  },
+  {
+   "word": "dollars",
+   "start": 29.29,
+   "end": 29.49
+  },
+  {
+   "word": "alex",
+   "start": 30.93,
+   "end": 31.27
+  },
+  {
+   "word": "is",
+   "start": 31.27,
+   "end": 31.43
+  },
+  {
+   "word": "about",
+   "start": 31.43,
+   "end": 31.65
+  },
+  {
+   "word": "to",
+   "start": 31.65,
+   "end": 31.87
+  },
+  {
+   "word": "spend",
+   "start": 31.87,
+   "end": 32.09
+  },
+  {
+   "word": "one",
+   "start": 32.13,
+   "end": 32.33
+  },
+  {
+   "word": "hundred",
+   "start": 32.17,
+   "end": 32.37
+  },
+  {
+   "word": "and",
+   "start": 32.21,
+   "end": 32.41
+  },
+  {
+   "word": "eighty-three",
+   "start": 32.25,
+   "end": 32.49
+  },
+  {
+   "word": "rule",
+   "start": 32.76,
+   "end": 32.86
+  },
+  {
+   "word": "two",
+   "start": 32.9,
+   "end": 33.1
+  },
+  {
+   "word": "do",
+   "start": 33.6,
+   "end": 33.68
+  },
+  {
+   "word": "the",
+   "start": 33.68,
+   "end": 33.9
+  },
+  {
+   "word": "math",
+   "start": 33.9,
+   "end": 34.1
+  },
+  {
+   "word": "a",
+   "start": 34.72,
+   "end": 34.9
+  },
+  {
+   "word": "discount",
+   "start": 34.9,
+   "end": 35.28
+  },
+  {
+   "word": "isn't",
+   "start": 35.28,
+   "end": 35.68
+  },
+  {
+   "word": "a",
+   "start": 35.68,
+   "end": 35.86
+  },
+  {
+   "word": "saving",
+   "start": 35.86,
+   "end": 36.16
+  },
+  {
+   "word": "it's",
+   "start": 36.5,
+   "end": 36.7
+  },
+  {
+   "word": "just",
+   "start": 36.7,
+   "end": 36.86
+  },
+  {
+   "word": "a",
+   "start": 36.86,
+   "end": 37.04
+  },
+  {
+   "word": "smaller",
+   "start": 37.04,
+   "end": 37.36
+  },
+  {
+   "word": "bill",
+   "start": 37.36,
+   "end": 37.64
+  },
+  {
+   "word": "add",
+   "start": 38.5,
+   "end": 38.66
+  },
+  {
+   "word": "the",
+   "start": 38.66,
+   "end": 38.86
+  },
+  {
+   "word": "list",
+   "start": 38.86,
+   "end": 39.02
+  },
+  {
+   "word": "to",
+   "start": 39.02,
+   "end": 39.18
+  },
+  {
+   "word": "the",
+   "start": 39.18,
+   "end": 39.38
+  },
+  {
+   "word": "cart",
+   "start": 39.38,
+   "end": 39.6
+  },
+  {
+   "word": "and",
+   "start": 39.76,
+   "end": 39.88
+  },
+  {
+   "word": "alex",
+   "start": 39.88,
+   "end": 40.22
+  },
+  {
+   "word": "is",
+   "start": 40.22,
+   "end": 40.4
+  },
+  {
+   "word": "at",
+   "start": 40.4,
+   "end": 40.6
+  },
+  {
+   "word": "three",
+   "start": 40.64,
+   "end": 40.84
+  },
+  {
+   "word": "hundred",
+   "start": 40.68,
+   "end": 40.88
+  },
+  {
+   "word": "and",
+   "start": 40.72,
+   "end": 40.92
+  },
+  {
+   "word": "forty-one",
+   "start": 40.76,
+   "end": 41.0
+  },
+  {
+   "word": "dollars",
+   "start": 40.84,
+   "end": 41.04
+  },
+  {
+   "word": "which",
+   "start": 42.24,
+   "end": 42.48
+  },
+  {
+   "word": "is",
+   "start": 42.48,
+   "end": 42.64
+  },
+  {
+   "word": "forty-one",
+   "start": 42.68,
+   "end": 42.92
+  },
+  {
+   "word": "dollars",
+   "start": 42.76,
+   "end": 42.96
+  },
+  {
+   "word": "over",
+   "start": 43.08,
+   "end": 43.64
+  },
+  {
+   "word": "budget",
+   "start": 43.64,
+   "end": 44.0
+  },
+  {
+   "word": "rule",
+   "start": 44.02,
+   "end": 44.3
+  },
+  {
+   "word": "four",
+   "start": 44.3,
+   "end": 44.76
+  },
+  {
+   "word": "let",
+   "start": 44.76,
+   "end": 45.2
+  },
+  {
+   "word": "it",
+   "start": 45.2,
+   "end": 45.34
+  },
+  {
+   "word": "sit",
+   "start": 45.34,
+   "end": 45.52
+  },
+  {
+   "word": "for",
+   "start": 45.52,
+   "end": 45.72
+  },
+  {
+   "word": "twenty-four",
+   "start": 45.76,
+   "end": 46.0
+  },
+  {
+   "word": "hours",
+   "start": 46.14,
+   "end": 46.7
+  },
+  {
+   "word": "do",
+   "start": 46.72,
+   "end": 46.8
+  },
+  {
+   "word": "i",
+   "start": 46.8,
+   "end": 47.0
+  },
+  {
+   "word": "need",
+   "start": 47.0,
+   "end": 47.22
+  },
+  {
+   "word": "this",
+   "start": 47.22,
+   "end": 47.58
+  },
+  {
+   "word": "or",
+   "start": 47.88,
+   "end": 48.04
+  },
+  {
+   "word": "did",
+   "start": 48.04,
+   "end": 48.18
+  },
+  {
+   "word": "the",
+   "start": 48.18,
+   "end": 48.38
+  },
+  {
+   "word": "timer",
+   "start": 48.38,
+   "end": 48.62
+  },
+  {
+   "word": "need",
+   "start": 48.62,
+   "end": 48.86
+  },
+  {
+   "word": "me",
+   "start": 48.86,
+   "end": 49.02
+  },
+  {
+   "word": "to",
+   "start": 49.02,
+   "end": 49.18
+  },
+  {
+   "word": "buy",
+   "start": 49.18,
+   "end": 49.3
+  },
+  {
+   "word": "it",
+   "start": 49.3,
+   "end": 49.56
+  },
+  {
+   "word": "it",
+   "start": 49.83,
+   "end": 50.01
+  },
+  {
+   "word": "just",
+   "start": 50.01,
+   "end": 50.29
+  },
+  {
+   "word": "means",
+   "start": 50.29,
+   "end": 50.55
+  },
+  {
+   "word": "the",
+   "start": 50.55,
+   "end": 50.77
+  },
+  {
+   "word": "answer",
+   "start": 50.77,
+   "end": 51.11
+  },
+  {
+   "word": "has",
+   "start": 51.11,
+   "end": 51.35
+  },
+  {
+   "word": "to",
+   "start": 51.35,
+   "end": 51.55
+  },
+  {
+   "word": "survive",
+   "start": 51.55,
+   "end": 51.87
+  },
+  {
+   "word": "a",
+   "start": 51.87,
+   "end": 52.13
+  },
+  {
+   "word": "night's",
+   "start": 52.17,
+   "end": 52.37
+  },
+  {
+   "word": "sleep",
+   "start": 52.13,
+   "end": 52.61
+  },
+  {
+   "word": "that's",
+   "start": 52.88,
+   "end": 53.1
+  },
+  {
+   "word": "thirty-seven",
+   "start": 53.14,
+   "end": 53.38
+  },
+  {
+   "word": "under",
+   "start": 53.54,
+   "end": 53.86
+  },
+  {
+   "word": "budget",
+   "start": 53.86,
+   "end": 54.24
+  },
+  {
+   "word": "and",
+   "start": 54.24,
+   "end": 54.72
+  },
+  {
+   "word": "seventy-eight",
+   "start": 54.76,
+   "end": 55.0
+  },
+  {
+   "word": "dollars",
+   "start": 54.84,
+   "end": 55.04
+  },
+  {
+   "word": "less",
+   "start": 55.3,
+   "end": 55.86
+  },
+  {
+   "word": "than",
+   "start": 55.86,
+   "end": 56.1
+  },
+  {
+   "word": "the",
+   "start": 56.1,
+   "end": 56.26
+  },
+  {
+   "word": "impulse",
+   "start": 56.26,
+   "end": 56.58
+  },
+  {
+   "word": "cart",
+   "start": 56.58,
+   "end": 56.88
+  },
+  {
+   "word": "check",
+   "start": 57.15,
+   "end": 57.23
+  },
+  {
+   "word": "out",
+   "start": 57.23,
+   "end": 57.51
+  },
+  {
+   "word": "the",
+   "start": 57.51,
+   "end": 57.67
+  },
+  {
+   "word": "money",
+   "start": 57.67,
+   "end": 57.89
+  },
+  {
+   "word": "leak",
+   "start": 57.89,
+   "end": 58.25
+  },
+  {
+   "word": "audit",
+   "start": 58.25,
+   "end": 58.57
+  },
+  {
+   "word": "workbook",
+   "start": 58.57,
+   "end": 59.05
+  },
+  {
+   "word": "in",
+   "start": 59.05,
+   "end": 59.21
+  },
+  {
+   "word": "the",
+   "start": 59.21,
+   "end": 59.35
+  },
+  {
+   "word": "description",
+   "start": 59.35,
+   "end": 59.79
+  }
+ ]
+}

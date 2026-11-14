@@ -1,0 +1,252 @@
+{
+  "scenes": {
+    "hook": [
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          1454.0,
+          738.0,
+          1489.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 0.20833333333333334,
+        "end": 2.0
+      },
+      {
+        "text": "Black Friday",
+        "bbox": [
+          515.0,
+          467.0,
+          864.0,
+          528.0
+        ],
+        "font_px": 62.0,
+        "role": "text",
+        "start": 0.6666666666666666,
+        "end": 2.0
+      },
+      {
+        "text": "a test",
+        "bbox": [
+          609.0,
+          544.0,
+          772.0,
+          588.0
+        ],
+        "font_px": 62.0,
+        "role": "text",
+        "start": 0.6666666666666666,
+        "end": 2.0
+      }
+    ],
+    "spend-saving": [
+      {
+        "text": "Educational only. Illustrative example.",
+        "bbox": [
+          118.0,
+          1454.0,
+          738.0,
+          1489.0
+        ],
+        "font_px": 36.0,
+        "role": "disclaimer",
+        "start": 2.0,
+        "end": 3.0
+      },
+      {
+        "text": "Spending",
+        "bbox": [
+          387.0,
+          1203.0,
+          814.0,
+          1302.0
+        ],
+        "font_px": 104.0,
+        "role": "text",
+        "start": 2.7083333333333335,
+        "end": 4.125
+      },
+      {
+        "text": "Saving",
+        "bbox": [
+          443.0,
+          1203.0,
+          758.0,
+          1302.0
+        ],
+        "font_px": 104.0,
+        "role": "text",
+        "start": 3.375,
+        "end": 4.125
+      }
+    ],
+    "budget": [
+      {
+        "text": "Alex's budget",
+        "bbox": [
+          538.0,
+          449.0,
+          842.0,
+          496.0
+        ],
+        "font_px": 50.0,
+        "role": "text",
+        "start": 4.791666666666667,
+        "end": 7.25
+      },
+      {
+        "text": "$300",
+        "bbox": [
+          562.0,
+          532.0,
+          818.0,
+          630.0
+        ],
+        "font_px": 120.0,
+        "role": "text",
+        "start": 4.791666666666667,
+        "end": 7.25
+      }
+    ],
+    "two-plans": [
+      {
+        "text": "Plan A",
+        "bbox": [
+          214.0,
+          1305.0,
+          367.0,
+          1345.0
+        ],
+        "font_px": 52.0,
+        "role": "text",
+        "start": 7.958333333333333,
+        "end": 9.375
+      },
+      {
+        "text": "Impulse Alex",
+        "bbox": [
+          214.0,
+          1360.0,
+          488.0,
+          1405.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 7.958333333333333,
+        "end": 9.375
+      },
+      {
+        "text": "Plan B",
+        "bbox": [
+          214.0,
+          1455.0,
+          363.0,
+          1494.0
+        ],
+        "font_px": 52.0,
+        "role": "text",
+        "start": 7.958333333333333,
+        "end": 9.375
+      },
+      {
+        "text": "Rule-following Alex",
+        "bbox": [
+          214.0,
+          1510.0,
+          638.0,
+          1555.0
+        ],
+        "font_px": 48.0,
+        "role": "text",
+        "start": 7.958333333333333,
+        "end": 9.375
+      }
+    ],
+    "plan-a": [
+      {
+        "text": "Plan A ends at",
+        "bbox": [
+          527.0,
+          449.0,
+          853.0,
+          487.0
+        ],
+        "font_px": 50.0,
+        "role": "text",
+        "start": 10.041666666666666,
+        "end": 12.0
+      },
+      {
+        "text": "$341",
+        "bbox": [
+          574.0,
+          532.0,
+          806.0,
+          630.0
+        ],
+        "font_px": 120.0,
+        "role": "text",
+        "start": 10.041666666666666,
+        "end": 12.0
+      }
+    ],
+    "plan-b": [
+      {
+        "text": "Plan B ends at",
+        "bbox": [
+          379.0,
+          814.0,
+          702.0,
+          850.0
+        ],
+        "font_px": 50.0,
+        "role": "text",
+        "start": 12.541666666666666,
+        "end": 14.625
+      },
+      {
+        "text": "$263",
+        "bbox": [
+          414.0,
+          897.0,
+          665.0,
+          995.0
+        ],
+        "font_px": 120.0,
+        "role": "text",
+        "start": 12.541666666666666,
+        "end": 14.625
+      },
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 12.833333333333334,
+        "end": 14.625
+      }
+    ],
+    "apart": [
+      {
+        "text": "Educational content only, not financial advice.",
+        "bbox": [
+          128.0,
+          1454.0,
+          796.0,
+          1485.0
+        ],
+        "font_px": 32.0,
+        "role": "disclaimer",
+        "start": 14.625,
+        "end": 15.0
+      }
+    ]
+  }
+}

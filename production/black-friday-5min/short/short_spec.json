@@ -1,0 +1,184 @@
+{
+ "fps": 24,
+ "frames": 1440,
+ "disclaimer": "Educational content only, not financial advice.",
+ "narration_s": 60.01,
+ "beats": [
+  {
+   "id": "hook",
+   "start_frame": 0,
+   "end_frame": 48,
+   "kind": "presenter",
+   "composition": "ren-left-title",
+   "narration": "Black Friday has a clever trick."
+  },
+  {
+   "id": "spend-saving",
+   "start_frame": 48,
+   "end_frame": 99,
+   "kind": "story_still",
+   "composition": "alex-leaves-shop-tag",
+   "narration": "It can make spending feel like saving."
+  },
+  {
+   "id": "budget",
+   "start_frame": 99,
+   "end_frame": 174,
+   "kind": "presenter",
+   "composition": "ren-left-budget",
+   "narration": "Today, Alex heads into the sales with a three hundred dollar budget"
+  },
+  {
+   "id": "two-plans",
+   "start_frame": 174,
+   "end_frame": 225,
+   "kind": "story_still",
+   "composition": "alex-pays-plans-card",
+   "narration": "and two very different plans."
+  },
+  {
+   "id": "plan-a",
+   "start_frame": 225,
+   "end_frame": 288,
+   "kind": "presenter",
+   "composition": "ren-left-341",
+   "narration": "One plan ends at three hundred and forty-one dollars."
+  },
+  {
+   "id": "plan-b",
+   "start_frame": 288,
+   "end_frame": 351,
+   "kind": "graphic",
+   "composition": "total-263",
+   "narration": "The other ends at two hundred and sixty-three."
+  },
+  {
+   "id": "apart",
+   "start_frame": 351,
+   "end_frame": 436,
+   "kind": "presenter",
+   "composition": "ren-left-78-apart",
+   "narration": "Same shop, same sales, seventy-eight dollars apart."
+  },
+  {
+   "id": "website",
+   "start_frame": 436,
+   "end_frame": 488,
+   "kind": "presenter",
+   "composition": "ren-left-website",
+   "narration": "Then Alex opens a shop's website."
+  },
+  {
+   "id": "clock",
+   "start_frame": 488,
+   "end_frame": 527,
+   "kind": "graphic",
+   "composition": "countdown-clock",
+   "narration": "A countdown clock is ticking."
+  },
+  {
+   "id": "badge",
+   "start_frame": 527,
+   "end_frame": 571,
+   "kind": "graphic",
+   "composition": "only-3-left",
+   "narration": "A badge says only three left."
+  },
+  {
+   "id": "saved-107",
+   "start_frame": 571,
+   "end_frame": 645,
+   "kind": "presenter",
+   "composition": "ren-left-saved-107",
+   "narration": "The website cheerfully announces that Alex has saved one hundred and seven dollars."
+  },
+  {
+   "id": "not-saved",
+   "start_frame": 645,
+   "end_frame": 741,
+   "kind": "presenter",
+   "composition": "ren-left-struck-107",
+   "narration": "And here's the thing. Alex hasn't saved one hundred and seven dollars."
+  },
+  {
+   "id": "spend-183",
+   "start_frame": 741,
+   "end_frame": 785,
+   "kind": "graphic",
+   "composition": "parts-183",
+   "narration": "Alex is about to spend one hundred and eighty-three."
+  },
+  {
+   "id": "rule-2",
+   "start_frame": 785,
+   "end_frame": 875,
+   "kind": "presenter",
+   "composition": "ren-left-rule2",
+   "narration": "Rule two: do the math. A discount isn't a saving."
+  },
+  {
+   "id": "smaller-bill",
+   "start_frame": 875,
+   "end_frame": 953,
+   "kind": "graphic",
+   "composition": "equation-341",
+   "narration": "It's just a smaller bill. Add the list to the cart"
+  },
+  {
+   "id": "over-341",
+   "start_frame": 953,
+   "end_frame": 1013,
+   "kind": "presenter",
+   "composition": "ren-left-341-total",
+   "narration": "and Alex is at three hundred and forty-one dollars,"
+  },
+  {
+   "id": "over-budget",
+   "start_frame": 1013,
+   "end_frame": 1056,
+   "kind": "graphic",
+   "composition": "budget-bar",
+   "narration": "which is forty-one dollars over budget."
+  },
+  {
+   "id": "rule-4",
+   "start_frame": 1056,
+   "end_frame": 1120,
+   "kind": "presenter",
+   "composition": "ren-left-rule4",
+   "narration": "Rule four: let it sit for twenty-four hours."
+  },
+  {
+   "id": "question",
+   "start_frame": 1120,
+   "end_frame": 1195,
+   "kind": "presenter",
+   "composition": "ren-left-question",
+   "narration": "Do I need this, or did the timer need me to buy it?"
+  },
+  {
+   "id": "sleep",
+   "start_frame": 1195,
+   "end_frame": 1268,
+   "kind": "graphic",
+   "composition": "moon-to-sun",
+   "narration": "It just means the answer has to survive a night's sleep."
+  },
+  {
+   "id": "tally",
+   "start_frame": 1268,
+   "end_frame": 1371,
+   "kind": "presenter",
+   "composition": "ren-left-tally",
+   "narration": "That's thirty-seven under budget, and seventy-eight dollars less than the impulse cart."
+  },
+  {
+   "id": "cta",
+   "start_frame": 1371,
+   "end_frame": 1440,
+   "kind": "presenter",
+   "composition": "ren-left-end-card",
+   "narration": "Check out the Money Leak Audit Workbook in the description."
+  }
+ ]
+}
