@@ -66,8 +66,10 @@ def shadow(f, cx, cy, w, h=34, a=70):
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(lay).ellipse((cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2), fill=(*U.NAVY, a)); f.alpha_composite(lay.filter(ImageFilter.GaussianBlur(9)))
 _rc = {}
 def defringe(im):
-    """Pull the matte in by one pixel (grey erosion, light softening) so the white fringe left by the white-background cut-out does not show on dark environments."""
-    a = np.asarray(im).copy(); al = ndimage.gaussian_filter(ndimage.grey_erosion(a[..., 3], size=(3, 3)).astype(np.float32), 0.6); a[..., 3] = np.clip(al, 0, 255).astype(np.uint8); return Image.fromarray(a, "RGBA")
+    """Remove the white fringe of the white-background cut-out: the alpha is pulled in by one pixel, then every edge pixel (anything not in the 1-px-eroded solid core) takes the colour of its nearest solid-core pixel, so no light background colour survives at the silhouette."""
+    a = np.asarray(im).copy(); al = a[..., 3]; core = ndimage.grey_erosion(al, size=(3, 3)) >= 250
+    idx = ndimage.distance_transform_edt(~core, return_distances=False, return_indices=True); rgb = a[..., :3][idx[0], idx[1]]
+    a[..., :3] = np.where(core[..., None], a[..., :3], rgb); a[..., 3] = np.clip(ndimage.gaussian_filter(ndimage.grey_erosion(al, size=(3, 3)).astype(np.float32), 0.6), 0, 255).astype(np.uint8); return Image.fromarray(a, "RGBA")
 def ren(c, clip, start, x, feet, h, behind_table=0):
     """Draw the matted library clip: Ren's feet-centre at (x, feet), standing height h px. behind_table > 0: rows below that y are restored from E2 afterwards by the caller."""
     key = (c.sid, clip)
@@ -84,7 +86,7 @@ def clock(t):
     s = max(0, 3 * 3600 - 1 - int(t)); return f"{s // 3600:02d}:{s % 3600 // 60:02d}:{s % 60:02d}"
 
 # ---- beats --------------------------------------------------------------------------------------------------------------------------
-REN = dict(x=300, feet=1450, h=1130)
+REN = dict(x=330, feet=1710, h=1300)
 def b_hook(c):
     c.f.alpha_composite(env("E1")); ren(c, "ren_point_camera", 1.12, **REN)
     p = U.back(c.t / 0.5); c.put(UI.banner_p(), 80, int(-30 + 250 * clamp(p, 0, 1.15)) if c.t < 0.5 else 220, key="bn", rec=c.t > 0.55)

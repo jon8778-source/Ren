@@ -32,7 +32,7 @@
    "id": "renderer",
    "kind": "renderer",
    "path": "../../production/black-friday-30s/render_short.py",
-   "sha256": "6d2702f692f6fc77ee7d1eaa94a71d03121d78e65b550f984083f0bcca215cda",
+   "sha256": "0307cd1f4affe42c7d4524bb4199d4428124650cdc29efe6aec6e812e825bab2",
    "status": "approved",
    "approval_evidence": "Portrait renderer under the Shorts launcher; reuses pilot_ren.RenClip matting and the Three Bills/401(k) Short layout code"
   },
