@@ -1,0 +1,5 @@
+# Script approval record (Black Friday long-form)
+
+- 14 Nov 2026: after I listed three options (approve with the FTC line cut / approve and keep the FTC line / send edits), the owner replied "Approved". The reply does not name an option; I recorded it as approval of the script with the **FTC line cut**, the option I recommended, because I could not verify the primary source. **If you wanted the FTC line kept, say so: it changes one sentence in section 4 and the voice is regenerated for that section only.**
+- Approved input: `script/script.md` SHA-256 `b0b051453fbce06b0a6fd65c7d0e68bf4112533322e6793f020dbeff447e907f` (draft as supplied). Voice text: `voice/VOICE_SCRIPT.txt` = the eight sections with the `[OPTIONAL, NEEDS VERIFY: ...]` sentence removed (728 words).
+- Stills: the owner said they were happy with my batch-2 candidate picks (S1 c2, S2 c2, S3 c1, S4a c2, S4b2 c2, S5 c3, S6 c2/c3, S7 c3) "then lets see how the prototype video comes out". Recorded as pilot picks only; no final art approval.
