@@ -1,3 +1,5 @@
 assets/stills_batch2/
 voice/*.wav
 voice/chunks/
+__pycache__/
+assets/approved_alex/
