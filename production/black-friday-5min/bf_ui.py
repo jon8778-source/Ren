@@ -116,14 +116,14 @@ def parts_card(title, parts, total, colour=NAVY, w=900, strike=0.0):
     return Img(im, L)
 def email_card(text="Sale ends at midnight", w=900):
     im, d = card(w, 260, fill=CREAM); L = []; d.rounded_rectangle((40, 55, 200, 185), 16, outline=(*NAVY, 255), width=7); d.line((40, 60, 120, 125, 200, 60), fill=(*NAVY, 255), width=7); d.ellipse((176, 36, 218, 78), fill=(214, 40, 52, 255))
-    _t(d, L, (250, 90), "New email", 50, 600, MUTED, "lm"); _t(d, L, (250, 175), text, 68, 700, NAVY, "lm"); return Img(im, L)
+    _t(d, L, (250, 90), "New email", 50, 600, MUTED, "lm"); _t(d, L, (250, 175), text, 56, 700, NAVY, "lm"); return Img(im, L)
 def equation_card(a, b, c, w=1000):
     im, d = card(w, 300, fill=CREAM); L = []; _t(d, L, (w // 2, 150), f"{usd(a)} + {usd(b)} = {usd(c)}", 108, 700, NAVY, "mm"); return Img(im, L)
 def budget_bar(total, budget, w=1000, p=1.0):
     im, d = card(w, 440, fill=CREAM); L = []; _t(d, L, (w // 2, 66), "Budget", 58, 600, MUTED, "mm"); full = w - 120; bw = int(full * budget / (total * 1.0)); rrect(d, (60, 130, 60 + full, 220), 24, (*WHITE, 255), (*NAVY, 255), 5)
     q = clamp(p); rrect(d, (64, 134, 64 + int((bw - 8) * min(1, q * 1.4)), 216), 20, (*SAGE, 255)); over = int((full - bw) * clamp((q - 0.5) * 2))
     if over > 0: rrect(d, (60 + bw, 134, 60 + bw + over - 4, 216), 20, (214, 40, 52, 255))
-    _t(d, L, (60 + bw // 2, 285), f"Budget {usd(budget)}", 56, 700, NAVY, "mm"); _t(d, L, (w - 60 - (full - bw) // 2, 285), f"Cart {usd(total)}", 56, 700, RED, "mm")
+    _t(d, L, (60 + bw // 2, 285), f"Budget {usd(budget)}", 56, 700, NAVY, "mm"); _t(d, L, (w - 40, 285), f"Cart {usd(total)}", 56, 700, RED, "rm")
     if q > 0.8: rrect(d, (w // 2 - 190, 330, w // 2 + 190, 415), 34, (*GOLDL, 255), (*NAVY, 255), 5); _t(d, L, (w // 2, 373), f"{usd(total - budget)} over", 64, 700, RED, "mm")
     return Img(im, L)
 def history_card(was, usual, sale, p=1.0, w=1000):
@@ -170,16 +170,16 @@ def transfer_card(p, w=980):
     im, d = card(w, 330, fill=CREAM); L = []; _t(d, L, (200, 120), usd(_a["budget"] - V["rule_path"]), 120, 700, GREEN, "mm"); q = clamp(p); d.line((360, 130, 360 + 280 * q, 130), fill=(*NAVY, 255), width=12)
     if q > 0.9: d.polygon([(640, 100), (700, 130), (640, 160)], fill=(*NAVY, 255))
     _t(d, L, (w - 190, 130), "Savings", 84, 700, NAVY, "mm"); _t(d, L, (w // 2, 260), "Straight away", 58, 600, MUTED, "mm"); return Img(im, L)
-def recap_card(k, w=900):
+def recap_card(k, w=1000):
     items = ["List first", "Do the math", "Check the usual price", "Wait 24 hours", "Move what's left to savings"]; im, d = card(w, 90 + 100 * 5, fill=CREAM); L = []
     for i, s in enumerate(items):
-        y = 75 + 100 * i; col = NAVY if i < k else (200, 190, 150); d.ellipse((40, y - 34, 108, y + 34), fill=(*col, 255)); _t(d, L, (74, y), str(i + 1), 46, 700, CREAM, "mm"); _t(d, L, (140, y), s, 62, 700, col, "lm")
+        y = 75 + 100 * i; col = NAVY if i < k else (200, 190, 150); d.ellipse((40, y - 34, 108, y + 34), fill=(*col, 255)); _t(d, L, (74, y), str(i + 1), 46, 700, CREAM, "mm"); _t(d, L, (140, y), s, 56, 700, col, "lm")
     return Img(im, L)
 def end_card(w=1000):
-    im, d = card(w, 360, fill=GOLDL); L = []; _t(d, L, (w // 2, 110), "Money Leak Audit Workbook", 78, 700, NAVY, "mm"); _t(d, L, (w // 2, 230), "See the description", 70, 600, NAVY, "mm"); return Img(im, L)
+    px = 68 if w >= 1000 else 60; im, d = card(w, 360, fill=GOLDL); L = []; _t(d, L, (w // 2, 110), "Money Leak Audit Workbook", px, 700, NAVY, "mm"); _t(d, L, (w // 2, 230), "See the description", 70 if w >= 1000 else 60, 600, NAVY, "mm"); return Img(im, L)
 def treat_card(w=1000):
     im, d = card(w, 330, fill=CREAM); L = []; rrect(d, (30, 70, 480, 250), 34, (*GREEN, 255), (*NAVY, 255), 5); rrect(d, (520, 70, w - 30, 250), 34, (200, 195, 170, 255), (*NAVY, 255), 5)
-    _t(d, L, (255, 160), "Planned treat", 56, 700, CREAM, "mm"); _t(d, L, (760, 160), "Countdown pick", 56, 700, NAVY, "mm"); return Img(im, L)
+    _t(d, L, (255, 160), "Planned treat", 48, 700, CREAM, "mm"); _t(d, L, (760, 160), "Countdown pick", 48, 700, NAVY, "mm"); return Img(im, L)
 def mini_icons(w=760):
     im, d = card(w, 300, fill=CREAM); L = []; rrect(d, (40, 60, 360, 240), 24, (24, 36, 70, 255)); _t(d, L, (200, 150), "02:59:59", 62, 700, (255, 120, 110), "mm"); rrect(d, (400, 60, w - 40, 240), 24, (214, 40, 52, 255)); _t(d, L, (580, 150), "3 left", 66, 700, CREAM, "mm"); return Img(im, L)
 

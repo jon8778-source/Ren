@@ -126,8 +126,8 @@ P = {1: [
  ("S", "19_E2", "Quick recap.", "Piggy bank on the kitchen counter"),
  ("R", "ren_idle_calm", "List first. Do the math. Check the usual price. Wait twenty-four hours.", "Recap list builds (no count_fingers: no closed-mouth window)"),
  ("G", "code", "And move what's left into savings.", "Recap line 5"),
- ("R", "ren_thumbs_up (mouth-closed window from 4.9 s)", "Check out the Money Leak Audit Workbook in the description.", "End card in code; end disclaimer held 2 s+"),
- ("G", "code", "See you next time.", "End card"),
+ ("R", "ren_thumbs_up (mouth-closed window from 4.67 s)", "Check out the Money Leak Audit Workbook", "Ren thumbs up; workbook card"),
+ ("G", "code", "in the description. See you next time.", "End card in code; end disclaimer held 2 s+"),
 ]}
 def norm(s): return re.findall(r"[a-z0-9'’-]+", s.lower().replace("’", "'"))
 def sections():

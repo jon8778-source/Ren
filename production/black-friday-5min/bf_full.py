@@ -54,6 +54,8 @@ def cards(c):
      "prize": lambda: B.chip("Not a prize for being boring", 1000, "cream", 62), "room": lambda: B.envelope_card(), "treat": lambda: B.treat_card(), "rule5": lambda: B.transfer_card(q(0.4, 1.2)), "recap4": lambda: B.recap_card(1 + min(3, int(t / max(d, 1e-6) * 4))),
      "recap5": lambda: B.recap_card(5), "endcard": lambda: B.end_card(900), "endcard2": lambda: B.end_card(1000)}
 def _f(k): return B._a[k]
+def get_card(name, c):
+    d = cards(c); return d[name]() if name in d else BP.card_for(name, c)    # sections 1-2 keep the approved pilot's cards
 FIGS = re.compile(r"\$")
 def shot_times_full():
     """(start, end) per shot from the aligned narration (never uniform in a render)."""
@@ -81,13 +83,13 @@ END_PILL = "Educational only, not financial advice."
 def draw_shot(c, sh, figs):
     kind = sh["kind"]; name = sh["card"]
     if kind == "R":
-        c.f.alpha_composite(sage()); ren_draw(c, *sh["src"]); img = cards(c)[name](); c.slide(img); figs.append(img)
+        c.f.alpha_composite(sage()); ren_draw(c, *sh["src"]); img = get_card(name, c); c.slide(img); figs.append(img)
     elif kind == "S":
         c.f.alpha_composite(still(sh["src"], c.t / max(c.d, 1e-6)))
-        if name: img = cards(c)[name](); c.slide(img, y=120); figs.append(img)
+        if name: img = get_card(name, c); c.slide(img, y=120); figs.append(img)
     else:
-        c.f.alpha_composite(sage(9, True)); img = cards(c)[name](); figs.append(img)
-        c.pop(img, 960, 540, 0.12, 0.4, big=1.2 if img.im.width > 900 else 1.35)
+        c.f.alpha_composite(sage(9, True)); img = get_card(name, c); figs.append(img)
+        c.pop(img, 960, 540, 0.12, 0.4, big=1.35 if (sh['section'] <= 2 or img.im.width <= 900) else 1.2)
 def frame_at(shots, k, rec, total):
     sh = next(x for x in shots if x["start"] <= k < x["end"]); t = (k - sh["start"]) / FPS; d = (sh["end"] - sh["start"]) / FPS; T_ = k / FPS
     c = Ctx(sh["id"], t, d, T_, Image.new("RGBA", (W, H)), rec); figs = []; draw_shot(c, sh, figs)
