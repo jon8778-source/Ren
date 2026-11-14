@@ -162,4 +162,4 @@ def main():
     (HERE / "plan/SHOT_PLAN.md").write_text("\n".join(L) + "\n")
     print(len(rows), "shots;", round(total), "s est; kinds", kinds, "; Ren gaps", gaps, "; reuse", reuse, "; G runs>=3:", len(runs))
     for p in problems: print("PROBLEM:", p)
-main()
+if __name__ == "__main__": main()

@@ -1,0 +1,23 @@
+{
+ "S1": {
+  "duration": 25.761,
+  "sample_rate": 24000,
+  "text": "Black Friday has a clever trick. It can make spending feel like saving. Today, Alex heads into the sales with a three hundred dollar budget and two very different plans. One plan ends at three hundred and forty-one dollars. The other ends at two hundred and sixty-three. Same shop, same sales, seventy-eight dollars apart. Along the way, you'll get five simple rules for your own Black Friday, and none of them say never buy anything. Let's see what happens.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Black Friday has a clever trick. It can make spending feel like saving. Today, Alex heads into the sales with a three hundred dollar budget and two very different plans. One plan ends at three hundred and forty-one dollars.",
+    "start": 0.0,
+    "end": 12.089,
+    "gen_s": 507.9
+   },
+   {
+    "chunk": 2,
+    "text": "The other ends at two hundred and sixty-three. Same shop, same sales, seventy-eight dollars apart. Along the way, you'll get five simple rules for your own Black Friday, and none of them say never buy anything. Let's see what happens.",
+    "start": 12.089,
+    "end": 25.761,
+    "gen_s": 121.5
+   }
+  ]
+ }
+}

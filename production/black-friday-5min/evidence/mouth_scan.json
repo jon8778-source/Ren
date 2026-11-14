@@ -1,0 +1,201 @@
+{
+ "ren_open_arms": {
+  "window": [
+   1.38,
+   7.0
+  ],
+  "base": 0.059,
+  "thr": 0.099,
+  "flagged_frames": 23,
+  "n": 135,
+  "closed_intervals": [
+   [
+    1.38,
+    3.63
+   ]
+  ]
+ },
+ "ren_hold_phone": {
+  "window": [
+   1.25,
+   9.95
+  ],
+  "base": 0.048,
+  "thr": 0.088,
+  "flagged_frames": 1,
+  "n": 209,
+  "closed_intervals": [
+   [
+    1.25,
+    9.83
+   ]
+  ]
+ },
+ "ren_wave_hello": {
+  "window": [
+   1.12,
+   9.95
+  ],
+  "base": 0.048,
+  "thr": 0.088,
+  "flagged_frames": 13,
+  "n": 212,
+  "closed_intervals": [
+   [
+    1.12,
+    3.16
+   ],
+   [
+    3.87,
+    9.95
+   ]
+  ]
+ },
+ "ren_point_right": {
+  "window": [
+   1.0,
+   6.38
+  ],
+  "base": 0.054,
+  "thr": 0.094,
+  "flagged_frames": 0,
+  "n": 130,
+  "closed_intervals": [
+   [
+    1.0,
+    6.42
+   ]
+  ]
+ },
+ "ren_present_palm_left": {
+  "window": [
+   1.12,
+   7.88
+  ],
+  "base": 0.034,
+  "thr": 0.074,
+  "flagged_frames": 0,
+  "n": 163,
+  "closed_intervals": [
+   [
+    1.12,
+    7.91
+   ]
+  ]
+ },
+ "ren_count_fingers": {
+  "window": [
+   0.75,
+   8.5
+  ],
+  "base": 0.038,
+  "thr": 0.078,
+  "flagged_frames": 22,
+  "n": 186,
+  "closed_intervals": []
+ },
+ "ren_nod_yes": {
+  "window": [
+   1.12,
+   9.0
+  ],
+  "base": 0.056,
+  "thr": 0.096,
+  "flagged_frames": 0,
+  "n": 190,
+  "closed_intervals": [
+   [
+    1.12,
+    9.04
+   ]
+  ]
+ },
+ "ren_idle_listen": {
+  "window": [
+   0.0,
+   9.95
+  ],
+  "base": 0.05,
+  "thr": 0.09,
+  "flagged_frames": 12,
+  "n": 239,
+  "closed_intervals": [
+   [
+    0.0,
+    2.04
+   ],
+   [
+    2.71,
+    9.96
+   ]
+  ]
+ },
+ "ren_shrug": {
+  "window": [
+   1.12,
+   9.95
+  ],
+  "base": 0.051,
+  "thr": 0.091,
+  "flagged_frames": 0,
+  "n": 212,
+  "closed_intervals": [
+   [
+    1.12,
+    9.95
+   ]
+  ]
+ },
+ "ren_thinking": {
+  "window": [
+   1.25,
+   9.12
+  ],
+  "base": 0.051,
+  "thr": 0.091,
+  "flagged_frames": 1,
+  "n": 189,
+  "closed_intervals": [
+   [
+    2.58,
+    9.12
+   ]
+  ]
+ },
+ "ren_point_down_right": {
+  "window": [
+   1.0,
+   7.0
+  ],
+  "base": 0.049,
+  "thr": 0.102,
+  "flagged_frames": 0,
+  "n": 144,
+  "closed_intervals": [
+   [
+    1.0,
+    7.0
+   ]
+  ]
+ },
+ "ren_idle_calm": {
+  "window": [
+   0.0,
+   9.95
+  ],
+  "base": 0.047,
+  "thr": 0.087,
+  "flagged_frames": 1,
+  "n": 239,
+  "closed_intervals": [
+   [
+    0.0,
+    3.08
+   ],
+   [
+    3.29,
+    9.96
+   ]
+  ]
+ }
+}
