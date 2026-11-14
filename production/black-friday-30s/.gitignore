@@ -1,0 +1,6 @@
+assets/
+*.mp4
+*.wav
+*.zip
+__pycache__/
+still_*.png

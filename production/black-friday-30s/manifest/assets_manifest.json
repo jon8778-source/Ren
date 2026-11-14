@@ -1,0 +1,66 @@
+{
+ "status": "TEMPORARY - generated 2026-11-14, not approved by Jon",
+ "model": "black-forest-labs/FLUX.2-dev (image-to-image via fal-ai)",
+ "assets": [
+  {
+   "path": "assets/black-friday/E1_shop_street.png",
+   "sha256": "df0e1821f71e674f3501578cda3b23bd62bdb67d97240206c8370bffcea715b1",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  },
+  {
+   "path": "assets/black-friday/E2_kitchen_table.png",
+   "sha256": "8bb701e1b7a6fa7323956c092e05f1a2ad6797d837c28f255eea57ef729a2d29",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  },
+  {
+   "path": "assets/black-friday/E3_porch_parcels.png",
+   "sha256": "9c4149e5008334d65e1941994f17952031f47492d7c0a4572e9e3ef3b38037c7",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  },
+  {
+   "path": "assets/black-friday/E4_living_room_morning.png",
+   "sha256": "0480a85bdec1629a961c6c4c31d5998e62ba42b96088f702db94043770235cd7",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  },
+  {
+   "path": "assets/black-friday/P1_piggy_bank.png",
+   "sha256": "993aa3058e8116ff72e727a8e72c796c428770970d12f18c39b9895330c5bc6d",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  },
+  {
+   "path": "assets/black-friday/P2_hourglass.png",
+   "sha256": "a52eab577a90055b0a54b092a60c9c26c606155887e0774458be3d4bdc049807",
+   "size_px": [
+    768,
+    1344
+   ],
+   "approval": "none yet",
+   "note": "upscale once to 1080x1920 before use; props P1/P2 are on white and need matting"
+  }
+ ]
+}
