@@ -1,0 +1,193 @@
+{
+ "status": "TEMPORARY. Generated 2026-11-14 with FLUX.2-dev image-to-image (Hugging Face, fal-ai) from approved coffee-v3 artwork. NOT approved by Jon. Do not describe as approved art.",
+ "references": {
+  "alex-home.png": "approved: Alex pours French press coffee",
+  "alex-cafe.png": "approved: Alex taps to pay for coffee",
+  "office.png": "approved: sage home office plate",
+  "source": "branch codex/ren-approved-v3, project/prototypes/coffee-minute-v3/artwork (checksums verified via unpack_artwork.py)"
+ },
+ "size_px": [
+  1344,
+  768
+ ],
+ "stills": [
+  {
+   "file": "assets/stills/01_H1_shop_window.png",
+   "sha256": "d2727228ef9154de347de56373321804decbdf4246a69a22c66d3e31b9bb918a",
+   "script_section": "1 Hook",
+   "use": "Alex walking past a shop window with blank banners",
+   "reference": "alex-cafe.png",
+   "prompt_scene": "New scene: Alex walks along a sunny street past a shop window with large completely blank plain cream and sage banners with absolutely no writing on them, carrying one plain paper shopping bag, glancing at the window with mild curiosity.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/02_M1_old_coat.png",
+   "sha256": "f7d252885b057adfa0b825fdc785007b665b1216e03a506593e620fc70b351a7",
+   "script_section": "2 Meet Alex",
+   "use": "worn winter coat on a hook (the coat that needs replacing)",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex in a bright hallway looks at a worn, slightly faded winter coat hanging on a wall hook, one hand on his chin, thoughtful.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/03_M2_gift.png",
+   "sha256": "73f7b402165e000a7ceff74c0a6ae32aed5df6f2a5ac0cc8e0704e785d5375e6",
+   "script_section": "2 Meet Alex",
+   "use": "Alex holding a wrapped gift for a friend",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex stands at a wooden table holding a small wrapped gift box with a plain ribbon, smiling warmly as he thinks of a friend.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/04_M3_charger.png",
+   "sha256": "7cb124892c32ac1c22fe2c6904946f30950e2cdfcf062f3caa56fea0d1184f25",
+   "script_section": "2 Meet Alex",
+   "use": "charger cable at an awkward angle",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex sits on a chair at a wooden table in the sunny kitchen, a small smartphone leaning against a mug on the table with its charging cable pulled tight at an awkward angle, Alex frowning and holding the cable with one hand. Phone is small and realistic in size.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/05_L1_writing_list.png",
+   "sha256": "f51cc80d93be2772688cbb3645e36008b9ba1e1768551521747df8de4883bc72",
+   "script_section": "3 Rule one",
+   "use": "Alex writing the list",
+   "reference": "office.png",
+   "prompt_scene": "New scene: Alex sits at the home office desk writing on a paper notepad with a pen, calm and focused, a mug beside him, warm daylight.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/06_L2_coat_rack.png",
+   "sha256": "5d0b902f78134556dc3e640b51c789339a121ab6a80f789ea8738de34ff64b55",
+   "script_section": "3 Rule one",
+   "use": "Alex checking a coat in a shop",
+   "reference": "alex-cafe.png",
+   "prompt_scene": "New scene: Alex in a clothing shop holds up a winter coat on a hanger with a blank price tag, checking it carefully, rack of coats behind him.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/07_P1_laptop_night.png",
+   "sha256": "d7d43522aa0319112bba2bc6fa920df9cafad8c6459b30386a354ec8f765425a",
+   "script_section": "4 The pressure",
+   "use": "Alex at the laptop at night",
+   "reference": "office.png",
+   "prompt_scene": "New scene: night time. Medium shot, Alex fills about a third of the frame, sitting at the home office desk, face lit softly by the laptop glow, small desk lamp on, dark blue window behind, leaning forward with wide eyes.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/08_P4_alex_tempted.png",
+   "sha256": "df2e34f2e125ae52a751d7440ced184ac010770c39e04bbf292ae1f84be63eb3",
+   "script_section": "4 The pressure",
+   "use": "close shot, tempted at the laptop",
+   "reference": "office.png",
+   "prompt_scene": "New scene: night time. Close, waist-up shot of Alex at the desk, face lit by laptop glow, eyebrows raised, finger hovering near the trackpad, tempted, desk lamp glowing warm.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/09_P2_phone_ping.png",
+   "sha256": "2d17b5f6cef270bed46ad22964f7d2e4f5df79e96a1dcc13b679b8660f7920cb",
+   "script_section": "4 The pressure",
+   "use": "phone lights up (the sale-ends email ping)",
+   "reference": "office.png",
+   "prompt_scene": "New scene: night time. A smartphone with a blank glowing screen buzzing on the wooden home office desk beside a closed notebook and a desk lamp, dark blue window behind.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/10_P3_cart_items.png",
+   "sha256": "399f31fc9aedbb9049af411129704e46b2d1caa49a642befdfbf219869aff794",
+   "script_section": "4 The pressure",
+   "use": "the three impulse items: air fryer, earbuds, mystery box",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: on a wooden kitchen counter, three plain unbranded products with blank labels: a compact air fryer, a pair of white wireless earbuds in an open case, and a plain mystery gift box tied with ribbon. Sage kitchen behind.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/11_C1_calculator.png",
+   "sha256": "0b0bdd053b241e32e2ff7b07a4a3bbe0560ee50f43d1feb2ef70f4304c638895",
+   "script_section": "5 Rules two and three",
+   "use": "Alex with calculator",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex sits on a chair at a wooden table, the whole table visible in front of him, holding a small calculator with a blank display in one hand and a pen in the other, a notepad on the table, thoughtful and slightly sceptical.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/12_C2_price_history.png",
+   "sha256": "80f5e2e284c91ebb9fc2ef91e9f33d2d96740fe1160699256f56ec6cb6f17c24",
+   "script_section": "5 Rules two and three",
+   "use": "Alex checking the price history on the laptop",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex sits on a chair at a wooden table in front of an open laptop, leaning slightly forward and squinting at the blank screen with curiosity, one hand on the trackpad, a mug beside the laptop. Seated normally, both feet under the table.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/13_W1_closing_laptop.png",
+   "sha256": "afa97684e8f72d582b0e09764772c1cc782e5672e3bbe048bec57d11ff180b42",
+   "script_section": "6 Rule four",
+   "use": "closing the laptop at night",
+   "reference": "office.png",
+   "prompt_scene": "New scene: night time. Alex gently closes the laptop lid at the home office desk with a calm relieved smile, desk lamp on, dark blue window behind. Medium shot.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/14_W2_morning_kitchen.png",
+   "sha256": "566470891d7930f7741794381c3c8bc9eac01284bb5743623f96bd860e62ed36",
+   "script_section": "6 Rule four",
+   "use": "next morning, clear-headed",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: morning. Alex stands in the sunny kitchen holding a mug of coffee, looking out of the window with a calm, clear-headed expression.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/15_W3_old_pan.png",
+   "sha256": "b10c658f364153a425e93f72fdd16fc5aaa73fe599382f1ca071f2efca4180cb",
+   "script_section": "6 Rule four",
+   "use": "old pan works fine (air fryer goes)",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: morning. Alex at the kitchen hob smiling with a plain frying pan in his hand, a well-used pan, content, thinking it works fine.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/16_W4_old_earbuds.png",
+   "sha256": "444179abcecceb8f9058c7acd5b128c09e35f7e27bc0260cc6b10d66ba93e81b",
+   "script_section": "6 Rule four",
+   "use": "old earbuds really did die (earbuds stay)",
+   "reference": "office.png",
+   "prompt_scene": "New scene: daytime. Alex at the desk holding up a worn old pair of wired earbuds with a tangled cable, mildly disappointed, nodding to himself.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/17_T1_sofa_bags.png",
+   "sha256": "238ec237b10324da529ebfbf26e950a46380a5ce7211850079824c5e3d3fa27b",
+   "script_section": "7 The tally",
+   "use": "Alex relaxed with a few bags",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: afternoon. Alex relaxes on a cream sofa in a living room, a few plain paper shopping bags neatly beside him, calm and satisfied.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/18_E1_phone_transfer.png",
+   "sha256": "01dde52dec86a41987ebdcb27b73a2a74aed1513c189f25f8986b67226550f74",
+   "script_section": "8 Close",
+   "use": "moving the unspent $37 to savings",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: Alex at the sunny kitchen counter looking at his phone with a pleased smile, thumb about to tap, relaxed and confident.",
+   "approval": "none yet"
+  },
+  {
+   "file": "assets/stills/19_E2_piggy_jar.png",
+   "sha256": "38cb66c988c2b3bc634121de5ec8b7b7b101bbe7c1cddfe3443bd98fede17068",
+   "script_section": "8 Close",
+   "use": "piggy bank and coin jar",
+   "reference": "alex-home.png",
+   "prompt_scene": "New scene: on the sunny kitchen counter, a small ceramic piggy bank in cream and sage next to a glass jar of coins and a few folded notes, warm morning light.",
+   "approval": "none yet"
+  }
+ ],
+ "known_issues": [
+  "Night and desk shots (P1, P4, W1) show Alex's overshirt paler than the approved deep sage; lighting and model drift. Judge at 100% before use.",
+  "Alex's face is close but not identical in every still. Compare each against the approved art and the supporting-cast lineup; reject any that read as a different person.",
+  "P3 earbuds are a generic white earbud and case shape; check they do not read as a specific brand before use. No text or logos were generated; every screen and tag is blank for code-drawn overlays.",
+  "1344x768 native. Downscale once to 1280x720 and check sharpness. These are plates for story cutaways (2.5s cap), not calibrated plates: standing figures still need ren_stage.py perspective.",
+  "Rejected earlier attempts are not included."
+ ]
+}

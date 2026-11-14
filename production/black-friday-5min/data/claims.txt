@@ -1,0 +1,10 @@
+# Every factual claim in the script, with its check. Calculations are run by tools/check_numbers.py (MATHS OK required).
+CALC | coat 120 at 25% off = 90; gift 60 at 20% off = 48; charger 25 at 20% off = 20; list = 158 vs 205 full = 47 saved
+CALC | air fryer 80 at 40% off = 48; earbuds 150 at 30% off = 105; bundle 60 at 50% off = 30; impulse items = 183; store badge "saved" = 32 + 45 + 30 = 107
+CALC | Alex buys everything: 158 + 183 = 341 = 41 over a 300 budget
+CALC | earbuds usual price 115 vs 105 sale = 10 real saving, not the advertised 45 (150 - 105)
+CALC | rule path: 158 + 105 = 263 = 37 under budget; 341 - 263 = 78 = air fryer 48 + bundle 30
+ILLUSTRATIVE | Alex, the budget, prices and the "price history" are invented example figures. Label "Example figures" on screen. No real stores, brands or logos.
+OPTIONAL-VERIFY | "the FTC has criticized the fake [countdown timers / scarcity messages]": FTC staff report "Bringing Dark Patterns to Light" (September 2022). Seen only through law-firm summaries (JD Supra, Venable, National Law Review); the primary ftc.gov report was NOT fetched. Needs a primary-source link, or cut the line.
+NO-STATISTICS | The script uses no statistics about shoppers, spending or retailers. Do not add any without [VERIFY] and a source.
+NOT-ADVICE | Wording stays descriptive ("Alex does...") and the disclaimer "Educational only, not financial advice" appears at the start and end.

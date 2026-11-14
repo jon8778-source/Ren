@@ -1,0 +1,15 @@
+id,item,value,unit,note
+budget,Alex holiday budget,300,USD,illustrative
+coat_full,Winter coat full price,120,USD,list item
+coat_off,Winter coat discount,25,percent,list item
+gift_full,Gift full price,60,USD,list item
+gift_off,Gift discount,20,percent,list item
+charger_full,Phone charger full price,25,USD,list item
+charger_off,Phone charger discount,20,percent,list item
+airfryer_full,Air fryer sticker price,80,USD,impulse
+airfryer_off,Air fryer discount,40,percent,impulse
+earbuds_was,Earbuds advertised was-price,150,USD,impulse (later kept)
+earbuds_off,Earbuds discount,30,percent,impulse (later kept)
+earbuds_usual,Earbuds usual price from price history,115,USD,illustrative
+bundle_full,Mystery bundle sticker price,60,USD,impulse
+bundle_off,Mystery bundle discount,50,percent,impulse
