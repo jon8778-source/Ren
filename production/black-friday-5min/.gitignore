@@ -3,3 +3,4 @@ voice/*.wav
 voice/chunks/
 __pycache__/
 assets/approved_alex/
+voice/chunks_rejected/

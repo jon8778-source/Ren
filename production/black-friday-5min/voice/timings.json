@@ -42,7 +42,7 @@
   ]
  },
  "S3": {
-  "duration": 29.023,
+  "duration": 29.354,
   "sample_rate": 24000,
   "text": "Rule one: write the list before the sales start. Alex's list has three items. The coat is one hundred and twenty dollars, and it's twenty-five percent off, so ninety. The gift is sixty dollars, twenty percent off, so forty-eight. The charger is twenty-five dollars, twenty percent off, so twenty. Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five. A real saving of forty-seven dollars on things Alex was already going to buy. That's Black Friday working the way it should.",
   "chunks": [
@@ -50,15 +50,148 @@
     "chunk": 1,
     "text": "Rule one: write the list before the sales start. Alex's list has three items. The coat is one hundred and twenty dollars, and it's twenty-five percent off, so ninety. The gift is sixty dollars, twenty percent off, so forty-eight.",
     "start": 0.0,
-    "end": 13.682,
-    "gen_s": 74.0
+    "end": 14.013,
+    "gen_s": 74.1
    },
    {
     "chunk": 2,
     "text": "The charger is twenty-five dollars, twenty percent off, so twenty. Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five. A real saving of forty-seven dollars on things Alex was already going to buy. That's Black Friday working the way it should.",
-    "start": 13.682,
-    "end": 29.023,
-    "gen_s": 157.4
+    "start": 14.013,
+    "end": 29.354,
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S4": {
+  "duration": 41.807,
+  "sample_rate": 24000,
+  "text": "Then Alex opens a shop's website. A countdown clock is ticking. A badge says only three left. And Alex's cart starts getting longer. An air fryer, eighty dollars, forty percent off. Fancy earbuds, listed at a hundred and fifty, thirty percent off. And a mystery bundle, sixty dollars, half price. The website cheerfully announces that Alex has saved one hundred and seven dollars. Then an email pings. Sale ends at midnight. Alex feels that little jolt of get it before it's gone. It's a very human feeling, and it's the one clocks and badges tend to tap into. And here's the thing. Alex hasn't saved one hundred and seven dollars. Alex is about to spend one hundred and eighty-three.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Then Alex opens a shop's website. A countdown clock is ticking. A badge says only three left. And Alex's cart starts getting longer. An air fryer, eighty dollars, forty percent off. Fancy earbuds, listed at a hundred and fifty, thirty percent off.",
+    "start": 0.0,
+    "end": 15.277,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "And a mystery bundle, sixty dollars, half price. The website cheerfully announces that Alex has saved one hundred and seven dollars. Then an email pings. Sale ends at midnight. Alex feels that little jolt of get it before it's gone.",
+    "start": 15.277,
+    "end": 30.156,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 3,
+    "text": "It's a very human feeling, and it's the one clocks and badges tend to tap into. And here's the thing. Alex hasn't saved one hundred and seven dollars. Alex is about to spend one hundred and eighty-three.",
+    "start": 30.156,
+    "end": 41.807,
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S5": {
+  "duration": 30.901,
+  "sample_rate": 24000,
+  "text": "Rule two: do the math. A discount isn't a saving. It's just a smaller bill. Add the list to the cart and Alex is at three hundred and forty-one dollars, which is forty-one dollars over budget. Rule three: check what it normally costs. Those earbuds say they were a hundred and fifty dollars. Alex looks at the price history, and they've sat at a hundred and fifteen for months. At a hundred and five, the real saving is ten dollars, not forty-five. That's still fine if Alex truly needs them, but it's not the bargain the sticker shouted about.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Rule two: do the math. A discount isn't a saving. It's just a smaller bill. Add the list to the cart and Alex is at three hundred and forty-one dollars, which is forty-one dollars over budget. Rule three: check what it normally costs.",
+    "start": 0.0,
+    "end": 14.18,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "Those earbuds say they were a hundred and fifty dollars. Alex looks at the price history, and they've sat at a hundred and fifteen for months. At a hundred and five, the real saving is ten dollars, not forty-five.",
+    "start": 14.18,
+    "end": 26.101,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 3,
+    "text": "That's still fine if Alex truly needs them, but it's not the bargain the sticker shouted about.",
+    "start": 26.101,
+    "end": 30.901,
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S6": {
+  "duration": 38.758,
+  "sample_rate": 24000,
+  "text": "Rule four: let it sit for twenty-four hours. Alex buys the three things on the list, then leaves the other three in the cart and closes the laptop. The next morning, Alex asks one question about each. Do I need this, or did the timer need me to buy it? The air fryer? Alex already has a pan that works fine. The mystery bundle? Alex can't even remember what's in it. The earbuds? The old pair really did die last week. So those stay in. The other two go. Notice that waiting doesn't mean saying no. It just means the answer has to survive a night's sleep. If Alex still wants the earbuds, and has room in the budget, that's a good purchase made on purpose.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Rule four: let it sit for twenty-four hours. Alex buys the three things on the list, then leaves the other three in the cart and closes the laptop. The next morning, Alex asks one question about each.",
+    "start": 0.0,
+    "end": 11.361,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "Do I need this, or did the timer need me to buy it? The air fryer? Alex already has a pan that works fine. The mystery bundle? Alex can't even remember what's in it. The earbuds? The old pair really did die last week.",
+    "start": 11.361,
+    "end": 24.421,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 3,
+    "text": "So those stay in. The other two go. Notice that waiting doesn't mean saying no. It just means the answer has to survive a night's sleep. If Alex still wants the earbuds, and has room in the budget, that's a good purchase made on purpose.",
+    "start": 24.421,
+    "end": 38.758,
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S7": {
+  "duration": 33.346,
+  "sample_rate": 24000,
+  "text": "Here's the final tally. Impulse Alex spends three hundred and forty-one dollars, forty-one over budget. Rule-following Alex spends the one hundred and fifty-eight on the list, plus one hundred and five for the earbuds. Two hundred and sixty-three dollars. That's thirty-seven under budget, and seventy-eight dollars less than the impulse cart. Notice Alex still bought something extra. This isn't about never treating yourself. That thirty-seven dollars isn't a prize for being boring. It's room. Room for the next surprise bill, or for a treat Alex plans for, rather than one the countdown picked.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Here's the final tally. Impulse Alex spends three hundred and forty-one dollars, forty-one over budget. Rule-following Alex spends the one hundred and fifty-eight on the list, plus one hundred and five for the earbuds. Two hundred and sixty-three dollars.",
+    "start": 0.0,
+    "end": 14.117,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "That's thirty-seven under budget, and seventy-eight dollars less than the impulse cart. Notice Alex still bought something extra. This isn't about never treating yourself. That thirty-seven dollars isn't a prize for being boring. It's room.",
+    "start": 14.117,
+    "end": 26.966,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 3,
+    "text": "Room for the next surprise bill, or for a treat Alex plans for, rather than one the countdown picked.",
+    "start": 26.966,
+    "end": 33.346,
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S8": {
+  "duration": 20.012,
+  "sample_rate": 24000,
+  "text": "Rule five: move the thirty-seven dollars you didn't spend into savings straight away, before it quietly disappears. Quick recap. List first. Do the math. Check the usual price. Wait twenty-four hours. And move what's left into savings. Check out the Money Leak Audit Workbook in the description. See you next time.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Rule five: move the thirty-seven dollars you didn't spend into savings straight away, before it quietly disappears. Quick recap. List first. Do the math. Check the usual price. Wait twenty-four hours. And move what's left into savings.",
+    "start": 0.0,
+    "end": 15.483,
+    "gen_s": 0.0
+   },
+   {
+    "chunk": 2,
+    "text": "Check out the Money Leak Audit Workbook in the description. See you next time.",
+    "start": 15.483,
+    "end": 20.012,
+    "gen_s": 0.0
    }
   ]
  }

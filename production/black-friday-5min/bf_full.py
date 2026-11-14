@@ -19,9 +19,9 @@ R = lambda clip, mir=False: (clip, mir)
 FULL = list(BP.PL) + [
  (3, 0, "R", R("ren_clipboard_tick"), "rule1"), (3, 1, "S", "S7c3", None), (3, 2, "R", R("ren_point_right"), "coat"), (3, 3, "S", "S2c2", None), (3, 4, "R", R("ren_present_palm_left", True), "twotags"), (3, 5, "G", None, "charger_tag"),
  (3, 6, "G", None, "charger_tag2"), (3, 7, "R", R("ren_point_down_right"), "sum"), (3, 8, "S", "S3c1", None), (3, 9, "G", None, "ticks3"), (3, 10, "R", R("ren_idle_calm"), "working"),
- (4, 0, "S", "S4a", None), (4, 1, "G", None, "clock"), (4, 2, "G", None, "only3"), (4, 3, "S", "P3", "cartcount"), (4, 4, "G", None, "fryer"), (4, 5, "R", R("ren_hold_phone"), "earbuds"), (4, 6, "G", None, "bundle"), (4, 7, "G", None, "announce"),
- (4, 8, "G", None, "saved107"), (4, 9, "S", "S5c3", None), (4, 10, "S", "P2", "email"), (4, 11, "R", R("ren_thinking"), "jolt"), (4, 12, "S", "S4a", None), (4, 13, "R", R("ren_point_right"), "icons"),
- (4, 16, "R", R("ren_idle_listen"), "saved_q"), (4, 17, "R", R("ren_present_palm_left", True), "spent183"),
+ (4, 0, "S", "S4a", None), (4, 1, "G", None, "clock"), (4, 2, "G", None, "only3"), (4, 3, "S", "P3", "cartcount"), (4, 4, "G", None, "fryer"), (4, 5, "G", None, "fryer2"), (4, 6, "R", R("ren_hold_phone"), "earbuds"), (4, 7, "G", None, "bundle"), (4, 8, "G", None, "bundle2"),
+ (4, 9, "G", None, "announce"), (4, 10, "G", None, "saved107"), (4, 11, "S", "S5c3", None), (4, 12, "S", "P2", "email"), (4, 13, "R", R("ren_thinking"), "jolt"), (4, 14, "S", "S4a", None), (4, 15, "R", R("ren_point_right"), "icons"),
+ (4, 19, "G", None, "heresthing"), (4, 20, "R", R("ren_idle_listen"), "saved_q"), (4, 21, "R", R("ren_present_palm_left", True), "spent183"),
  (5, 0, "G", None, "rule2"), (5, 1, "S", "C1", None), (5, 2, "G", None, "smaller"), (5, 3, "G", None, "eq"), (5, 4, "R", R("ren_point_right"), "t341"), (5, 5, "G", None, "bar"), (5, 6, "R", R("ren_thinking"), "rule3"), (5, 7, "R", R("ren_hold_phone"), "was150"),
  (5, 8, "S", "C2", None), (5, 9, "R", R("ren_point_right"), "hist"), (5, 10, "G", None, "hist105"), (5, 11, "R", R("ren_shake_no"), "real"), (5, 12, "G", None, "fine"), (5, 13, "R", R("ren_shrug"), "sticker"),
  (6, 0, "R", R("ren_point_right"), "rule4"), (6, 1, "G", None, "bought3"), (6, 2, "G", None, "cart3"), (6, 3, "S", "S4b2", None), (6, 4, "S", "W2", None), (6, 5, "G", None, "question"), (6, 6, "R", R("ren_thinking"), "need"), (6, 7, "G", None, "i_fryer"),
@@ -29,15 +29,15 @@ FULL = list(BP.PL) + [
  (6, 15, "G", None, "two_go"), (6, 16, "R", R("ren_nod_yes"), "waiting"), (6, 17, "R", R("ren_present_palm_left", True), "moon"), (6, 18, "R", R("ren_point_down_right"), "room_bar"), (6, 19, "G", None, "onpurpose"),
  (7, 0, "R", R("ren_present_palm_left", True), "tally0"), (7, 1, "G", None, "tally1"), (7, 2, "G", None, "tally1b"), (7, 3, "R", R("ren_point_right"), "rulesA"), (7, 4, "G", None, "tally2"), (7, 5, "G", None, "tally2b"),
  (7, 6, "R", R("ren_idle_calm"), "under37"), (7, 7, "G", None, "less"), (7, 8, "R", R("ren_shrug"), "extra"), (7, 9, "S", "T1", None), (7, 10, "G", None, "prize"), (7, 11, "R", R("ren_thinking"), "room"), (7, 12, "R", R("ren_nod_yes"), "treat"),
- (8, 0, "R", R("ren_point_right"), "rule5"), (8, 1, "S", "E1", None), (8, 2, "S", "E2", None), (8, 3, "R", R("ren_idle_calm"), "recap3"), (8, 4, "G", None, "recap5"), (8, 5, "R", R("ren_thumbs_up"), "endcard"), (8, 6, "G", None, "endcard2")]
+ (8, 0, "R", R("ren_point_right"), "rule5"), (8, 1, "S", "E1", None), (8, 2, "S", "E2", None), (8, 3, "R", R("ren_idle_calm"), "recap4"), (8, 4, "G", None, "recap5"), (8, 5, "R", R("ren_thumbs_up"), "endcard"), (8, 6, "G", None, "endcard2")]
 V = B.V; usd = B.usd; NAVY, GREEN, RED = U.NAVY, U.GREEN, U.RED
 def cards(c):
     t, d, T_ = c.t, c.d, c.T; q = lambda a, b: clamp((t - a) / b)
     return {"rule1": lambda: B.rule_chip(1, "Write the list", 960), "coat": lambda: B.tag_single("Winter coat", 120), "twotags": lambda: B.two_tags(("Coat", 120, int(V["coat"])), ("Gift", 60, int(V["gift"]))),
      "charger_tag": lambda: B.tag_single("Phone charger", 25), "charger_tag2": lambda: B.price_tag("Phone charger", 25, int(V["charger"]), q(0.4, 0.5)), "sum": lambda: B.sum_card(int(V["list_sale"]), int(_f("coat_full") + _f("gift_full") + _f("charger_full"))),
      "ticks3": lambda: B.ticks_card(["Coat", "Gift", "Charger"], 1 + int(t / max(d, 1e-6) * 3)), "working": lambda: B.tick_chip("Sales can work for you", 940),
-     "clock": lambda: B.clock_card(3 * 3600 - 1 - int(T_)), "only3": lambda: B.badge_red("ONLY 3 LEFT"), "cartcount": lambda: B.counter_card(3 + min(3, int(t / 0.5))), "fryer": lambda: B.price_tag("Air fryer", 80, int(V["airfryer"]), q(0.5, 0.6)),
-     "earbuds": lambda: B.price_tag("Earbuds", 150, int(V["earbuds"]), q(0.5, 0.6)), "bundle": lambda: B.price_tag("Mystery bundle", 60, int(V["bundle"]), q(0.5, 0.6)), "announce": lambda: B.banner("You saved!"),
+     "clock": lambda: B.clock_card(3 * 3600 - 1 - int(T_)), "only3": lambda: B.badge_red("ONLY 3 LEFT"), "cartcount": lambda: B.counter_card(3 + min(3, int(t / 0.5))), "fryer": lambda: B.tag_single("Air fryer", 80), "fryer2": lambda: B.price_tag("Air fryer", 80, int(V["airfryer"]), q(0.3, 0.5)), "heresthing": lambda: B.chip("Here's the thing", 900, "gold", 76),
+     "earbuds": lambda: B.price_tag("Earbuds", 150, int(V["earbuds"]), q(0.5, 0.6)), "bundle": lambda: B.tag_single("Mystery bundle", 60, 760), "bundle2": lambda: B.price_tag("Mystery bundle", 60, int(V["bundle"]), q(0.3, 0.5)), "announce": lambda: B.banner("You saved!"),
      "saved107": lambda: B.parts_card("Store says you saved", [("Air fryer", 32), ("Earbuds", 45), ("Bundle", 30)], 107, GREEN), "email": lambda: B.email_card("Sale ends at midnight"), "jolt": lambda: B.chip("Get it before it's gone", 900, "gold", 62),
      "icons": lambda: B.mini_icons(), "saved_q": lambda: B.parts_card("Really saved?", [("Air fryer", 32), ("Earbuds", 45), ("Bundle", 30)], 107, RED, 900, q(0.5, 0.7)),
      "spent183": lambda: B.parts_card("About to spend", [("Air fryer", 48), ("Earbuds", 105), ("Bundle", 30)], 183, RED), "rule2": lambda: B.rule_chip(2, "Do the math", 960), "smaller": lambda: B.chip("A smaller bill, still a bill", 1000, "cream", 68),
@@ -51,7 +51,7 @@ def cards(c):
      "onpurpose": lambda: B.badge_red("On purpose") if False else B.chip("A purchase made on purpose", 1000, "gold", 66), "tally0": lambda: B.chip("The final tally", 760, "gold", 72), "tally1": lambda: B.tally_card(0 if False else 1) if False else B.total_card("Impulse Alex", usd(V["all_in"]), RED, 760),
      "tally1b": lambda: B.total_card("Over budget by", usd(V["all_in"] - 300), RED, 800), "rulesA": lambda: B.total_card("The list", usd(V["list_sale"]), NAVY, 760), "tally2": lambda: B.parts_card("Rule-following Alex", [("List", int(V["list_sale"])), ("Earbuds", int(V["earbuds"])), ("", 0)], int(V["rule_path"]), GREEN) if False else B.equation_card(int(V["list_sale"]), int(V["earbuds"]), int(V["rule_path"])),
      "tally2b": lambda: B.total_card("Rule-following Alex", usd(V["rule_path"]), GREEN, 900), "under37": lambda: B.total_card("Under budget by", usd(300 - V["rule_path"]), GREEN, 800), "less": lambda: B.less_card(), "extra": lambda: B.chip("Still bought something extra", 1000, "cream", 62),
-     "prize": lambda: B.chip("Not a prize for being boring", 1000, "cream", 62), "room": lambda: B.envelope_card(), "treat": lambda: B.treat_card(), "rule5": lambda: B.transfer_card(q(0.4, 1.2)), "recap3": lambda: B.recap_card(1 + min(2, int(t / max(d, 1e-6) * 3))),
+     "prize": lambda: B.chip("Not a prize for being boring", 1000, "cream", 62), "room": lambda: B.envelope_card(), "treat": lambda: B.treat_card(), "rule5": lambda: B.transfer_card(q(0.4, 1.2)), "recap4": lambda: B.recap_card(1 + min(3, int(t / max(d, 1e-6) * 4))),
      "recap5": lambda: B.recap_card(5), "endcard": lambda: B.end_card(900), "endcard2": lambda: B.end_card(1000)}
 def _f(k): return B._a[k]
 FIGS = re.compile(r"\$")
