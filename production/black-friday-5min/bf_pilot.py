@@ -14,6 +14,7 @@ sys.path.insert(0, str(HERE)); sys.path.insert(0, str(ROOT / "videos" / "unclaim
 import pilot_ren as PR, pilot_ui as U, bf_ui as B
 from tools import shot_plan as SP
 W, H, FPS = 1920, 1080, 24; ease, clamp = U.ease, U.clamp; VOICE = HERE / "voice"; A = HERE / "assets"; TAIL = 0.25
+REN_X, REN_FEET = 470, 805      # plate coordinates (1672x941): nearer the camera and right of the chair, on the rug, so the shoes clear the chair legs
 DISC = "Educational only, not financial advice."; CAP = {"R": 5.5, "S": 2.5, "G": 3.5}
 STILL = {"S1c2": A / "stills_batch2/candidates/S1_shop_entrance_c2.png", "CAFE": A / "approved_alex/alex-cafe.png", "HOME": A / "approved_alex/alex-home.png", "M1": A / "stills/02_M1_old_coat.png", "M2": A / "stills/03_M2_gift.png"}
 EV = json.loads((HERE / "evidence" / "mouth_scan.json").read_text()) if (HERE / "evidence" / "mouth_scan.json").exists() else {}
@@ -104,7 +105,7 @@ class Ctx:
 _rc = {}
 def ren_draw(c, clip, mirror):
     key = (c.sid, clip)
-    if key not in _rc: _rc.clear(); _rc[key] = PR.RenClip(clip, ren_window(clip, c.d), c.d + 0.1, mirror=mirror)
+    if key not in _rc: _rc.clear(); _rc[key] = PR.RenClip(clip, ren_window(clip, c.d), c.d + 0.1, cx_plate=REN_X, feet_plate=REN_FEET, mirror=mirror)
     bx, i = _rc[key].draw(c.f, c.t); c.rec.ren = (c.sid, c.T, *bx); return bx
 def card_for(name, c):
     t, d = c.t, c.d

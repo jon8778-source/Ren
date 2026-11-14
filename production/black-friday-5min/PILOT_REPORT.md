@@ -1,6 +1,6 @@
 # Black Friday long-form: pilot report (sections 1-2)
 
-Delivered file: ren_black_friday_pilot_50s.mp4 (local only, SHA-256 b1b392a7c15146c9...). 1280x720, 24 fps, 1,215 frames, **50.6 s** (narration 50.36 s + 0.25 s tail), H.264/AAC, -16.2 LUFS, true peak -1.6 dBFS. Rendered at 1920x1080 internally and scaled once to 1280x720.
+Delivered file: ren_black_friday_pilot_50s.mp4 (local only, SHA-256 e4a77b1abdd11973...). 1280x720, 24 fps, 1,215 frames, **50.6 s** (narration 50.36 s + 0.25 s tail), H.264/AAC, -16.2 LUFS, true peak -1.6 dBFS. Rendered at 1920x1080 internally and scaled once to 1280x720.
 **It is shorter than the ~60 s target**: the approved script's sections 1-2 are 156 words, which the Qwen voice reads in 50 s. Say if you want the pilot extended into rule one (needs about 10 s more narration).
 
 ## What you are looking at
@@ -16,7 +16,7 @@ Delivered file: ren_black_friday_pilot_50s.mp4 (local only, SHA-256 b1b392a7c151
 
 ## Limits and what I could not verify
 - **I cannot hear the audio**: pronunciation (especially the numbers), pacing and sentence joins are unchecked. Please listen.
-- Ren is small on the sage plate (the calibrated OFFICE_SAGE scale, same as the 401(k) baseline); the full-screen graphics are plain cards over the blurred plate. Six of 23 shots are graphics-only, so the look is cleaner than the 401(k) opening but not richer.
+- Revision 14 Nov (owner feedback: Ren's shoe looked caught on the chair leg): Ren now stands nearer the camera, right of the chair and at the rug edge (plate position x 470, floor row 805, about 22 % larger on the calibrated OFFICE_SAGE geometry), so his shoes are clearly in front of the chair legs with a contact shadow; checked on 6 frames (wave, point, count, shrug, think, present) and a 100 % crop of the feet, head at least 40 px from the top. The full-screen graphics are plain cards over the blurred plate. Six of 23 shots are graphics-only, so the look is cleaner than the 401(k) opening but not richer.
 - Alex appears only as stills (no cut-out poses exist), so Alex and Ren never share a frame.
 - Not viewed: the video playing at speed, a phone playback, every frame (only sampled frames, contact sheets and crops). Face crops were sampled, not exhaustive.
 - Gate record: script approval was given as "Approved" without naming the FTC option; I assumed the FTC line is cut.
