@@ -6,103 +6,104 @@ n,section,t,words,est_s,kind,asset,phrase,action,optional
 5,1,10.0,5,2.0,G,code,and two very different plans.,Two-path card: Impulse Alex / Rule-following Alex,False
 6,1,12.0,9,3.6,R,"ren_present_palm_left (mirrored, inspected)",One plan ends at three hundred and forty-one dollars.,Ren presents the card: '$341',False
 7,1,15.6,8,3.2,G,code,The other ends at two hundred and sixty-three.,Card '$263' replaces '$341',False
-8,1,18.8,7,2.8,G,code,"Same shop, same sales, seventy-eight dollars apart.",Both totals with a '$78 apart' bracket; 'Example figures',False
+8,1,18.8,7,2.8,R,ren_idle_calm,"Same shop, same sales, seventy-eight dollars apart.",Ren stands calm beside both totals with a '$78 apart' bracket; 'Example figures',False
 9,1,21.6,13,5.2,R,ren_count_fingers,"Along the way, you'll get five simple rules for your own Black Friday,",Ren counts; '5 rules' chips (mouth window to be scanned),False
 10,1,26.8,8,3.2,G,code,and none of them say never buy anything.,'Never buy anything' struck through (code),False
 11,1,30.0,4,1.6,R,ren_nod_yes,Let's see what happens.,Ren nods,False
-12,2,31.6,5,2.0,S,ALEX-CAFE,Meet Alex. Alex isn't reckless.,Approved coffee-v3 art: Alex taps to pay (introduces Alex in approved art),False
-13,2,33.6,5,2.0,S,ALEX-HOME,Alex has a holiday budget,Approved coffee-v3 art: Alex in the kitchen,False
-14,2,35.6,4,1.6,G,code,"of three hundred dollars,",'$300 holiday budget' tag,False
-15,2,37.2,12,4.8,R,ren_idle_listen,and it has to cover a few things that genuinely need buying.,Ren listens; 'Needs' list card appears (empty lines),False
-16,2,42.0,3,1.2,S,02_M1,A winter coat.,Alex studies the worn coat,False
-17,2,43.2,5,2.0,S,03_M2,A gift for a friend.,Alex holds a gift,False
-18,2,45.2,4,1.6,S,04_M3,And a phone charger,Alex untangles the cable,False
-19,2,46.8,12,4.8,R,ren_shrug,that only works if you hold it at just the right angle.,Ren shrugs; charger icon card (code),False
-20,2,51.6,9,3.6,R,ren_nod_yes,Waiting for Black Friday is a perfectly sensible plan.,Ren nods; calendar card with Black Friday circled,False
-21,2,55.2,4,1.6,G,code,Sales can be real.,'Sales can be real' badge,False
-22,2,56.8,6,2.4,G,code,The trouble usually isn't the sale.,Price tag with a green tick,False
-23,2,59.2,8,3.2,R,ren_thinking,It's what the sale does to our decisions.,Ren thinks; 'decisions' arrow card,False
-24,3,62.4,9,3.6,R,ren_clipboard_tick (mouth-closed window from 5.4 s),Rule one: write the list before the sales start.,Ren with 'RULE 1: Write the list' tag,False
-25,3,66.0,5,2.0,S,05_L1,Alex's list has three items.,Alex writes the list,False
-26,3,68.0,8,3.2,R,ren_point_right,"The coat is one hundred and twenty dollars,",Ren points at a $120 coat tag,False
-27,3,71.2,5,2.0,S,06_L2,"and it's twenty-five percent off,",Alex holds the coat; tag $120 overlay,False
-28,3,73.2,12,4.8,R,ren_open_arms,"so ninety. The gift is sixty dollars, twenty percent off, so forty-eight.",Ren with tags $120 -> $90 and $60 -> $48,False
-29,3,78.0,5,2.0,G,code,"The charger is twenty-five dollars,",Charger tag $25,False
-30,3,80.0,5,2.0,G,code,"twenty percent off, so twenty.",Charger tag $25 -> $20,False
-31,3,82.0,13,5.2,R,"ren_present_palm_left (mirrored, inspected)","Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five.",Sum card $158 vs $205,False
-32,3,87.2,6,2.4,G,code,A real saving of forty-seven dollars,'$47 saved' badge,False
-33,3,89.6,8,3.2,G,code,on things Alex was already going to buy.,"List ticks (coat, gift, charger)",False
-34,3,92.8,8,3.2,R,ren_idle_calm,That's Black Friday working the way it should.,Ren calm; green tick,False
-35,4,96.0,6,2.4,S,07_P1,Then Alex opens a shop's website.,Alex at the laptop at night,False
-36,4,98.4,5,2.0,G,code,A countdown clock is ticking.,Countdown clock 02:59:59 ticking (code),False
-37,4,100.4,6,2.4,S,08_P4,A badge says only three left.,Alex tempted; ONLY 3 LEFT badge pops (code),False
-38,4,102.8,6,2.4,S,10_P3,And Alex's cart starts getting longer.,Cart props; item counter ticks up (code),False
-39,4,105.2,8,3.2,G,code,"An air fryer, eighty dollars, forty percent off.",Tag $80 -> $48,False
-40,4,108.4,11,4.4,R,ren_shake_no,"Fancy earbuds, listed at a hundred and fifty, thirty percent off.",Ren (return) beside tag $150 -> $105,False
-41,4,112.8,8,3.2,G,code,"And a mystery bundle, sixty dollars, half price.",Tag $60 -> $30,False
-42,4,116.0,8,3.2,G,code,The website cheerfully announces that Alex has saved,Banner 'You saved' (code),False
-43,4,119.2,5,2.0,G,code,one hundred and seven dollars.,'$107' (32 + 45 + 30 shown as a sum),False
-44,4,121.2,4,1.6,S,09_P2,Then an email pings.,Phone buzzes on the desk,False
-45,4,122.8,4,1.6,G,code,Sale ends at midnight.,Email pop-up (code),False
-46,4,124.4,11,4.4,R,ren_thinking,Alex feels that little jolt of get it before it's gone.,Ren thinks; 'get it before it's gone' card,False
-47,4,128.8,5,2.0,S,07_P1 (callback),"It's a very human feeling,",Callback: Alex at the laptop,False
-48,4,130.8,11,4.4,R,ren_point_right,and it's the one clocks and badges tend to tap into.,Ren points at clock + badge icons,False
-49,4,135.2,5,2.0,G,code,"Not every timer is fake,",OPTIONAL: 'Real or fake?' card,True
-50,4,137.2,8,3.2,R,"ren_present_palm_left (mirrored, inspected)","but the FTC has criticized the fake ones,",OPTIONAL: only with a verified primary source; source chip on screen,True
-51,4,140.4,9,3.6,R,ren_nod_yes,so a ticking clock isn't proof of a deal.,OPTIONAL: continues the FTC line,True
-52,4,144.0,12,4.8,R,ren_open_arms,And here's the thing. Alex hasn't saved one hundred and seven dollars.,Ren; '$107 saved?' struck through,False
-53,4,148.8,9,3.6,R,"ren_present_palm_left (mirrored, inspected)",Alex is about to spend one hundred and eighty-three.,$183 sum card: 48 + 105 + 30,False
-54,5,152.4,5,2.0,G,code,Rule two: do the math.,'RULE 2' tag on a calculator,False
-55,5,154.4,5,2.0,S,11_C1,A discount isn't a saving.,Alex with calculator and notepad,False
-56,5,156.4,5,2.0,G,code,It's just a smaller bill.,Bill shrinks but is still a bill,False
-57,5,158.4,6,2.4,G,code,Add the list to the cart,$158 + $183 sum,False
-58,5,160.8,9,3.6,R,ren_point_right,"and Alex is at three hundred and forty-one dollars,",Ren points at '$341',False
-59,5,164.4,6,2.4,G,code,which is forty-one dollars over budget.,Budget bar $300 with '$41 over' in red,False
-60,5,166.8,7,2.8,R,ren_thinking,Rule three: check what it normally costs.,RULE 3 tag,False
-61,5,169.6,10,4.0,R,ren_hold_phone,Those earbuds say they were a hundred and fifty dollars.,Ren holds phone; was-price $150 tag,False
-62,5,173.6,6,2.4,S,12_C2,"Alex looks at the price history,",Alex at laptop,False
-63,5,176.0,10,4.0,R,ren_point_right,and they've sat at a hundred and fifteen for months.,Price-history line chart (code) at $115,False
-64,5,180.0,5,2.0,G,code,"At a hundred and five,",$105 sale price on the chart,False
-65,5,182.0,8,3.2,R,ren_shake_no,"the real saving is ten dollars, not forty-five.","'$10, not $45' card",False
-66,5,185.2,8,3.2,G,code,"That's still fine if Alex truly needs them,",Green tick,False
-67,5,188.4,9,3.6,R,ren_shrug,but it's not the bargain the sticker shouted about.,Ren shrugs; sticker card,False
-68,6,192.0,8,3.2,R,ren_point_right,Rule four: let it sit for twenty-four hours.,"RULE 4 tag, 24h clock",False
-69,6,195.2,8,3.2,G,code,"Alex buys the three things on the list,","Checkout ticks (coat, gift, charger)",False
-70,6,198.4,8,3.2,G,code,then leaves the other three in the cart,"Cart with air fryer, earbuds, bundle",False
-71,6,201.6,4,1.6,S,13_W1,and closes the laptop.,Laptop closes; night,False
-72,6,203.2,3,1.2,S,14_W2,"The next morning,","Morning kitchen, mug",False
-73,6,204.4,6,2.4,G,code,Alex asks one question about each.,Question card,False
-74,6,206.8,13,5.2,R,ren_thinking,"Do I need this, or did the timer need me to buy it?",Question card on the right,False
-75,6,212.0,3,1.2,G,code,The air fryer?,Air fryer card,False
-76,6,213.2,5,2.0,S,15_W3,Alex already has a pan,Old pan on the hob,False
-77,6,215.2,3,1.2,G,code,that works fine.,Air fryer crossed out,False
-78,6,216.4,3,1.2,G,code,The mystery bundle?,Bundle card,False
-79,6,217.6,7,2.8,G,code,Alex can't even remember what's in it.,Bundle card with '?'; crossed out,False
-80,6,220.4,2,0.8,G,code,The earbuds?,Earbuds card,False
-81,6,221.2,6,2.4,S,16_W4,The old pair really did die,Alex with the dead wired pair,False
-82,6,223.6,6,2.4,G,code,last week. So those stay in.,Earbuds tick,False
-83,6,226.0,4,1.6,G,code,The other two go.,Two items removed from the cart,False
-84,6,227.6,7,2.8,R,ren_nod_yes,Notice that waiting doesn't mean saying no.,Ren nods,False
-85,6,230.4,11,4.4,R,"ren_present_palm_left (mirrored, inspected)",It just means the answer has to survive a night's sleep.,Moon-to-sun card,False
-86,6,234.8,12,4.8,R,ren_open_arms,"If Alex still wants the earbuds, and has room in the budget,",Budget bar with room,False
-87,6,239.6,7,2.8,G,code,that's a good purchase made on purpose.,'On purpose' badge,False
-88,7,242.4,4,1.6,R,"ren_present_palm_left (mirrored, inspected)",Here's the final tally.,Comparison card slides in,False
-89,7,244.0,8,3.2,G,code,"Impulse Alex spends three hundred and forty-one dollars,",Left column $341,False
-90,7,247.2,3,1.2,G,code,forty-one over budget.,'$41 over' in red,False
-91,7,248.4,11,4.4,R,ren_point_right,"Rule-following Alex spends the one hundred and fifty-eight on the list,",Right column $158,False
-92,7,252.8,8,3.2,G,code,plus one hundred and five for the earbuds.,+ $105,False
-93,7,256.0,5,2.0,G,code,Two hundred and sixty-three dollars.,$263,False
-94,7,258.0,4,1.6,R,ren_idle_calm,"That's thirty-seven under budget,",'$37 under' in green,False
-95,7,259.6,8,3.2,G,code,and seventy-eight dollars less than the impulse cart.,'$78 less' bracket = 48 + 30,False
-96,7,262.8,12,4.8,R,ren_shrug,Notice Alex still bought something extra. This isn't about never treating yourself.,Ren shrugs,False
-97,7,267.6,6,2.4,S,17_T1,That thirty-seven dollars isn't a prize,Alex relaxes on the sofa,False
-98,7,270.0,3,1.2,G,code,for being boring.,Crossed-out 'prize' badge,False
-99,7,271.2,8,3.2,R,ren_thinking,"It's room. Room for the next surprise bill,",Surprise-bill envelope icon,False
-100,7,274.4,13,5.2,R,ren_nod_yes,"or for a treat Alex plans for, rather than one the countdown picked.",Planned treat vs countdown treat,False
-101,8,279.6,13,5.2,R,ren_point_right,"Rule five: move the thirty-seven dollars you didn't spend into savings straight away,","RULE 5 tag, $37 arrow to savings",False
-102,8,284.8,4,1.6,S,18_E1,before it quietly disappears.,Alex makes a transfer on the phone,False
-103,8,286.4,4,1.6,S,19_E2,Quick recap. List first.,Piggy bank on the kitchen counter,False
-104,8,288.0,10,4.0,R,ren_count_fingers,Do the math. Check the usual price. Wait twenty-four hours.,Recap list builds (mouth window to be scanned),False
-105,8,292.0,6,2.4,G,code,And move what's left into savings.,Recap line 5,False
-106,8,294.4,10,4.0,R,ren_thumbs_up (mouth-closed window from 4.9 s),Check out the Money Leak Audit Workbook in the description.,End card in code; end disclaimer held 2 s+,False
-107,8,298.4,4,1.6,G,code,See you next time.,End card,False
+12,2,31.6,2,0.8,S,ALEX-CAFE,Meet Alex.,Approved coffee-v3 art: Alex taps to pay (introduces Alex in approved art),False
+13,2,32.4,3,1.2,G,code,Alex isn't reckless.,Tick chip: 'Alex isn't reckless',False
+14,2,33.6,5,2.0,S,ALEX-HOME,Alex has a holiday budget,Approved coffee-v3 art: Alex in the kitchen,False
+15,2,35.6,4,1.6,G,code,"of three hundred dollars,",'$300 holiday budget' tag,False
+16,2,37.2,12,4.8,R,ren_idle_listen,and it has to cover a few things that genuinely need buying.,Ren listens; 'Needs' list card appears (empty lines),False
+17,2,42.0,3,1.2,S,02_M1,A winter coat.,Alex studies the worn coat,False
+18,2,43.2,5,2.0,S,03_M2,A gift for a friend.,Alex holds a gift,False
+19,2,45.2,4,1.6,S,04_M3,And a phone charger,Alex untangles the cable,False
+20,2,46.8,12,4.8,R,ren_shrug,that only works if you hold it at just the right angle.,Ren shrugs; charger icon card (code),False
+21,2,51.6,9,3.6,R,ren_nod_yes,Waiting for Black Friday is a perfectly sensible plan.,Ren nods; calendar card with Black Friday circled,False
+22,2,55.2,4,1.6,G,code,Sales can be real.,'Sales can be real' badge,False
+23,2,56.8,6,2.4,G,code,The trouble usually isn't the sale.,Price tag with a green tick,False
+24,2,59.2,8,3.2,R,ren_thinking,It's what the sale does to our decisions.,Ren thinks; 'decisions' arrow card,False
+25,3,62.4,9,3.6,R,ren_clipboard_tick (mouth-closed window from 5.4 s),Rule one: write the list before the sales start.,Ren with 'RULE 1: Write the list' tag,False
+26,3,66.0,5,2.0,S,05_L1,Alex's list has three items.,Alex writes the list,False
+27,3,68.0,8,3.2,R,ren_point_right,"The coat is one hundred and twenty dollars,",Ren points at a $120 coat tag,False
+28,3,71.2,5,2.0,S,06_L2,"and it's twenty-five percent off,",Alex holds the coat; tag $120 overlay,False
+29,3,73.2,12,4.8,R,ren_open_arms,"so ninety. The gift is sixty dollars, twenty percent off, so forty-eight.",Ren with tags $120 -> $90 and $60 -> $48,False
+30,3,78.0,5,2.0,G,code,"The charger is twenty-five dollars,",Charger tag $25,False
+31,3,80.0,5,2.0,G,code,"twenty percent off, so twenty.",Charger tag $25 -> $20,False
+32,3,82.0,13,5.2,R,"ren_present_palm_left (mirrored, inspected)","Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five.",Sum card $158 vs $205,False
+33,3,87.2,6,2.4,G,code,A real saving of forty-seven dollars,'$47 saved' badge,False
+34,3,89.6,8,3.2,G,code,on things Alex was already going to buy.,"List ticks (coat, gift, charger)",False
+35,3,92.8,8,3.2,R,ren_idle_calm,That's Black Friday working the way it should.,Ren calm; green tick,False
+36,4,96.0,6,2.4,S,07_P1,Then Alex opens a shop's website.,Alex at the laptop at night,False
+37,4,98.4,5,2.0,G,code,A countdown clock is ticking.,Countdown clock 02:59:59 ticking (code),False
+38,4,100.4,6,2.4,S,08_P4,A badge says only three left.,Alex tempted; ONLY 3 LEFT badge pops (code),False
+39,4,102.8,6,2.4,S,10_P3,And Alex's cart starts getting longer.,Cart props; item counter ticks up (code),False
+40,4,105.2,8,3.2,G,code,"An air fryer, eighty dollars, forty percent off.",Tag $80 -> $48,False
+41,4,108.4,11,4.4,R,ren_shake_no,"Fancy earbuds, listed at a hundred and fifty, thirty percent off.",Ren (return) beside tag $150 -> $105,False
+42,4,112.8,8,3.2,G,code,"And a mystery bundle, sixty dollars, half price.",Tag $60 -> $30,False
+43,4,116.0,8,3.2,G,code,The website cheerfully announces that Alex has saved,Banner 'You saved' (code),False
+44,4,119.2,5,2.0,G,code,one hundred and seven dollars.,'$107' (32 + 45 + 30 shown as a sum),False
+45,4,121.2,4,1.6,S,09_P2,Then an email pings.,Phone buzzes on the desk,False
+46,4,122.8,4,1.6,G,code,Sale ends at midnight.,Email pop-up (code),False
+47,4,124.4,11,4.4,R,ren_thinking,Alex feels that little jolt of get it before it's gone.,Ren thinks; 'get it before it's gone' card,False
+48,4,128.8,5,2.0,S,07_P1 (callback),"It's a very human feeling,",Callback: Alex at the laptop,False
+49,4,130.8,11,4.4,R,ren_point_right,and it's the one clocks and badges tend to tap into.,Ren points at clock + badge icons,False
+50,4,135.2,5,2.0,G,code,"Not every timer is fake,",OPTIONAL: 'Real or fake?' card,True
+51,4,137.2,8,3.2,R,"ren_present_palm_left (mirrored, inspected)","but the FTC has criticized the fake ones,",OPTIONAL: only with a verified primary source; source chip on screen,True
+52,4,140.4,9,3.6,R,ren_nod_yes,so a ticking clock isn't proof of a deal.,OPTIONAL: continues the FTC line,True
+53,4,144.0,12,4.8,R,ren_open_arms,And here's the thing. Alex hasn't saved one hundred and seven dollars.,Ren; '$107 saved?' struck through,False
+54,4,148.8,9,3.6,R,"ren_present_palm_left (mirrored, inspected)",Alex is about to spend one hundred and eighty-three.,$183 sum card: 48 + 105 + 30,False
+55,5,152.4,5,2.0,G,code,Rule two: do the math.,'RULE 2' tag on a calculator,False
+56,5,154.4,5,2.0,S,11_C1,A discount isn't a saving.,Alex with calculator and notepad,False
+57,5,156.4,5,2.0,G,code,It's just a smaller bill.,Bill shrinks but is still a bill,False
+58,5,158.4,6,2.4,G,code,Add the list to the cart,$158 + $183 sum,False
+59,5,160.8,9,3.6,R,ren_point_right,"and Alex is at three hundred and forty-one dollars,",Ren points at '$341',False
+60,5,164.4,6,2.4,G,code,which is forty-one dollars over budget.,Budget bar $300 with '$41 over' in red,False
+61,5,166.8,7,2.8,R,ren_thinking,Rule three: check what it normally costs.,RULE 3 tag,False
+62,5,169.6,10,4.0,R,ren_hold_phone,Those earbuds say they were a hundred and fifty dollars.,Ren holds phone; was-price $150 tag,False
+63,5,173.6,6,2.4,S,12_C2,"Alex looks at the price history,",Alex at laptop,False
+64,5,176.0,10,4.0,R,ren_point_right,and they've sat at a hundred and fifteen for months.,Price-history line chart (code) at $115,False
+65,5,180.0,5,2.0,G,code,"At a hundred and five,",$105 sale price on the chart,False
+66,5,182.0,8,3.2,R,ren_shake_no,"the real saving is ten dollars, not forty-five.","'$10, not $45' card",False
+67,5,185.2,8,3.2,G,code,"That's still fine if Alex truly needs them,",Green tick,False
+68,5,188.4,9,3.6,R,ren_shrug,but it's not the bargain the sticker shouted about.,Ren shrugs; sticker card,False
+69,6,192.0,8,3.2,R,ren_point_right,Rule four: let it sit for twenty-four hours.,"RULE 4 tag, 24h clock",False
+70,6,195.2,8,3.2,G,code,"Alex buys the three things on the list,","Checkout ticks (coat, gift, charger)",False
+71,6,198.4,8,3.2,G,code,then leaves the other three in the cart,"Cart with air fryer, earbuds, bundle",False
+72,6,201.6,4,1.6,S,13_W1,and closes the laptop.,Laptop closes; night,False
+73,6,203.2,3,1.2,S,14_W2,"The next morning,","Morning kitchen, mug",False
+74,6,204.4,6,2.4,G,code,Alex asks one question about each.,Question card,False
+75,6,206.8,13,5.2,R,ren_thinking,"Do I need this, or did the timer need me to buy it?",Question card on the right,False
+76,6,212.0,3,1.2,G,code,The air fryer?,Air fryer card,False
+77,6,213.2,5,2.0,S,15_W3,Alex already has a pan,Old pan on the hob,False
+78,6,215.2,3,1.2,G,code,that works fine.,Air fryer crossed out,False
+79,6,216.4,3,1.2,G,code,The mystery bundle?,Bundle card,False
+80,6,217.6,7,2.8,G,code,Alex can't even remember what's in it.,Bundle card with '?'; crossed out,False
+81,6,220.4,2,0.8,G,code,The earbuds?,Earbuds card,False
+82,6,221.2,6,2.4,S,16_W4,The old pair really did die,Alex with the dead wired pair,False
+83,6,223.6,6,2.4,G,code,last week. So those stay in.,Earbuds tick,False
+84,6,226.0,4,1.6,G,code,The other two go.,Two items removed from the cart,False
+85,6,227.6,7,2.8,R,ren_nod_yes,Notice that waiting doesn't mean saying no.,Ren nods,False
+86,6,230.4,11,4.4,R,"ren_present_palm_left (mirrored, inspected)",It just means the answer has to survive a night's sleep.,Moon-to-sun card,False
+87,6,234.8,12,4.8,R,ren_open_arms,"If Alex still wants the earbuds, and has room in the budget,",Budget bar with room,False
+88,6,239.6,7,2.8,G,code,that's a good purchase made on purpose.,'On purpose' badge,False
+89,7,242.4,4,1.6,R,"ren_present_palm_left (mirrored, inspected)",Here's the final tally.,Comparison card slides in,False
+90,7,244.0,8,3.2,G,code,"Impulse Alex spends three hundred and forty-one dollars,",Left column $341,False
+91,7,247.2,3,1.2,G,code,forty-one over budget.,'$41 over' in red,False
+92,7,248.4,11,4.4,R,ren_point_right,"Rule-following Alex spends the one hundred and fifty-eight on the list,",Right column $158,False
+93,7,252.8,8,3.2,G,code,plus one hundred and five for the earbuds.,+ $105,False
+94,7,256.0,5,2.0,G,code,Two hundred and sixty-three dollars.,$263,False
+95,7,258.0,4,1.6,R,ren_idle_calm,"That's thirty-seven under budget,",'$37 under' in green,False
+96,7,259.6,8,3.2,G,code,and seventy-eight dollars less than the impulse cart.,'$78 less' bracket = 48 + 30,False
+97,7,262.8,12,4.8,R,ren_shrug,Notice Alex still bought something extra. This isn't about never treating yourself.,Ren shrugs,False
+98,7,267.6,6,2.4,S,17_T1,That thirty-seven dollars isn't a prize,Alex relaxes on the sofa,False
+99,7,270.0,3,1.2,G,code,for being boring.,Crossed-out 'prize' badge,False
+100,7,271.2,8,3.2,R,ren_thinking,"It's room. Room for the next surprise bill,",Surprise-bill envelope icon,False
+101,7,274.4,13,5.2,R,ren_nod_yes,"or for a treat Alex plans for, rather than one the countdown picked.",Planned treat vs countdown treat,False
+102,8,279.6,13,5.2,R,ren_point_right,"Rule five: move the thirty-seven dollars you didn't spend into savings straight away,","RULE 5 tag, $37 arrow to savings",False
+103,8,284.8,4,1.6,S,18_E1,before it quietly disappears.,Alex makes a transfer on the phone,False
+104,8,286.4,4,1.6,S,19_E2,Quick recap. List first.,Piggy bank on the kitchen counter,False
+105,8,288.0,10,4.0,R,ren_count_fingers,Do the math. Check the usual price. Wait twenty-four hours.,Recap list builds (mouth window to be scanned),False
+106,8,292.0,6,2.4,G,code,And move what's left into savings.,Recap line 5,False
+107,8,294.4,10,4.0,R,ren_thumbs_up (mouth-closed window from 4.9 s),Check out the Money Leak Audit Workbook in the description.,End card in code; end disclaimer held 2 s+,False
+108,8,298.4,4,1.6,G,code,See you next time.,End card,False

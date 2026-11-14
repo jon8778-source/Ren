@@ -19,10 +19,10 @@ STILL = {"S1c2": A / "stills_batch2/candidates/S1_shop_entrance_c2.png", "CAFE":
 EV = json.loads((HERE / "evidence" / "mouth_scan.json").read_text()) if (HERE / "evidence" / "mouth_scan.json").exists() else {}
 # pilot shots: (plan section, index in that section, kind, source, card builder name or None)   Ren source = (clip, mirror)
 PL = [(1, 0, "R", ("ren_wave_hello", False), "title"), (1, 1, "S", "S1c2", None), (1, 2, "G", None, "tagflip"), (1, 3, "R", ("ren_point_right", False), "budget"), (1, 4, "G", None, "plans"),
-      (1, 5, "R", ("ren_present_palm_left", True), "a341"), (1, 6, "G", None, "a263"), (1, 7, "G", None, "apart"), (1, 8, "R", ("ren_point_down_right", False), "rules"), (1, 9, "G", None, "never"),
-      (1, 10, "R", ("ren_nod_yes", False), "plansmall"), (2, 0, "S", "CAFE", None), (2, 1, "S", "HOME", None), (2, 2, "G", None, "budget2"), (2, 3, "R", ("ren_idle_listen", False), "needs"),
-      (2, 4, "S", "M1", None), (2, 5, "S", "M2", None), (2, 6, "G", None, "charger"), (2, 7, "R", ("ren_shrug", False), "angle"), (2, 8, "R", ("ren_nod_yes", False), "sensible"),
-      (2, 9, "G", None, "sales"), (2, 10, "G", None, "notsale"), (2, 11, "R", ("ren_thinking", False), "decisions")]
+      (1, 5, "R", ("ren_present_palm_left", True), "a341"), (1, 6, "G", None, "a263"), (1, 7, "R", ("ren_idle_calm", False), "apart"), (1, 8, "R", ("ren_point_down_right", False), "rules"), (1, 9, "G", None, "never"),
+      (1, 10, "R", ("ren_nod_yes", False), "plansmall"), (2, 0, "S", "CAFE", None), (2, 1, "G", None, "reckless"), (2, 2, "S", "HOME", None), (2, 3, "G", None, "budget2"), (2, 4, "R", ("ren_idle_listen", False), "needs"),
+      (2, 5, "S", "M1", None), (2, 6, "S", "M2", None), (2, 7, "G", None, "charger"), (2, 8, "R", ("ren_shrug", False), "angle"), (2, 9, "R", ("ren_nod_yes", False), "sensible"),
+      (2, 10, "G", None, "sales"), (2, 11, "G", None, "notsale"), (2, 12, "R", ("ren_thinking", False), "decisions")]
 FIG = {"budget", "a341", "a263", "apart", "budget2", "plansmall"}      # shots showing example figures
 def norm(s): return SP.norm(s)
 def phrases(): return [(SP.P[s][i][2], SP.P[s][i][3]) for s, i, *_ in PL]
@@ -90,9 +90,10 @@ class Ctx:
     def slide(self, img, t0=0.25, dur=0.45, y=None, frm=70):
         if self.t < t0: return
         p = ease((self.t - t0) / dur); w, h = img.im.size; self.put(img, 1860 - w + frm * (1 - p), (y if y is not None else 520 - h / 2), alpha=min(1, p * 1.6), rec=p > 0.99)
-    def pop(self, img, cx=960, cy=540, t0=0.12, dur=0.4):
+    def pop(self, img, cx=960, cy=540, t0=0.12, dur=0.4, big=1.35):
+        """Back-eased scale-in to `big` x the card (full-screen graphics read better on a phone when larger)."""
         if self.t < t0: return
-        p = U.back((self.t - t0) / dur); s = max(0.05, p); w, h = img.im.size; self.put(img, cx - w * s / 2, cy - h * s / 2, scale=s, rec=(self.t - t0) / dur > 0.98)
+        p = U.back((self.t - t0) / dur); s = max(0.05, p) * big; w, h = img.im.size; self.put(img, cx - w * s / 2, cy - h * s / 2, scale=s, rec=(self.t - t0) / dur > 0.98)
     def pill(self, text, x, y, px, alpha=1.0, anchor="l"):
         f = U.font(px, 600); d0 = ImageDraw.Draw(Image.new("RGBA", (4, 4))); b = d0.textbbox((0, 0), text, font=f); w_, h_ = b[2] - b[0] + 44, b[3] - b[1] + 24; x = x if anchor == "l" else x - w_
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay); d.rounded_rectangle((x + 2, y + 5, x + w_ + 2, y + h_ + 5), h_ // 2, fill=(*U.NAVY, 50)); d.rounded_rectangle((x, y, x + w_, y + h_), h_ // 2, fill=(*U.CREAM, 255)); d.text((x + 22 - b[0], y + 12 - b[1]), text, font=f, fill=U.NAVY)
@@ -110,7 +111,7 @@ def card_for(name, c):
     return {"title": lambda: B.title_card("Black Friday", "a test", "Example figures"), "budget": lambda: B.total_card("Alex's budget", B.usd(B.V["budget"]), U.NAVY, 720), "plans": lambda: B.plans_card(), "a341": lambda: B.total_card("Plan A ends at", B.usd(B.V["all_in"]), U.RED),
             "a263": lambda: B.total_card("Plan B ends at", B.usd(B.V["rule_path"]), U.GREEN), "apart": lambda: B.apart_card(clamp((t - 0.5) / 1.2)), "rules": lambda: B.rules_chip(min(5, 1 + int(t / max(d, 1e-6) * 5))), "never": lambda: B.never_card(clamp((t - 0.6) / 0.9)),
             "plansmall": lambda: B.plans_card(), "budget2": lambda: B.total_card("Holiday budget", B.usd(B.V["budget"]), U.NAVY, 720), "needs": lambda: B.needs_card(), "charger": lambda: B.charger_card(), "angle": lambda: B.chip("Just the right angle", 760, "gold", 58),
-            "sensible": lambda: B.chip("Waiting can be sensible", 860, "sage", 58), "sales": lambda: B.chip("Sales can be real", 900, "gold", 80), "notsale": lambda: B.tick_chip("The sale itself is fine", 940), "decisions": lambda: B.decisions_card(), "tagflip": lambda: B.tag_flip(clamp((t - 0.6) / 0.6))}[name]()
+            "sensible": lambda: B.chip("Waiting can be sensible", 860, "sage", 58), "sales": lambda: B.chip("Sales can be real", 900, "gold", 80), "notsale": lambda: B.tick_chip("The sale itself is fine", 940), "reckless": lambda: B.tick_chip("Alex isn't reckless", 900), "decisions": lambda: B.decisions_card(), "tagflip": lambda: B.tag_flip(clamp((t - 0.6) / 0.6))}[name]()
 def draw_shot(c, sh):
     kind = sh["kind"]
     if kind == "R":
@@ -118,7 +119,7 @@ def draw_shot(c, sh):
     elif kind == "S": c.f.alpha_composite(still(sh["src"], c.t / max(c.d, 1e-6)))
     else:
         c.f.alpha_composite(sage(9, True)); img = card_for(sh["card"], c)
-        if sh["card"] in ("tagflip", "apart", "never"): c.pop(img, 960, 540, 0.12, 0.4) if c.t < 0.55 else c.put(img, 960 - img.im.width / 2, 540 - img.im.height / 2)
+        if sh["card"] in ("tagflip", "apart", "never"): c.pop(img, 960, 540, 0.12, 0.4) if c.t < 0.55 else c.put(img, 960 - img.im.width * 1.35 / 2, 540 - img.im.height * 1.35 / 2, scale=1.35)
         else: c.pop(img)
 def build_shots():
     times, fake = shot_times(); out = []

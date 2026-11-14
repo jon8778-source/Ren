@@ -19,5 +19,26 @@
     "gen_s": 121.5
    }
   ]
+ },
+ "S2": {
+  "duration": 24.599,
+  "sample_rate": 24000,
+  "text": "Meet Alex. Alex isn't reckless. Alex has a holiday budget of three hundred dollars, and it has to cover a few things that genuinely need buying. A winter coat. A gift for a friend. And a phone charger that only works if you hold it at just the right angle. Waiting for Black Friday is a perfectly sensible plan. Sales can be real. The trouble usually isn't the sale. It's what the sale does to our decisions.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Meet Alex. Alex isn't reckless. Alex has a holiday budget of three hundred dollars, and it has to cover a few things that genuinely need buying. A winter coat. A gift for a friend.",
+    "start": 0.0,
+    "end": 11.827,
+    "gen_s": 191.1
+   },
+   {
+    "chunk": 2,
+    "text": "And a phone charger that only works if you hold it at just the right angle. Waiting for Black Friday is a perfectly sensible plan. Sales can be real. The trouble usually isn't the sale. It's what the sale does to our decisions.",
+    "start": 11.827,
+    "end": 24.599,
+    "gen_s": 69.9
+   }
+  ]
  }
 }
