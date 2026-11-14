@@ -1,0 +1,21 @@
+{
+ "duration": 26.845,
+ "sample_rate": 24000,
+ "text": "Black Friday isn't a sale. It's a test. Countdowns. 'Only three left.' Built to make you rush. Rule one: make your list before the sales start. Not on the list? Not a deal. Rule two: do the math. A hundred dollars at thirty percent off still costs seventy. It's only savings if you needed it. Rule three: let it sit in the cart for twenty-four hours. Still want it tomorrow? Buy it. Check out the Money Leak Audit Workbook in the description.",
+ "chunks": [
+  {
+   "chunk": 1,
+   "text": "Black Friday isn't a sale. It's a test. Countdowns. 'Only three left.' Built to make you rush. Rule one: make your list before the sales start. Not on the list? Not a deal. Rule two: do the math.",
+   "start": 0.0,
+   "end": 13.057,
+   "gen_s": 78.0
+  },
+  {
+   "chunk": 2,
+   "text": "A hundred dollars at thirty percent off still costs seventy. It's only savings if you needed it. Rule three: let it sit in the cart for twenty-four hours. Still want it tomorrow? Buy it. Check out the Money Leak Audit Workbook in the description.",
+   "start": 13.057,
+   "end": 26.845,
+   "gen_s": 68.7
+  }
+ ]
+}
