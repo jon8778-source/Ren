@@ -28,7 +28,7 @@ for i in items:
     r = ren.get(i[0])
     if r and not (i[4] < r[0] or i[2] > r[2] or i[5] < r[1] or i[3] > r[3]) and i[6] not in ("Educational only, not financial advice.", "Example figures"): ov.append((i[0], i[6]))
 ok("no card text overlaps Ren's bounding box", not ov, str(ov))
-shown = " ".join(i[6] for i in items); nums = sorted(set(re.findall(r"\$[\d,]+", shown))); allowed = {B.usd(B.V[k]) for k in ("budget", "all_in", "rule_path", "diff")}
+shown = " ".join(i[6] for i in items); nums = sorted(set(re.findall(r"\$[\d,]+", shown))); allowed = {B.usd(x) for x in B.ALLOWED}
 ok("every displayed dollar figure is in the checked table", set(nums) <= allowed, f"shown {nums}, allowed {sorted(allowed)}")
 ok("figure values: 158+183=341, 158+105=263, 341-263=78, 48+30=78, 300", B.V["list_sale"] + B.V["impulse"] == B.V["all_in"] and B.V["list_sale"] + B.V["earbuds"] == B.V["rule_path"] and B.V["all_in"] - B.V["rule_path"] == 78 == B.V["airfryer"] + B.V["bundle"])
 e = subprocess.run(["ffmpeg", "-nostats", "-i", str(mp4), "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr; I = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", e)[-1]); P = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", e)[-1])

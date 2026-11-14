@@ -197,5 +197,53 @@
     9.96
    ]
   ]
+ },
+ "ren_clipboard_tick": {
+  "window": [
+   0.75,
+   9.95
+  ],
+  "base": 0.045,
+  "thr": 0.085,
+  "flagged_frames": 14,
+  "n": 221,
+  "closed_intervals": [
+   [
+    3.46,
+    9.96
+   ]
+  ]
+ },
+ "ren_thumbs_up": {
+  "window": [
+   2.75,
+   8.0
+  ],
+  "base": 0.05,
+  "thr": 0.09,
+  "flagged_frames": 26,
+  "n": 126,
+  "closed_intervals": [
+   [
+    4.67,
+    8.0
+   ]
+  ]
+ },
+ "ren_shake_no": {
+  "window": [
+   1.25,
+   7.25
+  ],
+  "base": 0.047,
+  "thr": 0.087,
+  "flagged_frames": 0,
+  "n": 144,
+  "closed_intervals": [
+   [
+    1.25,
+    7.25
+   ]
+  ]
  }
 }

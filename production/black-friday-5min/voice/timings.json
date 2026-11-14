@@ -9,14 +9,14 @@
     "text": "Black Friday has a clever trick. It can make spending feel like saving. Today, Alex heads into the sales with a three hundred dollar budget and two very different plans. One plan ends at three hundred and forty-one dollars.",
     "start": 0.0,
     "end": 12.089,
-    "gen_s": 507.9
+    "gen_s": 0.0
    },
    {
     "chunk": 2,
     "text": "The other ends at two hundred and sixty-three. Same shop, same sales, seventy-eight dollars apart. Along the way, you'll get five simple rules for your own Black Friday, and none of them say never buy anything. Let's see what happens.",
     "start": 12.089,
     "end": 25.761,
-    "gen_s": 121.5
+    "gen_s": 0.0
    }
   ]
  },
@@ -30,14 +30,35 @@
     "text": "Meet Alex. Alex isn't reckless. Alex has a holiday budget of three hundred dollars, and it has to cover a few things that genuinely need buying. A winter coat. A gift for a friend.",
     "start": 0.0,
     "end": 11.827,
-    "gen_s": 191.1
+    "gen_s": 0.0
    },
    {
     "chunk": 2,
     "text": "And a phone charger that only works if you hold it at just the right angle. Waiting for Black Friday is a perfectly sensible plan. Sales can be real. The trouble usually isn't the sale. It's what the sale does to our decisions.",
     "start": 11.827,
     "end": 24.599,
-    "gen_s": 69.9
+    "gen_s": 0.0
+   }
+  ]
+ },
+ "S3": {
+  "duration": 29.023,
+  "sample_rate": 24000,
+  "text": "Rule one: write the list before the sales start. Alex's list has three items. The coat is one hundred and twenty dollars, and it's twenty-five percent off, so ninety. The gift is sixty dollars, twenty percent off, so forty-eight. The charger is twenty-five dollars, twenty percent off, so twenty. Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five. A real saving of forty-seven dollars on things Alex was already going to buy. That's Black Friday working the way it should.",
+  "chunks": [
+   {
+    "chunk": 1,
+    "text": "Rule one: write the list before the sales start. Alex's list has three items. The coat is one hundred and twenty dollars, and it's twenty-five percent off, so ninety. The gift is sixty dollars, twenty percent off, so forty-eight.",
+    "start": 0.0,
+    "end": 13.682,
+    "gen_s": 74.0
+   },
+   {
+    "chunk": 2,
+    "text": "The charger is twenty-five dollars, twenty percent off, so twenty. Altogether that's one hundred and fifty-eight dollars, instead of two hundred and five. A real saving of forty-seven dollars on things Alex was already going to buy. That's Black Friday working the way it should.",
+    "start": 13.682,
+    "end": 29.023,
+    "gen_s": 157.4
    }
   ]
  }
