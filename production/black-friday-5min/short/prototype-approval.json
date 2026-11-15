@@ -1,9 +1,9 @@
 {
   "by": "channel owner",
   "evidence": "production/black-friday-5min/short/APPROVAL_EVIDENCE.md",
-  "approved_at": "2026-11-14T23:58:08.635882+00:00",
-  "review_notes": "# Prototype review notes (Black Friday Short)\n\nOwner reviewed the 15 s prototype (SHA-256 b4207d27...). Review points: Ren in mouth-closed windows at the approved portrait position; Spending-to-Saving tag moved up so the opening chip no longer overlaps it; known limits (soft 1.8x/2x Alex crops, wave hand touching the left edge in beat 1, Ren in 13 of 22 beats). Launcher QA: no errors, no warnings. Not verified by me: audio listening, phone playback, frame-by-frame mouths. Owner replied \"Approved\" (14 Nov 2026).",
-  "fingerprint": "a002fd985368a46575e6e39f701b1423cd2d2d18dc902e0211f3115861638ef7",
+  "approved_at": "2026-11-15T09:21:38.612661+00:00",
+  "review_notes": "# Prototype review notes (Black Friday Short)\n\nOwner reviewed the 15 s prototype (SHA-256 b4207d27...). Review points: Ren in mouth-closed windows at the approved portrait position; Spending-to-Saving tag moved up so the opening chip no longer overlaps it; known limits (soft 1.8x/2x Alex crops, wave hand touching the left edge in beat 1, Ren in 13 of 22 beats). Launcher QA: no errors, no warnings. Not verified by me: audio listening, phone playback, frame-by-frame mouths. Owner replied \"Approved\" (14 Nov 2026).\n\nPost-approval change (15 Nov 2026): the full render failed QA (\"Less than the impulse cart\" overflowed its card in the last beat). The label became \"Less than impulse\" (44 px) and the card module `bf_short_ui.py` is now a hashed manifest asset. This invalidated the approval fingerprint; the prototype was re-rendered and its decoded video frames are identical to the approved one (MD5 3fc50fca...). Fresh owner approval requested.\n\nRe-approval (15 Nov 2026): owner replied 'Approved' to the unchanged prototype after the post-approval label fix.",
+  "fingerprint": "7222b61d2e85a603ebc54e3382929a921c3cb84971d8ce3fe309f56954bdb265",
   "prototype_sha256": "b4207d27c55c14a16a424afdb2832134fe1a14a32ba9ce061a35725470714872",
-  "report_sha256": "730f642fd04b78d4ea443a3f9ee40ce1ca814fc7ccff1e3bd15e83310e037738"
+  "report_sha256": "a7a05d86f8d2de706bb36ae24661e5e3c740dd41ce8047aaa4f6caa03a0ef473"
 }
