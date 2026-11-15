@@ -1,9 +1,9 @@
 {
   "by": "channel owner",
   "evidence": "production/black-friday-5min/short/APPROVAL_EVIDENCE.md",
-  "approved_at": "2026-11-15T09:21:38.612661+00:00",
-  "review_notes": "# Prototype review notes (Black Friday Short)\n\nOwner reviewed the 15 s prototype (SHA-256 b4207d27...). Review points: Ren in mouth-closed windows at the approved portrait position; Spending-to-Saving tag moved up so the opening chip no longer overlaps it; known limits (soft 1.8x/2x Alex crops, wave hand touching the left edge in beat 1, Ren in 13 of 22 beats). Launcher QA: no errors, no warnings. Not verified by me: audio listening, phone playback, frame-by-frame mouths. Owner replied \"Approved\" (14 Nov 2026).\n\nPost-approval change (15 Nov 2026): the full render failed QA (\"Less than the impulse cart\" overflowed its card in the last beat). The label became \"Less than impulse\" (44 px) and the card module `bf_short_ui.py` is now a hashed manifest asset. This invalidated the approval fingerprint; the prototype was re-rendered and its decoded video frames are identical to the approved one (MD5 3fc50fca...). Fresh owner approval requested.\n\nRe-approval (15 Nov 2026): owner replied 'Approved' to the unchanged prototype after the post-approval label fix.",
-  "fingerprint": "7222b61d2e85a603ebc54e3382929a921c3cb84971d8ce3fe309f56954bdb265",
-  "prototype_sha256": "b4207d27c55c14a16a424afdb2832134fe1a14a32ba9ce061a35725470714872",
-  "report_sha256": "a7a05d86f8d2de706bb36ae24661e5e3c740dd41ce8047aaa4f6caa03a0ef473"
+  "approved_at": "2026-11-15T11:21:15.824508+00:00",
+  "review_notes": "# Prototype review notes (Black Friday Short, revision 2)\n\nOwner reviewed the 15 s revision-2 prototype (SHA-256 9a199a9d...): new hook, 32.7 s plan, Alex shopping cutaways, full-video ending. Launcher QA: no errors, no warnings. Not verified by me: audio listening (two new lines and excerpt joins), phone playback, frame-by-frame mouths. Known limits: soft 1.8x/2x Alex crops; only five sharp Alex stills; Ren in 6 of 15 beats. Owner replied \"Approved\" (15 Nov 2026).",
+  "fingerprint": "9200ab69753f3bf30dd0111a56b66eff33ab12f2ec693f05cb0f4cb210b58dde",
+  "prototype_sha256": "9a199a9d23f494e1b8f1ae91986ff463414f605e382f5d007a15b6e6b245320d",
+  "report_sha256": "abe24243740768981ca69482cf83b63e3ab9557e8addf32df0647109b84433e1"
 }
