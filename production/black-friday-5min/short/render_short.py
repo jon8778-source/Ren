@@ -115,7 +115,7 @@ def b_overbudget(c): veil(c); pop(c, S.bar(clamp((c.t - 0.3) / 1.0)), 900, key="
 def b_rule4(c): ren_scene("ren_point_down_right", False, lambda c: S.rule(4, "Wait", "24 hours"), y=360)(c)
 def b_question(c): ren_scene("ren_shrug", False, lambda c: S.question(), y=360)(c)
 def b_sleep(c): veil(c); pop(c, S.moon(clamp((c.t - 0.4) / 1.5)), 900, key="mn")
-def b_tally(c): ren_scene("ren_present_palm_left", True, lambda c: S.under("Under budget by", S.usd(300 - S.V["rule_path"]), S.GREEN) if c.t < 2.2 else S.under("Less than the impulse cart", S.usd(S.V["diff"]), S.GREEN), y=400)(c)
+def b_tally(c): ren_scene("ren_present_palm_left", True, lambda c: S.under("Under budget by", S.usd(300 - S.V["rule_path"]), S.GREEN) if c.t < 2.2 else S.under("Less than impulse", S.usd(S.V["diff"]), S.GREEN, 420, 44), y=400)(c)
 def b_cta(c): ren_scene("ren_thumbs_up", False, lambda c: S.end(), y=330)(c)
 
 BEAT = {"hook": b_hook, "spend-saving": b_spend, "budget": b_budget, "two-plans": b_plans, "plan-a": b_plan_a, "plan-b": b_plan_b, "apart": b_apart, "website": b_website, "clock": b_clock, "badge": b_badge, "saved-107": b_saved, "not-saved": b_notsaved,

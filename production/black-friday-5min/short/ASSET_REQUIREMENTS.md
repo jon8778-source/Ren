@@ -12,7 +12,8 @@ Prepared before rendering (Shorts rules, asset-first checkpoint). **Status: prot
 |---|---|---|---|---|
 | script | script | `production/black-friday-5min/script/script.md` | b0b051453fbc | Owner-approved script ('Approved', 14 Nov 2026; FTC line cut); the Short reuses whole sentences of it |
 | audio | audio | `production/black-friday-5min/short/short_audio_raw.wav` | d434efabea19 | Cut from the approved long-video narration (voice/S1..S8 joined), no resynthesis |
-| renderer | renderer | `production/black-friday-5min/short/render_short.py` | 44a265b24de3 | Portrait adapter under the Shorts launcher; reuses the long film's Ren matting and the Three Bills Short layout code |
+| renderer | renderer | `production/black-friday-5min/short/render_short.py` | 0cd399c24b3a | Portrait adapter under the Shorts launcher; reuses the long film's Ren matting and the Three Bills Short layout code |
+| cards | configuration | `production/black-friday-5min/short/bf_short_ui.py` | 879ae42ae0ac | Portrait card builders (code-drawn text and figures from data/assumptions.csv); hashed so a card change invalidates the approval |
 | configuration | configuration | `production/black-friday-5min/short/short_spec.json` | 3cc7166e26e3 | Generated from short_spec.py: beats and timings tied to short_cues.json |
 | ren_wave | character | `assets/ren_library/ren_wave_hello.mp4` | 05302f76a254 | Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...) |
 | ren_point | character | `assets/ren_library/ren_point_right.mp4` | ae725bb9225f | Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...) |

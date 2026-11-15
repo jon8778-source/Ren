@@ -35,6 +35,7 @@ ASSETS = [
  ("script", "script", "production/black-friday-5min/script/script.md", "Owner-approved script ('Approved', 14 Nov 2026; FTC line cut); the Short reuses whole sentences of it"),
  ("audio", "audio", "production/black-friday-5min/short/short_audio_raw.wav", "Cut from the approved long-video narration (voice/S1..S8 joined), no resynthesis"),
  ("renderer", "renderer", "production/black-friday-5min/short/render_short.py", "Portrait adapter under the Shorts launcher; reuses the long film's Ren matting and the Three Bills Short layout code"),
+ ("cards", "configuration", "production/black-friday-5min/short/bf_short_ui.py", "Portrait card builders (code-drawn text and figures from data/assumptions.csv); hashed so a card change invalidates the approval"),
  ("configuration", "configuration", "production/black-friday-5min/short/short_spec.json", "Generated from short_spec.py: beats and timings tied to short_cues.json"),
  ("ren_wave", "character", lib("ren_wave_hello"), "Approved animated Ren library clip; " + EV_VIDEO), ("ren_point", "character", lib("ren_point_right"), "Approved animated Ren library clip; " + EV_VIDEO),
  ("ren_present", "character", lib("ren_present_palm_left"), "Approved animated Ren library clip (mirrored); " + EV_VIDEO), ("ren_calm", "character", lib("ren_idle_calm"), "Approved animated Ren library clip; " + EV_VIDEO),

@@ -55,7 +55,7 @@ def question(w=420):
 def moon(p, w=780):
     im, d = card(w, 360, fill=CREAM); L = []; d.ellipse((120, 70, 280, 230), fill=(36, 48, 100, 255)); d.ellipse((170, 60, 310, 200), fill=(*CREAM, 255)); d.ellipse((520, 70, 680, 230), fill=(*GOLD, 255))
     d.polygon([(330, 150), (420, 150), (420, 120), (490, 160), (420, 205), (420, 175), (330, 175)], fill=(*NAVY, 255)); _t(d, L, (w // 2, 295), "Still want it tomorrow?", 56, 700, NAVY, "mm"); return Img(im, L)
-def under(amount_label, amount, colour, w=420):
-    im, d = card(w, 270, fill=CREAM); L = []; _t(d, L, (w // 2, 66), amount_label, 50, 600, MUTED, "mm"); _t(d, L, (w // 2, 175), amount, 120, 700, colour, "mm"); return Img(im, L)
+def under(amount_label, amount, colour, w=420, px=50):
+    im, d = card(w, 270, fill=CREAM); L = []; _t(d, L, (w // 2, 66), amount_label, px, 600, MUTED, "mm"); _t(d, L, (w // 2, 175), amount, 120, 700, colour, "mm"); return Img(im, L)
 def end(w=420):
     im, d = card(w, 420, fill=GOLDL); L = []; _lines(d, L, w // 2, 70, ["Money Leak", "Audit", "Workbook"], 66); _t(d, L, (w // 2, 325), "See description", 50, 600, NAVY, "mm"); return Img(im, L)

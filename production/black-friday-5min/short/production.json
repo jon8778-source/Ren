@@ -32,9 +32,17 @@
    "id": "renderer",
    "kind": "renderer",
    "path": "../../../production/black-friday-5min/short/render_short.py",
-   "sha256": "44a265b24de384ce48c710e6999859b2c9d4fecb11c4aa8f76b9fb1c6ef6110b",
+   "sha256": "0cd399c24b3aca6795ef3e755e531f16cb37564fce61184a013f1b926ea20120",
    "status": "approved",
    "approval_evidence": "Portrait adapter under the Shorts launcher; reuses the long film's Ren matting and the Three Bills Short layout code"
+  },
+  {
+   "id": "cards",
+   "kind": "configuration",
+   "path": "../../../production/black-friday-5min/short/bf_short_ui.py",
+   "sha256": "879ae42ae0ac6b1a0dd951c0a903b8d9f62ddfe1f7f5dc7d1c33442814678d6d",
+   "status": "approved",
+   "approval_evidence": "Portrait card builders (code-drawn text and figures from data/assumptions.csv); hashed so a card change invalidates the approval"
   },
   {
    "id": "configuration",
