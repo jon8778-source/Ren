@@ -85,41 +85,32 @@ def still_p(path, cx_frac, zoom=1.0, p=0.0):
     if path not in _st: _st[path] = Image.open(path).convert("RGB")
     im = _st[path]; h = im.height; z = zoom * (1 + 0.06 * ease(p)); cw = h * W / H / z; ch = h / z; cx = clamp(cx_frac * im.width, cw / 2, im.width - cw / 2); cy = im.height / 2; a = cw / W
     return im.transform((W, H), Image.AFFINE, (a, 0, cx - cw / 2, 0, a, cy - ch / 2), Image.BICUBIC).convert("RGBA")
-ST_S1 = BF / "assets/stills_batch2/candidates/S1_shop_entrance_c2.png"; ST_CAFE = BF / "assets/approved_alex/alex-cafe.png"
+ST_S1 = BF / "assets/stills_batch2/candidates/S1_shop_entrance_c2.png"; ST_S2 = BF / "assets/stills_batch2/candidates/S2_compare_coats_c2.png"; ST_S3 = BF / "assets/stills_batch2/candidates/S3_checkout_c1.png"; ST_HOME = BF / "assets/approved_alex/alex-home.png"
 def veil(c): c.f.alpha_composite(sage_plate(10, True))
 def pop(c, img, cy=900, t0=0.12, dur=0.4, big=1.0, key="g"):
     if c.t < t0: return
     p = U.back((c.t - t0) / dur); s = max(0.05, p) * big; w, h = img.im.size; c.put(img, 540 - w * s / 2, cy - h * s / 2, scale=s, key=key, rec=(c.t - t0) / dur > 0.98)
 
-def b_hook(c): ren_scene("ren_wave_hello", False, lambda c: S.sign(["Black Friday", "a test"], 420, "sage", 62), y=420)(c)
-def b_spend(c):
-    c.f.alpha_composite(still_p(ST_S1, 0.50, 1.0, c.t / max(c.d, 1e-6)))
-    if c.t > 0.3: p = ease((c.t - 0.3) / 0.4); c.put(S.tag_flip(clamp((c.t - 1.1) / 0.5)), 190, 1090 + 60 * (1 - p), alpha=min(1, p * 1.6), key="tf", rec=p > 0.99)
-def b_budget(c): ren_scene("ren_point_right", False, lambda c: S.total("Alex's budget", S.usd(S.V["budget"]), S.NAVY), y=400)(c)
-def b_plans(c):
-    c.f.alpha_composite(still_p(ST_CAFE, 0.38, 1.0, c.t / max(c.d, 1e-6)))
-    if c.t > 0.3: p = ease((c.t - 0.3) / 0.4); c.put(S.plans(), 160, 1255 + 70 * (1 - p), alpha=min(1, p * 1.6), key="pl", rec=p > 0.99)
-def b_plan_a(c): ren_scene("ren_present_palm_left", True, lambda c: S.total("Plan A ends at", S.usd(S.V["all_in"]), S.RED), y=400)(c)
-def b_plan_b(c): veil(c); pop(c, S.total("Plan B ends at", S.usd(S.V["rule_path"]), S.GREEN, 640), 900, big=1.0)
-def b_apart(c): ren_scene("ren_idle_calm", False, lambda c: S.apart(), y=300)(c)
+def slide_up(c, img, x, y, t0, key):
+    if c.t > t0: p = ease((c.t - t0) / 0.4); c.put(img, x, y + 70 * (1 - p), alpha=min(1, p * 1.6), key=key, rec=p > 0.99)
+def b_hook_saved(c): c.f.alpha_composite(still_p(ST_S1, 0.50, 1.0, c.t / max(c.d, 1e-6))); slide_up(c, S.saved_chip(), 220, 1120, 0.5, "sv")
+def b_hook_checkout(c): c.f.alpha_composite(still_p(ST_S3, 0.33, 1.0, c.t / max(c.d, 1e-6)))
+def b_hook_spent(c): c.f.alpha_composite(still_p(ST_S3, 0.56, 1.12, c.t / max(c.d, 1e-6))); slide_up(c, S.spent_more(), 180, 1130, 0.1, "sm")
 def b_website(c): ren_scene("ren_hold_phone", False, lambda c: S.sign(["Shop", "website"], 420, "cream", 70), y=420)(c)
 def b_clock(c): veil(c); pop(c, S.clock(clock_sec(c)), 900, key="ck")
 def b_badge(c): veil(c); pop(c, S.badge("ONLY 3 LEFT"), 900, key="bd")
 def b_saved(c): ren_scene("ren_point_right", False, lambda c: S.saved(), y=330)(c)
-def b_notsaved(c): ren_scene("ren_idle_listen", False, lambda c: S.saved(420, clamp((c.t - 1.6) / 0.8), True), y=330)(c)
+def b_thing(c): c.f.alpha_composite(still_p(ST_S2, 0.50, 1.0, c.t / max(c.d, 1e-6)))
+def b_notsaved(c): ren_scene("ren_idle_listen", False, lambda c: S.saved(420, clamp((c.t - 1.4) / 0.8), True), y=330)(c)
 def b_spend183(c): veil(c); pop(c, S.parts(), 900, key="pt")
-def b_rule2(c): ren_scene("ren_thinking", False, lambda c: S.rule(2, "Do the", "math"), y=360)(c)
-def b_smaller(c): veil(c); pop(c, S.eq(), 900, key="eq")
-def b_341(c): ren_scene("ren_point_right", False, lambda c: S.total("Alex is at", S.usd(S.V["all_in"]), S.RED), y=400)(c)
-def b_overbudget(c): veil(c); pop(c, S.bar(clamp((c.t - 0.3) / 1.0)), 900, key="bar")
 def b_rule4(c): ren_scene("ren_point_down_right", False, lambda c: S.rule(4, "Wait", "24 hours"), y=360)(c)
-def b_question(c): ren_scene("ren_shrug", False, lambda c: S.question(), y=360)(c)
 def b_sleep(c): veil(c); pop(c, S.moon(clamp((c.t - 0.4) / 1.5)), 900, key="mn")
-def b_tally(c): ren_scene("ren_present_palm_left", True, lambda c: S.under("Under budget by", S.usd(300 - S.V["rule_path"]), S.GREEN) if c.t < 2.2 else S.under("Less than impulse", S.usd(S.V["diff"]), S.GREEN, 420, 44), y=400)(c)
-def b_cta(c): ren_scene("ren_thumbs_up", False, lambda c: S.end(), y=330)(c)
+def b_tally_a(c): c.f.alpha_composite(still_p(ST_HOME, 0.55, 1.0, c.t / max(c.d, 1e-6))); slide_up(c, S.under("Under budget by", S.usd(300 - S.V["rule_path"]), S.GREEN), 330, 1160, 0.15, "ua")
+def b_tally_b(c): ren_scene("ren_present_palm_left", True, lambda c: S.under("Less than impulse", S.usd(S.V["diff"]), S.GREEN, 420, 44), y=400)(c)
+def b_closing(c): ren_scene("ren_point_right", False, lambda c: S.watch(), y=380)(c)
 
-BEAT = {"hook": b_hook, "spend-saving": b_spend, "budget": b_budget, "two-plans": b_plans, "plan-a": b_plan_a, "plan-b": b_plan_b, "apart": b_apart, "website": b_website, "clock": b_clock, "badge": b_badge, "saved-107": b_saved, "not-saved": b_notsaved,
-        "spend-183": b_spend183, "rule-2": b_rule2, "smaller-bill": b_smaller, "over-341": b_341, "over-budget": b_overbudget, "rule-4": b_rule4, "question": b_question, "sleep": b_sleep, "tally": b_tally, "cta": b_cta}
+BEAT = {"hook-saved": b_hook_saved, "hook-checkout": b_hook_checkout, "hook-spent": b_hook_spent, "website": b_website, "clock": b_clock, "badge": b_badge, "announces": b_saved, "thing": b_thing, "not-saved": b_notsaved,
+        "spend-183": b_spend183, "rule-4": b_rule4, "sleep": b_sleep, "tally-a": b_tally_a, "tally-b": b_tally_b, "closing": b_closing}
 
 class Short:
     def __init__(self, spec, rec, proto_end=0): self.spec, self.rec, self.proto_end = spec, rec, proto_end; self.beats = spec["beats"]; self.total = spec["frames"] / FPS

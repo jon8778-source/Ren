@@ -1,0 +1,14 @@
+{
+ "hook": {
+  "text": "He saved one hundred and seven dollars on Black Friday... but spent more money!",
+  "duration": 4.666,
+  "sample_rate": 24000,
+  "seed": 1116
+ },
+ "closing": {
+  "text": "Watch the full Black Friday video to see all five rules.",
+  "duration": 3.507,
+  "sample_rate": 24000,
+  "seed": 1117
+ }
+}

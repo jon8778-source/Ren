@@ -59,3 +59,10 @@ def under(amount_label, amount, colour, w=420, px=50):
     im, d = card(w, 270, fill=CREAM); L = []; _t(d, L, (w // 2, 66), amount_label, px, 600, MUTED, "mm"); _t(d, L, (w // 2, 175), amount, 120, 700, colour, "mm"); return Img(im, L)
 def end(w=420):
     im, d = card(w, 420, fill=GOLDL); L = []; _lines(d, L, w // 2, 70, ["Money Leak", "Audit", "Workbook"], 66); _t(d, L, (w // 2, 325), "See description", 50, 600, NAVY, "mm"); return Img(im, L)
+
+def saved_chip(w=640):
+    im, d = card(w, 190, fill=GREEN); L = []; _t(d, L, (w // 2, 98), f"Saved {usd(107)}", 100, 700, CREAM, "mm"); return Img(im, L)
+def spent_more(w=720):
+    im, d = card(w, 210, fill=(214, 40, 52)); L = []; _t(d, L, (w // 2, 108), "Spent MORE", 116, 700, CREAM, "mm"); return Img(im, L)
+def watch(w=420):
+    im, d = card(w, 330, fill=GOLDL); L = []; _lines(d, L, w // 2, 75, ["Watch the", "full Black", "Friday video"], 58); return Img(im, L)

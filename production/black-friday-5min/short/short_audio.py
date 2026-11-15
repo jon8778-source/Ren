@@ -8,16 +8,14 @@ import numpy as np, soundfile as sf
 HERE = Path(__file__).resolve().parent; BF = HERE.parent; VOICE = BF / "voice"; LEAD, TAIL = 0.05, 0.22
 # whole script sentences, in script order, wording unchanged: each excerpt is one contiguous run of the approved narration
 EXCERPTS = [
-    "Black Friday has a clever trick. It can make spending feel like saving. Today, Alex heads into the sales with a three hundred dollar budget and two very different plans. One plan ends at three hundred and forty-one dollars. The other ends at two hundred and sixty-three. Same shop, same sales, seventy-eight dollars apart.",
+    ("NEW", "hook"),    # owner's hook (15 Nov 2026), synthesised by gen_new_lines.py
     "Then Alex opens a shop's website. A countdown clock is ticking. A badge says only three left.",
     "The website cheerfully announces that Alex has saved one hundred and seven dollars.",
     "And here's the thing. Alex hasn't saved one hundred and seven dollars. Alex is about to spend one hundred and eighty-three.",
-    "Rule two: do the math. A discount isn't a saving. It's just a smaller bill. Add the list to the cart and Alex is at three hundred and forty-one dollars, which is forty-one dollars over budget.",
     "Rule four: let it sit for twenty-four hours.",
-    "Do I need this, or did the timer need me to buy it?",
     "It just means the answer has to survive a night's sleep.",
     "That's thirty-seven under budget, and seventy-eight dollars less than the impulse cart.",
-    "Check out the Money Leak Audit Workbook in the description.",
+    ("NEW", "closing"), # replaces the workbook line: a prompt to watch the full video
 ]
 norm = lambda s: re.findall(r"[a-z0-9'-]+", s.lower().replace("’", "'"))
 def main():
@@ -40,6 +38,20 @@ def main():
     for i, o in enumerate(owner): first_tok.setdefault(o, i); last_tok[o] = i
     audio, sr = sf.read(VOICE / "full.wav", dtype="float32"); track, cues, t0 = [], [], 0.0
     for ex in EXCERPTS:
+        if isinstance(ex, tuple):
+            name = ex[1]; seg, r = sf.read(HERE / "voice_new" / f"{name}.wav", dtype="float32"); assert r == sr; text = json.loads((HERE / "voice_new" / "timings.json").read_text())[name]["text"]; Wn = json.loads((HERE / "voice_new" / "words.json").read_text())[name]
+            q = norm(text); wt = [(re.sub(r"[^a-z0-9']", "", x["w"].lower()), x["s"], x["e"]) for x in Wn]; j = 0
+            for qi, tok in enumerate(q):
+                if j < len(wt) and wt[j][0] == tok: s0, e0 = wt[j][1], wt[j][2]; j += 1
+                elif j < len(wt) and wt[j][0].isdigit():       # a spoken number heard as digits: spread its time over the script words up to the next matching word
+                    k = qi
+                    while k < len(q) and not (j + 1 < len(wt) and q[k] == wt[j + 1][0]): k += 1
+                    span = max(1, k - qi); w0, w1 = wt[j][1], wt[j][2]; step = (w1 - w0) / span; s0, e0 = w0 + step * 0, w0 + step
+                    for z in range(qi, k): cues.append({"word": q[z], "start": round(t0 + w0 + step * (z - qi), 3), "end": round(t0 + w0 + step * (z - qi + 1), 3)})
+                    j += 1; q[qi:k] = [None] * (k - qi); continue
+                else: s0, e0 = (cues[-1]["end"] - t0 if cues else 0.0), (cues[-1]["end"] - t0 if cues else 0.0) + 0.2
+                if tok is not None and q[qi] is not None: cues.append({"word": tok, "start": round(t0 + s0, 3), "end": round(t0 + e0, 3)})
+            track.append(seg); print(f"NEW {name}: {len(seg) / sr:5.2f} s {text}"); t0 += len(seg) / sr; continue
         q = norm(ex); n = len(q); starts = [i for i in range(len(flat) - n + 1) if flat[i:i + n] == q]; assert len(starts) == 1, (ex[:40], starts)
         f, l = starts[0], starts[0] + n - 1; a = max(0.0, T[first_tok[f]][0] - LEAD); nxt = T[first_tok[l + 1]][0] - 0.03 if l + 1 < len(flat) else len(audio) / sr
         b = min(T[last_tok[l]][1] + TAIL, nxt, len(audio) / sr); seg = audio[int(a * sr):int(b * sr)]; track.append(seg)

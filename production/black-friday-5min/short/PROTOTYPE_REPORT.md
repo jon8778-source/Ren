@@ -1,11 +1,16 @@
-# Black Friday Short: 15 s prototype report
+# Black Friday Short, revision 2: 15 s prototype report
 
-File: prototype.mp4, 1080x1920, 24 fps, **15.000 s** (360 frames), H.264 + AAC, -15.6 LUFS, true peak -1.7 dBFS. Launcher preflight passed; QA status `technical-pass-review-required`, no errors or warnings.
-Full Short plan (not rendered): 22 beats, 1,440 frames, **60.01 s**; narration is 195 words cut from the approved long-video narration (10 excerpts of whole script sentences, no resynthesis).
-The prototype covers beats 1-6 and the first 0.4 s of beat 7: Ren waves in beside the 'Black Friday / a test' card; approved-style Alex still (shop exit) with a Spending-to-Saving tag; Ren points at the $300 budget; the approved coffee-v3 Alex art with a Plan A / Plan B card; Ren presents $341; a full-screen $263 card over the blurred office.
+File: prototype.mp4, 1080x1920, 24 fps, **15.000 s** (360 frames), H.264 + AAC, -16.3 LUFS, true peak -1.6 dBFS. Launcher preflight passed; QA status `technical-pass-review-required`, no errors or warnings.
+Full revision-2 Short (not rendered): **15 beats, 786 frames, 32.74 s** (was 60.0 s), 107 words (was 195).
 
-Reused: Ren library clips in mouth-closed windows from the long film's frame scan, matted at native resolution, at the Three Bills Short's approved portrait position; the sage plate; the approved Alex coffee art; shot S1 c2 (used in the owner-approved long video but never approved as art). Everything numeric is drawn in code from data/assumptions.csv.
+Owner feedback applied (15 Nov 2026):
+- **Hook:** opens on "He saved one hundred and seven dollars on Black Friday... but spent more money!" (new line, synthesised with the approved Qwen clone, 4.67 s; Whisper heard "He saved $107 on Black Friday, but spent more money"; the ellipsis came out as a pause of about 0.8 s).
+- **Length:** 32.7 s: six whole-sentence excerpts from the approved long-video audio plus the two new lines.
+- **Cutaways:** the first 4.7 s is Alex shopping (shop exit with a 'Saved $107' chip, checkout face crop, checkout items crop with a red 'Spent MORE' card), then Ren and two graphics, then Alex compares coats at 13.4 s; the full Short also has the approved kitchen art for '$37 under budget'. Ren is in 6 of 15 beats (2-3.5 s each) instead of 13 of 22.
+- **Ending:** "Watch the full Black Friday video to see all five rules." with a 'Watch the full Black Friday video' card; the workbook line is gone. The exact disclaimer holds for the last 2.3 s.
 
-Checked: asset hashes (launcher), text layout and safe area (launcher, layout.json), loudness, stills of the prototype beats. Not verified: audio listening (especially the nine joins between non-adjacent excerpts), playback on a phone, mouth state frame by frame (windows come from the long film's heuristic scan).
-Known limits: the S1 c2 and coffee-art crops are enlarged about 1.8x and 2x (soft); Ren's wave hand touches the left frame edge in beat 1; Ren fills 13 of the 22 beats (the long film is also about half Ren); only two Alex story beats exist because the other stills would enlarge 2.5-3.3x in portrait.
-Awaiting explicit owner approval of the prototype before the full render. Nothing is published or uploaded.
+The prototype covers beats 1-8 (to "And here's the thing" / compares coats) and the start of beat 9.
+Reused: Ren library clips in closed-mouth windows at the approved portrait position; the sage plate; stills S1 c2, S2 c2, S3 c1 (used in the approved long film, never approved as separate art) and the approved coffee art. All numbers drawn in code.
+
+Not verified: audio listening (the two new lines and the joins between excerpts), phone playback, mouths frame by frame. Limits: Alex stills are enlarged about 1.8x and 2x (soft); only these five sharp Alex stills exist, so Alex shopping cutaways are limited to 5 of 15 beats (more need new portrait-native stills); Alex and Ren never share a frame.
+Fresh owner approval needed before the full render (script, audio and layout changed, so the earlier approval no longer applies). Nothing is published or uploaded.

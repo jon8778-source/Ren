@@ -1,10 +1,10 @@
 {
  "schema_version": 1,
- "title": "Ren | Black Friday: the sale that tests you: ~1-minute Short (derived from the long video)",
+ "title": "Ren | Black Friday: the sale that tests you: ~33 s Short, revision 2 (derived from the long video)",
  "width": 1080,
  "height": 1920,
  "fps": 24,
- "frames": 1440,
+ "frames": 786,
  "full_bleed": true,
  "permanent_border": false,
  "asset_report": "ASSET_REQUIREMENTS.md",
@@ -15,24 +15,24 @@
   {
    "id": "script",
    "kind": "script",
-   "path": "../../../production/black-friday-5min/script/script.md",
-   "sha256": "b0b051453fbce06b0a6fd65c7d0e68bf4112533322e6793f020dbeff447e907f",
+   "path": "../../../production/black-friday-5min/short/REVISION_PLAN.md",
+   "sha256": "0a20e05e43e453c17c6cf44e7e11a2f34af846b71d0bdffd020cc57b4e965e9b",
    "status": "approved",
-   "approval_evidence": "Owner-approved script ('Approved', 14 Nov 2026; FTC line cut); the Short reuses whole sentences of it"
+   "approval_evidence": "Revision 2 narration, approved by the owner ('Approved, proceed with existing stills', 15 Nov 2026); the long film's script was approved 14 Nov 2026"
   },
   {
    "id": "audio",
    "kind": "audio",
    "path": "../../../production/black-friday-5min/short/short_audio_raw.wav",
-   "sha256": "d434efabea196e27bb9822ce61ebb297070b5a58fdd371e5f966f8c014c73502",
+   "sha256": "4da2ee5d559365f5f7fe68d98e60bbeab04496b76c128a785acc3b98f82309b1",
    "status": "approved",
-   "approval_evidence": "Cut from the approved long-video narration (voice/S1..S8 joined), no resynthesis"
+   "approval_evidence": "Owner approved the narration of this revision ('Approved, proceed with existing stills', 15 Nov 2026); two new lines (hook, closing) synthesised with the approved Qwen clone, the rest cut from the approved long-video audio"
   },
   {
    "id": "renderer",
    "kind": "renderer",
    "path": "../../../production/black-friday-5min/short/render_short.py",
-   "sha256": "0cd399c24b3aca6795ef3e755e531f16cb37564fce61184a013f1b926ea20120",
+   "sha256": "9c4c9d7a81a89ab3b9e33ca8e092da6a7b935acf507afae16279b01427ebae5e",
    "status": "approved",
    "approval_evidence": "Portrait adapter under the Shorts launcher; reuses the long film's Ren matting and the Three Bills Short layout code"
   },
@@ -40,7 +40,7 @@
    "id": "cards",
    "kind": "configuration",
    "path": "../../../production/black-friday-5min/short/bf_short_ui.py",
-   "sha256": "879ae42ae0ac6b1a0dd951c0a903b8d9f62ddfe1f7f5dc7d1c33442814678d6d",
+   "sha256": "f22648f70d6aeceda7e21aac7e7ce32a985cdb84b560802f53465754978ae474",
    "status": "approved",
    "approval_evidence": "Portrait card builders (code-drawn text and figures from data/assumptions.csv); hashed so a card change invalidates the approval"
   },
@@ -48,15 +48,15 @@
    "id": "configuration",
    "kind": "configuration",
    "path": "../../../production/black-friday-5min/short/short_spec.json",
-   "sha256": "3cc7166e26e359bd4827185261435d8d20ac1e1ace5fc9b7fdcb248abfd95679",
+   "sha256": "c37a06dd1c28514daae528d17b6c5e27645d2d44c6619ad62d50cf7e61b784a3",
    "status": "approved",
    "approval_evidence": "Generated from short_spec.py: beats and timings tied to short_cues.json"
   },
   {
-   "id": "ren_wave",
+   "id": "ren_phone",
    "kind": "character",
-   "path": "../../../assets/ren_library/ren_wave_hello.mp4",
-   "sha256": "05302f76a254f8d43aac8c06e55c218fb993df0b57397f315cf65fac998958ed",
+   "path": "../../../assets/ren_library/ren_hold_phone.mp4",
+   "sha256": "470e6fc94ab5c930ba3518d39721d4412ae3fdad4ebd431cfcf87f926ccbd3b6",
    "status": "approved",
    "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
   },
@@ -77,22 +77,6 @@
    "approval_evidence": "Approved animated Ren library clip (mirrored); Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
   },
   {
-   "id": "ren_calm",
-   "kind": "character",
-   "path": "../../../assets/ren_library/ren_idle_calm.mp4",
-   "sha256": "605f04dac18a7d084dfb9a9e6a434ad11fb6277972709a79e87d781eaec8e518",
-   "status": "approved",
-   "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
-  },
-  {
-   "id": "ren_phone",
-   "kind": "character",
-   "path": "../../../assets/ren_library/ren_hold_phone.mp4",
-   "sha256": "470e6fc94ab5c930ba3518d39721d4412ae3fdad4ebd431cfcf87f926ccbd3b6",
-   "status": "approved",
-   "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
-  },
-  {
    "id": "ren_listen",
    "kind": "character",
    "path": "../../../assets/ren_library/ren_idle_listen.mp4",
@@ -101,34 +85,10 @@
    "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
   },
   {
-   "id": "ren_think",
-   "kind": "character",
-   "path": "../../../assets/ren_library/ren_thinking.mp4",
-   "sha256": "5451d99e329777ff063e7e9c48c9c5b64cd9b31f0b0662b72000e47217995354",
-   "status": "approved",
-   "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
-  },
-  {
    "id": "ren_point_down",
    "kind": "character",
    "path": "../../../assets/ren_library/ren_point_down_right.mp4",
    "sha256": "7cfd517ef14d781a65233475e671baf6e9fa3589989d9164459f6813a4d444a0",
-   "status": "approved",
-   "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
-  },
-  {
-   "id": "ren_shrug",
-   "kind": "character",
-   "path": "../../../assets/ren_library/ren_shrug.mp4",
-   "sha256": "1cacb6dd155bbec0a9afbc278dbd02881498adfeff377b50bdc05fbb5597ecd8",
-   "status": "approved",
-   "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
-  },
-  {
-   "id": "ren_thumbs",
-   "kind": "character",
-   "path": "../../../assets/ren_library/ren_thumbs_up.mp4",
-   "sha256": "b695921a1de24b0fa9151dc3770f93739fac019e5a7006cf6a4e95f16a43139c",
    "status": "approved",
    "approval_evidence": "Approved animated Ren library clip; Used in the owner-approved long video ('Approved', 14 Nov 2026, SHA-256 eef4d914...)"
   },
@@ -146,15 +106,31 @@
    "path": "../../../production/black-friday-5min/assets/stills_batch2/candidates/S1_shop_entrance_c2.png",
    "sha256": "043313344a35b215fce7913af6229eaffd71a9d55169dc4ab29db0853423ff38",
    "status": "approved",
-   "approval_evidence": "Alex shop-entrance candidate (FLUX.2-dev from the approved Alex art), used in the owner-approved long video; no separate art approval; 1920x1088, enlarged about 1.8x for a portrait crop"
+   "approval_evidence": "Alex shop-exit candidate (FLUX.2-dev from the approved Alex art), used in the owner-approved long video; no separate art approval; 1920x1088, enlarged about 1.8x for a portrait crop"
   },
   {
-   "id": "cafe",
+   "id": "s2c2",
    "kind": "environment",
-   "path": "../../../production/black-friday-5min/assets/approved_alex/alex-cafe.png",
-   "sha256": "83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b",
+   "path": "../../../production/black-friday-5min/assets/stills_batch2/candidates/S2_compare_coats_c2.png",
+   "sha256": "de7a99a9146a919b20ade8e8bd6f8fd7f54b6b7f202b9685b0e2910ca0b6d3a0",
    "status": "approved",
-   "approval_evidence": "Approved coffee-v3 art 'Alex taps to pay for coffee' (SHA-256 83d61936...), restored from codex/ren-approved-v3; 1672x941, enlarged about 2x for a portrait crop"
+   "approval_evidence": "Alex compares-coats candidate, used in the owner-approved long video; no separate art approval; 1920x1088, enlarged about 1.8x"
+  },
+  {
+   "id": "s3c1",
+   "kind": "environment",
+   "path": "../../../production/black-friday-5min/assets/stills_batch2/candidates/S3_checkout_c1.png",
+   "sha256": "56415d857095ab6d0c3af92b5f196f6b813665592a7128c5cdd4bc3279570e8a",
+   "status": "approved",
+   "approval_evidence": "Alex checkout candidate, used in the owner-approved long video; no separate art approval; 1920x1088, enlarged about 1.8x (two crops)"
+  },
+  {
+   "id": "home",
+   "kind": "environment",
+   "path": "../../../production/black-friday-5min/assets/approved_alex/alex-home.png",
+   "sha256": "5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f",
+   "status": "approved",
+   "approval_evidence": "Approved coffee-v3 art 'Alex pours French press coffee' (SHA-256 5ff172ba...), restored from codex/ren-approved-v3; 1672x941, enlarged about 2x"
   },
   {
    "id": "typography",
@@ -167,129 +143,63 @@
  ],
  "scenes": [
   {
-   "id": "hook",
+   "id": "hook-saved",
    "start_frame": 0,
-   "end_frame": 48,
-   "kind": "presenter",
-   "composition": "ren-left-title",
-   "action": "Ren waves hello in his office; a 'Black Friday / a test' card slides in; opening educational chip",
-   "motion_purpose": "Introduce the host and the premise",
-   "assets": [
-    "ren_wave",
-    "sage"
-   ],
-   "animations": [
-    "hook-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "spend-saving",
-   "start_frame": 48,
-   "end_frame": 99,
+   "end_frame": 50,
    "kind": "story_still",
-   "composition": "alex-leaves-shop-tag",
-   "action": "Alex walks out of the shop with two bags (slow push); a price tag flips 'Spending' to 'Saving'",
-   "motion_purpose": "Show the trick",
+   "composition": "alex-leaves-shop-107",
+   "action": "Alex walks out of the shop with two bags (slow push); a green 'Saved $107' chip slides in; opening educational chip",
+   "motion_purpose": "Open on the claim",
    "assets": [
     "s1c2"
    ],
    "animations": [
-    "spend-saving-motion"
+    "hook-saved-motion"
    ],
    "environment_fullscreen": true
   },
   {
-   "id": "budget",
-   "start_frame": 99,
-   "end_frame": 174,
-   "kind": "presenter",
-   "composition": "ren-left-budget",
-   "action": "Ren points at a '$300 budget' card",
-   "motion_purpose": "State the budget",
-   "assets": [
-    "ren_point",
-    "sage"
-   ],
-   "animations": [
-    "budget-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "two-plans",
-   "start_frame": 174,
-   "end_frame": 225,
+   "id": "hook-checkout",
+   "start_frame": 50,
+   "end_frame": 82,
    "kind": "story_still",
-   "composition": "alex-pays-plans-card",
-   "action": "Approved art of Alex paying; a Plan A / Plan B card slides up",
-   "motion_purpose": "Set up the comparison",
+   "composition": "alex-checkout-face",
+   "action": "Alex at the checkout counter, placing a coat, a gift and a charger box (crop on Alex)",
+   "motion_purpose": "Cut to the spending",
    "assets": [
-    "cafe"
+    "s3c1"
    ],
    "animations": [
-    "two-plans-motion"
+    "hook-checkout-motion"
    ],
-   "environment_fullscreen": true
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.3 s follows the spoken phrase boundaries; the visual change lands on its words"
   },
   {
-   "id": "plan-a",
-   "start_frame": 225,
-   "end_frame": 288,
-   "kind": "presenter",
-   "composition": "ren-left-341",
-   "action": "Ren presents (mirrored palm); the $341 card appears",
-   "motion_purpose": "Plan A total",
+   "id": "hook-spent",
+   "start_frame": 82,
+   "end_frame": 112,
+   "kind": "story_still",
+   "composition": "alex-checkout-items-spent-more",
+   "action": "Closer crop of the checkout items; a red 'Spent MORE' card lands",
+   "motion_purpose": "Land the twist",
    "assets": [
-    "ren_present",
-    "sage"
+    "s3c1"
    ],
    "animations": [
-    "plan-a-motion"
+    "hook-spent-motion"
    ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "plan-b",
-   "start_frame": 288,
-   "end_frame": 351,
-   "kind": "graphic",
-   "composition": "total-263",
-   "action": "A big $263 card pops over the blurred office",
-   "motion_purpose": "Plan B total",
-   "assets": [
-    "sage"
-   ],
-   "animations": [
-    "plan-b-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "apart",
-   "start_frame": 351,
-   "end_frame": 436,
-   "kind": "presenter",
-   "composition": "ren-left-78-apart",
-   "action": "Ren stands calm; both totals and a '$78 apart' chip",
-   "motion_purpose": "The gap",
-   "assets": [
-    "ren_calm",
-    "sage"
-   ],
-   "animations": [
-    "apart-motion"
-   ],
-   "environment_fullscreen": true
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.2 s follows the spoken phrase boundaries; the visual change lands on its words"
   },
   {
    "id": "website",
-   "start_frame": 436,
-   "end_frame": 488,
+   "start_frame": 112,
+   "end_frame": 165,
    "kind": "presenter",
    "composition": "ren-left-website",
    "action": "Ren holds a phone; a 'Shop website' card",
-   "motion_purpose": "Start the pressure story",
+   "motion_purpose": "Rewind to the story",
    "assets": [
     "ren_phone",
     "sage"
@@ -301,8 +211,8 @@
   },
   {
    "id": "clock",
-   "start_frame": 488,
-   "end_frame": 527,
+   "start_frame": 165,
+   "end_frame": 203,
    "kind": "graphic",
    "composition": "countdown-clock",
    "action": "A navy countdown clock counts down in code",
@@ -318,8 +228,8 @@
   },
   {
    "id": "badge",
-   "start_frame": 527,
-   "end_frame": 571,
+   "start_frame": 203,
+   "end_frame": 247,
    "kind": "graphic",
    "composition": "only-3-left",
    "action": "A red ONLY 3 LEFT badge pops",
@@ -334,9 +244,9 @@
    "timing_justification": "Beat length 1.8 s follows the spoken phrase boundaries; the visual change lands on its words"
   },
   {
-   "id": "saved-107",
-   "start_frame": 571,
-   "end_frame": 645,
+   "id": "announces",
+   "start_frame": 247,
+   "end_frame": 322,
    "kind": "presenter",
    "composition": "ren-left-saved-107",
    "action": "Ren points at the store's '$107 saved' card",
@@ -346,14 +256,31 @@
     "sage"
    ],
    "animations": [
-    "saved-107-motion"
+    "announces-motion"
    ],
    "environment_fullscreen": true
   },
   {
+   "id": "thing",
+   "start_frame": 322,
+   "end_frame": 352,
+   "kind": "story_still",
+   "composition": "alex-compares-coats",
+   "action": "Alex compares two coats in the shop (slow push)",
+   "motion_purpose": "Cut to Alex shopping as the claim turns",
+   "assets": [
+    "s2c2"
+   ],
+   "animations": [
+    "thing-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.2 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
    "id": "not-saved",
-   "start_frame": 645,
-   "end_frame": 741,
+   "start_frame": 352,
+   "end_frame": 418,
    "kind": "presenter",
    "composition": "ren-left-struck-107",
    "action": "Ren listens; the '$107 saved' figure is struck through",
@@ -369,8 +296,8 @@
   },
   {
    "id": "spend-183",
-   "start_frame": 741,
-   "end_frame": 785,
+   "start_frame": 418,
+   "end_frame": 461,
    "kind": "graphic",
    "composition": "parts-183",
    "action": "The three items $48 + $105 + $30 add to $183",
@@ -385,76 +312,9 @@
    "timing_justification": "Beat length 1.8 s follows the spoken phrase boundaries; the visual change lands on its words"
   },
   {
-   "id": "rule-2",
-   "start_frame": 785,
-   "end_frame": 875,
-   "kind": "presenter",
-   "composition": "ren-left-rule2",
-   "action": "Ren thinks; a RULE 2 tag",
-   "motion_purpose": "Rule two",
-   "assets": [
-    "ren_think",
-    "sage"
-   ],
-   "animations": [
-    "rule-2-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "smaller-bill",
-   "start_frame": 875,
-   "end_frame": 953,
-   "kind": "graphic",
-   "composition": "equation-341",
-   "action": "The finished equation $158 + $183 = $341",
-   "motion_purpose": "Do the math",
-   "assets": [
-    "sage"
-   ],
-   "animations": [
-    "smaller-bill-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "over-341",
-   "start_frame": 953,
-   "end_frame": 1013,
-   "kind": "presenter",
-   "composition": "ren-left-341-total",
-   "action": "Ren points right at 'Alex is at $341'",
-   "motion_purpose": "The total",
-   "assets": [
-    "ren_point",
-    "sage"
-   ],
-   "animations": [
-    "over-341-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
-   "id": "over-budget",
-   "start_frame": 1013,
-   "end_frame": 1056,
-   "kind": "graphic",
-   "composition": "budget-bar",
-   "action": "A budget bar fills past $300; '$41 over' lands",
-   "motion_purpose": "Show the overspend",
-   "assets": [
-    "sage"
-   ],
-   "animations": [
-    "over-budget-motion"
-   ],
-   "environment_fullscreen": true,
-   "timing_justification": "Beat length 1.8 s follows the spoken phrase boundaries; the visual change lands on its words"
-  },
-  {
    "id": "rule-4",
-   "start_frame": 1056,
-   "end_frame": 1120,
+   "start_frame": 461,
+   "end_frame": 526,
    "kind": "presenter",
    "composition": "ren-left-rule4",
    "action": "Ren points down-right; RULE 4 tag",
@@ -469,26 +329,9 @@
    "environment_fullscreen": true
   },
   {
-   "id": "question",
-   "start_frame": 1120,
-   "end_frame": 1195,
-   "kind": "presenter",
-   "composition": "ren-left-question",
-   "action": "Ren shrugs; a 'Need it, or did the timer?' card",
-   "motion_purpose": "The question to ask",
-   "assets": [
-    "ren_shrug",
-    "sage"
-   ],
-   "animations": [
-    "question-motion"
-   ],
-   "environment_fullscreen": true
-  },
-  {
    "id": "sleep",
-   "start_frame": 1195,
-   "end_frame": 1268,
+   "start_frame": 526,
+   "end_frame": 599,
    "kind": "graphic",
    "composition": "moon-to-sun",
    "action": "A moon becomes a sun: 'Still want it tomorrow?'",
@@ -502,37 +345,53 @@
    "environment_fullscreen": true
   },
   {
-   "id": "tally",
-   "start_frame": 1268,
-   "end_frame": 1371,
+   "id": "tally-a",
+   "start_frame": 599,
+   "end_frame": 632,
+   "kind": "story_still",
+   "composition": "alex-relaxed-37-under",
+   "action": "Approved art of Alex at ease in the kitchen; a '$37 under budget' card",
+   "motion_purpose": "The calm result",
+   "assets": [
+    "home"
+   ],
+   "animations": [
+    "tally-a-motion"
+   ],
+   "environment_fullscreen": true,
+   "timing_justification": "Beat length 1.4 s follows the spoken phrase boundaries; the visual change lands on its words"
+  },
+  {
+   "id": "tally-b",
+   "start_frame": 632,
+   "end_frame": 701,
    "kind": "presenter",
-   "composition": "ren-left-tally",
-   "action": "Ren presents; the '$37 under budget' card changes to '$78 less' on the second figure",
-   "motion_purpose": "The result",
+   "composition": "ren-left-78-less",
+   "action": "Ren presents (mirrored palm); the '$78 less' card",
+   "motion_purpose": "The gap",
    "assets": [
     "ren_present",
     "sage"
    ],
    "animations": [
-    "tally-motion"
+    "tally-b-motion"
    ],
-   "environment_fullscreen": true,
-   "timing_justification": "Beat length 4.3 s follows the spoken phrase boundaries; the visual change lands on its words"
+   "environment_fullscreen": true
   },
   {
-   "id": "cta",
-   "start_frame": 1371,
-   "end_frame": 1440,
+   "id": "closing",
+   "start_frame": 701,
+   "end_frame": 786,
    "kind": "presenter",
-   "composition": "ren-left-end-card",
-   "action": "Ren gives a thumbs up; the workbook card; the exact disclaimer holds for the last two seconds",
-   "motion_purpose": "Call to action and disclaimer",
+   "composition": "ren-left-full-video",
+   "action": "Ren points at a 'Watch the full video' card; the exact disclaimer holds for the last two seconds",
+   "motion_purpose": "Prompt to watch the full video",
    "assets": [
-    "ren_thumbs",
+    "ren_point",
     "sage"
    ],
    "animations": [
-    "cta-motion"
+    "closing-motion"
    ],
    "environment_fullscreen": true
   }
@@ -540,8 +399,8 @@
  "audio_cues": [
   {
    "start": 0.0,
-   "end": 59.79,
-   "text": "black friday has a clever trick it can make spending feel like saving today alex heads into the sales with a three hundred dollar budget and two very different plans one plan ends at three hundred and forty-one dollars the other ends at two hundred and sixty-three same shop same sales seventy-eight dollars apart then alex opens a shop's website a countdown clock is ticking a badge says only three left the website cheerfully announces that alex has saved one hundred and seven dollars and here's the thing alex hasn't saved one hundred and seven dollars alex is about to spend one hundred and eighty-three rule two do the math a discount isn't a saving it's just a smaller bill add the list to the cart and alex is at three hundred and forty-one dollars which is forty-one dollars over budget rule four let it sit for twenty-four hours do i need this or did the timer need me to buy it it just means the answer has to survive a night's sleep that's thirty-seven under budget and seventy-eight dollars less than the impulse cart check out the money leak audit workbook in the description"
+   "end": 32.416,
+   "text": "he saved one hundred and seven dollars on black friday but spent more money then alex opens a shop's website a countdown clock is ticking a badge says only three left the website cheerfully announces that alex has saved one hundred and seven dollars and here's the thing alex hasn't saved one hundred and seven dollars alex is about to spend one hundred and eighty-three rule four let it sit for twenty-four hours it just means the answer has to survive a night's sleep that's thirty-seven under budget and seventy-eight dollars less than the impulse cart watch the full black friday video to see all five rules"
   }
  ]
 }
