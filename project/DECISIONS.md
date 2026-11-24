@@ -1,5 +1,45 @@
 # Ren Video Production & Decision Log
 
+## Production fixes — 24 November 2026 (code alignment and asset promotion; not a new owner decision)
+
+Recorded from the production audit the owner asked to progress on 24 November 2026
+(recommendations 1–3). This section records evidence and code alignment only; it does
+not record any new owner approval, and nothing here is merged until the owner reviews
+the pull request.
+
+- **Qwen x-vector setting — cliplib code was wrong; the rules were right.** The v3
+  rules (`REN_LONGFORM_BASELINE.md`, `REN_VIDEO_RULES.md`) state
+  `use_xvector_only=True`. Every approved episode voice script already follows them:
+  `videos/free_money/gen_voice.py`, `videos/three_bills/gen_voice.py` and
+  `videos/unclaimed_401k/gen_voice.py` all build the prompt with
+  `x_vector_only_mode=True` and `ref_text=None`, and `videos/three_bills/tb_qa.py`
+  (check 12a) asserts `x_vector_only_mode=True` in the episode's voice script.
+  `videos/free_money/REPORT.md` had already flagged that the earlier cliplib wrappers
+  used `False`. The generic wrappers in `project/cliplib/` (`qwen_voice.py`,
+  `qwen_local_voice.py`, `local_voice.py`, dating from 26–27 October 2026, before the
+  v3 rules) were the only code still using `False`; they have been aligned to `True`
+  (`ref_text=None` locally) in the production-fixes pull request. The sentence in the
+  27 October 2026 prototype update below describing cloning "from
+  `Audio/ren_reference.wav` plus its exact transcript" describes those earlier
+  wrappers and is superseded for voice-prompt construction by the x-vector-only
+  standard in `REN_LONGFORM_BASELINE.md`. No voice was synthesised for this fix; the
+  owner's standing ear check at the next pilot still applies.
+- **Coffee prototype v3 promoted by pull request.** `project/prototypes/coffee-minute-v3/`
+  existed only on branch `codex/ren-approved-v3` although `REN_VIDEO_RULES.md` says it
+  is published there. Its 110 files have been copied byte-for-byte into the
+  production-fixes pull request (all file sizes match the source branch, and the four
+  artwork PNGs restored from the base64 chunks match the SHA-256 hashes in
+  `artwork/manifest.json` and `validation-approved-baseline.json`). The prototype's
+  own README says "Do not merge into main without Jon's instruction" — merging the
+  pull request is therefore the owner's decision.
+- **Approved-asset registry created.** `project/assets/APPROVED_ASSET_REGISTRY.md`
+  (with a JSON version) records what the repository actually proves for Ren, Alex
+  and Maya. In particular: Alex has approved episodic prototype artwork only and no
+  reusable character asset; Maya's Three Bills poses are not in Git, were recorded
+  as approved only second-hand ("per pack record"), and are not the same design as
+  the 401(k) episode's Maya — her identity is not locked. No approval is claimed in
+  the registry beyond what the cited source documents state.
+
 ## Current long-form baseline — 8 November 2026
 
 The owner approved the overall visual and storytelling direction of the 401(k)
@@ -69,3 +109,4 @@ Repo jon8778-source/Ren; work on branch ccr-a31871f7-ihoco0 (PR #2 → main). Wo
 - QC must be OVERALL PASS; fix causes, never loosen checks. Check frames from every scene and fix overlaps before sending.
 - Claude can't hear audio: owner checks pronunciation and pace.
 - Commit and push after each stage; keep the branch merged with main.
+

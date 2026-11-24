@@ -22,9 +22,10 @@ def main():
         dtype=torch.bfloat16 if args.device.startswith('cuda') else torch.float32,
         attn_implementation='sdpa')
     # Compute once, reuse for all new lines. This is a voice prompt, not separately trained weights.
+    # X-vector-only prompt (approved v3 standard): the reference transcript is not used.
     prompt = model.create_voice_clone_prompt(ref_audio=str(REF / 'ren_reference.wav'),
-        ref_text=(REF / 'ren_reference.txt').read_text().strip().strip('"“”').strip(),
-        x_vector_only_mode=False)
+        ref_text=None,
+        x_vector_only_mode=True)
     args.out.mkdir(parents=True, exist_ok=True)
     for i, shot in enumerate(json.loads(args.shots.read_text())['shots'], 1):
         text = shot.get('voice', '').strip()

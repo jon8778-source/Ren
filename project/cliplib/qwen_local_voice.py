@@ -4,8 +4,11 @@
       scripts/Ren_Postponing_Life_Script_v3.md --sections S1 S2 --out videos/postponing_life/voice
 
 Uses Qwen/Qwen3-TTS-12Hz-1.7B-Base (the model behind the Space's Voice Clone tab) with
-Audio/ren_reference.wav and its exact transcript, building the voice prompt once and reusing it for
-every line. Each paragraph of a section is one line: lines/S1_01.wav ... Lines are joined into S1.wav,
+Audio/ren_reference.wav only, building an x-vector-only voice prompt once
+(x_vector_only_mode=True, ref_text=None; the reference transcript is not used) and reusing it for
+every line. This matches the approved episode voice scripts
+(videos/free_money/gen_voice.py, videos/three_bills/gen_voice.py,
+videos/unclaimed_401k/gen_voice.py) and project/REN_LONGFORM_BASELINE.md. Each paragraph of a section is one line: lines/S1_01.wav ... Lines are joined into S1.wav,
 S2.wav ... with config voice.gap_s between them, and timings.json records where each line sits and
 whether it is a quoted (speaker-tagged) line. A fixed seed per line makes re-runs repeatable.
 """
@@ -58,9 +61,8 @@ def main():
         args.model, device_map=args.device,
         dtype=torch.bfloat16 if args.device.startswith("cuda") else torch.float32,
         attn_implementation="sdpa")
-    ref_text = (REF / "ren_reference.txt").read_text().strip().strip('"“”').strip()
-    prompt = model.create_voice_clone_prompt(ref_audio=str(REF / "ren_reference.wav"), ref_text=ref_text,
-                                             x_vector_only_mode=False)
+    prompt = model.create_voice_clone_prompt(ref_audio=str(REF / "ren_reference.wav"), ref_text=None,
+                                             x_vector_only_mode=True)
     print(f"model and voice prompt ready in {time.monotonic() - t0:.0f}s", flush=True)
 
     timings_path = out / "timings.json"
