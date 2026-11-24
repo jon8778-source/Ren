@@ -1,0 +1,177 @@
+# Ren — Approved Asset Registry
+
+Created 24 November 2026, from the production audit recommendations 1–3 that the
+owner (Jon) asked to progress. A machine-readable version is in
+`APPROVED_ASSET_REGISTRY.json` beside this file.
+
+**How to read this registry:** it records only what the repository actually
+proves — a file path, the branch it is on, a SHA-256 where one could be verified
+from repo files or manifests, the approval provenance (who / when / source
+document), and a status. Where the repository does not prove approval, the
+status says so. Nothing in this registry creates an approval.
+
+Source branches checked: `main` at `c1270bc060e4043c73525cca1ae6e3ad9a03d4a0`
+and `codex/ren-approved-v3` at `b502ac6c9017cdb5f356f8442a1984663a5aa2f7`.
+
+---
+
+## Ren — APPROVED, in Git
+
+### Animation clip library (the presenter library)
+- **Path:** `assets/ren_library/` — 32 MP4 clips, each listed with status
+  `"ok"` in `assets/ren_library/ren_library.json` (1280×720, 24 fps, source
+  audio discarded): ren_celebrate_fist_pump, ren_clipboard_tick, ren_confused,
+  ren_count_fingers, ren_empty_pockets, ren_explain_hands, ren_facepalm,
+  ren_hold_phone, ren_idea, ren_idle_calm, ren_idle_listen, ren_lean_in,
+  ren_nod_yes, ren_open_arms, ren_point_camera, ren_point_down_right,
+  ren_point_right, ren_point_up, ren_present_palm_left, ren_relieved,
+  ren_rub_hands, ren_shake_no, ren_shocked, ren_shrug, ren_thinking,
+  ren_thumbs_up, ren_walk_in_left, ren_walk_in_place_profile,
+  ren_walk_off_right, ren_wave_bye, ren_wave_hello, ren_worried.
+- **Branch:** `main` (also present on the production branches checked).
+- **SHA-256:** `ren_library.json` does not carry per-clip hashes. Episode
+  inventories record the first 16 characters for the clips they used, e.g.
+  from `videos/three_bills/ASSET_INVENTORY.md`: ren_present_palm_left
+  `4ab89972324e639b`, ren_shrug `1cacb6dd155bbec0`, ren_point_right
+  `ae725bb9225f4847`, ren_thinking `5451d99e329777ff`.
+- **Provenance:** `ren_library.json` per-clip status `"ok"`;
+  `project/REN_VIDEO_RULES.md` (approved hybrid rules v3); the Three Bills
+  inventory cites individual clips as "APPROVED animated clip".
+- **Status: APPROVED — reusable presenter library, on main.**
+
+### Locked character stills
+- **Path:** `project/characters/ren/` — 8 poses (neutral, pointing, shocked,
+  talking, thinking, thumbs-up, waving, worried).
+- **Branch:** `main`. **Manifest:** `project/characters/manifest.json`
+  (`locked: true`, Ren as `"guide"`), with full SHA-256 per pose: neutral
+  `4cc68dfc839d23a02ebda55fa34adadf9eba5235f5aecdbd93861e49c5a6ee75`,
+  pointing `21e97fe62038d58cf6a35c65322d11989fe443179bdb4270c5f0c75d107f307c`,
+  shocked `fc773d86fd6e52a51865e38878242edd214781e57e74c697a38da400ab50118a`,
+  talking `03eb06f505d36a78ee4481d66bb7650705acff74c1a85211c1c3a83d65121c95`,
+  thinking `dc9bdac9a154d61ca4ed00ff94de197c9f36dcb13068bbadd0a510d802ba5241`,
+  thumbs-up `fea209942a25645fa8e19098594a3643f419a0c0d881c3d383f91ef7d14e92ac`,
+  waving `deb8b5eb2256fc68b8307f8fe5182ea2d77bc015b7f7b9e187ef93ba8303f6b1`,
+  worried `9dd72deef5ba00fd2a58ae2990f7f730d45f61935fb76d4bda2df345b1720afc`.
+- **Status: APPROVED (locked)** — legacy stills set; the hybrid rules restrict
+  stills to story cutaways within limits.
+
+### Approved stills folder
+- **Path:** `library/ren_approved/` — 8 JPGs including full-body
+  standing/presenting/waving. **Branch:** `main` only (absent on
+  `codex/ren-approved-v3` and `codex/ren-hybrid-template`).
+- **Status: PRESENT on main** — no per-file approval document was read, so no
+  stronger claim is made.
+
+### Voice reference
+- **Path:** `Audio/ren_reference.wav` + `Audio/ren_reference.txt`.
+  SHA-256 (first 16) `78de4bd45743554f` per the Three Bills inventory, which
+  records it as "APPROVED reference (Ren Qwen clone)".
+- **Configuration:** `Qwen/Qwen3-TTS-12Hz-1.7B-Base`, English, x-vector-only
+  (`use_xvector_only=True` / `x_vector_only_mode=True`, `ref_text=None`
+  locally) — see `project/REN_LONGFORM_BASELINE.md` and the note in
+  `project/DECISIONS.md` dated 24 November 2026.
+- **Status: APPROVED.**
+
+---
+
+## Alex — episodic artwork ONLY; no reusable character asset
+
+There is **no Alex entry in `project/characters/manifest.json`** and no Alex
+pose/expression set in Git on any branch checked. What exists is approved
+episodic artwork for the coffee prototype, stored losslessly as base64 text
+chunks in `project/prototypes/coffee-minute-v3/artwork/` (restored by
+`unpack_artwork.py`, SHA-256 verified):
+
+| Restored file | Chunks | SHA-256 (verified 24 Nov 2026) | Size | Original approved source |
+|---|---|---|---|---|
+| `alex-cafe.png` | `alex-cafe.png.b64.000`–`.023` | `83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b` | 1,715,661 bytes | "Alex taps to pay for coffee.png" |
+| `alex-home.png` | `alex-home.png.b64.000`–`.024` | `5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f` | 1,793,785 bytes | "Alex pours French press coffee.png" (corrected single mug) |
+
+- **Branch:** `codex/ren-approved-v3` originally; copied byte-for-byte to
+  `ren/production-fixes-20261124` by the production-fixes pull request — on
+  `main` only if/when that PR is merged.
+- **Provenance:** the prototype README's "Approved artwork" table; the coffee
+  prototype v3 was approved by Jon on 29 October 2026
+  (`project/REN_VIDEO_RULES.md`). Library file IDs are recorded in
+  `artwork/manifest.json` and in the JSON version of this registry.
+- **Status: APPROVED as episodic artwork for the coffee prototype ONLY.**
+  `project/DECISIONS.md` (27 October 2026) records the bundled office/story
+  portrait as placeholders pending approved office/Alex assets — a reusable
+  Alex character set is still a gap.
+
+---
+
+## Maya — BLOCKED / UNVERIFIED in Git; identity NOT locked
+
+There is **no Maya entry in `project/characters/manifest.json`**, and two
+different Maya designs exist.
+
+### Lineup still (in Git, as chunks)
+- `supporting-cast.png` — "Centered Maya in illustrated character lineup.png"
+  (Alex, revised Maya, Sam), stored as
+  `project/prototypes/coffee-minute-v3/artwork/supporting-cast.png.b64.000`–`.023`
+  on `codex/ren-approved-v3` (copied to `ren/production-fixes-20261124` by the
+  production-fixes PR). SHA-256 (verified 24 Nov 2026)
+  `07fb436f249fa2bd9c8b1d00e31e62b5e14630df2a92798753b284c57eb5833e`,
+  1,710,532 bytes. Provenance: prototype README "Approved artwork" table
+  ("included for reuse; this prototype uses Alex only").
+- **Status: APPROVED prototype artwork — a lineup still, not a Maya pose set
+  and not an identity lock.**
+
+### Three Bills poses (NOT in Git)
+Recorded in `videos/three_bills/ASSET_INVENTORY.md` at
+`videos/three_bills/art/cast/` — a tree that does **not** exist in the Git
+listing on `main` or on `video/three-bills-30-days` (local/gitignored
+episode art):
+
+| File | SHA-256 (first 16, per inventory) | Inventory status |
+|---|---|---|
+| `maya_01_neutral.png` | `6b140a9c8a70ccb4` | OWNER APPROVED 9 Nov 2026 (per pack record) |
+| `maya_02_surprised_envelope.png` | `ba173f462624ec19` | OWNER APPROVED 9 Nov 2026 (per pack record) |
+| `maya_03_worried_phone.png` | `e8770c7e9cef2a4e` | OWNER APPROVED 9 Nov 2026 (per pack record) |
+| `maya_04_relief_phone.png` | `f123ada071ee7cb3` | OWNER APPROVED 9 Nov 2026 (per pack record) |
+
+- **Provenance caveat:** the inventory's approval for the script is recorded
+  as "per pack record — I did not see the approval message live", and the
+  Maya rows carry the same "(per pack record)" basis: **second-hand
+  provenance**, weaker than a recorded explicit approval.
+- The same inventory states this Maya is **NOT the same design as the
+  401(k) episode's Maya**. The 401(k) episode's Maya art
+  (`videos/unclaimed_401k/art/`) is likewise local-only and not in Git.
+- **Status: BLOCKED / UNVERIFIED in Git — files absent, approval second-hand,
+  identity NOT locked.**
+
+---
+
+## Environments (for completeness)
+
+- `office.png` (coffee prototype) — chunks
+  `office.png.b64.000`–`.026` in
+  `project/prototypes/coffee-minute-v3/artwork/`, SHA-256 (verified)
+  `b428d9b93631c05f2832a2dbaff94cc17370329dad1a4cd82600fbb40019bd36`,
+  1,897,116 bytes, source "Welcoming sage-accented home office.png".
+  Status: APPROVED for the coffee prototype.
+- Background plates on `main`: `library/supporting_assets/backgrounds/`
+  — `Office_background_16x9.png` (SHA-256 first 16 `bfc7066bc8253ac3`),
+  `Office_parking_lot_car_16x9.png` (`0dc0b4d6e623f571`),
+  `Porch_background_16x9.png` (`b6732b5526d5bbc8`), recorded in the Three
+  Bills inventory as "APPROVED (Free Money pack, PLATE_GEOM calibrated)".
+
+---
+
+## To close these gaps — what Jon needs to supply / approve
+
+1. **Maya files:** supply the approved pose files for committing to Git
+   (the four Three Bills PNGs, and/or the 401(k) episode sheets), so full
+   SHA-256 hashes can be recorded here from the actual files.
+2. **Maya identity:** decide which design is canonical — Three Bills Maya
+   or 401(k) Maya — or explicitly approve both as different characters;
+   then lock the chosen design in `project/characters/manifest.json`.
+3. **Maya approval:** confirm the 9 November 2026 approval directly, since
+   the Three Bills inventory recorded it second-hand ("per pack record").
+4. **Alex:** approve and supply a reusable Alex character set (locked
+   poses/expressions with hashes, in the style of `project/characters/ren/`),
+   or confirm Alex is episodic-artwork-only for now.
+5. **Ren (optional tidy-up):** add full per-clip SHA-256 hashes to
+   `assets/ren_library/ren_library.json` so every clip is hash-verifiable,
+   not only the four cited by episode inventories.

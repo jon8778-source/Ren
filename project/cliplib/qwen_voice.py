@@ -3,7 +3,9 @@
   .tools/venv/bin/python cliplib/qwen_voice.py cliplib/shots/<name>.json [--out ../voice/lines]
 
 Calls the Space's Voice Clone (Base) endpoint, /generate_voice_clone, with the 1.7B model and the
-same reference (Audio/ren_reference.wav + Audio/ren_reference.txt) for every line, and saves one
+same reference (Audio/ren_reference.wav) for every line, in x-vector-only mode
+(use_xvector_only=True, the approved v3 standard in project/REN_LONGFORM_BASELINE.md: the
+reference transcript is passed to the API but is not used to build the voice prompt), and saves one
 WAV per shot as line_01.wav, line_02.wav, ... for render_shots.py --voice-dir. If the environment
 has HF_TOKEN set, it is passed to the Space (it is never written anywhere). Any error from the
 Space, including quota or rate limits, stops the run: there is no fallback voice.
@@ -53,7 +55,7 @@ def main():
                 ref_text=ref_text,
                 target_text=text,
                 language="English",
-                use_xvector_only=False,
+                use_xvector_only=True,
                 model_size="1.7B",
                 api_name="/generate_voice_clone",
             )
