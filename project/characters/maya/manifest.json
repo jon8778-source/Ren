@@ -1,0 +1,76 @@
+{
+  "character": "Maya",
+  "status": "APPROVED - canonical identity lock. These are the Maya reference sheets the owner approved on 8 Nov 2026 as the identity lock and source art for the 401(k) episode (videos/unclaimed_401k/ART_AUDIT.md). Owner confirmed on 25 Nov 2026 that the 401(k) Maya is Maya's canonical design; the Three Bills Maya and any other variant are non-canonical. Sheets supplied by the owner on 25 Nov 2026 and committed to Git the same day.",
+  "design": "Long wavy dark hair, rust-orange sweater, navy trousers, white trainers, small gold earrings. The lineup file (image.jpg) is the original cast lineup: Alex, Maya (centre), Sam - the same Maya design as the sheets and as the coffee-v3 supporting-cast lineup.",
+  "sheets": [
+    {
+      "file": "image.jpg",
+      "sha256": "f922c61ea79ba1771b8cdd43b66494ab1b389be382c35e7f8124c8336411f014",
+      "size_bytes": 194147,
+      "width": 1536,
+      "height": 1024,
+      "chunks": 3
+    },
+    {
+      "file": "maya_s_five_step_filing_sequence.png",
+      "sha256": "9677ec58ad889a5f319ffc0451dd6dbfb1fe5796d2094b629559d8c2e64bc8f9",
+      "size_bytes": 1549192,
+      "width": 1672,
+      "height": 941,
+      "chunks": 22
+    },
+    {
+      "file": "maya_s_laptop_pose_study.png",
+      "sha256": "f68788d12d7e3d5703e81f03cf435aadd18bc39d4a60003fbb675e8a95328830",
+      "size_bytes": 1346730,
+      "width": 1448,
+      "height": 1086,
+      "chunks": 19
+    },
+    {
+      "file": "maya_s_seated_pose_reference_sheet.png",
+      "sha256": "cc0a89c4bbf920d0bbe1511524f7613a9adc31ae1e694e696b95d149161e211e",
+      "size_bytes": 1763645,
+      "width": 1122,
+      "height": 1402,
+      "chunks": 25
+    },
+    {
+      "file": "maya_s_seated_receipt_and_laptop_poses.png",
+      "sha256": "b488f354ec8e436325707e31a6252009761cd59a5c323a66a4df4e8332485464",
+      "size_bytes": 1552095,
+      "width": 1448,
+      "height": 1086,
+      "chunks": 22
+    },
+    {
+      "file": "maya_s_seven_pose_animation_sheet.png",
+      "sha256": "572b33f8fb775d2cf3fface4a8253744b4bbd104fe6bfce3924c7839ab876596",
+      "size_bytes": 1606877,
+      "width": 1122,
+      "height": 1402,
+      "chunks": 23
+    },
+    {
+      "file": "maya_s_sofa_phone_sequence.png",
+      "sha256": "fc993cf30faf24c541423982bbc890cf451f3169d57b3091409a56927b179e35",
+      "size_bytes": 1498519,
+      "width": 1448,
+      "height": 1086,
+      "chunks": 21
+    },
+    {
+      "file": "maya_s_walking_and_sitting_sequence.png",
+      "sha256": "9613a80825bf1952546f8cdd0ff2d3515e47be505ea1f8c97e1cf32d6d957304",
+      "size_bytes": 1515745,
+      "width": 1672,
+      "height": 941,
+      "chunks": 22
+    }
+  ],
+  "notes": [
+    "Sheets are stored as base64 chunks following the repo convention: sheets/<file>.b64.000, .001, ... Restore with: cat sheets/<file>.b64.* | base64 -d > <file>, then verify SHA-256 against this manifest.",
+    "The 50 cut poses produced by the episode's split_sheets.py (art/poses/, local-only at audit time) are not included; the sheets are the source art from which poses are cut.",
+    "Source figures are about 600 px tall in the episode's cut poses (ART_AUDIT.md), so close-ups will be soft; the sheets themselves are 1122-1672 px on their long edge."
+  ]
+}
