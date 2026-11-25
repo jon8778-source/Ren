@@ -1,5 +1,25 @@
 # Ren Video Production & Decision Log
 
+## Owner decision — 25 November 2026: Maya's canonical design is the 401(k) Maya
+
+The owner decided on 25 November 2026 to keep the 401(k) episode's Maya as
+Maya's canonical design. This settles the open identity question recorded in
+the production audit and the asset registry:
+
+- The 401(k) Maya — whose sheets the owner approved on 8 November 2026 as
+  "the identity lock and source art" (`videos/unclaimed_401k/ART_AUDIT.md`) —
+  is the canonical Maya for future production.
+- The Three Bills Maya (four poses, recorded as approved 9 November 2026
+  "per pack record") is a non-canonical variant: she remains that episode's
+  episodic artwork and must not be used as Maya's identity in new work.
+- The coffee-v3 lineup's "revised Maya" is likewise not the canonical
+  identity; the lineup remains approved prototype artwork only.
+- Still outstanding (archival, not identity): the 401(k) Maya sheets and
+  their 50 cut poses are local-only (gitignored) and are not in Git, and the
+  source figures are about 600 px tall. Supplying the files for committing
+  to Git, with full SHA-256 hashes recorded in the asset registry, closes
+  the last Maya gap.
+
 ## Production fixes — 24 November 2026 (code alignment and asset promotion; not a new owner decision)
 
 Recorded from the production audit the owner asked to progress on 24 November 2026

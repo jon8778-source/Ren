@@ -6,7 +6,9 @@ owner (Jon) asked to progress. A machine-readable version is in
 
 **Update, 25 November 2026:** the Alex pose set (PR #12) was merged to `main`
 and formally approved by the owner for production use; the Alex section below
-records that approval.
+records that approval. The same day, the owner decided Maya's canonical
+design is the 401(k) episode Maya; the Maya section below records that
+decision.
 
 **How to read this registry:** it records only what the repository actually
 proves — a file path, the branch it is on, a SHA-256 where one could be verified
@@ -126,10 +128,15 @@ chunks in `project/prototypes/coffee-minute-v3/artwork/` (restored by
 
 ---
 
-## Maya — BLOCKED / UNVERIFIED in Git; identity NOT locked
+## Maya — canonical design: the 401(k) Maya (owner decision, 25 November 2026); art still not in Git
 
-There is **no Maya entry in `project/characters/manifest.json`**, and two
-different Maya designs exist.
+The owner decided on 25 November 2026 to keep the **401(k) episode's Maya**
+as Maya's canonical design — the design whose sheets he approved on
+8 November 2026 as "the identity lock and source art"
+(`videos/unclaimed_401k/ART_AUDIT.md`). The Three Bills Maya and the
+coffee-v3 lineup Maya are non-canonical variants. There is still **no Maya
+entry in `project/characters/manifest.json`**, and the canonical design's
+artwork is not in Git — the remaining gap is archival, not identity.
 
 ### Lineup still (in Git, as chunks)
 - `supporting-cast.png` — "Centered Maya in illustrated character lineup.png"
@@ -141,7 +148,8 @@ different Maya designs exist.
   1,710,532 bytes. Provenance: prototype README "Approved artwork" table
   ("included for reuse; this prototype uses Alex only").
 - **Status: APPROVED prototype artwork — a lineup still, not a Maya pose set
-  and not an identity lock.**
+  and not an identity lock. The lineup Maya is NOT the canonical design
+  (owner decision, 25 November 2026).**
 
 ### Three Bills poses (NOT in Git)
 Recorded in `videos/three_bills/ASSET_INVENTORY.md` at
@@ -163,8 +171,10 @@ episode art):
 - The same inventory states this Maya is **NOT the same design as the
   401(k) episode's Maya**. The 401(k) episode's Maya art
   (`videos/unclaimed_401k/art/`) is likewise local-only and not in Git.
-- **Status: BLOCKED / UNVERIFIED in Git — files absent, approval second-hand,
-  identity NOT locked.**
+- **Status: NON-CANONICAL VARIANT (owner decision, 25 November 2026) — the
+  Three Bills Maya is not Maya's canonical design; she remains that
+  episode's episodic artwork only. Files absent from Git; the approval
+  provenance stays second-hand as recorded above.**
 
 ---
 
@@ -186,14 +196,18 @@ episode art):
 
 ## To close these gaps — what Jon needs to supply / approve
 
-1. **Maya files:** supply the approved pose files for committing to Git
-   (the four Three Bills PNGs, and/or the 401(k) episode sheets), so full
-   SHA-256 hashes can be recorded here from the actual files.
-2. **Maya identity:** decide which design is canonical — Three Bills Maya
-   or 401(k) Maya — or explicitly approve both as different characters;
-   then lock the chosen design in `project/characters/manifest.json`.
-3. **Maya approval:** confirm the 9 November 2026 approval directly, since
-   the Three Bills inventory recorded it second-hand ("per pack record").
+1. **Maya files:** supply the 401(k) episode Maya sheets — the canonical
+   design — for committing to Git, so full SHA-256 hashes can be recorded
+   here from the actual files. (The Three Bills PNGs are a non-canonical
+   variant and are no longer required.)
+2. **Maya identity: CLOSED (25 November 2026)** — the owner decided the
+   401(k) Maya is canonical; the Three Bills and lineup Mayas are
+   non-canonical variants. Locking her in `project/characters/manifest.json`
+   follows once the sheet files are in Git (item 1).
+3. **Maya approval:** the 9 November 2026 second-hand approval concerned
+   the now-non-canonical Three Bills variant; the canonical 401(k)
+   approval is recorded first-hand in the episode's `ART_AUDIT.md`
+   (8 November 2026). No further confirmation needed.
 4. **Alex: CLOSED (25 November 2026)** — reusable pose set approved by the
    owner and recorded above (`project/characters/alex/`, PR #12).
 5. **Ren (optional tidy-up):** add full per-clip SHA-256 hashes to
