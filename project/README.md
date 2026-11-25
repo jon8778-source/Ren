@@ -1,3 +1,9 @@
+> **Legacy workflow — historical reference only (banner added 25 November 2026).**
+> This README, `config.json` and `config.vertical.json` describe the retired
+> Kokoro / white-background / static-bust pipeline. New production follows
+> `REN_VIDEO_RULES.md`, `REN_LONGFORM_BASELINE.md` and `REN_SHORTS_RULES.md`.
+> Do not use the commands below for new episodes.
+
 # Ren explainer pipeline (16:9, long form)
 
 Repeatable pipeline for animated personal-finance explainers narrated by Ren.

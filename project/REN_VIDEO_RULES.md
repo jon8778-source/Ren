@@ -1,5 +1,11 @@
 # Approved Ren hybrid video rules — v3
 
+Document map (added 25 November 2026): this document is canonical for visual,
+technical and voice specifications. Story direction and the production gates
+are canonical in `REN_LONGFORM_BASELINE.md`; Shorts are governed by
+`REN_SHORTS_RULES.md`. Where a specification appears in more than one
+document, the canonical document governs.
+
 Jon approved the 61.625-second coffee prototype v3 on 29 October 2026.
 Use this as the visual direction for future hybrid prototypes. These rules
 supersede conflicting legacy white-only/static-bust/Kokoro instructions for
@@ -55,11 +61,19 @@ ChatGPT files. The newly reproduced MP4 is supplied separately with this handove
 - Maximum shot lengths: Ren 5.5 seconds, story still 2.5 seconds, graphic 3.5
   seconds. Avoid repeated poses across consecutive shots. Narration continues
   naturally across cuts.
+- Mid-video variety (added 25 November 2026): plan story and explainer scenes
+  to alternate. No more than about 20 consecutive seconds of card/graphic
+  shots without a character action, environment change or object interaction,
+  and include at least one environment change and one supporting-character
+  story beat in minutes 2-4. Episode QA should count consecutive graphic
+  shots and flag breaches.
 - No decorative body wobble. Preserve white shirt/trainers when removing the
   white background; inspect edges, hands and clothing for damage.
 - Fredoka text, navy/sage/cream graphics, clear mobile-readable layouts. Keep
   text away from faces, gestures and furniture. Disclaimer at start and end,
-  without a large banner.
+  without a large banner. The start disclaimer is a small overlay during the
+  opening hook (see the hook rule in `REN_LONGFORM_BASELINE.md`), never a
+  standalone opening beat; the full disclaimer runs at the end.
 
 ## Maths and editorial accuracy
 

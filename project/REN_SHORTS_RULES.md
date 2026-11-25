@@ -21,6 +21,10 @@ Avoid faces, hands and furniture under text. Use close-ups and cutaways, not
 repeated presenter poses or generic PowerPoint infographics. Large simple
 numbers/graphics belong to the story's phone, receipt, plan card or environment.
 
+**First-frame hook (added 25 November 2026):** a Short opens mid-action, with
+the payoff figure or the question visible within the first 2 seconds. No logo,
+title card or context-setting first frame.
+
 Aim for a **meaningful visual change every 2–4 seconds**: action, prop reveal,
 reaction, reframing or motivated cut. This is not permission to flash unreadable
 text. Important figures can remain visible across several actions/cuts. Explain
@@ -105,6 +109,10 @@ other renderers must emit equivalent measured bounds, not guessed boxes. Sample
 all extrema of motion or every frame. Minimum default sizes: text 42px, captions
 40px, disclaimer 30px. Review contrast/reading time; size alone does not prove
 readability. A safe-area check cannot OCR unrecorded baked-in text: inspect it.
+
+**Captions (added 25 November 2026):** Shorts carry burned-in captions for the
+narration, sized per the caption minimum in this section and kept inside the
+safe rectangle. Most Shorts viewing is muted; the story must read silently.
 
 Keep correct financial totals fixed while animating other objects. Use shared
 assumptions/calculations, labelled illustrative figures and source-backed claims.
