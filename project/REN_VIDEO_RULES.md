@@ -67,6 +67,30 @@ ChatGPT files. The newly reproduced MP4 is supplied separately with this handove
   and include at least one environment change and one supporting-character
   story beat in minutes 2-4. Episode QA should count consecutive graphic
   shots and flag breaches.
+- Animated story scenes (owner decision, 25 November 2026 — the standard set
+  by the Christmas-shopping prototype v3): supporting-character story beats
+  are produced as living scenes, not stills. Build each scene by compositing
+  the character's approved canonical design (from their approved sheets and
+  poses in `project/characters/`) into an illustrated environment plate in
+  the channel palette, then animate the composite with an image-to-video
+  tool so the character moves and the scene breathes (lights, weather,
+  small actions).
+  - Identity starts from the approved assets, never from a text description
+    alone. Check sampled frames from every animated scene against the
+    canonical sheets at QA; a scene whose character drifts is re-made, not
+    shipped.
+  - Camera stays locked off or moves gently. If a generated clip pushes in
+    harder than planned, tame it in the edit (trim to the calm portion;
+    ping-pong if needed) or regenerate. Do not ship an unintended zoom.
+  - Generated plates and clips carry no text and no figures. All lettering,
+    prices, totals and graphics are drawn in code as overlays, exactly as
+    elsewhere in these rules.
+  - Animated scenes replace the 2.5-second story-still cap for the beats
+    they cover. Ren's own shots still use the approved clip library and the
+    5.5-second cap, and the return-to-Ren pacing is unchanged.
+  - Generated plates and clips are episode production assets. They do not
+    enter the approved-asset registry as reusable approved assets unless
+    the owner approves them separately.
 - No decorative body wobble. Preserve white shirt/trainers when removing the
   white background; inspect edges, hands and clothing for damage.
 - Fredoka text, navy/sage/cream graphics, clear mobile-readable layouts. Keep

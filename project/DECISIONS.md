@@ -1,5 +1,31 @@
 # Ren Video Production & Decision Log
 
+## Animated story scenes are the standard — owner decision, 25 November 2026
+
+Owner decision, made in the Ren chat after reviewing the Christmas-shopping
+prototype (v1 stills, v2 animated, v3 fixes). The generated-animation route
+is the channel standard for supporting-character story scenes from now on:
+
+- Story beats are living scenes: the character's approved canonical design
+  composited into an illustrated environment plate in the channel palette,
+  animated with an image-to-video tool. The prototype's scenes were Maya in
+  her living room at Christmas, in a gift shop, and in the same room in
+  January; her identity held against the canonical sheets.
+- Ren's presentation shots are unchanged: the approved Ren clip library,
+  matted and composited as before.
+- All figures and lettering remain code-drawn overlays; generated artwork
+  and video never carry text or numbers.
+- Camera discipline and the asset-registry boundary are specified in
+  `REN_VIDEO_RULES.md` ("Animated story scenes" under Characters and
+  editing).
+- Presentation points settled in the same review: no burned-in caption box
+  on long-form (captions ship as a track, per the QA gate), and drawn
+  vector marks instead of font glyphs the brand font lacks (the missing
+  check-mark glyph in the prototype's list card).
+
+The Christmas piece itself was a prototype only; the owner will supply a
+script for a full-length episode separately.
+
 ## Guideline amendments proposed — 25 November 2026 (PR #16; owner decisions only when merged)
 
 Drafted by Muse at the owner's request from the guidelines structure review
