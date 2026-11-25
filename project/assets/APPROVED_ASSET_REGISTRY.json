@@ -113,7 +113,7 @@
   },
   {
    "character": "Maya",
-   "status": "blocked_unverified_not_in_git_identity_not_locked",
+   "status": "canonical_design_is_401k_maya_owner_decision_25nov2026_art_not_in_git",
    "assets": [
     {
      "kind": "lineup_still_png_stored_as_base64_chunks",
@@ -126,7 +126,7 @@
      "size_bytes": 1710532,
      "sha256_verified": "Yes - decoded from the chunks on 24 Nov 2026 and matched artwork/manifest.json and validation-approved-baseline.json",
      "approval_provenance": "project/prototypes/coffee-minute-v3/README.md \"Approved artwork\" table (\"The supporting cast lineup is included for reuse; this prototype uses Alex only\")",
-     "status": "APPROVED prototype artwork (a lineup still showing Alex, revised Maya and Sam). Not a Maya pose set and not, on its own, an identity lock."
+     "status": "APPROVED prototype artwork (a lineup still showing Alex, revised Maya and Sam). Not a Maya pose set and not an identity lock. NOTE (owner decision, 25 Nov 2026): the lineup Maya is NOT the canonical Maya design; the canonical design is the 401(k) episode Maya."
     },
     {
      "kind": "episode_pose_pngs_not_in_git",
@@ -139,7 +139,7 @@
       "maya_04_relief_phone.png": "f123ada071ee7cb3"
      },
      "approval_provenance": "videos/three_bills/ASSET_INVENTORY.md records \"OWNER APPROVED 9 Nov 2026 (per pack record)\" and states the inventory author did not see the approval message live - i.e. second-hand provenance. The same inventory states this Maya is NOT the same design as the 401(k) episode's Maya.",
-     "status": "BLOCKED / UNVERIFIED in Git - files absent, approval second-hand, identity NOT locked"
+     "status": "NON-CANONICAL VARIANT (owner decision, 25 Nov 2026): the Three Bills Maya is not Maya’s canonical design; the canonical design is the 401(k) episode Maya. These poses remain the Three Bills episode’s episodic artwork only. Files absent from Git; approval provenance second-hand."
     },
     {
      "kind": "episode_art_not_in_git",
@@ -147,10 +147,10 @@
      "branch": "none - local-only episode art (per the episode ART_AUDIT.md as reported in the 24 Nov 2026 audit: 10 sheets / 50 poses, local only)",
      "sha256": null,
      "approval_provenance": "Episode-local records only; not verified from Git in this registry",
-     "status": "NOT IN GIT - and a different Maya design from the Three Bills Maya (per videos/three_bills/ASSET_INVENTORY.md)"
+     "status": "CANONICAL DESIGN (owner decision, 25 Nov 2026): this is Maya’s canonical design and identity lock (owner approved the sheets as identity lock and source art on 8 Nov 2026, per videos/unclaimed_401k/ART_AUDIT.md). Still NOT IN GIT - local-only episode art; files must be supplied to close the archival gap."
     }
    ],
-   "gap": "No \"maya\" entry exists in project/characters/manifest.json. Two Maya designs exist (401(k) episode vs Three Bills) with no canonical identity lock in the repository."
+   "gap": "Identity settled by owner decision on 25 Nov 2026: canonical Maya is the 401(k) episode design. Remaining gap is archival only: the 401(k) Maya sheets and their 50 cut poses are local-only (gitignored), not in Git, and the source figures are about 600 px tall (close-ups will be soft). Supply the files so they can be committed and full SHA-256 hashes recorded here."
   }
  ],
  "environments": [
@@ -180,9 +180,9 @@
   }
  ],
  "to_close_the_gaps": [
-  "Maya: supply the approved pose files for committing to Git (the four Three Bills PNGs at videos/three_bills/art/cast/, and/or the 401(k) episode sheets), so their full SHA-256 hashes can be recorded here from the actual files.",
-  "Maya: decide which design is canonical - Three Bills Maya or 401(k) Maya - or explicitly approve both as different characters; then lock the chosen design in project/characters/manifest.json.",
-  "Maya: confirm the 9 Nov 2026 approval directly (the Three Bills inventory recorded it second-hand, \"per pack record\").",
+  "Maya: supply the 401(k) episode Maya sheets (the canonical design, owner decision 25 Nov 2026) for committing to Git, so their full SHA-256 hashes can be recorded here from the actual files. The four Three Bills PNGs are a non-canonical variant and are no longer required.",
+  "Maya: CLOSED 25 Nov 2026 - canonical design decided by the owner: the 401(k) episode Maya. The Three Bills Maya and the coffee-v3 lineup Maya are non-canonical variants.",
+  "Maya: the 9 Nov 2026 second-hand approval concerned the Three Bills variant, now non-canonical; the canonical 401(k) approval is recorded first-hand in videos/unclaimed_401k/ART_AUDIT.md (8 Nov 2026). No further confirmation needed.",
   "Alex: CLOSED 25 Nov 2026 - reusable pose set approved by the owner and recorded in this registry (project/characters/alex/, PR #12).",
   "Ren: no gap for the presenter library; optionally add full per-clip SHA-256 hashes to assets/ren_library/ren_library.json so every clip is hash-verifiable, not only the four cited by episode inventories."
  ],
