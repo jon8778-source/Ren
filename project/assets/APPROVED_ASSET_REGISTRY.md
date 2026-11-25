@@ -4,13 +4,17 @@ Created 24 November 2026, from the production audit recommendations 1–3 that t
 owner (Jon) asked to progress. A machine-readable version is in
 `APPROVED_ASSET_REGISTRY.json` beside this file.
 
+**Update, 25 November 2026:** the Alex pose set (PR #12) was merged to `main`
+and formally approved by the owner for production use; the Alex section below
+records that approval.
+
 **How to read this registry:** it records only what the repository actually
 proves — a file path, the branch it is on, a SHA-256 where one could be verified
 from repo files or manifests, the approval provenance (who / when / source
 document), and a status. Where the repository does not prove approval, the
 status says so. Nothing in this registry creates an approval.
 
-Source branches checked: `main` at `c1270bc060e4043c73525cca1ae6e3ad9a03d4a0`
+Source branches checked: `main` at `d48fcb697f0aed3452895ea09e28b7d2ef3e816d`
 and `codex/ren-approved-v3` at `b502ac6c9017cdb5f356f8442a1984663a5aa2f7`.
 
 ---
@@ -74,11 +78,34 @@ and `codex/ren-approved-v3` at `b502ac6c9017cdb5f356f8442a1984663a5aa2f7`.
 
 ---
 
-## Alex — episodic artwork ONLY; no reusable character asset
+## Alex — APPROVED pose set, in Git (plus approved episodic artwork)
 
-There is **no Alex entry in `project/characters/manifest.json`** and no Alex
-pose/expression set in Git on any branch checked. What exists is approved
-episodic artwork for the coffee prototype, stored losslessly as base64 text
+### Reusable pose set
+- **Path:** `project/characters/alex/` — README, `manifest.json`, and artwork
+  stored as base64 chunks under `artwork/` (restore:
+  `cat artwork/alex_neutral.png.b64.* | base64 -d`).
+- **Poses (1360×1712, full-body, plain cream background):** presenting,
+  neutral, thinking, thumbs-up, pointing (screen-right), waving, worried,
+  shocked. SHA-256 per pose, from `project/characters/alex/manifest.json`:
+  presenting `88009e40701624dc56b5dc2bc5d58b1c1509dce765e2a5afb5c49afed9bf1eef`,
+  neutral `26dc51eb98a8c74e7859a42556530a2947ad61e62f743890709a7b7deaff70ff`,
+  thinking `fd736937ef89735ebcfc47e50d7538f991e8abe70f47fe87cae2a499acf95d9e`,
+  thumbs-up `92fdaf3d0a4f8014b3f417b5c47e99fd6f3e1b14719db46db59c14acaf50b88f`,
+  pointing `d330b637b2b748205276dd181a1bfda61d9227c976c70345cfd34bb493f2cca4`,
+  waving `5e74b0c2bc1802cd4479196b760e5a5105c3125adeec1aaab52cf5511345266e`,
+  worried `80bd6cf05db9542abc533ab45d7d0c392cd1d79d6dfee22c57e815b930c34832`,
+  shocked `b319c14ff952b95f2027830a11248e83a31e143880f7414f44585a59bdd28c4b`.
+- **Provenance:** generated 24 November 2026 from the approved `alex-cafe`
+  design; the owner approved the refined design and the full set in chat on
+  24 November 2026, merged it via PR #12 on 25 November 2026 (merge commit
+  `d48fcb6`), and formally approved it for production use on
+  25 November 2026.
+- **Status: APPROVED — reusable character pose set, on main.**
+
+### Episodic artwork (coffee prototype)
+
+Alongside the pose set, Alex also has approved episodic artwork for the
+coffee prototype, stored losslessly as base64 text
 chunks in `project/prototypes/coffee-minute-v3/artwork/` (restored by
 `unpack_artwork.py`, SHA-256 verified):
 
@@ -87,17 +114,15 @@ chunks in `project/prototypes/coffee-minute-v3/artwork/` (restored by
 | `alex-cafe.png` | `alex-cafe.png.b64.000`–`.023` | `83d61936e45f62b7eef7ec253f1b4a3bce3661117afe96c13ae66009029f943b` | 1,715,661 bytes | "Alex taps to pay for coffee.png" |
 | `alex-home.png` | `alex-home.png.b64.000`–`.024` | `5ff172badddbe248a20996075b0a98760223a83824734a3988a361095d70ea1f` | 1,793,785 bytes | "Alex pours French press coffee.png" (corrected single mug) |
 
-- **Branch:** `codex/ren-approved-v3` originally; copied byte-for-byte to
-  `ren/production-fixes-20261124` by the production-fixes pull request — on
-  `main` only if/when that PR is merged.
+- **Branch:** `codex/ren-approved-v3` originally; on `main` via PR #11
+  (merged 24 November 2026, merge commit `28f33b9`).
 - **Provenance:** the prototype README's "Approved artwork" table; the coffee
   prototype v3 was approved by Jon on 29 October 2026
   (`project/REN_VIDEO_RULES.md`). Library file IDs are recorded in
   `artwork/manifest.json` and in the JSON version of this registry.
-- **Status: APPROVED as episodic artwork for the coffee prototype ONLY.**
-  `project/DECISIONS.md` (27 October 2026) records the bundled office/story
-  portrait as placeholders pending approved office/Alex assets — a reusable
-  Alex character set is still a gap.
+- **Status: APPROVED as episodic artwork for the coffee prototype.** The
+  reusable-character-set gap recorded in `project/DECISIONS.md`
+  (27 October 2026) was closed by the pose set above.
 
 ---
 
@@ -169,9 +194,8 @@ episode art):
    then lock the chosen design in `project/characters/manifest.json`.
 3. **Maya approval:** confirm the 9 November 2026 approval directly, since
    the Three Bills inventory recorded it second-hand ("per pack record").
-4. **Alex:** approve and supply a reusable Alex character set (locked
-   poses/expressions with hashes, in the style of `project/characters/ren/`),
-   or confirm Alex is episodic-artwork-only for now.
+4. **Alex: CLOSED (25 November 2026)** — reusable pose set approved by the
+   owner and recorded above (`project/characters/alex/`, PR #12).
 5. **Ren (optional tidy-up):** add full per-clip SHA-256 hashes to
    `assets/ren_library/ren_library.json` so every clip is hash-verifiable,
    not only the four cited by episode inventories.
