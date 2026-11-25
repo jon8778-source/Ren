@@ -1,24 +1,35 @@
 # Ren Video Production & Decision Log
 
-## Owner decision — 25 November 2026: Maya's canonical design is the 401(k) Maya
+## Guideline amendments proposed — 25 November 2026 (PR #16; owner decisions only when merged)
 
-The owner decided on 25 November 2026 to keep the 401(k) episode's Maya as
-Maya's canonical design. This settles the open identity question recorded in
-the production audit and the asset registry:
+Drafted by Muse at the owner's request from the guidelines structure review
+of 25 November 2026. These are proposed rule changes, not recorded owner
+decisions; merging PR #16 is the approval.
 
-- The 401(k) Maya — whose sheets the owner approved on 8 November 2026 as
-  "the identity lock and source art" (`videos/unclaimed_401k/ART_AUDIT.md`) —
-  is the canonical Maya for future production.
-- The Three Bills Maya (four poses, recorded as approved 9 November 2026
-  "per pack record") is a non-canonical variant: she remains that episode's
-  episodic artwork and must not be used as Maya's identity in new work.
-- The coffee-v3 lineup's "revised Maya" is likewise not the canonical
-  identity; the lineup remains approved prototype artwork only.
-- Still outstanding (archival, not identity): the 401(k) Maya sheets and
-  their 50 cut poses are local-only (gitignored) and are not in Git, and the
-  source figures are about 600 px tall. Supplying the files for committing
-  to Git, with full SHA-256 hashes recorded in the asset registry, closes
-  the last Maya gap.
+- **Hook rule and six-beat outline** (baseline): first five seconds carry the
+  hook; scripts outlined as hook, situation, tension by ~0:45, mechanism and
+  numbers, decision and consequence, payoff and recap; closing beat defined
+  for the final fifteen seconds; start disclaimer becomes an overlay during
+  the hook.
+- **Mid-video variety rule** (video rules): story and explainer scenes
+  alternate; no ~20-second graphic-only runs; environment change and a
+  supporting-character beat in minutes 2-4; QA counts consecutive graphic
+  shots.
+- **Open loops** at each planned return to Ren (baseline pacing).
+- **Packaging gate** (baseline gates, new step 9): title, thumbnail,
+  description and pinned comment approved as a set before publication
+  authorisation. **Captions track** added to long-form QA (gate 7) and the
+  checklist; **burned-in captions** and a **first-frame hook rule** added to
+  the Shorts standards.
+- **Cut test and 4-8 minute range** replace the single six-minute point
+  target at the script gate.
+- **Music experiment clause**: the no-music rule stands; one pilot may test
+  a low licensed bed for owner A/B judgement at the pilot gate.
+- **Document map**: baseline canonical for story/gates, video rules canonical
+  for visual/technical/voice, Shorts rules canonical for Shorts. Legacy
+  banners added to `project/README.md` and the root `README.md` (the Kokoro
+  config files they describe cannot carry comments). `GITHUB_TASK_STATUS.md`
+  refreshed, with a standing rule to update it at every gate.
 
 ## Production fixes — 24 November 2026 (code alignment and asset promotion; not a new owner decision)
 

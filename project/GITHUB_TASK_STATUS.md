@@ -1,7 +1,26 @@
-# Current task: Free Money long-form video, 7 November 2026
+# Current status — 25 November 2026
 
-Branch `video/free-money-v2`. Stage: Gate 4 (final render and package) complete; waiting for the phrase "approved to publish".
-Gates 0-3 approved. Final MP4 and the package zip are local only (`/output/final/free_money_final.mp4`,
-`videos/free_money/export/free_money_final_package.zip`; neither is in git). In git: renderer, narration, checks, `PACKAGE_REPORT.md`, `outline_final.md`,
-`shot_plan_actual.csv`, `build_package.py`. Timeline checks 17/17, validator PASS, jitter 0.06 px.
-Open: owner ear check; the IRS 2027 limit not verified against irs.gov (host not reachable); resolution 720p. No upload, merge or publication.
+Update this file at every production gate; do not leave it describing a
+finished task. (Refreshed 25 November 2026; the previous version still
+described the 7 November 2026 Free Money task.)
+
+**No episode is currently in production.** The standing state of the project:
+
+- **Cast: complete and in Git.** Ren's approved clip library and locked
+  stills; Alex's eight-pose set, approved for production use
+  (`project/characters/alex/`, PRs #12–#13); Maya's canonical 401(k)
+  reference sheets, identity lock (`project/characters/maya/`, PR #15).
+  The asset registry (`project/assets/APPROVED_ASSET_REGISTRY.md`) is
+  current as of 25 November 2026.
+- **Guideline amendments** (engagement structure: hook rule, six-beat
+  outline, variety rule, packaging gate, captions, Shorts first-frame hook,
+  legacy banners, document map) are in PR #16, awaiting owner review.
+- **Open items:** archive the 401(k) reference MP4 with SHA-256 and media
+  properties (see `REN_LONGFORM_REFERENCE.md`); owner review of the draft
+  Maya background plates / props package (unapproved drafts, held outside
+  the repo); optional per-clip SHA-256 hashes in
+  `assets/ren_library/ren_library.json`.
+
+Next episode work starts at the research/script gate in
+`REN_LONGFORM_BASELINE.md`. No publication, merge or upload is authorised
+by this status note.

@@ -1,3 +1,8 @@
+> **Legacy example — historical reference only (banner added 25 November 2026).**
+> This README describes an early Remotion Shorts example from the retired
+> pipeline. Current standards are in `project/REN_SHORTS_RULES.md`,
+> `project/REN_VIDEO_RULES.md` and `project/REN_LONGFORM_BASELINE.md`.
+
 # Ren Shorts (Remotion)
 
 Example 17.5-second, 1080x1920 Ren short: "monthly vs yearly" ($9.99/mo = $119.88/yr).
