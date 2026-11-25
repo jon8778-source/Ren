@@ -128,15 +128,38 @@ chunks in `project/prototypes/coffee-minute-v3/artwork/` (restored by
 
 ---
 
-## Maya — canonical design: the 401(k) Maya (owner decision, 25 November 2026); art still not in Git
+## Maya — APPROVED canonical sheets, in Git (owner decision, 25 November 2026)
 
 The owner decided on 25 November 2026 to keep the **401(k) episode's Maya**
 as Maya's canonical design — the design whose sheets he approved on
 8 November 2026 as "the identity lock and source art"
 (`videos/unclaimed_401k/ART_AUDIT.md`). The Three Bills Maya and the
-coffee-v3 lineup Maya are non-canonical variants. There is still **no Maya
-entry in `project/characters/manifest.json`**, and the canonical design's
-artwork is not in Git — the remaining gap is archival, not identity.
+coffee-v3 lineup Maya are non-canonical variants. The canonical sheets were
+supplied by the owner and committed to Git on 25 November 2026 (see below),
+closing the archival gap. Like Alex, Maya has her own folder manifest
+(`project/characters/maya/manifest.json`) rather than an entry in the legacy
+locked-cast manifest.
+
+### Canonical reference sheets (in Git, as chunks)
+- **Path:** `project/characters/maya/` — README, `manifest.json`, and the
+  sheets stored as base64 chunks under `sheets/` (restore:
+  `cat sheets/<file>.b64.* | base64 -d`, then verify SHA-256).
+- **Sheets (SHA-256 verified from a branch rebuild, 25 November 2026):**
+  - `maya_s_seated_pose_reference_sheet.png` — `cc0a89c4bbf920d0bbe1511524f7613a9adc31ae1e694e696b95d149161e211e`
+  - `maya_s_seven_pose_animation_sheet.png` — `572b33f8fb775d2cf3fface4a8253744b4bbd104fe6bfce3924c7839ab876596`
+  - `maya_s_sofa_phone_sequence.png` — `fc993cf30faf24c541423982bbc890cf451f3169d57b3091409a56927b179e35`
+  - `maya_s_seated_receipt_and_laptop_poses.png` — `b488f354ec8e436325707e31a6252009761cd59a5c323a66a4df4e8332485464`
+  - `maya_s_laptop_pose_study.png` — `f68788d12d7e3d5703e81f03cf435aadd18bc39d4a60003fbb675e8a95328830`
+  - `maya_s_walking_and_sitting_sequence.png` — `9613a80825bf1952546f8cdd0ff2d3515e47be505ea1f8c97e1cf32d6d957304`
+  - `maya_s_five_step_filing_sequence.png` — `9677ec58ad889a5f319ffc0451dd6dbfb1fe5796d2094b629559d8c2e64bc8f9`
+  - `image.jpg` (original cast lineup) — `f922c61ea79ba1771b8cdd43b66494ab1b389be382c35e7f8124c8336411f014`
+- **Provenance:** owner approved the sheets as the identity lock and source
+  art on 8 November 2026 (`videos/unclaimed_401k/ART_AUDIT.md`); owner
+  confirmed the 401(k) Maya as canonical and supplied the files on
+  25 November 2026. The 50 cut poses from `split_sheets.py` are not
+  included; the sheets are the source art. Source figures are ~600 px tall
+  in cut poses, so close-ups will be soft.
+- **Status: APPROVED — canonical Maya identity lock, in Git.**
 
 ### Lineup still (in Git, as chunks)
 - `supporting-cast.png` — "Centered Maya in illustrated character lineup.png"
@@ -196,14 +219,13 @@ episode art):
 
 ## To close these gaps — what Jon needs to supply / approve
 
-1. **Maya files:** supply the 401(k) episode Maya sheets — the canonical
-   design — for committing to Git, so full SHA-256 hashes can be recorded
-   here from the actual files. (The Three Bills PNGs are a non-canonical
-   variant and are no longer required.)
+1. **Maya files: CLOSED (25 November 2026)** — the canonical 401(k) sheets
+   were supplied by the owner and committed to Git
+   (`project/characters/maya/`, PR #15) with full SHA-256 hashes recorded
+   above and in `project/characters/maya/manifest.json`.
 2. **Maya identity: CLOSED (25 November 2026)** — the owner decided the
    401(k) Maya is canonical; the Three Bills and lineup Mayas are
-   non-canonical variants. Locking her in `project/characters/manifest.json`
-   follows once the sheet files are in Git (item 1).
+   non-canonical variants.
 3. **Maya approval:** the 9 November 2026 second-hand approval concerned
    the now-non-canonical Three Bills variant; the canonical 401(k)
    approval is recorded first-hand in the episode's `ART_AUDIT.md`
